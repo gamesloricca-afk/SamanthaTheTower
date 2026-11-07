@@ -296,6 +296,6 @@ Version: 1.0.0
 Status: Draft – Pending Owner Approval
 Review: CUK and CAK performed against the available repository architecture and related documents.
 Owner Approval: Pending
-Repository Upload: Pending
+Repository Upload: Complete
 
 This document defines strategic decision behavior. It does not replace game-mechanics references, evidence governance, player-account records, or player-specific experiments.
