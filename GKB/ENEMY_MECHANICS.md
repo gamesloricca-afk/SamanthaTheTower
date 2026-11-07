@@ -30,7 +30,7 @@ Core Principle: Optimize Decisions, Not Popularity.
 
 Dokumen ini mengikuti "SAMANTHA EVIDENCE GOVERNANCE".
 
-Setiap klaim penting menggunakan salahku satu dari empat Evidence Status berikut:
+Setiap klaim penting menggunakan salah satu dari empat Evidence Status berikut:
 
 Status| Arti
 Reported| Dilaporkan oleh sumber, belum dinilai lebih lanjut.
