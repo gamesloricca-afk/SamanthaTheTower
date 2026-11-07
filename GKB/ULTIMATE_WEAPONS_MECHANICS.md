@@ -412,6 +412,6 @@ Version: 1.0.1
 Status: Draft – Pending Owner Approval
 Review: CUK and CAK performed against the references listed above.
 Owner Approval: Pending
-Repository Upload: Pending
+Repository Upload: Complete
 
 This document is a general mechanics reference. It is not a guarantee that every listed value or behavior will remain unchanged in future game versions.
