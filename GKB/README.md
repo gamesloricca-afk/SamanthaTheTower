@@ -1,26 +1,35 @@
-Game Knowledge Base (GKB)
+GAME KNOWLEDGE BASE (GKB)
 
 Project: Samantha – The Tower
 Module ID: GKB
 Document: GKB README
-Version: 1.0.0
+Version: 1.1.0
 Date: 2026-11-07
-Status: Draft
+Status: Draft – Pending Owner Approval
 Owner: Samantha Project Owner
 
 ---
 
 1. Purpose
 
-The Game Knowledge Base (GKB) is Samantha's central repository of validated and structured knowledge about The Tower: Idle Tower Defense.
+The Game Knowledge Base (GKB) is Samantha's central repository of game-related information about The Tower: Idle Tower Defense.
 
-Its purpose is to provide reliable game mechanics, formulas, upgrade information, system interactions, and technical references to support accurate analysis and strategic recommendations.
+Its purpose is to collect, organize, present, compare, and analyze:
+
+- Game mechanics and systems
+- Formulas and numerical values
+- Upgrade systems and dependencies
+- System interactions and synergies
+- Strategic and technical references
+- Game updates and version changes
+
+GKB supports informed analysis and strategic recommendations.
 
 Core Principle: Optimize Decisions, Not Popularity.
 
 2. Scope
 
-GKB covers:
+GKB covers the following game systems and topics:
 
 - Ultimate Weapons (UW)
 - Workshop and Workshop Enhancements
@@ -38,11 +47,13 @@ GKB covers:
 - Game updates and version changes
 - System interactions and upgrade dependencies
 
+The scope may expand as the game develops.
+
 3. Knowledge Architecture
 
-GKB is the universal game-mechanics knowledge layer.
+GKB is the universal game-knowledge layer of Samantha.
 
-It works alongside other Samantha databases:
+It works alongside other knowledge databases:
 
 Database| Responsibility
 GKB| Universal game knowledge
@@ -55,128 +66,160 @@ SBD| Strategy & Build Database
 PER| Player Experiment Registry
 SJI| Samantha JSON Intelligence
 
-GKB must not absorb private player-account information or unapproved player experiments.
+GKB contains general game knowledge, not private player-account information or unapproved player experiments.
 
-4. Evidence Hierarchy
+Each database should maintain its own purpose without unnecessary duplication.
 
-Knowledge must be evaluated according to its source:
+4. Source Identification
 
-1. Official developer announcements and game information.
-2. Structured technical references and source-code-derived data.
-3. Established community databases.
-4. Reproducible player experiments.
-5. Community guides and player experience.
-6. AI calculations, interpretations, and hypotheses.
+Information should be distinguished according to its source type:
 
-A source's popularity does not establish its accuracy.
+1. Official: Information published or confirmed by the game developer.
+2. Community/Fan Source: Community websites, fan wikis, forums, guides, and player discussions.
+3. Player Testing: Information obtained through player experiments or gameplay observations.
+4. Other Sources: Other relevant sources that do not fit the categories above.
 
-Multiple websites repeating the same original source do not count as independent confirmations.
+When available, record the source name and URL or reference.
 
-5. Claim Classification
+Important rules:
 
-Every important claim should have an identifiable evidence status.
+- Community or fan-based information must not be presented as official developer confirmation.
+- A source's popularity does not establish its accuracy.
+- Multiple websites repeating the same original source do not count as independent confirmation.
+- Different reported values should be preserved and presented separately when necessary.
+- Missing source information must not be invented.
 
-Status| Meaning
-Verified| Confirmed by reliable evidence
-Supported| Supported by credible sources
-Source-Reported| Reported by a source, not independently verified
-Community-Tested| Tested by community members
-Calculated| Derived through a documented calculation
-Inference| Reasoned interpretation
-Hypothesis| Requires further testing
-Unverified| Insufficient evidence
-Conflict| Conflicting evidence exists
-Superseded| Replaced by newer information
-Incorrect| Demonstrated to be incorrect
+Samantha is not required to determine a single winning source whenever information differs.
 
-Do not present an inference or hypothesis as a verified game mechanic.
+5. Evidence Status
 
-6. Evidence and Provenance Requirements
+Use the following four Evidence Status values:
 
-Important knowledge entries should record, whenever available:
+Evidence Status| Meaning
+Reported| A source explicitly reports the information, but Samantha has not completed an assessment of the available evidence.
+Supported| Available credible evidence supports the information, but it has not met the standard for Verified.
+Verified| The information has been checked against reliable evidence available to Samantha, considering the applicable game version and conditions.
+Unverified| Available evidence has been assessed but is insufficient to establish the information reliably.
+
+Important rules:
+
+- Each recorded Claim should have one active Evidence Status.
+- Evidence Status describes the evidence available to Samantha, not an absolute guarantee of truth.
+- Reported information may be presented with clear source attribution without independent verification.
+- Unofficial information is not automatically false.
+- Verified is an internal evidence assessment, not official developer certification.
+- Verified information may become outdated after a game update.
+
+Terms such as "Calculated", "Inference", and "Hypothesis" may describe the nature of an analysis. They are not additional Evidence Status values.
+
+6. Knowledge Records and Source References
+
+Knowledge records should contain relevant information whenever available:
 
 - Claim ID
 - Topic and category
-- Description
-- Source URL
+- Claim or description
+- Source name and URL
 - Source type
-- Evidence status
-- Game version
-- Source publication or update date
-- Verification date
+- Evidence Status
+- Applicable game version
+- Source publication, update, or experiment date
+- Last review date
 - Formula and calculation assumptions
 - Units and applicable conditions
 - Dependencies and limitations
 - Related claims
-- Conflict references
 
-Information without adequate provenance must be clearly labelled.
+Not every field is mandatory for every entry.
 
-7. Version Control
+Unknown or unavailable information must not be invented merely to complete a record.
 
-Game mechanics may change with updates.
+7. Version Awareness
+
+Game mechanics, values, effects, features, and rules may change at any time through developer updates, potentially without prior notice.
 
 Therefore:
 
-- Record the applicable game version.
-- Recheck relevant information after major patches.
-- Mark outdated information as Superseded.
-- Preserve historical information when it helps explain changes.
-- Never assume an old guide describes the current game.
-- Distinguish game version from external tool or SDK version.
+- Record the applicable game version whenever available.
+- Record review dates when information is checked.
+- Identify information that may be outdated.
+- Preserve historical information when useful.
+- Do not automatically assume older information remains valid.
+- Communicate when current-version compatibility cannot be confirmed.
 
-8. Conflict Management
+Previously Verified information may become outdated.
 
-Conflicting information must be registered and investigated.
+Samantha cannot guarantee awareness of changes that have not been publicly announced, detected, or made available through accessible sources.
 
-For each conflict:
+8. Different or Conflicting Information
 
-1. Assign a unique conflict ID.
-2. Record the competing claims.
-3. Identify their sources and versions.
-4. Evaluate evidence quality.
-5. Search for additional independent evidence.
-6. Resolve, reclassify, or retain the conflict as unresolved.
-7. Record the final decision and its rationale.
+When sources provide different values or explanations:
 
-Never silently discard contradictory evidence.
+1. Identify the sources involved.
+2. Preserve their reported information separately.
+3. Present the differences clearly.
+4. Explain relevant game versions or conditions when known.
+5. Distinguish source-reported information from Samantha's own analysis.
+6. State when official confirmation is unavailable, if relevant.
 
-9. Player Data and Experiment Isolation
+Example:
+
+Source| Reported Value
+Website A| 1
+Website B| 3
+Website C| 5
+Website D| 8
+Website E| 10
+
+Samantha must not automatically select the most frequently reported value as correct.
+
+A Conflict Register may be used when tracking a disagreement is useful, but it is optional.
+
+Samantha is not required to investigate or resolve every disagreement between sources. Clear attribution and presentation of the competing information may be sufficient.
+
+Contradictory information must not be silently discarded or altered.
+
+9. Player Data and Experiment Separation
 
 GKB contains universal game knowledge.
 
-Player-specific information belongs in PAI or PPI.
+Other databases have separate responsibilities:
 
-Player experiments belong in PER.
+- PAI and PPI contain player-specific information.
+- PER contains player experiments and observations.
+- GKB contains general game knowledge.
 
-Rules:
+Important rules:
 
 - Player data must not automatically become universal knowledge.
-- PER results must not automatically modify GKB.
-- Experiments must include their conditions and limitations.
-- Only the Project Owner may approve promotion of experimental findings into GKB.
-- Approved findings must undergo evidence and compatibility review.
+- Player experiments must not automatically modify GKB.
+- Experiments should retain their conditions, configuration, game version, and known limitations whenever available.
+- Promotion of experimental findings into universal GKB knowledge requires Project Owner approval.
 
-10. Research and Validation Workflow
+10. Research and Information Workflow
 
-The standard knowledge workflow is:
+Samantha may use the following practical workflow:
 
-1. Identify the mechanic or question.
-2. Collect relevant sources.
-3. Extract claims and technical information.
-4. Record provenance.
-5. Compare independent evidence.
-6. Check game-version compatibility.
-7. Investigate contradictions.
-8. Classify evidence status.
-9. Validate calculations and dependencies.
-10. Submit important changes for Owner review.
+1. Identify the question or game mechanic.
+2. Find relevant available sources.
+3. Collect and organize reported information.
+4. Record source references when available.
+5. Compare reported values and explanations.
+6. Check game versions and conditions when known.
+7. Identify relevant uncertainty or limitations.
+8. Present the appropriate Evidence Status.
+9. Perform calculations or analysis when useful.
+10. Update information when relevant new evidence becomes available.
+
+This workflow is a practical guide, not a mandatory investigation procedure for every question.
+
+Samantha is not required to independently verify every community source, reproduce every experiment, or resolve every disagreement before helping the player.
 
 11. Relationship with Samantha's Decision Engine
 
-GKB provides knowledge, not automatic recommendations.
+GKB provides general game knowledge, not automatic recommendations.
 
-SDE must combine relevant GKB mechanics with:
+SDE may combine relevant GKB information with:
 
 - Player objectives
 - Account progression
@@ -185,38 +228,52 @@ SDE must combine relevant GKB mechanics with:
 - Module configuration
 - System synergies
 - Opportunity costs
-- Evidence confidence
+- Evidence limitations
 
-A popular strategy is not automatically the optimal strategy for every account.
+A popular strategy is not automatically the optimal strategy for every player.
+
+Recommendations should consider the player's actual objectives and circumstances.
 
 12. Quality Standards
 
-GKB entries must be:
+GKB information should be:
 
-- Traceable
-- Version-aware
-- Evidence-based
+- Traceable when source information is available
+- Version-aware when relevant
+- Properly attributed
 - Clearly classified
-- Reproducible where possible
 - Explicit about uncertainty
+- Distinct between source information and Samantha's analysis
 - Free from unsupported certainty
-- Consistent with Samantha's governance rules
+- Consistent with Samantha's Evidence Governance
+
+The goal is useful and transparent knowledge, not unnecessary administrative complexity.
 
 13. Change Management
 
-All significant changes should record:
+Significant changes should record, where relevant:
 
 - What changed
 - Why it changed
-- Supporting evidence
-- Previous and new status
-- Game version
-- Reviewer or approval status
+- Supporting source or evidence
+- Previous and new information
+- Previous and new Evidence Status
+- Applicable game version
+- Review date
+- Approval status, if applicable
 
-Do not mark an entry Approved without Project Owner authorization.
+Useful historical information should be preserved.
+
+A document or entry must not be marked Owner Approved without explicit authorization from the Project Owner.
 
 14. Guiding Principle
 
-Universal Knowledge is shared. Player Experiments are isolated. Database changes require Owner Approval.
+Universal Knowledge is shared.
 
-GKB exists to help Samantha understand the game accurately, evaluate competing strategies objectively, and make better decisions based on evidence rather than popularity.
+Player Experiments are isolated.
+
+Source Attribution is preserved.
+
+GKB exists to help Samantha understand available game information, compare competing sources, analyze mechanics, and support better decisions.
+
+Samantha's Role: Search, Present, Compare, and Analyze — Not Guarantee or Manufacture Certainty.
