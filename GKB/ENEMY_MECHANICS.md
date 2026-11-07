@@ -3,559 +3,553 @@ ENEMY MECHANICS
 Project: Samantha – The Tower
 Database: Game Knowledge Base (GKB)
 Document ID: GKB-ENEMY-001
-Version: 1.1.0
+Version: 1.2.0
 Date: 2026-11-07
-Status: Draft – Evidence Review Required
+Status: Draft – Pending Owner Approval
 Owner: Samantha Project Owner
 
 ---
 
 1. PURPOSE
 
-This document defines the enemy mechanics reference for The Tower: Idle Tower Defense.
+Dokumen ini menjadi referensi mekanisme musuh dalam The Tower: Idle Tower Defense.
 
-Its purpose is to help Samantha understand enemy characteristics, behavior, damage threats, population limits, spawn mechanics, and their strategic implications.
+Tujuannya membantu Samantha memahami dan menganalisis:
 
-This document is an evidence-managed knowledge resource. Numerical values must not automatically be treated as verified game mechanics.
+- Kategori dan karakteristik musuh.
+- Perilaku serangan dan efek khusus.
+- Batas populasi dan mekanisme kemunculan.
+- Interaksi musuh dengan pertahanan Tower.
+- Pengaruh mekanisme musuh terhadap strategi pemain.
+
+Dokumen ini merupakan basis pengetahuan yang dikelola berdasarkan bukti. Informasi dari komunitas dapat digunakan dan disajikan dengan atribusi yang sesuai tanpa harus selalu diverifikasi secara independen oleh Samantha.
 
 Core Principle: Optimize Decisions, Not Popularity.
 
 2. EVIDENCE GOVERNANCE
 
-Every important mechanic claim must have two independent classifications:
+Dokumen ini mengikuti "SAMANTHA EVIDENCE GOVERNANCE".
 
-2.1 Evidence Status
+Setiap klaim penting menggunakan salahku satu dari empat Evidence Status berikut:
 
-Status| Definition
-Verified| Confirmed by sufficiently strong and relevant evidence
-Supported| Supported by credible evidence but not fully verified
-Source-Reported| Reported by a source but not independently confirmed
-Community-Tested| Tested by players under documented conditions
-Calculated| Derived mathematically from documented inputs
-Inference| Reasoned interpretation of available information
-Hypothesis| Proposed explanation requiring testing
-Unverified| Insufficient evidence
-Conflict| Conflicting evidence remains unresolved
-Superseded| Replaced by newer or more applicable information
-Incorrect| Demonstrated to be incorrect
+Status| Arti
+Reported| Dilaporkan oleh sumber, belum dinilai lebih lanjut.
+Supported| Didukung bukti yang cukup kredibel, tetapi belum memenuhi Verified.
+Verified| Telah diperiksa terhadap bukti yang relevan dan dapat diandalkan oleh Samantha. Bukan sertifikasi resmi developer atau jaminan berlaku selamanya.
+Unverified| Bukti yang tersedia belum cukup untuk menetapkan informasi secara andal.
 
-2.2 Confidence Level
+Ketentuan:
 
-Level| Definition
-High| Evidence is strong, consistent, and applicable
-Medium| Evidence is credible but has limitations
-Low| Evidence is limited, indirect, or uncertain
+1. Status bukti menjelaskan keadaan bukti yang tersedia, bukan kebenaran mutlak.
+2. Informasi komunitas boleh disajikan dengan menyebutkan sumber dan statusnya.
+3. Samantha tidak wajib melakukan pengujian sendiri terhadap setiap klaim.
+4. Beberapa website yang menggunakan sumber asal sama tidak otomatis menjadi konfirmasi independen.
+5. Jika sumber berbeda, Samantha dapat menyajikan perbedaannya tanpa harus memutuskan mana yang benar.
+6. Informasi yang pernah Verified dapat menjadi tidak berlaku setelah perubahan game.
 
-Evidence Status and Confidence Level must never be treated as interchangeable.
-
-A Source-Reported claim may have Medium confidence, but it must remain Source-Reported until its evidence status is legitimately upgraded.
-
-2.3 Claim Requirements
-
-Important claims should record:
-
-- Claim ID
-- Mechanic or subject
-- Claim description
-- Evidence Status
-- Confidence Level
-- Source name and URL
-- Source type
-- Applicable game version
-- Source publication date, if available
-- Verification date
-- Conditions and limitations
-- Related claims or conflicts
-
-Missing information must be identified as unknown, not invented.
-
----
+Tidak digunakan Confidence Level atau klasifikasi tambahan yang tidak diperlukan.
 
 3. ENEMY CLASSIFICATION
 
-The main enemy categories are:
+Musuh dikelompokkan menjadi empat kategori utama.
 
-1. Basic
-2. Fast
-3. Tank
-4. Ranged
-5. Protector
-6. Boss
-7. Elite
+3.1 Normal Enemies
 
-Fleet Escort is a separate encounter mechanic and must be analyzed independently from ordinary enemy populations.
+- Basic
+- Fast
+- Tank
+- Ranged
+- Protector
 
----
+3.2 Boss
+
+Boss merupakan kategori musuh tersendiri dan memiliki mekanisme serta interaksi khusus.
+
+3.3 Elite
+
+Terdiri dari:
+
+- Vampire
+- Ray
+- Scatter
+
+3.4 Fleet
+
+Terdiri dari:
+
+- Saboteur
+- Commander
+- Overcharge
+
+Fleet merupakan kategori khusus. Support Enemies yang muncul bersama Fleet harus dibedakan dari Fleet utama.
 
 4. ENEMY POPULATION LIMITS
 
-The current research baseline contains the following reported limits:
+Referensi komunitas melaporkan batas populasi terpisah untuk Normal, Elite, Boss, dan jenis Elite tertentu.
 
-Population| Reported Limit| Claim ID
-Normal enemies| 120| ENM-CAP-001
-Elite enemies| 20| ENM-CAP-002
-Bosses| 10| ENM-CAP-003
-Each Elite type| 8| ENM-CAP-004
-Protectors| 10| ENM-CAP-005
+Angka yang sering dilaporkan meliputi:
 
-Important distinctions
+Population| Community-reported information
+Normal| Batas yang umum dilaporkan adalah 120
+Elite| Batas total yang umum dilaporkan adalah 20
+Boss| Batas yang umum dilaporkan adalah 10
+Each Elite type| Batas yang umum dilaporkan adalah 8
+Protector| Referensi yang tersedia melaporkan batas 10, tetapi informasi historis dan versi perlu diperhatikan
 
-- Normal enemy population is not the same as total enemy population.
-- Elite total population and per-type Elite population are separate limits.
-- Protector population must not be confused with the Elite per-type limit.
-- Fleet Escort has a separate population allowance.
-- Total visible enemies may exceed the ordinary combined population limit when special encounter mechanics are active.
+Evidence Status: Reported / Supported, depending on the individual claim.
 
-Evidence classification
+Angka tersebut merupakan informasi komunitas, bukan pernyataan bahwa developer telah mengonfirmasi seluruh batas tersebut untuk setiap versi dan kondisi permainan.
 
-Claim ID| Evidence Status| Confidence
-ENM-CAP-001| Source-Reported| Medium
-ENM-CAP-002| Source-Reported| Medium
-ENM-CAP-003| Source-Reported| Medium
-ENM-CAP-004| Source-Reported| Medium
-ENM-CAP-005| Verified – Historical Change| High
+4.1 Fleet Population Distinction
 
-ENM-CAP-005 note: The Protector cap was previously reported as 8 and subsequently changed to 10 in developer patch documentation. The historical change is documented; current-version compatibility should still be checked.
+Patch notes resmi v28.3 mengonfirmasi bahwa Support Enemies yang muncul bersama Fleet memiliki spawn cap tersendiri.
 
-These values are research baselines, not permission to assume every encounter uses all available population slots.
+Namun, referensi komunitas berbeda pendapat mengenai apakah Fleet utama dihitung ke dalam batas populasi Normal.
 
----
+- Sebagian referensi menyatakan Fleet utama dihitung ke dalam batas Normal.
+- Referensi lain menyatakan Fleet utama tidak dihitung ke dalam batas tersebut.
 
-5. ENEMY TYPES AND BEHAVIOR
+Evidence Status: Unverified.
 
-5.1 Basic
+Samantha harus mempertahankan perbedaan laporan ini dan tidak menetapkan salah satu interpretasi sebagai fakta terkonfirmasi.
 
-Basic enemies are the standard enemy category and a reference point for several enemy scaling and damage comparisons.
+Batas Support Enemies dan aturan populasi Fleet utama merupakan dua hal yang berbeda dan tidak boleh dicampuradukkan.
 
-Claim ID| Description| Evidence Status| Confidence
-ENM-BAS-001| Basic is the reference enemy category for relative comparisons| Supported| Medium
+5. SHARED ENEMY MECHANICS
 
-5.2 Fast
+Beberapa mekanisme umum dilaporkan berlaku terhadap musuh.
 
-Reported characteristics:
+5.1 Heat-Up
 
-- Approximately 2x Basic movement speed.
+Musuh melee dilaporkan meningkatkan damage setiap kali berhasil mengenai Tower atau Wall.
 
-Strategic implications:
+Referensi komunitas mencatat peningkatan sebesar 4% per hit.
 
-- Fast enemies can reach the Tower more quickly.
-- Crowd control and projectile coverage may be important.
-- A Fast-related death does not automatically prove insufficient Tower damage.
+Ranged, Ray, dan Overcharge shots tidak termasuk dalam mekanisme Heat-Up tersebut.
 
-Claim ID| Description| Evidence Status| Confidence
-ENM-FST-001| Fast movement speed is approximately 2x Basic| Source-Reported| Medium
+Evidence Status: Supported.
 
-5.3 Tank
+Samantha harus membedakan serangan kontak dari serangan proyektil atau beam.
 
-Reported characteristics:
+5.2 Coin Decay
 
-- Approximately 5x Basic health.
-- Approximately 0.5x Basic movement speed.
+Musuh yang bertahan hidup lebih dari tiga wave dilaporkan mengalami pengurangan nilai coin sebesar 50%.
 
-Strategic implications:
+Evidence Status: Supported.
 
-- Tanks require more effective damage to eliminate.
-- Their slower movement may provide more time for damage and control effects.
-- Surviving Tanks can contribute to enemy accumulation.
+Jangan menganggap pengurangan tersebut sebagai pengurangan langsung terhadap seluruh pendapatan coin dalam satu run. Mekanisme ini berkaitan dengan nilai coin musuh yang bersangkutan.
 
-Claim ID| Description| Evidence Status| Confidence
-ENM-TNK-001| Tank health is approximately 5x Basic| Source-Reported| Medium
-ENM-TNK-002| Tank movement speed is approximately 0.5x Basic| Source-Reported| Medium
+5.3 Mass Growth
 
-5.4 Ranged
+Mass musuh dilaporkan meningkat sebesar 4% untuk setiap wave yang berhasil dilewati musuh tersebut.
 
-Reported characteristics:
+Mass berpengaruh terhadap kemampuan efek knockback dalam mengendalikan musuh.
 
-- Ranged enemies can attack from outside ordinary Orb range.
+Evidence Status: Supported.
 
-Strategic implications:
+Implementasi dan interaksi dengan Battle Conditions tetap dapat bergantung pada versi game.
 
-- Orb coverage alone does not guarantee protection against Ranged attacks.
-- Samantha must distinguish ranged attacks from contact damage.
-- Tower range, damage, crowd control, and defense should be evaluated together.
+6. NORMAL ENEMY CHARACTERISTICS
 
-Claim ID| Description| Evidence Status| Confidence
-ENM-RNG-001| Ranged enemies can attack outside ordinary Orb range| Source-Reported| Medium
+6.1 Basic
 
-5.5 Protector
+Basic merupakan kategori musuh standar dan menjadi acuan perbandingan bagi beberapa statistik musuh lainnya.
 
-Reported characteristics:
+6.2 Fast
 
-- Protectors provide a protective effect to nearby enemies.
-- The reported damage reduction is approximately 60%.
-- The documented simultaneous Protector cap is 10.
+Fast memiliki movement speed lebih tinggi dibandingkan Basic.
 
-Strategic implications:
+Implikasi strategis:
 
-- Protected enemies may require substantially more effective damage.
-- Protector count and survival duration can influence enemy density.
-- Samantha should evaluate whether a player's damage bottleneck is caused by Protector shielding rather than insufficient base damage.
+- Dapat mencapai Tower lebih cepat.
+- Membutuhkan perhatian pada crowd control dan jangkauan serangan.
+- Kegagalan mengatasi Fast tidak selalu berarti damage Tower terlalu rendah.
 
-Claim ID| Description| Evidence Status| Confidence
-ENM-PRO-001| Protector provides protection to nearby enemies| Supported| Medium
-ENM-PRO-002| Protection reduces incoming damage by approximately 60%| Source-Reported| Medium
-ENM-PRO-003| Protector simultaneous cap is 10| Verified – Historical Change| High
+6.3 Tank
 
-The exact interaction between Protector shielding and every damage source requires further validation.
+Tank memiliki health lebih tinggi dan movement speed lebih rendah dibandingkan Basic.
 
-5.6 Boss
+Implikasi strategis:
 
-Reported characteristics:
+- Membutuhkan damage lebih besar untuk dikalahkan.
+- Dapat bertahan lebih lama dalam area pertahanan.
+- Musuh yang bertahan terlalu lama dapat meningkatkan tekanan populasi.
 
-- Bosses have a separate simultaneous population limit.
-- Bosses are not ordinarily eliminated by Orb, Death Ray, or Shockwave.
-- Orb Boss Hit provides a specific Boss-related interaction.
+6.4 Ranged
 
-Strategic implications:
+Ranged dapat menyerang Tower dari jarak tertentu.
 
-- Ordinary enemy clearing and Boss elimination must be evaluated separately.
-- Boss damage, damage amplification, and survival mechanics may determine tournament progression.
-- A build that clears ordinary enemies efficiently may still lack sufficient Boss damage.
+Implikasi strategis:
 
-Claim ID| Description| Evidence Status| Confidence
-ENM-BOS-001| Boss has a separate population limit| Source-Reported| Medium
-ENM-BOS-002| Boss interaction with Orb, Death Ray, and Shockwave is restricted| Source-Reported| Medium
-ENM-BOS-003| Orb Boss Hit provides a specific Boss interaction| Source-Reported| Medium
+- Orb coverage saja tidak menjamin perlindungan terhadap Ranged.
+- Samantha harus membedakan serangan jarak jauh dengan damage kontak.
+- Tower range, damage, crowd control, dan pertahanan perlu dianalisis bersama.
 
-Do not interpret this list as a complete Boss immunity specification.
+6.5 Protector
 
-5.7 Elite
+Protector memberikan perlindungan kepada musuh di sekitarnya.
 
-Elite enemies have distinct behaviors and can significantly influence survival and Cell acquisition.
+Referensi komunitas melaporkan bahwa perlindungan tersebut mengurangi damage yang diterima oleh musuh yang dilindungi.
 
-Reported characteristics:
+Implikasi strategis:
 
-- Elite enemies have a separate population limit.
-- Each Elite type has a reported simultaneous limit of 8.
-- Several ordinary instant-kill and crowd-control mechanics have restricted interactions with Elites.
-- Elite Cells are an important source of Lab Speed-up resources.
+- Musuh yang berada dalam perlindungan dapat membutuhkan damage lebih besar.
+- Jumlah dan durasi keberadaan Protector dapat memengaruhi kepadatan musuh.
+- Samantha perlu mempertimbangkan efek perlindungan sebelum menyimpulkan bahwa damage pemain tidak mencukupi.
 
-Claim ID| Description| Evidence Status| Confidence
-ENM-ELT-001| Elite has a separate population limit| Source-Reported| Medium
-ENM-ELT-002| Each Elite type has a limit of 8| Source-Reported| Medium
-ENM-ELT-003| Elite Cells are used for Lab Speed-up| Supported| High
+Interaksi dengan setiap jenis damage tidak boleh diasumsikan sama tanpa bukti.
 
-5.7.1 Vampire
+7. BOSS MECHANICS
 
-Reported characteristics:
+Boss memiliki kategori populasi tersendiri dan beberapa interaksi khusus dengan sistem pertahanan Tower.
 
-- Drains approximately 2% of maximum Tower health per second.
-- Disables health regeneration and Lifesteal while its effect is active.
+Referensi komunitas melaporkan bahwa:
 
-Claim ID| Description| Evidence Status| Confidence
-ENM-VMP-001| Vampire drains approximately 2% maximum Tower health per second| Source-Reported| Medium
-ENM-VMP-002| Vampire disables health regeneration and Lifesteal during its effect| Source-Reported| Medium
+- Boss memiliki health jauh lebih tinggi daripada musuh Normal.
+- Boss memiliki movement speed lebih rendah daripada Basic.
+- Interaksi Boss dengan Orb, Death Ray, dan Shockwave memiliki pembatasan atau pengecualian tertentu.
+- Orb Boss Hit memberikan interaksi khusus terhadap Boss.
 
-5.7.2 Ray
+Evidence Status: Reported / Supported.
 
-Reported characteristics:
+Implikasi strategis:
 
-- Charges its beam for approximately 30 seconds.
-- Beam damage is approximately 2x Basic enemy damage.
-- Ray is immune to Knockback.
+- Kemampuan membersihkan Normal enemies tidak otomatis berarti pemain memiliki damage Boss yang cukup.
+- Boss damage, damage amplification, dan mekanisme bertahan hidup harus dianalisis secara terpisah.
+- Samantha tidak boleh menganggap daftar interaksi ini sebagai daftar lengkap seluruh immunity Boss.
 
-Claim ID| Description| Evidence Status| Confidence
-ENM-RAY-001| Ray charge duration is approximately 30 seconds| Source-Reported| Medium
-ENM-RAY-002| Ray beam damage is approximately 2x Basic damage| Source-Reported| Medium
-ENM-RAY-003| Ray is immune to Knockback| Source-Reported| Medium
+8. ELITE MECHANICS
 
-Samantha must distinguish Ray charge duration, beam duration, and the interval between attacks. These are not automatically the same measurement.
+Elite terdiri dari Vampire, Ray, dan Scatter.
 
-5.7.3 Scatter
+Referensi komunitas melaporkan bahwa Elite memiliki pembatasan interaksi terhadap beberapa mekanisme pertahanan, termasuk Orb, Death Ray, Shockwave, dan Black Hole.
 
-Reported characteristics:
+Setiap jenis Elite memiliki batas populasi tersendiri menurut referensi komunitas. Anak hasil pemecahan Scatter dilaporkan tidak dihitung dalam batas populasi jenis Elite tersebut.
 
-- Scatter splits into 31 bodies.
-- Only one resulting body provides Elite Cells.
+Evidence Status: Supported.
 
-Claim ID| Description| Evidence Status| Confidence
-ENM-SCT-001| Scatter splits into 31 bodies| Source-Reported| Medium
-ENM-SCT-002| Only one resulting body provides Elite Cells| Source-Reported| Medium
+8.1 Vampire
 
-The exact interpretation of the 31-body count should be checked against game behavior and current documentation.
+Karakteristik yang dilaporkan:
 
----
+- Vampire menguras sebagian health maksimum Tower setiap detik selama efeknya berlangsung.
+- Efeknya menonaktifkan Tower Health Regeneration dan Lifesteal.
+- Wall Regen tetap dapat berjalan.
 
-6. ENEMY COIN WEIGHTS
+Referensi komunitas mencatat drain sebesar 2% dari maksimum Tower health per detik.
 
-The following relative coin weights are reported in existing research:
+Evidence Status: Supported.
 
-Enemy| Relative Weight| Claim ID
-Basic| 1| ENM-COIN-001
-Fast| 2| ENM-COIN-002
-Ranged| 2| ENM-COIN-003
-Protector| 3| ENM-COIN-004
-Tank| 4| ENM-COIN-005
-Boss| 5| ENM-COIN-006
-Elite| 4| ENM-COIN-007
+Samantha harus membedakan efek terhadap Tower dan Wall. Jangan menyatakan Wall Regen ikut dinonaktifkan.
 
-Evidence Status: Source-Reported
-Confidence: Medium
+8.2 Ray
 
-These values represent relative coin weights, not guaranteed final coin payouts.
+Karakteristik yang dilaporkan:
 
-Actual coin income may depend on:
+- Ray melakukan charge sebelum menembakkan beam.
+- Beam memberikan damage yang lebih besar daripada serangan Basic.
+- Ray memiliki immunity terhadap Knockback.
 
-- Coin bonuses
-- Golden Tower
-- Black Hole
-- Death Wave
-- Golden Bot
-- Themes and other applicable bonuses
-- Battle Conditions
-- Enemy-specific eligibility
-- Game version
+Referensi komunitas mencatat charge sekitar 30 detik dan beam damage sekitar dua kali damage Basic.
 
-Samantha must not use relative weights as direct coin payout values.
+Evidence Status: Supported.
 
----
+Charge duration, beam duration, dan interval serangan merupakan pengukuran berbeda. Jangan menyamakannya.
 
-7. ENEMY MODIFIERS
+8.3 Scatter
 
-7.1 Heat-Up
+Scatter dapat membelah diri menjadi beberapa bagian setelah terkena mekanisme tertentu.
 
-Reported mechanic:
+Referensi komunitas melaporkan bahwa hanya satu hasil pembelahan yang memberikan Elite Cells.
 
-- Enemy damage increases by approximately 4% per successful hit.
+Evidence Status: Supported.
 
-Claim ID: ENM-MOD-001
-Evidence Status: Source-Reported
-Confidence: Medium
+Jumlah akhir tubuh Scatter tidak dicantumkan sebagai angka tetap dalam dokumen ini karena berpotensi menimbulkan perbedaan interpretasi mengenai proses pembelahan.
 
-7.2 Coin Decay
+9. FLEET MECHANICS
 
-Reported mechanic:
+Fleet merupakan kategori musuh khusus dengan mekanisme tersendiri.
 
-- Enemies remaining alive for approximately 3 waves experience a 50% coin reduction.
+9.1 Support Enemies
 
-Claim ID: ENM-MOD-002
-Evidence Status: Source-Reported
-Confidence: Medium
+Fleet dapat muncul bersama Support Enemies yang sesuai dengan jenis Fleet.
 
-7.3 Mass Growth
+Patch notes resmi v28.3 menyatakan bahwa Support Enemies memiliki spawn cap tersendiri agar kemunculannya tidak terhalang oleh batas populasi musuh lainnya.
 
-Reported mechanic:
+Evidence Status: Verified.
 
-- Enemy mass increases by approximately 4% per wave alive.
+Jumlah Support Enemies dalam satu kemunculan tidak ditetapkan sebagai angka tetap dalam dokumen ini. Jumlah tersebut dapat berbeda menurut kondisi dan versi game.
 
-Claim ID: ENM-MOD-003
-Evidence Status: Source-Reported
-Confidence: Medium
+9.2 Saboteur
 
-The exact implementation, stacking behavior, and applicable conditions require version-specific validation.
+Menurut patch notes resmi v28.3:
 
----
+- Setiap serangan Saboteur mengurangi satu level pada main stat Ultimate Weapon yang terdampak.
+- Ultimate Weapon yang terdampak akan dipulihkan ketika Saboteur dikalahkan.
 
-8. SPAWN MECHANICS
+Jenis stat yang terdampak bergantung pada Ultimate Weapon terkait.
 
-Enemy composition is not assumed to follow one universal percentage throughout an entire run.
+Evidence Status: Verified.
 
-Existing research based on battle reports indicates that enemy composition changes with wave progression.
+9.3 Commander
 
-Relevant variables include:
+Menurut patch notes resmi v28.3:
 
-- Tier
-- Wave
-- Enemy category
-- Spawn progression
-- Battle Conditions
-- Special encounters
-- Fleet Escort
-- Enemy population limits
+- Commander memberikan peningkatan Health, Mass, dan Speed kepada musuh melalui pulse.
+- Peningkatan Speed dan Mass memiliki batas stacking.
+- Peningkatan Health tidak menggunakan batas stacking yang sama.
 
-Samantha must not extrapolate a single observed enemy distribution to every tier, wave, or game version.
+Patch notes menyebut peningkatan sebesar 15% per pulse. Batas peningkatan Speed dan Mass disebut secara khusus oleh developer.
 
-Required data for spawn analysis
+Evidence Status: Verified.
 
-Each spawn observation should include:
+Samantha tidak boleh menyatakan bahwa peningkatan Health juga memiliki batas stacking yang sama dengan Speed dan Mass.
 
-- Tier
-- Wave or wave range
-- Game version
-- Enemy counts by type
-- Battle Conditions
-- Run duration or observation interval
-- Data source
-- Collection method
+9.4 Overcharge
 
-Claim ID: ENM-SPN-001
-Evidence Status: Community-Tested / Source-Reported
-Confidence: Medium
+Menurut patch notes resmi v28.3:
 
-Exact spawn probability formulas remain subject to further validation.
+- Damage awal Overcharge ditetapkan berdasarkan damage Wave 1 pada tier tempat musuh tersebut muncul.
+- Setiap hit yang berhasil meningkatkan damage Overcharge secara eksponensial.
+- Overcharge memiliki kemampuan Parting Shot ketika mati.
+- Parting Shot hanya terjadi jika Overcharge telah mencapai Tower's Range.
 
----
+Patch notes menyebut faktor peningkatan damage sebesar 1.4x per hit.
 
-9. FLEET ESCORT
+Evidence Status: Verified.
 
-Fleet Escort is a special encounter mechanic and must be distinguished from ordinary enemy spawning.
+9.5 Fleet Tournament Mechanics
 
-Existing research reports:
+Developer mengumumkan perubahan mekanisme Fleet Wave untuk liga turnamen yang menggunakan Fleet.
 
-- Approximately 10–14 matching escort enemies in an encounter.
-- Escort enemies use a separate population allowance.
-- Their presence can push total enemy population above the ordinary combined limit.
+Mekanisme yang diumumkan:
 
-Claim ID| Description| Evidence Status| Confidence
-ENM-FLT-001| Fleet Escort has a separate population allowance| Supported| Medium
-ENM-FLT-002| An encounter can contain approximately 10–14 matching escorts| Source-Reported| Medium
-ENM-FLT-003| Escorts can increase total population beyond the ordinary combined limit| Supported| Medium
+- Fleet muncul pada awal Fleet Wave.
+- Progress wave ditentukan oleh sisa health Fleet, bukan timer.
+- Musuh jenis lain tetap muncul selama Fleet Wave berlangsung.
+- Wave berikutnya dimulai setelah seluruh Fleet pada wave tersebut dikalahkan.
+- Sisa persentase health Fleet dapat digunakan sebagai tie-break pada Fleet Wave.
 
-The exact count and behavior must be rechecked against the applicable game version.
+Evidence Status: Verified.
 
----
+Penerapan mekanisme ini harus mengikuti cakupan liga dan mode yang diumumkan developer. Jangan menganggapnya berlaku untuk semua mode permainan.
 
-10. ENEMY IMMUNITY AND INTERACTION MATRIX
+10. ENEMY COIN VALUES
 
-The following is a working reference, not a complete immunity specification.
+Nilai coin musuh perlu dibedakan antara:
+
+1. Nilai dasar atau direct coin drop.
+2. Relative coin weight yang digunakan dalam perbandingan atau perhitungan ekonomi.
+
+Referensi komunitas melaporkan perbandingan relative coin weight berikut:
+
+Enemy| Relative Coin Weight
+Basic| 1
+Fast| 2
+Ranged| 2
+Protector| 3
+Tank| 4
+Elite| 4
+Boss| 5
+
+Evidence Status: Reported.
+
+Angka tersebut bukan jaminan jumlah coin yang diterima pemain dari setiap kill.
+
+Sumber komunitas lain menjelaskan bahwa direct coin drop Basic secara normal adalah 0, dengan kemungkinan memperoleh coin melalui Critical Coin Card.
+
+Karena itu, Basic relative coin weight tidak boleh disamakan dengan direct coin drop.
+
+Pendapatan coin aktual dapat dipengaruhi oleh:
+
+- Coin bonuses.
+- Golden Tower.
+- Black Hole.
+- Death Wave.
+- Golden Bot.
+- Themes, relics, dan enhancement.
+- Battle Conditions.
+- Enemy-specific effects.
+- Game version.
+
+Samantha harus menyebutkan jenis nilai yang sedang dibahas sebelum melakukan perbandingan atau perhitungan.
+
+11. SPAWN MECHANICS
+
+Komposisi musuh dapat berubah berdasarkan perkembangan wave dan kondisi permainan.
+
+Variabel yang relevan meliputi:
+
+- Tier.
+- Wave.
+- Enemy category.
+- Spawn progression.
+- Battle Conditions.
+- Special encounters.
+- Fleet mechanics.
+- Population limits.
+
+Samantha tidak boleh menganggap satu distribusi spawn yang diamati pada suatu run berlaku universal untuk seluruh tier, wave, atau versi game.
+
+Data spawn dari komunitas dapat digunakan untuk analisis dengan mencantumkan sumber dan kondisi pengamatan apabila tersedia.
+
+Formula probabilitas spawn yang belum memiliki dukungan memadai harus tetap dianggap belum terkonfirmasi.
+
+12. ENEMY INTERACTION MATRIX
+
+Tabel berikut merupakan ringkasan interaksi yang dilaporkan, bukan daftar lengkap immunity.
 
 Enemy| Reported Interaction
-Boss| Restricted interaction with Orb, Death Ray, and Shockwave
-Elite| Restricted interaction with Orb, Death Ray, Shockwave, and Black Hole
-Ray| Immune to Knockback
-Ranged| Can attack outside ordinary Orb range
-Protector| Provides protection to nearby enemies
+Boss| Memiliki pembatasan atau pengecualian terhadap beberapa mekanisme serangan dan crowd control
+Elite| Memiliki immunity terhadap beberapa mekanisme, termasuk Orb, Death Ray, Shockwave, dan Black Hole
+Ray| Immune terhadap Knockback
+Ranged| Dapat menyerang dari jarak tertentu
+Protector| Memberikan perlindungan kepada musuh di sekitarnya
+Vampire| Mengganggu Tower Health Regeneration dan Lifesteal
+Saboteur| Mengurangi level main stat Ultimate Weapon yang terdampak
+Commander| Meningkatkan statistik musuh melalui pulse
+Overcharge| Damage meningkat setelah hit berhasil dan dapat melakukan Parting Shot
 
-Evidence Status: Source-Reported / Supported
-Confidence: Medium
+Ketentuan:
 
-Important rules:
+- Jangan menyimpulkan immunity terhadap mekanisme yang tidak tercantum.
+- Bedakan immunity, resistance, protection, dan targeting restrictions.
+- Catat pengecualian secara terpisah apabila tersedia.
+- Periksa kembali interaksi setelah patch yang relevan.
 
-- Do not infer immunity to an unlisted mechanic.
-- Distinguish immunity, resistance, protection, and targeting restrictions.
-- Record special exceptions separately.
-- Recheck interactions after relevant patches.
+13. DIAGNOSTIC AND STRATEGIC APPLICATION
 
----
+Ketika pemain melaporkan kegagalan run, Samantha dapat mempertimbangkan pertanyaan berikut:
 
-11. ENEMY-RELATED DIAGNOSTIC FRAMEWORK
+1. Musuh jenis apa yang menyebabkan ancaman terakhir?
+2. Apakah musuh tersebut Boss, Elite, Fleet, atau Normal?
+3. Apakah Protector sedang aktif?
+4. Apakah terdapat Battle Condition yang memengaruhi interaksi?
+5. Apakah masalah berkaitan dengan damage, crowd control, atau mekanisme khusus?
+6. Apakah Tower menerima contact damage, projectile, beam, atau efek lainnya?
+7. Apakah kepadatan musuh atau populasi menjadi faktor?
+8. Apakah konfigurasi pemain sesuai dengan tujuan run?
 
-When a player reports a failed run, Samantha should investigate:
+Musuh terakhir yang terlihat pada battle report tidak otomatis merupakan satu-satunya penyebab kegagalan run.
 
-1. Which enemy caused the final damage?
-2. Was it a Boss, Elite, or ordinary enemy?
-3. Was a Protector active?
-4. Was the enemy affected by a Battle Condition?
-5. Was the failure caused by insufficient damage, insufficient crowd control, or a special mechanic?
-6. Did the Tower die from contact damage, a projectile, a beam, or another effect?
-7. Were multiple enemies contributing to the failure?
-8. Did the enemy population approach its simultaneous limit?
-9. Was the active preset appropriate for the run objective?
-10. Is the reported death cause supported by battle-report evidence?
+Enemy Mechanics dapat digunakan untuk mendukung analisis:
 
-The last enemy shown in a battle report must not automatically be assumed to be the only cause of the run ending.
+- Damage requirements.
+- Crowd-control requirements.
+- Survival dan defensive requirements.
+- Elite Cell acquisition.
+- Boss elimination.
+- Tournament performance.
+- Farming efficiency.
+- Death-cause analysis.
+- Enemy density dan population pressure.
 
----
+Jenis musuh saja tidak cukup untuk menentukan prioritas upgrade.
 
-12. VALIDATION PRIORITIES
+Rekomendasi juga perlu mempertimbangkan tujuan pemain, progres akun, preset, module, Ultimate Weapon, sinergi sistem, sumber daya, opportunity cost, dan bukti yang tersedia.
 
-The following claims require further research, direct evidence, or reproducible testing.
+Samantha boleh memberikan analisis dan rekomendasi berdasarkan informasi yang tersedia tanpa harus menyelesaikan setiap perbedaan sumber terlebih dahulu.
 
-Priority| Subject| Claim IDs
-High| Enemy population limits| ENM-CAP-001 to ENM-CAP-004
-High| Protector damage reduction| ENM-PRO-002
-High| Ray damage and charge behavior| ENM-RAY-001 to ENM-RAY-003
-High| Elite immunity interactions| ENM-ELT-001 to ENM-ELT-002
-Medium| Scatter body count and Cell attribution| ENM-SCT-001 to ENM-SCT-002
-Medium| Enemy coin weights| ENM-COIN-001 to ENM-COIN-007
-Medium| Enemy modifiers| ENM-MOD-001 to ENM-MOD-003
-Medium| Fleet Escort population| ENM-FLT-001 to ENM-FLT-003
-Medium| Enemy spawn distribution| ENM-SPN-001
+14. SOURCE REFERENCES
 
-A claim must not be upgraded solely because it appears on multiple websites if those websites rely on the same original source.
+Referensi berikut digunakan sebagai sumber informasi dan bahan perbandingan.
 
----
+Official Developer Sources
 
-13. STRATEGIC APPLICATION
+1. Tech Tree Games – v28.3 Patch Notes
 
-Enemy mechanics support Samantha's analysis of:
+https://www.techtreegames.com/post/v28-3-patch-notes
 
-- Damage requirements
-- Crowd-control requirements
-- Survival and defensive requirements
-- Elite Cell acquisition
-- Boss elimination
-- Tournament performance
-- Farming efficiency
-- Death-cause analysis
-- Enemy density and population pressure
+Digunakan untuk memeriksa perubahan Fleet, Support Enemy spawn cap, Saboteur, Commander, dan Overcharge.
 
-Enemy type alone is insufficient to determine an upgrade priority.
+2. Tech Tree Games – Tournaments: Legend and Mythic New Fleet Wave Mechanics
 
-Recommendations must also consider:
+https://techtreegames.zendesk.com/hc/en-us/articles/58296439461403--The-Tower-Tournaments-Legend-and-Mythic-New-Fleet-Wave-Mechanics
 
-- Player objective
-- Account progression
-- Active preset
-- Module configuration
-- UW configuration
-- System synergies
-- Available resources
-- Opportunity cost
-- Evidence confidence
+Pengumuman developer mengenai mekanisme Fleet Wave dan tie-break untuk liga yang menggunakan Fleet.
 
----
+3. Tech Tree Games – v29 Patch Notes
 
-14. SOURCE REGISTRY REQUIREMENTS
+https://techtreegames.zendesk.com/hc/en-us/articles/54972978743707-v29-Patch-Notes-2026-08-26
 
-Every important claim must eventually be linked to an entry in the External Sources & Evidence Registry (ESER).
+Referensi tambahan untuk mekanisme Fleet dalam turnamen.
 
-Relevant source categories include:
+Community and Fan Sources
 
-1. Official developer patch notes and announcements.
-2. Structured technical references such as TheTowerSDK.
-3. Established community databases such as Tower Hub and Game Vault Wiki.
-4. Reproducible player experiments.
-5. Community guides and documented player experience.
+4. Tower Hub – Enemies
 
-A source reference must include its URL, source type, applicable version, and access or verification date whenever available.
+https://tower-advisor.vercel.app/wiki/enemy/enemies
 
-Do not invent source URLs, publication dates, or verification results.
+Digunakan untuk membandingkan karakteristik musuh, shared mechanics, populasi, Fleet, dan spawn mechanics.
 
----
+5. Tower Hub – Elite Enemies
 
-15. CHANGE MANAGEMENT
+https://www.tower-hub.com/wiki/enemy/elite-enemies
 
-Every significant change must record:
+Digunakan untuk membandingkan karakteristik Elite, immunity, Scatter, Vampire, dan Ray.
 
-- Claim ID
-- Previous value or description
-- New value or description
-- Previous Evidence Status
-- New Evidence Status
-- Previous Confidence Level
-- New Confidence Level
-- Supporting evidence
-- Game version
-- Change date
-- Review or approval status
+6. Towerstats – The Tower Enemies
 
-Superseded information should remain traceable.
+https://towerstats.org/guide/enemies/
 
-Only the Project Owner may approve promotion of player experiments into universal GKB knowledge.
+Referensi komunitas untuk enemy classification, population, enemy characteristics, dan Fleet.
 
----
+Halaman ini menyatakan menggunakan data dari The Tower Wiki. Karena itu, informasi yang berasal dari sumber asal yang sama tidak boleh dihitung sebagai konfirmasi independen.
+
+7. Towerstats – Enemy Coin Weight Curve
+
+https://towerstats.org/enemy-coin-weight-curve/
+
+Referensi untuk analisis relative coin weight dan komposisi musuh.
+
+8. Tower Knowledge Hub – Guide to Improving Coin Income
+
+https://the-tower.notion.site/Guide-to-Improving-Coin-Income-1bf91383b93f80b883fefcd58298d20a
+
+Digunakan untuk membandingkan direct coin drop dan faktor pendapatan coin.
+
+Referensi komunitas bukan pengganti dokumentasi resmi developer. Informasi harus tetap diberi atribusi dan status bukti yang sesuai.
+
+15. DOCUMENT MAINTENANCE
+
+Dokumen ini dapat diperbarui apabila tersedia:
+
+- Patch notes baru.
+- Pengumuman resmi developer.
+- Perubahan mekanisme yang dapat diamati.
+- Referensi komunitas baru.
+- Pengujian pemain yang terdokumentasi.
+- Koreksi terhadap informasi sebelumnya.
+
+Informasi yang berubah harus disesuaikan dengan bukti dan versi game yang relevan.
+
+Developer dapat mengubah mekanisme permainan kapan saja, termasuk tanpa pemberitahuan sebelumnya. Samantha tidak dapat menjamin mengetahui perubahan yang belum diumumkan, belum terdeteksi, atau belum tersedia dalam sumber yang dapat diakses.
+
+Informasi lama yang pernah Verified tidak otomatis berlaku untuk versi terbaru.
 
 16. DOCUMENT GOVERNANCE
 
-This document is a structured research baseline.
+Dokumen ini merupakan referensi pengetahuan yang dapat berkembang.
 
-Its numerical values are not all Verified.
+Samantha harus:
 
-Samantha must:
+- Menyebutkan sumber informasi jika tersedia.
+- Mempertahankan Evidence Status.
+- Tidak memperlakukan informasi komunitas sebagai fakta resmi.
+- Tidak menyamakan pengulangan informasi dengan konfirmasi independen.
+- Menampilkan perbedaan laporan apabila sumber tidak sepakat.
+- Tidak mengarang hasil pengujian atau konfirmasi.
+- Menggunakan informasi sesuai versi dan kondisi yang diketahui.
+- Memberikan analisis dengan menjelaskan dasar dan keterbatasannya.
 
-- Preserve the stated Evidence Status.
-- Preserve the stated Confidence Level.
-- Disclose uncertainty when answering users.
-- Avoid presenting Source-Reported information as official fact.
-- Avoid silently resolving conflicts.
-- Revalidate version-sensitive claims.
-- Request additional information when a mechanic depends on unknown conditions.
+Samantha tidak berkewajiban melakukan verifikasi independen terhadap seluruh informasi atau menyelesaikan setiap konflik sumber sebelum membantu pemain.
 
-Guiding Principle:
+Guiding Principle
 
-An enemy is not merely a health value. Its movement, attack behavior, immunity, population limit, and interaction with other enemies determine the actual threat it presents.
+An enemy is not merely a health value. Its movement, attack behavior, immunity, population, and interaction with other enemies determine the actual threat it presents.
 
-Knowledge Integrity Rule:
+Knowledge Integrity Rule
 
-Evidence determines what Samantha may claim. Confidence determines how strongly Samantha may express that claim. Neither may be replaced by popularity, repetition, or assumption.
+Samantha must distinguish what a source reports, what available evidence supports, what has been verified, and what remains uncertain.
+
+Core Principle: Optimize Decisions, Not Popularity.
