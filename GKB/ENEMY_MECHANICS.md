@@ -1,289 +1,561 @@
-Enemy Mechanics
+ENEMY MECHANICS
 
 Project: Samantha – The Tower
 Database: Game Knowledge Base (GKB)
 Document ID: GKB-ENEMY-001
-Version: 1.0.0
+Version: 1.1.0
 Date: 2026-11-07
-Status: Draft – Requires Owner Review
+Status: Draft – Evidence Review Required
+Owner: Samantha Project Owner
 
 ---
 
-1. Purpose
+1. PURPOSE
 
-This document defines the known enemy mechanics in The Tower: Idle Tower Defense.
+This document defines the enemy mechanics reference for The Tower: Idle Tower Defense.
 
-It provides a structured reference for enemy attributes, behaviors, damage threats, spawn mechanics, and strategic implications.
+Its purpose is to help Samantha understand enemy characteristics, behavior, damage threats, population limits, spawn mechanics, and their strategic implications.
 
-The objective is to help Samantha identify enemy-related bottlenecks instead of making recommendations based solely on total damage or wave progression.
+This document is an evidence-managed knowledge resource. Numerical values must not automatically be treated as verified game mechanics.
 
-2. Enemy Categories
+Core Principle: Optimize Decisions, Not Popularity.
 
-Enemies are divided into several categories:
+2. EVIDENCE GOVERNANCE
 
-- Basic
-- Fast
-- Tank
-- Ranged
-- Protector
-- Boss
-- Elite
+Every important mechanic claim must have two independent classifications:
 
-Fleet Escort enemies are an additional encounter mechanic and must be evaluated separately from the ordinary enemy population.
+2.1 Evidence Status
 
-3. Enemy Population Limits
+Status| Definition
+Verified| Confirmed by sufficiently strong and relevant evidence
+Supported| Supported by credible evidence but not fully verified
+Source-Reported| Reported by a source but not independently confirmed
+Community-Tested| Tested by players under documented conditions
+Calculated| Derived mathematically from documented inputs
+Inference| Reasoned interpretation of available information
+Hypothesis| Proposed explanation requiring testing
+Unverified| Insufficient evidence
+Conflict| Conflicting evidence remains unresolved
+Superseded| Replaced by newer or more applicable information
+Incorrect| Demonstrated to be incorrect
 
-The following limits are documented in the current research baseline:
+2.2 Confidence Level
 
-Category| Simultaneous Limit
-Normal enemies| 120
-Elite enemies| 20
-Bosses| 10
-Elite of each type| 8
-Protectors| 10
+Level| Definition
+High| Evidence is strong, consistent, and applicable
+Medium| Evidence is credible but has limitations
+Low| Evidence is limited, indirect, or uncertain
 
-Important distinctions:
+Evidence Status and Confidence Level must never be treated as interchangeable.
 
-- The ordinary population limit is not a universal maximum for every enemy encounter.
-- Fleet Escort enemies can push the total population above the ordinary 150-enemy combined limit.
-- The Elite per-type limit of 8 is different from the total Elite limit of 20.
-- The Protector limit of 10 must not be confused with the Elite per-type limit.
+A Source-Reported claim may have Medium confidence, but it must remain Source-Reported until its evidence status is legitimately upgraded.
 
-Evidence status: Source-Reported / Supported. Recheck after relevant game updates.
+2.3 Claim Requirements
 
-4. Enemy Types and Behavior
+Important claims should record:
 
-4.1 Basic
+- Claim ID
+- Mechanic or subject
+- Claim description
+- Evidence Status
+- Confidence Level
+- Source name and URL
+- Source type
+- Applicable game version
+- Source publication date, if available
+- Verification date
+- Conditions and limitations
+- Related claims or conflicts
 
-Basic enemies are the standard enemy type.
+Missing information must be identified as unknown, not invented.
 
-They are used as the reference point for several enemy scaling and damage comparisons.
+---
 
-4.2 Fast
+3. ENEMY CLASSIFICATION
 
-Known characteristics:
+The main enemy categories are:
+
+1. Basic
+2. Fast
+3. Tank
+4. Ranged
+5. Protector
+6. Boss
+7. Elite
+
+Fleet Escort is a separate encounter mechanic and must be analyzed independently from ordinary enemy populations.
+
+---
+
+4. ENEMY POPULATION LIMITS
+
+The current research baseline contains the following reported limits:
+
+Population| Reported Limit| Claim ID
+Normal enemies| 120| ENM-CAP-001
+Elite enemies| 20| ENM-CAP-002
+Bosses| 10| ENM-CAP-003
+Each Elite type| 8| ENM-CAP-004
+Protectors| 10| ENM-CAP-005
+
+Important distinctions
+
+- Normal enemy population is not the same as total enemy population.
+- Elite total population and per-type Elite population are separate limits.
+- Protector population must not be confused with the Elite per-type limit.
+- Fleet Escort has a separate population allowance.
+- Total visible enemies may exceed the ordinary combined population limit when special encounter mechanics are active.
+
+Evidence classification
+
+Claim ID| Evidence Status| Confidence
+ENM-CAP-001| Source-Reported| Medium
+ENM-CAP-002| Source-Reported| Medium
+ENM-CAP-003| Source-Reported| Medium
+ENM-CAP-004| Source-Reported| Medium
+ENM-CAP-005| Verified – Historical Change| High
+
+ENM-CAP-005 note: The Protector cap was previously reported as 8 and subsequently changed to 10 in developer patch documentation. The historical change is documented; current-version compatibility should still be checked.
+
+These values are research baselines, not permission to assume every encounter uses all available population slots.
+
+---
+
+5. ENEMY TYPES AND BEHAVIOR
+
+5.1 Basic
+
+Basic enemies are the standard enemy category and a reference point for several enemy scaling and damage comparisons.
+
+Claim ID| Description| Evidence Status| Confidence
+ENM-BAS-001| Basic is the reference enemy category for relative comparisons| Supported| Medium
+
+5.2 Fast
+
+Reported characteristics:
 
 - Approximately 2x Basic movement speed.
-- Their movement speed increases pressure on crowd control and projectile coverage.
-- They can reach the Tower more quickly than ordinary enemies.
 
 Strategic implications:
 
-- Attack Speed and projectile coverage can influence how effectively Fast enemies are eliminated.
-- Knockback, Orbs, and other crowd-control mechanics can affect their approach.
-- A run ending with Fast enemies does not automatically mean Tower damage is insufficient; control and enemy density must also be examined.
+- Fast enemies can reach the Tower more quickly.
+- Crowd control and projectile coverage may be important.
+- A Fast-related death does not automatically prove insufficient Tower damage.
 
-4.3 Tank
+Claim ID| Description| Evidence Status| Confidence
+ENM-FST-001| Fast movement speed is approximately 2x Basic| Source-Reported| Medium
 
-Known characteristics:
+5.3 Tank
+
+Reported characteristics:
 
 - Approximately 5x Basic health.
 - Approximately 0.5x Basic movement speed.
 
 Strategic implications:
 
-- Tanks require more damage or effective damage mechanics to eliminate.
-- Their slower movement provides more time for damage and control effects.
-- Tank survival can contribute to crowd accumulation.
+- Tanks require more effective damage to eliminate.
+- Their slower movement may provide more time for damage and control effects.
+- Surviving Tanks can contribute to enemy accumulation.
 
-4.4 Ranged
+Claim ID| Description| Evidence Status| Confidence
+ENM-TNK-001| Tank health is approximately 5x Basic| Source-Reported| Medium
+ENM-TNK-002| Tank movement speed is approximately 0.5x Basic| Source-Reported| Medium
 
-Known characteristics:
+5.4 Ranged
 
-- Can attack from outside ordinary Orb range.
-- Their ranged attack behavior creates a different threat profile from enemies that must physically reach the Tower.
+Reported characteristics:
 
-Strategic implications:
-
-- Samantha must distinguish ranged damage from contact damage.
-- Orb-based strategies do not automatically solve Ranged threats.
-- Range, projectile damage, crowd control, and defensive mechanics should be evaluated together.
-
-4.5 Protector
-
-Known characteristics:
-
-- Provides a protective effect to nearby enemies.
-- The documented shield effect reduces incoming damage by approximately 60%.
-- Maximum simultaneous Protectors: 10.
+- Ranged enemies can attack from outside ordinary Orb range.
 
 Strategic implications:
 
-- Protector presence can reduce effective damage against protected enemies.
-- High enemy density combined with multiple Protectors can create a substantial damage bottleneck.
-- Samantha should consider Protector count and survival duration when evaluating damage efficiency.
+- Orb coverage alone does not guarantee protection against Ranged attacks.
+- Samantha must distinguish ranged attacks from contact damage.
+- Tower range, damage, crowd control, and defense should be evaluated together.
 
-4.6 Boss
+Claim ID| Description| Evidence Status| Confidence
+ENM-RNG-001| Ranged enemies can attack outside ordinary Orb range| Source-Reported| Medium
 
-Known characteristics:
+5.5 Protector
+
+Reported characteristics:
+
+- Protectors provide a protective effect to nearby enemies.
+- The reported damage reduction is approximately 60%.
+- The documented simultaneous Protector cap is 10.
+
+Strategic implications:
+
+- Protected enemies may require substantially more effective damage.
+- Protector count and survival duration can influence enemy density.
+- Samantha should evaluate whether a player's damage bottleneck is caused by Protector shielding rather than insufficient base damage.
+
+Claim ID| Description| Evidence Status| Confidence
+ENM-PRO-001| Protector provides protection to nearby enemies| Supported| Medium
+ENM-PRO-002| Protection reduces incoming damage by approximately 60%| Source-Reported| Medium
+ENM-PRO-003| Protector simultaneous cap is 10| Verified – Historical Change| High
+
+The exact interaction between Protector shielding and every damage source requires further validation.
+
+5.6 Boss
+
+Reported characteristics:
 
 - Bosses have a separate simultaneous population limit.
-- Bosses are immune to several ordinary instant-kill and control mechanics, including Orb, Death Ray, and Shockwave.
-- Black Hole does not ordinarily eliminate Bosses, but Orb Boss Hit provides a specific interaction.
+- Bosses are not ordinarily eliminated by Orb, Death Ray, or Shockwave.
+- Orb Boss Hit provides a specific Boss-related interaction.
 
 Strategic implications:
 
-- Boss damage must be evaluated separately from ordinary enemy clearing.
-- Boss Orb Hit, damage amplification, and defensive survival mechanics can be relevant.
+- Ordinary enemy clearing and Boss elimination must be evaluated separately.
+- Boss damage, damage amplification, and survival mechanics may determine tournament progression.
 - A build that clears ordinary enemies efficiently may still lack sufficient Boss damage.
 
-4.7 Elite
+Claim ID| Description| Evidence Status| Confidence
+ENM-BOS-001| Boss has a separate population limit| Source-Reported| Medium
+ENM-BOS-002| Boss interaction with Orb, Death Ray, and Shockwave is restricted| Source-Reported| Medium
+ENM-BOS-003| Orb Boss Hit provides a specific Boss interaction| Source-Reported| Medium
 
-Known characteristics:
+Do not interpret this list as a complete Boss immunity specification.
 
-- Elites have a separate population limit.
-- Each Elite type has a documented simultaneous limit of 8.
-- Elites are immune to several ordinary instant-kill and control mechanics, including Orb, Death Ray, Shockwave, and Black Hole.
+5.7 Elite
+
+Elite enemies have distinct behaviors and can significantly influence survival and Cell acquisition.
+
+Reported characteristics:
+
+- Elite enemies have a separate population limit.
+- Each Elite type has a reported simultaneous limit of 8.
+- Several ordinary instant-kill and crowd-control mechanics have restricted interactions with Elites.
 - Elite Cells are an important source of Lab Speed-up resources.
 
-Known Elite types include:
+Claim ID| Description| Evidence Status| Confidence
+ENM-ELT-001| Elite has a separate population limit| Source-Reported| Medium
+ENM-ELT-002| Each Elite type has a limit of 8| Source-Reported| Medium
+ENM-ELT-003| Elite Cells are used for Lab Speed-up| Supported| High
 
-Vampire
+5.7.1 Vampire
+
+Reported characteristics:
 
 - Drains approximately 2% of maximum Tower health per second.
 - Disables health regeneration and Lifesteal while its effect is active.
 
-Ray
+Claim ID| Description| Evidence Status| Confidence
+ENM-VMP-001| Vampire drains approximately 2% maximum Tower health per second| Source-Reported| Medium
+ENM-VMP-002| Vampire disables health regeneration and Lifesteal during its effect| Source-Reported| Medium
+
+5.7.2 Ray
+
+Reported characteristics:
 
 - Charges its beam for approximately 30 seconds.
-- Its beam deals approximately 2x Basic enemy damage.
-- It is immune to Knockback.
+- Beam damage is approximately 2x Basic enemy damage.
+- Ray is immune to Knockback.
 
-Scatter
+Claim ID| Description| Evidence Status| Confidence
+ENM-RAY-001| Ray charge duration is approximately 30 seconds| Source-Reported| Medium
+ENM-RAY-002| Ray beam damage is approximately 2x Basic damage| Source-Reported| Medium
+ENM-RAY-003| Ray is immune to Knockback| Source-Reported| Medium
 
-- Splits into 31 bodies.
-- Only one of the resulting bodies provides Elite Cells.
+Samantha must distinguish Ray charge duration, beam duration, and the interval between attacks. These are not automatically the same measurement.
 
-Evidence status: Source-Reported / Supported. Individual behavior and numerical values require version-specific validation.
+5.7.3 Scatter
 
-5. Enemy Coin Weights
+Reported characteristics:
 
-The documented relative coin weights are:
+- Scatter splits into 31 bodies.
+- Only one resulting body provides Elite Cells.
 
-Enemy| Relative Coin Weight
-Basic| 1
-Fast| 2
-Ranged| 2
-Protector| 3
-Tank| 4
-Boss| 5
-Elite| 4
+Claim ID| Description| Evidence Status| Confidence
+ENM-SCT-001| Scatter splits into 31 bodies| Source-Reported| Medium
+ENM-SCT-002| Only one resulting body provides Elite Cells| Source-Reported| Medium
 
-These are relative weights, not guaranteed final coin payouts.
+The exact interpretation of the 31-body count should be checked against game behavior and current documentation.
 
-Other coin multipliers, bonuses, and game conditions must be considered before calculating actual income.
+---
 
-6. Enemy Modifiers
+6. ENEMY COIN WEIGHTS
 
-6.1 Heat-Up
+The following relative coin weights are reported in existing research:
+
+Enemy| Relative Weight| Claim ID
+Basic| 1| ENM-COIN-001
+Fast| 2| ENM-COIN-002
+Ranged| 2| ENM-COIN-003
+Protector| 3| ENM-COIN-004
+Tank| 4| ENM-COIN-005
+Boss| 5| ENM-COIN-006
+Elite| 4| ENM-COIN-007
+
+Evidence Status: Source-Reported
+Confidence: Medium
+
+These values represent relative coin weights, not guaranteed final coin payouts.
+
+Actual coin income may depend on:
+
+- Coin bonuses
+- Golden Tower
+- Black Hole
+- Death Wave
+- Golden Bot
+- Themes and other applicable bonuses
+- Battle Conditions
+- Enemy-specific eligibility
+- Game version
+
+Samantha must not use relative weights as direct coin payout values.
+
+---
+
+7. ENEMY MODIFIERS
+
+7.1 Heat-Up
+
+Reported mechanic:
 
 - Enemy damage increases by approximately 4% per successful hit.
-- Repeated hits can make an enemy progressively more dangerous.
 
-6.2 Coin Decay
+Claim ID: ENM-MOD-001
+Evidence Status: Source-Reported
+Confidence: Medium
 
-- Enemies that remain alive for approximately 3 waves experience a 50% coin reduction.
+7.2 Coin Decay
 
-6.3 Mass Growth
+Reported mechanic:
+
+- Enemies remaining alive for approximately 3 waves experience a 50% coin reduction.
+
+Claim ID: ENM-MOD-002
+Evidence Status: Source-Reported
+Confidence: Medium
+
+7.3 Mass Growth
+
+Reported mechanic:
 
 - Enemy mass increases by approximately 4% per wave alive.
 
-Evidence status: Source-Reported / Supported. Confirm exact implementation against the applicable game version.
+Claim ID: ENM-MOD-003
+Evidence Status: Source-Reported
+Confidence: Medium
 
-7. Spawn Mechanics
+The exact implementation, stacking behavior, and applicable conditions require version-specific validation.
 
-Enemy composition is not a fixed universal percentage throughout a run.
+---
 
-Research based on battle reports indicates that enemy composition changes with wave progression.
+8. SPAWN MECHANICS
 
-Samantha must not assume that one observed enemy distribution applies to all tiers, waves, or Battle Conditions.
+Enemy composition is not assumed to follow one universal percentage throughout an entire run.
+
+Existing research based on battle reports indicates that enemy composition changes with wave progression.
 
 Relevant variables include:
 
 - Tier
 - Wave
-- Enemy type
+- Enemy category
 - Spawn progression
 - Battle Conditions
-- Special encounter mechanics
+- Special encounters
 - Fleet Escort
 - Enemy population limits
 
-A proper spawn analysis should identify its tier, wave range, and game version.
+Samantha must not extrapolate a single observed enemy distribution to every tier, wave, or game version.
 
-8. Fleet Escort
+Required data for spawn analysis
 
-Fleet Escort is a special encounter mechanic.
+Each spawn observation should include:
 
-Known research findings:
+- Tier
+- Wave or wave range
+- Game version
+- Enemy counts by type
+- Battle Conditions
+- Run duration or observation interval
+- Data source
+- Collection method
 
-- An encounter can include approximately 10–14 matching escort enemies.
+Claim ID: ENM-SPN-001
+Evidence Status: Community-Tested / Source-Reported
+Confidence: Medium
+
+Exact spawn probability formulas remain subject to further validation.
+
+---
+
+9. FLEET ESCORT
+
+Fleet Escort is a special encounter mechanic and must be distinguished from ordinary enemy spawning.
+
+Existing research reports:
+
+- Approximately 10–14 matching escort enemies in an encounter.
 - Escort enemies use a separate population allowance.
-- Their presence can push total enemy population above the ordinary 150-enemy combined limit.
+- Their presence can push total enemy population above the ordinary combined limit.
 
-Fleet Escort must therefore be tracked separately when evaluating enemy population and crowd density.
+Claim ID| Description| Evidence Status| Confidence
+ENM-FLT-001| Fleet Escort has a separate population allowance| Supported| Medium
+ENM-FLT-002| An encounter can contain approximately 10–14 matching escorts| Source-Reported| Medium
+ENM-FLT-003| Escorts can increase total population beyond the ordinary combined limit| Supported| Medium
 
-Evidence status: Source-Reported / Supported. Recheck against current patch documentation.
+The exact count and behavior must be rechecked against the applicable game version.
 
-9. Enemy Immunity Reference
+---
+
+10. ENEMY IMMUNITY AND INTERACTION MATRIX
 
 The following is a working reference, not a complete immunity specification.
 
-Enemy| Known interactions
-Boss| Immune to Orb, Death Ray, Shockwave; special Orb Boss Hit interaction
-Elite| Immune to Orb, Death Ray, Shockwave, Black Hole
+Enemy| Reported Interaction
+Boss| Restricted interaction with Orb, Death Ray, and Shockwave
+Elite| Restricted interaction with Orb, Death Ray, Shockwave, and Black Hole
 Ray| Immune to Knockback
 Ranged| Can attack outside ordinary Orb range
-Protector| Reduces damage received by protected enemies
+Protector| Provides protection to nearby enemies
 
-Do not infer immunity to an unlisted mechanic from this table.
+Evidence Status: Source-Reported / Supported
+Confidence: Medium
 
-10. Enemy-Related Diagnostic Framework
+Important rules:
 
-When a player reports that a run ended, Samantha should investigate:
+- Do not infer immunity to an unlisted mechanic.
+- Distinguish immunity, resistance, protection, and targeting restrictions.
+- Record special exceptions separately.
+- Recheck interactions after relevant patches.
+
+---
+
+11. ENEMY-RELATED DIAGNOSTIC FRAMEWORK
+
+When a player reports a failed run, Samantha should investigate:
 
 1. Which enemy caused the final damage?
-2. Was the enemy a Boss, Elite, or ordinary enemy?
+2. Was it a Boss, Elite, or ordinary enemy?
 3. Was a Protector active?
 4. Was the enemy affected by a Battle Condition?
-5. Did the enemy reach the Tower through insufficient damage, insufficient crowd control, or a special mechanic?
-6. Was the Tower killed by contact damage, a projectile, a beam, or another effect?
+5. Was the failure caused by insufficient damage, insufficient crowd control, or a special mechanic?
+6. Did the Tower die from contact damage, a projectile, a beam, or another effect?
 7. Were multiple enemies contributing to the failure?
 8. Did the enemy population approach its simultaneous limit?
+9. Was the active preset appropriate for the run objective?
+10. Is the reported death cause supported by battle-report evidence?
 
 The last enemy shown in a battle report must not automatically be assumed to be the only cause of the run ending.
 
-11. Data Required for Future Validation
+---
 
-The following topics require additional research or reproducible testing:
+12. VALIDATION PRIORITIES
 
-- Exact enemy spawn probability by tier and wave.
-- Enemy scaling formulas and version compatibility.
-- Full Elite immunity matrix.
-- Protector shielding interactions with different damage sources.
-- Fleet Escort population behavior under different conditions.
-- Exact interaction between enemy modifiers and Battle Conditions.
-- Enemy-specific damage attribution in battle reports.
+The following claims require further research, direct evidence, or reproducible testing.
 
-12. Strategic Application
+Priority| Subject| Claim IDs
+High| Enemy population limits| ENM-CAP-001 to ENM-CAP-004
+High| Protector damage reduction| ENM-PRO-002
+High| Ray damage and charge behavior| ENM-RAY-001 to ENM-RAY-003
+High| Elite immunity interactions| ENM-ELT-001 to ENM-ELT-002
+Medium| Scatter body count and Cell attribution| ENM-SCT-001 to ENM-SCT-002
+Medium| Enemy coin weights| ENM-COIN-001 to ENM-COIN-007
+Medium| Enemy modifiers| ENM-MOD-001 to ENM-MOD-003
+Medium| Fleet Escort population| ENM-FLT-001 to ENM-FLT-003
+Medium| Enemy spawn distribution| ENM-SPN-001
 
-Enemy mechanics should be used by Samantha to evaluate:
+A claim must not be upgraded solely because it appears on multiple websites if those websites rely on the same original source.
+
+---
+
+13. STRATEGIC APPLICATION
+
+Enemy mechanics support Samantha's analysis of:
 
 - Damage requirements
-- Crowd control requirements
+- Crowd-control requirements
 - Survival and defensive requirements
 - Elite Cell acquisition
 - Boss elimination
 - Tournament performance
 - Farming efficiency
 - Death-cause analysis
+- Enemy density and population pressure
 
-Enemy type alone is not sufficient to determine an upgrade priority.
+Enemy type alone is insufficient to determine an upgrade priority.
 
-Recommendations must consider player objectives, account configuration, active preset, available resources, and system synergies.
+Recommendations must also consider:
+
+- Player objective
+- Account progression
+- Active preset
+- Module configuration
+- UW configuration
+- System synergies
+- Available resources
+- Opportunity cost
+- Evidence confidence
 
 ---
 
-Document Principle:
+14. SOURCE REGISTRY REQUIREMENTS
+
+Every important claim must eventually be linked to an entry in the External Sources & Evidence Registry (ESER).
+
+Relevant source categories include:
+
+1. Official developer patch notes and announcements.
+2. Structured technical references such as TheTowerSDK.
+3. Established community databases such as Tower Hub and Game Vault Wiki.
+4. Reproducible player experiments.
+5. Community guides and documented player experience.
+
+A source reference must include its URL, source type, applicable version, and access or verification date whenever available.
+
+Do not invent source URLs, publication dates, or verification results.
+
+---
+
+15. CHANGE MANAGEMENT
+
+Every significant change must record:
+
+- Claim ID
+- Previous value or description
+- New value or description
+- Previous Evidence Status
+- New Evidence Status
+- Previous Confidence Level
+- New Confidence Level
+- Supporting evidence
+- Game version
+- Change date
+- Review or approval status
+
+Superseded information should remain traceable.
+
+Only the Project Owner may approve promotion of player experiments into universal GKB knowledge.
+
+---
+
+16. DOCUMENT GOVERNANCE
+
+This document is a structured research baseline.
+
+Its numerical values are not all Verified.
+
+Samantha must:
+
+- Preserve the stated Evidence Status.
+- Preserve the stated Confidence Level.
+- Disclose uncertainty when answering users.
+- Avoid presenting Source-Reported information as official fact.
+- Avoid silently resolving conflicts.
+- Revalidate version-sensitive claims.
+- Request additional information when a mechanic depends on unknown conditions.
+
+Guiding Principle:
 
 An enemy is not merely a health value. Its movement, attack behavior, immunity, population limit, and interaction with other enemies determine the actual threat it presents.
+
+Knowledge Integrity Rule:
+
+Evidence determines what Samantha may claim. Confidence determines how strongly Samantha may express that claim. Neither may be replaced by popularity, repetition, or assumption.
