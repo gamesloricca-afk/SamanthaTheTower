@@ -13,19 +13,44 @@ for (const name of workbook.SheetNames) {
   const sheet = workbook.Sheets[name];
   const range = sheet["!ref"];
 
+  console.log("\n================================");
+  console.log("SHEET:", name);
+  console.log("================================");
+
   if (!range) {
-    console.log(name, "- kosong");
+    console.log("Sheet kosong");
     continue;
   }
 
-  const size = XLSX.utils.decode_range(range);
+  const bounds = XLSX.utils.decode_range(range);
 
-  console.log({
-    sheet: name,
-    range,
-    rows: size.e.r - size.s.r + 1,
-    columns: size.e.c - size.s.c + 1
-  });
+  console.log("Range:", range);
+
+  const maxRows = Math.min(bounds.e.r, bounds.s.r + 7);
+  const maxCols = Math.min(bounds.e.c, bounds.s.c + 11);
+
+  for (let r = bounds.s.r; r <= maxRows; r++) {
+    const values = [];
+
+    for (let c = bounds.s.c; c <= maxCols; c++) {
+      const address = XLSX.utils.encode_cell({ r, c });
+      const cell = sheet[address];
+
+      if (!cell) continue;
+
+      let value = String(cell.w ?? cell.v ?? "");
+
+      if (value.length > 100) {
+        value = value.slice(0, 100) + "...";
+      }
+
+      values.push(`${address}: ${value}`);
+    }
+
+    if (values.length > 0) {
+      console.log(values.join(" | "));
+    }
+  }
 }
 
-console.log("XLSX READ TEST: PASS");
+console.log("\nXLSX CELL READ TEST: PASS");
