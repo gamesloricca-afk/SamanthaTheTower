@@ -2,7 +2,7 @@
 {
   "manifestId": "samantha-uap-manifest",
   "manifestVersion": "1.0.0-draft",
-  "status": "AUDIT_COMPLETE_PENDING_DEPLOYMENT_AND_RUNTIME_VALIDATION",
+  "status": "STRUCTURALLY_VALIDATED_PENDING_RUNTIME_VALIDATION",
   "evidence": {
     "repository": "gamesloricca-afk/SamanthaTheTower",
     "branch": "TestAccount",
@@ -859,7 +859,7 @@
     "Power node behavior combinations not tested.",
     "CardsIndex layout/5x28 hypothesis unconfirmed.",
     "UW array element semantics not inferred.",
-    "Not deployed or runtime-tested."
+    "Deployment verified on TestAccount branch; runtime validation remains pending."
   ],
   "deployment": {
     "targetPath": "schemas/Samantha_UAP_Manifest.json",
