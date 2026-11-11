@@ -26,7 +26,7 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   "use strict";
 
-  const VERSION = "1.0.0";
+  const VERSION = "1.1.0";
 
   function isObject(value) {
     return value !== null &&
@@ -268,7 +268,157 @@
     }
   }
 
-  function validateArrayContracts(account, manifest, report) {
+ 
+function validateArrayContracts(
+  account,
+  manifest,
+  report,
+  isKnownGameVersion
+) {
+  for (const [field, contract] of Object.entries(
+    manifest.arrayContracts
+  )) {
+    report.checks.arrayContracts++;
+
+    if (!Object.prototype.hasOwnProperty.call(account, field)) {
+      continue;
+    }
+
+    const value = account[field];
+
+    if (!Array.isArray(value)) {
+      addError(
+        report,
+        "ARRAY_EXPECTED",
+        field,
+        "Expected an array."
+      );
+      continue;
+    }
+
+    const expectedLength = contract[0];
+    const expectedType = contract[1];
+
+    if (value.length !== expectedLength) {
+      const message =
+        "Expected observed length " + expectedLength +
+        ", received " + value.length + ".";
+
+      if (isKnownGameVersion) {
+        addError(
+          report,
+          "ARRAY_LENGTH_MISMATCH",
+          field,
+          message
+        );
+      } else {
+        addWarning(
+          report,
+          "ARRAY_LENGTH_UNVERIFIED_FOR_GAME_VERSION",
+          field,
+          message +
+          " Length mismatch is non-fatal because this game version " +
+          "is not covered by the audited fixtures."
+        );
+      }
+    }
+
+    value.forEach((item, index) => {
+      if (typeOf(item) !== expectedType) {
+        addError(
+          report,
+          "ARRAY_ITEM_TYPE",
+          field + "[" + index + "]",
+          "Expected " + expectedType +
+          ", received " + typeOf(item) + "."
+        );
+      }
+    });
+
+    if (field === "ResearchPercentComplete") {
+      value.forEach((n, i) => {
+        if (typeof n === "number" && (n < 0 || n > 1)) {
+          addError(
+            report,
+            "RESEARCH_PERCENT_RANGE",
+            field + "[" + i + "]",
+            "Value must be between 0 and 1."
+          );
+        }
+      });
+    }
+
+    if (field === "PerkLevel") {
+      value.forEach((n, i) => {
+        if (typeof n === "number" && (n < 0 || n > 5)) {
+          addError(
+            report,
+            "PERK_LEVEL_RANGE",
+            field + "[" + i + "]",
+            "Observed range is 0 to 5."
+          );
+        }
+      });
+    }
+
+    if (field === "RelicsUnlocked") {
+      value.forEach((n, i) => {
+        if (typeof n === "number" && n !== 0 && n !== 2) {
+          addWarning(
+            report,
+            "UNKNOWN_RELIC_CODE",
+            field + "[" + i + "]",
+            "Value differs from observed fixture codes 0 and 2."
+          );
+        }
+      });
+    }
+
+    if (field === "GuardianChipSlot") {
+      value.forEach((n, i) => {
+        if (typeof n === "number" && (n < -1 || n > 29)) {
+          addError(
+            report,
+            "GUARDIAN_CHIP_RANGE",
+            field + "[" + i + "]",
+            "Value outside observed range -1 to 29."
+          );
+        }
+      });
+    }
+
+    if (field === "BannedPerksIndex") {
+      value.forEach((n, i) => {
+        if (
+          typeof n === "number" &&
+          n !== -1 &&
+          (n < 0 || n > 49)
+        ) {
+          addError(
+            report,
+            "BANNED_PERK_RANGE",
+            field + "[" + i + "]",
+            "Expected -1 or a perk ID from 0 to 49."
+          );
+        }
+      });
+    }
+
+    if (field === "ProfileRelics") {
+      value.forEach((n, i) => {
+        if (typeof n === "number" && (n < 0 || n > 349)) {
+          addError(
+            report,
+            "PROFILE_RELIC_RANGE",
+            field + "[" + i + "]",
+            "Relic reference outside 0 to 349."
+          );
+        }
+      });
+    }
+  }
+}
+
     for (const [field, contract] of Object.entries(
       manifest.arrayContracts
     )) {
@@ -1005,19 +1155,43 @@
       };
     }
 
-    validateRootFields(account, manifest, report);
-    validateArrayContracts(account, manifest, report);
-    validateNestedContracts(account, manifest, report);
-    validateCrossReferences(account, report);
 
-    const reference = manifest.evidence?.versions;
+validateRootFields(account, manifest, report);
 
-    if (reference && account.VersionNumber !== undefined) {
-      const known = reference.VersionNumber || [];
+const reference = manifest.evidence?.versions;
 
-      if (!known.includes(account.VersionNumber)) {
-        addWarning(
-          report,
+const knownVersions = Array.isArray(reference?.VersionNumber)
+  ? reference.VersionNumber
+  : [];
+
+const isKnownGameVersion =
+  account.VersionNumber !== undefined &&
+  knownVersions.includes(account.VersionNumber);
+
+validateArrayContracts(
+  account,
+  manifest,
+  report,
+  isKnownGameVersion
+);
+
+validateNestedContracts(account, manifest, report);
+validateCrossReferences(account, report);
+
+if (
+  reference &&
+  account.VersionNumber !== undefined &&
+  !isKnownGameVersion
+) {
+  addWarning(
+    report,
+    "GAME_VERSION_NOT_IN_FIXTURES",
+    "VersionNumber",
+    "This game version was not represented by the audited fixtures. " +
+    "Version-sensitive structural differences are treated cautiously."
+  );
+}
+
           "GAME_VERSION_NOT_IN_FIXTURES",
           "VersionNumber",
           "This game version was not represented by the four audited fixtures."
