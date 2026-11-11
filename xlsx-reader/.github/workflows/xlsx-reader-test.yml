@@ -1,0 +1,30 @@
+
+name: Samantha XLSX Reader Test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "xlsx-reader/**"
+      - ".github/workflows/xlsx-reader-test.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install SheetJS CE
+        working-directory: xlsx-reader
+        run: npm install
+
+      - name: Verify SheetJS CE
+        working-directory: xlsx-reader
+        run: node -e "const XLSX=require('xlsx'); console.log('SheetJS version:',XLSX.version); console.log('Reader ready:',typeof XLSX.read==='function'); if(typeof XLSX.read!=='function') process.exit(1)"
