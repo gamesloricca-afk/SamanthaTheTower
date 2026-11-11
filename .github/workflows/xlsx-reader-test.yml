@@ -28,3 +28,7 @@ jobs:
       - name: Verify SheetJS CE
         working-directory: xlsx-reader
         run: node -e "const XLSX=require('xlsx'); console.log('SheetJS version:',XLSX.version); console.log('Reader ready:',typeof XLSX.read==='function'); if(typeof XLSX.read!=='function') process.exit(1)"
+
+      - name: Read Master Workbook
+        working-directory: xlsx-reader
+        run: node read-workbook.js
