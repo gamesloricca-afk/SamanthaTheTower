@@ -921,7 +921,9 @@
       if (!config) continue;
 
       const domain = config.uapDomain;
-      const subdomain = config.subdomain;
+      const subdomain =
+  config.subdomain ||
+  (domain === "account_identity" ? group : undefined);
 
       if (!uap[domain] || !isObject(uap[domain])) {
         uap[domain] = {};
