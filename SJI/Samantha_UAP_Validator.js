@@ -635,4 +635,517 @@
       if (!isObject(x)) {
         add(report, "errors", "CURRENCY_RECORD_INVALID",
           k, "Expected object.");
-      } else if (x.Currencies
+      } else if (x.Currencies !== undefined) {
+        if (!isObject(x.Currencies)) {
+          add(report, "errors", "CURRENCY_DICTIONARY_INVALID",
+            k + ".Currencies", "Expected object.");
+        } else {
+          Object.entries(x.Currencies).forEach(([n, v]) => {
+            if (typeof v !== "number" || !Number.isFinite(v)) {
+              add(report, "errors", "CURRENCY_VALUE_INVALID",
+                k + ".Currencies." + n, "Expected finite number.");
+            }
+          });
+        }
+      }
+    });
+  }
+
+  function reportStatus(r) {
+    if (r.errors.length) return "INVALID";
+    if (r.missing.length) return "PARTIALLY AVAILABLE";
+    if (r.warnings.length || r.unknown.length)
+      return "VALID WITH WARNINGS";
+    return "VALID";
+  }
+
+  function finalize(uap, report) {
+    report.status = reportStatus(report);
+    uap.validation_report = clone(report);
+    uap.missing_and_unknown_information = {
+      missing: clone(report.missing),
+      unknown: clone(report.unknown),
+      inaccessible: clone(report.inaccessible),
+      conflicting: clone(report.conflicting)
+    };
+
+    return {
+      status: report.status,
+      valid: report.status !== "INVALID",
+      uap,
+      report: clone(report)
+    };
+  }
+
+  function validateAccountJSON(input, manifest) {
+    const m = normalizeManifest(manifest);
+
+    const r = {
+      validatorVersion: VERSION,
+      manifestVersion: m.manifestVersion,
+      status: "INVALID",
+      source: "JSON-derived",
+      errors: [],
+      warnings: [],
+      missing: [],
+      unknown: [],
+      inaccessible: [],
+      conflicting: [],
+      checks: {
+        root_fields: 0,
+        root_types: 0,
+        array_contracts: 0,
+        nested_contracts: 0,
+        cross_references: 0
+      },
+      totalManifestFields: m.rootFields.length,
+      availableFields: 0,
+      availableDomains: [],
+      missingDomains: [],
+      validatedAt: now()
+    };
+
+    let data;
+
+    try {
+      data = parse(input);
+    } catch (e) {
+      r.errors.push({
+        code: "JSON_PARSE_ERROR",
+        path: "$",
+        message: e.message
+      });
+      return finalizeError(r);
+    }
+
+    if (!isObject(data)) {
+      add(r, "errors", "ROOT_NOT_OBJECT",
+        "$", "Account JSON root must be an object.");
+      return finalizeError(r);
+    }
+
+    validateManifest(m, r);
+    validateRoot(data, m, r);
+    r.availableFields = r.checks.root_types;
+
+    const u = emptyUAP(manifest);
+    const groups = extractToUAP(data, m, u);
+
+    r.availableDomains = DATA_DOMAINS.filter(d => groups.has(d));
+    r.missingDomains = DATA_DOMAINS.filter(d => !groups.has(d));
+
+    if (r.missingDomains.length) {
+      r.warnings.push({
+        code: "UAP_DOMAINS_NOT_EXTRACTED",
+        path: "uap",
+        message: "Some UAP domains have no mapped source fields in this export."
+      });
+    }
+
+    if (r.unknown.length) {
+      r.warnings.push({
+        code: "UNKNOWN_ROOT_FIELDS",
+        path: "$",
+        message: "Unknown fields are preserved in raw_account_data."
+      });
+    }
+
+    validateArrays(data, m, r, knownGameVersion(data));
+    validateNested(data, m, r);
+    validateCrossReferences(data, r);
+
+    return finalize(u, r);
+  }
+
+  function finalizeError(r) {
+    r.status = "INVALID";
+    return {
+      status: "INVALID",
+      valid: false,
+      uap: null,
+      report: clone(r)
+    };
+  }
+
+  function createManualUAP(manualInput, manifest) {
+    const u = emptyUAP(manifest);
+    const input = isObject(manualInput) ? manualInput : {};
+
+    DATA_DOMAINS.forEach(d => {
+      if (has(input, d) && !empty(input[d]) && input[d] !== UNKNOWN) {
+        u[d] = clone(input[d]);
+        u.provenance[d] = "User-provided";
+      }
+    });
+
+    const missing = DATA_DOMAINS.filter(d =>
+      u[d] === UNKNOWN ||
+      (isObject(u[d]) && !Object.keys(u[d]).length)
+    );
+
+    const r = {
+      validatorVersion: VERSION,
+      status: "PARTIALLY AVAILABLE",
+      source: "User-provided",
+      errors: [],
+      warnings: [{
+        code: "MANUAL_UNVERIFIED",
+        path: "$",
+        message: "Manual input has not been independently verified."
+      }],
+      missing,
+      unknown: [],
+      inaccessible: [],
+      conflicting: [],
+      availableDomains: DATA_DOMAINS.filter(d => !missing.includes(d)),
+      missingDomains: missing,
+      validatedAt: now()
+    };
+
+    return finalize(u, r);
+  }
+
+  function createHybridUAP(jsonResult, manualInput, manifest) {
+    const manual = isObject(manualInput) ? manualInput : {};
+
+    if (!jsonResult || !isObject(jsonResult.uap)) {
+      const fallback = createManualUAP(manual, manifest);
+
+      fallback.report.warnings.push({
+        code: "JSON_BASELINE_UNAVAILABLE",
+        path: "$",
+        message: "Manual data retained; JSON validation was not successful."
+      });
+
+      if (jsonResult && jsonResult.status === "INVALID") {
+        fallback.report.errors = clone(jsonResult.report.errors || []);
+        fallback.status = fallback.report.status = "INVALID";
+        fallback.valid = false;
+      }
+
+      fallback.uap.validation_report = clone(fallback.report);
+      return fallback;
+    }
+
+    const u = clone(jsonResult.uap);
+
+    u.missing_and_unknown_information =
+      isObject(u.missing_and_unknown_information)
+        ? u.missing_and_unknown_information
+        : { missing: [], unknown: [], inaccessible: [], conflicting: [] };
+
+    const conflicts = Array.isArray(
+      u.missing_and_unknown_information.conflicting
+    ) ? u.missing_and_unknown_information.conflicting.slice() : [];
+
+    u.provenance = isObject(u.provenance) ? u.provenance : {};
+    u.correction_history = Array.isArray(u.correction_history)
+      ? u.correction_history : [];
+
+    Object.keys(manual).forEach(domain => {
+      if (!DATA_DOMAINS.includes(domain) ||
+          empty(manual[domain]) || manual[domain] === UNKNOWN) return;
+
+      const current = u[domain] === undefined ? UNKNOWN : u[domain];
+
+      if (current === UNKNOWN) {
+        u[domain] = clone(manual[domain]);
+        u.provenance[domain] = "User-provided";
+        return;
+      }
+
+      if (!same(current, manual[domain])) {
+        conflicts.push({
+          domain,
+          path: domain,
+          originalValue: clone(current),
+          manualValue: clone(manual[domain]),
+          activeValue: clone(current),
+          resolutionStatus: "UNRESOLVED",
+          resolution: "JSON retained pending confirmation",
+          detectedAt: now()
+        });
+      }
+    });
+
+    const r = clone(jsonResult.report);
+    r.source = "Hybrid";
+    r.conflicting = conflicts;
+    r.warnings = Array.isArray(r.warnings) ? r.warnings : [];
+
+    if (conflicts.some(c => c.resolutionStatus === "UNRESOLVED")) {
+      r.warnings.push({
+        code: "HYBRID_CONFLICTS",
+        path: "$",
+        message: "Conflicts remain unresolved; JSON values remain active."
+      });
+    }
+
+    r.availableDomains = DATA_DOMAINS.filter(d => u[d] !== UNKNOWN);
+    r.missingDomains = DATA_DOMAINS.filter(d => u[d] === UNKNOWN);
+
+    return finalize(u, r);
+  }
+
+  function applyManualCorrection(result, domain, path, value, confirmed) {
+    // Backward-compatible call: (result, domain, value, confirmed).
+    if (arguments.length === 4) {
+      const oldValue = path;
+      const oldConfirmed = value;
+      value = oldValue;
+      confirmed = oldConfirmed;
+      path = domain;
+    }
+
+    if (!result || !isObject(result.uap) ||
+        !DATA_DOMAINS.includes(domain)) {
+      throw new Error("Valid UAP result and domain are required.");
+    }
+
+    if (empty(value) || value === UNKNOWN) {
+      throw new Error("Correction value must not be empty or UNKNOWN.");
+    }
+
+    const u = clone(result.uap);
+    const target = path && path !== domain
+      ? domain + "." + path
+      : domain;
+
+    const previous = getPath(u, target);
+    const isConfirmed = confirmed !== false;
+
+    u.correction_history = Array.isArray(u.correction_history)
+      ? u.correction_history : [];
+
+    u.correction_history.push({
+      domain,
+      path: target,
+      previousValue: previous === undefined ? UNKNOWN : clone(previous),
+      correctedValue: clone(value),
+      source: "User-provided",
+      resolutionStatus: isConfirmed ? "USER_CONFIRMED" : "UNRESOLVED",
+      changedAt: now()
+    });
+
+    if (isConfirmed) {
+      if (!setPath(u, target, value))
+        throw new Error("Invalid correction path.");
+
+      u.provenance[domain] = "User-confirmed";
+    }
+
+    const r = clone(result.report || {});
+    r.source = "Hybrid";
+    r.conflicting = Array.isArray(r.conflicting) ? r.conflicting : [];
+
+    const idx = r.conflicting.findIndex(c =>
+      c.path === target || c.domain === domain
+    );
+
+    if (isConfirmed && idx >= 0) {
+      r.conflicting[idx] = Object.assign({}, r.conflicting[idx], {
+        activeValue: clone(value),
+        resolutionStatus: "USER_CONFIRMED",
+        resolution: "Manual correction accepted",
+        resolvedAt: now()
+      });
+    } else if (!isConfirmed && idx < 0) {
+      r.conflicting.push({
+        domain,
+        path: target,
+        originalValue: previous === undefined ? UNKNOWN : clone(previous),
+        manualValue: clone(value),
+        activeValue: previous === undefined ? UNKNOWN : clone(previous),
+        resolutionStatus: "UNRESOLVED",
+        detectedAt: now()
+      });
+    }
+
+    r.warnings = (r.warnings || []).filter(w =>
+      !(w && w.code === "HYBRID_CONFLICTS")
+    );
+
+    if (r.conflicting.some(c => c.resolutionStatus === "UNRESOLVED")) {
+      r.warnings.push({
+        code: "HYBRID_CONFLICTS",
+        path: "$",
+        message: "Conflicts remain unresolved; JSON values remain active."
+      });
+    }
+
+    return finalize(u, r);
+  }
+
+  function resolveHybridConflict(result, domain, resolution, path) {
+    if (!result || !isObject(result.uap))
+      throw new Error("Valid UAP result is required.");
+
+    const r = result.report || {};
+    const target = path || domain;
+
+    const c = (r.conflicting || []).find(x =>
+      (x.path === target || x.domain === domain) &&
+      x.resolutionStatus === "UNRESOLVED"
+    );
+
+    if (!c)
+      throw new Error("No unresolved conflict exists for this field/domain.");
+
+    if (resolution === "USER_CONFIRMED") {
+      return applyManualCorrection(
+        result,
+        domain,
+        target === domain ? domain : target.replace(domain + ".", ""),
+        c.manualValue,
+        true
+      );
+    }
+
+    if (resolution === "JSON_CONFIRMED") {
+      const u = clone(result.uap);
+      const nr = clone(r);
+
+      nr.conflicting = nr.conflicting.map(x =>
+        (x.path === c.path && x.domain === c.domain &&
+         x.resolutionStatus === "UNRESOLVED")
+          ? Object.assign({}, x, {
+              activeValue: clone(x.originalValue),
+              resolutionStatus: "JSON_CONFIRMED",
+              resolution: "JSON value retained by user",
+              resolvedAt: now()
+            })
+          : x
+      );
+
+      nr.warnings = (nr.warnings || []).filter(w =>
+        !(w && w.code === "HYBRID_CONFLICTS")
+      );
+
+      if (nr.conflicting.some(x => x.resolutionStatus === "UNRESOLVED")) {
+        nr.warnings.push({
+          code: "HYBRID_CONFLICTS",
+          path: "$",
+          message: "Conflicts remain unresolved."
+        });
+      }
+
+      return finalize(u, nr);
+    }
+
+    throw new Error("Resolution must be USER_CONFIRMED or JSON_CONFIRMED.");
+  }
+
+  function exportUAP(result) {
+    const u = result && result.uap ? result.uap : result;
+
+    if (!isObject(u))
+      throw new Error("Valid UAP required.");
+
+    return JSON.stringify({
+      format: "SAMANTHA_UAP",
+      formatVersion: 1,
+      validatorVersion: VERSION,
+      exportedAt: now(),
+      uap: clone(u)
+    }, null, 2);
+  }
+
+  function importUAP(input) {
+    let p;
+
+    try {
+      p = parse(input);
+    } catch (e) {
+      return finalizeError({
+        validatorVersion: VERSION,
+        errors: [{
+          code: "UAP_IMPORT_PARSE_ERROR",
+          path: "$",
+          message: e.message
+        }],
+        warnings: [],
+        missing: [],
+        unknown: [],
+        inaccessible: [],
+        conflicting: []
+      });
+    }
+
+    if (!isObject(p) ||
+        p.format !== "SAMANTHA_UAP" ||
+        !isObject(p.uap)) {
+      return finalizeError({
+        validatorVersion: VERSION,
+        errors: [{
+          code: "UAP_IMPORT_FORMAT_INVALID",
+          path: "$",
+          message: "Unsupported UAP export format."
+        }],
+        warnings: [],
+        missing: [],
+        unknown: [],
+        inaccessible: [],
+        conflicting: []
+      });
+    }
+
+    const u = clone(p.uap);
+    const warnings = [];
+
+    DATA_DOMAINS.forEach(d => {
+      if (!has(u, d)) {
+        u[d] = UNKNOWN;
+        warnings.push({
+          code: "IMPORTED_DOMAIN_MISSING",
+          path: d,
+          message: "Missing domain restored as UNKNOWN."
+        });
+      }
+    });
+
+    u.provenance = isObject(u.provenance) ? u.provenance : {};
+
+    DATA_DOMAINS.forEach(d => {
+      if (!u.provenance[d]) u.provenance[d] = "Unknown";
+    });
+
+    u.correction_history = Array.isArray(u.correction_history)
+      ? u.correction_history : [];
+
+    const old = isObject(u.validation_report)
+      ? u.validation_report : {};
+
+    const r = Object.assign({
+      validatorVersion: VERSION,
+      source: "Imported UAP",
+      errors: [],
+      warnings: [],
+      missing: [],
+      unknown: [],
+      inaccessible: [],
+      conflicting: []
+    }, old);
+
+    r.warnings = (r.warnings || []).concat(warnings);
+    r.missingDomains = DATA_DOMAINS.filter(d => u[d] === UNKNOWN);
+    r.availableDomains = DATA_DOMAINS.filter(d => u[d] !== UNKNOWN);
+
+    return finalize(u, r);
+  }
+
+  const createEmptyUAP = emptyUAP;
+
+  return Object.freeze({
+    version: VERSION,
+    domains: DOMAINS.slice(),
+    UNKNOWN,
+    validateAccountJSON,
+    createManualUAP,
+    createHybridUAP,
+    applyManualCorrection,
+    resolveHybridConflict,
+    exportUAP,
+    importUAP,
+    createEmptyUAP
+  });
+});
