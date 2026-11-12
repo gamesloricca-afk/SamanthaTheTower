@@ -3,31 +3,34 @@
 /**
  * Samantha GKB — SDK Schema Inspector and Graph Validator
  *
- * Target:
- *   thetowersdk@0.14.1
- *
- * Schema:
- *   JSON Schema Draft 2020-12
- *
- * Validator:
- *   ajv@8.17.1
+ * Version: 2.2.0
+ * Target: thetowersdk@0.14.1
+ * Validator: ajv@8.17.1
+ * Schema: JSON Schema Draft 2020-12
  *
  * Responsibilities:
- *   1. Verify SDK and Ajv versions.
- *   2. Inspect the declared schema dialect.
- *   3. Load the public SDK knowledge graph.
- *   4. Validate the graph against the SDK schema.
- *   5. Preserve validation errors in a JSON report.
+ * 1. Verify SDK and Ajv versions.
+ * 2. Inspect SDK schema dialect.
+ * 3. Load the public SDK knowledge graph.
+ * 4. Validate graph against the original SDK schema.
+ * 5. Classify origin compatibility conflicts.
+ * 6. Separate origin errors from other validation errors.
+ * 7. Preserve original values and error locations.
+ * 8. Generate a structured JSON report.
  *
  * Safety:
- *   - No SDK data modification.
- *   - No automatic origin normalization.
- *   - No GKB bulk import.
+ * - No SDK data modification.
+ * - No origin normalization.
+ * - No schema modification.
+ * - No automatic conflict resolution.
+ * - No GKB bulk import.
  */
 
 import { createRequire } from 'node:module';
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve, relative } from 'node:path';
+
+const VALIDATOR_VERSION = '2.2.0';
 
 const EXPECTED_SDK_VERSION = '0.14.1';
 const EXPECTED_AJV_VERSION = '8.17.1';
@@ -129,6 +132,7 @@ function collectOrigins(root, result = new Set()) {
     for (const item of root) {
       collectOrigins(item, result);
     }
+
     return result;
   }
 
@@ -153,6 +157,109 @@ function normalizeErrors(errors) {
     message: error.message ?? null,
     params: error.params ?? {}
   }));
+}
+
+/**
+ * Resolve an Ajv JSON Pointer against the original graph.
+ * This function only reads source data.
+ */
+function getByJsonPointer(root, pointer) {
+  if (!pointer) return root;
+
+  const segments = pointer
+    .split('/')
+    .slice(1)
+    .map(segment =>
+      segment
+        .replace(/~1/g, '/')
+        .replace(/~0/g, '~')
+    );
+
+  let current = root;
+
+  for (const segment of segments) {
+    if (
+      current === null ||
+      current === undefined
+    ) {
+      return undefined;
+    }
+
+    current = current[segment];
+  }
+
+  return current;
+}
+
+/**
+ * Identify origin enum errors without modifying
+ * the original SDK graph or schema.
+ */
+function isOriginEnumError(error) {
+  return (
+    error.keyword === 'enum' &&
+    /\/origin\/enum$/.test(error.schemaPath ?? '') &&
+    /\/origin$/.test(error.instancePath ?? '')
+  );
+}
+
+/**
+ * Group origin errors by their original graph value.
+ */
+function classifyOriginConflicts(errors, graph) {
+  const originErrors = [];
+  const otherErrors = [];
+
+  const grouped = new Map();
+
+  for (const error of errors) {
+    if (!isOriginEnumError(error)) {
+      otherErrors.push(error);
+      continue;
+    }
+
+    originErrors.push(error);
+
+    const originalValue = getByJsonPointer(
+      graph,
+      error.instancePath
+    );
+
+    const origin =
+      typeof originalValue === 'string'
+        ? originalValue
+        : null;
+
+    const key = origin ?? '__UNKNOWN_ORIGIN__';
+
+    if (!grouped.has(key)) {
+      grouped.set(key, {
+        code: 'ORIGIN_GRAPH_SCHEMA_MISMATCH',
+        graphOrigin: origin,
+        schemaAllows: false,
+        resolution: 'UNRESOLVED',
+        occurrenceCount: 0,
+        locations: []
+      });
+    }
+
+    const conflict = grouped.get(key);
+
+    conflict.occurrenceCount += 1;
+
+    conflict.locations.push({
+      instancePath: error.instancePath,
+      schemaPath: error.schemaPath,
+      keyword: error.keyword,
+      message: error.message ?? null
+    });
+  }
+
+  return {
+    originErrors,
+    otherErrors,
+    conflicts: [...grouped.values()]
+  };
 }
 
 async function main() {
@@ -201,8 +308,15 @@ async function main() {
   const schema = runtimeRequire(SDK_SCHEMA_EXPORT);
   const graph = runtimeRequire(SDK_GRAPH_EXPORT);
 
-  assert(isObject(schema), 'SDK schema is not an object');
-  assert(isObject(graph), 'SDK graph is not an object');
+  assert(
+    isObject(schema),
+    'SDK schema is not an object'
+  );
+
+  assert(
+    isObject(graph),
+    'SDK graph is not an object'
+  );
 
   const sdkPackage = await findPackageRoot(
     schemaPath,
@@ -248,21 +362,45 @@ async function main() {
     validateFormats: false
   });
 
-  // Schema compilation errors are reported as ERROR.
+  // Compile the original SDK schema.
   const validate = ajv.compile(schema);
 
-  // Graph validation.
+  // Validate the original graph without normalization.
   const valid = validate(graph);
+
   const errors = normalizeErrors(validate.errors);
+
+  // Classify errors without suppressing validation failures.
+  const classification = classifyOriginConflicts(
+    errors,
+    graph
+  );
+
+  const originErrorCount =
+    classification.originErrors.length;
+
+  const otherErrorCount =
+    classification.otherErrors.length;
 
   const counts = countNamedArrays(
     graph,
-    new Set(['compartments', 'nodes', 'edges'])
+    new Set([
+      'compartments',
+      'nodes',
+      'edges'
+    ])
   );
 
+  const compatibilityStatus =
+    originErrorCount > 0
+      ? 'CONFLICTING'
+      : 'NO_ORIGIN_CONFLICT_DETECTED';
+
   const report = {
-    test: 'Samantha GKB SDK Schema and Knowledge Graph Validation',
-    testVersion: '2.1.0',
+    test:
+      'Samantha GKB SDK Schema and Knowledge Graph Validation',
+
+    testVersion: VALIDATOR_VERSION,
 
     status: valid ? 'PASSED' : 'FAILED',
 
@@ -304,16 +442,38 @@ async function main() {
       ].sort()
     },
 
+    compatibility: {
+      status: compatibilityStatus,
+
+      conflictCount: originErrorCount,
+
+      conflicts: classification.conflicts,
+
+      resolutionPolicy:
+        'Original SDK origin values are preserved. No automatic mapping is performed.'
+    },
+
     validation: {
       valid,
+
       errorCount: errors.length,
+
+      originErrorCount,
+
+      otherErrorCount,
+
+      originErrors: classification.originErrors,
+
+      otherErrors: classification.otherErrors,
+
       errors
     },
 
     limitations: [
       'Schema validation does not establish factual correctness.',
       'Schema validation does not verify game mechanics.',
-      'Origin compatibility conflicts are not automatically resolved.',
+      'Origin conflicts remain unresolved.',
+      'No automatic origin normalization is performed.',
       'External schema references require separate assessment.',
       'Format validation is disabled.',
       'No SDK claims are imported into GKB.',
@@ -331,23 +491,33 @@ async function main() {
     'utf8'
   );
 
-  console.log(JSON.stringify({
-    ...report,
-    reportFile:
-      'GKB/reports/sdk-knowledge-graph-validation-report.json'
-  }, null, 2));
+  console.log(
+    JSON.stringify({
+      ...report,
+      reportFile:
+        'GKB/reports/sdk-knowledge-graph-validation-report.json'
+    }, null, 2)
+  );
 
+  // Any schema validation error keeps the test failed.
   if (!valid) {
     process.exitCode = 1;
   }
 }
 
 main().catch(error => {
-  console.error(JSON.stringify({
-    test: 'Samantha GKB SDK Schema and Knowledge Graph Validation',
-    status: 'ERROR',
-    error: error.message
-  }, null, 2));
+  console.error(
+    JSON.stringify({
+      test:
+        'Samantha GKB SDK Schema and Knowledge Graph Validation',
+
+      testVersion: VALIDATOR_VERSION,
+
+      status: 'ERROR',
+
+      error: error.message
+    }, null, 2)
+  );
 
   process.exitCode = 1;
 });
