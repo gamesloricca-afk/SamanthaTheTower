@@ -1,23 +1,36 @@
 #!/usr/bin/env node
 
 /**
- * Samantha - TheTowerSDK Runtime Validator v4
+ * Samantha - TheTowerSDK Runtime Validator
+ * Version: 4.1.0
  *
  * Target:
  *   thetowersdk@0.14.1
+ *   Node.js >=20
  *
- * Purpose:
- *   - Verify package identity and runtime compatibility.
- *   - Verify public JSON exports.
- *   - Validate knowledge graph structure.
- *   - Validate node, edge, source, and provenance references.
- *   - Compare observed claim origins with JSON Schema enums.
- *   - Inspect published TypeScript declarations when available.
- *   - Preserve unknown values and report compatibility conflicts.
+ * Environment:
+ *   SDK_DIR     = SDK package directory
+ *   REPORT_PATH = JSON report output path
  *
- * Important:
- *   This script does NOT validate factual game mechanics.
- *   This script does NOT modify SDK data.
+ * Backward-compatible CLI:
+ *   node test-sdk-runtime-v4.mjs <sdk-package-dir> [report-path]
+ *
+ * This validator:
+ *   - Verifies SDK identity and version.
+ *   - Loads public JSON exports.
+ *   - Checks graph structure.
+ *   - Checks node and edge references.
+ *   - Checks provenance.
+ *   - Compares observed origins with JSON Schema.
+ *   - Inspects TypeScript declarations when available.
+ *   - Preserves unknown values.
+ *
+ * It does NOT:
+ *   - Modify SDK data.
+ *   - Verify factual game mechanics.
+ *   - Verify formulas independently.
+ *   - Establish redistribution rights.
+ *   - Perform complete JSON Schema validation.
  */
 
 import {
@@ -30,7 +43,9 @@ import {
 import {
   resolve,
   dirname,
-  join
+  join,
+  relative,
+  isAbsolute
 } from 'node:path';
 
 import {
@@ -41,21 +56,37 @@ import process from 'node:process';
 
 const EXPECTED_PACKAGE = 'thetowersdk';
 const EXPECTED_VERSION = '0.14.1';
+const VALIDATOR_VERSION = '4.1.0';
 
-const OUTPUT_FILE = resolve(
-  process.cwd(),
+const SDK_DIR = resolve(
+  process.env.SDK_DIR ??
+  process.argv[2] ??
+  ''
+);
+
+const REPORT_PATH = resolve(
+  process.env.REPORT_PATH ??
+  process.argv[3] ??
   'TheTowerData/reports/sdk-runtime-v4-report.json'
 );
 
-const MODULES = [
-  'thetowersdk/knowledge-graph.json',
-  'thetowersdk/knowledge.schema.json'
+const EXPORTS = [
+  {
+    name: 'knowledge-graph',
+    specifier: 'thetowersdk/knowledge-graph.json',
+    exportKey: './knowledge-graph.json'
+  },
+  {
+    name: 'knowledge-schema',
+    specifier: 'thetowersdk/knowledge.schema.json',
+    exportKey: './knowledge.schema.json'
+  }
 ];
 
 const report = {
   validator: {
     name: 'Samantha TheTowerSDK Runtime Validator',
-    version: '4.0.0'
+    version: VALIDATOR_VERSION
   },
 
   execution: {
@@ -63,18 +94,16 @@ const report = {
     nodeVersion: process.version,
     platform: process.platform,
     architecture: process.arch,
-    workingDirectory: process.cwd()
+    workingDirectory: process.cwd(),
+    sdkDirectory: SDK_DIR,
+    reportPath: REPORT_PATH
   },
 
-  package: {},
+  package: null,
+
   exports: [],
-  graph: {},
-  validation: {
-    checks: [],
-    passed: 0,
-    failed: 0,
-    warnings: 0
-  },
+
+  graph: null,
 
   compatibility: {
     status: 'NOT_ASSESSED',
@@ -82,6 +111,13 @@ const report = {
     schemaOrigins: [],
     typescriptOrigins: [],
     conflicts: []
+  },
+
+  validation: {
+    checks: [],
+    passed: 0,
+    failed: 0,
+    warnings: 0
   },
 
   readiness: {
@@ -92,6 +128,18 @@ const report = {
 
   limitations: []
 };
+
+function isObject(value) {
+  return (
+    value !== null &&
+    typeof value === 'object' &&
+    !Array.isArray(value)
+  );
+}
+
+function unique(values) {
+  return [...new Set(values)];
+}
 
 function check(name, status, details = null) {
   report.validation.checks.push({
@@ -109,48 +157,13 @@ function check(name, status, details = null) {
   }
 }
 
-function unique(values) {
-  return [...new Set(values)];
-}
-
-function isObject(value) {
-  return (
-    value !== null &&
-    typeof value === 'object' &&
-    !Array.isArray(value)
-  );
-}
-
-async function fileExists(path) {
+async function exists(path) {
   try {
     await access(path);
     return true;
   } catch {
     return false;
   }
-}
-
-function collectStrings(value, output = []) {
-  if (typeof value === 'string') {
-    output.push(value);
-    return output;
-  }
-
-  if (Array.isArray(value)) {
-    for (const item of value) {
-      collectStrings(item, output);
-    }
-
-    return output;
-  }
-
-  if (isObject(value)) {
-    for (const item of Object.values(value)) {
-      collectStrings(item, output);
-    }
-  }
-
-  return output;
 }
 
 function collectOriginEnums(value, output = []) {
@@ -181,46 +194,81 @@ function collectOriginEnums(value, output = []) {
   return output;
 }
 
-function validateRequiredFields(
-  object,
-  fields,
-  label,
-  errors
-) {
-  if (!isObject(object)) {
-    errors.push(`${label}: expected object`);
-    return;
-  }
-
-  for (const field of fields) {
-    if (
-      object[field] === undefined ||
-      object[field] === null
-    ) {
-      errors.push(`${label}: missing ${field}`);
-    }
-  }
+function validateProvenance(value) {
+  return (
+    isObject(value) &&
+    typeof value.origin === 'string' &&
+    value.origin.length > 0 &&
+    typeof value.ref === 'string' &&
+    value.ref.length > 0
+  );
 }
 
-async function resolvePackage() {
-  const require = createRequire(
-    join(process.cwd(), 'package.json')
+function validateSourceCollection(sources) {
+  if (!Array.isArray(sources) || sources.length === 0) {
+    return {
+      valid: false,
+      invalid: 1,
+      origins: []
+    };
+  }
+
+  let invalid = 0;
+  const origins = [];
+
+  for (const source of sources) {
+    if (!validateProvenance(source)) {
+      invalid++;
+      continue;
+    }
+
+    origins.push(source.origin);
+  }
+
+  return {
+    valid: invalid === 0,
+    invalid,
+    origins
+  };
+}
+
+async function loadPackage() {
+  if (
+    !process.env.SDK_DIR &&
+    !process.argv[2]
+  ) {
+    throw new Error(
+      'SDK_DIR is missing. Set SDK_DIR or provide the SDK directory as argument 1.'
+    );
+  }
+
+  if (!(await exists(SDK_DIR))) {
+    throw new Error(
+      `SDK directory does not exist: ${SDK_DIR}`
+    );
+  }
+
+  const packageJsonPath = join(
+    SDK_DIR,
+    'package.json'
   );
 
-  const packageJsonPath = require.resolve(
-    `${EXPECTED_PACKAGE}/package.json`
-  );
+  if (!(await exists(packageJsonPath))) {
+    throw new Error(
+      `SDK package.json not found: ${packageJsonPath}`
+    );
+  }
 
   const packageJson = JSON.parse(
     await readFile(packageJsonPath, 'utf8')
   );
 
   report.package = {
-    name: packageJson.name,
-    version: packageJson.version,
-    type: packageJson.type ?? 'commonjs',
-    engines: packageJson.engines ?? null,
+    name: packageJson.name ?? null,
+    version: packageJson.version ?? null,
     license: packageJson.license ?? null,
+    type: packageJson.type ?? 'commonjs-default',
+    engines: packageJson.engines ?? null,
     packageJsonPath
   };
 
@@ -246,79 +294,113 @@ async function resolvePackage() {
     }
   );
 
-  const minimumNode = Number(
-    packageJson.engines?.node?.match(/\d+/)?.[0] ?? 0
+  const nodeMajor = Number(
+    process.versions.node.split('.')[0]
   );
 
   check(
     'node-version',
-    Number(process.versions.node.split('.')[0]) >= 20
-      ? 'PASSED'
-      : 'FAILED',
+    nodeMajor >= 20 ? 'PASSED' : 'FAILED',
     {
       required: '>=20',
-      actual: process.version,
-      packageRequirement: packageJson.engines?.node ?? null
+      actual: process.version
     }
   );
 
-  return {
-    require,
-    packageJsonPath,
-    packageRoot: dirname(packageJsonPath)
-  };
+  const declaredNode = packageJson.engines?.node ?? null;
+
+  check(
+    'package-node-engine',
+    declaredNode === null
+      ? 'WARNING'
+      : 'PASSED',
+    {
+      declared: declaredNode
+    }
+  );
+
+  return packageJson;
 }
 
-async function loadJsonExports(require) {
+async function loadPublicExports(packageJson) {
   const loaded = {};
 
-  for (const moduleName of MODULES) {
+  const sdkRequire = createRequire(
+    join(SDK_DIR, '__samantha_validator__.cjs')
+  );
+
+  for (const item of EXPORTS) {
+    const result = {
+      name: item.name,
+      specifier: item.specifier,
+      exportKey: item.exportKey,
+      status: 'FAILED',
+      resolvedPath: null,
+      error: null
+    };
+
     try {
-      const modulePath = require.resolve(moduleName);
-      const content = JSON.parse(
-        await readFile(modulePath, 'utf8')
+      const declaredTarget =
+        packageJson.exports?.[item.exportKey];
+
+      if (!declaredTarget) {
+        throw new Error(
+          `Public export ${item.exportKey} is not declared in package.json.`
+        );
+      }
+
+      result.declaredTarget = declaredTarget;
+
+      const resolvedPath = sdkRequire.resolve(
+        item.specifier
       );
 
-      loaded[moduleName] = content;
-
-      report.exports.push({
-        name: moduleName,
-        status: 'PASSED',
-        resolvedPath: modulePath,
-        format: 'JSON'
-      });
-
-      check(
-        `public-export:${moduleName}`,
-        'PASSED'
+      const raw = await readFile(
+        resolvedPath,
+        'utf8'
       );
+
+      const parsed = JSON.parse(raw);
+
+      if (!isObject(parsed)) {
+        throw new Error(
+          'Export must contain a JSON object.'
+        );
+      }
+
+      loaded[item.name] = parsed;
+
+      result.resolvedPath = resolvedPath;
+      result.status = 'PASSED';
+
     } catch (error) {
-      report.exports.push({
-        name: moduleName,
-        status: 'FAILED',
-        error: error.message
-      });
-
-      check(
-        `public-export:${moduleName}`,
-        'FAILED',
-        error.message
-      );
+      result.error = {
+        name: error.name,
+        message: error.message,
+        code: error.code ?? null
+      };
     }
+
+    report.exports.push(result);
+
+    check(
+      `public-export:${item.name}`,
+      result.status === 'PASSED'
+        ? 'PASSED'
+        : 'FAILED',
+      result
+    );
   }
 
   return loaded;
 }
 
 function inspectGraph(graph) {
-  const errors = [];
-  const warnings = [];
-
   if (!isObject(graph)) {
     check(
       'graph-root',
       'FAILED',
-      'Graph root must be an object'
+      'Graph must be a JSON object.'
     );
 
     return;
@@ -330,36 +412,105 @@ function inspectGraph(graph) {
   const nodes = graph.nodes;
   const edges = graph.edges;
 
-  for (const [name, value] of Object.entries({
-    compartments,
-    nodes,
-    edges
-  })) {
-    if (!Array.isArray(value)) {
-      errors.push(`${name} must be an array`);
+  const arraysValid =
+    Array.isArray(compartments) &&
+    Array.isArray(nodes) &&
+    Array.isArray(edges);
+
+  check(
+    'graph-arrays',
+    arraysValid ? 'PASSED' : 'FAILED',
+    {
+      compartments: Array.isArray(compartments),
+      nodes: Array.isArray(nodes),
+      edges: Array.isArray(edges)
     }
-  }
+  );
 
-  if (errors.length > 0) {
-    check(
-      'graph-arrays',
-      'FAILED',
-      errors
-    );
-
+  if (!arraysValid) {
     return;
   }
 
-  check('graph-arrays', 'PASSED');
+  const nodeIds = new Set();
+  const duplicateNodeIds = [];
 
-  const nodeIds = nodes.map(node => node?.id);
-  const validNodeIds = nodeIds.filter(
-    id => typeof id === 'string' && id.length > 0
-  );
+  let invalidNodes = 0;
+  let missingSources = 0;
+  let invalidNodeSources = 0;
+  let invalidAssertions = 0;
+  let invalidAssertionProvenance = 0;
 
-  const duplicateNodeIds = validNodeIds.filter(
-    (id, index) => validNodeIds.indexOf(id) !== index
-  );
+  const observedOrigins = [];
+
+  for (const node of nodes) {
+    if (
+      !isObject(node) ||
+      typeof node.id !== 'string' ||
+      !node.id ||
+      typeof node.label !== 'string' ||
+      !node.label ||
+      typeof node.kind !== 'string' ||
+      !node.kind ||
+      typeof node.summary !== 'string' ||
+      typeof node.compartment !== 'string' ||
+      !node.compartment
+    ) {
+      invalidNodes++;
+    }
+
+    if (node?.id) {
+      if (nodeIds.has(node.id)) {
+        duplicateNodeIds.push(node.id);
+      }
+
+      nodeIds.add(node.id);
+    }
+
+    if (
+      !Array.isArray(node?.sources) ||
+      node.sources.length === 0
+    ) {
+      missingSources++;
+    } else {
+      const sourceResult =
+        validateSourceCollection(node.sources);
+
+      invalidNodeSources += sourceResult.invalid;
+
+      observedOrigins.push(
+        ...sourceResult.origins
+      );
+    }
+
+    if (
+      node?.assertions !== undefined &&
+      !Array.isArray(node.assertions)
+    ) {
+      invalidAssertions++;
+      continue;
+    }
+
+    for (const assertion of node?.assertions ?? []) {
+      if (
+        !isObject(assertion) ||
+        assertion.subject === undefined ||
+        assertion.predicate === undefined ||
+        !Object.hasOwn(assertion, 'value') ||
+        !isObject(assertion.provenance)
+      ) {
+        invalidAssertions++;
+        continue;
+      }
+
+      if (!validateProvenance(assertion.provenance)) {
+        invalidAssertionProvenance++;
+      } else {
+        observedOrigins.push(
+          assertion.provenance.origin
+        );
+      }
+    }
+  }
 
   check(
     'unique-node-ids',
@@ -372,84 +523,6 @@ function inspectGraph(graph) {
     }
   );
 
-  const nodeIdSet = new Set(validNodeIds);
-  const compartmentIds = new Set(
-    compartments
-      .map(item => item?.id)
-      .filter(Boolean)
-  );
-
-  let invalidNodes = 0;
-  let missingSources = 0;
-  let invalidAssertions = 0;
-  let invalidProvenance = 0;
-
-  const observedOrigins = [];
-
-  for (const node of nodes) {
-    const required = [
-      'id',
-      'label',
-      'kind'
-    ];
-
-    if (
-      required.some(
-        field => node?.[field] === undefined ||
-          node?.[field] === null
-      )
-    ) {
-      invalidNodes++;
-    }
-
-    if (
-      !Array.isArray(node?.sources) ||
-      node.sources.length === 0
-    ) {
-      missingSources++;
-    }
-
-    if (Array.isArray(node?.assertions)) {
-      for (const assertion of node.assertions) {
-        if (
-          !isObject(assertion) ||
-          assertion.subject === undefined ||
-          assertion.predicate === undefined ||
-          assertion.value === undefined
-        ) {
-          invalidAssertions++;
-        }
-
-        if (assertion?.provenance) {
-          const provenance = assertion.provenance;
-
-          if (
-            !isObject(provenance) ||
-            !provenance.origin ||
-            !provenance.ref
-          ) {
-            invalidProvenance++;
-          }
-
-          if (typeof provenance.origin === 'string') {
-            observedOrigins.push(provenance.origin);
-          }
-        }
-      }
-    }
-
-    if (Array.isArray(node?.sources)) {
-      for (const source of node.sources) {
-        if (
-          typeof source === 'string' &&
-          source.length === 0
-        ) {
-          warnings.push('Empty source reference');
-        }
-      }
-    }
-  }
-
   check(
     'node-required-fields',
     invalidNodes === 0 ? 'PASSED' : 'FAILED',
@@ -460,11 +533,18 @@ function inspectGraph(graph) {
   );
 
   check(
-    'node-sources',
+    'node-sources-present',
     missingSources === 0 ? 'PASSED' : 'FAILED',
     {
-      total: nodes.length,
       missing: missingSources
+    }
+  );
+
+  check(
+    'node-source-provenance',
+    invalidNodeSources === 0 ? 'PASSED' : 'FAILED',
+    {
+      invalid: invalidNodeSources
     }
   );
 
@@ -477,85 +557,90 @@ function inspectGraph(graph) {
   );
 
   check(
-    'provenance-structure',
-    invalidProvenance === 0 ? 'PASSED' : 'FAILED',
+    'assertion-provenance',
+    invalidAssertionProvenance === 0
+      ? 'PASSED'
+      : 'FAILED',
     {
-      invalid: invalidProvenance
+      invalid: invalidAssertionProvenance
     }
   );
 
-  const unknownCompartmentRefs = [];
+  const compartmentIds = new Set(
+    compartments
+      .map(item => item?.id)
+      .filter(value => typeof value === 'string')
+  );
+
+  const unknownCompartments = [];
 
   for (const node of nodes) {
-    const refs = [];
-
-    if (node?.compartment) {
-      refs.push(node.compartment);
-    }
-
-    if (Array.isArray(node?.compartments)) {
-      refs.push(...node.compartments);
-    }
-
-    for (const ref of refs) {
-      if (
-        typeof ref === 'string' &&
-        !compartmentIds.has(ref)
-      ) {
-        unknownCompartmentRefs.push(ref);
-      }
+    if (
+      node?.compartment &&
+      !compartmentIds.has(node.compartment)
+    ) {
+      unknownCompartments.push(node.compartment);
     }
   }
 
   check(
-    'compartment-references',
-    unknownCompartmentRefs.length === 0
+    'node-compartment-references',
+    unknownCompartments.length === 0
       ? 'PASSED'
-      : 'WARNING',
+      : 'FAILED',
     {
-      unknown: unique(unknownCompartmentRefs)
+      unknown: unique(unknownCompartments)
     }
   );
 
   let invalidEdges = 0;
-  let invalidEdgeRefs = 0;
-  let invalidEdgeProvenance = 0;
+  let brokenEdgeReferences = 0;
+  let invalidEdgeSources = 0;
 
   for (const edge of edges) {
     if (
       !isObject(edge) ||
-      !edge.id ||
-      !edge.kind
+      typeof edge.from !== 'string' ||
+      !edge.from ||
+      typeof edge.to !== 'string' ||
+      !edge.to ||
+      typeof edge.kind !== 'string' ||
+      !edge.kind ||
+      typeof edge.note !== 'string' ||
+      !Array.isArray(edge.sources) ||
+      edge.sources.length === 0
     ) {
       invalidEdges++;
     }
 
-    const from = edge?.from ?? edge?.source;
-    const to = edge?.to ?? edge?.target;
-
     if (
-      !from ||
-      !to ||
-      !nodeIdSet.has(from) ||
-      !nodeIdSet.has(to)
+      edge?.from &&
+      !nodeIds.has(edge.from)
     ) {
-      invalidEdgeRefs++;
+      brokenEdgeReferences++;
     }
 
     if (
-      edge?.provenance !== undefined &&
-      (
-        !isObject(edge.provenance) ||
-        !edge.provenance.origin ||
-        !edge.provenance.ref
-      )
+      edge?.to &&
+      !nodeIds.has(edge.to)
     ) {
-      invalidEdgeProvenance++;
+      brokenEdgeReferences++;
+    }
+
+    if (Array.isArray(edge?.sources)) {
+      const sourceResult =
+        validateSourceCollection(edge.sources);
+
+      invalidEdgeSources += sourceResult.invalid;
+
+      observedOrigins.push(
+        ...sourceResult.origins
+      );
     }
   }
 
   check(
-    'edge-structure',
+    'edge-required-fields',
     invalidEdges === 0 ? 'PASSED' : 'FAILED',
     {
       total: edges.length,
@@ -565,19 +650,56 @@ function inspectGraph(graph) {
 
   check(
     'edge-node-references',
-    invalidEdgeRefs === 0 ? 'PASSED' : 'FAILED',
+    brokenEdgeReferences === 0
+      ? 'PASSED'
+      : 'FAILED',
     {
-      invalid: invalidEdgeRefs
+      invalid: brokenEdgeReferences
     }
   );
 
   check(
-    'edge-provenance',
-    invalidEdgeProvenance === 0
+    'edge-source-provenance',
+    invalidEdgeSources === 0
       ? 'PASSED'
       : 'FAILED',
     {
-      invalid: invalidEdgeProvenance
+      invalid: invalidEdgeSources
+    }
+  );
+
+  const declaredCounts = graph.counts ?? {};
+
+  const actualCounts = {
+    compartments: compartments.length,
+    nodes: nodes.length,
+    edges: edges.length
+  };
+
+  const countMismatches = [];
+
+  for (const [name, actual] of Object.entries(actualCounts)) {
+    if (
+      typeof declaredCounts[name] === 'number' &&
+      declaredCounts[name] !== actual
+    ) {
+      countMismatches.push({
+        field: name,
+        declared: declaredCounts[name],
+        actual
+      });
+    }
+  }
+
+  check(
+    'declared-counts',
+    countMismatches.length === 0
+      ? 'PASSED'
+      : 'WARNING',
+    {
+      declared: declaredCounts,
+      actual: actualCounts,
+      mismatches: countMismatches
     }
   );
 
@@ -588,67 +710,22 @@ function inspectGraph(graph) {
     schemaVersion: graph.schemaVersion ?? null,
     graphVersion: graph.graphVersion ?? null,
     generatedFor: graph.generatedFor ?? null,
+
     compartments: compartments.length,
     nodes: nodes.length,
     edges: edges.length,
-    observedOrigins: report.compatibility.observedOrigins,
-    warnings
+
+    maturityEntries: Array.isArray(graph.maturity)
+      ? graph.maturity.length
+      : null,
+
+    contradictions: Array.isArray(graph.contradictions)
+      ? graph.contradictions.length
+      : null,
+
+    declaredCounts,
+    actualCounts
   };
-
-  inspectDeclaredCounts(graph, {
-    compartments: compartments.length,
-    nodes: nodes.length,
-    edges: edges.length
-  });
-}
-
-function inspectDeclaredCounts(graph, actual) {
-  const possibleCountFields = [
-    'counts',
-    'stats',
-    'metadata'
-  ];
-
-  const declared = {};
-
-  for (const field of possibleCountFields) {
-    if (isObject(graph[field])) {
-      Object.assign(declared, graph[field]);
-    }
-  }
-
-  const comparisons = [
-    ['compartments', actual.compartments],
-    ['nodes', actual.nodes],
-    ['edges', actual.edges]
-  ];
-
-  const mismatches = [];
-
-  for (const [name, count] of comparisons) {
-    if (
-      typeof declared[name] === 'number' &&
-      declared[name] !== count
-    ) {
-      mismatches.push({
-        field: name,
-        declared: declared[name],
-        actual: count
-      });
-    }
-  }
-
-  check(
-    'declared-counts',
-    mismatches.length === 0
-      ? 'PASSED'
-      : 'WARNING',
-    {
-      declared,
-      actual,
-      mismatches
-    }
-  );
 }
 
 function inspectSchema(schema) {
@@ -656,7 +733,7 @@ function inspectSchema(schema) {
     check(
       'schema-root',
       'FAILED',
-      'JSON Schema root must be an object'
+      'Schema must be a JSON object.'
     );
 
     return;
@@ -664,53 +741,63 @@ function inspectSchema(schema) {
 
   check('schema-root', 'PASSED');
 
-  const origins = unique(
-    collectOriginEnums(schema)
-      .filter(value => typeof value === 'string')
-  ).sort();
+  const rootContract =
+    schema.type === 'object' &&
+    [
+      'schemaVersion',
+      'compartments',
+      'nodes',
+      'edges'
+    ].every(field =>
+      schema.required?.includes(field)
+    );
 
-  report.compatibility.schemaOrigins = origins;
+  check(
+    'schema-root-contract',
+    rootContract ? 'PASSED' : 'WARNING',
+    {
+      type: schema.type ?? null,
+      required: schema.required ?? []
+    }
+  );
+
+  report.compatibility.schemaOrigins =
+    unique(
+      collectOriginEnums(schema)
+        .filter(value => typeof value === 'string')
+    ).sort();
 
   check(
     'schema-origin-enum-discovery',
-    origins.length > 0 ? 'PASSED' : 'WARNING',
+    report.compatibility.schemaOrigins.length > 0
+      ? 'PASSED'
+      : 'WARNING',
     {
-      origins
+      origins: report.compatibility.schemaOrigins
     }
   );
 }
 
 async function inspectTypeScriptDeclarations(packageRoot) {
   const candidates = [
-    join(
-      packageRoot,
-      'dist/knowledge/substrate/types.d.ts'
-    ),
-
-    join(
-      packageRoot,
-      'dist/knowledge/types.d.ts'
-    ),
-
-    join(
-      packageRoot,
-      'knowledge/substrate/types.d.ts'
-    ),
-
-    join(
-      packageRoot,
-      'knowledge/types.d.ts'
-    )
+    'dist/knowledge/substrate/types.d.ts',
+    'dist/knowledge/types.d.ts',
+    'knowledge/substrate/types.d.ts',
+    'knowledge/types.d.ts',
+    'dist/types.d.ts',
+    'types.d.ts'
   ];
 
-  let found = false;
+  let declarationFound = false;
 
-  for (const path of candidates) {
-    if (!(await fileExists(path))) {
+  for (const candidate of candidates) {
+    const path = join(packageRoot, candidate);
+
+    if (!(await exists(path))) {
       continue;
     }
 
-    found = true;
+    declarationFound = true;
 
     const content = await readFile(path, 'utf8');
 
@@ -718,155 +805,153 @@ async function inspectTypeScriptDeclarations(packageRoot) {
       /(?:type|interface)\s+ClaimOrigin[^=]*=\s*([^;]+);?/s
     );
 
-    if (match) {
-      const values = [
-        ...match[1].matchAll(/['"]([^'"]+)['"]/g)
-      ].map(item => item[1]);
-
-      report.compatibility.typescriptOrigins =
-        unique(values).sort();
-
-      check(
-        'typescript-origin-declaration',
-        values.length > 0 ? 'PASSED' : 'WARNING',
-        {
-          path,
-          origins: report.compatibility.typescriptOrigins
-        }
-      );
-
-      return;
+    if (!match) {
+      continue;
     }
+
+    const values = [
+      ...match[1].matchAll(/['"]([^'"]+)['"]/g)
+    ].map(item => item[1]);
+
+    report.compatibility.typescriptOrigins =
+      unique(values).sort();
+
+    check(
+      'typescript-origin-declaration',
+      values.length > 0 ? 'PASSED' : 'WARNING',
+      {
+        path: candidate,
+        origins: report.compatibility.typescriptOrigins
+      }
+    );
+
+    return;
   }
 
   check(
     'typescript-origin-declaration',
     'WARNING',
-    found
-      ? 'Declaration found but ClaimOrigin could not be parsed'
-      : 'Published declaration files not found in inspected paths'
+    declarationFound
+      ? 'Declaration files found, but ClaimOrigin was not parsed.'
+      : 'No declaration found in inspected candidate paths.'
   );
 }
 
 function compareOrigins() {
-  const observed = report.compatibility.observedOrigins;
-  const schema = report.compatibility.schemaOrigins;
-  const typescript = report.compatibility.typescriptOrigins;
+  const observed =
+    report.compatibility.observedOrigins;
 
-  const missingFromSchema = observed.filter(
-    origin => !schema.includes(origin)
+  const schema =
+    report.compatibility.schemaOrigins;
+
+  const typescript =
+    report.compatibility.typescriptOrigins;
+
+  const observedNotInSchema = observed.filter(
+    value => !schema.includes(value)
   );
 
-  const missingFromTypes = typescript.filter(
-    origin => !schema.includes(origin)
+  const typescriptNotInSchema = typescript.filter(
+    value => !schema.includes(value)
   );
 
-  const typeSchemaMismatch = (
-    typescript.length > 0 &&
-    schema.length > 0
+  const schemaNotInTypescript = (
+    typescript.length > 0
   )
-    ? [
-        ...typescript.filter(value => !schema.includes(value)),
-        ...schema.filter(value => !typescript.includes(value))
-      ]
+    ? schema.filter(value => !typescript.includes(value))
     : [];
 
-  if (missingFromSchema.length > 0) {
+  if (observedNotInSchema.length > 0) {
     report.compatibility.conflicts.push({
-      id: 'ORIGIN_SCHEMA_MISMATCH',
+      id: 'ORIGIN_GRAPH_SCHEMA_MISMATCH',
       type: 'OBJECTIVE',
       status: 'CONFLICTING',
-      description:
-        'Observed graph provenance contains origins absent from JSON Schema.',
-      observedButNotInSchema: missingFromSchema
-    });
-  }
-
-  if (typeSchemaMismatch.length > 0) {
-    report.compatibility.conflicts.push({
-      id: 'ORIGIN_TYPESCRIPT_SCHEMA_MISMATCH',
-      type: 'OBJECTIVE',
-      status: 'CONFLICTING',
-      description:
-        'TypeScript declaration and JSON Schema origin definitions differ.',
-      mismatches: unique(typeSchemaMismatch)
+      observedNotInSchema
     });
   }
 
   if (
-    missingFromSchema.length === 0 &&
-    typeSchemaMismatch.length === 0
+    typescriptNotInSchema.length > 0 ||
+    schemaNotInTypescript.length > 0
   ) {
-    report.compatibility.status = 'ALIGNED';
-  } else {
-    report.compatibility.status = 'CONFLICTING';
+    report.compatibility.conflicts.push({
+      id: 'ORIGIN_TYPESCRIPT_SCHEMA_MISMATCH',
+      type: 'OBJECTIVE',
+      status: 'CONFLICTING',
+      typescriptNotInSchema,
+      schemaNotInTypescript
+    });
   }
+
+  const hasConflict =
+    report.compatibility.conflicts.length > 0;
+
+  report.compatibility.status =
+    hasConflict ? 'CONFLICTING' : 'ALIGNED';
 
   check(
     'observed-origins-allowed-by-schema',
-    missingFromSchema.length === 0
+    observedNotInSchema.length === 0
       ? 'PASSED'
       : 'WARNING',
     {
-      observed: observed,
+      observed,
       schema,
-      missingFromSchema
+      observedNotInSchema
     }
   );
 
-  check(
-    'typescript-schema-origin-alignment',
-    typeSchemaMismatch.length === 0
-      ? 'PASSED'
-      : 'WARNING',
-    {
-      typescript,
-      schema,
-      mismatches: unique(typeSchemaMismatch)
-    }
-  );
+  if (typescript.length > 0) {
+    check(
+      'typescript-schema-origin-alignment',
+      typescriptNotInSchema.length === 0 &&
+      schemaNotInTypescript.length === 0
+        ? 'PASSED'
+        : 'WARNING',
+      {
+        typescript,
+        schema,
+        typescriptNotInSchema,
+        schemaNotInTypescript
+      }
+    );
+  } else {
+    check(
+      'typescript-schema-origin-alignment',
+      'WARNING',
+      'TypeScript origin declaration unavailable; comparison incomplete.'
+    );
+  }
 }
 
 function determineReadiness() {
   const failed = report.validation.failed;
   const warnings = report.validation.warnings;
-  const conflicts = report.compatibility.conflicts.length;
+  const conflicts =
+    report.compatibility.conflicts.length;
 
   if (failed > 0) {
     report.readiness.importReadiness = 'BLOCKED';
   } else if (warnings > 0 || conflicts > 0) {
     report.readiness.importReadiness = 'REVIEW_REQUIRED';
   } else {
-    report.readiness.importReadiness = 'STRUCTURAL_CHECKS_PASSED';
+    report.readiness.importReadiness =
+      'STRUCTURAL_CHECKS_PASSED';
   }
 
-  report.limitations.push(
-    'This validator does not establish factual correctness of game mechanics.'
-  );
-
-  report.limitations.push(
-    'This validator does not independently verify formulas or numerical claims.'
-  );
-
-  report.limitations.push(
-    'This validator does not establish redistribution rights for third-party datasets.'
-  );
-
-  report.limitations.push(
-    'This validator does not perform full JSON Schema validation of every graph node.'
-  );
-
-  report.limitations.push(
-    'TypeScript declaration inspection is limited to known candidate paths.'
-  );
-
-  report.limitations.push(
-    'Unknown SDK fields and values are not normalized or rewritten by this validator.'
-  );
+  report.limitations = [
+    'Structural checks do not establish factual correctness of game mechanics.',
+    'Numerical formulas and values are not independently verified.',
+    'Third-party redistribution rights are not assessed.',
+    'Full JSON Schema validation of every graph element is not performed.',
+    'TypeScript declaration discovery is limited to inspected paths.',
+    'Unknown SDK values are preserved and are not silently normalized.',
+    'A passing result does not authorize bulk import into Samantha GKB.'
+  ];
 }
 
 async function saveReport() {
-  await mkdir(dirname(OUTPUT_FILE), {
+  await mkdir(dirname(REPORT_PATH), {
     recursive: true
   });
 
@@ -882,30 +967,39 @@ async function saveReport() {
     failed: report.validation.failed,
     warnings: report.validation.warnings,
 
-    compatibilityStatus: report.compatibility.status,
+    compatibilityStatus:
+      report.compatibility.status,
 
-    importReadiness: report.readiness.importReadiness
+    importReadiness:
+      report.readiness.importReadiness
   };
 
+  report.finishedAt = new Date().toISOString();
+
   await writeFile(
-    OUTPUT_FILE,
+    REPORT_PATH,
     JSON.stringify(report, null, 2) + '\n',
     'utf8'
   );
 
-  console.log('\n======================================');
-  console.log(' SAMANTHA SDK RUNTIME VALIDATOR v4');
-  console.log('======================================');
-
-  console.log(`Package: ${report.package.name ?? 'UNKNOWN'}`);
-  console.log(`Version: ${report.package.version ?? 'UNKNOWN'}`);
+  console.log('\n========================================');
+  console.log(' SAMANTHA SDK RUNTIME VALIDATOR v4.1.0');
+  console.log('========================================');
 
   console.log(
-    `Graph nodes: ${report.graph.nodes ?? 'UNKNOWN'}`
+    `Package: ${report.package?.name ?? 'UNKNOWN'}`
   );
 
   console.log(
-    `Graph edges: ${report.graph.edges ?? 'UNKNOWN'}`
+    `Version: ${report.package?.version ?? 'UNKNOWN'}`
+  );
+
+  console.log(
+    `Graph nodes: ${report.graph?.nodes ?? 'UNKNOWN'}`
+  );
+
+  console.log(
+    `Graph edges: ${report.graph?.edges ?? 'UNKNOWN'}`
   );
 
   console.log(
@@ -928,61 +1022,84 @@ async function saveReport() {
     `Import readiness: ${report.readiness.importReadiness}`
   );
 
-  console.log(`\nReport: ${OUTPUT_FILE}`);
+  console.log(`Report: ${REPORT_PATH}`);
 }
 
 async function main() {
-  console.log('Starting Samantha SDK Runtime Validator v4...');
+  console.log(
+    'Starting Samantha TheTowerSDK Validator v4.1.0...'
+  );
 
-  try {
-    const {
-      require,
-      packageRoot
-    } = await resolvePackage();
+  const packageJson = await loadPackage();
 
-    const exports = await loadJsonExports(require);
+  const loaded = await loadPublicExports(packageJson);
 
-    const graph = exports[MODULES[0]];
-    const schema = exports[MODULES[1]];
+  const graph = loaded['knowledge-graph'];
+  const schema = loaded['knowledge-schema'];
 
-    if (graph) {
-      inspectGraph(graph);
-    }
-
-    if (schema) {
-      inspectSchema(schema);
-    }
-
-    await inspectTypeScriptDeclarations(packageRoot);
-
-    if (graph && schema) {
-      compareOrigins();
-    } else {
-      report.compatibility.status = 'NOT_ASSESSED';
-
-      check(
-        'origin-compatibility',
-        'WARNING',
-        'Graph or schema export unavailable'
-      );
-    }
-  } catch (error) {
+  if (graph) {
+    inspectGraph(graph);
+  } else {
     check(
-      'validator-execution',
+      'graph-validation',
       'FAILED',
-      {
-        message: error.message,
-        stack: error.stack
-      }
+      'Knowledge graph export unavailable.'
     );
   }
 
-  determineReadiness();
+  if (schema) {
+    inspectSchema(schema);
+  } else {
+    check(
+      'schema-validation',
+      'FAILED',
+      'Knowledge schema export unavailable.'
+    );
+  }
 
-  await saveReport();
+  await inspectTypeScriptDeclarations(SDK_DIR);
 
-  process.exitCode =
-    report.validation.failed > 0 ? 1 : 0;
+  if (graph && schema) {
+    compareOrigins();
+  } else {
+    report.compatibility.status = 'NOT_ASSESSED';
+
+    check(
+      'origin-compatibility',
+      'WARNING',
+      'Graph or schema unavailable.'
+    );
+  }
 }
 
-await main();
+try {
+  await main();
+} catch (error) {
+  check(
+    'validator-execution',
+    'FAILED',
+    {
+      name: error.name,
+      message: error.message,
+      code: error.code ?? null,
+      stack: error.stack ?? null
+    }
+  );
+}
+
+determineReadiness();
+
+try {
+  await saveReport();
+} catch (error) {
+  console.error(
+    'REPORT_WRITE_FAILED:',
+    error.message
+  );
+
+  process.exitCode = 2;
+}
+
+if (report.validation.failed > 0) {
+  process.exitCode = 1;
+}
