@@ -1,0 +1,38 @@
+
+name: Samantha - Preserve TheTowerSDK
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Samantha repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "20"
+
+      - name: Verify Node and Git
+        run: |
+          node --version
+          git --version
+
+      - name: Run SDK preservation
+        run: |
+          node TheTowerData/scripts/preserve-upstream-v2.mjs
+
+      - name: Upload preservation output
+        uses: actions/upload-artifact@v4
+        with:
+          name: TheTowerSDK-preservation-0.14.1
+          path: TheTowerData/staging/thetowersdk/0.14.1/
+          if-no-files-found: error
+          retention-days: 90
