@@ -2,35 +2,30 @@
 
 /**
  * Samantha - TheTowerSDK Runtime Validator
- * Version: 4.1.0
+ * Version: 4.2.0
  *
- * Target:
- *   thetowersdk@0.14.1
- *   Node.js >=20
+ * Target SDK: thetowersdk@0.14.1
+ * Required Node.js: >=20
  *
  * Environment:
- *   SDK_DIR     = SDK package directory
- *   REPORT_PATH = JSON report output path
+ *   SDK_DIR
+ *   REPORT_PATH
  *
- * Backward-compatible CLI:
- *   node test-sdk-runtime-v4.mjs <sdk-package-dir> [report-path]
+ * Responsibilities:
+ *   - Verify SDK identity and version.
+ *   - Load public JSON exports.
+ *   - Validate graph structure.
+ *   - Validate node and edge references.
+ *   - Validate provenance.
+ *   - Compare observed origins with JSON Schema.
+ *   - Inspect TypeScript declarations when available.
+ *   - Preserve original SDK values.
  *
- * This validator:
- *   - Verifies SDK identity and version.
- *   - Loads public JSON exports.
- *   - Checks graph structure.
- *   - Checks node and edge references.
- *   - Checks provenance.
- *   - Compares observed origins with JSON Schema.
- *   - Inspects TypeScript declarations when available.
- *   - Preserves unknown values.
- *
- * It does NOT:
- *   - Modify SDK data.
- *   - Verify factual game mechanics.
- *   - Verify formulas independently.
- *   - Establish redistribution rights.
- *   - Perform complete JSON Schema validation.
+ * Limitations:
+ *   - No independent factual game-mechanics validation.
+ *   - No independent formula verification.
+ *   - No redistribution-rights assessment.
+ *   - No complete JSON Schema validation.
  */
 
 import {
@@ -43,9 +38,7 @@ import {
 import {
   resolve,
   dirname,
-  join,
-  relative,
-  isAbsolute
+  join
 } from 'node:path';
 
 import {
@@ -56,13 +49,13 @@ import process from 'node:process';
 
 const EXPECTED_PACKAGE = 'thetowersdk';
 const EXPECTED_VERSION = '0.14.1';
-const VALIDATOR_VERSION = '4.1.0';
+const VALIDATOR_VERSION = '4.2.0';
 
-const SDK_DIR = resolve(
-  process.env.SDK_DIR ??
-  process.argv[2] ??
-  ''
-);
+const SDK_DIR = process.env.SDK_DIR
+  ? resolve(process.env.SDK_DIR)
+  : process.argv[2]
+    ? resolve(process.argv[2])
+    : '';
 
 const REPORT_PATH = resolve(
   process.env.REPORT_PATH ??
@@ -90,7 +83,7 @@ const report = {
   },
 
   execution: {
-    timestamp: new Date().toISOString(),
+    startedAt: new Date().toISOString(),
     nodeVersion: process.version,
     platform: process.platform,
     architecture: process.arch,
@@ -100,9 +93,7 @@ const report = {
   },
 
   package: null,
-
   exports: [],
-
   graph: null,
 
   compatibility: {
@@ -166,6 +157,42 @@ async function exists(path) {
   }
 }
 
+function validateProvenance(source) {
+  return (
+    isObject(source) &&
+    typeof source.origin === 'string' &&
+    source.origin.length > 0 &&
+    typeof source.ref === 'string' &&
+    source.ref.length > 0
+  );
+}
+
+function validateSourceCollection(sources) {
+  if (!Array.isArray(sources) || sources.length === 0) {
+    return {
+      invalid: 1,
+      origins: []
+    };
+  }
+
+  let invalid = 0;
+  const origins = [];
+
+  for (const source of sources) {
+    if (!validateProvenance(source)) {
+      invalid++;
+      continue;
+    }
+
+    origins.push(source.origin);
+  }
+
+  return {
+    invalid,
+    origins
+  };
+}
+
 function collectOriginEnums(value, output = []) {
   if (Array.isArray(value)) {
     for (const item of value) {
@@ -194,49 +221,8 @@ function collectOriginEnums(value, output = []) {
   return output;
 }
 
-function validateProvenance(value) {
-  return (
-    isObject(value) &&
-    typeof value.origin === 'string' &&
-    value.origin.length > 0 &&
-    typeof value.ref === 'string' &&
-    value.ref.length > 0
-  );
-}
-
-function validateSourceCollection(sources) {
-  if (!Array.isArray(sources) || sources.length === 0) {
-    return {
-      valid: false,
-      invalid: 1,
-      origins: []
-    };
-  }
-
-  let invalid = 0;
-  const origins = [];
-
-  for (const source of sources) {
-    if (!validateProvenance(source)) {
-      invalid++;
-      continue;
-    }
-
-    origins.push(source.origin);
-  }
-
-  return {
-    valid: invalid === 0,
-    invalid,
-    origins
-  };
-}
-
 async function loadPackage() {
-  if (
-    !process.env.SDK_DIR &&
-    !process.argv[2]
-  ) {
+  if (!SDK_DIR) {
     throw new Error(
       'SDK_DIR is missing. Set SDK_DIR or provide the SDK directory as argument 1.'
     );
@@ -311,9 +297,7 @@ async function loadPackage() {
 
   check(
     'package-node-engine',
-    declaredNode === null
-      ? 'WARNING'
-      : 'PASSED',
+    declaredNode === null ? 'WARNING' : 'PASSED',
     {
       declared: declaredNode
     }
@@ -325,9 +309,24 @@ async function loadPackage() {
 async function loadPublicExports(packageJson) {
   const loaded = {};
 
-  const sdkRequire = createRequire(
-    join(SDK_DIR, '__samantha_validator__.cjs')
+  /*
+   * SDK_DIR:
+   *   .../sdk-test/node_modules/thetowersdk
+   *
+   * Resolver anchor:
+   *   .../sdk-test/__samantha_validator__.cjs
+   *
+   * This allows Node.js to resolve the sibling package
+   * under sdk-test/node_modules.
+   */
+  const resolverAnchor = join(
+    SDK_DIR,
+    '..',
+    '..',
+    '__samantha_validator__.cjs'
   );
+
+  const sdkRequire = createRequire(resolverAnchor);
 
   for (const item of EXPORTS) {
     const result = {
@@ -514,9 +513,7 @@ function inspectGraph(graph) {
 
   check(
     'unique-node-ids',
-    duplicateNodeIds.length === 0
-      ? 'PASSED'
-      : 'FAILED',
+    duplicateNodeIds.length === 0 ? 'PASSED' : 'FAILED',
     {
       total: nodes.length,
       duplicates: unique(duplicateNodeIds)
@@ -693,9 +690,7 @@ function inspectGraph(graph) {
 
   check(
     'declared-counts',
-    countMismatches.length === 0
-      ? 'PASSED'
-      : 'WARNING',
+    countMismatches.length === 0 ? 'PASSED' : 'WARNING',
     {
       declared: declaredCounts,
       actual: actualCounts,
@@ -788,16 +783,12 @@ async function inspectTypeScriptDeclarations(packageRoot) {
     'types.d.ts'
   ];
 
-  let declarationFound = false;
-
   for (const candidate of candidates) {
     const path = join(packageRoot, candidate);
 
     if (!(await exists(path))) {
       continue;
     }
-
-    declarationFound = true;
 
     const content = await readFile(path, 'utf8');
 
@@ -831,9 +822,7 @@ async function inspectTypeScriptDeclarations(packageRoot) {
   check(
     'typescript-origin-declaration',
     'WARNING',
-    declarationFound
-      ? 'Declaration files found, but ClaimOrigin was not parsed.'
-      : 'No declaration found in inspected candidate paths.'
+    'ClaimOrigin declaration was not found in inspected paths.'
   );
 }
 
@@ -855,9 +844,7 @@ function compareOrigins() {
     value => !schema.includes(value)
   );
 
-  const schemaNotInTypescript = (
-    typescript.length > 0
-  )
+  const schemaNotInTypescript = typescript.length > 0
     ? schema.filter(value => !typescript.includes(value))
     : [];
 
@@ -883,11 +870,10 @@ function compareOrigins() {
     });
   }
 
-  const hasConflict =
-    report.compatibility.conflicts.length > 0;
-
   report.compatibility.status =
-    hasConflict ? 'CONFLICTING' : 'ALIGNED';
+    report.compatibility.conflicts.length > 0
+      ? 'CONFLICTING'
+      : 'ALIGNED';
 
   check(
     'observed-origins-allowed-by-schema',
@@ -919,20 +905,18 @@ function compareOrigins() {
     check(
       'typescript-schema-origin-alignment',
       'WARNING',
-      'TypeScript origin declaration unavailable; comparison incomplete.'
+      'TypeScript origin declaration unavailable.'
     );
   }
 }
 
 function determineReadiness() {
-  const failed = report.validation.failed;
-  const warnings = report.validation.warnings;
-  const conflicts =
-    report.compatibility.conflicts.length;
-
-  if (failed > 0) {
+  if (report.validation.failed > 0) {
     report.readiness.importReadiness = 'BLOCKED';
-  } else if (warnings > 0 || conflicts > 0) {
+  } else if (
+    report.validation.warnings > 0 ||
+    report.compatibility.conflicts.length > 0
+  ) {
     report.readiness.importReadiness = 'REVIEW_REQUIRED';
   } else {
     report.readiness.importReadiness =
@@ -940,13 +924,13 @@ function determineReadiness() {
   }
 
   report.limitations = [
-    'Structural checks do not establish factual correctness of game mechanics.',
+    'Structural validation does not establish factual correctness of game mechanics.',
     'Numerical formulas and values are not independently verified.',
     'Third-party redistribution rights are not assessed.',
-    'Full JSON Schema validation of every graph element is not performed.',
+    'Complete JSON Schema validation is not performed.',
     'TypeScript declaration discovery is limited to inspected paths.',
-    'Unknown SDK values are preserved and are not silently normalized.',
-    'A passing result does not authorize bulk import into Samantha GKB.'
+    'Unknown SDK values are not silently normalized.',
+    'Passing this test does not authorize bulk import into Samantha GKB.'
   ];
 }
 
@@ -983,7 +967,7 @@ async function saveReport() {
   );
 
   console.log('\n========================================');
-  console.log(' SAMANTHA SDK RUNTIME VALIDATOR v4.1.0');
+  console.log(' SAMANTHA SDK RUNTIME VALIDATOR v4.2.0');
   console.log('========================================');
 
   console.log(
@@ -1002,17 +986,9 @@ async function saveReport() {
     `Graph edges: ${report.graph?.edges ?? 'UNKNOWN'}`
   );
 
-  console.log(
-    `Passed: ${report.validation.passed}`
-  );
-
-  console.log(
-    `Failed: ${report.validation.failed}`
-  );
-
-  console.log(
-    `Warnings: ${report.validation.warnings}`
-  );
+  console.log(`Passed: ${report.validation.passed}`);
+  console.log(`Failed: ${report.validation.failed}`);
+  console.log(`Warnings: ${report.validation.warnings}`);
 
   console.log(
     `Compatibility: ${report.compatibility.status}`
@@ -1027,7 +1003,7 @@ async function saveReport() {
 
 async function main() {
   console.log(
-    'Starting Samantha TheTowerSDK Validator v4.1.0...'
+    'Starting Samantha TheTowerSDK Validator v4.2.0...'
   );
 
   const packageJson = await loadPackage();
