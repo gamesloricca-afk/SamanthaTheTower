@@ -1,4 +1,4 @@
-name: Samantha - GKB Origin Compatibility Test
+name: Samantha - GKB SDK Runtime and Validation Test
 
 on:
   workflow_dispatch:
@@ -7,9 +7,9 @@ permissions:
   contents: read
 
 jobs:
-  origin-compatibility:
+  sdk-runtime:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - name: Checkout GKB branch
@@ -27,3 +27,27 @@ jobs:
 
       - name: Run origin compatibility self-test
         run: node GKB/adapter/origin-compatibility.mjs
+
+      - name: Install TheTowerSDK runtime dependency
+        working-directory: GKB/runtime
+        run: npm install --ignore-scripts --no-audit --no-fund
+
+      - name: Verify installed dependencies
+        working-directory: GKB/runtime
+        run: npm ls thetowersdk ajv --depth=0
+
+      - name: Inspect SDK Schema and Validate Knowledge Graph
+        working-directory: GKB/runtime
+        run: node ../adapter/inspect-sdk-schema-dialect.mjs
+
+      - name: Run SDK JSON export smoke test
+        working-directory: GKB/runtime
+        run: npm run test:sdk-json-exports
+
+      - name: Upload GKB validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: samantha-gkb-validation-report
+          path: GKB/reports/sdk-knowledge-graph-validation-report.json
+          if-no-files-found: ignore
