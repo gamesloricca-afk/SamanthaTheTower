@@ -1,4 +1,5 @@
-name: Samantha - TheTowerSDK Runtime Smoke Test
+```yaml
+name: Samantha - TheTowerSDK JSON Export Compatibility Test
 
 on:
   workflow_dispatch:
@@ -14,6 +15,8 @@ jobs:
     steps:
       - name: Checkout Samantha repository
         uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v5
@@ -29,7 +32,6 @@ jobs:
       - name: Install exact TheTowerSDK version
         run: |
           TEST_DIR="$RUNNER_TEMP/sdk-runtime-test"
-
           mkdir -p "$TEST_DIR"
 
           npm install --prefix "$TEST_DIR" \
@@ -48,26 +50,28 @@ jobs:
             const p = require(process.env.SDK_PACKAGE_DIR + '/package.json');
             console.log('Package:', p.name);
             console.log('Version:', p.version);
+
             if (p.name !== 'thetowersdk' || p.version !== '0.14.1') {
               process.exit(1);
             }
           "
 
-      - name: Check smoke test script syntax
+      - name: Check JSON export test script syntax
         run: |
-          node --check TheTowerData/scripts/test-sdk-runtime-v2.mjs
+          node --check TheTowerData/scripts/test-sdk-runtime-v3.mjs
 
-      - name: Run SDK runtime smoke test
+      - name: Run JSON export compatibility test
         run: |
-          node TheTowerData/scripts/test-sdk-runtime-v2.mjs \
+          node TheTowerData/scripts/test-sdk-runtime-v3.mjs \
             "$SDK_PACKAGE_DIR" \
-            "$GITHUB_WORKSPACE/sdk-runtime-smoke-report.json"
+            "$GITHUB_WORKSPACE/sdk-json-export-report.json"
 
-      - name: Upload SDK smoke test report
+      - name: Upload SDK JSON export report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: TheTowerSDK-runtime-smoke-test-0.14.1
-          path: sdk-runtime-smoke-report.json
+          name: TheTowerSDK-json-export-test-0.14.1
+          path: sdk-json-export-report.json
           if-no-files-found: warn
           retention-days: 90
+```
