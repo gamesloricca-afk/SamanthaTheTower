@@ -8,6 +8,7 @@
     "test:sdk-json-exports": "node ../adapter/sdk-json-export-smoke.mjs"
   },
   "dependencies": {
+    "ajv": "8.17.1",
     "thetowersdk": "0.14.1"
   }
 }
