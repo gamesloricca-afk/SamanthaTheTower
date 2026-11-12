@@ -1,3 +1,4 @@
+
 name: Samantha - GKB SDK Runtime Test
 
 on:
@@ -35,6 +36,10 @@ jobs:
       - name: Verify installed TheTowerSDK version
         working-directory: GKB/runtime
         run: npm ls thetowersdk --depth=0
+
+      - name: Inspect SDK JSON Schema dialect
+        working-directory: GKB/runtime
+        run: node ../adapter/inspect-sdk-schema-dialect.mjs
 
       - name: Run SDK JSON export smoke test
         working-directory: GKB/runtime
