@@ -1,7 +1,7 @@
 
 name: Samantha - TheTowerSDK JSON Export Compatibility Test
 
-on:
+"on":
   workflow_dispatch:
 
 permissions:
@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout Samantha repository
         uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v5
@@ -48,6 +50,7 @@ jobs:
             const p = require(process.env.SDK_PACKAGE_DIR + '/package.json');
             console.log('Package:', p.name);
             console.log('Version:', p.version);
+
             if (p.name !== 'thetowersdk' || p.version !== '0.14.1') {
               process.exit(1);
             }
