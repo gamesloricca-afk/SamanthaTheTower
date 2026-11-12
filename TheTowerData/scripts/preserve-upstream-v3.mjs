@@ -2,222 +2,250 @@
 #!/usr/bin/env node
 
 /**
- * Samantha - TheTowerSDK Preservation v3.0
- * Node.js >= 20, Git, GNU tar, gzip
- * Does not install or execute SDK code.
+ * Samantha - TheTowerSDK Preservation v3.0.1
+ * Requires Node.js >= 20, Git, GNU tar, and gzip.
+ * Fetches and preserves a pinned upstream commit. It does not install or
+ * execute TheTowerSDK and does not approve public redistribution.
  */
 
 import {
-  mkdir, writeFile, rm, rename, stat, lstat,
-  chmod, symlink, readlink, readdir, mkdtemp
-} from "node:fs/promises";
-import { createReadStream, createWriteStream } from "node:fs";
-import { createHash } from "node:crypto";
-import { tmpdir } from "node:os";
-import { join, resolve, basename, dirname } from "node:path";
-import { spawn } from "node:child_process";
-import { pipeline } from "node:stream/promises";
+  mkdir,
+  writeFile,
+  rm,
+  rename,
+  stat,
+  lstat,
+  chmod,
+  symlink,
+  readlink,
+  readdir,
+  mkdtemp,
+} from 'node:fs/promises';
+import { createReadStream, createWriteStream } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { tmpdir } from 'node:os';
+import { join, resolve, dirname, basename } from 'node:path';
+import { spawn } from 'node:child_process';
+import { pipeline } from 'node:stream/promises';
 
+const SCRIPT_VERSION = '3.0.1';
 
 const CONFIG = {
-  repository: "https://github.com/TmRxJD/TheTowerSDK.git",
-  repositoryName: "TheTowerSDK",
-  packageName: "thetowersdk",
-  sdkVersion: "0.14.1",
+  repository: 'https://github.com/TmRxJD/TheTowerSDK.git',
+  repositoryName: 'TheTowerSDK',
+  packageName: 'thetowersdk',
+  sdkVersion: '0.14.1',
   gameVersion: null,
-  commit: "9a95672578fa064d71ddd54fad2ce5027a310b3a",
-
+  commit: '9a95672578fa064d71ddd54fad2ce5027a310b3a',
   maxBlobBytes: 128 * 1024 * 1024,
   maxTotalBytes: 2 * 1024 * 1024 * 1024,
   maxEntries: 100000,
   maxSymlinkBytes: 4096,
-  maxCommandOutputBytes: 64 * 1024 * 1024,
-
+  maxCommandOutputBytes: 128 * 1024 * 1024,
+  maxStderrBytes: 4 * 1024 * 1024,
   outputDirectory: resolve(
-    process.argv[2] ??
-    "TheTowerData/staging/thetowersdk/0.14.1"
-  )
+    process.argv[2] ?? 'TheTowerData/staging/thetowersdk/0.14.1'
+  ),
 };
-
 
 const PROVENANCE_RULES = [
   {
-    id: "EFFECTIVE_PATHS",
-    patterns: [/effective-paths/i, /effective.paths/i],
-    status: "CLARIFICATION_REQUIRED",
-    reason: "Community spreadsheet-derived material; redistribution scope requires clarification."
+    id: 'EFFECTIVE_PATHS',
+    patterns: [/effective-paths/i, /effective\.paths/i],
+    status: 'CLARIFICATION_REQUIRED',
+    reason: 'Community spreadsheet-derived material; redistribution scope requires clarification.',
   },
   {
-    id: "ORPHIS",
-    patterns: [
-      /labs-categories\.generated/i,
-      /lab-categories\.json/i
-    ],
-    status: "CLARIFICATION_REQUIRED",
-    reason: "Orphis-related material; redistribution terms require clarification."
+    id: 'ORPHIS',
+    patterns: [/labs-categories\.generated/i, /lab-categories\.json/i],
+    status: 'CLARIFICATION_REQUIRED',
+    reason: 'Orphis-related material; redistribution terms require clarification.',
   },
   {
-    id: "TOWER_IDLE_TOOLKIT",
+    id: 'TOWER_IDLE_TOOLKIT',
     patterns: [
       /base-empirical-scaling/i,
       /scaling-regression-profile/i,
       /mechanics\/combat\/damage/i,
       /mechanics\/combat\/bonuses/i,
-      /formatting\/duration/i
+      /formatting\/duration/i,
     ],
-    status: "LICENSE_REVIEW",
-    reason: "Potential tower-idle-toolkit-derived material; verify applicable attribution."
-  }
+    status: 'LICENSE_REVIEW',
+    reason: 'Potential tower-idle-toolkit-derived material; verify applicable attribution.',
+  },
 ];
-
 
 function run(command, args, options = {}) {
   return new Promise((resolvePromise, reject) => {
+    const { input, ...spawnOptions } = options;
+
     const child = spawn(command, args, {
-      stdio: ["ignore", "pipe", "pipe"],
-      ...options
+      stdio: ['pipe', 'pipe', 'pipe'],
+      ...spawnOptions,
     });
 
     const stdout = [];
     const stderr = [];
-    let outputBytes = 0;
+    let stdoutBytes = 0;
+    let stderrBytes = 0;
     let settled = false;
+    let limitError = null;
 
-    child.stdout?.on("data", chunk => {
-      outputBytes += chunk.length;
+    const finishReject = (error) => {
+      if (settled) return;
+      settled = true;
+      reject(error);
+    };
 
-      if (outputBytes > CONFIG.maxCommandOutputBytes) {
-        child.kill("SIGTERM");
+    child.stdout?.on('data', (chunk) => {
+      stdoutBytes += chunk.length;
 
-        if (!settled) {
-          settled = true;
-          reject(new Error(
-            command + " exceeded command output limit."
-          ));
-        }
-
+      if (stdoutBytes > CONFIG.maxCommandOutputBytes) {
+        limitError = new Error(
+          `${command} exceeded stdout output limit.`
+        );
+        child.kill('SIGTERM');
         return;
       }
 
       stdout.push(chunk);
     });
 
-    child.stderr?.on("data", chunk => stderr.push(chunk));
+    child.stderr?.on('data', (chunk) => {
+      stderrBytes += chunk.length;
 
-    child.on("error", error => {
-      if (!settled) {
-        settled = true;
-        reject(error);
+      if (stderrBytes <= CONFIG.maxStderrBytes) {
+        stderr.push(chunk);
+      }
+
+      if (stderrBytes > CONFIG.maxStderrBytes && !limitError) {
+        limitError = new Error(
+          `${command} exceeded stderr output limit.`
+        );
+        child.kill('SIGTERM');
       }
     });
 
-    child.on("close", code => {
+    child.on('error', finishReject);
+
+    child.on('close', (code, signal) => {
       if (settled) return;
       settled = true;
 
-      if (code !== 0) {
+      if (limitError) {
+        reject(limitError);
+      } else if (code !== 0) {
         reject(new Error(
-          command + " exited with code " + code + "\n" +
-          Buffer.concat(stderr).toString("utf8")
+          `${command} exited with code ${code}${signal ? ` (signal ${signal})` : ''}\n` +
+          Buffer.concat(stderr).toString('utf8')
         ));
       } else {
         resolvePromise({
           stdout: Buffer.concat(stdout),
-          stderr: Buffer.concat(stderr)
+          stderr: Buffer.concat(stderr),
         });
       }
     });
+
+    if (input) child.stdin.end(input);
+    else child.stdin.end();
   });
 }
 
-
 function decodeGitPath(buffer) {
-  const value = new TextDecoder("utf-8", {
-    fatal: true
+  const value = new TextDecoder('utf-8', {
+    fatal: true,
   }).decode(buffer);
 
-  if (!Buffer.from(value, "utf8").equals(buffer)) {
-    throw new Error("Git path is not losslessly UTF-8.");
+  if (!Buffer.from(value, 'utf8').equals(buffer)) {
+    throw new Error('Git path is not losslessly UTF-8.');
   }
 
   if (
-    value.startsWith("/") ||
-    value.includes("\\") ||
-    value.includes("\0") ||
-    value.split("/").some(part =>
-      !part || part === "." || part === ".."
+    value.startsWith('/') ||
+    value.includes('\\') ||
+    value.includes('\0') ||
+    value.split('/').some((part) =>
+      !part || part === '.' || part === '..'
     )
   ) {
-    throw new Error("Unsafe Git path: " + value);
+    throw new Error(`Unsafe Git path: ${value}`);
   }
 
   return value;
 }
 
-
 function parseTree(raw) {
   const records = [];
   let start = 0;
 
-  for (let i = 0; i < raw.length; i++) {
+  for (let i = 0; i < raw.length; i += 1) {
     if (raw[i] !== 0) continue;
 
     const record = raw.subarray(start, i);
     start = i + 1;
 
-    if (!record.length) continue;
+    if (record.length === 0) continue;
 
     const tab = record.indexOf(9);
 
     if (tab < 0) {
-      throw new Error("Invalid Git tree record.");
+      throw new Error('Invalid Git tree record.');
     }
 
-    const [mode, type, objectSha] =
-      record.subarray(0, tab)
-        .toString("ascii")
-        .split(" ");
+    const [mode, type, objectSha] = record
+      .subarray(0, tab)
+      .toString('ascii')
+      .split(' ');
 
-    const path = decodeGitPath(
-      record.subarray(tab + 1)
-    );
+    const path = decodeGitPath(record.subarray(tab + 1));
 
-    if (!mode || !type || !objectSha) {
-      throw new Error("Invalid Git metadata: " + path);
+    if (
+      !mode ||
+      !type ||
+      !/^[0-9a-f]{40,64}$/.test(objectSha ?? '')
+    ) {
+      throw new Error(`Invalid Git metadata: ${path}`);
+    }
+
+    const isSubmodule = mode === '160000' && type === 'commit';
+
+    if (type !== 'blob' && !isSubmodule) {
+      throw new Error(`Unsupported Git entry: ${path}`);
     }
 
     if (
-      type !== "blob" &&
-      !(mode === "160000" && type === "commit")
+      type === 'blob' &&
+      !['100644', '100755', '120000'].includes(mode)
     ) {
-      throw new Error("Unsupported Git entry: " + path);
+      throw new Error(`Unsupported blob mode ${mode}: ${path}`);
     }
 
     const provenance = PROVENANCE_RULES
-      .filter(rule =>
-        rule.patterns.some(pattern => pattern.test(path))
+      .filter((rule) =>
+        rule.patterns.some((pattern) => pattern.test(path))
       )
-      .map(rule => ({
+      .map((rule) => ({
         id: rule.id,
         status: rule.status,
-        reason: rule.reason
+        reason: rule.reason,
       }));
 
     if (
       /(^|\/)(LICENSE|NOTICE|COPYING)(\.|$)/i.test(path)
     ) {
       provenance.push({
-        id: "LICENSE_DOCUMENT",
-        status: "PRESERVE",
-        reason: "License or attribution document."
+        id: 'LICENSE_DOCUMENT',
+        status: 'PRESERVE',
+        reason: 'License or attribution document.',
       });
     }
 
-    if (!provenance.length) {
+    if (provenance.length === 0) {
       provenance.push({
-        id: "UNASSESSED",
-        status: "NOT_REVIEWED",
-        reason: "File-level provenance has not been individually established."
+        id: 'UNASSESSED',
+        status: 'NOT_REVIEWED',
+        reason: 'File-level provenance has not been individually established.',
       });
     }
 
@@ -228,51 +256,76 @@ function parseTree(raw) {
       objectSha,
       sizeBytes: null,
       provenance,
-      isSubmodule: mode === "160000"
+      isSubmodule,
     });
   }
 
   if (start !== raw.length) {
-    throw new Error("Incomplete NUL-terminated Git tree.");
+    throw new Error('Incomplete NUL-terminated Git tree.');
+  }
+
+  if (records.length > CONFIG.maxEntries) {
+    throw new Error(
+      `Inventory exceeds entry limit: ${records.length}`
+    );
   }
 
   return records;
 }
 
-
 async function preflightBlobSizes(repoDir, inventory) {
-  if (inventory.length > CONFIG.maxEntries) {
-    throw new Error(
-      "Inventory exceeds limit: " + inventory.length
-    );
+  const blobs = inventory.filter(
+    (item) => !item.isSubmodule
+  );
+
+  const input = Buffer.from(
+    blobs.map((item) => item.objectSha).join('\n') + '\n'
+  );
+
+  const result = await run(
+    'git',
+    [
+      '-C',
+      repoDir,
+      'cat-file',
+      '--batch-check=%(objectname) %(objecttype) %(objectsize)',
+    ],
+    { input }
+  );
+
+  const lines = result.stdout
+    .toString('ascii')
+    .trimEnd()
+    .split('\n');
+
+  if (lines.length !== blobs.length) {
+    throw new Error('Git batch size response count mismatch.');
   }
 
   let totalBytes = 0;
-  let blobCount = 0;
 
-  for (const item of inventory) {
-    if (item.isSubmodule) continue;
+  for (let i = 0; i < blobs.length; i += 1) {
+    const [sha, type, sizeText] = lines[i].split(' ');
 
-    const result = await run("git", [
-      "-C", repoDir,
-      "cat-file", "-s", item.objectSha
-    ]);
-
-    const value = result.stdout.toString("ascii").trim();
-
-    if (!/^\d+$/.test(value)) {
-      throw new Error("Invalid blob size: " + item.path);
-    }
-
-    const size = Number(value);
-
-    if (!Number.isSafeInteger(size) || size < 0) {
-      throw new Error("Unsafe blob size: " + item.path);
-    }
-
-    if (size > CONFIG.maxBlobBytes) {
+    if (
+      sha !== blobs[i].objectSha ||
+      type !== 'blob' ||
+      !/^\d+$/.test(sizeText ?? '')
+    ) {
       throw new Error(
-        "Blob exceeds per-file limit: " + item.path
+        `Invalid Git blob metadata: ${blobs[i].path}`
+      );
+    }
+
+    const size = Number(sizeText);
+
+    if (
+      !Number.isSafeInteger(size) ||
+      size < 0 ||
+      size > CONFIG.maxBlobBytes
+    ) {
+      throw new Error(
+        `Blob size outside permitted range: ${blobs[i].path}`
       );
     }
 
@@ -282,20 +335,24 @@ async function preflightBlobSizes(repoDir, inventory) {
       !Number.isSafeInteger(totalBytes) ||
       totalBytes > CONFIG.maxTotalBytes
     ) {
-      throw new Error("Total blob data exceeds 2 GiB limit.");
+      throw new Error(
+        'Total blob data exceeds the 2 GiB limit.'
+      );
     }
 
-    item.sizeBytes = size;
-    blobCount++;
+    blobs[i].sizeBytes = size;
   }
 
-  return { blobCount, totalBytes };
+  return {
+    blobCount: blobs.length,
+    totalBytes,
+  };
 }
 
-
 async function gitBlobSha1File(path, expectedSize) {
-  const hash = createHash("sha1")
-    .update(Buffer.from("blob " + expectedSize + "\0"));
+  const hash = createHash('sha1').update(
+    Buffer.from(`blob ${expectedSize}\0`)
+  );
 
   let bytes = 0;
 
@@ -305,130 +362,142 @@ async function gitBlobSha1File(path, expectedSize) {
   }
 
   if (bytes !== expectedSize) {
-    throw new Error("File size changed during hashing: " + path);
+    throw new Error(
+      `File size changed during hashing: ${path}`
+    );
   }
 
-  return hash.digest("hex");
+  return hash.digest('hex');
 }
 
-
 async function sha256File(path) {
-  const hash = createHash("sha256");
+  const hash = createHash('sha256');
 
   for await (const chunk of createReadStream(path)) {
     hash.update(chunk);
   }
 
-  return hash.digest("hex");
+  return hash.digest('hex');
 }
 
+function waitForChild(child, command, stderrChunks) {
+  return new Promise((resolvePromise, reject) => {
+    child.once('error', reject);
+
+    child.once('close', (code, signal) => {
+      if (code === 0) {
+        resolvePromise();
+      } else {
+        reject(new Error(
+          `${command} exited with code ${code}${signal ? ` (signal ${signal})` : ''}\n` +
+          Buffer.concat(stderrChunks).toString('utf8')
+        ));
+      }
+    });
+  });
+}
 
 async function exportRegularBlob(repoDir, item, destination) {
-  const temporary = destination + ".partial";
+  const temporary = `${destination}.partial`;
 
-  const child = spawn("git", [
-    "-C", repoDir,
-    "cat-file", "blob", item.objectSha
-  ], {
-    stdio: ["ignore", "pipe", "pipe"]
-  });
+  const child = spawn(
+    'git',
+    ['-C', repoDir, 'cat-file', 'blob', item.objectSha],
+    {
+      stdio: ['ignore', 'pipe', 'pipe'],
+    }
+  );
 
   const stderr = [];
-  let spawnError = null;
+  let stderrBytes = 0;
 
-  child.stderr.on("data", chunk => stderr.push(chunk));
-  child.on("error", error => {
-    spawnError = error;
+  child.stderr.on('data', (chunk) => {
+    stderrBytes += chunk.length;
+
+    if (stderrBytes <= CONFIG.maxStderrBytes) {
+      stderr.push(chunk);
+    } else {
+      child.kill('SIGTERM');
+    }
   });
 
-  const closePromise = new Promise(resolvePromise => {
-    child.once("close", code => resolvePromise(code));
-  });
+  const closePromise = waitForChild(
+    child,
+    'git cat-file',
+    stderr
+  );
 
   try {
     await pipeline(
       child.stdout,
-      createWriteStream(temporary, { flags: "wx" })
+      createWriteStream(temporary, { flags: 'wx' })
     );
 
-    const code = await closePromise;
-
-    if (spawnError) throw spawnError;
-
-    if (code !== 0) {
-      throw new Error(
-        "git cat-file failed: " +
-        Buffer.concat(stderr).toString("utf8")
-      );
-    }
+    await closePromise;
 
     const info = await stat(temporary);
 
     if (info.size !== item.sizeBytes) {
-      throw new Error("Export size mismatch: " + item.path);
+      throw new Error(`Export size mismatch: ${item.path}`);
     }
 
-    const hash = await gitBlobSha1File(
-      temporary,
-      item.sizeBytes
-    );
-
-    if (hash !== item.objectSha) {
-      throw new Error("Git blob SHA-1 mismatch: " + item.path);
+    if (
+      await gitBlobSha1File(temporary, item.sizeBytes) !==
+      item.objectSha
+    ) {
+      throw new Error(`Git blob SHA-1 mismatch: ${item.path}`);
     }
 
     await chmod(
       temporary,
-      item.mode === "100755" ? 0o755 : 0o644
+      item.mode === '100755' ? 0o755 : 0o644
     );
 
     await rename(temporary, destination);
-
   } catch (error) {
-    child.kill("SIGTERM");
-    await closePromise;
-    await rm(temporary, { force: true });
+    child.kill('SIGTERM');
+    await closePromise.catch(() => {});
+    await rm(temporary, { force: true }).catch(() => {});
     throw error;
   }
 }
 
-
 async function exportSymlinkBlob(repoDir, item, destination) {
   if (item.sizeBytes > CONFIG.maxSymlinkBytes) {
-    throw new Error("Symlink target too large: " + item.path);
+    throw new Error(
+      `Symlink target exceeds ${CONFIG.maxSymlinkBytes} bytes: ${item.path}`
+    );
   }
 
-  const result = await run("git", [
-    "-C", repoDir,
-    "cat-file", "blob", item.objectSha
-  ]);
+  const result = await run(
+    'git',
+    ['-C', repoDir, 'cat-file', 'blob', item.objectSha]
+  );
 
   const data = result.stdout;
 
   if (data.length !== item.sizeBytes) {
-    throw new Error("Symlink size mismatch: " + item.path);
+    throw new Error(`Symlink size mismatch: ${item.path}`);
   }
 
-  const hash = createHash("sha1")
-    .update(Buffer.from("blob " + data.length + "\0"))
+  const hash = createHash('sha1')
+    .update(Buffer.from(`blob ${data.length}\0`))
     .update(data)
-    .digest("hex");
+    .digest('hex');
 
   if (hash !== item.objectSha) {
-    throw new Error("Symlink blob hash mismatch: " + item.path);
+    throw new Error(
+      `Symlink blob hash mismatch: ${item.path}`
+    );
   }
 
-  const target = new TextDecoder("utf-8", {
-    fatal: true
-  }).decode(data);
-
-  if (!target || target.includes("\0")) {
-    throw new Error("Invalid symlink target: " + item.path);
+  if (data.length === 0 || data.includes(0)) {
+    throw new Error(`Invalid symlink target: ${item.path}`);
   }
 
-  await symlink(target, destination);
+  // Buffer preserves the original target bytes.
+  await symlink(data, destination);
 }
-
 
 async function exportGitTree(repoDir, snapshotDir, inventory) {
   let verifiedBlobCount = 0;
@@ -442,62 +511,65 @@ async function exportGitTree(repoDir, snapshotDir, inventory) {
     const destination = join(snapshotDir, item.path);
 
     await mkdir(dirname(destination), {
-      recursive: true
+      recursive: true,
     });
 
-    if (item.mode === "120000") {
-      await exportSymlinkBlob(repoDir, item, destination);
-
-    } else if (
-      item.mode === "100644" ||
-      item.mode === "100755"
-    ) {
-      await exportRegularBlob(repoDir, item, destination);
-
+    if (item.mode === '120000') {
+      await exportSymlinkBlob(
+        repoDir,
+        item,
+        destination
+      );
     } else {
-      throw new Error(
-        "Unsupported file mode " + item.mode + ": " + item.path
+      await exportRegularBlob(
+        repoDir,
+        item,
+        destination
       );
     }
 
-    verifiedBlobCount++;
+    verifiedBlobCount += 1;
     exportedBytes += item.sizeBytes;
   }
 
-  return { verifiedBlobCount, exportedBytes };
+  return {
+    verifiedBlobCount,
+    exportedBytes,
+  };
 }
 
-
 async function verifyExtractedTree(root, inventory) {
-  const expected = new Map();
-
-  for (const item of inventory) {
-    if (!item.isSubmodule) {
-      expected.set(item.path, item);
-    }
-  }
+  const expected = new Map(
+    inventory
+      .filter((item) => !item.isSubmodule)
+      .map((item) => [item.path, item])
+  );
 
   const actualFiles = new Set();
   const actualDirs = new Set();
 
-  async function walk(directory, prefix = "") {
+  async function walk(directory, prefix = '') {
     const entries = await readdir(directory, {
-      withFileTypes: true
+      withFileTypes: true,
     });
 
     for (const entry of entries) {
-      const rel = prefix
-        ? prefix + "/" + entry.name
+      const relative = prefix
+        ? `${prefix}/${entry.name}`
         : entry.name;
 
       const full = join(directory, entry.name);
       const info = await lstat(full);
 
       if (info.isDirectory()) {
-        actualDirs.add(rel);
-        await walk(full, rel);
+        actualDirs.add(relative);
+        await walk(full, relative);
+      } else if (info.isFile() || info.isSymbolicLink()) {
+        actualFiles.add(relative);
       } else {
-        actualFiles.add(rel);
+        throw new Error(
+          `Unexpected special file in archive: ${relative}`
+        );
       }
     }
   }
@@ -507,34 +579,36 @@ async function verifyExtractedTree(root, inventory) {
   const requiredDirs = new Set();
 
   for (const path of expected.keys()) {
-    const parts = path.split("/");
+    const parts = path.split('/');
 
-    for (let i = 1; i < parts.length; i++) {
-      requiredDirs.add(parts.slice(0, i).join("/"));
+    for (let i = 1; i < parts.length; i += 1) {
+      requiredDirs.add(
+        parts.slice(0, i).join('/')
+      );
     }
   }
 
   for (const path of expected.keys()) {
     if (!actualFiles.has(path)) {
-      throw new Error("Archive missing file: " + path);
+      throw new Error(`Archive missing file: ${path}`);
     }
   }
 
   for (const path of actualFiles) {
     if (!expected.has(path)) {
-      throw new Error("Unexpected archive file: " + path);
+      throw new Error(`Unexpected archive file: ${path}`);
     }
   }
 
   for (const path of requiredDirs) {
     if (!actualDirs.has(path)) {
-      throw new Error("Archive missing directory: " + path);
+      throw new Error(`Archive missing directory: ${path}`);
     }
   }
 
   for (const path of actualDirs) {
     if (!requiredDirs.has(path)) {
-      throw new Error("Unexpected archive directory: " + path);
+      throw new Error(`Unexpected archive directory: ${path}`);
     }
   }
 
@@ -544,45 +618,57 @@ async function verifyExtractedTree(root, inventory) {
     const full = join(root, path);
     const info = await lstat(full);
 
-    if (item.mode === "120000") {
+    if (item.mode === '120000') {
       if (!info.isSymbolicLink()) {
-        throw new Error("Expected symlink: " + path);
+        throw new Error(`Expected symlink: ${path}`);
       }
 
-      const target = Buffer.from(await readlink(full), "utf8");
+      const target = await readlink(full, {
+        encoding: 'buffer',
+      });
 
       if (target.length !== item.sizeBytes) {
-        throw new Error("Symlink size mismatch: " + path);
+        throw new Error(
+          `Archive symlink size mismatch: ${path}`
+        );
       }
 
-      const hash = createHash("sha1")
-        .update(Buffer.from("blob " + target.length + "\0"))
+      const hash = createHash('sha1')
+        .update(Buffer.from(`blob ${target.length}\0`))
         .update(target)
-        .digest("hex");
+        .digest('hex');
 
       if (hash !== item.objectSha) {
-        throw new Error("Symlink content mismatch: " + path);
+        throw new Error(
+          `Archive symlink content mismatch: ${path}`
+        );
       }
-
     } else {
       if (!info.isFile()) {
-        throw new Error("Expected regular file: " + path);
+        throw new Error(`Expected regular file: ${path}`);
       }
 
       if (info.size !== item.sizeBytes) {
-        throw new Error("Archive file size mismatch: " + path);
+        throw new Error(
+          `Archive file size mismatch: ${path}`
+        );
       }
 
-      const hash = await gitBlobSha1File(full, item.sizeBytes);
-
-      if (hash !== item.objectSha) {
-        throw new Error("Archive content mismatch: " + path);
+      if (
+        await gitBlobSha1File(full, item.sizeBytes) !==
+        item.objectSha
+      ) {
+        throw new Error(
+          `Archive content mismatch: ${path}`
+        );
       }
 
       const executable = (info.mode & 0o111) !== 0;
 
-      if (executable !== (item.mode === "100755")) {
-        throw new Error("Archive permission mismatch: " + path);
+      if (executable !== (item.mode === '100755')) {
+        throw new Error(
+          `Archive permission mismatch: ${path}`
+        );
       }
     }
 
@@ -591,13 +677,12 @@ async function verifyExtractedTree(root, inventory) {
 
   return {
     verifiedFiles: expected.size,
-    verifiedBytes
+    verifiedBytes,
   };
 }
 
-
 async function publishTransaction(stageDir, outputDir, names) {
-  const backupDir = join(stageDir, "backup");
+  const backupDir = join(stageDir, 'backup');
 
   await mkdir(backupDir, { recursive: true });
 
@@ -605,7 +690,6 @@ async function publishTransaction(stageDir, outputDir, names) {
   const installed = new Set();
 
   try {
-    // Move old outputs to backup before publishing anything.
     for (const name of names) {
       const target = join(outputDir, name);
 
@@ -614,15 +698,18 @@ async function publishTransaction(stageDir, outputDir, names) {
 
         if (!info.isFile()) {
           throw new Error(
-            "Existing output is not a regular file: " + name
+            `Existing output is not a regular file: ${name}`
           );
         }
 
-        await rename(target, join(backupDir, name));
-        backedUp.add(name);
+        await rename(
+          target,
+          join(backupDir, name)
+        );
 
+        backedUp.add(name);
       } catch (error) {
-        if (error.code !== "ENOENT") throw error;
+        if (error.code !== 'ENOENT') throw error;
       }
     }
 
@@ -634,7 +721,6 @@ async function publishTransaction(stageDir, outputDir, names) {
 
       installed.add(name);
     }
-
   } catch (publishError) {
     const rollbackErrors = [];
 
@@ -646,30 +732,28 @@ async function publishTransaction(stageDir, outputDir, names) {
         if (backedUp.has(name)) {
           await rm(target, {
             force: true,
-            recursive: false
+            recursive: false,
           });
 
           await rename(backup, target);
-
         } else if (installed.has(name)) {
           await rm(target, {
             force: true,
-            recursive: false
+            recursive: false,
           });
         }
-
       } catch (rollbackError) {
         rollbackErrors.push(
-          name + ": " + rollbackError.message
+          `${name}: ${rollbackError.message}`
         );
       }
     }
 
-    if (rollbackErrors.length) {
+    if (rollbackErrors.length > 0) {
       const error = new Error(
-        "Rollback incomplete. Backup retained at " +
-        backupDir + ". Original: " + publishError.message +
-        ". Rollback errors: " + rollbackErrors.join(" | ")
+        `Rollback incomplete. Backup retained at ${backupDir}. ` +
+        `Publish error: ${publishError.message}. ` +
+        `Rollback errors: ${rollbackErrors.join(' | ')}`
       );
 
       error.preserveStage = true;
@@ -677,1062 +761,59 @@ async function publishTransaction(stageDir, outputDir, names) {
     }
 
     throw new Error(
-      "Publish failed; rollback completed: " +
-      publishError.message
+      `Publish failed; rollback completed: ${publishError.message}`
     );
   }
 }
-
-
-async function main() {
-  if (Number(process.versions.node.split(".")[0]) < 20) {
-    throw new Error("Node.js 20 or newer is required.");
-  }
-
-  const startedAt = new Date().toISOString();
-  const output = CONFIG.outputDirectory;
-
-  await mkdir(output, { recursive: true });
-
-  const workDir = await mkdtemp(
-    join(tmpdir(), "samantha-preserve-v311-")
-  );
-
-  const stageDir = await mkdtemp(
-    join(output, ".preserve-stage-")
-  );
-
-  let preserveStage = false;
-
-  const repoDir = join(workDir, "repo");
-  const snapshotParent = join(workDir, "snapshot");
-  const snapshotDir = join(
-    snapshotParent,
-    CONFIG.repositoryName + "-" + CONFIG.sdkVersion
-  );
-
-  const verifyParent = join(workDir, "verify");
-  const verifyDir = join(
-    verifyParent,
-    CONFIG.repositoryName + "-" + CONFIG.sdkVersion
-  );
-
-  const stem =
-    "thetowersdk-" + CONFIG.sdkVersion + "-" +
-    CONFIG.commit.slice(0, 12);
-
-  const archiveName = stem + ".tar.gz";
-  const bundleName = stem + ".bundle";
-
-  const names = [
-    bundleName,
-    archiveName,
-    "manifest.json",
-    "preservation-report.md"
-  ];
-
-  try {
-    console.log("Samantha TheTowerSDK Preservation v3.1.1");
-    console.log("SDK: " + CONFIG.packageName + "@" + CONFIG.sdkVersion);
-    console.log("Commit: " + CONFIG.commit);
-
-    console.log("[1/12] Initialize temporary repository");
-
-    await run("git", ["init", repoDir]);
-
-    await run("git", [
-      "-C", repoDir,
-      "remote", "add", "origin",
-      CONFIG.repository
-    ]);
-
-    console.log("[2/12] Fetch exact upstream commit");
-
-    await run("git", [
-      "-C", repoDir,
-      "fetch", "origin", CONFIG.commit
-    ]);
-
-    const commit = (
-      await run("git", [
-        "-C", repoDir,
-        "rev-parse",
-        "FETCH_HEAD^{commit}"
-      ])
-    ).stdout.toString("utf8").trim();
-
-    if (commit !== CONFIG.commit) {
-      throw new Error("Fetched commit SHA mismatch.");
-    }
-
-    const treeSha = (
-      await run("git", [
-        "-C", repoDir,
-        "rev-parse",
-        commit + "^{tree}"
-      ])
-    ).stdout.toString("utf8").trim();
-
-    console.log("[3/12] Verify package metadata");
-
-    const packageJson = JSON.parse(
-      (
-        await run("git", [
-          "-C", repoDir,
-          "show",
-          commit + ":package.json"
-        ])
-      ).stdout.toString("utf8")
-    );
-
-    if (
-      packageJson.name !== CONFIG.packageName ||
-      packageJson.version !== CONFIG.sdkVersion
-    ) {
-      throw new Error("SDK package name/version mismatch.");
-    }
-
-    console.log("[4/12] Build recursive inventory");
-
-    const rawTree = await run("git", [
-      "-C", repoDir,
-      "ls-tree", "-r", "-z", "--full-tree", commit
-    ]);
-
-    const inventory = parseTree(rawTree.stdout);
-
-    if (!inventory.length) {
-      throw new Error("Inventory is empty.");
-    }
-
-    console.log("[5/12] Preflight blob sizes");
-
-    const preflight = await preflightBlobSizes(
-      repoDir,
-      inventory
-    );
-
-    const submodules = inventory.filter(
-      item => item.isSubmodule
-    );
-
-    console.log("Preflight bytes: " + preflight.totalBytes);
-
-    console.log("[6/12] Create and verify Git bundle");
-
-    const ref = "refs/heads/samantha-preserved-sdk";
-
-    await run("git", [
-      "-C", repoDir,
-      "update-ref", ref, commit
-    ]);
-
-    const stagedBundle = join(stageDir, bundleName);
-
-    await run("git", [
-      "-C", repoDir,
-      "bundle", "create", stagedBundle, ref
-    ]);
-
-    await run("git", [
-      "-C", repoDir,
-      "bundle", "verify", stagedBundle
-    ]);
-
-    const bundleSha256 = await sha256File(stagedBundle);
-    const bundleBytes = (await stat(stagedBundle)).size;
-
-    if (!bundleBytes) {
-      throw new Error("Git bundle is empty.");
-    }
-
-    console.log("[7/12] Export blobs using streaming");
-
-    const exportResult = await exportGitTree(
-      repoDir,
-      snapshotDir,
-      inventory
-    );
-
-    if (
-      exportResult.verifiedBlobCount !== preflight.blobCount ||
-      exportResult.exportedBytes !== preflight.totalBytes
-    ) {
-      throw new Error("Export totals differ from preflight.");
-    }
-
-    console.log("[8/12] Create source archive");
-
-    const stagedArchive = join(stageDir, archiveName);
-
-    await run("tar", [
-      "--sort=name",
-      "--mtime=@0",
-      "--owner=0",
-      "--group=0",
-      "--numeric-owner",
-      "-czf",
-      stagedArchive,
-      "-C",
-      snapshotParent,
-      basename(snapshotDir)
-    ]);
-
-    await run("gzip", ["-t", stagedArchive]);
-
-    console.log("[9/12] Extract and verify archive");
-
-    await mkdir(verifyParent, { recursive: true });
-
-    await run("tar", [
-      "--no-same-owner",
-      "--no-same-permissions",
-      "-xzf",
-      stagedArchive,
-      "-C",
-      verifyParent
-    ]);
-
-    const archiveVerification = await verifyExtractedTree(
-      verifyDir,
-      inventory
-    );
-
-    if (
-      archiveVerification.verifiedBytes !== preflight.totalBytes
-    ) {
-      throw new Error("Archive verified byte total mismatch.");
-    }
-
-    const archiveSha256 = await sha256File(stagedArchive);
-    const archiveBytes = (await stat(stagedArchive)).size;
-
-    if (!archiveBytes) {
-      throw new Error("Source archive is empty.");
-    }
-
-    console.log("[10/12] Build manifest and report");
-
-    const inventorySha256 = createHash("sha256")
-      .update(JSON.stringify(inventory))
-      .digest("hex");
-
-    const licenseFiles = inventory
-      .filter(item =>
-        /(^|\/)(LICENSE|NOTICE|COPYING)(\.|$)/i.test(item.path)
-      )
-      .map(item => item.path);
-
-    const flagged = inventory.filter(item =>
-      item.provenance.some(p =>
-        p.status === "CLARIFICATION_REQUIRED" ||
-        p.status === "LICENSE_REVIEW"
-      )
-    );
-
-    const notReviewed = inventory.filter(item =>
-      item.provenance.some(p =>
-        p.status === "NOT_REVIEWED"
-      )
-    );
-
-    const manifest = {
-      schemaVersion: "1.0.0",
-
-      preservation: {
-        status: "SNAPSHOT_CREATED",
-        scriptVersion: "3.1.1",
-        startedAt,
-        completedAt: new Date().toISOString()
-      },
-
-      source: {
-        repository: CONFIG.repository,
-        repositoryName: CONFIG.repositoryName,
-        packageName: packageJson.name,
-        sdkVersion: packageJson.version,
-        gameVersion: CONFIG.gameVersion,
-        commit,
-        gitTreeSha: treeSha,
-        packageLicense: packageJson.license ?? null,
-        nodeRequirement: packageJson.engines?.node ?? null
-      },
-
-      limits: {
-        maxBlobBytes: CONFIG.maxBlobBytes,
-        maxTotalBytes: CONFIG.maxTotalBytes,
-        maxEntries: CONFIG.maxEntries,
-        maxSymlinkBytes: CONFIG.maxSymlinkBytes,
-        preflightTotalBytes: preflight.totalBytes
-      },
-
-      gitBundle: {
-        file: bundleName,
-        sizeBytes: bundleBytes,
-        sha256: bundleSha256,
-        verification: "PASSED",
-        scope:
-          "Commit and history reachable from fetched commit; not all upstream branches or tags."
-      },
-
-      archive: {
-        file: archiveName,
-        format: "tar.gz",
-        sizeBytes: archiveBytes,
-        sha256: archiveSha256,
-        gzipTest: "PASSED",
-        extractionTest: "PASSED",
-        verifiedFiles: archiveVerification.verifiedFiles,
-        verifiedBytes: archiveVerification.verifiedBytes,
-        comparison:
-          "Every extracted file and symlink compared against its Git blob SHA-1."
-      },
-
-      inventory: {
-        totalEntries: inventory.length,
-        blobCount: preflight.blobCount,
-        verifiedBlobCount: exportResult.verifiedBlobCount,
-        exportedBytes: exportResult.exportedBytes,
-        inventorySha256,
-        licenseDocuments: licenseFiles,
-        submoduleReferenceCount: submodules.length,
-        flaggedFileCount: flagged.length,
-        notReviewedFileCount: notReviewed.length,
-        entries: inventory
-      },
-
-      licensing: {
-        overallStatus: "REVIEW_REQUIRED",
-        publicRedistributionApproved: false,
-        notes: [
-          "Submodule contents are not included; only gitlink references are recorded.",
-          "File-level provenance classification is preliminary.",
-          "NOT_REVIEWED does not mean license-free.",
-          "Public redistribution is not approved."
-        ]
-      },
-
-      execution: {
-        sdkInstalled: false,
-        sdkCodeExecuted: false,
-        runtimeTests: "NOT_RUN"
-      }
-    };
-
-    await writeFile(
-      join(stageDir, "manifest.json"),
-      JSON.stringify(manifest, null, 2) + "\n"
-    );
-
-    const report = [
-      "# TheTowerSDK Preservation Report",
-      "",
-      "- SDK: " + CONFIG.packageName + "@" + CONFIG.sdkVersion,
-      "- Script: 3.1.1",
-      "- Commit: " + commit,
-      "- Git tree SHA: " + treeSha,
-      "- Git bundle: " + bundleName,
-      "- Git bundle SHA-256: " + bundleSha256,
-      "- Source archive: " + archiveName,
-      "- Archive SHA-256: " + archiveSha256,
-      "- Inventory entries: " + inventory.length,
-      "- Verified blobs: " + exportResult.verifiedBlobCount,
-      "- Preflight bytes: " + preflight.totalBytes,
-      "- Archive files verified: " + archiveVerification.verifiedFiles,
-      "- Archive bytes verified: " + archiveVerification.verifiedBytes,
-      "- Inventory SHA-256: " + inventorySha256,
-      "- License documents: " + licenseFiles.length,
-      "- Submodule references: " + submodules.length,
-      "- Files requiring license review: " + flagged.length,
-      "- Files not individually reviewed: " + notReviewed.length,
-      "",
-      "## License documents",
-      ...licenseFiles.map(path => "- " + path),
-      "",
-      "## Files requiring license review",
-      ...flagged.map(item =>
-        "- " + item.path + ": " +
-        item.provenance.map(p => p.id).join(", ")
-      ),
-      "",
-      "## Submodule references",
-      ...submodules.map(item =>
-        "- " + item.path + ": " + item.objectSha
-      ),
-      "",
-      "## Limitations",
-      "- Submodule contents are not included.",
-      "- Non-UTF-8 Git paths are rejected.",
-      "- Git bundle does not represent all upstream branches or tags.",
-      "- Individual provenance review remains incomplete.",
-      "- Public redistribution is not approved.",
-      "- SDK runtime tests have not been performed."
-    ].join("\n");
-
-    await writeFile(
-      join(stageDir, "preservation-report.md"),
-      report + "\n"
-    );
-
-    console.log("[11/12] Publish with backup and rollback");
-
-    try {
-      await publishTransaction(stageDir, output, names);
-    } catch (error) {
-      preserveStage = error.preserveStage === true;
-      throw error;
-    }
-
-    console.log("[12/12] Preservation completed");
-    console.log("Git bundle SHA-256: " + bundleSha256);
-    console.log("Archive SHA-256: " + archiveSha256);
-    console.log("Inventory entries: " + inventory.length);
-    console.log("Verified blobs: " + exportResult.verifiedBlobCount);
-    console.log("Archive-to-inventory comparison: PASSED");
-    console.log("Status: SNAPSHOT_CREATED");
-    console.log("SDK runtime tests: NOT RUN");
-    console.log("Public redistribution: NOT APPROVED");
-
-  } finally {
-    await rm(workDir, {
-      recursive: true,
-      force: true
-    });
-
-    if (!preserveStage) {
-      await rm(stageDir, {
-        recursive: true,
-        force: true
-      });
-    } else {
-      console.error(
-        "Staging and backups retained for manual recovery: " +
-        stageDir
-      );
-    }
-  }
-}
-
-
-main().catch(error => {
-  console.error("\nPRESERVATION FAILED");
-  console.error(error);
-  process.exitCode = 1;
-});
-
-#!/usr/bin/env node
-
-/**
- * Samantha - TheTowerSDK Preservation v3.1.0
- *
- * Requirements:
- * - Node.js >= 20
- * - Git
- * - GNU tar
- * - gzip
- *
- * Does not install or execute SDK code.
- */
-
-import {
-  mkdir,
-  writeFile,
-  readFile,
-  rm,
-  rename,
-  stat,
-  lstat,
-  chmod,
-  symlink,
-  readlink,
-  readdir,
-  copyFile,
-  mkdtemp
-} from "node:fs/promises";
-
-import { createReadStream } from "node:fs";
-import { createHash } from "node:crypto";
-import { tmpdir } from "node:os";
-import {
-  join,
-  resolve,
-  basename,
-  dirname
-} from "node:path";
-import { spawn } from "node:child_process";
-
-
-const CONFIG = {
-  repository: "https://github.com/TmRxJD/TheTowerSDK.git",
-  repositoryName: "TheTowerSDK",
-  packageName: "thetowersdk",
-  sdkVersion: "0.14.1",
-  gameVersion: null,
-
-  commit: "9a95672578fa064d71ddd54fad2ce5027a310b3a",
-
-  maxBlobBytes: 128 * 1024 * 1024,
-
-  outputDirectory: resolve(
-    process.argv[2] ??
-    "TheTowerData/staging/thetowersdk/0.14.1"
-  )
-};
-
-
-const PROVENANCE_RULES = [
-  {
-    id: "EFFECTIVE_PATHS",
-    patterns: [/effective-paths/i, /effective.paths/i],
-    status: "CLARIFICATION_REQUIRED",
-    reason:
-      "Community spreadsheet-derived material; redistribution scope requires clarification."
-  },
-  {
-    id: "ORPHIS",
-    patterns: [
-      /labs-categories\.generated/i,
-      /lab-categories\.json/i
-    ],
-    status: "CLARIFICATION_REQUIRED",
-    reason:
-      "Orphis-related material; redistribution terms require clarification."
-  },
-  {
-    id: "TOWER_IDLE_TOOLKIT",
-    patterns: [
-      /base-empirical-scaling/i,
-      /scaling-regression-profile/i,
-      /mechanics\/combat\/damage/i,
-      /mechanics\/combat\/bonuses/i,
-      /formatting\/duration/i
-    ],
-    status: "LICENSE_REVIEW",
-    reason:
-      "Potential tower-idle-toolkit-derived material; verify applicable attribution."
-  }
-];
-
-
-function run(command, args, options = {}) {
-  return new Promise((resolvePromise, reject) => {
-    const child = spawn(command, args, {
-      stdio: ["ignore", "pipe", "pipe"],
-      ...options
-    });
-
-    const stdout = [];
-    const stderr = [];
-
-    child.stdout?.on("data", chunk => stdout.push(chunk));
-    child.stderr?.on("data", chunk => stderr.push(chunk));
-
-    let settled = false;
-
-    child.on("error", error => {
-      if (!settled) {
-        settled = true;
-        reject(error);
-      }
-    });
-
-    child.on("close", code => {
-      if (settled) return;
-      settled = true;
-
-      const out = Buffer.concat(stdout);
-      const err = Buffer.concat(stderr).toString("utf8");
-
-      if (code !== 0) {
-        reject(new Error(
-          `${command} exited with code ${code}\n${err}`
-        ));
-      } else {
-        resolvePromise({
-          stdout: out,
-          stderr: err
-        });
-      }
-    });
-  });
-}
-
-
-async function sha256File(path) {
-  const hash = createHash("sha256");
-
-  for await (const chunk of createReadStream(path)) {
-    hash.update(chunk);
-  }
-
-  return hash.digest("hex");
-}
-
-
-function gitBlobSha1(data) {
-  return createHash("sha1")
-    .update(Buffer.from(`blob ${data.length}\0`))
-    .update(data)
-    .digest("hex");
-}
-
-
-function decodeGitPath(buffer) {
-  const value = new TextDecoder("utf-8", {
-    fatal: true
-  }).decode(buffer);
-
-  if (!Buffer.from(value, "utf8").equals(buffer)) {
-    throw new Error(
-      "Git path cannot be represented losslessly as UTF-8."
-    );
-  }
-
-  if (
-    value.startsWith("/") ||
-    value.includes("\\") ||
-    value.split("/").some(part =>
-      !part || part === "." || part === ".."
-    )
-  ) {
-    throw new Error(`Unsafe Git path: ${value}`);
-  }
-
-  return value;
-}
-
-
-function parseTree(raw) {
-  const records = [];
-  let start = 0;
-
-  for (let i = 0; i < raw.length; i++) {
-    if (raw[i] !== 0) continue;
-
-    const record = raw.subarray(start, i);
-    start = i + 1;
-
-    if (!record.length) continue;
-
-    const tab = record.indexOf(9);
-
-    if (tab < 0) {
-      throw new Error("Invalid Git tree record.");
-    }
-
-    const [mode, type, objectSha] =
-      record.subarray(0, tab)
-        .toString("ascii")
-        .split(" ");
-
-    const path = decodeGitPath(
-      record.subarray(tab + 1)
-    );
-
-    if (!mode || !type || !objectSha) {
-      throw new Error(`Invalid metadata: ${path}`);
-    }
-
-    if (
-      type !== "blob" &&
-      !(mode === "160000" && type === "commit")
-    ) {
-      throw new Error(
-        `Unsupported Git tree entry: ${path}`
-      );
-    }
-
-    const provenance = PROVENANCE_RULES
-      .filter(rule =>
-        rule.patterns.some(pattern =>
-          pattern.test(path)
-        )
-      )
-      .map(rule => ({
-        id: rule.id,
-        status: rule.status,
-        reason: rule.reason
-      }));
-
-    if (
-      /(^|\/)(LICENSE|NOTICE|COPYING)(\.|$)/i.test(path)
-    ) {
-      provenance.push({
-        id: "LICENSE_DOCUMENT",
-        status: "PRESERVE",
-        reason: "License or attribution document."
-      });
-    }
-
-    if (!provenance.length) {
-      provenance.push({
-        id: "UNASSESSED",
-        status: "NOT_REVIEWED",
-        reason:
-          "File-level provenance has not been individually established."
-      });
-    }
-
-    records.push({
-      path,
-      mode,
-      type,
-      objectSha,
-      provenance,
-      isSubmodule: mode === "160000"
-    });
-  }
-
-  if (start !== raw.length) {
-    throw new Error(
-      "Incomplete NUL-terminated Git tree."
-    );
-  }
-
-  return records;
-}
-
 
 async function writeJson(path, value) {
   await writeFile(
     path,
-    JSON.stringify(value, null, 2) + "\n"
+    `${JSON.stringify(value, null, 2)}\n`,
+    'utf8'
   );
 }
 
-
-async function exportGitTree(
-  repoDir,
-  snapshotDir,
-  inventory
-) {
-  let verifiedBlobCount = 0;
-  let exportedBytes = 0;
-
-  await mkdir(snapshotDir, {
-    recursive: true
-  });
-
-  for (const item of inventory) {
-    if (item.isSubmodule) continue;
-
-    const blob = await run("git", [
-      "-C",
-      repoDir,
-      "cat-file",
-      "blob",
-      item.objectSha
-    ]);
-
-    const data = blob.stdout;
-
-    if (data.length > CONFIG.maxBlobBytes) {
-      throw new Error(
-        `Blob exceeds memory safety limit ` +
-        `(${CONFIG.maxBlobBytes} bytes): ${item.path}`
-      );
-    }
-
-    if (gitBlobSha1(data) !== item.objectSha) {
-      throw new Error(
-        `Git blob SHA-1 mismatch: ${item.path}`
-      );
-    }
-
-    const destination = join(snapshotDir, item.path);
-
-    await mkdir(dirname(destination), {
-      recursive: true
-    });
-
-    if (item.mode === "120000") {
-      const target = new TextDecoder("utf-8", {
-        fatal: true
-      }).decode(data);
-
-      if (target.includes("\0")) {
-        throw new Error(
-          `Invalid symlink target: ${item.path}`
-        );
-      }
-
-      await symlink(target, destination);
-
-    } else if (
-      item.mode === "100644" ||
-      item.mode === "100755"
-    ) {
-      await writeFile(destination, data, {
-        flag: "wx"
-      });
-
-      await chmod(
-        destination,
-        item.mode === "100755" ? 0o755 : 0o644
-      );
-
-    } else {
-      throw new Error(
-        `Unsupported file mode ${item.mode}: ${item.path}`
-      );
-    }
-
-    verifiedBlobCount++;
-    exportedBytes += data.length;
-  }
-
-  return {
-    verifiedBlobCount,
-    exportedBytes
-  };
-}
-
-
-async function verifyExtractedTree(
-  root,
-  inventory
-) {
-  const expected = new Map();
-
-  for (const item of inventory) {
-    if (item.isSubmodule) continue;
-    expected.set(item.path, item);
-  }
-
-  const actualFiles = new Set();
-  const actualDirs = new Set();
-
-  async function walk(directory, prefix = "") {
-    const entries = await readdir(directory, {
-      withFileTypes: true
-    });
-
-    for (const entry of entries) {
-      const rel = prefix
-        ? `${prefix}/${entry.name}`
-        : entry.name;
-
-      const full = join(directory, entry.name);
-      const info = await lstat(full);
-
-      if (info.isDirectory()) {
-        actualDirs.add(rel);
-        await walk(full, rel);
-      } else {
-        actualFiles.add(rel);
-      }
-    }
-  }
-
-  await walk(root);
-
-  const requiredDirs = new Set();
-
-  for (const path of expected.keys()) {
-    const parts = path.split("/");
-
-    for (let i = 1; i < parts.length; i++) {
-      requiredDirs.add(
-        parts.slice(0, i).join("/")
-      );
-    }
-  }
-
-  for (const path of expected.keys()) {
-    if (!actualFiles.has(path)) {
-      throw new Error(
-        `Archive missing file: ${path}`
-      );
-    }
-  }
-
-  for (const path of actualFiles) {
-    if (!expected.has(path)) {
-      throw new Error(
-        `Unexpected archive file: ${path}`
-      );
-    }
-  }
-
-  for (const path of requiredDirs) {
-    if (!actualDirs.has(path)) {
-      throw new Error(
-        `Archive missing directory: ${path}`
-      );
-    }
-  }
-
-  for (const path of actualDirs) {
-    if (!requiredDirs.has(path)) {
-      throw new Error(
-        `Unexpected archive directory: ${path}`
-      );
-    }
-  }
-
-  for (const [path, item] of expected) {
-    const full = join(root, path);
-    const info = await lstat(full);
-
-    if (item.mode === "120000") {
-      if (!info.isSymbolicLink()) {
-        throw new Error(
-          `Expected symlink: ${path}`
-        );
-      }
-
-      const target = Buffer.from(
-        await readlink(full),
-        "utf8"
-      );
-
-      if (gitBlobSha1(target) !== item.objectSha) {
-        throw new Error(
-          `Archive symlink content mismatch: ${path}`
-        );
-      }
-
-    } else {
-      if (!info.isFile()) {
-        throw new Error(
-          `Expected regular file: ${path}`
-        );
-      }
-
-      const data = await readFile(full);
-
-      if (gitBlobSha1(data) !== item.objectSha) {
-        throw new Error(
-          `Archive content mismatch: ${path}`
-        );
-      }
-
-      const executable =
-        (info.mode & 0o111) !== 0;
-
-      if (
-        executable !== (item.mode === "100755")
-      ) {
-        throw new Error(
-          `Archive permission mismatch: ${path}`
-        );
-      }
-    }
-  }
-
-  return {
-    verifiedFiles: expected.size
-  };
-}
-
-
-async function publishTransaction(
-  stageDir,
-  outputDir,
-  names
-) {
-  const backupDir = join(stageDir, "backup");
-
-  await mkdir(backupDir, {
-    recursive: true
-  });
-
-  const existed = new Set();
-
-  for (const name of names) {
-    try {
-      await stat(join(outputDir, name));
-
-      await copyFile(
-        join(outputDir, name),
-        join(backupDir, name)
-      );
-
-      existed.add(name);
-
-    } catch (error) {
-      if (error.code !== "ENOENT") {
-        throw error;
-      }
-    }
-  }
-
-  const published = [];
-
-  try {
-    for (const name of names) {
-      await rename(
-        join(stageDir, name),
-        join(outputDir, name)
-      );
-
-      published.push(name);
-    }
-
-  } catch (error) {
-    for (const name of published.reverse()) {
-      const target = join(outputDir, name);
-
-      if (existed.has(name)) {
-        const restoreTemp = join(
-          stageDir,
-          `restore-${name}`
-        );
-
-        await copyFile(
-          join(backupDir, name),
-          restoreTemp
-        );
-
-        await rename(restoreTemp, target);
-
-      } else {
-        await rm(target, {
-          force: true
-        });
-      }
-    }
-
-    throw new Error(
-      `Publish failed; previous outputs restored: ${error.message}`
-    );
-  }
-}
-
-
 async function main() {
   if (
-    Number(process.versions.node.split(".")[0]) < 20
+    Number(process.versions.node.split('.')[0]) < 20
   ) {
+    throw new Error('Node.js 20 or newer is required.');
+  }
+
+  const output = CONFIG.outputDirectory;
+
+  await mkdir(output, { recursive: true });
+
+  const outputInfo = await lstat(output);
+
+  if (!outputInfo.isDirectory() || outputInfo.isSymbolicLink()) {
     throw new Error(
-      "Node.js 20 or newer is required."
+      'Output path must be a real directory, not a symlink.'
     );
   }
 
   const startedAt = new Date().toISOString();
-  const output = CONFIG.outputDirectory;
-
-  await mkdir(output, {
-    recursive: true
-  });
 
   const workDir = await mkdtemp(
-    join(tmpdir(), "samantha-preserve-v3-")
+    join(tmpdir(), 'samantha-preserve-v301-')
   );
 
   const stageDir = await mkdtemp(
-    join(output, ".preserve-stage-")
+    join(output, '.preserve-stage-')
   );
 
-  const repoDir = join(workDir, "repo");
-  const snapshotParent = join(workDir, "snapshot");
+  let preserveStage = false;
+
+  const repoDir = join(workDir, 'repo');
+  const snapshotParent = join(workDir, 'snapshot');
 
   const snapshotDir = join(
     snapshotParent,
     `${CONFIG.repositoryName}-${CONFIG.sdkVersion}`
   );
 
-  const verifyParent = join(workDir, "verify");
+  const verifyParent = join(workDir, 'verify');
 
   const verifyDir = join(
     verifyParent,
@@ -1749,13 +830,13 @@ async function main() {
   const names = [
     bundleName,
     archiveName,
-    "manifest.json",
-    "preservation-report.md"
+    'manifest.json',
+    'preservation-report.md',
   ];
 
   try {
     console.log(
-      "Samantha TheTowerSDK Preservation v3.1.0"
+      `Samantha TheTowerSDK Preservation v${SCRIPT_VERSION}`
     );
 
     console.log(
@@ -1764,67 +845,65 @@ async function main() {
 
     console.log(`Commit: ${CONFIG.commit}`);
 
-    console.log("[1/11] Initialize temporary repository");
+    console.log(
+      '[1/12] Initialize temporary Git repository'
+    );
 
-    await run("git", [
-      "init",
-      repoDir
+    await run('git', ['init', repoDir]);
+
+    await run('git', [
+      '-C',
+      repoDir,
+      'remote',
+      'add',
+      'origin',
+      CONFIG.repository,
     ]);
 
-    await run("git", [
-      "-C",
-      repoDir,
-      "remote",
-      "add",
-      "origin",
-      CONFIG.repository
-    ]);
+    console.log('[2/12] Fetch exact upstream commit');
 
-    console.log("[2/11] Fetch exact upstream commit");
-
-    await run("git", [
-      "-C",
+    await run('git', [
+      '-C',
       repoDir,
-      "fetch",
-      "origin",
-      CONFIG.commit
+      'fetch',
+      '--no-tags',
+      'origin',
+      CONFIG.commit,
     ]);
 
     const commit = (
-      await run("git", [
-        "-C",
+      await run('git', [
+        '-C',
         repoDir,
-        "rev-parse",
-        "FETCH_HEAD^{commit}"
+        'rev-parse',
+        'FETCH_HEAD^{commit}',
       ])
-    ).stdout.toString("utf8").trim();
+    ).stdout.toString('ascii').trim();
 
     if (commit !== CONFIG.commit) {
-      throw new Error(
-        "Fetched commit SHA mismatch."
-      );
+      throw new Error('Fetched commit SHA mismatch.');
     }
 
     const treeSha = (
-      await run("git", [
-        "-C",
+      await run('git', [
+        '-C',
         repoDir,
-        "rev-parse",
-        `${commit}^{tree}`
+        'rev-parse',
+        `${commit}^{tree}`,
       ])
-    ).stdout.toString("utf8").trim();
+    ).stdout.toString('ascii').trim();
 
-    console.log("[3/11] Verify package metadata");
+    console.log('[3/12] Verify SDK package metadata');
 
     const packageJson = JSON.parse(
       (
-        await run("git", [
-          "-C",
+        await run('git', [
+          '-C',
           repoDir,
-          "show",
-          `${commit}:package.json`
+          'show',
+          `${commit}:package.json`,
         ])
-      ).stdout.toString("utf8")
+      ).stdout.toString('utf8')
     );
 
     if (
@@ -1832,78 +911,84 @@ async function main() {
       packageJson.version !== CONFIG.sdkVersion
     ) {
       throw new Error(
-        "SDK package name/version mismatch."
+        'SDK package name/version mismatch.'
       );
     }
 
-    console.log("[4/11] Build recursive inventory");
+    console.log('[4/12] Build recursive Git inventory');
 
-    const rawTree = await run("git", [
-      "-C",
+    const rawTree = await run('git', [
+      '-C',
       repoDir,
-      "ls-tree",
-      "-r",
-      "-z",
-      "--full-tree",
-      commit
+      'ls-tree',
+      '-r',
+      '-z',
+      '--full-tree',
+      commit,
     ]);
 
     const inventory = parseTree(rawTree.stdout);
 
-    if (!inventory.length) {
-      throw new Error("Inventory is empty.");
+    if (inventory.length === 0) {
+      throw new Error('Inventory is empty.');
     }
+
+    console.log('[5/12] Preflight all blob sizes');
+
+    const preflight = await preflightBlobSizes(
+      repoDir,
+      inventory
+    );
 
     const submodules = inventory.filter(
-      item => item.isSubmodule
+      (item) => item.isSubmodule
     );
 
-    console.log("[5/11] Create and verify Git bundle");
+    console.log(
+      `Inventory entries: ${inventory.length}; bytes: ${preflight.totalBytes}`
+    );
 
-    const ref = "refs/heads/samantha-preserved-sdk";
+    console.log('[6/12] Create and verify Git bundle');
 
-    await run("git", [
-      "-C",
+    const ref = 'refs/heads/samantha-preserved-sdk';
+
+    await run('git', [
+      '-C',
       repoDir,
-      "update-ref",
+      'update-ref',
       ref,
-      commit
+      commit,
     ]);
 
-    const stagedBundle = join(
-      stageDir,
-      bundleName
-    );
+    const stagedBundle = join(stageDir, bundleName);
 
-    await run("git", [
-      "-C",
+    await run('git', [
+      '-C',
       repoDir,
-      "bundle",
-      "create",
+      'bundle',
+      'create',
       stagedBundle,
-      ref
+      ref,
     ]);
 
-    await run("git", [
-      "-C",
+    await run('git', [
+      '-C',
       repoDir,
-      "bundle",
-      "verify",
-      stagedBundle
+      'bundle',
+      'verify',
+      stagedBundle,
     ]);
 
-    const bundleSha256 =
-      await sha256File(stagedBundle);
+    const bundleSha256 = await sha256File(stagedBundle);
+    const bundleBytes = (await stat(stagedBundle)).size;
 
-    const bundleBytes = (
-      await stat(stagedBundle)
-    ).size;
-
-    if (!bundleBytes) {
-      throw new Error("Git bundle is empty.");
+    if (bundleBytes === 0) {
+      throw new Error('Git bundle is empty.');
     }
 
-    console.log("[6/11] Export and verify Git blobs");
+    console.log(
+      '[7/12] Export Git blobs with streaming hash verification'
+    );
 
     const exportResult = await exportGitTree(
       repoDir,
@@ -1911,119 +996,94 @@ async function main() {
       inventory
     );
 
-    const expectedBlobCount = inventory.filter(
-      item => item.type === "blob"
-    ).length;
-
     if (
-      exportResult.verifiedBlobCount !== expectedBlobCount
+      exportResult.verifiedBlobCount !== preflight.blobCount
     ) {
       throw new Error(
-        "Exported blob count differs from inventory."
+        'Exported blob count differs from preflight inventory.'
       );
     }
 
-    console.log("[7/11] Create source archive");
+    console.log('[8/12] Create deterministic source archive');
 
-    await mkdir(snapshotParent, {
-      recursive: true
-    });
+    const stagedArchive = join(stageDir, archiveName);
 
-    const stagedArchive = join(
-      stageDir,
-      archiveName
-    );
-
-    await run("tar", [
-      "--sort=name",
-      "--mtime=@0",
-      "--owner=0",
-      "--group=0",
-      "--numeric-owner",
-      "-czf",
+    await run('tar', [
+      '--sort=name',
+      '--mtime=@0',
+      '--owner=0',
+      '--group=0',
+      '--numeric-owner',
+      '-czf',
       stagedArchive,
-      "-C",
+      '-C',
       snapshotParent,
-      basename(snapshotDir)
+      basename(snapshotDir),
     ]);
 
-    await run("gzip", [
-      "-t",
-      stagedArchive
-    ]);
-
-    await run("tar", [
-      "-tzf",
-      stagedArchive
-    ]);
+    await run('gzip', ['-t', stagedArchive]);
+    await run('tar', ['-tzf', stagedArchive]);
 
     console.log(
-      "[8/11] Extract archive and compare every file"
+      '[9/12] Extract archive and compare every entry'
     );
 
-    await mkdir(verifyParent, {
-      recursive: true
-    });
+    await mkdir(verifyParent, { recursive: true });
 
-    await run("tar", [
-      "-xzf",
+    await run('tar', [
+      '-xzf',
       stagedArchive,
-      "-C",
-      verifyParent
+      '-C',
+      verifyParent,
     ]);
 
-    const archiveVerification =
-      await verifyExtractedTree(
-        verifyDir,
-        inventory
-      );
+    const archiveVerification = await verifyExtractedTree(
+      verifyDir,
+      inventory
+    );
 
-    const archiveSha256 =
-      await sha256File(stagedArchive);
+    const archiveSha256 = await sha256File(stagedArchive);
+    const archiveBytes = (await stat(stagedArchive)).size;
 
-    const archiveBytes = (
-      await stat(stagedArchive)
-    ).size;
-
-    if (!archiveBytes) {
-      throw new Error(
-        "Source archive is empty."
-      );
+    if (archiveBytes === 0) {
+      throw new Error('Source archive is empty.');
     }
 
-    console.log("[9/11] Build manifest and report");
+    console.log(
+      '[10/12] Build manifest and preservation report'
+    );
 
-    const inventorySha256 = createHash("sha256")
+    const inventorySha256 = createHash('sha256')
       .update(JSON.stringify(inventory))
-      .digest("hex");
+      .digest('hex');
 
     const licenseFiles = inventory
-      .filter(item =>
+      .filter((item) =>
         /(^|\/)(LICENSE|NOTICE|COPYING)(\.|$)/i.test(item.path)
       )
-      .map(item => item.path);
+      .map((item) => item.path);
 
-    const flagged = inventory.filter(item =>
-      item.provenance.some(p =>
-        p.status === "CLARIFICATION_REQUIRED" ||
-        p.status === "LICENSE_REVIEW"
+    const flagged = inventory.filter((item) =>
+      item.provenance.some((p) =>
+        p.status === 'CLARIFICATION_REQUIRED' ||
+        p.status === 'LICENSE_REVIEW'
       )
     );
 
-    const notReviewed = inventory.filter(item =>
-      item.provenance.some(p =>
-        p.status === "NOT_REVIEWED"
+    const notReviewed = inventory.filter((item) =>
+      item.provenance.some((p) =>
+        p.status === 'NOT_REVIEWED'
       )
     );
 
     const manifest = {
-      schemaVersion: "1.0.0",
+      schemaVersion: '1.0.0',
 
       preservation: {
-        status: "SNAPSHOT_CREATED",
-        scriptVersion: "3.1.0",
+        status: 'SNAPSHOT_CREATED',
+        scriptVersion: SCRIPT_VERSION,
         startedAt,
-        completedAt: new Date().toISOString()
+        completedAt: new Date().toISOString(),
       },
 
       source: {
@@ -2035,72 +1095,69 @@ async function main() {
         commit,
         gitTreeSha: treeSha,
         packageLicense: packageJson.license ?? null,
-        nodeRequirement:
-          packageJson.engines?.node ?? null
+        nodeRequirement: packageJson.engines?.node ?? null,
       },
 
       gitBundle: {
         file: bundleName,
         sizeBytes: bundleBytes,
         sha256: bundleSha256,
-        verification: "PASSED",
-        scope:
-          "Commit and history reachable from fetched commit; not all upstream branches or tags."
+        verification: 'PASSED',
+        scope: 'Commit and history reachable from fetched commit; not all upstream branches or tags.',
       },
 
       archive: {
         file: archiveName,
-        format: "tar.gz",
+        format: 'tar.gz',
         sizeBytes: archiveBytes,
         sha256: archiveSha256,
-        gzipTest: "PASSED",
-        extractionTest: "PASSED",
-        verifiedFiles:
-          archiveVerification.verifiedFiles,
-        comparison:
-          "Every archived file and symlink compared against its Git blob SHA-1."
+        gzipTest: 'PASSED',
+        extractionTest: 'PASSED',
+        verifiedFiles: archiveVerification.verifiedFiles,
+        verifiedBytes: archiveVerification.verifiedBytes,
+        comparison: 'Every archived regular file and symlink was compared against its Git blob SHA-1.',
       },
 
       inventory: {
         totalEntries: inventory.length,
-        blobCount: expectedBlobCount,
-        verifiedBlobCount:
-          exportResult.verifiedBlobCount,
+        blobCount: preflight.blobCount,
+        verifiedBlobCount: exportResult.verifiedBlobCount,
         exportedBytes: exportResult.exportedBytes,
         inventorySha256,
         licenseDocuments: licenseFiles,
         submoduleReferenceCount: submodules.length,
         flaggedFileCount: flagged.length,
         notReviewedFileCount: notReviewed.length,
-        entries: inventory
+        entries: inventory,
       },
 
       licensing: {
-        overallStatus: "REVIEW_REQUIRED",
+        overallStatus: 'REVIEW_REQUIRED',
         publicRedistributionApproved: false,
         notes: [
-          "Submodule contents are not included; only gitlink references are recorded.",
-          "File-level provenance classification is preliminary.",
-          "NOT_REVIEWED does not mean license-free.",
-          "Public redistribution is not approved."
-        ]
+          'Submodule contents are not included; only gitlink references are recorded.',
+          'File-level provenance classification is preliminary and pattern-based.',
+          'NOT_REVIEWED does not mean license-free.',
+          'Public redistribution is not approved.',
+        ],
       },
 
       execution: {
         sdkInstalled: false,
         sdkCodeExecuted: false,
-        runtimeTests: "NOT_RUN"
-      }
+        runtimeTests: 'NOT_RUN',
+      },
     };
 
     await writeJson(
-      join(stageDir, "manifest.json"),
+      join(stageDir, 'manifest.json'),
       manifest
     );
 
     const report = [
-      "# TheTowerSDK Preservation Report",
-      "",
+      '# TheTowerSDK Preservation Report',
+      '',
+      `- Preservation script: v${SCRIPT_VERSION}`,
       `- SDK: ${CONFIG.packageName}@${CONFIG.sdkVersion}`,
       `- Commit: ${commit}`,
       `- Git tree SHA: ${treeSha}`,
@@ -2116,36 +1173,37 @@ async function main() {
       `- Submodule references: ${submodules.length}`,
       `- Files requiring license review: ${flagged.length}`,
       `- Files not individually reviewed: ${notReviewed.length}`,
-      "",
-      "## License documents",
-      ...licenseFiles.map(path => `- ${path}`),
-      "",
-      "## Files requiring license review",
-      ...flagged.map(item =>
-        `- ${item.path}: ${item.provenance.map(p => p.id).join(", ")}`
+      '',
+      '## License documents',
+      ...licenseFiles.map((path) => `- ${path}`),
+      '',
+      '## Files requiring license review',
+      ...flagged.map((item) =>
+        `- ${item.path}: ${item.provenance.map((p) => p.id).join(', ')}`
       ),
-      "",
-      "## Submodule references",
-      ...submodules.map(item =>
+      '',
+      '## Submodule references',
+      ...submodules.map((item) =>
         `- ${item.path}: ${item.objectSha}`
       ),
-      "",
-      "## Limitations",
-      "- Submodule contents are not included.",
-      "- Non-UTF-8 Git paths are rejected rather than silently altered.",
-      "- Git bundle does not represent all upstream branches or tags.",
-      "- Individual provenance review remains incomplete.",
-      "- Public redistribution is not approved.",
-      "- SDK runtime tests have not been performed."
-    ].join("\n");
+      '',
+      '## Limitations',
+      '- Submodule contents are not included.',
+      '- Non-UTF-8 Git paths are rejected rather than silently altered.',
+      '- Git bundle does not represent all upstream branches or tags.',
+      '- Individual provenance review remains incomplete.',
+      '- Public redistribution is not approved.',
+      '- SDK runtime tests have not been performed.',
+    ].join('\n');
 
     await writeFile(
-      join(stageDir, "preservation-report.md"),
-      report + "\n"
+      join(stageDir, 'preservation-report.md'),
+      `${report}\n`,
+      'utf8'
     );
 
     console.log(
-      "[10/11] Publish outputs with rollback protection"
+      '[11/12] Publish outputs with rollback protection'
     );
 
     await publishTransaction(
@@ -2154,48 +1212,50 @@ async function main() {
       names
     );
 
-    console.log("[11/11] Preservation completed");
+    console.log('[12/12] Preservation completed');
 
-    console.log(
-      `Git bundle SHA-256: ${bundleSha256}`
-    );
-
-    console.log(
-      `Archive SHA-256: ${archiveSha256}`
-    );
-
-    console.log(
-      `Inventory entries: ${inventory.length}`
-    );
-
-    console.log(
-      `Verified blobs: ${exportResult.verifiedBlobCount}`
-    );
-
-    console.log(
-      "Archive-to-inventory comparison: PASSED"
-    );
-
-    console.log("Status: SNAPSHOT_CREATED");
-    console.log("SDK runtime tests: NOT RUN");
-    console.log("Public redistribution: NOT APPROVED");
-
+    console.log(`Git bundle SHA-256: ${bundleSha256}`);
+    console.log(`Archive SHA-256: ${archiveSha256}`);
+    console.log(`Inventory entries: ${inventory.length}`);
+    console.log(`Verified blobs: ${exportResult.verifiedBlobCount}`);
+    console.log('Archive-to-inventory comparison: PASSED');
+    console.log('Status: SNAPSHOT_CREATED');
+    console.log('SDK runtime tests: NOT RUN');
+    console.log('Public redistribution: NOT APPROVED');
+  } catch (error) {
+    if (error?.preserveStage) preserveStage = true;
+    throw error;
   } finally {
     await rm(workDir, {
       recursive: true,
-      force: true
+      force: true,
+    }).catch((error) => {
+      console.error(
+        `WARNING: could not remove temporary work directory: ${error.message}`
+      );
     });
 
-    await rm(stageDir, {
-      recursive: true,
-      force: true
-    });
+    if (!preserveStage) {
+      await rm(stageDir, {
+        recursive: true,
+        force: true,
+      }).catch((error) => {
+        console.error(
+          `WARNING: could not remove staging directory: ${error.message}`
+        );
+      });
+    }
   }
 }
 
+main().catch((error) => {
+  if (error?.preserveStage) {
+    console.error(
+      'IMPORTANT: incomplete rollback; recovery backup was retained.'
+    );
+  }
 
-main().catch(error => {
-  console.error("\nPRESERVATION FAILED");
+  console.error('\nPRESERVATION FAILED');
   console.error(error);
   process.exitCode = 1;
 });
