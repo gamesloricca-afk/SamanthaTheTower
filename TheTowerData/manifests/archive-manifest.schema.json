@@ -1,0 +1,107 @@
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "samantha-towerdata-archive-manifest",
+  "title": "TheTowerData Archive Manifest",
+  "type": "object",
+  "required": [
+    "archive_id",
+    "source",
+    "preservation",
+    "license"
+  ],
+  "properties": {
+    "archive_id": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "name",
+        "repository",
+        "commit"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "repository": {
+          "type": "string",
+          "format": "uri"
+        },
+        "package_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "game_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "commit": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "preservation": {
+      "type": "object",
+      "required": [
+        "archive_status",
+        "source_modified",
+        "checksum_algorithm"
+      ],
+      "properties": {
+        "archive_status": {
+          "enum": [
+            "NOT_IMPORTED",
+            "STAGED",
+            "IMPORTED",
+            "VERIFIED",
+            "REJECTED"
+          ]
+        },
+        "source_modified": {
+          "type": "boolean"
+        },
+        "checksum_algorithm": {
+          "const": "SHA-256"
+        },
+        "checksum": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "retrieved_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": true
+    },
+    "license": {
+      "type": "object",
+      "required": [
+        "declared",
+        "third_party_review_required"
+      ],
+      "properties": {
+        "declared": {
+          "type": "string"
+        },
+        "third_party_review_required": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
