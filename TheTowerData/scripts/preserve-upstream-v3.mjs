@@ -2,14 +2,13 @@
 #!/usr/bin/env node
 
 /**
- * Samantha - TheTowerSDK Preservation v3
- * Revised preservation implementation.
+ * Samantha - TheTowerSDK Preservation v3.1.0
  *
  * Requirements:
- *   Node.js >= 20
- *   Git
- *   GNU tar
- *   gzip
+ * - Node.js >= 20
+ * - Git
+ * - GNU tar
+ * - gzip
  *
  * Does not install or execute SDK code.
  */
@@ -21,32 +20,25 @@ import {
   rm,
   rename,
   stat,
+  lstat,
   chmod,
-  symlink
+  symlink,
+  readlink,
+  readdir,
+  copyFile,
+  mkdtemp
 } from "node:fs/promises";
 
-import {
-  createReadStream
-} from "node:fs";
-
-import {
-  createHash
-} from "node:crypto";
-
-import {
-  tmpdir
-} from "node:os";
-
+import { createReadStream } from "node:fs";
+import { createHash } from "node:crypto";
+import { tmpdir } from "node:os";
 import {
   join,
   resolve,
   basename,
   dirname
 } from "node:path";
-
-import {
-  spawn
-} from "node:child_process";
+import { spawn } from "node:child_process";
 
 
 const CONFIG = {
@@ -55,7 +47,10 @@ const CONFIG = {
   packageName: "thetowersdk",
   sdkVersion: "0.14.1",
   gameVersion: null,
+
   commit: "9a95672578fa064d71ddd54fad2ce5027a310b3a",
+
+  maxBlobBytes: 128 * 1024 * 1024,
 
   outputDirectory: resolve(
     process.argv[2] ??
@@ -69,7 +64,8 @@ const PROVENANCE_RULES = [
     id: "EFFECTIVE_PATHS",
     patterns: [/effective-paths/i, /effective.paths/i],
     status: "CLARIFICATION_REQUIRED",
-    reason: "Community spreadsheet-derived material; redistribution scope requires clarification."
+    reason:
+      "Community spreadsheet-derived material; redistribution scope requires clarification."
   },
   {
     id: "ORPHIS",
@@ -78,7 +74,8 @@ const PROVENANCE_RULES = [
       /lab-categories\.json/i
     ],
     status: "CLARIFICATION_REQUIRED",
-    reason: "Orphis-related material; redistribution terms require clarification."
+    reason:
+      "Orphis-related material; redistribution terms require clarification."
   },
   {
     id: "TOWER_IDLE_TOOLKIT",
@@ -90,7 +87,8 @@ const PROVENANCE_RULES = [
       /formatting\/duration/i
     ],
     status: "LICENSE_REVIEW",
-    reason: "Potential tower-idle-toolkit-derived material; verify applicable attribution."
+    reason:
+      "Potential tower-idle-toolkit-derived material; verify applicable attribution."
   }
 ];
 
@@ -128,13 +126,12 @@ function run(command, args, options = {}) {
         reject(new Error(
           `${command} exited with code ${code}\n${err}`
         ));
-        return;
+      } else {
+        resolvePromise({
+          stdout: out,
+          stderr: err
+        });
       }
-
-      resolvePromise({
-        stdout: out,
-        stderr: err
-      });
     });
   });
 }
@@ -152,33 +149,32 @@ async function sha256File(path) {
 
 
 function gitBlobSha1(data) {
-  const header = Buffer.from(`blob ${data.length}\0`);
-
   return createHash("sha1")
-    .update(header)
+    .update(Buffer.from(`blob ${data.length}\0`))
     .update(data)
     .digest("hex");
 }
 
 
 function decodeGitPath(buffer) {
-  const decoder = new TextDecoder("utf-8", {
+  const value = new TextDecoder("utf-8", {
     fatal: true
-  });
-
-  const value = decoder.decode(buffer);
+  }).decode(buffer);
 
   if (!Buffer.from(value, "utf8").equals(buffer)) {
-    throw new Error("Git path cannot be represented losslessly as UTF-8.");
+    throw new Error(
+      "Git path cannot be represented losslessly as UTF-8."
+    );
   }
 
   if (
     value.startsWith("/") ||
+    value.includes("\\") ||
     value.split("/").some(part =>
-      part === "" || part === "." || part === ".."
+      !part || part === "." || part === ".."
     )
   ) {
-    throw new Error(`Unsafe Git path detected: ${value}`);
+    throw new Error(`Unsafe Git path: ${value}`);
   }
 
   return value;
@@ -195,7 +191,7 @@ function parseTree(raw) {
     const record = raw.subarray(start, i);
     start = i + 1;
 
-    if (record.length === 0) continue;
+    if (!record.length) continue;
 
     const tab = record.indexOf(9);
 
@@ -203,22 +199,33 @@ function parseTree(raw) {
       throw new Error("Invalid Git tree record.");
     }
 
-    const metadata = record.subarray(0, tab).toString("ascii");
-    const path = decodeGitPath(record.subarray(tab + 1));
+    const [mode, type, objectSha] =
+      record.subarray(0, tab)
+        .toString("ascii")
+        .split(" ");
 
-    const [mode, type, objectSha] = metadata.split(" ");
+    const path = decodeGitPath(
+      record.subarray(tab + 1)
+    );
 
     if (!mode || !type || !objectSha) {
-      throw new Error(`Invalid Git metadata: ${path}`);
+      throw new Error(`Invalid metadata: ${path}`);
     }
 
-    if (type !== "blob" && !(mode === "160000" && type === "commit")) {
-      throw new Error(`Unsupported Git tree entry: ${path}`);
+    if (
+      type !== "blob" &&
+      !(mode === "160000" && type === "commit")
+    ) {
+      throw new Error(
+        `Unsupported Git tree entry: ${path}`
+      );
     }
 
     const provenance = PROVENANCE_RULES
       .filter(rule =>
-        rule.patterns.some(pattern => pattern.test(path))
+        rule.patterns.some(pattern =>
+          pattern.test(path)
+        )
       )
       .map(rule => ({
         id: rule.id,
@@ -226,7 +233,9 @@ function parseTree(raw) {
         reason: rule.reason
       }));
 
-    if (/(^|\/)(LICENSE|NOTICE|COPYING)(\.|$)/i.test(path)) {
+    if (
+      /(^|\/)(LICENSE|NOTICE|COPYING)(\.|$)/i.test(path)
+    ) {
       provenance.push({
         id: "LICENSE_DOCUMENT",
         status: "PRESERVE",
@@ -234,11 +243,12 @@ function parseTree(raw) {
       });
     }
 
-    if (provenance.length === 0) {
+    if (!provenance.length) {
       provenance.push({
         id: "UNASSESSED",
         status: "NOT_REVIEWED",
-        reason: "File-level provenance has not been individually established."
+        reason:
+          "File-level provenance has not been individually established."
       });
     }
 
@@ -253,54 +263,62 @@ function parseTree(raw) {
   }
 
   if (start !== raw.length) {
-    throw new Error("Incomplete NUL-terminated Git tree output.");
+    throw new Error(
+      "Incomplete NUL-terminated Git tree."
+    );
   }
 
   return records;
 }
 
 
-async function writeJsonAtomic(path, value) {
-  const temporaryPath = `${path}.partial`;
-
+async function writeJson(path, value) {
   await writeFile(
-    temporaryPath,
+    path,
     JSON.stringify(value, null, 2) + "\n"
   );
-
-  await rename(temporaryPath, path);
 }
 
 
-async function exportGitTree(repositoryDirectory, snapshotDirectory, inventory) {
-  await mkdir(snapshotDirectory, { recursive: true });
-
+async function exportGitTree(
+  repoDir,
+  snapshotDir,
+  inventory
+) {
   let verifiedBlobCount = 0;
   let exportedBytes = 0;
 
+  await mkdir(snapshotDir, {
+    recursive: true
+  });
+
   for (const item of inventory) {
-    const destination = join(snapshotDirectory, item.path);
+    if (item.isSubmodule) continue;
 
-    if (item.isSubmodule) {
-      // A gitlink is a reference, not a file.
-      // Its contents are deliberately not fabricated.
-      continue;
-    }
-
-    const blobResult = await run("git", [
+    const blob = await run("git", [
       "-C",
-      repositoryDirectory,
+      repoDir,
       "cat-file",
       "blob",
       item.objectSha
     ]);
 
-    const data = blobResult.stdout;
-    const actualBlobSha = gitBlobSha1(data);
+    const data = blob.stdout;
 
-    if (actualBlobSha !== item.objectSha) {
-      throw new Error(`Git blob checksum mismatch: ${item.path}`);
+    if (data.length > CONFIG.maxBlobBytes) {
+      throw new Error(
+        `Blob exceeds memory safety limit ` +
+        `(${CONFIG.maxBlobBytes} bytes): ${item.path}`
+      );
     }
+
+    if (gitBlobSha1(data) !== item.objectSha) {
+      throw new Error(
+        `Git blob SHA-1 mismatch: ${item.path}`
+      );
+    }
+
+    const destination = join(snapshotDir, item.path);
 
     await mkdir(dirname(destination), {
       recursive: true
@@ -311,13 +329,21 @@ async function exportGitTree(repositoryDirectory, snapshotDirectory, inventory) 
         fatal: true
       }).decode(data);
 
+      if (target.includes("\0")) {
+        throw new Error(
+          `Invalid symlink target: ${item.path}`
+        );
+      }
+
       await symlink(target, destination);
 
     } else if (
       item.mode === "100644" ||
       item.mode === "100755"
     ) {
-      await writeFile(destination, data);
+      await writeFile(destination, data, {
+        flag: "wx"
+      });
 
       await chmod(
         destination,
@@ -341,196 +367,426 @@ async function exportGitTree(repositoryDirectory, snapshotDirectory, inventory) 
 }
 
 
+async function verifyExtractedTree(
+  root,
+  inventory
+) {
+  const expected = new Map();
+
+  for (const item of inventory) {
+    if (item.isSubmodule) continue;
+    expected.set(item.path, item);
+  }
+
+  const actualFiles = new Set();
+  const actualDirs = new Set();
+
+  async function walk(directory, prefix = "") {
+    const entries = await readdir(directory, {
+      withFileTypes: true
+    });
+
+    for (const entry of entries) {
+      const rel = prefix
+        ? `${prefix}/${entry.name}`
+        : entry.name;
+
+      const full = join(directory, entry.name);
+      const info = await lstat(full);
+
+      if (info.isDirectory()) {
+        actualDirs.add(rel);
+        await walk(full, rel);
+      } else {
+        actualFiles.add(rel);
+      }
+    }
+  }
+
+  await walk(root);
+
+  const requiredDirs = new Set();
+
+  for (const path of expected.keys()) {
+    const parts = path.split("/");
+
+    for (let i = 1; i < parts.length; i++) {
+      requiredDirs.add(
+        parts.slice(0, i).join("/")
+      );
+    }
+  }
+
+  for (const path of expected.keys()) {
+    if (!actualFiles.has(path)) {
+      throw new Error(
+        `Archive missing file: ${path}`
+      );
+    }
+  }
+
+  for (const path of actualFiles) {
+    if (!expected.has(path)) {
+      throw new Error(
+        `Unexpected archive file: ${path}`
+      );
+    }
+  }
+
+  for (const path of requiredDirs) {
+    if (!actualDirs.has(path)) {
+      throw new Error(
+        `Archive missing directory: ${path}`
+      );
+    }
+  }
+
+  for (const path of actualDirs) {
+    if (!requiredDirs.has(path)) {
+      throw new Error(
+        `Unexpected archive directory: ${path}`
+      );
+    }
+  }
+
+  for (const [path, item] of expected) {
+    const full = join(root, path);
+    const info = await lstat(full);
+
+    if (item.mode === "120000") {
+      if (!info.isSymbolicLink()) {
+        throw new Error(
+          `Expected symlink: ${path}`
+        );
+      }
+
+      const target = Buffer.from(
+        await readlink(full),
+        "utf8"
+      );
+
+      if (gitBlobSha1(target) !== item.objectSha) {
+        throw new Error(
+          `Archive symlink content mismatch: ${path}`
+        );
+      }
+
+    } else {
+      if (!info.isFile()) {
+        throw new Error(
+          `Expected regular file: ${path}`
+        );
+      }
+
+      const data = await readFile(full);
+
+      if (gitBlobSha1(data) !== item.objectSha) {
+        throw new Error(
+          `Archive content mismatch: ${path}`
+        );
+      }
+
+      const executable =
+        (info.mode & 0o111) !== 0;
+
+      if (
+        executable !== (item.mode === "100755")
+      ) {
+        throw new Error(
+          `Archive permission mismatch: ${path}`
+        );
+      }
+    }
+  }
+
+  return {
+    verifiedFiles: expected.size
+  };
+}
+
+
+async function publishTransaction(
+  stageDir,
+  outputDir,
+  names
+) {
+  const backupDir = join(stageDir, "backup");
+
+  await mkdir(backupDir, {
+    recursive: true
+  });
+
+  const existed = new Set();
+
+  for (const name of names) {
+    try {
+      await stat(join(outputDir, name));
+
+      await copyFile(
+        join(outputDir, name),
+        join(backupDir, name)
+      );
+
+      existed.add(name);
+
+    } catch (error) {
+      if (error.code !== "ENOENT") {
+        throw error;
+      }
+    }
+  }
+
+  const published = [];
+
+  try {
+    for (const name of names) {
+      await rename(
+        join(stageDir, name),
+        join(outputDir, name)
+      );
+
+      published.push(name);
+    }
+
+  } catch (error) {
+    for (const name of published.reverse()) {
+      const target = join(outputDir, name);
+
+      if (existed.has(name)) {
+        const restoreTemp = join(
+          stageDir,
+          `restore-${name}`
+        );
+
+        await copyFile(
+          join(backupDir, name),
+          restoreTemp
+        );
+
+        await rename(restoreTemp, target);
+
+      } else {
+        await rm(target, {
+          force: true
+        });
+      }
+    }
+
+    throw new Error(
+      `Publish failed; previous outputs restored: ${error.message}`
+    );
+  }
+}
+
+
 async function main() {
-  if (Number(process.versions.node.split(".")[0]) < 20) {
-    throw new Error("Node.js 20 or newer is required.");
+  if (
+    Number(process.versions.node.split(".")[0]) < 20
+  ) {
+    throw new Error(
+      "Node.js 20 or newer is required."
+    );
   }
 
   const startedAt = new Date().toISOString();
+  const output = CONFIG.outputDirectory;
 
-  const temp = await import("node:fs/promises");
-  const temporaryDirectory = await temp.mkdtemp(
-    join(tmpdir(), "samantha-preservation-v3-")
+  await mkdir(output, {
+    recursive: true
+  });
+
+  const workDir = await mkdtemp(
+    join(tmpdir(), "samantha-preserve-v3-")
   );
 
-  const repositoryDirectory = join(
-    temporaryDirectory,
-    "repository"
+  const stageDir = await mkdtemp(
+    join(output, ".preserve-stage-")
   );
 
-  const snapshotParent = join(
-    temporaryDirectory,
-    "snapshot"
-  );
+  const repoDir = join(workDir, "repo");
+  const snapshotParent = join(workDir, "snapshot");
 
-  const snapshotDirectory = join(
+  const snapshotDir = join(
     snapshotParent,
     `${CONFIG.repositoryName}-${CONFIG.sdkVersion}`
   );
 
-  const archiveName =
+  const verifyParent = join(workDir, "verify");
+
+  const verifyDir = join(
+    verifyParent,
+    `${CONFIG.repositoryName}-${CONFIG.sdkVersion}`
+  );
+
+  const stem =
     `thetowersdk-${CONFIG.sdkVersion}-` +
-    `${CONFIG.commit.slice(0, 12)}.tar.gz`;
+    CONFIG.commit.slice(0, 12);
 
-  const bundleName =
-    `thetowersdk-${CONFIG.sdkVersion}-` +
-    `${CONFIG.commit.slice(0, 12)}.bundle`;
+  const archiveName = `${stem}.tar.gz`;
+  const bundleName = `${stem}.bundle`;
 
-  const output = CONFIG.outputDirectory;
-
-  const archivePath = join(output, archiveName);
-  const bundlePath = join(output, bundleName);
-
-  const archivePartial = `${archivePath}.partial`;
-  const bundlePartial = `${bundlePath}.partial`;
-
-  const manifestPath = join(output, "manifest.json");
-  const reportPath = join(output, "preservation-report.md");
-
-  const temporaryFiles = [
-    archivePartial,
-    bundlePartial,
-    `${manifestPath}.partial`,
-    `${reportPath}.partial`
+  const names = [
+    bundleName,
+    archiveName,
+    "manifest.json",
+    "preservation-report.md"
   ];
 
-  const publishedFiles = [];
-
-  let completed = false;
-
   try {
-    await mkdir(output, { recursive: true });
+    console.log(
+      "Samantha TheTowerSDK Preservation v3.1.0"
+    );
 
-    console.log("Samantha TheTowerSDK Preservation v3");
-    console.log(`SDK: ${CONFIG.packageName}@${CONFIG.sdkVersion}`);
+    console.log(
+      `SDK: ${CONFIG.packageName}@${CONFIG.sdkVersion}`
+    );
+
     console.log(`Commit: ${CONFIG.commit}`);
 
-    // STEP 1: Initialize repository.
-
-    console.log("\n[1/10] Initializing temporary repository...");
-
-    await run("git", ["init", repositoryDirectory]);
+    console.log("[1/11] Initialize temporary repository");
 
     await run("git", [
-      "-C", repositoryDirectory,
-      "remote", "add", "origin", CONFIG.repository
+      "init",
+      repoDir
     ]);
 
-    // STEP 2: Fetch exact commit with history.
+    await run("git", [
+      "-C",
+      repoDir,
+      "remote",
+      "add",
+      "origin",
+      CONFIG.repository
+    ]);
 
-    console.log("[2/10] Fetching exact commit and reachable history...");
+    console.log("[2/11] Fetch exact upstream commit");
 
     await run("git", [
-      "-C", repositoryDirectory,
+      "-C",
+      repoDir,
       "fetch",
       "origin",
       CONFIG.commit
     ]);
 
-    const commitResult = await run("git", [
-      "-C", repositoryDirectory,
-      "rev-parse",
-      "FETCH_HEAD^{commit}"
-    ]);
+    const commit = (
+      await run("git", [
+        "-C",
+        repoDir,
+        "rev-parse",
+        "FETCH_HEAD^{commit}"
+      ])
+    ).stdout.toString("utf8").trim();
 
-    const actualCommit = commitResult.stdout.toString("utf8").trim();
-
-    if (actualCommit !== CONFIG.commit) {
-      throw new Error("Fetched commit does not match configured commit.");
+    if (commit !== CONFIG.commit) {
+      throw new Error(
+        "Fetched commit SHA mismatch."
+      );
     }
 
-    const treeResult = await run("git", [
-      "-C", repositoryDirectory,
-      "rev-parse",
-      `${actualCommit}^{tree}`
-    ]);
+    const treeSha = (
+      await run("git", [
+        "-C",
+        repoDir,
+        "rev-parse",
+        `${commit}^{tree}`
+      ])
+    ).stdout.toString("utf8").trim();
 
-    const treeSha = treeResult.stdout.toString("utf8").trim();
+    console.log("[3/11] Verify package metadata");
 
-    // STEP 3: Verify package metadata.
-
-    console.log("[3/10] Verifying package metadata...");
-
-    const packageResult = await run("git", [
-      "-C", repositoryDirectory,
-      "show",
-      `${actualCommit}:package.json`
-    ]);
-
-    const packageMetadata = JSON.parse(
-      packageResult.stdout.toString("utf8")
+    const packageJson = JSON.parse(
+      (
+        await run("git", [
+          "-C",
+          repoDir,
+          "show",
+          `${commit}:package.json`
+        ])
+      ).stdout.toString("utf8")
     );
 
     if (
-      packageMetadata.name !== CONFIG.packageName ||
-      packageMetadata.version !== CONFIG.sdkVersion
+      packageJson.name !== CONFIG.packageName ||
+      packageJson.version !== CONFIG.sdkVersion
     ) {
-      throw new Error("SDK package identity mismatch.");
+      throw new Error(
+        "SDK package name/version mismatch."
+      );
     }
 
-    // STEP 4: Recursive inventory.
+    console.log("[4/11] Build recursive inventory");
 
-    console.log("[4/10] Building complete recursive inventory...");
-
-    const tree = await run("git", [
-      "-C", repositoryDirectory,
+    const rawTree = await run("git", [
+      "-C",
+      repoDir,
       "ls-tree",
       "-r",
       "-z",
       "--full-tree",
-      actualCommit
+      commit
     ]);
 
-    const inventory = parseTree(tree.stdout);
+    const inventory = parseTree(rawTree.stdout);
 
-    if (inventory.length === 0) {
+    if (!inventory.length) {
       throw new Error("Inventory is empty.");
     }
 
-    const submodules = inventory.filter(item => item.isSubmodule);
+    const submodules = inventory.filter(
+      item => item.isSubmodule
+    );
 
-    // STEP 5: Preserve Git bundle.
+    console.log("[5/11] Create and verify Git bundle");
 
-    console.log("[5/10] Creating Git bundle...");
-
-    const preservationRef = "refs/heads/samantha-preserved-sdk";
+    const ref = "refs/heads/samantha-preserved-sdk";
 
     await run("git", [
-      "-C", repositoryDirectory,
+      "-C",
+      repoDir,
       "update-ref",
-      preservationRef,
-      actualCommit
+      ref,
+      commit
     ]);
 
+    const stagedBundle = join(
+      stageDir,
+      bundleName
+    );
+
     await run("git", [
-      "-C", repositoryDirectory,
+      "-C",
+      repoDir,
       "bundle",
       "create",
-      bundlePartial,
-      preservationRef
+      stagedBundle,
+      ref
     ]);
 
     await run("git", [
-      "-C", repositoryDirectory,
+      "-C",
+      repoDir,
       "bundle",
       "verify",
-      bundlePartial
+      stagedBundle
     ]);
 
-    const bundleSha256 = await sha256File(bundlePartial);
-    const bundleInfo = await stat(bundlePartial);
+    const bundleSha256 =
+      await sha256File(stagedBundle);
 
-    if (bundleInfo.size === 0) {
+    const bundleBytes = (
+      await stat(stagedBundle)
+    ).size;
+
+    if (!bundleBytes) {
       throw new Error("Git bundle is empty.");
     }
 
-    // STEP 6: Export and verify every tracked blob.
-
-    console.log("[6/10] Exporting and verifying Git blobs...");
+    console.log("[6/11] Export and verify Git blobs");
 
     const exportResult = await exportGitTree(
-      repositoryDirectory,
-      snapshotDirectory,
+      repoDir,
+      snapshotDir,
       inventory
     );
 
@@ -538,13 +794,24 @@ async function main() {
       item => item.type === "blob"
     ).length;
 
-    if (exportResult.verifiedBlobCount !== expectedBlobCount) {
-      throw new Error("Exported blob count does not match inventory.");
+    if (
+      exportResult.verifiedBlobCount !== expectedBlobCount
+    ) {
+      throw new Error(
+        "Exported blob count differs from inventory."
+      );
     }
 
-    // STEP 7: Create deterministic source archive.
+    console.log("[7/11] Create source archive");
 
-    console.log("[7/10] Creating source archive...");
+    await mkdir(snapshotParent, {
+      recursive: true
+    });
+
+    const stagedArchive = join(
+      stageDir,
+      archiveName
+    );
 
     await run("tar", [
       "--sort=name",
@@ -553,38 +820,60 @@ async function main() {
       "--group=0",
       "--numeric-owner",
       "-czf",
-      archivePartial,
+      stagedArchive,
       "-C",
       snapshotParent,
-      basename(snapshotDirectory)
+      basename(snapshotDir)
     ]);
 
-    await run("gzip", ["-t", archivePartial]);
+    await run("gzip", [
+      "-t",
+      stagedArchive
+    ]);
 
-    const archiveListing = await run("tar", [
+    await run("tar", [
       "-tzf",
-      archivePartial
+      stagedArchive
     ]);
 
-    if (archiveListing.stdout.length === 0) {
-      throw new Error("Archive listing is empty.");
+    console.log(
+      "[8/11] Extract archive and compare every file"
+    );
+
+    await mkdir(verifyParent, {
+      recursive: true
+    });
+
+    await run("tar", [
+      "-xzf",
+      stagedArchive,
+      "-C",
+      verifyParent
+    ]);
+
+    const archiveVerification =
+      await verifyExtractedTree(
+        verifyDir,
+        inventory
+      );
+
+    const archiveSha256 =
+      await sha256File(stagedArchive);
+
+    const archiveBytes = (
+      await stat(stagedArchive)
+    ).size;
+
+    if (!archiveBytes) {
+      throw new Error(
+        "Source archive is empty."
+      );
     }
 
-    const archiveSha256 = await sha256File(archivePartial);
-    const archiveInfo = await stat(archivePartial);
-
-    if (archiveInfo.size === 0) {
-      throw new Error("Source archive is empty.");
-    }
-
-    // STEP 8: Build manifest.
-
-    console.log("[8/10] Creating manifest...");
-
-    const inventoryJson = JSON.stringify(inventory);
+    console.log("[9/11] Build manifest and report");
 
     const inventorySha256 = createHash("sha256")
-      .update(inventoryJson)
+      .update(JSON.stringify(inventory))
       .digest("hex");
 
     const licenseFiles = inventory
@@ -593,14 +882,14 @@ async function main() {
       )
       .map(item => item.path);
 
-    const flaggedFiles = inventory.filter(item =>
+    const flagged = inventory.filter(item =>
       item.provenance.some(p =>
         p.status === "CLARIFICATION_REQUIRED" ||
         p.status === "LICENSE_REVIEW"
       )
     );
 
-    const notReviewedFiles = inventory.filter(item =>
+    const notReviewed = inventory.filter(item =>
       item.provenance.some(p =>
         p.status === "NOT_REVIEWED"
       )
@@ -611,7 +900,7 @@ async function main() {
 
       preservation: {
         status: "SNAPSHOT_CREATED",
-        scriptVersion: "3.0.1",
+        scriptVersion: "3.1.0",
         startedAt,
         completedAt: new Date().toISOString()
       },
@@ -619,42 +908,49 @@ async function main() {
       source: {
         repository: CONFIG.repository,
         repositoryName: CONFIG.repositoryName,
-        packageName: packageMetadata.name,
-        sdkVersion: packageMetadata.version,
+        packageName: packageJson.name,
+        sdkVersion: packageJson.version,
         gameVersion: CONFIG.gameVersion,
-        commit: actualCommit,
+        commit,
         gitTreeSha: treeSha,
-        packageLicense: packageMetadata.license ?? null,
-        nodeRequirement: packageMetadata.engines?.node ?? null
+        packageLicense: packageJson.license ?? null,
+        nodeRequirement:
+          packageJson.engines?.node ?? null
       },
 
       gitBundle: {
         file: bundleName,
-        sizeBytes: bundleInfo.size,
+        sizeBytes: bundleBytes,
         sha256: bundleSha256,
         verification: "PASSED",
-        history: "Reachable history included where available from fetched commit."
+        scope:
+          "Commit and history reachable from fetched commit; not all upstream branches or tags."
       },
 
       archive: {
         file: archiveName,
         format: "tar.gz",
-        sizeBytes: archiveInfo.size,
+        sizeBytes: archiveBytes,
         sha256: archiveSha256,
         gzipTest: "PASSED",
-        tarListingTest: "PASSED"
+        extractionTest: "PASSED",
+        verifiedFiles:
+          archiveVerification.verifiedFiles,
+        comparison:
+          "Every archived file and symlink compared against its Git blob SHA-1."
       },
 
       inventory: {
         totalEntries: inventory.length,
         blobCount: expectedBlobCount,
-        verifiedBlobCount: exportResult.verifiedBlobCount,
+        verifiedBlobCount:
+          exportResult.verifiedBlobCount,
         exportedBytes: exportResult.exportedBytes,
         inventorySha256,
         licenseDocuments: licenseFiles,
         submoduleReferenceCount: submodules.length,
-        flaggedFileCount: flaggedFiles.length,
-        notReviewedFileCount: notReviewedFiles.length,
+        flaggedFileCount: flagged.length,
+        notReviewedFileCount: notReviewed.length,
         entries: inventory
       },
 
@@ -662,9 +958,7 @@ async function main() {
         overallStatus: "REVIEW_REQUIRED",
         publicRedistributionApproved: false,
         notes: [
-          "Git bundle and source archive are separate preservation artifacts.",
-          "Every exported blob was checked against its Git object SHA-1.",
-          "Submodule contents are not included; only references are recorded.",
+          "Submodule contents are not included; only gitlink references are recorded.",
           "File-level provenance classification is preliminary.",
           "NOT_REVIEWED does not mean license-free.",
           "Public redistribution is not approved."
@@ -678,58 +972,36 @@ async function main() {
       }
     };
 
-    // STEP 9: Publish verified outputs.
-
-    console.log("[9/10] Publishing verified preservation artifacts...");
-
-    await rename(bundlePartial, bundlePath);
-    publishedFiles.push(bundlePath);
-
-    await rename(archivePartial, archivePath);
-    publishedFiles.push(archivePath);
-
-    await writeJsonAtomic(manifestPath, manifest);
-    publishedFiles.push(manifestPath);
+    await writeJson(
+      join(stageDir, "manifest.json"),
+      manifest
+    );
 
     const report = [
       "# TheTowerSDK Preservation Report",
       "",
       `- SDK: ${CONFIG.packageName}@${CONFIG.sdkVersion}`,
-      `- Commit: ${actualCommit}`,
+      `- Commit: ${commit}`,
       `- Git tree SHA: ${treeSha}`,
-      `- Created: ${startedAt}`,
-      "",
-      "## Git bundle",
-      `- File: ${bundleName}`,
-      `- Size: ${bundleInfo.size} bytes`,
-      `- SHA-256: ${bundleSha256}`,
-      "- Verification: PASSED",
-      "",
-      "## Source archive",
-      `- File: ${archiveName}`,
-      `- Size: ${archiveInfo.size} bytes`,
-      `- SHA-256: ${archiveSha256}`,
-      "- gzip validation: PASSED",
-      "- tar listing validation: PASSED",
-      "",
-      "## Inventory",
-      `- Entries: ${inventory.length}`,
-      `- Blobs verified: ${exportResult.verifiedBlobCount}`,
-      `- Exported bytes: ${exportResult.exportedBytes}`,
+      `- Git bundle: ${bundleName}`,
+      `- Git bundle SHA-256: ${bundleSha256}`,
+      `- Source archive: ${archiveName}`,
+      `- Archive SHA-256: ${archiveSha256}`,
+      `- Inventory entries: ${inventory.length}`,
+      `- Verified blobs: ${exportResult.verifiedBlobCount}`,
+      `- Archive files verified: ${archiveVerification.verifiedFiles}`,
       `- Inventory SHA-256: ${inventorySha256}`,
       `- License documents: ${licenseFiles.length}`,
       `- Submodule references: ${submodules.length}`,
-      `- Files requiring license review: ${flaggedFiles.length}`,
-      `- Files not individually reviewed: ${notReviewedFiles.length}`,
+      `- Files requiring license review: ${flagged.length}`,
+      `- Files not individually reviewed: ${notReviewed.length}`,
       "",
       "## License documents",
       ...licenseFiles.map(path => `- ${path}`),
       "",
       "## Files requiring license review",
-      ...flaggedFiles.map(item =>
-        `- ${item.path}: ${item.provenance
-          .map(p => `${p.id} (${p.status})`)
-          .join(", ")}`
+      ...flagged.map(item =>
+        `- ${item.path}: ${item.provenance.map(p => p.id).join(", ")}`
       ),
       "",
       "## Submodule references",
@@ -740,47 +1012,63 @@ async function main() {
       "## Limitations",
       "- Submodule contents are not included.",
       "- Non-UTF-8 Git paths are rejected rather than silently altered.",
-      "- Git bundle contains history reachable from the preserved commit, subject to upstream availability.",
-      "- File provenance classification is preliminary.",
+      "- Git bundle does not represent all upstream branches or tags.",
+      "- Individual provenance review remains incomplete.",
       "- Public redistribution is not approved.",
       "- SDK runtime tests have not been performed."
     ].join("\n");
 
-    await writeFile(reportPath, report + "\n");
-    publishedFiles.push(reportPath);
+    await writeFile(
+      join(stageDir, "preservation-report.md"),
+      report + "\n"
+    );
 
-    // STEP 10: Final summary.
+    console.log(
+      "[10/11] Publish outputs with rollback protection"
+    );
 
-    console.log("[10/10] Preservation completed.");
+    await publishTransaction(
+      stageDir,
+      output,
+      names
+    );
 
-    console.log(`Git bundle SHA-256: ${bundleSha256}`);
-    console.log(`Archive SHA-256: ${archiveSha256}`);
-    console.log(`Inventory entries: ${inventory.length}`);
-    console.log(`Verified blobs: ${exportResult.verifiedBlobCount}`);
+    console.log("[11/11] Preservation completed");
+
+    console.log(
+      `Git bundle SHA-256: ${bundleSha256}`
+    );
+
+    console.log(
+      `Archive SHA-256: ${archiveSha256}`
+    );
+
+    console.log(
+      `Inventory entries: ${inventory.length}`
+    );
+
+    console.log(
+      `Verified blobs: ${exportResult.verifiedBlobCount}`
+    );
+
+    console.log(
+      "Archive-to-inventory comparison: PASSED"
+    );
 
     console.log("Status: SNAPSHOT_CREATED");
-    console.log("Git bundle verification: PASSED");
-    console.log("Blob verification: PASSED");
-    console.log("Archive verification: PASSED");
     console.log("SDK runtime tests: NOT RUN");
     console.log("Public redistribution: NOT APPROVED");
 
-    completed = true;
-
   } finally {
-    await rm(temporaryDirectory, {
+    await rm(workDir, {
       recursive: true,
       force: true
     });
 
-    if (!completed) {
-      for (const path of [
-        ...temporaryFiles,
-        ...publishedFiles
-      ]) {
-        await rm(path, { force: true }).catch(() => {});
-      }
-    }
+    await rm(stageDir, {
+      recursive: true,
+      force: true
+    });
   }
 }
 
