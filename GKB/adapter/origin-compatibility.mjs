@@ -1,4 +1,4 @@
-/ * Samantha GKB — SDK Origin Compatibility Adapter
+/* Samantha GKB — SDK Origin Compatibility Adapter
  *
  * File:
  *   GKB/adapter/origin-compatibility.mjs
