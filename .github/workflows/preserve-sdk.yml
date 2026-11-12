@@ -27,7 +27,7 @@ jobs:
 
       - name: Run SDK preservation
         run: |
-          node TheTowerData/scripts/preserve-upstream-v2.mjs
+          node TheTowerData/scripts/preserve-upstream-v3.mjs
 
       - name: Upload preservation output
         uses: actions/upload-artifact@v4
