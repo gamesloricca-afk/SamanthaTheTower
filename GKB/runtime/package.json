@@ -1,0 +1,13 @@
+{
+  "name": "samantha-gkb-sdk-runtime",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Isolated runtime for verifying TheTowerSDK JSON knowledge exports before GKB ingestion.",
+  "scripts": {
+    "test:sdk-json-exports": "node ../adapter/sdk-json-export-smoke.mjs"
+  },
+  "dependencies": {
+    "thetowersdk": "0.14.1"
+  }
+}
