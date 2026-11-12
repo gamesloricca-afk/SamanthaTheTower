@@ -1,4 +1,4 @@
-name: Samantha - GKB Origin Compatibility Test
+name: Samantha - GKB SDK Runtime Test
 
 on:
   workflow_dispatch:
@@ -7,9 +7,9 @@ permissions:
   contents: read
 
 jobs:
-  origin-compatibility:
+  sdk-runtime:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - name: Checkout GKB branch
@@ -27,3 +27,15 @@ jobs:
 
       - name: Run origin compatibility self-test
         run: node GKB/adapter/origin-compatibility.mjs
+
+      - name: Install TheTowerSDK runtime dependency
+        working-directory: GKB/runtime
+        run: npm install --ignore-scripts --no-audit --no-fund
+
+      - name: Verify installed TheTowerSDK version
+        working-directory: GKB/runtime
+        run: npm ls thetowersdk --depth=0
+
+      - name: Run SDK JSON export smoke test
+        working-directory: GKB/runtime
+        run: npm run test:sdk-json-exports
