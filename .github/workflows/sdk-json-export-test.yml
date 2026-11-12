@@ -1,0 +1,81 @@
+
+name: Samantha - SDK JSON Export Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sdk-test:
+    name: Test TheTowerSDK 0.14.1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          ref: TestAccount
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+          package-manager-cache: false
+
+      - name: Verify environment
+        run: |
+          node --version
+          npm --version
+
+      - name: Install TheTowerSDK
+        run: |
+          mkdir -p "$RUNNER_TEMP/sdk-test"
+
+          npm install \
+            --prefix "$RUNNER_TEMP/sdk-test" \
+            --no-save \
+            --package-lock=false \
+            --ignore-scripts \
+            --no-audit \
+            --no-fund \
+            thetowersdk@0.14.1
+
+      - name: Verify SDK version
+        env:
+          SDK_DIR: ${{ runner.temp }}/sdk-test/node_modules/thetowersdk
+        run: |
+          node -e "
+            const pkg = require(process.env.SDK_DIR + '/package.json');
+
+            console.log('Package:', pkg.name);
+            console.log('Version:', pkg.version);
+
+            if (
+              pkg.name !== 'thetowersdk' ||
+              pkg.version !== '0.14.1'
+            ) {
+              process.exit(1);
+            }
+          "
+
+      - name: Check Samantha test script
+        run: |
+          test -f TheTowerData/scripts/test-sdk-runtime-v3.mjs
+          node --check TheTowerData/scripts/test-sdk-runtime-v3.mjs
+
+      - name: Run SDK JSON export test
+        env:
+          SDK_DIR: ${{ runner.temp }}/sdk-test/node_modules/thetowersdk
+        run: |
+          node TheTowerData/scripts/test-sdk-runtime-v3.mjs \
+            "$SDK_DIR" \
+            "$GITHUB_WORKSPACE/sdk-json-export-report.json"
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Samantha-SDK-JSON-Export-Report
+          path: sdk-json-export-report.json
+          if-no-files-found: warn
+          retention-days: 90
