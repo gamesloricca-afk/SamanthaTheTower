@@ -1,6 +1,3 @@
-
-#!/usr/bin/env node
-
 /**
  * Samantha GKB — SDK Origin Compatibility Adapter
  *
