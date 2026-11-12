@@ -244,6 +244,7 @@ async function main() {
   const ajv = new Ajv2020({
     allErrors: true,
     strict: true,
+    allowUnionTypes: true,
     validateFormats: false
   });
 
@@ -261,7 +262,7 @@ async function main() {
 
   const report = {
     test: 'Samantha GKB SDK Schema and Knowledge Graph Validation',
-    testVersion: '2.0.0',
+    testVersion: '2.1.0',
 
     status: valid ? 'PASSED' : 'FAILED',
 
@@ -287,6 +288,7 @@ async function main() {
       actualVersion: ajvPackage.manifest.version,
       engine: 'Ajv Draft 2020-12',
       strict: true,
+      allowUnionTypes: true,
       formatValidation: false
     },
 
