@@ -1,7 +1,11 @@
+
 name: Samantha - SDK JSON Export Test
 
 on:
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   sdk-test:
@@ -59,22 +63,21 @@ jobs:
 
       - name: Check Samantha test script
         run: |
-          test -f TheTowerData/scripts/test-sdk-runtime-v3.mjs
-          node --check TheTowerData/scripts/test-sdk-runtime-v3.mjs
+          test -f TheTowerData/scripts/test-sdk-runtime-v4.mjs
+          node --check TheTowerData/scripts/test-sdk-runtime-v4.mjs
 
-      - name: Run SDK JSON export test
+      - name: Run SDK Runtime Validator v4
         env:
           SDK_DIR: ${{ runner.temp }}/sdk-test/node_modules/thetowersdk
+          REPORT_PATH: ${{ github.workspace }}/sdk-runtime-v4-report.json
         run: |
-          node TheTowerData/scripts/test-sdk-runtime-v3.mjs \
-            "$SDK_DIR" \
-            "$GITHUB_WORKSPACE/sdk-json-export-report.json"
+          node TheTowerData/scripts/test-sdk-runtime-v4.mjs
 
       - name: Upload test report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Samantha-SDK-JSON-Export-Report
-          path: sdk-json-export-report.json
+          name: Samantha-SDK-Runtime-v4-Report
+          path: sdk-runtime-v4-report.json
           if-no-files-found: warn
           retention-days: 90
