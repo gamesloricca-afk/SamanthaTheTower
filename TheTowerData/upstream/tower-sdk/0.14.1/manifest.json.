@@ -1,0 +1,31 @@
+
+{
+  "database_id": "tower-sdk",
+  "database_type": "RAW_SOURCE_SNAPSHOT",
+  "source": {
+    "name": "TheTowerSDK",
+    "repository": "https://github.com/TmRxJD/TheTowerSDK",
+    "ref": "main",
+    "commit": "9a95672578fa064d71ddd54fad2ce5027a310b3a",
+    "package": "thetowersdk",
+    "version": "0.14.1"
+  },
+  "storage": {
+    "preserve_original_structure": true,
+    "preserve_original_content": true,
+    "allow_modification": false,
+    "allow_normalization": false
+  },
+  "license": {
+    "files": [
+      "LICENSE",
+      "NOTICE"
+    ],
+    "preserve_attribution": true
+  },
+  "validation": {
+    "status": "NOT_VALIDATED",
+    "checksum_status": "NOT_GENERATED",
+    "completeness_status": "NOT_VERIFIED"
+  }
+}
