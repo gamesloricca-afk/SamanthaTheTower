@@ -339,4 +339,4 @@ export function resolve(graph: KnowledgeGraph, query: string): string | null {
   return resolution.confidence === 'weak' || resolution.confidence === 'none'
     ? null
     : resolution.id
-      }
+}
