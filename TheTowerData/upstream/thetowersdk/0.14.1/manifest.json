@@ -1,0 +1,51 @@
+
+{
+  "archive_id": "thetowersdk-0.14.1",
+  "source": {
+    "name": "TheTowerSDK",
+    "repository": "https://github.com/TmRxJD/TheTowerSDK",
+    "package": "thetowersdk",
+    "package_version": "0.14.1",
+    "commit": "9a95672578fa064d71ddd54fad2ce5027a310b3a"
+  },
+  "license": {
+    "declared": "MIT",
+    "license_file": "LICENSE",
+    "notice_file": "NOTICE",
+    "third_party_review_required": true
+  },
+  "preservation": {
+    "archive_status": "NOT_IMPORTED",
+    "source_modified": false,
+    "checksum_algorithm": "SHA-256",
+    "checksum": null,
+    "retrieved_at": null
+  },
+  "third_party_components": [
+    {
+      "name": "zod",
+      "license": "MIT",
+      "redistribution_status": "LICENSE_DECLARED"
+    },
+    {
+      "name": "tower-idle-toolkit",
+      "license": "ISC",
+      "redistribution_status": "NOTICE_DECLARED"
+    },
+    {
+      "name": "Effective Paths",
+      "license": null,
+      "redistribution_status": "CLARIFICATION_REQUIRED"
+    },
+    {
+      "name": "Florent Castelli / Orphis",
+      "license": null,
+      "redistribution_status": "CLARIFICATION_REQUIRED"
+    }
+  ],
+  "limitations": [
+    "Do not assume the SDK MIT license covers all third-party content.",
+    "Do not include game artwork without separate permission.",
+    "Only official JSON save exports are supported by the SDK."
+  ]
+}
