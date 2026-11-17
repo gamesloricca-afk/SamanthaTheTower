@@ -1,10 +1,9 @@
-
 #!/usr/bin/env node
 
 /**
  * Samantha GKB — Origin Mapping / JSON Schema Integration Test
  *
- * Version: 1.0.0
+ * Version: 1.0.1
  * Target SDK: thetowersdk@0.14.1
  * Validator: ajv@8.17.1
  *
@@ -30,7 +29,7 @@ import {
   validateSourceOriginRecord
 } from './origin-mapping.mjs';
 
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 const EXPECTED_AJV_VERSION = '8.17.1';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -242,12 +241,15 @@ async function main() {
     JSON.stringify(unresolved) === original
   );
 
-  // 10. Bulk import remains disabled.
+  // 10. Record the declared safety policy without claiming a runtime test.
+  const bulkImportAllowed = false;
+
   check(
-    'bulk import remains disabled',
-    true,
+    'bulk import policy is declared disabled',
+    bulkImportAllowed === false,
     {
-      bulkImportAllowed: false
+      bulkImportAllowed,
+      verification: 'DECLARATION_ONLY'
     }
   );
 
@@ -266,7 +268,10 @@ async function main() {
     checks,
     automaticNormalization: false,
     originalValuesPreserved: true,
-    bulkImportAllowed: false
+    bulkImportAllowed,
+    limitations: [
+      'Bulk import is recorded as a declared policy, not verified by runtime inspection.'
+    ]
   };
 
   console.log(JSON.stringify(report, null, 2));
