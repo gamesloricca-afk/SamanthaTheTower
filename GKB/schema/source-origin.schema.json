@@ -1,0 +1,157 @@
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source-origin.schema.json",
+  "title": "Samantha GKB Source Origin",
+  "description": "Samantha-owned source classification. Preserves upstream origin values without assuming semantic equivalence.",
+  "type": "object",
+  "required": [
+    "sourceType",
+    "originRaw",
+    "mappingStatus",
+    "mappingEvidence",
+    "upstream"
+  ],
+  "properties": {
+    "sourceType": {
+      "type": ["string", "null"],
+      "enum": [
+        "OFFICIAL",
+        "COMMUNITY",
+        "PLAYER_TESTING",
+        "OTHER",
+        null
+      ]
+    },
+    "originRaw": {},
+    "mappingStatus": {
+      "type": "string",
+      "enum": [
+        "MAPPED",
+        "UNMAPPED_REQUIRES_REVIEW",
+        "UNRESOLVED",
+        "INVALID_OR_MISSING"
+      ]
+    },
+    "mappingEvidence": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "reference",
+            "reason",
+            "reviewedAt",
+            "reviewStatus"
+          ],
+          "properties": {
+            "reference": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reviewedAt": {
+              "type": "string",
+              "format": "date"
+            },
+            "reviewStatus": {
+              "type": "string",
+              "enum": [
+                "APPROVED",
+                "PENDING",
+                "REJECTED"
+              ]
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "upstream": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "package": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "sourceReference": {
+              "type": ["string", "null"]
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mappingStatus": {
+            "const": "MAPPED"
+          }
+        },
+        "required": [
+          "mappingStatus"
+        ]
+      },
+      "then": {
+        "properties": {
+          "sourceType": {
+            "type": "string"
+          },
+          "mappingEvidence": {
+            "type": "object",
+            "properties": {
+              "reviewStatus": {
+                "const": "APPROVED"
+              }
+            },
+            "required": [
+              "reviewStatus"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mappingStatus": {
+            "enum": [
+              "UNMAPPED_REQUIRES_REVIEW",
+              "UNRESOLVED",
+              "INVALID_OR_MISSING"
+            ]
+          }
+        },
+        "required": [
+          "mappingStatus"
+        ]
+      },
+      "then": {
+        "properties": {
+          "sourceType": {
+            "type": "null"
+          },
+          "mappingEvidence": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": true
+}
