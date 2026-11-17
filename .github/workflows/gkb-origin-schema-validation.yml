@@ -1,0 +1,34 @@
+
+name: Samantha - GKB Origin Schema Integration Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  origin-schema-validation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout GKB branch
+        uses: actions/checkout@v5
+        with:
+          ref: GKB
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "20"
+
+      - name: Verify Node.js
+        run: node --version
+
+      - name: Run origin mapping adapter self-test
+        run: node GKB/adapter/origin-mapping.mjs
+
+      - name: Run origin schema integration test
+        working-directory: GKB/runtime
+        run: node ../adapter/origin-schema-validation.mjs
