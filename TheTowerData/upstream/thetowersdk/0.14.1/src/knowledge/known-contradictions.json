@@ -1,0 +1,41 @@
+{
+  "why": [
+    "Contradictions this repository has already looked at, resolved, and chosen to KEEP recorded.",
+    "",
+    "Each one is a community source disagreeing with what the game shows. The graph keeps both claims on purpose -- the compartment source says so: 'Same predicate as the game's value on purpose, so the detector reports the disagreement instead of it sitting here as prose.' Deleting the wiki claim would hide that the wiki is wrong, and someone would re-derive from it.",
+    "",
+    "But the build printed the same 'CONTRADICTION(S) -- review before shipping' line for these three on every single build, which is how a warning stops being read. A NEW contradiction -- the one that matters -- looked exactly like these.",
+    "",
+    "So this file is the floor: anything here is known and prints quietly; anything NOT here is new and fails the emit. It is a floor to work down, not permission to add more. A contradiction is only added after somebody has established which side is right and recorded the primary reference.",
+    ""
+  ],
+  "contradictions": [
+    {
+      "subject": "module.subEffect.slot8",
+      "predicate": "opensAtLevel",
+      "resolvedTo": 241,
+      "origin": "game",
+      "ref": "Observed in game, v28.3.0",
+      "supersedes": "community guide value of 242",
+      "reviewedAt": "2026-08-18"
+    },
+    {
+      "subject": "perk.perkWaveRequirement",
+      "predicate": "appliedAs",
+      "resolvedTo": "multiply",
+      "origin": "game",
+      "ref": "Observed in game, v28.3.0",
+      "supersedes": "wiki value of 'add' -- a factor rather than a step, so anything modelling perk timing from the wiki is wrong by a multiple",
+      "reviewedAt": "2026-08-18"
+    },
+    {
+      "subject": "thorns",
+      "predicate": "protectorPenaltyPercent",
+      "resolvedTo": 30,
+      "origin": "game",
+      "ref": "Observed in game, v28.3.0",
+      "supersedes": "wiki value of 60",
+      "reviewedAt": "2026-08-18"
+    }
+  ]
+}
