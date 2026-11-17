@@ -1,5 +1,3 @@
-
-#!/usr/bin/env node
 /**
  * Samantha GKB — Source Origin Schema Integration Test
  *
