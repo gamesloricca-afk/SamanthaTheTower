@@ -1,0 +1,243 @@
+{
+  "name": "thetowersdk",
+  "version": "0.14.1",
+  "description": "Game data and save-file reading for The Tower â€” build your own calculators and tools.",
+  "license": "MIT",
+  "author": "TmRxJD (https://github.com/TmRxJD)",
+  "homepage": "https://tmrxjd.github.io/TheTowerSDK/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TmRxJD/TheTowerSDK.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TmRxJD/TheTowerSDK/issues"
+  },
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "thetowersdk-mcp": "./mcp/server.mjs"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "the-tower",
+    "thetower",
+    "tower-defense",
+    "game-data",
+    "save-file",
+    "calculator",
+    "sdk"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.build.json && node scripts/copy-assets.mjs && npm run knowledge:emit",
+    "knowledge:emit": "node scripts/emit-knowledge-graph.mjs",
+    "daily-missions:goals": "node scripts/build-daily-mission-goals.mjs",
+    "labs:categories": "node scripts/build-lab-categories.mjs",
+    "clean": "node -e \"const fs=require('fs');fs.rmSync('dist',{recursive:true,force:true})\"",
+    "test": "vitest run",
+    "type-check": "tsc -p tsconfig.build.json --noEmit",
+    "type-check:examples": "tsc -p tsconfig.examples.json",
+    "prepublishOnly": "npm run clean && npm run build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:docs": "node scripts/check-readme-links.mjs",
+    "wiki:build": "node scripts/build-wiki.mjs",
+    "wiki:publish": "node scripts/publish-wiki.mjs",
+    "wiki:check": "node scripts/build-wiki.mjs --check",
+    "lint:published": "node scripts/audit-published-surface.mjs",
+    "lint:specifiers": "node scripts/check-sdk-specifiers.mjs",
+    "examples:run": "node scripts/run-examples.mjs",
+    "lint:conventions": "node scripts/check-conventions.mjs",
+    "lint:boundaries": "node scripts/check-source-boundaries.mjs",
+    "lint:organization": "node scripts/check-organization.mjs",
+    "map": "node scripts/map-the-repo.mjs",
+    "lint:map": "node scripts/map-the-repo.mjs --check",
+    "lint:acronyms": "tsx scripts/check-acronym-expansions.ts",
+    "test:schema": "vitest run tests/data/schemas.test.ts tests/data/schemas-cover-what-they-claim.test.ts",
+    "verify": "node scripts/verify.mjs",
+    "verify:serial": "node scripts/verify.mjs --serial",
+    "mcp": "node mcp/server.mjs",
+    "glossary": "npm run build && node scripts/generate-glossary.mjs",
+    "bot:demo": "tsx templates/bot-starter.ts",
+    "bot:test": "vitest run src/bot",
+    "sheets:test": "vitest run src/sheets",
+    "docs:snippets": "node scripts/build-doc-snippets.mjs",
+    "docs:seed": "npm run docs:snippets && npm run wiki:build",
+    "docs:check": "node scripts/build-doc-snippets.mjs --check && npm run wiki:check && node scripts/check-readme-links.mjs && node scripts/build-patch-notes.mjs --check",
+    "patch-notes:ingest": "node scripts/ingest-patch-notes.mjs",
+    "patch-notes:build": "node scripts/build-patch-notes.mjs",
+    "wasm:build": "node wasm/build.mjs",
+    "wasm:check": "node wasm/build.mjs --check",
+    "wasm:call": "node wasm/run.mjs",
+    "lint:package": "node scripts/audit-package-contents.mjs",
+    "epaths:refresh-reference": "node scripts/refresh-effective-paths-reference.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./data": {
+      "types": "./dist/data/index.d.ts",
+      "require": "./dist/data/index.js",
+      "default": "./dist/data/index.js"
+    },
+    "./save": {
+      "types": "./dist/save/index.d.ts",
+      "require": "./dist/save/index.js",
+      "default": "./dist/save/index.js"
+    },
+    "./node": {
+      "types": "./dist/node/index.d.ts",
+      "require": "./dist/node/index.js",
+      "default": "./dist/node/index.js"
+    },
+    "./save-decoder": {
+      "types": "./dist/save-decoder/index.d.ts",
+      "require": "./dist/save-decoder/index.js",
+      "default": "./dist/save-decoder/index.js"
+    },
+    "./formatting": {
+      "types": "./dist/formatting/index.d.ts",
+      "require": "./dist/formatting/index.js",
+      "default": "./dist/formatting/index.js"
+    },
+    "./builders": {
+      "types": "./dist/builders/index.d.ts",
+      "require": "./dist/builders/index.js",
+      "default": "./dist/builders/index.js"
+    },
+    "./calculators": {
+      "types": "./dist/calculators/index.d.ts",
+      "require": "./dist/calculators/index.js",
+      "default": "./dist/calculators/index.js"
+    },
+    "./mechanics": {
+      "types": "./dist/mechanics/index.d.ts",
+      "require": "./dist/mechanics/index.js",
+      "default": "./dist/mechanics/index.js"
+    },
+    "./wiki": {
+      "types": "./dist/wiki/index.d.ts",
+      "require": "./dist/wiki/index.js",
+      "default": "./dist/wiki/index.js"
+    },
+    "./charts": {
+      "types": "./dist/charts/index.d.ts",
+      "require": "./dist/charts/index.js",
+      "default": "./dist/charts/index.js"
+    },
+    "./contributions": {
+      "types": "./dist/contributions/index.d.ts",
+      "require": "./dist/contributions/index.js",
+      "default": "./dist/contributions/index.js"
+    },
+    "./knowledge": {
+      "types": "./dist/knowledge/index.d.ts",
+      "require": "./dist/knowledge/index.js",
+      "default": "./dist/knowledge/index.js"
+    },
+    "./knowledge-graph.json": "./dist/knowledge/knowledge-graph.v1.json",
+    "./knowledge.schema.json": "./dist/knowledge/knowledge.schema.json",
+    "./package.json": "./package.json",
+    "./sheets": {
+      "types": "./dist/sheets/index.d.ts",
+      "require": "./dist/sheets/index.js",
+      "default": "./dist/sheets/index.js"
+    },
+    "./bot": {
+      "types": "./dist/bot/index.d.ts",
+      "require": "./dist/bot/index.js",
+      "default": "./dist/bot/index.js"
+    },
+    "./assets": {
+      "types": "./dist/assets/index.d.ts",
+      "require": "./dist/assets/index.js",
+      "default": "./dist/assets/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "builders": [
+        "dist/builders/index.d.ts"
+      ],
+      "calculators": [
+        "dist/calculators/index.d.ts"
+      ],
+      "data": [
+        "dist/data/index.d.ts"
+      ],
+      "charts": [
+        "dist/charts/index.d.ts"
+      ],
+      "knowledge": [
+        "dist/knowledge/index.d.ts"
+      ],
+      "save": [
+        "dist/save/index.d.ts"
+      ],
+      "node": [
+        "dist/node/index.d.ts"
+      ],
+      "formatting": [
+        "dist/formatting/index.d.ts"
+      ],
+      "mechanics": [
+        "dist/mechanics/index.d.ts"
+      ],
+      "wiki": [
+        "dist/wiki/index.d.ts"
+      ],
+      "*": [
+        "dist/index.d.ts"
+      ],
+      "sheets": [
+        "dist/sheets/index.d.ts"
+      ],
+      "bot": [
+        "dist/bot/index.d.ts"
+      ],
+      "assets": [
+        "dist/assets/index.d.ts"
+      ],
+      "contributions": [
+        "dist/contributions/index.d.ts"
+      ],
+      "save-decoder": [
+        "dist/save-decoder/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "mcp",
+    "README.md",
+    "CONTRIBUTING.md",
+    "AGENTS.md",
+    "LICENSE",
+    "NOTICE",
+    "!mcp/**/*.test.ts",
+    "!mcp/**/*.test.mjs"
+  ],
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.0",
+    "eslint": "^9.18.0",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.20.0",
+    "vitest": "^3.0.0",
+    "xlsx": "^0.18.5"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  /*
+   * Type-checks the examples against the package's own public entry points.
+   *
+   * `tsconfig.build.json` covers `src` only, so an example could import an
+   * export that no longer exists and nothing would notice — which is exactly
+   * what happened: `01-browse-game-data.ts` imported `generatedLabs` for two
+   * releases after `LAB_CATALOG` replaced it.
+   *
+   * `rootDir` is cleared because examples sit outside `src`, and there is no
+   * emit here to place anywhere.
+   */
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": ".",
+    "paths": {
+      "thetowersdk": ["./src/index.ts"],
+      "thetowersdk/data": ["./src/data/index.ts"],
+      "thetowersdk/save": ["./src/save/index.ts"],
+      "thetowersdk/node": ["./src/node/index.ts"],
+      "thetowersdk/formatting": ["./src/formatting/index.ts"],
+      "thetowersdk/mechanics": ["./src/mechanics/index.ts"],
+      "thetowersdk/wiki": ["./src/wiki/index.ts"],
+      "thetowersdk/save-decoder": ["./src/save-decoder/index.ts"],
+      "thetowersdk/contributions": ["./src/contributions/index.ts"],
+      "thetowersdk/charts": ["./src/charts/index.ts"],
+      "thetowersdk/knowledge": ["./src/knowledge/index.ts"],
+      "thetowersdk/builders": ["./src/builders/index.ts"],
+      "thetowersdk/calculators": ["./src/calculators/index.ts"],
+      "thetowersdk/sheets": ["./src/sheets/index.ts"],
+      "thetowersdk/bot": ["./src/bot/index.ts"],
+      "thetowersdk/assets": ["./src/assets/index.ts"]
+    }
+  },
+  "include": ["examples/**/*.ts", "templates/**/*.ts"]
+}
