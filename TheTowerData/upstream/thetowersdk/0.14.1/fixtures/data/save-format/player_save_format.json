@@ -1,0 +1,131 @@
+{
+  "description": "Documents how Player & Stuff data is stored in the savedFile format",
+  "playerStuffHeaders": {
+    "playerID": "playfabID",
+    "currentTier": "currentTier",
+    "tourneyID": "leagueID",
+    "addPack": "disableAdsUnlockedBool",
+    "starterPack": "starterPackUnlockedBool",
+    "epicPack": "epicPackUnlockedBool",
+    "highestWavePerTier": "highestWaveThisTier",
+    "premiumPass": "milestonesPremiumUnlocked",
+    "atkDissonance": "dissonanceDamageBoost",
+    "hpDissonance": "dissonanceHealthBoost",
+    "coinDissonance": "dissonanceCoinBoost",
+    "uwDissonance": "dissonanceUltDamageBoost",
+    "totalCoinsEarned": "totalCoinsEarned",
+    "totalStonesEarned": "totalStonesEarned",
+    "totalStonesBought": "totalStonesBought",
+    "totalGemsEarned": "totalGemsEarned",
+    "totalGemsBought": "totalGemsBought",
+    "totalKeysEarned": "totalKeysEarned",
+    "battleHistory": "battleHistory"
+  },
+  "fields": {
+    "playfabID": {
+      "description": "The player's unique PlayFab ID string."
+    },
+    "currentTier": {
+      "description": "Integer — the tier the player currently has selected."
+    },
+    "leagueID": {
+      "description": "Integer — the tournament league the player is currently in.",
+      "values": {
+        "0": "Copper",
+        "1": "Silver",
+        "2": "Gold",
+        "3": "Platinum",
+        "4": "Champions",
+        "5": "Legends"
+      }
+    },
+    "disableAdsUnlockedBool": {
+      "description": "Boolean — true if the player has purchased the ad removal pack."
+    },
+    "starterPackUnlockedBool": {
+      "description": "Boolean — true if the player has purchased the starter pack (one-time coin multiplier boost)."
+    },
+    "epicPackUnlockedBool": {
+      "description": "Boolean — true if the player has purchased the epic pack (one-time coin multiplier boost)."
+    },
+    "highestWaveThisTier": {
+      "description": "Integer list — highest wave reached per tier. Index corresponds to tier number. Index 0 is always 0 (no tier 0). Tiers whose wave is <= 0 are skipped entirely. The parser keeps the raw uncapped wave; capping is a display/import choice made in the front end.",
+      "indexing": "tier number → highestWaveThisTier[tier]",
+      "cap": 4500,
+      "capBehaviour": "The save-file UI holds a per-user preference (user property SAVE_FILE_PLAYER_WAVES_AT_CAP, default true) deciding whether a wave above the 4500 milestone cap is shown/imported clamped to 4500 or as the true highest wave reached. See getSaveFilePlayerWaveCapPreference / setSaveFilePlayerWaveCapPreference."
+    },
+    "milestonesPremiumUnlocked": {
+      "description": "Boolean list — whether the premium milestone pass is unlocked for a tier group. Each index covers 3 tiers: index 0 covers tiers 1-3, index 1 covers tiers 4-6, etc.",
+      "indexing": "Math.floor((tier - 1) / 3) → milestonesPremiumUnlocked[index]"
+    },
+    "dissonanceDamageBoost": {
+      "description": "Integer list — attack dissonance bonus multiplier per tier. Index 0 is always 0 (no tier 0). Caps at 5000.",
+      "indexing": "tier number → dissonanceDamageBoost[tier]",
+      "cap": 5000
+    },
+    "dissonanceHealthBoost": {
+      "description": "Integer list — health dissonance bonus multiplier per tier. Index 0 is always 0 (no tier 0). Caps at 5000.",
+      "indexing": "tier number → dissonanceHealthBoost[tier]",
+      "cap": 5000
+    },
+    "dissonanceCoinBoost": {
+      "description": "Integer list — coin dissonance bonus multiplier per tier. Index 0 is always 0 (no tier 0). Caps at 5000.",
+      "indexing": "tier number → dissonanceCoinBoost[tier]",
+      "cap": 5000
+    },
+    "dissonanceUltDamageBoost": {
+      "description": "Integer list — ultimate weapon dissonance bonus multiplier per tier. Index 0 is always 0 (no tier 0). Caps at 5000.",
+      "indexing": "tier number → dissonanceUltDamageBoost[tier]",
+      "cap": 5000
+    },
+    "totalCoinsEarned": {
+      "description": "Number — lifetime coins earned. Rendered with the suffix formatter (see lifetimeValueFormat)."
+    },
+    "totalStonesEarned": {
+      "description": "Number — lifetime stones earned. Summed with totalStonesBought to produce the 'Stones' stat."
+    },
+    "totalStonesBought": {
+      "description": "Number — lifetime stones purchased. Summed with totalStonesEarned to produce the 'Stones' stat."
+    },
+    "totalGemsEarned": {
+      "description": "Number — lifetime gems earned. Summed with totalGemsBought to produce the 'Gems' stat."
+    },
+    "totalGemsBought": {
+      "description": "Number — lifetime gems purchased. Summed with totalGemsEarned to produce the 'Gems' stat."
+    },
+    "totalKeysEarned": {
+      "description": "Number — lifetime keys earned. Rendered with the suffix formatter."
+    },
+    "battleHistory": {
+      "description": "Array of past run records. Only coinsEarned and realTime are read, to derive the 'Coin / Hour' stat.",
+      "type": "Array<{ coinsEarned: number, realTime: number, ... }>",
+      "usedFields": {
+        "coinsEarned": "number — coins earned in that run",
+        "realTime": "number — run duration in seconds"
+      }
+    }
+  },
+  "derivedStats": {
+    "description": "Values computed by parsePlayerStuffData rather than read straight from a save key. These populate the 'Stat' block; statOrder in the returned payload lists them in this order.",
+    "Player ID": "playfabID verbatim",
+    "Farming Tier": "'Tier ' + currentTier",
+    "Tourney League": "leagueID mapped through the league values table; null when leagueID is falsy",
+    "Lifetime Coins": "formatted totalCoinsEarned",
+    "Stones": "formatted totalStonesEarned + totalStonesBought",
+    "Gems": "formatted totalGemsEarned + totalGemsBought",
+    "Keys": "formatted totalKeysEarned",
+    "Coin / Hour": "Mean coins-per-hour over the 3 best runs in battleHistory. Each run contributes coinsEarned / (realTime / 3600); runs missing either field are dropped, the list is sorted descending, and the top 3 (or fewer) are averaged. null when no run qualifies."
+  },
+  "premiumPacks": {
+    "description": "The 'Premium Packs' block, emitted alongside the Stat block. premiumOrder in the returned payload lists these keys.",
+    "Disable Ads": "disableAdsUnlockedBool",
+    "Starter Pack": "starterPackUnlockedBool",
+    "Epic Pack": "epicPackUnlockedBool"
+  },
+  "lifetimeValueFormat": {
+    "description": "Large lifetime totals are abbreviated to 2 decimal places with a power-of-1000 suffix. Values below 1000 are printed as-is (rounded to 2 dp) with no suffix.",
+    "suffixes": ["", "K", "M", "B", "T", "q", "Q", "s", "S", "O", "N", "D"],
+    "beyondD": "Groups past 'D' continue as two-letter suffixes: aa, ab, ac, ... (group 12 → 'aa').",
+    "examples": { "999": "999", "1500": "1.50K", "2500000": "2.50M" }
+  }
+}

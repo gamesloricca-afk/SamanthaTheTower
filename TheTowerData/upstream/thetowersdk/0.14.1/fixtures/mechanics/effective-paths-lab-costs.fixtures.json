@@ -1,0 +1,631 @@
+{
+  "source": "live spreadsheet via tools/effective-paths-oracle",
+  "sheetVersion": "v5.09.02.01",
+  "note": "DVT_LAB_COST(name, level-1) and DVT_LAB_DURATION(name, level) read from the sheet, with no coin discount and no lab speed. Durations are in days.",
+  "cases": [
+    {
+      "sheetName": "Health",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 30
+    },
+    {
+      "sheetName": "Health",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 0.00016203703703703703
+    },
+    {
+      "sheetName": "Health",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 71
+    },
+    {
+      "sheetName": "Health",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 0.0044444444444444444
+    },
+    {
+      "sheetName": "Health",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 772
+    },
+    {
+      "sheetName": "Health",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 0.036631944444444446
+    },
+    {
+      "sheetName": "Health",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 6170
+    },
+    {
+      "sheetName": "Health",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 0.18888888888888888
+    },
+    {
+      "sheetName": "Health Regen",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 30
+    },
+    {
+      "sheetName": "Health Regen",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 0.00016203703703703703
+    },
+    {
+      "sheetName": "Health Regen",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 71
+    },
+    {
+      "sheetName": "Health Regen",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 0.0044444444444444444
+    },
+    {
+      "sheetName": "Health Regen",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 772
+    },
+    {
+      "sheetName": "Health Regen",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 0.036631944444444446
+    },
+    {
+      "sheetName": "Health Regen",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 6170
+    },
+    {
+      "sheetName": "Health Regen",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 0.18888888888888888
+    },
+    {
+      "sheetName": "Defense Absolute",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 30
+    },
+    {
+      "sheetName": "Defense Absolute",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 0.00016203703703703703
+    },
+    {
+      "sheetName": "Defense Absolute",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 71
+    },
+    {
+      "sheetName": "Defense Absolute",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 0.0044444444444444444
+    },
+    {
+      "sheetName": "Defense Absolute",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 772
+    },
+    {
+      "sheetName": "Defense Absolute",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 0.036631944444444446
+    },
+    {
+      "sheetName": "Defense Absolute",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 6170
+    },
+    {
+      "sheetName": "Defense Absolute",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 0.18888888888888888
+    },
+    {
+      "sheetName": "Defense %",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 5000
+    },
+    {
+      "sheetName": "Defense %",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 0.04165509259259259
+    },
+    {
+      "sheetName": "Defense %",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 7500
+    },
+    {
+      "sheetName": "Defense %",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 0.07708333333333334
+    },
+    {
+      "sheetName": "Defense %",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 267000
+    },
+    {
+      "sheetName": "Defense %",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 0.2590277777777778
+    },
+    {
+      "sheetName": "Defense %",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 6580000
+    },
+    {
+      "sheetName": "Defense %",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 1.4958333333333333
+    },
+    {
+      "sheetName": "Wall Health",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 1000000000
+    },
+    {
+      "sheetName": "Wall Health",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 0.23125
+    },
+    {
+      "sheetName": "Wall Health",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 1200000000
+    },
+    {
+      "sheetName": "Wall Health",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 0.23402777777777778
+    },
+    {
+      "sheetName": "Wall Health",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 1810000000
+    },
+    {
+      "sheetName": "Wall Health",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 0.26319444444444445
+    },
+    {
+      "sheetName": "Wall Health",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 2940000000
+    },
+    {
+      "sheetName": "Wall Health",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 0.4097222222222222
+    },
+    {
+      "sheetName": "Wall Regen",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 30000000000
+    },
+    {
+      "sheetName": "Wall Regen",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 1.1569444444444446
+    },
+    {
+      "sheetName": "Wall Regen",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 35100000000
+    },
+    {
+      "sheetName": "Wall Regen",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 1.3895833333333334
+    },
+    {
+      "sheetName": "Wall Regen",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 51210000000
+    },
+    {
+      "sheetName": "Wall Regen",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 2.397222222222222
+    },
+    {
+      "sheetName": "Wall Regen",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 80220000000
+    },
+    {
+      "sheetName": "Wall Regen",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 13.516666666666667
+    },
+    {
+      "sheetName": "Wall Fortification",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 300000000000
+    },
+    {
+      "sheetName": "Wall Fortification",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 2.3148032407407406
+    },
+    {
+      "sheetName": "Wall Fortification",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 300070000000
+    },
+    {
+      "sheetName": "Wall Fortification",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 2.4197800925925925
+    },
+    {
+      "sheetName": "Wall Fortification",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 303280000000
+    },
+    {
+      "sheetName": "Wall Fortification",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 2.7656828703703704
+    },
+    {
+      "sheetName": "Wall Fortification",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 336620000000
+    },
+    {
+      "sheetName": "Wall Fortification",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 3.557824074074074
+    },
+    {
+      "sheetName": "Recovery Package Max",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 20000000000
+    },
+    {
+      "sheetName": "Recovery Package Max",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 2.314583333333333
+    },
+    {
+      "sheetName": "Recovery Package Max",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 25010000000
+    },
+    {
+      "sheetName": "Recovery Package Max",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 2.6625
+    },
+    {
+      "sheetName": "Recovery Package Max",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 40970000000
+    },
+    {
+      "sheetName": "Recovery Package Max",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 3.822222222222222
+    },
+    {
+      "sheetName": "Recovery Package Max",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 86140000000
+    },
+    {
+      "sheetName": "Recovery Package Max",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 7.646527777777778
+    },
+    {
+      "sheetName": "Standard Perks Bonus",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 100000
+    },
+    {
+      "sheetName": "Standard Perks Bonus",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 0.06875
+    },
+    {
+      "sheetName": "Standard Perks Bonus",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 280000
+    },
+    {
+      "sheetName": "Standard Perks Bonus",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 0.23194444444444445
+    },
+    {
+      "sheetName": "Standard Perks Bonus",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 31420000
+    },
+    {
+      "sheetName": "Standard Perks Bonus",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 0.8208333333333333
+    },
+    {
+      "sheetName": "Standard Perks Bonus",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 1770000000
+    },
+    {
+      "sheetName": "Standard Perks Bonus",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 3.2993055555555557
+    },
+    {
+      "sheetName": "Improve Trade-off Perks",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 600000000
+    },
+    {
+      "sheetName": "Improve Trade-off Perks",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 1.0409722222222222
+    },
+    {
+      "sheetName": "Improve Trade-off Perks",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 700030000
+    },
+    {
+      "sheetName": "Improve Trade-off Perks",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 1.6208333333333333
+    },
+    {
+      "sheetName": "Improve Trade-off Perks",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 1050000000
+    },
+    {
+      "sheetName": "Improve Trade-off Perks",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 3.475
+    },
+    {
+      "sheetName": "Improve Trade-off Perks",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 4920000000
+    },
+    {
+      "sheetName": "Improve Trade-off Perks",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 8.456944444444444
+    },
+    {
+      "sheetName": "Chrono Field Reduction %",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 250000
+    },
+    {
+      "sheetName": "Chrono Field Reduction %",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 0.8326388888888889
+    },
+    {
+      "sheetName": "Chrono Field Reduction %",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 285000
+    },
+    {
+      "sheetName": "Chrono Field Reduction %",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 0.9729166666666667
+    },
+    {
+      "sheetName": "Chrono Field Reduction %",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 4230000
+    },
+    {
+      "sheetName": "Chrono Field Reduction %",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 1.492361111111111
+    },
+    {
+      "sheetName": "Chrono Field Reduction %",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 127310000
+    },
+    {
+      "sheetName": "Chrono Field Reduction %",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 3.854861111111111
+    },
+    {
+      "sheetName": "Death Wave Health",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 250000
+    },
+    {
+      "sheetName": "Death Wave Health",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 0.8333217592592592
+    },
+    {
+      "sheetName": "Death Wave Health",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 560000
+    },
+    {
+      "sheetName": "Death Wave Health",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 1.1813541666666667
+    },
+    {
+      "sheetName": "Death Wave Health",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 7750000
+    },
+    {
+      "sheetName": "Death Wave Health",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 2.3259143518518517
+    },
+    {
+      "sheetName": "Death Wave Health",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 276620000
+    },
+    {
+      "sheetName": "Death Wave Health",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 5.730196759259259
+    },
+    {
+      "sheetName": "Chain Thunder",
+      "level": 1,
+      "kind": "cost",
+      "sheetValue": 100000000000
+    },
+    {
+      "sheetName": "Chain Thunder",
+      "level": 1,
+      "kind": "duration",
+      "sheetValue": 8.33332175925926
+    },
+    {
+      "sheetName": "Chain Thunder",
+      "level": 2,
+      "kind": "cost",
+      "sheetValue": 150000000000
+    },
+    {
+      "sheetName": "Chain Thunder",
+      "level": 2,
+      "kind": "duration",
+      "sheetValue": 9.333333333333334
+    },
+    {
+      "sheetName": "Chain Thunder",
+      "level": 5,
+      "kind": "cost",
+      "sheetValue": 506250000000
+    },
+    {
+      "sheetName": "Chain Thunder",
+      "level": 5,
+      "kind": "duration",
+      "sheetValue": 13.112650462962963
+    },
+    {
+      "sheetName": "Chain Thunder",
+      "level": 10,
+      "kind": "cost",
+      "sheetValue": 3840000000000
+    },
+    {
+      "sheetName": "Chain Thunder",
+      "level": 10,
+      "kind": "duration",
+      "sheetValue": 23.108981481481482
+    }
+  ]
+}

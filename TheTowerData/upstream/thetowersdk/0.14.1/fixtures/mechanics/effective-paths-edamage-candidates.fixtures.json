@@ -1,0 +1,418 @@
+{
+  "lab": {
+    "tab": "eDamage",
+    "matrixStart": "HD",
+    "candidates": [
+      {
+        "column": "HD",
+        "sheetName": "Damage"
+      },
+      {
+        "column": "HE",
+        "sheetName": "Damage Mastery"
+      },
+      {
+        "column": "HF",
+        "sheetName": "Standard Perks Bonus"
+      },
+      {
+        "column": "HG",
+        "sheetName": "Improve Trade-off Perks"
+      },
+      {
+        "column": "HH",
+        "sheetName": "Shock Multiplier"
+      },
+      {
+        "column": "HI",
+        "sheetName": "Demon Mode Mastery"
+      },
+      {
+        "column": "HJ",
+        "sheetName": "Critical Chance Mastery"
+      },
+      {
+        "column": "HK",
+        "sheetName": "Critical Factor"
+      },
+      {
+        "column": "HL",
+        "sheetName": "Super Crit Chance"
+      },
+      {
+        "column": "HM",
+        "sheetName": "Super Crit Multi"
+      },
+      {
+        "column": "HN",
+        "sheetName": "Starting Cash"
+      },
+      {
+        "column": "HO",
+        "sheetName": "Attack Speed"
+      },
+      {
+        "column": "HP",
+        "sheetName": "Attack Speed Mastery"
+      },
+      {
+        "column": "HQ",
+        "sheetName": "Range"
+      },
+      {
+        "column": "HR",
+        "sheetName": "Damage / Meter"
+      },
+      {
+        "column": "HS",
+        "sheetName": "Range Mastery"
+      },
+      {
+        "column": "HT",
+        "sheetName": "Super Tower Bonus"
+      },
+      {
+        "column": "HU",
+        "sheetName": "Super Tower Mastery"
+      },
+      {
+        "column": "HV",
+        "sheetName": "Max Rend Armor Multiplier"
+      },
+      {
+        "column": "HW",
+        "sheetName": "Spotlight Missiles"
+      },
+      {
+        "column": "HX",
+        "sheetName": "Swamp Rend"
+      },
+      {
+        "column": "HY",
+        "sheetName": "Death Wave Damage Amplifier"
+      },
+      {
+        "column": "HZ",
+        "sheetName": "Missile Amplifier"
+      },
+      {
+        "column": "IA",
+        "sheetName": "Inner Land Mine - Chrono Jump"
+      },
+      {
+        "column": "IB",
+        "sheetName": "Ultimate Crit Mastery"
+      },
+      {
+        "column": "IC",
+        "sheetName": "Assist Module Bonus - Cannon"
+      },
+      {
+        "column": "ID",
+        "sheetName": "Assist Module Substats - Cannon"
+      },
+      {
+        "column": "IE",
+        "sheetName": "Assist Module Substats - Armor"
+      },
+      {
+        "column": "IF",
+        "sheetName": null
+      },
+      {
+        "column": "IG",
+        "sheetName": "Assist Module Bonus - Core"
+      },
+      {
+        "column": "IH",
+        "sheetName": "Assist Module Substats - Core"
+      },
+      {
+        "column": "II",
+        "sheetName": "Dissonant Echo - Attack"
+      },
+      {
+        "column": "IJ",
+        "sheetName": "Dissonant Echo - Ultimate Weapons"
+      }
+    ]
+  },
+  "stone": {
+    "tab": "eDamage Stone",
+    "matrixStart": "GQ",
+    "candidates": [
+      {
+        "column": "GQ",
+        "sheetName": "DW Damage"
+      },
+      {
+        "column": "GR",
+        "sheetName": "DW Quantity"
+      },
+      {
+        "column": "GS",
+        "sheetName": "DW Cooldown"
+      },
+      {
+        "column": "GT",
+        "sheetName": "CL Damage"
+      },
+      {
+        "column": "GU",
+        "sheetName": "CL Quantity"
+      },
+      {
+        "column": "GV",
+        "sheetName": "CL Chance"
+      },
+      {
+        "column": "GW",
+        "sheetName": "SM Damage"
+      },
+      {
+        "column": "GX",
+        "sheetName": "SM Quantity"
+      },
+      {
+        "column": "GY",
+        "sheetName": "SM Cooldown"
+      },
+      {
+        "column": "GZ",
+        "sheetName": "SM Cover Fire"
+      },
+      {
+        "column": "HA",
+        "sheetName": "SL Damage"
+      },
+      {
+        "column": "HB",
+        "sheetName": "SL Angle"
+      },
+      {
+        "column": "HC",
+        "sheetName": "SL Quantity"
+      },
+      {
+        "column": "HD",
+        "sheetName": "SL Light Range"
+      },
+      {
+        "column": "HE",
+        "sheetName": "PS Damage"
+      },
+      {
+        "column": "HF",
+        "sheetName": "PS Duration"
+      },
+      {
+        "column": "HG",
+        "sheetName": "PS Cooldown"
+      },
+      {
+        "column": "HH",
+        "sheetName": "PS Death Creep"
+      },
+      {
+        "column": "HI",
+        "sheetName": "ILM Damage"
+      },
+      {
+        "column": "HJ",
+        "sheetName": "ILM Quantity"
+      },
+      {
+        "column": "HK",
+        "sheetName": "ILM Cooldown"
+      },
+      {
+        "column": "HL",
+        "sheetName": "ILM Charged Mines"
+      },
+      {
+        "column": "HM",
+        "sheetName": "CF Slow"
+      },
+      {
+        "column": "HN",
+        "sheetName": "CF Chrono Loop"
+      },
+      {
+        "column": "HO",
+        "sheetName": "Assist Module Bonus - Cannon"
+      },
+      {
+        "column": "HP",
+        "sheetName": "Assist Module Substats - Cannon"
+      },
+      {
+        "column": "HQ",
+        "sheetName": "Assist Module Substats - Armor"
+      },
+      {
+        "column": "HR",
+        "sheetName": "Assist Module Bonus - Core"
+      },
+      {
+        "column": "HS",
+        "sheetName": "Assist Module Substats - Core"
+      }
+    ]
+  },
+  "coin": {
+    "tab": "eDamage Coins",
+    "matrixStart": "FZ",
+    "candidates": [
+      {
+        "column": "GA",
+        "sheetName": "Damage +"
+      },
+      {
+        "column": "GB",
+        "sheetName": "Damage Mastery"
+      },
+      {
+        "column": "GC",
+        "sheetName": "Demon Mode Mastery"
+      },
+      {
+        "column": "GD",
+        "sheetName": "Critical Chance Mastery"
+      },
+      {
+        "column": "GE",
+        "sheetName": "Critical Factor +"
+      },
+      {
+        "column": "GF",
+        "sheetName": "Super Crit Mult +"
+      },
+      {
+        "column": "GG",
+        "sheetName": "Cash Bonus +"
+      },
+      {
+        "column": "GH",
+        "sheetName": "Attack Speed +"
+      },
+      {
+        "column": "GI",
+        "sheetName": "Attack Speed Mastery"
+      },
+      {
+        "column": "GJ",
+        "sheetName": "Damage/Meter +"
+      },
+      {
+        "column": "GK",
+        "sheetName": "Range Mastery"
+      },
+      {
+        "column": "GL",
+        "sheetName": "Super Tower Mastery"
+      },
+      {
+        "column": "GM",
+        "sheetName": "Rend Armor +"
+      },
+      {
+        "column": "GN",
+        "sheetName": "Ultimate Crit Mastery"
+      },
+      {
+        "column": "GO",
+        "sheetName": "Primary Module - Cannon"
+      },
+      {
+        "column": "GP",
+        "sheetName": "Assist Module - Cannon"
+      },
+      {
+        "column": "GQ",
+        "sheetName": "Primary Module - Core"
+      },
+      {
+        "column": "GR",
+        "sheetName": "Assist Module - Core"
+      },
+      {
+        "column": "GS",
+        "sheetName": "Assist Module Substats - Cannon"
+      },
+      {
+        "column": "GT",
+        "sheetName": "Assist Module Substats - Armor"
+      },
+      {
+        "column": "GU",
+        "sheetName": "Assist Module Substats - Core"
+      },
+      {
+        "column": "GV",
+        "sheetName": "Assist Module Bonus - Cannon"
+      },
+      {
+        "column": "GW",
+        "sheetName": "Assist Module Bonus - Core"
+      },
+      {
+        "column": "GX",
+        "sheetName": "Dissonant Echo - Attack"
+      },
+      {
+        "column": "GY",
+        "sheetName": "Dissonant Echo - Ultimate Weapons"
+      }
+    ]
+  },
+  "keys": {
+    "tab": "eDamage Keys",
+    "matrixStart": "EI",
+    "candidates": [
+      {
+        "column": "EI",
+        "sheetName": "Damage"
+      },
+      {
+        "column": "EJ",
+        "sheetName": "Critical Chance"
+      },
+      {
+        "column": "EK",
+        "sheetName": "Critical Factor"
+      },
+      {
+        "column": "EL",
+        "sheetName": "Super Crit Chance"
+      },
+      {
+        "column": "EM",
+        "sheetName": "Super Crit Mult"
+      },
+      {
+        "column": "EN",
+        "sheetName": "Attack Speed"
+      },
+      {
+        "column": "EO",
+        "sheetName": "Multishot Chance"
+      },
+      {
+        "column": "EP",
+        "sheetName": "Damage / Meter"
+      },
+      {
+        "column": "EQ",
+        "sheetName": "Rapid Fire Chance"
+      },
+      {
+        "column": "ER",
+        "sheetName": "Bounce Shot Chance"
+      },
+      {
+        "column": "ES",
+        "sheetName": "UW Damage"
+      }
+    ]
+  }
+}

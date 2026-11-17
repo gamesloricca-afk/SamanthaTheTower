@@ -1,0 +1,168 @@
+{
+  "description": "Documents how bot data is structured in the savedFile format",
+  "botHeaders": {
+    "presetNames": "botPresetName",
+    "flameBotPresets": "flameBotPresets",
+    "thunderBotPresets": "thunderBotPresets",
+    "goldenBotPresets": "goldenBotPresets",
+    "amplifyBotPresets": "amplifyBotPresets",
+    "botBotPresets": "botBotPresets",
+    "synchronicityPresets": "synchronicityPresets"
+  },
+  "fields": {
+    "botPresetName": {
+      "description": "List of preset name strings — one per preset slot (4 slots total, only indices 0-2 are used). The app reorders rather than renames: a preset whose stored name is exactly 'Farming' is moved to slot 0 and one named 'Tourney' to slot 1; the rest keep their stored order, and a slot with an empty/missing name falls back to 'Preset N'.",
+      "ordering": "shared.resolvePresetOrder(botPresetName, ['Farming', 'Tourney']) → { order, indices }. All the per-bot preset lists below are indexed with indices[slot], not with slot."
+    },
+    "flameBotPresets": {
+      "description": "List of 4 preset slot objects for Flame Bot. Only indices 0-2 are used. Each object follows the presetStructure schema.",
+      "indexing": "preset index p → flameBotPresets[p]"
+    },
+    "thunderBotPresets": {
+      "description": "List of 4 preset slot objects for Thunder Bot. Only indices 0-2 are used. Each object follows the presetStructure schema.",
+      "indexing": "preset index p → thunderBotPresets[p]"
+    },
+    "goldenBotPresets": {
+      "description": "List of 4 preset slot objects for Golden Bot. Only indices 0-2 are used. Each object follows the presetStructure schema.",
+      "indexing": "preset index p → goldenBotPresets[p]"
+    },
+    "amplifyBotPresets": {
+      "description": "List of 4 preset slot objects for Amplify Bot. Only indices 0-2 are used. Each object follows the presetStructure schema.",
+      "indexing": "preset index p → amplifyBotPresets[p]"
+    },
+    "botBotPresets": {
+      "description": "List of 4 preset slot objects for Bot Bot. Only indices 0-2 are used. Each object follows the presetStructure schema.",
+      "indexing": "preset index p → botBotPresets[p]"
+    },
+    "synchronicityPresets": {
+      "description": "List of 4 preset slot objects for Synchronicity. Only indices 0-2 are used. Each object follows the synchronicityPresets schema.",
+      "indexing": "preset index p → synchronicityPresets[p]"
+    }
+  },
+  "presetStructure": {
+    "description": "Each botPreset key maps to a list of 4 preset slots. Only indices 0-2 are relevant (index 3 is unused).",
+    "presetFields": {
+      "plusUnlocked": "boolean — whether the plus upgrade is unlocked",
+      "active": "boolean — whether this preset is active. NOT the source of the app's 'active' flag; see valueRules.",
+      "_class": "always 'UserBotData'",
+      "plusLevel": "integer — level of the bot's plusUpgrade (single value)",
+      "unlocked": "boolean — whether this preset slot is unlocked",
+      "levels": "array of 4 integers — upgrade levels in the order defined per bot (see below)",
+      "selectedLevels": "array — currently selected upgrade levels (not read by the app)"
+    },
+    "valueRules": {
+      "description": "How a preset slot becomes the values written to the sheet.",
+      "upgradeLevels": "levels[j] → String(level).padStart(2, '0'); a falsy level becomes '00'.",
+      "plusUpgrade": "'Lo' when plusUnlocked is false. When plusUnlocked is true: String(plusLevel).padStart(2, '0'), except that a null/undefined/empty plusLevel also becomes 'Lo'.",
+      "active": "taken from the slot's `unlocked` field (null when that field is absent), not from the slot's `active` field.",
+      "sync": "synchronicityPresets[sourceIndex].synchronicityBots[botIndex] || null"
+    }
+  },
+  "bots": {
+    "Flame Bot": {
+      "botIndex": 0,
+      "savedFileKey": "flameBotPresets",
+      "levelsOrder": {
+        "0": "Damage",
+        "1": "Range",
+        "2": "Cooldown",
+        "3": "Damage R."
+      },
+      "plusUpgrade": {
+        "key": "plusLevel",
+        "name": "Wildfire"
+      }
+    },
+    "Thunder Bot": {
+      "botIndex": 1,
+      "savedFileKey": "thunderBotPresets",
+      "levelsOrder": {
+        "0": "Linger",
+        "1": "Range",
+        "2": "Cooldown",
+        "3": "Duration"
+      },
+      "plusUpgrade": {
+        "key": "plusLevel",
+        "name": "Titan Shock"
+      }
+    },
+    "Golden Bot": {
+      "botIndex": 2,
+      "savedFileKey": "goldenBotPresets",
+      "levelsOrder": {
+        "0": "Bonus",
+        "1": "Range",
+        "2": "Cooldown",
+        "3": "Duration"
+      },
+      "plusUpgrade": {
+        "key": "plusLevel",
+        "name": "Bonus Cell"
+      }
+    },
+    "Amplify Bot": {
+      "botIndex": 3,
+      "savedFileKey": "amplifyBotPresets",
+      "levelsOrder": {
+        "0": "Bonus",
+        "1": "Range",
+        "2": "Cooldown",
+        "3": "Duration"
+      },
+      "plusUpgrade": {
+        "key": "plusLevel",
+        "name": "Echoing Shot"
+      }
+    },
+    "Bot Bot": {
+      "botIndex": 4,
+      "savedFileKey": "botBotPresets",
+      "levelsOrder": {
+        "0": "Bonus",
+        "1": "Range",
+        "2": "Cooldown",
+        "3": "Duration"
+      },
+      "plusUpgrade": {
+        "key": "plusLevel",
+        "name": "Maximum Power"
+      }
+    }
+  },
+  "synchronicityPresets": {
+    "description": "A list of 4 preset slots (indices 0-2 relevant). Each slot has a 'synchronicityBots' array with one entry per bot (5 bots total). Values are null when not assigned.",
+    "slotFields": {
+      "_class": "always 'UserSynchronicityData'",
+      "synchronicityBots": {
+        "description": "array of 5 values — one per bot by index",
+        "0": "Flame Bot",
+        "1": "Thunder Bot",
+        "2": "Golden Bot",
+        "3": "Amplify Bot",
+        "4": "Bot Bot"
+      }
+    }
+  },
+  "example": {
+    "description": "Example of what a single flameBotPresets entry looks like",
+    "flameBotPresets": [
+      {
+        "_class": "UserBotData",
+        "active": true,
+        "unlocked": true,
+        "plusUnlocked": false,
+        "plusLevel": 0,
+        "levels": [3, 2, 1, 0],
+        "selectedLevels": [3, 2, 1, 0]
+      }
+    ],
+    "interpretation": {
+      "levels[0]": "Damage = 3",
+      "levels[1]": "Range = 2",
+      "levels[2]": "Cooldown = 1",
+      "levels[3]": "Damage R. = 0",
+      "plusLevel": "Wildfire = 0"
+    }
+  }
+}

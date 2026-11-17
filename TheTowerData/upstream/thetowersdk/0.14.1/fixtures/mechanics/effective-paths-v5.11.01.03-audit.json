@@ -1,0 +1,62 @@
+{
+  "sheetVersion": "v5.11.01.03",
+  "spreadsheetId": "1YwZtKP6B4WYhRba5T6APJ1YxKNdfnIGQnprgnxmO7zc",
+  "sourceUrl": "https://docs.google.com/spreadsheets/d/1YwZtKP6B4WYhRba5T6APJ1YxKNdfnIGQnprgnxmO7zc",
+  "maintainerReleaseUrl": "https://www.reddit.com/r/TheTowerGame/comments/1vhzriv/the_effective_paths_a_spreadsheet_story/",
+  "modifiedTime": "2026-10-09T17:19:16.246Z",
+  "driveRevision": "78560",
+  "capturedAt": "2026-10-10T01:27:56.291Z",
+  "xlsxSha256": "0afc6456cf78c0d209e7d50997672a3442fb8cb52ab1b0f3d51e38d7a946974c",
+  "lambdaCount": 262,
+  "namedRangeCount": 218,
+  "comparedAgainst": "v5.10.02.02",
+  "changedFunctions": {
+    "EP_SLM_DPS": "LAMBDA(sm_damage, sl_damage, sm_cooldown, sm_heat, sm_aoe, tactical_barrage, has_aoe_card, aoe_card_level, sm_heat * sm_aoe * IF(tactical_barrage, 2, 1) * sm_damage * sl_damage / sm_cooldown * EPD_AOE_CARD_BOOST(has_aoe_card, aoe_card_level))",
+    "EP_SM_DPS": "LAMBDA(sm_damage, sm_quant, sm_cooldown, sm_coverfire, sm_heat, sm_aoe, tactical_barrage, has_aoe_card, aoe_card_level, sm_heat * sm_aoe * IF(tactical_barrage, 2, 1) * (sm_damage * sm_quant / sm_cooldown + sm_coverfire) * EPD_AOE_CARD_BOOST(has_aoe_card, aoe_card_level))",
+    "EPC_GTB": "LAMBDA(stone_lvl, lab_lvl, has_perk, stone_sac, lab_sac, prim_sub, ass_sub, vault, LET(\n  STONE, 5+0.8*stone_lvl,\n  LAB, 0.15*lab_lvl,\n  PERK, IF(has_perk, 1.5, 1),\n  SAC, (1+stone_sac+lab_sac)*0.01,\n  SUBSTAT, prim_sub+ass_sub*SAC,\n  VAULTP, 1+vault,\n\n(STONE+LAB)*PERK+SUBSTAT*VAULTP))",
+    "EPD_SM_HEATUP": "LAMBDA(missile_amp, tactical_barrage, hit_on_same_target, EP_UW_HEATUP(\n  1 + (1.5 * missile_amp * IF(tactical_barrage, 2, 1)),\n  MAX(1, hit_on_same_target)\n))"
+  },
+  "comparisonNotes": [
+    "Seven non-history exported data tables and four formula-bearing DVT tabs are unchanged.",
+    "Current workbook has no Primary Module Bonus lab entries.",
+    "EP blanket Tactical Barrage DPS factor and primary-plus-assist seconds are model assumptions; independent firing-rate validation is not recorded."
+  ],
+  "modelDisagreement": {
+    "mechanic": "Golden Tower Vault",
+    "sheet": "Vault multiplies only substat in EPC_GTB.",
+    "referenceModel": "Vault multiplies base/lab after perk plus module bonus together.",
+    "scope": "Isolated arithmetic reference with supplied inputs. This fixture does not establish game execution or independent behavioral validation.",
+    "verification": "unverified",
+    "counterexample": {
+      "base": 5,
+      "moduleBonus": 0,
+      "vaultFraction": 0.05,
+      "sheetValue": 5,
+      "modelValue": 5.249999761581421
+    }
+  },
+  "changedCellFormulas": {
+    "eDamage Stone!FG5": "IFS(\n  OR($EI5, FG$2), ,\n  EPG_UW_TARGET_LEVEL(CL5+1, \"Chrono Field\", \"Speed Reduction\", $AY$23), ,\n  OR(DVT_UW_STAT(\"Chrono Field\", \"Speed Reduction\", CL5+1)=\"\", EC5>=10), ,\n  TRUE, LET(\n    SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR5, $BC$48),\n    Substat, $AM$39 + SubstatAssistCap * $AO$39,\n    CFSlow, 1/(1-MIN(90%, DVT_UW_STAT(\"Chrono Field\", \"Speed Reduction\", CL5+1)+Substat)),\n    CFP, ED5,\n      Slow, CFSlow * CFP,\n\n    $CV5*($DA5*$DM5*DR5+EB5*$DB5)*Slow)\n)"
+  },
+  "recaptureComparison": {
+    "previousDriveRevision": "78559",
+    "previousXlsxSha256": "995f26dc239d3f56150b9b646b115a1a9bd956f3a98800dbdbbdcc42e216fb64",
+    "formulaDifferences": 0,
+    "namedFunctionsIdentical": true,
+    "namedRangesIdentical": true,
+    "exportedDataTablesIdentical": true
+  },
+  "sdkCostArrayComparison": {
+    "cardMastery": {
+      "range": "DVT_Laboratory!HI3:HI11",
+      "compared": 9,
+      "exactMatches": 9
+    },
+    "moduleUpgrade": {
+      "range": "Data_Val_Tables!EV4:EV302",
+      "compared": 299,
+      "exactMatches": 299
+    },
+    "note": "Matches verify current sheet parity. They do not establish independent game-behavior validation."
+  }
+}

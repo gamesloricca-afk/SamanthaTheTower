@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['20', '22', '24']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      # No lockfile is committed, so this resolves fresh. That is deliberate:
+      # it catches a dependency breaking the package before a user hits it.
+      - run: npm install --no-audit --no-fund
+
+      - run: npm run verify
+
+      # The package must stay installable with no private registry access.
+      - name: Check for non-public dependencies
+        run: |
+          if grep -qE '"(@tmrxjd|workspace:)' package.json; then
+            echo "package.json references a workspace or private dependency"
+            exit 1
+          fi

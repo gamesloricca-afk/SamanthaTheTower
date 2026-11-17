@@ -1,0 +1,233 @@
+{
+  "description": "Documents how Workshop data is stored in the savedFile format. Covers upgrade levels, enhancement levels, preset variants of each, and tier-unlock flags.",
+  "workshopHeaders": {
+    "presetNames":                    "workshopPresetName",
+    "upgradeAttackLevels":            "upgradeWorkshopLevel",
+    "upgradeDefenseLevels":           "upgradeWorkshopDefenseLevel",
+    "upgradeUtilityLevels":           "upgradeWorkshopUtilityLevel",
+    "presetUpgradeAttackLevels":      "presetUpgradeWorkshopLevel",
+    "presetUpgradeDefenseLevels":     "presetUpgradeWorkshopDefenseLevel",
+    "presetUpgradeUtilityLevels":     "presetUpgradeWorkshopUtilityLevel",
+    "enhancementAttackLevels":        "enhancementLevel",
+    "enhancementDefenseLevels":       "enhancementDefenseLevel",
+    "enhancementUtilityLevels":       "enhancementUtilityLevel",
+    "presetEnhancementAttackLevels":  "presetEnhancementLevel",
+    "presetEnhancementDefenseLevels": "presetEnhancementDefenseLevel",
+    "presetEnhancementUtilityLevels": "presetEnhancementUtilityLevel",
+    "upgradeAttackUnlocked":          "upgradeTierUnlocked",
+    "upgradeDefenseUnlocked":         "upgradeDefenseTierUnlocked",
+    "upgradeUtilityUnlocked":         "upgradeUtilityTierUnlocked",
+    "presetUpgradeAttackUnlocked":    "presetUpgradeTierUnlocked",
+    "presetUpgradeDefenseUnlocked":   "presetUpgradeDefenseTierUnlocked",
+    "presetUpgradeUtilityUnlocked":   "presetUpgradeUtilityTierUnlocked"
+  },
+  "fields": {
+    "workshopPresetName": {
+      "description": "List of preset name strings. The app reorders rather than renames: a preset whose stored name is exactly 'Farming' is moved to slot 0 and one named 'Tourney' to slot 1; the rest keep their stored order, and a slot with an empty/missing name falls back to 'Preset N'.",
+      "ordering": "shared.resolvePresetOrder(workshopPresetName, ['Farming', 'Tourney']) → { order, indices }, where indices[slot] is the source index in the raw save list."
+    },
+    "upgradeWorkshopLevel": {
+      "description": "Flat integer list — all presets' Attack upgrade levels packed consecutively. For preset p and upgrade at index i in upgradeIndices.Attack, value is at p * attackUpgradeCount + i.",
+      "indexing": "p * attackUpgradeCount + i",
+      "note": "Non-preset fallback: used in place of presetUpgradeWorkshopLevel when the save has no per-preset data (see presetFallback)."
+    },
+    "upgradeWorkshopDefenseLevel": {
+      "description": "Flat integer list — all presets' Defense upgrade levels packed consecutively.",
+      "indexing": "p * defenseUpgradeCount + i"
+    },
+    "upgradeWorkshopUtilityLevel": {
+      "description": "Flat integer list — all presets' Utility upgrade levels packed consecutively.",
+      "indexing": "p * utilityUpgradeCount + i"
+    },
+    "presetUpgradeWorkshopLevel": {
+      "description": "Flat integer list — preset-specific Attack upgrade levels. Same layout as upgradeWorkshopLevel. Ignored when the save has no per-preset data (see presetFallback).",
+      "indexing": "p * attackUpgradeCount + i"
+    },
+    "presetUpgradeWorkshopDefenseLevel": {
+      "description": "Flat integer list — preset-specific Defense upgrade levels.",
+      "indexing": "p * defenseUpgradeCount + i"
+    },
+    "presetUpgradeWorkshopUtilityLevel": {
+      "description": "Flat integer list — preset-specific Utility upgrade levels.",
+      "indexing": "p * utilityUpgradeCount + i"
+    },
+    "enhancementLevel": {
+      "description": "Flat integer list — all presets' Attack enhancement (Workshop+) levels packed consecutively.",
+      "indexing": "p * attackEnhancementCount + i"
+    },
+    "enhancementDefenseLevel": {
+      "description": "Flat integer list — all presets' Defense enhancement levels.",
+      "indexing": "p * defenseEnhancementCount + i"
+    },
+    "enhancementUtilityLevel": {
+      "description": "Flat integer list — all presets' Utility enhancement levels.",
+      "indexing": "p * utilityEnhancementCount + i"
+    },
+    "presetEnhancementLevel": {
+      "description": "Flat integer list — preset-specific Attack enhancement levels.",
+      "indexing": "p * attackEnhancementCount + i"
+    },
+    "presetEnhancementDefenseLevel": {
+      "description": "Flat integer list — preset-specific Defense enhancement levels.",
+      "indexing": "p * defenseEnhancementCount + i"
+    },
+    "presetEnhancementUtilityLevel": {
+      "description": "Flat integer list — preset-specific Utility enhancement levels.",
+      "indexing": "p * utilityEnhancementCount + i"
+    },
+    "upgradeTierUnlocked": {
+      "description": "Flat boolean list — tier-unlock status for Attack upgrades that have unlockable tiers (upgradeUnlockIndices.Attack). For preset p and unlock group at position u, value is at p * attackUpgradeCount + u. The stride is the category's upgrade count, not its number of unlock groups.",
+      "indexing": "p * attackUpgradeCount + u"
+    },
+    "upgradeDefenseTierUnlocked": {
+      "description": "Flat boolean list — tier-unlock status for Defense upgrades that have unlockable tiers.",
+      "indexing": "p * defenseUpgradeCount + u"
+    },
+    "upgradeUtilityTierUnlocked": {
+      "description": "Flat boolean list — tier-unlock status for Utility upgrades that have unlockable tiers.",
+      "indexing": "p * utilityUpgradeCount + u"
+    },
+    "presetUpgradeTierUnlocked": {
+      "description": "Flat boolean list — preset-specific tier-unlock status for Attack upgrades. If all values are falsy across Attack, Defense and Utility, the non-preset lists are used instead (see presetFallback).",
+      "indexing": "p * attackUpgradeCount + u"
+    },
+    "presetUpgradeDefenseTierUnlocked": {
+      "description": "Flat boolean list — preset-specific tier-unlock status for Defense upgrades.",
+      "indexing": "p * defenseUpgradeCount + u"
+    },
+    "presetUpgradeUtilityTierUnlocked": {
+      "description": "Flat boolean list — preset-specific tier-unlock status for Utility upgrades.",
+      "indexing": "p * utilityUpgradeCount + u"
+    }
+  },
+  "upgradeIndices": {
+    "description": "Ordered upgrade names per category. The numeric key is index i used in all flat-list calculations (p * categoryCount + i). Category keys match those returned by workshop.parseWorkshopData: Attack, Defense, Utility.",
+    "Attack": {
+      "0":  "Damage",
+      "1":  "Attack Speed",
+      "2":  "Critical Chance",
+      "3":  "Critical Factor",
+      "4":  "Range",
+      "5":  "Damage / Meter",
+      "6":  "Multishot Chance",
+      "7":  "Multishot Targets",
+      "8":  "Rapid Fire Chance",
+      "9":  "Rapid Fire Duration",
+      "10": "Bounce Shot Chance",
+      "11": "Bounce Shot Targets",
+      "12": "Bounce Shot Range",
+      "13": "Super Critical Chance",
+      "14": "Super Critical Mult",
+      "15": "Rend Armor Chance",
+      "16": "Rend Armor Mult"
+    },
+    "Defense": {
+      "0":  "Health",
+      "1":  "Health Regen",
+      "2":  "Defense %",
+      "3":  "Defense Absolute",
+      "4":  "Thorn Damage",
+      "5":  "Lifesteal",
+      "6":  "Knockback Chance",
+      "7":  "Knockback Force",
+      "8":  "Orb Speed",
+      "9":  "Orbs",
+      "10": "Shockwave Size",
+      "11": "Shockwave Frequency",
+      "12": "Land Mine Chance",
+      "13": "Land Mine Damage",
+      "14": "Land Mine Radius",
+      "15": "Death Defy",
+      "16": "Wall Health",
+      "17": "Wall Rebuild"
+    },
+    "Utility": {
+      "0":  "Cash Bonus",
+      "1":  "Cash / Wave",
+      "2":  "Coin / Kill Bonus",
+      "3":  "Coin / Wave",
+      "4":  "Free Attack Upgrade",
+      "5":  "Free Defense Upgrade",
+      "6":  "Free Utility Upgrade",
+      "7":  "Interest / Wave",
+      "8":  "Recovery Amount",
+      "9":  "Max Amount",
+      "10": "Package Chance",
+      "11": "Enemy Attack Level Skip",
+      "12": "Enemy Health Level Skip"
+    }
+  },
+  "enhancementIndices": {
+    "description": "Ordered Workshop+ enhancement names per category. The numeric key is index i used in all flat-list calculations (p * categoryCount + i). Category keys match those returned by workshop.parseWorkshopData: Attack, Defense, Utility.",
+    "Attack": {
+      "0": "Damage +",
+      "1": "Rend Armor Mult +",
+      "2": "Critical Factor +",
+      "3": "Damage / Meter +",
+      "4": "Super Crit Multi +",
+      "5": "Attack Speed +"
+    },
+    "Defense": {
+      "0": "Health +",
+      "1": "Health Regen +",
+      "2": "Defense Absolute +",
+      "3": "Land Mine Damage +",
+      "4": "Wall Health +",
+      "5": "Orb Size +"
+    },
+    "Utility": {
+      "0": "Cash Bonus +",
+      "1": "Coin Bonus +",
+      "2": "Cells / Kill Bonus +",
+      "3": "Free Upgrades +",
+      "4": "Recovery Package +",
+      "5": "Enemy Level Skips +"
+    }
+  },
+  "upgradeUnlockIndices": {
+    "description": "Tier-unlock groups per category. The numeric key u is the offset used in tier-unlock flat lists (p * categoryCount + u). Each entry lists all upgrades whose tier is unlocked together by that single unlock flag. The app stores only the first name of each group and matches on it, so the first entry in each list is the representative name.",
+    "Attack": {
+      "0": ["Range",              "Damage / Meter"   ],
+      "1": ["Multishot Chance",   "Multishot Targets"],
+      "2": ["Rapid Fire Chance",  "Rapid Fire Duration"],
+      "3": ["Bounce Shot Chance", "Bounce Shot Targets", "Bounce Shot Range"],
+      "4": ["Super Critical Chance", "Super Critical Mult"],
+      "5": ["Rend Armor Chance",  "Rend Armor Mult"  ]
+    },
+    "Defense": {
+      "0": ["Defense %",       "Defense Absolute"   ],
+      "1": ["Thorn Damage"                          ],
+      "2": ["Lifesteal"                             ],
+      "3": ["Knockback Chance", "Knockback Force"   ],
+      "4": ["Orb Speed",        "Orbs"              ],
+      "5": ["Shockwave Size",   "Shockwave Frequency"],
+      "6": ["Land Mine Chance", "Land Mine Damage",  "Land Mine Radius"],
+      "7": ["Death Defy"                            ],
+      "8": ["Wall Health",      "Wall Rebuild"      ]
+    },
+    "Utility": {
+      "0": ["Cash Bonus",             "Cash / Wave"                             ],
+      "1": ["Coin / Kill Bonus",      "Coin / Wave"                             ],
+      "2": ["Free Attack Upgrade",    "Free Defense Upgrade", "Free Utility Upgrade"],
+      "3": ["Interest / Wave"                                                    ],
+      "4": ["Recovery Amount",        "Max Amount",           "Package Chance"  ],
+      "5": ["Enemy Attack Level Skip","Enemy Health Level Skip"                 ]
+    }
+  },
+  "presetFallback": {
+    "description": "If presetUpgradeTierUnlocked, presetUpgradeDefenseTierUnlocked and presetUpgradeUtilityTierUnlocked contain no truthy value, the save has no per-preset Workshop data (presets not yet unlocked). In that case the non-preset lists are substituted wholesale for their preset counterparts.",
+    "detectedBy": "hasPresets = presetUpgradeAttackUnlocked.some(Boolean) || presetUpgradeDefenseUnlocked.some(Boolean) || presetUpgradeUtilityUnlocked.some(Boolean)",
+    "substitutions": {
+      "presetUpgradeWorkshopLevel": "upgradeWorkshopLevel",
+      "presetUpgradeWorkshopDefenseLevel": "upgradeWorkshopDefenseLevel",
+      "presetUpgradeWorkshopUtilityLevel": "upgradeWorkshopUtilityLevel",
+      "presetEnhancementLevel": "enhancementLevel",
+      "presetEnhancementDefenseLevel": "enhancementDefenseLevel",
+      "presetEnhancementUtilityLevel": "enhancementUtilityLevel",
+      "presetUpgradeTierUnlocked": "upgradeTierUnlocked",
+      "presetUpgradeDefenseTierUnlocked": "upgradeDefenseTierUnlocked",
+      "presetUpgradeUtilityTierUnlocked": "upgradeUtilityTierUnlocked"
+    },
+    "note": "hasPresets is also returned by parseWorkshopData so the import UI can tell whether preset columns are meaningful."
+  }
+}

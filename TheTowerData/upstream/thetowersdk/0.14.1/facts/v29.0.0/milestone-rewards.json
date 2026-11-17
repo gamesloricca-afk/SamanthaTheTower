@@ -1,0 +1,5694 @@
+{
+  "gameVersion": "v29.0.0",
+  "note": "slot is the reward's position within its tier, as the game indexes it",
+  "tiers": [
+    {
+      "tier": 1,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 25.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 10.0
+        },
+        {
+          "slot": 2,
+          "type": "System",
+          "value": null
+        },
+        {
+          "slot": 3,
+          "type": "Coins",
+          "value": 150.0
+        },
+        {
+          "slot": 4,
+          "type": "Gems",
+          "value": 15.0
+        },
+        {
+          "slot": 5,
+          "type": "System",
+          "value": 1.0
+        },
+        {
+          "slot": 6,
+          "type": "System",
+          "value": 2.0
+        },
+        {
+          "slot": 7,
+          "type": "Coins",
+          "value": 1500.0
+        },
+        {
+          "slot": 8,
+          "type": "Gems",
+          "value": 20.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 2.0
+        },
+        {
+          "slot": 10,
+          "type": "Research",
+          "value": 36.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 20.0
+        },
+        {
+          "slot": 12,
+          "type": "Research",
+          "value": 38.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 14,
+          "type": "Research",
+          "value": 40.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 9.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 8.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 50.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 10.0
+        },
+        {
+          "slot": 2,
+          "type": "Gems",
+          "value": 10.0
+        },
+        {
+          "slot": 3,
+          "type": "Coins",
+          "value": 300.0
+        },
+        {
+          "slot": 4,
+          "type": "Gems",
+          "value": 15.0
+        },
+        {
+          "slot": 5,
+          "type": "Gems",
+          "value": 20.0
+        },
+        {
+          "slot": 6,
+          "type": "Coins",
+          "value": 600.0
+        },
+        {
+          "slot": 7,
+          "type": "Coins",
+          "value": 8000.0
+        },
+        {
+          "slot": 8,
+          "type": "Gems",
+          "value": 20.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 10,
+          "type": "Coins",
+          "value": 2500.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 12,
+          "type": "Coins",
+          "value": 30000.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 14,
+          "type": "Coins",
+          "value": 100000.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 35.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 15.0
+        }
+      ]
+    },
+    {
+      "tier": 2,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 250.0
+        },
+        {
+          "slot": 1,
+          "type": "Research",
+          "value": 37.0
+        },
+        {
+          "slot": 2,
+          "type": "Research",
+          "value": 3.0
+        },
+        {
+          "slot": 3,
+          "type": "Research",
+          "value": 32.0
+        },
+        {
+          "slot": 4,
+          "type": "Research",
+          "value": 33.0
+        },
+        {
+          "slot": 5,
+          "type": "Research",
+          "value": 34.0
+        },
+        {
+          "slot": 6,
+          "type": "Gems",
+          "value": 20.0
+        },
+        {
+          "slot": 7,
+          "type": "ResearchGroup",
+          "value": null
+        },
+        {
+          "slot": 8,
+          "type": "System",
+          "value": 3.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 3.0
+        },
+        {
+          "slot": 10,
+          "type": "Research",
+          "value": 80.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 12,
+          "type": "Research",
+          "value": 85.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 14,
+          "type": "Research",
+          "value": 88.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 16,
+          "type": "CardUnlock",
+          "value": 23.0
+        },
+        {
+          "slot": 17,
+          "type": "Research",
+          "value": 193.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 35.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 9.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 350.0
+        },
+        {
+          "slot": 1,
+          "type": "Coins",
+          "value": 500.0
+        },
+        {
+          "slot": 2,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 3,
+          "type": "Coins",
+          "value": 1000.0
+        },
+        {
+          "slot": 4,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 1000.0
+        },
+        {
+          "slot": 6,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 7,
+          "type": "Coins",
+          "value": 5000.0
+        },
+        {
+          "slot": 8,
+          "type": "Coins",
+          "value": 25000.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 10,
+          "type": "Coins",
+          "value": 100000.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 12,
+          "type": "Coins",
+          "value": 200000.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 35.0
+        },
+        {
+          "slot": 14,
+          "type": "Coins",
+          "value": 3000000.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 10.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 20.0
+        }
+      ]
+    },
+    {
+      "tier": 3,
+      "free": [
+        {
+          "slot": 0,
+          "type": "System",
+          "value": 5.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 10.0
+        },
+        {
+          "slot": 2,
+          "type": "Research",
+          "value": 4.0
+        },
+        {
+          "slot": 3,
+          "type": "Coins",
+          "value": 10000.0
+        },
+        {
+          "slot": 4,
+          "type": "Research",
+          "value": 17.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 25000.0
+        },
+        {
+          "slot": 6,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 7,
+          "type": "Research",
+          "value": 14.0
+        },
+        {
+          "slot": 8,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 4.0
+        },
+        {
+          "slot": 10,
+          "type": "Research",
+          "value": 70.0
+        },
+        {
+          "slot": 11,
+          "type": "Research",
+          "value": 26.0
+        },
+        {
+          "slot": 12,
+          "type": "ResearchGroup",
+          "value": 6.0
+        },
+        {
+          "slot": 13,
+          "type": "Research",
+          "value": 71.0
+        },
+        {
+          "slot": 14,
+          "type": "Research",
+          "value": 98.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 35.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 35.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 11.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 10.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 5000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 15.0
+        },
+        {
+          "slot": 2,
+          "type": "Coins",
+          "value": 7500.0
+        },
+        {
+          "slot": 3,
+          "type": "Coins",
+          "value": 10000.0
+        },
+        {
+          "slot": 4,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 25000.0
+        },
+        {
+          "slot": 6,
+          "type": "Gems",
+          "value": 35.0
+        },
+        {
+          "slot": 7,
+          "type": "Coins",
+          "value": 50000.0
+        },
+        {
+          "slot": 8,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 10,
+          "type": "Coins",
+          "value": 300000.0
+        },
+        {
+          "slot": 11,
+          "type": "Coins",
+          "value": 500000.0
+        },
+        {
+          "slot": 12,
+          "type": "Coins",
+          "value": 1000000.0
+        },
+        {
+          "slot": 13,
+          "type": "Coins",
+          "value": 2500000.0
+        },
+        {
+          "slot": 14,
+          "type": "Coins",
+          "value": 5000000.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 20.0
+        }
+      ]
+    },
+    {
+      "tier": 4,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 50000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 20.0
+        },
+        {
+          "slot": 2,
+          "type": "ResearchGroup",
+          "value": 23.0
+        },
+        {
+          "slot": 3,
+          "type": "CardUnlock",
+          "value": 37.0
+        },
+        {
+          "slot": 4,
+          "type": "Research",
+          "value": 82.0
+        },
+        {
+          "slot": 5,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 6,
+          "type": "ResearchGroup",
+          "value": 20.0
+        },
+        {
+          "slot": 7,
+          "type": "Research",
+          "value": 84.0
+        },
+        {
+          "slot": 8,
+          "type": "System",
+          "value": 7.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 5.0
+        },
+        {
+          "slot": 10,
+          "type": "Research",
+          "value": 39.0
+        },
+        {
+          "slot": 11,
+          "type": "ResearchGroup",
+          "value": 5.0
+        },
+        {
+          "slot": 12,
+          "type": "Gems",
+          "value": 35.0
+        },
+        {
+          "slot": 13,
+          "type": "Research",
+          "value": 74.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 12.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 11.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 100000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 2,
+          "type": "Coins",
+          "value": 150000.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 4,
+          "type": "Coins",
+          "value": 200000.0
+        },
+        {
+          "slot": 5,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 6,
+          "type": "Coins",
+          "value": 250000.0
+        },
+        {
+          "slot": 7,
+          "type": "Coins",
+          "value": 300000.0
+        },
+        {
+          "slot": 8,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 10,
+          "type": "Coins",
+          "value": 1000000.0
+        },
+        {
+          "slot": 11,
+          "type": "Coins",
+          "value": 1500000.0
+        },
+        {
+          "slot": 12,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 13,
+          "type": "Coins",
+          "value": 8000000.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 15,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 25.0
+        }
+      ]
+    },
+    {
+      "tier": 5,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 150000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 20.0
+        },
+        {
+          "slot": 2,
+          "type": "Research",
+          "value": 13.0
+        },
+        {
+          "slot": 3,
+          "type": "Research",
+          "value": 87.0
+        },
+        {
+          "slot": 4,
+          "type": "Coins",
+          "value": 500000.0
+        },
+        {
+          "slot": 5,
+          "type": "Research",
+          "value": 102.0
+        },
+        {
+          "slot": 6,
+          "type": "Research",
+          "value": 103.0
+        },
+        {
+          "slot": 7,
+          "type": "Research",
+          "value": 104.0
+        },
+        {
+          "slot": 8,
+          "type": "Research",
+          "value": 105.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 6.0
+        },
+        {
+          "slot": 10,
+          "type": "ResearchGroup",
+          "value": 8.0
+        },
+        {
+          "slot": 11,
+          "type": "ResearchGroup",
+          "value": 10.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 35.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 15,
+          "type": "Research",
+          "value": 95.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 55.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 12.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 300000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 2,
+          "type": "Coins",
+          "value": 500000.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 4,
+          "type": "Coins",
+          "value": 750000.0
+        },
+        {
+          "slot": 5,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 6,
+          "type": "Coins",
+          "value": 1000000.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 8,
+          "type": "Coins",
+          "value": 2500000.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 10,
+          "type": "Coins",
+          "value": 3000000.0
+        },
+        {
+          "slot": 11,
+          "type": "Coins",
+          "value": 5000000.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 15,
+          "type": "Coins",
+          "value": 14000000.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 75.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 13.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 25.0
+        }
+      ]
+    },
+    {
+      "tier": 6,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Research",
+          "value": 153.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 20.0
+        },
+        {
+          "slot": 2,
+          "type": "ResearchGroup",
+          "value": 1.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 4,
+          "type": "Research",
+          "value": 72.0
+        },
+        {
+          "slot": 5,
+          "type": "Research",
+          "value": 228.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 7,
+          "type": "Research",
+          "value": 73.0
+        },
+        {
+          "slot": 8,
+          "type": "Gems",
+          "value": 35.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 7.0
+        },
+        {
+          "slot": 10,
+          "type": "ResearchGroup",
+          "value": 9.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 16,
+          "type": "Research",
+          "value": 18.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 75.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 14.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 13.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 600000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 2,
+          "type": "Coins",
+          "value": 900000.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 4,
+          "type": "Coins",
+          "value": 1300000.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 2500000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 7,
+          "type": "Coins",
+          "value": 4000000.0
+        },
+        {
+          "slot": 8,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 85.0
+        },
+        {
+          "slot": 10,
+          "type": "Coins",
+          "value": 7000000.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 16,
+          "type": "Coins",
+          "value": 20000000.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 25.0
+        }
+      ]
+    },
+    {
+      "tier": 7,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Research",
+          "value": 132.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 25.0
+        },
+        {
+          "slot": 2,
+          "type": "ResearchGroup",
+          "value": 2.0
+        },
+        {
+          "slot": 3,
+          "type": "ResearchGroup",
+          "value": 7.0
+        },
+        {
+          "slot": 4,
+          "type": "ResearchGroup",
+          "value": 4.0
+        },
+        {
+          "slot": 5,
+          "type": "Research",
+          "value": 62.0
+        },
+        {
+          "slot": 6,
+          "type": "Coins",
+          "value": 5000000.0
+        },
+        {
+          "slot": 7,
+          "type": "Research",
+          "value": 97.0
+        },
+        {
+          "slot": 8,
+          "type": "ResearchGroup",
+          "value": 3.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 8.0
+        },
+        {
+          "slot": 10,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 12,
+          "type": "CardUnlock",
+          "value": 22.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 15.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 14.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 3000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 2,
+          "type": "Coins",
+          "value": 5000000.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 4,
+          "type": "Coins",
+          "value": 7000000.0
+        },
+        {
+          "slot": 5,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 6,
+          "type": "Coins",
+          "value": 10000000.0
+        },
+        {
+          "slot": 7,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 8,
+          "type": "Coins",
+          "value": 15000000.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 10,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 75.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 85.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 25.0
+        }
+      ]
+    },
+    {
+      "tier": 8,
+      "free": [
+        {
+          "slot": 0,
+          "type": "ResearchGroup",
+          "value": 18.0
+        },
+        {
+          "slot": 1,
+          "type": "Research",
+          "value": 151.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 4,
+          "type": "Research",
+          "value": 91.0
+        },
+        {
+          "slot": 5,
+          "type": "Gems",
+          "value": 35.0
+        },
+        {
+          "slot": 6,
+          "type": "Coins",
+          "value": 10000000.0
+        },
+        {
+          "slot": 7,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 8,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 9.0
+        },
+        {
+          "slot": 10,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 11,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 12,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 13,
+          "type": "Research",
+          "value": 75.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 15,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 75.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 85.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 15.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 6000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 30.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 4,
+          "type": "Coins",
+          "value": 12000000.0
+        },
+        {
+          "slot": 5,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 6,
+          "type": "Coins",
+          "value": 20000000.0
+        },
+        {
+          "slot": 7,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 8,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 110.0
+        },
+        {
+          "slot": 10,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 11,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 12,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 13,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 75.0
+        },
+        {
+          "slot": 15,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 85.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 110.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 16.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 30.0
+        }
+      ]
+    },
+    {
+      "tier": 9,
+      "free": [
+        {
+          "slot": 0,
+          "type": "ResearchGroup",
+          "value": 11.0
+        },
+        {
+          "slot": 1,
+          "type": "ResearchGroup",
+          "value": 12.0
+        },
+        {
+          "slot": 2,
+          "type": "ResearchGroup",
+          "value": 13.0
+        },
+        {
+          "slot": 3,
+          "type": "ResearchGroup",
+          "value": 14.0
+        },
+        {
+          "slot": 4,
+          "type": "ResearchGroup",
+          "value": 15.0
+        },
+        {
+          "slot": 5,
+          "type": "ResearchGroup",
+          "value": 16.0
+        },
+        {
+          "slot": 6,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 10.0
+        },
+        {
+          "slot": 10,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 11,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 12,
+          "type": "Gems",
+          "value": 55.0
+        },
+        {
+          "slot": 13,
+          "type": "Research",
+          "value": 114.0
+        },
+        {
+          "slot": 14,
+          "type": "Research",
+          "value": 123.0
+        },
+        {
+          "slot": 15,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 75.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 75.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 85.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 17.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 16.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 15000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 35.0
+        },
+        {
+          "slot": 2,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 3,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 4,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 3500000.0
+        },
+        {
+          "slot": 6,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 130.0
+        },
+        {
+          "slot": 10,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 11,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 12,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 13,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 15,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 30.0
+        }
+      ]
+    },
+    {
+      "tier": 10,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 20000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 3,
+          "type": "ResearchGroup",
+          "value": 21.0
+        },
+        {
+          "slot": 4,
+          "type": "ResearchGroup",
+          "value": 24.0
+        },
+        {
+          "slot": 5,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 6,
+          "type": "ResearchGroup",
+          "value": 19.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 11.0
+        },
+        {
+          "slot": 10,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 11,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 12,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 13,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 65.0
+        },
+        {
+          "slot": 15,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 18.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 17.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 40000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 40.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 4,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 5,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 6,
+          "type": "Coins",
+          "value": 65000000.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 140.0
+        },
+        {
+          "slot": 10,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 11,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 12,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 13,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 85.0
+        },
+        {
+          "slot": 15,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 115.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 130.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 30.0
+        }
+      ]
+    },
+    {
+      "tier": 11,
+      "free": [
+        {
+          "slot": 0,
+          "type": "CardUnlock",
+          "value": 34.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 5,
+          "type": "Research",
+          "value": 252.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 5.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 12.0
+        },
+        {
+          "slot": 10,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 11,
+          "type": "ResearchGroup",
+          "value": 17.0
+        },
+        {
+          "slot": 12,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 13,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 75.0
+        },
+        {
+          "slot": 15,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 18.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 100000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 150000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 10,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 11,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 12,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 13,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 14,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 15,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 16,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 17,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 18,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 19,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 20,
+          "type": "Gems",
+          "value": 140.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 20.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 35.0
+        }
+      ]
+    },
+    {
+      "tier": 12,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Research",
+          "value": 130.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 5,
+          "type": "Research",
+          "value": 150.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 10.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 13.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 21.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 19.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 150000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 45.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 300000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 160.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 105.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 125.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 145.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 160.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 40.0
+        }
+      ]
+    },
+    {
+      "tier": 13,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Research",
+          "value": 131.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 300000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 7,
+          "type": "Research",
+          "value": 226.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 15.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 14.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 115.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 130.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 19.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 20.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 300000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 50.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 600000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 180.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 130.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 180.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 45.0
+        }
+      ]
+    },
+    {
+      "tier": 14,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 1500000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Research",
+          "value": 133.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 3,
+          "type": "Research",
+          "value": 144.0
+        },
+        {
+          "slot": 4,
+          "type": "CardUnlock",
+          "value": 33.0
+        },
+        {
+          "slot": 5,
+          "type": "ResearchGroup",
+          "value": 22.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 9,
+          "type": "Tier",
+          "value": 15.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 21.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 3000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 75.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 6000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 300.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 300.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 25.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 60.0
+        }
+      ]
+    },
+    {
+      "tier": 15,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 15000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 30000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 300.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 13,
+          "type": "Tier",
+          "value": 16.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 26.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 22.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 30000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 60000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 400.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 300.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 350.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 70.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 75.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 100.0
+        }
+      ]
+    },
+    {
+      "tier": 16,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 30000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 3,
+          "type": "Research",
+          "value": 152.0
+        },
+        {
+          "slot": 4,
+          "type": "ResearchGroup",
+          "value": 25.0
+        },
+        {
+          "slot": 5,
+          "type": "ResearchGroup",
+          "value": 26.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 9,
+          "type": "System",
+          "value": 4.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 13,
+          "type": "Tier",
+          "value": 17.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 44.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 85.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 60000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 60.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 120000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 160.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 180.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 180.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 60.0
+        }
+      ]
+    },
+    {
+      "tier": 17,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 60000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 5,
+          "type": "ResearchGroup",
+          "value": 34.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 180.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 160.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 13,
+          "type": "Tier",
+          "value": 18.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 220.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 220.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 80.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 86.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 150000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 80.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 300000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 180.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 180.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 220.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 280.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 300.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 45.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 100.0
+        }
+      ]
+    },
+    {
+      "tier": 18,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 100000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 110.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 125.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 200000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 220.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 13,
+          "type": "Tier",
+          "value": 19.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 17,
+          "type": "Research",
+          "value": 199.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 46.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 87.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 300000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 110.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 125.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 500000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 55.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 400.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 55.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 260.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 300.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 350.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 70.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 110.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 130.0
+        }
+      ]
+    },
+    {
+      "tier": 19,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 300000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 3,
+          "type": "System",
+          "value": 6.0
+        },
+        {
+          "slot": 4,
+          "type": "ResearchGroup",
+          "value": 27.0
+        },
+        {
+          "slot": 5,
+          "type": "ResearchGroup",
+          "value": 28.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 9,
+          "type": "ResearchGroup",
+          "value": 30.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 13,
+          "type": "Tier",
+          "value": 20.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 15,
+          "type": "ResearchGroup",
+          "value": 32.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 180.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 60.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 187.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 600000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 1500000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 160.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 220.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 60.0
+        }
+      ]
+    },
+    {
+      "tier": 20,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 600000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 5,
+          "type": "ResearchGroup",
+          "value": 31.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 7,
+          "type": "CardUnlock",
+          "value": 35.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 180.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 180.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 13,
+          "type": "Tier",
+          "value": 21.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 220.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 220.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 80.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 188.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 1500000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 3000000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 140.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 160.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 180.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 240.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 260.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 280.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 350.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 61.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 100.0
+        }
+      ]
+    },
+    {
+      "tier": 21,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 1000000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 140.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 5,
+          "type": "ResearchGroup",
+          "value": 29.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 220.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 13,
+          "type": "Tier",
+          "value": 22.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 300.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 17,
+          "type": "ResearchGroup",
+          "value": 33.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 320.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 62.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 189.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 3000000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 140.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 5000000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 55.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 400.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 55.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 300.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 350.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 400.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 70.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 110.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 130.0
+        }
+      ]
+    },
+    {
+      "tier": 22,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 10000000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 5,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 90.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 20.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 13,
+          "type": "Tier",
+          "value": 23.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 25.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 120.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 78.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 300.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 15000000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 25000000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 175.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 60.0
+        }
+      ]
+    },
+    {
+      "tier": 23,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 25000000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 70.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 3,
+          "type": "ResearchGroup",
+          "value": 36.0
+        },
+        {
+          "slot": 4,
+          "type": "ResearchGroup",
+          "value": 37.0
+        },
+        {
+          "slot": 5,
+          "type": "ResearchGroup",
+          "value": 35.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 30.0
+        },
+        {
+          "slot": 13,
+          "type": "Tier",
+          "value": 24.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 350.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 65.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 301.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 50000000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 100.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 100000000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 300.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 300.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 400.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 79.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 100.0
+        }
+      ]
+    },
+    {
+      "tier": 24,
+      "free": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 250000000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 125.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 125.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 5,
+          "type": "Gems",
+          "value": 125.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 125.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 35.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 175.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 250.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 400.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 60.0
+        },
+        {
+          "slot": 21,
+          "type": "TowerSkin",
+          "value": 80.0
+        },
+        {
+          "slot": 22,
+          "type": "Relic",
+          "value": 302.0
+        }
+      ],
+      "premium": [
+        {
+          "slot": 0,
+          "type": "Coins",
+          "value": 350000000000000.0
+        },
+        {
+          "slot": 1,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 2,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 3,
+          "type": "Gems",
+          "value": 150.0
+        },
+        {
+          "slot": 4,
+          "type": "Stones",
+          "value": 40.0
+        },
+        {
+          "slot": 5,
+          "type": "Coins",
+          "value": 500000000000000.0
+        },
+        {
+          "slot": 6,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 7,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 8,
+          "type": "Stones",
+          "value": 45.0
+        },
+        {
+          "slot": 9,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 10,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 11,
+          "type": "Gems",
+          "value": 200.0
+        },
+        {
+          "slot": 12,
+          "type": "Stones",
+          "value": 50.0
+        },
+        {
+          "slot": 13,
+          "type": "Gems",
+          "value": 300.0
+        },
+        {
+          "slot": 14,
+          "type": "Stones",
+          "value": 55.0
+        },
+        {
+          "slot": 15,
+          "type": "Gems",
+          "value": 350.0
+        },
+        {
+          "slot": 16,
+          "type": "Stones",
+          "value": 55.0
+        },
+        {
+          "slot": 17,
+          "type": "Gems",
+          "value": 400.0
+        },
+        {
+          "slot": 18,
+          "type": "Stones",
+          "value": 60.0
+        },
+        {
+          "slot": 19,
+          "type": "Gems",
+          "value": 500.0
+        },
+        {
+          "slot": 20,
+          "type": "Stones",
+          "value": 70.0
+        },
+        {
+          "slot": 21,
+          "type": "Stones",
+          "value": 110.0
+        },
+        {
+          "slot": 22,
+          "type": "Stones",
+          "value": 130.0
+        }
+      ]
+    }
+  ]
+}

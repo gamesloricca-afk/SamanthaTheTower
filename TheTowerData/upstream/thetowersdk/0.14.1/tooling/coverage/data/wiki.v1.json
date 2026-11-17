@@ -1,0 +1,1110 @@
+{
+  "version": 1,
+  "surface": "wiki",
+  "generatedAt": "2026-08-26T14:48:45.332Z",
+  "notes": "Seeded from mechanics graph wikiPages / byWiki (titles canonicalized via wiki-title-canonical.mjs).",
+  "entries": [
+    {
+      "id": "wiki:Attack Speed",
+      "surface": "wiki",
+      "label": "Attack Speed",
+      "graphNodeIds": [
+        "oracle.attackSpeed"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.attackSpeed"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Bot Bot",
+      "surface": "wiki",
+      "label": "Bot Bot",
+      "graphNodeIds": [
+        "oracle.bot",
+        "oracle.bot.bonus",
+        "oracle.botPlus"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.bot",
+        "node:oracle.bot.bonus",
+        "node:oracle.botPlus"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Bounce Shot",
+      "surface": "wiki",
+      "label": "Bounce Shot",
+      "graphNodeIds": [
+        "oracle.bounceShot"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.bounceShot"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Card Masteries",
+      "surface": "wiki",
+      "label": "Card Masteries",
+      "graphNodeIds": [
+        "oracle.cardMastery",
+        "oracle.cardMastery.AreaofEffect",
+        "oracle.cardMastery.AttackSpeed",
+        "oracle.cardMastery.Berserker",
+        "oracle.cardMastery.Cash",
+        "oracle.cardMastery.Coins",
+        "oracle.cardMastery.CriticalChance",
+        "oracle.cardMastery.CriticalCoin",
+        "oracle.cardMastery.Damage",
+        "oracle.cardMastery.DeathRay",
+        "oracle.cardMastery.DemonMode",
+        "oracle.cardMastery.EnemyBalance",
+        "oracle.cardMastery.EnergyNet",
+        "oracle.cardMastery.EnergyShield",
+        "oracle.cardMastery.ExtraDefense",
+        "oracle.cardMastery.ExtraOrb",
+        "oracle.cardMastery.Fortress",
+        "oracle.cardMastery.FreeUpgrades",
+        "oracle.cardMastery.Health",
+        "oracle.cardMastery.HealthRegen",
+        "oracle.cardMastery.IntroSprint",
+        "oracle.cardMastery.LandMineStun",
+        "oracle.cardMastery.Nuke",
+        "oracle.cardMastery.PackageChance",
+        "oracle.cardMastery.PlasmaCannon",
+        "oracle.cardMastery.Range",
+        "oracle.cardMastery.SecondWind",
+        "oracle.cardMastery.SlowAura",
+        "oracle.cardMastery.SuperTower",
+        "oracle.cardMastery.UltimateCrit",
+        "oracle.cardMastery.WaveAccelerator",
+        "oracle.cardMastery.WaveSkip",
+        "oracle.cardMastery.effect",
+        "oracle.cardMastery.lab",
+        "oracle.cardMastery.naming",
+        "oracle.cardMastery.vocabulary"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.cardMastery",
+        "node:oracle.cardMastery.AreaofEffect",
+        "node:oracle.cardMastery.AttackSpeed",
+        "node:oracle.cardMastery.Berserker",
+        "node:oracle.cardMastery.Cash",
+        "node:oracle.cardMastery.Coins",
+        "node:oracle.cardMastery.CriticalChance",
+        "node:oracle.cardMastery.CriticalCoin",
+        "node:oracle.cardMastery.Damage",
+        "node:oracle.cardMastery.DeathRay",
+        "node:oracle.cardMastery.DemonMode",
+        "node:oracle.cardMastery.EnemyBalance",
+        "node:oracle.cardMastery.EnergyNet",
+        "node:oracle.cardMastery.EnergyShield",
+        "node:oracle.cardMastery.ExtraDefense",
+        "node:oracle.cardMastery.ExtraOrb",
+        "node:oracle.cardMastery.Fortress",
+        "node:oracle.cardMastery.FreeUpgrades",
+        "node:oracle.cardMastery.Health",
+        "node:oracle.cardMastery.HealthRegen",
+        "node:oracle.cardMastery.IntroSprint",
+        "node:oracle.cardMastery.LandMineStun",
+        "node:oracle.cardMastery.Nuke",
+        "node:oracle.cardMastery.PackageChance",
+        "node:oracle.cardMastery.PlasmaCannon",
+        "node:oracle.cardMastery.Range",
+        "node:oracle.cardMastery.SecondWind",
+        "node:oracle.cardMastery.SlowAura",
+        "node:oracle.cardMastery.SuperTower",
+        "node:oracle.cardMastery.UltimateCrit",
+        "node:oracle.cardMastery.WaveAccelerator",
+        "node:oracle.cardMastery.WaveSkip",
+        "node:oracle.cardMastery.effect",
+        "node:oracle.cardMastery.lab",
+        "node:oracle.cardMastery.naming",
+        "node:oracle.cardMastery.vocabulary"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Cards",
+      "surface": "wiki",
+      "label": "Cards",
+      "graphNodeIds": [
+        "oracle.card",
+        "oracle.card.level",
+        "oracle.card.lock",
+        "oracle.card.mastery",
+        "oracle.card.milestoneUnlock",
+        "oracle.card.rarity",
+        "oracle.card.slot",
+        "oracle.card.value"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.card",
+        "node:oracle.card.level",
+        "node:oracle.card.lock",
+        "node:oracle.card.mastery",
+        "node:oracle.card.milestoneUnlock",
+        "node:oracle.card.rarity",
+        "node:oracle.card.slot",
+        "node:oracle.card.value"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Cash Bonus",
+      "surface": "wiki",
+      "label": "Cash Bonus",
+      "graphNodeIds": [
+        "oracle.cashBonus"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.cashBonus"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Coins Per Kill Bonus",
+      "surface": "wiki",
+      "label": "Coins Per Kill Bonus",
+      "graphNodeIds": [
+        "oracle.coinsPerKill"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.coinsPerKill"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Coins Per Wave",
+      "surface": "wiki",
+      "label": "Coins Per Wave",
+      "graphNodeIds": [
+        "oracle.coinsPerWave"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.coinsPerWave"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Critical Hits",
+      "surface": "wiki",
+      "label": "Critical Hits",
+      "graphNodeIds": [
+        "oracle.criticalChance",
+        "oracle.criticalFactor",
+        "oracle.superCritMultiplier"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.criticalChance",
+        "node:oracle.criticalFactor",
+        "node:oracle.superCritMultiplier"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Currency/Gems",
+      "surface": "wiki",
+      "label": "Currency/Gems",
+      "graphNodeIds": [
+        "oracle.currency.gem"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.currency.gem"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Currency/Keys",
+      "surface": "wiki",
+      "label": "Currency/Keys",
+      "graphNodeIds": [
+        "oracle.currency.key"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.currency.key"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Daily Missions",
+      "surface": "wiki",
+      "label": "Daily Missions",
+      "graphNodeIds": [
+        "oracle.dailyMission",
+        "oracle.dailyMission.reroll",
+        "oracle.dailyMission.weeklyReward"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.dailyMission",
+        "node:oracle.dailyMission.reroll",
+        "node:oracle.dailyMission.weeklyReward"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Damage",
+      "surface": "wiki",
+      "label": "Damage",
+      "graphNodeIds": [
+        "oracle.damage",
+        "oracle.damage.berserker",
+        "oracle.damage.superTower",
+        "workshop.Damage"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.damage",
+        "node:oracle.damage.berserker",
+        "node:oracle.damage.superTower",
+        "node:workshop.Damage"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Damage Per Meter",
+      "surface": "wiki",
+      "label": "Damage Per Meter",
+      "graphNodeIds": [
+        "oracle.damagePerMeter"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.damagePerMeter"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Death Defy",
+      "surface": "wiki",
+      "label": "Death Defy",
+      "graphNodeIds": [
+        "oracle.deathDefy",
+        "oracle.deathPrevention",
+        "oracle.energyShield"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.deathDefy",
+        "node:oracle.deathPrevention",
+        "node:oracle.energyShield"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Defense Absolute",
+      "surface": "wiki",
+      "label": "Defense Absolute",
+      "graphNodeIds": [
+        "oracle.defenseAbsolute",
+        "oracle.rule.enemyHeatUp"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.defenseAbsolute",
+        "node:oracle.rule.enemyHeatUp"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Defense Percent",
+      "surface": "wiki",
+      "label": "Defense Percent",
+      "graphNodeIds": [
+        "oracle.defensePercent",
+        "oracle.tower.hardCap"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.defensePercent",
+        "node:oracle.tower.hardCap"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Enemies",
+      "surface": "wiki",
+      "label": "Enemies",
+      "graphNodeIds": [
+        "oracle.enemy",
+        "oracle.enemy.boss",
+        "oracle.enemy.coinDecay",
+        "oracle.enemy.eliteSpawnChance",
+        "oracle.enemy.fleet",
+        "oracle.enemy.mass",
+        "oracle.enemy.protector",
+        "oracle.enemy.saboteur",
+        "oracle.enemy.scatter",
+        "oracle.enemy.typeCoverage",
+        "oracle.enemy.vampire"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.enemy",
+        "node:oracle.enemy.boss",
+        "node:oracle.enemy.coinDecay",
+        "node:oracle.enemy.eliteSpawnChance",
+        "node:oracle.enemy.fleet",
+        "node:oracle.enemy.mass",
+        "node:oracle.enemy.protector",
+        "node:oracle.enemy.saboteur",
+        "node:oracle.enemy.scatter",
+        "node:oracle.enemy.typeCoverage",
+        "node:oracle.enemy.vampire"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Enemy Balance",
+      "surface": "wiki",
+      "label": "Enemy Balance",
+      "graphNodeIds": [
+        "oracle.enemyBalance"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.enemyBalance"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Enemy Level Skip",
+      "surface": "wiki",
+      "label": "Enemy Level Skip",
+      "graphNodeIds": [
+        "oracle.enemyLevelSkip"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.enemyLevelSkip"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Events",
+      "surface": "wiki",
+      "label": "Events",
+      "graphNodeIds": [
+        "oracle.event",
+        "oracle.eventShop"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.event",
+        "node:oracle.eventShop"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Footguns",
+      "surface": "wiki",
+      "label": "Footguns",
+      "graphNodeIds": [
+        "oracle.cooldownSync",
+        "oracle.sentiment.chronoFieldRange",
+        "oracle.sentiment.multiverseNexus",
+        "oracle.sentiment.uwPickOrder",
+        "oracle.upgradePermanence"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.cooldownSync",
+        "node:oracle.sentiment.chronoFieldRange",
+        "node:oracle.sentiment.multiverseNexus",
+        "node:oracle.sentiment.uwPickOrder",
+        "node:oracle.upgradePermanence"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Free Upgrades",
+      "surface": "wiki",
+      "label": "Free Upgrades",
+      "graphNodeIds": [
+        "candidate.eEcon.time.FreeUpgrades",
+        "hide.eEcon.EP2.freeUpgrades",
+        "oracle.freeUpgrades",
+        "oracle.tower.hardCap"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:candidate.eEcon.time.FreeUpgrades",
+        "node:hide.eEcon.EP2.freeUpgrades",
+        "node:oracle.freeUpgrades",
+        "node:oracle.tower.hardCap"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Game Speed",
+      "surface": "wiki",
+      "label": "Game Speed",
+      "graphNodeIds": [
+        "oracle.rule.gameSpeed",
+        "oracle.tower.hardCap"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.rule.gameSpeed",
+        "node:oracle.tower.hardCap"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Golden Bot",
+      "surface": "wiki",
+      "label": "Golden Bot",
+      "graphNodeIds": [
+        "oracle.bot",
+        "oracle.bot.bonus",
+        "oracle.bot.cooldown",
+        "oracle.bot.range"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.bot",
+        "node:oracle.bot.bonus",
+        "node:oracle.bot.cooldown",
+        "node:oracle.bot.range"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Guardian",
+      "surface": "wiki",
+      "label": "Guardian",
+      "graphNodeIds": [
+        "oracle.guardian",
+        "oracle.guardian.chip",
+        "oracle.guardian.slot",
+        "oracle.guardian.upgradeTrack"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.guardian",
+        "node:oracle.guardian.chip",
+        "node:oracle.guardian.slot",
+        "node:oracle.guardian.upgradeTrack"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Health",
+      "surface": "wiki",
+      "label": "Health",
+      "graphNodeIds": [
+        "oracle.effectiveHp",
+        "oracle.health"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.effectiveHp",
+        "node:oracle.health"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Health Regen",
+      "surface": "wiki",
+      "label": "Health Regen",
+      "graphNodeIds": [
+        "oracle.healthRegen"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.healthRegen"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Interest",
+      "surface": "wiki",
+      "label": "Interest",
+      "graphNodeIds": [
+        "oracle.interest"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.interest"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Knockback",
+      "surface": "wiki",
+      "label": "Knockback",
+      "graphNodeIds": [
+        "oracle.knockback"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.knockback"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Lab",
+      "surface": "wiki",
+      "label": "Lab",
+      "graphNodeIds": [
+        "oracle.lab.boost",
+        "oracle.lab.slot"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.lab.boost",
+        "node:oracle.lab.slot"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Lab Upgrades",
+      "surface": "wiki",
+      "label": "Lab Upgrades",
+      "graphNodeIds": [
+        "oracle.lab",
+        "oracle.lab.boost",
+        "oracle.lab.rush",
+        "oracle.lab.slot",
+        "oracle.lab.speed"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.lab",
+        "node:oracle.lab.boost",
+        "node:oracle.lab.rush",
+        "node:oracle.lab.slot",
+        "node:oracle.lab.speed"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Laboratory",
+      "surface": "wiki",
+      "label": "Laboratory",
+      "graphNodeIds": [
+        "lab.AttackSpeed",
+        "lab.Damage"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:lab.AttackSpeed",
+        "node:lab.Damage"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Lifesteal",
+      "surface": "wiki",
+      "label": "Lifesteal",
+      "graphNodeIds": [
+        "oracle.lifesteal"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.lifesteal"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Milestones",
+      "surface": "wiki",
+      "label": "Milestones",
+      "graphNodeIds": [
+        "oracle.milestone"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.milestone"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Modules",
+      "surface": "wiki",
+      "label": "Modules",
+      "graphNodeIds": [
+        "oracle.assistModule",
+        "oracle.assistModule.efficiency",
+        "oracle.assistModule.level",
+        "oracle.assistModule.rarity",
+        "oracle.module",
+        "oracle.module.dailyMissionShards",
+        "oracle.module.economy",
+        "oracle.module.level",
+        "oracle.module.mainEffect",
+        "oracle.module.merge",
+        "oracle.module.rarity",
+        "oracle.module.rerollShards",
+        "oracle.module.shards",
+        "oracle.module.subEffect",
+        "oracle.module.unique",
+        "oracle.module.unique.AmplifyingStrike",
+        "oracle.module.unique.Anti-CubePortal",
+        "oracle.module.unique.AstralDeliverance",
+        "oracle.module.unique.BeingAnnihilator",
+        "oracle.module.unique.BlackHoleDigestor",
+        "oracle.module.unique.DeathPenalty",
+        "oracle.module.unique.DimensionCore",
+        "oracle.module.unique.GalaxyCompressor",
+        "oracle.module.unique.HarmonyConductor",
+        "oracle.module.unique.HavocBringer",
+        "oracle.module.unique.MagneticHook",
+        "oracle.module.unique.MultiverseNexus",
+        "oracle.module.unique.NegativeMassProjector",
+        "oracle.module.unique.OmChip",
+        "oracle.module.unique.OrbitalAugment",
+        "oracle.module.unique.PrimordialCollapse",
+        "oracle.module.unique.ProjectFunding",
+        "oracle.module.unique.PulsarHarvester",
+        "oracle.module.unique.RestorativeBonus",
+        "oracle.module.unique.SharpFortitude",
+        "oracle.module.unique.ShrinkRay",
+        "oracle.module.unique.SingularityHarness",
+        "oracle.module.unique.SpaceDisplacer",
+        "oracle.module.unique.WormholeRedirector",
+        "oracle.module.upgradeCost",
+        "oracle.rule.assistMultiplicative"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.assistModule",
+        "node:oracle.assistModule.efficiency",
+        "node:oracle.assistModule.level",
+        "node:oracle.assistModule.rarity",
+        "node:oracle.module",
+        "node:oracle.module.dailyMissionShards",
+        "node:oracle.module.economy",
+        "node:oracle.module.level",
+        "node:oracle.module.mainEffect",
+        "node:oracle.module.merge",
+        "node:oracle.module.rarity",
+        "node:oracle.module.rerollShards",
+        "node:oracle.module.shards",
+        "node:oracle.module.subEffect",
+        "node:oracle.module.unique",
+        "node:oracle.module.unique.AmplifyingStrike",
+        "node:oracle.module.unique.Anti-CubePortal",
+        "node:oracle.module.unique.AstralDeliverance",
+        "node:oracle.module.unique.BeingAnnihilator",
+        "node:oracle.module.unique.BlackHoleDigestor",
+        "node:oracle.module.unique.DeathPenalty",
+        "node:oracle.module.unique.DimensionCore",
+        "node:oracle.module.unique.GalaxyCompressor",
+        "node:oracle.module.unique.HarmonyConductor",
+        "node:oracle.module.unique.HavocBringer",
+        "node:oracle.module.unique.MagneticHook",
+        "node:oracle.module.unique.MultiverseNexus",
+        "node:oracle.module.unique.NegativeMassProjector",
+        "node:oracle.module.unique.OmChip",
+        "node:oracle.module.unique.OrbitalAugment",
+        "node:oracle.module.unique.PrimordialCollapse",
+        "node:oracle.module.unique.ProjectFunding",
+        "node:oracle.module.unique.PulsarHarvester",
+        "node:oracle.module.unique.RestorativeBonus",
+        "node:oracle.module.unique.SharpFortitude",
+        "node:oracle.module.unique.ShrinkRay",
+        "node:oracle.module.unique.SingularityHarness",
+        "node:oracle.module.unique.SpaceDisplacer",
+        "node:oracle.module.unique.WormholeRedirector",
+        "node:oracle.module.upgradeCost",
+        "node:oracle.rule.assistMultiplicative"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Multishot",
+      "surface": "wiki",
+      "label": "Multishot",
+      "graphNodeIds": [
+        "oracle.multishot"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.multishot"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Orbs",
+      "surface": "wiki",
+      "label": "Orbs",
+      "graphNodeIds": [
+        "oracle.orb",
+        "oracle.tower.hardCap"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.orb",
+        "node:oracle.tower.hardCap"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Perks",
+      "surface": "wiki",
+      "label": "Perks",
+      "graphNodeIds": [
+        "oracle.perk",
+        "oracle.perk.applicationForm",
+        "oracle.perk.quantity",
+        "oracle.perk.stacking",
+        "oracle.perk.tradeOff",
+        "oracle.perk.ultimateWeapon",
+        "oracle.perk.wavesRequired"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.perk",
+        "node:oracle.perk.applicationForm",
+        "node:oracle.perk.quantity",
+        "node:oracle.perk.stacking",
+        "node:oracle.perk.tradeOff",
+        "node:oracle.perk.ultimateWeapon",
+        "node:oracle.perk.wavesRequired"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Rapid Fire",
+      "surface": "wiki",
+      "label": "Rapid Fire",
+      "graphNodeIds": [
+        "oracle.rapidFire"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.rapidFire"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Recovery Packages",
+      "surface": "wiki",
+      "label": "Recovery Packages",
+      "graphNodeIds": [
+        "oracle.deathPrevention",
+        "oracle.recoveryPackage"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.deathPrevention",
+        "node:oracle.recoveryPackage"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Relics",
+      "surface": "wiki",
+      "label": "Relics",
+      "graphNodeIds": [
+        "oracle.relic",
+        "oracle.relic.bonusSummation"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.relic",
+        "node:oracle.relic.bonusSummation"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Rend Armor",
+      "surface": "wiki",
+      "label": "Rend Armor",
+      "graphNodeIds": [
+        "oracle.rendArmor"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.rendArmor"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Shockwave",
+      "surface": "wiki",
+      "label": "Shockwave",
+      "graphNodeIds": [
+        "oracle.shockwave",
+        "oracle.tower.hardCap"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.shockwave",
+        "node:oracle.tower.hardCap"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Slow Aura",
+      "surface": "wiki",
+      "label": "Slow Aura",
+      "graphNodeIds": [
+        "oracle.slowAura"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.slowAura"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Sub-Module Effects",
+      "surface": "wiki",
+      "label": "Sub-Module Effects",
+      "graphNodeIds": [
+        "oracle.module.subEffect"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.module.subEffect"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:The Vault",
+      "surface": "wiki",
+      "label": "The Vault",
+      "graphNodeIds": [
+        "oracle.vault",
+        "oracle.vault.harmonyTree",
+        "oracle.vault.powerTree"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.vault",
+        "node:oracle.vault.harmonyTree",
+        "node:oracle.vault.powerTree"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Themes/Milestones",
+      "surface": "wiki",
+      "label": "Themes/Milestones",
+      "graphNodeIds": [
+        "oracle.theme.taxonomy"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.theme.taxonomy"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Thorn Damage",
+      "surface": "wiki",
+      "label": "Thorn Damage",
+      "graphNodeIds": [
+        "oracle.thorns",
+        "oracle.tower.hardCap"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.thorns",
+        "node:oracle.tower.hardCap"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Tiers",
+      "surface": "wiki",
+      "label": "Tiers",
+      "graphNodeIds": [
+        "oracle.tier",
+        "oracle.tier.battleCondition"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.tier",
+        "node:oracle.tier.battleCondition"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Tournaments",
+      "surface": "wiki",
+      "label": "Tournaments",
+      "graphNodeIds": [
+        "oracle.tournament",
+        "oracle.tournament.heat",
+        "oracle.tournament.league"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.tournament",
+        "node:oracle.tournament.heat",
+        "node:oracle.tournament.league"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Ultimate Weapons",
+      "surface": "wiki",
+      "label": "Ultimate Weapons",
+      "graphNodeIds": [
+        "oracle.rule.ultimateCritCard",
+        "oracle.ultimateWeapon",
+        "oracle.ultimateWeapon.damage",
+        "oracle.ultimateWeapon.duration",
+        "oracle.ultimateWeapon.stat",
+        "oracle.ultimateWeapon.statNaming"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.rule.ultimateCritCard",
+        "node:oracle.ultimateWeapon",
+        "node:oracle.ultimateWeapon.damage",
+        "node:oracle.ultimateWeapon.duration",
+        "node:oracle.ultimateWeapon.stat",
+        "node:oracle.ultimateWeapon.statNaming"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Wall",
+      "surface": "wiki",
+      "label": "Wall",
+      "graphNodeIds": [
+        "oracle.tower.hardCap",
+        "oracle.wall"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.tower.hardCap",
+        "node:oracle.wall"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Wave Skip",
+      "surface": "wiki",
+      "label": "Wave Skip",
+      "graphNodeIds": [
+        "oracle.waveSkip"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.waveSkip"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Workshop Enhancement",
+      "surface": "wiki",
+      "label": "Workshop Enhancement",
+      "graphNodeIds": [
+        "candidate.eEcon.time.CoinBonus",
+        "oracle.workshopEnhancement",
+        "oracle.workshopEnhancement.AttackSpeed",
+        "oracle.workshopEnhancement.CashBonus",
+        "oracle.workshopEnhancement.CellsKillBonus",
+        "oracle.workshopEnhancement.CoinBonus",
+        "oracle.workshopEnhancement.CriticalFactor",
+        "oracle.workshopEnhancement.Damage",
+        "oracle.workshopEnhancement.DamageMeter",
+        "oracle.workshopEnhancement.DefenseAbsolute",
+        "oracle.workshopEnhancement.EnemyLevelSkip",
+        "oracle.workshopEnhancement.FreeUpgrades",
+        "oracle.workshopEnhancement.Health",
+        "oracle.workshopEnhancement.HealthRegen",
+        "oracle.workshopEnhancement.LandMineDamage",
+        "oracle.workshopEnhancement.OrbSize",
+        "oracle.workshopEnhancement.RecoveryPackage",
+        "oracle.workshopEnhancement.RendArmor",
+        "oracle.workshopEnhancement.SuperCritMult",
+        "oracle.workshopEnhancement.WallHealth",
+        "workshop.enhancement.CoinBonus",
+        "workshop.enhancement.utilitySpend"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:candidate.eEcon.time.CoinBonus",
+        "node:oracle.workshopEnhancement",
+        "node:oracle.workshopEnhancement.AttackSpeed",
+        "node:oracle.workshopEnhancement.CashBonus",
+        "node:oracle.workshopEnhancement.CellsKillBonus",
+        "node:oracle.workshopEnhancement.CoinBonus",
+        "node:oracle.workshopEnhancement.CriticalFactor",
+        "node:oracle.workshopEnhancement.Damage",
+        "node:oracle.workshopEnhancement.DamageMeter",
+        "node:oracle.workshopEnhancement.DefenseAbsolute",
+        "node:oracle.workshopEnhancement.EnemyLevelSkip",
+        "node:oracle.workshopEnhancement.FreeUpgrades",
+        "node:oracle.workshopEnhancement.Health",
+        "node:oracle.workshopEnhancement.HealthRegen",
+        "node:oracle.workshopEnhancement.LandMineDamage",
+        "node:oracle.workshopEnhancement.OrbSize",
+        "node:oracle.workshopEnhancement.RecoveryPackage",
+        "node:oracle.workshopEnhancement.RendArmor",
+        "node:oracle.workshopEnhancement.SuperCritMult",
+        "node:oracle.workshopEnhancement.WallHealth",
+        "node:workshop.enhancement.CoinBonus",
+        "node:workshop.enhancement.utilitySpend"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Workshop Enhancement/Attack/Damage",
+      "surface": "wiki",
+      "label": "Workshop Enhancement/Attack/Damage",
+      "graphNodeIds": [
+        "oracle.workshopEnhancement"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.workshopEnhancement"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Workshop Enhancement/Utility/Coin Bonus",
+      "surface": "wiki",
+      "label": "Workshop Enhancement/Utility/Coin Bonus",
+      "graphNodeIds": [
+        "candidate.eEcon.time.CoinBonus",
+        "hide.eEcon.EO2.coinBonus",
+        "workshop.enhancement.CoinBonus"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:candidate.eEcon.time.CoinBonus",
+        "node:hide.eEcon.EO2.coinBonus",
+        "node:workshop.enhancement.CoinBonus"
+      ],
+      "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": "wiki:Workshop Upgrades",
+      "surface": "wiki",
+      "label": "Workshop Upgrades",
+      "graphNodeIds": [
+        "oracle.workshop",
+        "oracle.workshop.gameStatNames",
+        "workshop.Damage"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "node:oracle.workshop",
+        "node:oracle.workshop.gameStatNames",
+        "node:workshop.Damage"
+      ],
+      "reviewedAt": "2026-08-26"
+    }
+  ]
+}

@@ -1,0 +1,604 @@
+{
+ "rows": [
+  {
+   "level": 0,
+   "multiplierCost": 0,
+   "substatCost": 0,
+   "efficiencyPct": 0.01
+  },
+  {
+   "level": 1,
+   "multiplierCost": 15,
+   "substatCost": 15,
+   "efficiencyPct": 0.02
+  },
+  {
+   "level": 2,
+   "multiplierCost": 18,
+   "substatCost": 18,
+   "efficiencyPct": 0.03
+  },
+  {
+   "level": 3,
+   "multiplierCost": 21,
+   "substatCost": 21,
+   "efficiencyPct": 0.04
+  },
+  {
+   "level": 4,
+   "multiplierCost": 24,
+   "substatCost": 24,
+   "efficiencyPct": 0.05
+  },
+  {
+   "level": 5,
+   "multiplierCost": 27,
+   "substatCost": 27,
+   "efficiencyPct": 0.06
+  },
+  {
+   "level": 6,
+   "multiplierCost": 30,
+   "substatCost": 30,
+   "efficiencyPct": 0.07
+  },
+  {
+   "level": 7,
+   "multiplierCost": 33,
+   "substatCost": 33,
+   "efficiencyPct": 0.08
+  },
+  {
+   "level": 8,
+   "multiplierCost": 36,
+   "substatCost": 36,
+   "efficiencyPct": 0.09
+  },
+  {
+   "level": 9,
+   "multiplierCost": 39,
+   "substatCost": 39,
+   "efficiencyPct": 0.1
+  },
+  {
+   "level": 10,
+   "multiplierCost": 42,
+   "substatCost": 42,
+   "efficiencyPct": 0.11
+  },
+  {
+   "level": 11,
+   "multiplierCost": 45,
+   "substatCost": 45,
+   "efficiencyPct": 0.12
+  },
+  {
+   "level": 12,
+   "multiplierCost": 48,
+   "substatCost": 48,
+   "efficiencyPct": 0.13
+  },
+  {
+   "level": 13,
+   "multiplierCost": 51,
+   "substatCost": 51,
+   "efficiencyPct": 0.14
+  },
+  {
+   "level": 14,
+   "multiplierCost": 54,
+   "substatCost": 54,
+   "efficiencyPct": 0.15
+  },
+  {
+   "level": 15,
+   "multiplierCost": 57,
+   "substatCost": 57,
+   "efficiencyPct": 0.16
+  },
+  {
+   "level": 16,
+   "multiplierCost": 60,
+   "substatCost": 60,
+   "efficiencyPct": 0.17
+  },
+  {
+   "level": 17,
+   "multiplierCost": 63,
+   "substatCost": 63,
+   "efficiencyPct": 0.18
+  },
+  {
+   "level": 18,
+   "multiplierCost": 66,
+   "substatCost": 66,
+   "efficiencyPct": 0.19
+  },
+  {
+   "level": 19,
+   "multiplierCost": 69,
+   "substatCost": 69,
+   "efficiencyPct": 0.2
+  },
+  {
+   "level": 20,
+   "multiplierCost": 72,
+   "substatCost": 72,
+   "efficiencyPct": 0.21
+  },
+  {
+   "level": 21,
+   "multiplierCost": 75,
+   "substatCost": 75,
+   "efficiencyPct": 0.22
+  },
+  {
+   "level": 22,
+   "multiplierCost": 78,
+   "substatCost": 78,
+   "efficiencyPct": 0.23
+  },
+  {
+   "level": 23,
+   "multiplierCost": 81,
+   "substatCost": 81,
+   "efficiencyPct": 0.24
+  },
+  {
+   "level": 24,
+   "multiplierCost": 84,
+   "substatCost": 84,
+   "efficiencyPct": 0.25
+  },
+  {
+   "level": 25,
+   "multiplierCost": 87,
+   "substatCost": 87,
+   "efficiencyPct": 0.26
+  },
+  {
+   "level": 26,
+   "multiplierCost": 90,
+   "substatCost": 90,
+   "efficiencyPct": 0.27
+  },
+  {
+   "level": 27,
+   "multiplierCost": 93,
+   "substatCost": 93,
+   "efficiencyPct": 0.28
+  },
+  {
+   "level": 28,
+   "multiplierCost": 96,
+   "substatCost": 96,
+   "efficiencyPct": 0.29
+  },
+  {
+   "level": 29,
+   "multiplierCost": 99,
+   "substatCost": 99,
+   "efficiencyPct": 0.3
+  },
+  {
+   "level": 30,
+   "multiplierCost": 102,
+   "substatCost": 102,
+   "efficiencyPct": 0.31
+  },
+  {
+   "level": 31,
+   "multiplierCost": 105,
+   "substatCost": 105,
+   "efficiencyPct": 0.32
+  },
+  {
+   "level": 32,
+   "multiplierCost": 108,
+   "substatCost": 108,
+   "efficiencyPct": 0.33
+  },
+  {
+   "level": 33,
+   "multiplierCost": 111,
+   "substatCost": 111,
+   "efficiencyPct": 0.34
+  },
+  {
+   "level": 34,
+   "multiplierCost": 114,
+   "substatCost": 114,
+   "efficiencyPct": 0.35000000000000003
+  },
+  {
+   "level": 35,
+   "multiplierCost": 117,
+   "substatCost": 117,
+   "efficiencyPct": 0.36
+  },
+  {
+   "level": 36,
+   "multiplierCost": 120,
+   "substatCost": 120,
+   "efficiencyPct": 0.37
+  },
+  {
+   "level": 37,
+   "multiplierCost": 123,
+   "substatCost": 123,
+   "efficiencyPct": 0.38
+  },
+  {
+   "level": 38,
+   "multiplierCost": 126,
+   "substatCost": 126,
+   "efficiencyPct": 0.39
+  },
+  {
+   "level": 39,
+   "multiplierCost": 129,
+   "substatCost": 129,
+   "efficiencyPct": 0.4
+  },
+  {
+   "level": 40,
+   "multiplierCost": 132,
+   "substatCost": 132,
+   "efficiencyPct": 0.41000000000000003
+  },
+  {
+   "level": 41,
+   "multiplierCost": 135,
+   "substatCost": 135,
+   "efficiencyPct": 0.42
+  },
+  {
+   "level": 42,
+   "multiplierCost": 138,
+   "substatCost": 138,
+   "efficiencyPct": 0.43
+  },
+  {
+   "level": 43,
+   "multiplierCost": 141,
+   "substatCost": 141,
+   "efficiencyPct": 0.44
+  },
+  {
+   "level": 44,
+   "multiplierCost": 144,
+   "substatCost": 144,
+   "efficiencyPct": 0.45
+  },
+  {
+   "level": 45,
+   "multiplierCost": 147,
+   "substatCost": 147,
+   "efficiencyPct": 0.46
+  },
+  {
+   "level": 46,
+   "multiplierCost": 150,
+   "substatCost": 150,
+   "efficiencyPct": 0.47000000000000003
+  },
+  {
+   "level": 47,
+   "multiplierCost": 153,
+   "substatCost": 153,
+   "efficiencyPct": 0.48
+  },
+  {
+   "level": 48,
+   "multiplierCost": 156,
+   "substatCost": 156,
+   "efficiencyPct": 0.49
+  },
+  {
+   "level": 49,
+   "multiplierCost": 159,
+   "substatCost": 159,
+   "efficiencyPct": 0.5
+  },
+  {
+   "level": 50,
+   "multiplierCost": 162,
+   "substatCost": 162,
+   "efficiencyPct": 0.51
+  },
+  {
+   "level": 51,
+   "multiplierCost": 165,
+   "substatCost": 165,
+   "efficiencyPct": 0.52
+  },
+  {
+   "level": 52,
+   "multiplierCost": 168,
+   "substatCost": 168,
+   "efficiencyPct": 0.53
+  },
+  {
+   "level": 53,
+   "multiplierCost": 171,
+   "substatCost": 171,
+   "efficiencyPct": 0.54
+  },
+  {
+   "level": 54,
+   "multiplierCost": 174,
+   "substatCost": 174,
+   "efficiencyPct": 0.55
+  },
+  {
+   "level": 55,
+   "multiplierCost": 177,
+   "substatCost": 177,
+   "efficiencyPct": 0.56
+  },
+  {
+   "level": 56,
+   "multiplierCost": 180,
+   "substatCost": 180,
+   "efficiencyPct": 0.5700000000000001
+  },
+  {
+   "level": 57,
+   "multiplierCost": 183,
+   "substatCost": 183,
+   "efficiencyPct": 0.58
+  },
+  {
+   "level": 58,
+   "multiplierCost": 186,
+   "substatCost": 186,
+   "efficiencyPct": 0.59
+  },
+  {
+   "level": 59,
+   "multiplierCost": 189,
+   "substatCost": 189,
+   "efficiencyPct": 0.6
+  },
+  {
+   "level": 60,
+   "multiplierCost": 192,
+   "substatCost": 192,
+   "efficiencyPct": 0.61
+  },
+  {
+   "level": 61,
+   "multiplierCost": 195,
+   "substatCost": 195,
+   "efficiencyPct": 0.62
+  },
+  {
+   "level": 62,
+   "multiplierCost": 198,
+   "substatCost": 198,
+   "efficiencyPct": 0.63
+  },
+  {
+   "level": 63,
+   "multiplierCost": 201,
+   "substatCost": 201,
+   "efficiencyPct": 0.64
+  },
+  {
+   "level": 64,
+   "multiplierCost": 204,
+   "substatCost": 204,
+   "efficiencyPct": 0.65
+  },
+  {
+   "level": 65,
+   "multiplierCost": 207,
+   "substatCost": 207,
+   "efficiencyPct": 0.66
+  },
+  {
+   "level": 66,
+   "multiplierCost": 210,
+   "substatCost": 210,
+   "efficiencyPct": 0.67
+  },
+  {
+   "level": 67,
+   "multiplierCost": 213,
+   "substatCost": 213,
+   "efficiencyPct": 0.68
+  },
+  {
+   "level": 68,
+   "multiplierCost": 216,
+   "substatCost": 216,
+   "efficiencyPct": 0.6900000000000001
+  },
+  {
+   "level": 69,
+   "multiplierCost": 219,
+   "substatCost": 219,
+   "efficiencyPct": 0.7000000000000001
+  },
+  {
+   "level": 70,
+   "multiplierCost": 222,
+   "substatCost": null,
+   "efficiencyPct": 0.71
+  },
+  {
+   "level": 71,
+   "multiplierCost": 225,
+   "substatCost": null,
+   "efficiencyPct": 0.72
+  },
+  {
+   "level": 72,
+   "multiplierCost": 228,
+   "substatCost": null,
+   "efficiencyPct": 0.73
+  },
+  {
+   "level": 73,
+   "multiplierCost": 231,
+   "substatCost": null,
+   "efficiencyPct": 0.74
+  },
+  {
+   "level": 74,
+   "multiplierCost": 234,
+   "substatCost": null,
+   "efficiencyPct": 0.75
+  },
+  {
+   "level": 75,
+   "multiplierCost": 237,
+   "substatCost": null,
+   "efficiencyPct": 0.76
+  },
+  {
+   "level": 76,
+   "multiplierCost": 240,
+   "substatCost": null,
+   "efficiencyPct": 0.77
+  },
+  {
+   "level": 77,
+   "multiplierCost": 243,
+   "substatCost": null,
+   "efficiencyPct": 0.78
+  },
+  {
+   "level": 78,
+   "multiplierCost": 246,
+   "substatCost": null,
+   "efficiencyPct": 0.79
+  },
+  {
+   "level": 79,
+   "multiplierCost": 249,
+   "substatCost": null,
+   "efficiencyPct": 0.8
+  },
+  {
+   "level": 80,
+   "multiplierCost": 252,
+   "substatCost": null,
+   "efficiencyPct": 0.81
+  },
+  {
+   "level": 81,
+   "multiplierCost": 255,
+   "substatCost": null,
+   "efficiencyPct": 0.8200000000000001
+  },
+  {
+   "level": 82,
+   "multiplierCost": 258,
+   "substatCost": null,
+   "efficiencyPct": 0.8300000000000001
+  },
+  {
+   "level": 83,
+   "multiplierCost": 261,
+   "substatCost": null,
+   "efficiencyPct": 0.84
+  },
+  {
+   "level": 84,
+   "multiplierCost": 264,
+   "substatCost": null,
+   "efficiencyPct": 0.85
+  },
+  {
+   "level": 85,
+   "multiplierCost": 267,
+   "substatCost": null,
+   "efficiencyPct": 0.86
+  },
+  {
+   "level": 86,
+   "multiplierCost": 270,
+   "substatCost": null,
+   "efficiencyPct": 0.87
+  },
+  {
+   "level": 87,
+   "multiplierCost": 273,
+   "substatCost": null,
+   "efficiencyPct": 0.88
+  },
+  {
+   "level": 88,
+   "multiplierCost": 276,
+   "substatCost": null,
+   "efficiencyPct": 0.89
+  },
+  {
+   "level": 89,
+   "multiplierCost": 279,
+   "substatCost": null,
+   "efficiencyPct": 0.9
+  },
+  {
+   "level": 90,
+   "multiplierCost": 282,
+   "substatCost": null,
+   "efficiencyPct": 0.91
+  },
+  {
+   "level": 91,
+   "multiplierCost": 285,
+   "substatCost": null,
+   "efficiencyPct": 0.92
+  },
+  {
+   "level": 92,
+   "multiplierCost": 288,
+   "substatCost": null,
+   "efficiencyPct": 0.93
+  },
+  {
+   "level": 93,
+   "multiplierCost": 291,
+   "substatCost": null,
+   "efficiencyPct": 0.9400000000000001
+  },
+  {
+   "level": 94,
+   "multiplierCost": 294,
+   "substatCost": null,
+   "efficiencyPct": 0.9500000000000001
+  },
+  {
+   "level": 95,
+   "multiplierCost": 297,
+   "substatCost": null,
+   "efficiencyPct": 0.96
+  },
+  {
+   "level": 96,
+   "multiplierCost": 300,
+   "substatCost": null,
+   "efficiencyPct": 0.97
+  },
+  {
+   "level": 97,
+   "multiplierCost": 303,
+   "substatCost": null,
+   "efficiencyPct": 0.98
+  },
+  {
+   "level": 98,
+   "multiplierCost": 306,
+   "substatCost": null,
+   "efficiencyPct": 0.99
+  },
+  {
+   "level": 99,
+   "multiplierCost": 309,
+   "substatCost": null,
+   "efficiencyPct": 1
+  }
+ ]
+}

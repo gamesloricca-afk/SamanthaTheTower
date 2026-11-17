@@ -1,0 +1,584 @@
+{
+ "gameSpeed": [
+  {
+   "displayed": 1,
+   "sheet": 1.07
+  },
+  {
+   "displayed": 1.5,
+   "sheet": 1.605
+  },
+  {
+   "displayed": 2,
+   "sheet": 2
+  },
+  {
+   "displayed": 2.5,
+   "sheet": 2.375
+  },
+  {
+   "displayed": 3,
+   "sheet": 2.7600000000000002
+  },
+  {
+   "displayed": 3.5,
+   "sheet": 3.08
+  },
+  {
+   "displayed": 4,
+   "sheet": 3.36
+  },
+  {
+   "displayed": 4.5,
+   "sheet": 3.69
+  },
+  {
+   "displayed": 5,
+   "sheet": 4
+  },
+  {
+   "displayed": 0.5,
+   "sheet": 0.535
+  }
+ ],
+ "deathWave": [
+  {
+   "unlocked": false,
+   "damage": 316.64,
+   "quantity": 2.59,
+   "cooldown": 311.12,
+   "amp": 6,
+   "sheet": 0
+  },
+  {
+   "unlocked": false,
+   "damage": 147.8,
+   "quantity": 2.73,
+   "cooldown": 298.45,
+   "amp": 6,
+   "sheet": 0
+  },
+  {
+   "unlocked": true,
+   "damage": 469.25,
+   "quantity": 1.77,
+   "cooldown": 105.01,
+   "amp": 6,
+   "sheet": 110.73245405199506
+  },
+  {
+   "unlocked": true,
+   "damage": 479.58,
+   "quantity": 1.75,
+   "cooldown": 34.91,
+   "amp": 6,
+   "sheet": 336.5714694929819
+  },
+  {
+   "unlocked": true,
+   "damage": 251.14,
+   "quantity": 2.39,
+   "cooldown": 193.6,
+   "amp": 5,
+   "sheet": 38.75417097107438
+  },
+  {
+   "unlocked": false,
+   "damage": 317.35,
+   "quantity": 4.36,
+   "cooldown": 126.09,
+   "amp": 8,
+   "sheet": 0
+  },
+  {
+   "unlocked": true,
+   "damage": 79.57,
+   "quantity": 3.29,
+   "cooldown": 162.51,
+   "amp": 3,
+   "sheet": 15.303429635099379
+  },
+  {
+   "unlocked": true,
+   "damage": 100.55,
+   "quantity": 1.86,
+   "cooldown": 201.79,
+   "amp": 6,
+   "sheet": 12.97547945884335
+  }
+ ],
+ "chainLightning": [
+  {
+   "damage": 103.66,
+   "quantity": 2.38,
+   "chance": 0.0871,
+   "aspd": 4.56,
+   "rapid": 1.42,
+   "multi": 1.34,
+   "bounce": 2.91,
+   "speed": 1,
+   "sheet": 32.689563101263325
+  },
+  {
+   "damage": 275.65,
+   "quantity": 3.63,
+   "chance": 0.1168,
+   "aspd": 5.07,
+   "rapid": 1.6600000000000001,
+   "multi": 2.88,
+   "bounce": 1.15,
+   "speed": 2,
+   "sheet": 481.71740153096766
+  },
+  {
+   "damage": 11.29,
+   "quantity": 0.2,
+   "chance": 0.1943,
+   "aspd": 1.53,
+   "rapid": 1.81,
+   "multi": 1.85,
+   "bounce": 1.34,
+   "speed": 3,
+   "sheet": 0.21184854330843503
+  },
+  {
+   "damage": 73.21,
+   "quantity": 1.16,
+   "chance": 0.0678,
+   "aspd": 1.92,
+   "rapid": 1.07,
+   "multi": 1.49,
+   "bounce": 3.11,
+   "speed": 4,
+   "sheet": 3.258459879260407
+  },
+  {
+   "damage": 150.83,
+   "quantity": 0.5,
+   "chance": 0.0343,
+   "aspd": 4.72,
+   "rapid": 1.12,
+   "multi": 2.16,
+   "bounce": 1.81,
+   "speed": 5,
+   "sheet": 9.556634900542706
+  },
+  {
+   "damage": 230.88,
+   "quantity": 3.21,
+   "chance": 0.0013,
+   "aspd": 7.01,
+   "rapid": 1.04,
+   "multi": 3.42,
+   "bounce": 2.29,
+   "speed": 1,
+   "sheet": 3.5782082689978294
+  },
+  {
+   "damage": 247.28,
+   "quantity": 5.17,
+   "chance": 0.1167,
+   "aspd": 4.26,
+   "rapid": 1.9100000000000001,
+   "multi": 3.2,
+   "bounce": 2.9699999999999998,
+   "speed": 2,
+   "sheet": 1649.718219351927
+  },
+  {
+   "damage": 189.31,
+   "quantity": 0.4,
+   "chance": 0.0585,
+   "aspd": 8.7,
+   "rapid": 1.49,
+   "multi": 3.17,
+   "bounce": 3.01,
+   "speed": 3,
+   "sheet": 166.83272983915035
+  }
+ ],
+ "smartMissiles": [
+  {
+   "damage": 358.82,
+   "quantity": 8.3,
+   "cooldown": 60.92,
+   "coverFire": 47.59,
+   "heat": 1.26,
+   "aoe": 1.4,
+   "card": true,
+   "level": 6,
+   "sheet": 204.22285968220612
+  },
+  {
+   "damage": 93.42,
+   "quantity": 2.47,
+   "cooldown": 72.66,
+   "coverFire": 4.25,
+   "heat": 2.46,
+   "aoe": 1.6800000000000002,
+   "card": false,
+   "level": 5,
+   "sheet": 30.688992
+  },
+  {
+   "damage": 251.03,
+   "quantity": 1.14,
+   "cooldown": 204.73,
+   "coverFire": 41.06,
+   "heat": 1,
+   "aoe": 1.85,
+   "card": true,
+   "level": 3,
+   "sheet": 87.18711843891955
+  },
+  {
+   "damage": 361.05,
+   "quantity": 6.02,
+   "cooldown": 59.9,
+   "coverFire": 24.71,
+   "heat": 2.54,
+   "aoe": 1.9300000000000002,
+   "card": true,
+   "level": 7,
+   "sheet": 373.7671750834724
+  },
+  {
+   "damage": 282.54,
+   "quantity": 5.58,
+   "cooldown": 177.51,
+   "coverFire": 4.86,
+   "heat": 1.87,
+   "aoe": 1.21,
+   "card": true,
+   "level": 2,
+   "sheet": 33.58057307198919
+  },
+  {
+   "damage": 296.15,
+   "quantity": 0.17,
+   "cooldown": 38.75,
+   "coverFire": 8.42,
+   "heat": 1.75,
+   "aoe": 1.87,
+   "card": false,
+   "level": 7,
+   "sheet": 31.806208677419356
+  },
+  {
+   "damage": 101.12,
+   "quantity": 6.72,
+   "cooldown": 69.87,
+   "coverFire": 44.8,
+   "heat": 1.29,
+   "aoe": 1.22,
+   "card": true,
+   "level": 2,
+   "sheet": 92.67734947888366
+  },
+  {
+   "damage": 141.55,
+   "quantity": 2.94,
+   "cooldown": 127.31,
+   "coverFire": 16.04,
+   "heat": 2.29,
+   "aoe": 1.19,
+   "card": true,
+   "level": 7,
+   "sheet": 65.77317606570575
+  }
+ ],
+ "spotlightMissiles": [
+  {
+   "sm": 176.05,
+   "sl": 36.56,
+   "cooldown": 7.99,
+   "heat": 2.5,
+   "aoe": 1.08,
+   "card": true,
+   "level": 6,
+   "sheet": 2609.999639549437
+  },
+  {
+   "sm": 183.06,
+   "sl": 29.57,
+   "cooldown": 18.57,
+   "heat": 2.9699999999999998,
+   "aoe": 1.48,
+   "card": false,
+   "level": 2,
+   "sheet": 1281.3006413311748
+  },
+  {
+   "sm": 287.75,
+   "sl": 11.76,
+   "cooldown": 15.79,
+   "heat": 2.62,
+   "aoe": 1.5,
+   "card": true,
+   "level": 0,
+   "sheet": 884.3463210892971
+  },
+  {
+   "sm": 369.91,
+   "sl": 24.13,
+   "cooldown": 8.870000000000001,
+   "heat": 1.37,
+   "aoe": 1.13,
+   "card": true,
+   "level": 6,
+   "sheet": 1869.4335424437434
+  },
+  {
+   "sm": 160.28,
+   "sl": 32.21,
+   "cooldown": 14.01,
+   "heat": 1.8,
+   "aoe": 1.92,
+   "card": true,
+   "level": 3,
+   "sheet": 1413.6068333910066
+  },
+  {
+   "sm": 340.36,
+   "sl": 27.05,
+   "cooldown": 14.1,
+   "heat": 1.5699999999999998,
+   "aoe": 1.42,
+   "card": true,
+   "level": 1,
+   "sheet": 1528.494807238288
+  },
+  {
+   "sm": 77.92,
+   "sl": 17.25,
+   "cooldown": 16.5,
+   "heat": 2.77,
+   "aoe": 1.73,
+   "card": true,
+   "level": 7,
+   "sheet": 487.9664736363636
+  },
+  {
+   "sm": 150.74,
+   "sl": 12.32,
+   "cooldown": 7.49,
+   "heat": 1.73,
+   "aoe": 1.07,
+   "card": false,
+   "level": 1,
+   "sheet": 458.973152
+  }
+ ],
+ "poisonSwamp": [
+  {
+   "unlocked": true,
+   "damage": 266.62,
+   "duration": 7.6899999999999995,
+   "cooldown": 120.45,
+   "creep": 2.42,
+   "rend": 1.49,
+   "card": false,
+   "level": 5,
+   "sheet": 61.37816409497707
+  },
+  {
+   "unlocked": false,
+   "damage": 138.77,
+   "duration": 51.35,
+   "cooldown": 185.99,
+   "creep": 1.63,
+   "rend": 2.02,
+   "card": true,
+   "level": 1,
+   "sheet": 0
+  },
+  {
+   "unlocked": false,
+   "damage": 49,
+   "duration": 44.39,
+   "cooldown": 37.7,
+   "creep": 2.56,
+   "rend": 3.54,
+   "card": false,
+   "level": 0,
+   "sheet": 0
+  },
+  {
+   "unlocked": false,
+   "damage": 150.19,
+   "duration": 31.45,
+   "cooldown": 78.5,
+   "creep": 1.12,
+   "rend": 2.41,
+   "card": true,
+   "level": 7,
+   "sheet": 0
+  },
+  {
+   "unlocked": true,
+   "damage": 248.68,
+   "duration": 30.86,
+   "cooldown": 45.1,
+   "creep": 2.5700000000000003,
+   "rend": 1.71,
+   "card": true,
+   "level": 4,
+   "sheet": 852.4998742545099
+  },
+  {
+   "unlocked": true,
+   "damage": 166.74,
+   "duration": 44.29,
+   "cooldown": 207.44,
+   "creep": 1.15,
+   "rend": 2.58,
+   "card": false,
+   "level": 4,
+   "sheet": 105.62592372830697
+  },
+  {
+   "unlocked": true,
+   "damage": 160.31,
+   "duration": 22.32,
+   "cooldown": 31.560000000000002,
+   "creep": 2.1100000000000003,
+   "rend": 2.74,
+   "card": false,
+   "level": 5,
+   "sheet": 655.4669943878328
+  },
+  {
+   "unlocked": true,
+   "damage": 24.75,
+   "duration": 32.29,
+   "cooldown": 212.58,
+   "creep": 1.16,
+   "rend": 2.75,
+   "card": true,
+   "level": 0,
+   "sheet": 12.592177233276884
+  }
+ ],
+ "innerLandMines": [
+  {
+   "unlocked": true,
+   "damage": 105.86,
+   "rate": 2.734,
+   "jump": 31.22,
+   "charged": 1.74,
+   "aoe": 1.11,
+   "card": false,
+   "level": 4,
+   "sheet": 17772.868647661922
+  },
+  {
+   "unlocked": true,
+   "damage": 217.21,
+   "rate": 2.8409,
+   "jump": 18.3,
+   "charged": 1.25,
+   "aoe": 1.04,
+   "card": false,
+   "level": 3,
+   "sheet": 15321.895003870002
+  },
+  {
+   "unlocked": true,
+   "damage": 116.21,
+   "rate": 0.1831,
+   "jump": 13.85,
+   "charged": 1.98,
+   "aoe": 1.9,
+   "card": false,
+   "level": 6,
+   "sheet": 1149.0934827887
+  },
+  {
+   "unlocked": true,
+   "damage": 4.93,
+   "rate": 2.4738,
+   "jump": 40.48,
+   "charged": 0.74,
+   "aoe": 1.62,
+   "card": false,
+   "level": 1,
+   "sheet": 611.589658631616
+  },
+  {
+   "unlocked": true,
+   "damage": 3.82,
+   "rate": 0.8983,
+   "jump": 4.96,
+   "charged": 1.78,
+   "aoe": 1.17,
+   "card": true,
+   "level": 3,
+   "sheet": 43.80201616261535
+  },
+  {
+   "unlocked": true,
+   "damage": 256.2,
+   "rate": 2.3454,
+   "jump": 26.22,
+   "charged": 1.02,
+   "aoe": 1.24,
+   "card": true,
+   "level": 4,
+   "sheet": 23566.653689453684
+  },
+  {
+   "unlocked": true,
+   "damage": 15.3,
+   "rate": 1.0761,
+   "jump": 35.28,
+   "charged": 1.82,
+   "aoe": 1.3,
+   "card": false,
+   "level": 6,
+   "sheet": 1395.7220856384004
+  },
+  {
+   "unlocked": true,
+   "damage": 125.38,
+   "rate": 0.0074,
+   "jump": 30.61,
+   "charged": 1.94,
+   "aoe": 1.37,
+   "card": true,
+   "level": 0,
+   "sheet": 80.5911614292708
+  }
+ ],
+ "spotlightFinalBonus": [
+  {
+   "coverage": 0.3486,
+   "bonus": 21.9,
+   "sheet": 8.28574
+  },
+  {
+   "coverage": 0.3108,
+   "bonus": 11.92,
+   "sheet": 4.393936
+  },
+  {
+   "coverage": 0.8293,
+   "bonus": 25.56,
+   "sheet": 21.367608
+  },
+  {
+   "coverage": 0.2062,
+   "bonus": 29.54,
+   "sheet": 6.884948
+  },
+  {
+   "coverage": 0.3085,
+   "bonus": 11.76,
+   "sheet": 4.319459999999999
+  },
+  {
+   "coverage": 0.3997,
+   "bonus": 18.98,
+   "sheet": 8.186606000000001
+  }
+ ]
+}

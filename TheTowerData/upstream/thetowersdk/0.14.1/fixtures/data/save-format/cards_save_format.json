@@ -1,0 +1,87 @@
+{
+  "description": "Documents how card data is stored in the savedFile format",
+  "cardsHeaders": {
+    "cardLevel": "cardLevel",
+    "cardMasteryUnlocked": "cardMasteryUnlocked",
+    "presetNames": "presetName",
+    "presetSlots": "slotPresetCardAssignedBool",
+    "presetCards": "slotPresetCardInt",
+    "slotsUnlocked": "slotsUnlocked"
+  },
+  "fields": {
+    "cardLevel": {
+      "description": "Flat integer list — one level per card in cardOrder. Null entries in cardOrder are unused/reserved slots in the save array: they still occupy an index but the app skips them.",
+      "indexing": "card index i → cardLevel[i]"
+    },
+    "cardMasteryUnlocked": {
+      "description": "Boolean list — one entry per card in cardOrder. True if the mastery for that card is unlocked.",
+      "indexing": "card index i → cardMasteryUnlocked[i]"
+    },
+    "presetName": {
+      "description": "List of preset name strings. The preset count is taken from this list's length — it is not hard-coded. The app reorders rather than renames: presets whose stored name is exactly 'Farming' or 'Tourney' are pulled to slots 0 and 1, the rest keep their stored order, and a slot with an empty/missing name falls back to 'Preset N'.",
+      "ordering": "shared.resolvePresetOrder(presetName, ['Farming', 'Tourney']) → { order, indices }, where indices[slot] is the source index in the raw save list."
+    },
+    "slotPresetCardAssignedBool": {
+      "description": "Flat boolean list split equally across all presets. For preset p with slotsPerPreset slots, preset p occupies indices p*slotsPerPreset to (p+1)*slotsPerPreset-1. True means that slot has an assigned card.",
+      "indexing": "preset index p, slot index s → slotPresetCardAssignedBool[p * slotsPerPreset + s]"
+    },
+    "slotPresetCardInt": {
+      "description": "Flat integer list parallel to slotPresetCardAssignedBool. Each value is a card index into cardOrder, indicating which card is assigned to that slot.",
+      "indexing": "preset index p, slot index s → slotPresetCardInt[p * slotsPerPreset + s]"
+    },
+    "slotsUnlocked": {
+      "description": "Integer — total number of card slots unlocked (purchased with gems)."
+    }
+  },
+  "cardOrderNote": "cardOrder documents the full 40-slot save array, so reserved indices are listed explicitly as null. The app's own table (cardNamesByIndex in 10_Cards.js) is sparse and simply omits those indices — the named entries are identical in both.",
+  "cardOrder": {
+    "0": "Damage",
+    "1": "Attack Speed",
+    "2": "Health",
+    "3": "Health Regen",
+    "4": "Range",
+    "5": "Cash",
+    "6": "Coins",
+    "7": "Slow Aura",
+    "8": null,
+    "9": null,
+    "10": "Critical Chance",
+    "11": "Enemy Balance",
+    "12": "Extra Defense",
+    "13": "Fortress",
+    "14": null,
+    "15": "Free Upgrades",
+    "16": "Extra Orb",
+    "17": null,
+    "18": "Plasma Cannon",
+    "19": "Critical Coin",
+    "20": "Wave Skip",
+    "21": "Intro Sprint",
+    "22": "Land Mine Stun",
+    "23": "Recovery Package Chance",
+    "24": null,
+    "25": "Death Ray",
+    "26": "Energy Net",
+    "27": "Super Tower",
+    "28": "Second Wind",
+    "29": "Demon Mode",
+    "30": "Energy Shield",
+    "31": "Wave Accelerator",
+    "32": "Berserker",
+    "33": "Ultimate Crit",
+    "34": "Nuke",
+    "35": "Area of Effect",
+    "36": null,
+    "37": "Cells",
+    "38": null,
+    "39": null
+  },
+  "presets": {
+    "description": "slotPresetCardAssignedBool and slotPresetCardInt are each divided into equal segments — one per preset, in the order they appear in presetName. slotsPerPreset = floor(slotPresetCardAssignedBool.length / presetCount), where presetCount = presetName.length.",
+    "forcedFirstSlots": {
+      "description": "Presets are reordered, not renamed. A preset already named 'Farming' is moved to slot 0 and one named 'Tourney' to slot 1; if no such preset exists the slot is filled from the remaining presets in stored order.",
+      "0": "Farming",
+      "1": "Tourney"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_comment": "Synthetic workshop key fragment for save-graph fixture verification. Not a real save.",
+  "upgradeWorkshopLevel": [0, 0, 0],
+  "upgradeWorkshopDefenseLevel": [0, 0, 0],
+  "upgradeWorkshopUtilityLevel": [0, 0, 0],
+  "enhancementLevel": [0, 0, 0],
+  "enhancementDefenseLevel": [0, 0, 0],
+  "enhancementUtilityLevel": [0, 0, 0],
+  "presetUpgradeWorkshopLevel": [[0], [0], [0], [0], [0]],
+  "presetUpgradeWorkshopDefenseLevel": [[0], [0], [0], [0], [0]],
+  "presetUpgradeWorkshopUtilityLevel": [[0], [0], [0], [0], [0]],
+  "presetEnhancementLevel": [[0], [0], [0], [0], [0]],
+  "presetEnhancementDefenseLevel": [[0], [0], [0], [0], [0]],
+  "presetEnhancementUtilityLevel": [[0], [0], [0], [0], [0]],
+  "workshopPresetName": ["A", "B", "C", "D", "E"],
+  "currentWorkshopPreset": 0
+}

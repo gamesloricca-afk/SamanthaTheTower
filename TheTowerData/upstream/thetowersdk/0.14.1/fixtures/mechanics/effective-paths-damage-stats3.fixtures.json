@@ -1,0 +1,614 @@
+{
+  "superTowerBonus": [
+    {
+      "level": 1,
+      "lab": 0,
+      "sheet": 2.5
+    },
+    {
+      "level": 1,
+      "lab": 13,
+      "sheet": 3.4750000000000005
+    },
+    {
+      "level": 1,
+      "lab": 30,
+      "sheet": 4.75
+    },
+    {
+      "level": 2,
+      "lab": 0,
+      "sheet": 2.9000000000000004
+    },
+    {
+      "level": 2,
+      "lab": 13,
+      "sheet": 4.031000000000001
+    },
+    {
+      "level": 2,
+      "lab": 30,
+      "sheet": 5.510000000000001
+    },
+    {
+      "level": 3,
+      "lab": 0,
+      "sheet": 3.3000000000000003
+    },
+    {
+      "level": 3,
+      "lab": 13,
+      "sheet": 4.587000000000001
+    },
+    {
+      "level": 3,
+      "lab": 30,
+      "sheet": 6.2700000000000005
+    },
+    {
+      "level": 4,
+      "lab": 0,
+      "sheet": 3.7
+    },
+    {
+      "level": 4,
+      "lab": 13,
+      "sheet": 5.143000000000001
+    },
+    {
+      "level": 4,
+      "lab": 30,
+      "sheet": 7.03
+    },
+    {
+      "level": 5,
+      "lab": 0,
+      "sheet": 4.1
+    },
+    {
+      "level": 5,
+      "lab": 13,
+      "sheet": 5.699
+    },
+    {
+      "level": 5,
+      "lab": 30,
+      "sheet": 7.789999999999999
+    },
+    {
+      "level": 6,
+      "lab": 0,
+      "sheet": 4.5
+    },
+    {
+      "level": 6,
+      "lab": 13,
+      "sheet": 6.255000000000001
+    },
+    {
+      "level": 6,
+      "lab": 30,
+      "sheet": 8.549999999999999
+    },
+    {
+      "level": 7,
+      "lab": 0,
+      "sheet": 5
+    },
+    {
+      "level": 7,
+      "lab": 13,
+      "sheet": 6.950000000000001
+    },
+    {
+      "level": 7,
+      "lab": 30,
+      "sheet": 9.5
+    }
+  ],
+  "superTowerCooldown": [
+    {
+      "has": true,
+      "level": 2,
+      "sheet": 36
+    },
+    {
+      "has": false,
+      "level": 3,
+      "sheet": 45
+    },
+    {
+      "has": true,
+      "level": 5,
+      "sheet": 27
+    },
+    {
+      "has": false,
+      "level": 5,
+      "sheet": 45
+    },
+    {
+      "has": true,
+      "level": 1,
+      "sheet": 39
+    },
+    {
+      "has": false,
+      "level": 4,
+      "sheet": 45
+    },
+    {
+      "has": false,
+      "level": 6,
+      "sheet": 45
+    },
+    {
+      "has": false,
+      "level": 0,
+      "sheet": 45
+    },
+    {
+      "has": true,
+      "level": 4,
+      "sheet": 30
+    },
+    {
+      "has": true,
+      "level": 1,
+      "sheet": 39
+    }
+  ],
+  "spotlightCoverage": [
+    {
+      "quant": 6,
+      "angle": 74.55,
+      "sheet": 1
+    },
+    {
+      "quant": 2,
+      "angle": 56.33,
+      "sheet": 0.33516666666666667
+    },
+    {
+      "quant": 7,
+      "angle": 88.7,
+      "sheet": 1
+    },
+    {
+      "quant": 4,
+      "angle": 43.51,
+      "sheet": 0.5278888888888889
+    },
+    {
+      "quant": 6,
+      "angle": 67.2,
+      "sheet": 1
+    },
+    {
+      "quant": 4,
+      "angle": 67.5,
+      "sheet": 0.7944444444444444
+    },
+    {
+      "quant": 9,
+      "angle": 74.45,
+      "sheet": 1
+    },
+    {
+      "quant": 7,
+      "angle": 4.21,
+      "sheet": 0.1596388888888889
+    },
+    {
+      "quant": 1,
+      "angle": 42.64,
+      "sheet": 0.12955555555555556
+    },
+    {
+      "quant": 7,
+      "angle": 60.43,
+      "sheet": 1
+    }
+  ],
+  "superTowerEffective": [
+    {
+      "hasCard": false,
+      "hasMastery": true,
+      "bonus": 5.706,
+      "cooldown": 32.27,
+      "hasSl": true,
+      "slQuant": 8,
+      "slAngle": 38.03,
+      "sheet": 1,
+      "sheetWithSpotlight": 1
+    },
+    {
+      "hasCard": false,
+      "hasMastery": true,
+      "bonus": 6.375,
+      "cooldown": 25.72,
+      "hasSl": false,
+      "slQuant": 2,
+      "slAngle": 21.04,
+      "sheet": 1,
+      "sheetWithSpotlight": 1
+    },
+    {
+      "hasCard": false,
+      "hasMastery": true,
+      "bonus": 2.363,
+      "cooldown": 30.04,
+      "hasSl": false,
+      "slQuant": 5,
+      "slAngle": 49.94,
+      "sheet": 1,
+      "sheetWithSpotlight": 1
+    },
+    {
+      "hasCard": false,
+      "hasMastery": true,
+      "bonus": 6.055,
+      "cooldown": 38.24,
+      "hasSl": false,
+      "slQuant": 3,
+      "slAngle": 13.19,
+      "sheet": 1,
+      "sheetWithSpotlight": 1
+    },
+    {
+      "hasCard": true,
+      "hasMastery": false,
+      "bonus": 1.779,
+      "cooldown": 35.5,
+      "hasSl": true,
+      "slQuant": 5,
+      "slAngle": 57.5,
+      "sheet": 1.3291549295774647,
+      "sheetWithSpotlight": 1.3291549295774647
+    },
+    {
+      "hasCard": false,
+      "hasMastery": true,
+      "bonus": 1.148,
+      "cooldown": 39.24,
+      "hasSl": false,
+      "slQuant": 8,
+      "slAngle": 52.66,
+      "sheet": 1,
+      "sheetWithSpotlight": 1
+    },
+    {
+      "hasCard": false,
+      "hasMastery": false,
+      "bonus": 1.376,
+      "cooldown": 27.49,
+      "hasSl": true,
+      "slQuant": 5,
+      "slAngle": 24.19,
+      "sheet": 1,
+      "sheetWithSpotlight": 1
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 2.4,
+      "cooldown": 42.12,
+      "hasSl": true,
+      "slQuant": 4,
+      "slAngle": 17.92,
+      "sheet": 1.4985754985754987,
+      "sheetWithSpotlight": 1.6005773979107314
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 1.351,
+      "cooldown": 24.72,
+      "hasSl": false,
+      "slQuant": 6,
+      "slAngle": 21.86,
+      "sheet": 1.2129854368932038,
+      "sheetWithSpotlight": 1.256391517506068
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 3.564,
+      "cooldown": 25.42,
+      "hasSl": false,
+      "slQuant": 6,
+      "slAngle": 36.32,
+      "sheet": 2.5129819040125883,
+      "sheetWithSpotlight": 3.781243221400472
+    },
+    {
+      "hasCard": true,
+      "hasMastery": false,
+      "bonus": 2.531,
+      "cooldown": 26.45,
+      "hasSl": false,
+      "slQuant": 1,
+      "slAngle": 25.11,
+      "sheet": 1.8682419659735352,
+      "sheetWithSpotlight": 1.8682419659735352
+    },
+    {
+      "hasCard": true,
+      "hasMastery": false,
+      "bonus": 5.438,
+      "cooldown": 35.21,
+      "hasSl": false,
+      "slQuant": 1,
+      "slAngle": 71.78,
+      "sheet": 2.89065606361829,
+      "sheetWithSpotlight": 2.89065606361829
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 1.797,
+      "cooldown": 37.63,
+      "hasSl": true,
+      "slQuant": 7,
+      "slAngle": 29.46,
+      "sheet": 1.317698644698379,
+      "sheetWithSpotlight": 1.4477015204989367
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 6.384,
+      "cooldown": 48.81,
+      "hasSl": true,
+      "slQuant": 1,
+      "slAngle": 75.05,
+      "sheet": 2.6545789797172707,
+      "sheetWithSpotlight": 3.466376646588814
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 2.369,
+      "cooldown": 26.4,
+      "hasSl": true,
+      "slQuant": 4,
+      "slAngle": 35.01,
+      "sheet": 1.7778409090909093,
+      "sheetWithSpotlight": 2.057389512080177
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 1.16,
+      "cooldown": 25.26,
+      "hasSl": true,
+      "slQuant": 3,
+      "slAngle": 55.54,
+      "sheet": 1.0950118764845604,
+      "sheetWithSpotlight": 1.1141514172604907
+    }
+  ],
+  "superTowerEffectiveUw": [
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 5.13,
+      "cooldown": 35.59,
+      "sheet": 1.3352767631357123
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 6.744,
+      "cooldown": 47.44,
+      "sheet": 1.4301433389544689
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 5.878,
+      "cooldown": 23.22,
+      "sheet": 1.6830103359173127
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 6.221,
+      "cooldown": 39.3,
+      "sheet": 1.4493702290076333
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 6.047,
+      "cooldown": 40.15,
+      "sheet": 1.417104607721046
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 1.472,
+      "cooldown": 49.12,
+      "sheet": 0.8519543973941368
+    },
+    {
+      "hasCard": false,
+      "hasMastery": true,
+      "bonus": 3.788,
+      "cooldown": 43.37,
+      "sheet": 1
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 1.25,
+      "cooldown": 20.9,
+      "sheet": 0.5962918660287081
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 6.381,
+      "cooldown": 41.16,
+      "sheet": 1.4494715743440232
+    },
+    {
+      "hasCard": true,
+      "hasMastery": true,
+      "bonus": 6.509,
+      "cooldown": 48.01,
+      "sheet": 1.399338679441783
+    }
+  ],
+  "shockwave": [
+    {
+      "acp": 3.094,
+      "sizeWs": 19,
+      "sizeLab": 17,
+      "freqWs": 61,
+      "freqVault": -1.82,
+      "freqSub": -2.6,
+      "sheet": 2.787560975609756
+    },
+    {
+      "acp": 2.409,
+      "sizeWs": 29,
+      "sizeLab": 16,
+      "freqWs": 50,
+      "freqVault": -2.21,
+      "freqSub": -0.66,
+      "sheet": 1.8921754862053368
+    },
+    {
+      "acp": 0,
+      "sizeWs": 6,
+      "sizeLab": 5,
+      "freqWs": 3,
+      "freqVault": -0.51,
+      "freqSub": -0.92,
+      "sheet": 1
+    },
+    {
+      "acp": 1.084,
+      "sizeWs": 22,
+      "sizeLab": 18,
+      "freqWs": 8,
+      "freqVault": -0.96,
+      "freqSub": -3.97,
+      "sheet": 1.0387607119314437
+    },
+    {
+      "acp": 4.099,
+      "sizeWs": 19,
+      "sizeLab": 7,
+      "freqWs": 1,
+      "freqVault": -1.66,
+      "freqSub": -1.95,
+      "sheet": 2.2619546247818496
+    },
+    {
+      "acp": 2.765,
+      "sizeWs": 29,
+      "sizeLab": 4,
+      "freqWs": 36,
+      "freqVault": -2.35,
+      "freqSub": -1.32,
+      "sheet": 2.0248859394442142
+    },
+    {
+      "acp": 0,
+      "sizeWs": 4,
+      "sizeLab": 8,
+      "freqWs": 60,
+      "freqVault": -0.66,
+      "freqSub": -2.32,
+      "sheet": 1
+    },
+    {
+      "acp": 3.64,
+      "sizeWs": 20,
+      "sizeLab": 10,
+      "freqWs": 7,
+      "freqVault": -2.27,
+      "freqSub": -1.01,
+      "sheet": 2.105263157894737
+    },
+    {
+      "acp": 0,
+      "sizeWs": 2,
+      "sizeLab": 10,
+      "freqWs": 18,
+      "freqVault": -2.2,
+      "freqSub": -3.76,
+      "sheet": 1
+    },
+    {
+      "acp": 2.557,
+      "sizeWs": 21,
+      "sizeLab": 2,
+      "freqWs": 47,
+      "freqVault": -2.46,
+      "freqSub": -0.01,
+      "sheet": 1.9598414795244388
+    },
+    {
+      "acp": 2.258,
+      "sizeWs": 18,
+      "sizeLab": 15,
+      "freqWs": 16,
+      "freqVault": -1.79,
+      "freqSub": -3.83,
+      "sheet": 1.6719572682182373
+    },
+    {
+      "acp": 3.17,
+      "sizeWs": 2,
+      "sizeLab": 2,
+      "freqWs": 9,
+      "freqVault": -0.4,
+      "freqSub": -0.95,
+      "sheet": 1.8581920903954803
+    },
+    {
+      "acp": 0,
+      "sizeWs": 13,
+      "sizeLab": 8,
+      "freqWs": 0,
+      "freqVault": -1.68,
+      "freqSub": -2.18,
+      "sheet": 1
+    },
+    {
+      "acp": 2.787,
+      "sizeWs": 14,
+      "sizeLab": 4,
+      "freqWs": 11,
+      "freqVault": -2.06,
+      "freqSub": -1.04,
+      "sheet": 1.7818124999999998
+    },
+    {
+      "acp": 0,
+      "sizeWs": 6,
+      "sizeLab": 18,
+      "freqWs": 7,
+      "freqVault": -2.98,
+      "freqSub": -2.01,
+      "sheet": 1
+    },
+    {
+      "acp": 0,
+      "sizeWs": 8,
+      "sizeLab": 8,
+      "freqWs": 70,
+      "freqVault": -0.83,
+      "freqSub": -3.51,
+      "sheet": 1
+    }
+  ],
+  "spotlightGate": false,
+  "spotlightGateWhenCaptured": {
+    "off": false,
+    "on": true
+  }
+}

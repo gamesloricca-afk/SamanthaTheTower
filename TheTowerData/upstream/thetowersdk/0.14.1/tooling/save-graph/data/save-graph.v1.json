@@ -1,0 +1,5451 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 2,
+  "updatedAt": "2026-08-14T21:32:46.109Z",
+  "constitution": "docs/AGENT_MECHANICS_CONSTITUTION.md",
+  "nodes": {
+    "save.module.battle-duration": {
+      "id": "save.module.battle-duration",
+      "type": "save.module",
+      "label": "battle-duration",
+      "path": "packages/sdk/src/save/battle-duration.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:battle-duration"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.extractor.readDurationSecondsFromSave": {
+      "id": "save.extractor.readDurationSecondsFromSave",
+      "type": "save.extractor",
+      "label": "readDurationSecondsFromSave",
+      "path": "packages/sdk/src/save/battle-duration.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readDurationSecondsFromSave"
+      ],
+      "coverageIds": [
+        "save:battle-duration"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.battle-history-normalize": {
+      "id": "save.module.battle-history-normalize",
+      "type": "save.module",
+      "label": "battle-history-normalize",
+      "path": "packages/sdk/src/save/battle-history-normalize.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:battle-history-normalize"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.battle-history": {
+      "id": "save.module.battle-history",
+      "type": "save.module",
+      "label": "battle-history",
+      "path": "packages/sdk/src/save/battle-history.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:battle-history"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.battle-report-extended": {
+      "id": "save.module.battle-report-extended",
+      "type": "save.module",
+      "label": "battle-report-extended",
+      "path": "packages/sdk/src/save/battle-report-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:battle-report-extended"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.battle-report-fields": {
+      "id": "save.module.battle-report-fields",
+      "type": "save.module",
+      "label": "battle-report-fields",
+      "path": "packages/sdk/src/save/battle-report-fields.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:battle-report-fields"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.extractor.readBattleReportRawSaveValue": {
+      "id": "save.extractor.readBattleReportRawSaveValue",
+      "type": "save.extractor",
+      "label": "readBattleReportRawSaveValue",
+      "path": "packages/sdk/src/save/battle-report-fields.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readBattleReportRawSaveValue"
+      ],
+      "coverageIds": [
+        "save:battle-report-fields"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.battle-reports": {
+      "id": "save.module.battle-reports",
+      "type": "save.module",
+      "label": "battle-reports",
+      "path": "packages/sdk/src/save/battle-reports.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:battle-reports"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.extractor.readBattleDateFromSave": {
+      "id": "save.extractor.readBattleDateFromSave",
+      "type": "save.extractor",
+      "label": "readBattleDateFromSave",
+      "path": "packages/sdk/src/save/battle-reports.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readBattleDateFromSave"
+      ],
+      "coverageIds": [
+        "save:battle-reports"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.bots": {
+      "id": "save.module.bots",
+      "type": "save.module",
+      "label": "bots",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.botsUnlocked": {
+      "id": "save.field.botsUnlocked",
+      "type": "save.field",
+      "label": "botsUnlocked",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "botsUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.botsActive": {
+      "id": "save.field.botsActive",
+      "type": "save.field",
+      "label": "botsActive",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "botsActive",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_ACTIVE_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.botsLevel": {
+      "id": "save.field.botsLevel",
+      "type": "save.field",
+      "label": "botsLevel",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "botsLevel",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_LEVEL_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.botsLevelPresets": {
+      "id": "save.field.botsLevelPresets",
+      "type": "save.field",
+      "label": "botsLevelPresets",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "botsLevelPresets",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_LEVEL_PRESETS_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.botsLevelSelectionPresets": {
+      "id": "save.field.botsLevelSelectionPresets",
+      "type": "save.field",
+      "label": "botsLevelSelectionPresets",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "botsLevelSelectionPresets",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_LEVEL_SELECTION_PRESETS_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.botsUnlockedPresets": {
+      "id": "save.field.botsUnlockedPresets",
+      "type": "save.field",
+      "label": "botsUnlockedPresets",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "botsUnlockedPresets",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_UNLOCKED_PRESETS_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.botsActivePresets": {
+      "id": "save.field.botsActivePresets",
+      "type": "save.field",
+      "label": "botsActivePresets",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "botsActivePresets",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_ACTIVE_PRESETS_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.currentBotPreset": {
+      "id": "save.field.currentBotPreset",
+      "type": "save.field",
+      "label": "currentBotPreset",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "currentBotPreset",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_CURRENT_PRESET_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.botPresetName": {
+      "id": "save.field.botPresetName",
+      "type": "save.field",
+      "label": "botPresetName",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "botPresetName",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_PRESET_NAME_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.migratedBotDataToV28": {
+      "id": "save.field.migratedBotDataToV28",
+      "type": "save.field",
+      "label": "migratedBotDataToV28",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "migratedBotDataToV28",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_MIGRATED_V28_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.totalCoinsByBot": {
+      "id": "save.field.totalCoinsByBot",
+      "type": "save.field",
+      "label": "totalCoinsByBot",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "totalCoinsByBot",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_COINS_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.totalDamageByBot": {
+      "id": "save.field.totalDamageByBot",
+      "type": "save.field",
+      "label": "totalDamageByBot",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "totalDamageByBot",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_DAMAGE_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.totalStunsByBot": {
+      "id": "save.field.totalStunsByBot",
+      "type": "save.field",
+      "label": "totalStunsByBot",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "totalStunsByBot",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_STUNS_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.totalStonesSpent": {
+      "id": "save.field.totalStonesSpent",
+      "type": "save.field",
+      "label": "totalStonesSpent",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "totalStonesSpent",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_STONES_SPENT_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.totalMedalsSpent": {
+      "id": "save.field.totalMedalsSpent",
+      "type": "save.field",
+      "label": "totalMedalsSpent",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "totalMedalsSpent",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "BOTS_SAVE_MEDALS_SPENT_KEY"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.synchronicitySlotUnlocked": {
+      "id": "save.field.synchronicitySlotUnlocked",
+      "type": "save.field",
+      "label": "synchronicitySlotUnlocked",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "synchronicitySlotUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.synchronicityPresets": {
+      "id": "save.field.synchronicityPresets",
+      "type": "save.field",
+      "label": "synchronicityPresets",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "saveKey": "synchronicityPresets",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.extractor.readBotsFromSaveRoot": {
+      "id": "save.extractor.readBotsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readBotsFromSaveRoot",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readBotsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.extractor.readBotsPlusAndSyncStonesSpent": {
+      "id": "save.extractor.readBotsPlusAndSyncStonesSpent",
+      "type": "save.extractor",
+      "label": "readBotsPlusAndSyncStonesSpent",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readBotsPlusAndSyncStonesSpent"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.extractor.readBotsMedalsSpentFromSave": {
+      "id": "save.extractor.readBotsMedalsSpentFromSave",
+      "type": "save.extractor",
+      "label": "readBotsMedalsSpentFromSave",
+      "path": "packages/sdk/src/save/catalogs/bots.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readBotsMedalsSpentFromSave"
+      ],
+      "coverageIds": [
+        "save:bots"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.cards": {
+      "id": "save.module.cards",
+      "type": "save.module",
+      "label": "cards",
+      "path": "packages/sdk/src/save/cards.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.cardLevel": {
+      "id": "save.field.cardLevel",
+      "type": "save.field",
+      "label": "cardLevel",
+      "path": "packages/sdk/src/save/cards.ts",
+      "saveKey": "cardLevel",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "CARDS_SAVE_LEVEL_KEY"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.cardCount": {
+      "id": "save.field.cardCount",
+      "type": "save.field",
+      "label": "cardCount",
+      "path": "packages/sdk/src/save/cards.ts",
+      "saveKey": "cardCount",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "CARDS_SAVE_COUNT_KEY"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.cardUnlocked": {
+      "id": "save.field.cardUnlocked",
+      "type": "save.field",
+      "label": "cardUnlocked",
+      "path": "packages/sdk/src/save/cards.ts",
+      "saveKey": "cardUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "CARDS_SAVE_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.cardActive": {
+      "id": "save.field.cardActive",
+      "type": "save.field",
+      "label": "cardActive",
+      "path": "packages/sdk/src/save/cards.ts",
+      "saveKey": "cardActive",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "CARDS_SAVE_ACTIVE_KEY"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.cardMasteryUnlocked": {
+      "id": "save.field.cardMasteryUnlocked",
+      "type": "save.field",
+      "label": "cardMasteryUnlocked",
+      "path": "packages/sdk/src/save/cards.ts",
+      "saveKey": "cardMasteryUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "CARDS_SAVE_MASTERY_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.slotsUnlocked": {
+      "id": "save.field.slotsUnlocked",
+      "type": "save.field",
+      "label": "slotsUnlocked",
+      "path": "packages/sdk/src/save/cards.ts",
+      "saveKey": "slotsUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "CARDS_SAVE_SLOTS_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.cardsBoughtTotal": {
+      "id": "save.field.cardsBoughtTotal",
+      "type": "save.field",
+      "label": "cardsBoughtTotal",
+      "path": "packages/sdk/src/save/cards.ts",
+      "saveKey": "cardsBoughtTotal",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "CARDS_SAVE_BOUGHT_TOTAL_KEY"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.currentPreset": {
+      "id": "save.field.currentPreset",
+      "type": "save.field",
+      "label": "currentPreset",
+      "path": "packages/sdk/src/save/cards.ts",
+      "saveKey": "currentPreset",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "CARDS_SAVE_CURRENT_PRESET_KEY"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.presetName": {
+      "id": "save.field.presetName",
+      "type": "save.field",
+      "label": "presetName",
+      "path": "packages/sdk/src/save/cards.ts",
+      "saveKey": "presetName",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "CARDS_SAVE_PRESET_NAME_KEY"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.slotPresetCardInt": {
+      "id": "save.field.slotPresetCardInt",
+      "type": "save.field",
+      "label": "slotPresetCardInt",
+      "path": "packages/sdk/src/save/cards.ts",
+      "saveKey": "slotPresetCardInt",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "CARDS_SAVE_SLOT_PRESET_INT_KEY"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.slotPresetCardAssignedBool": {
+      "id": "save.field.slotPresetCardAssignedBool",
+      "type": "save.field",
+      "label": "slotPresetCardAssignedBool",
+      "path": "packages/sdk/src/save/cards.ts",
+      "saveKey": "slotPresetCardAssignedBool",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "CARDS_SAVE_SLOT_PRESET_ASSIGNED_KEY"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.extractor.readCardsFromSaveRoot": {
+      "id": "save.extractor.readCardsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readCardsFromSaveRoot",
+      "path": "packages/sdk/src/save/cards.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readCardsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:cards"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.dissonance": {
+      "id": "save.module.dissonance",
+      "type": "save.module",
+      "label": "dissonance",
+      "path": "packages/sdk/src/save/dissonance.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:dissonance"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.extractor.readDissonanceCycleWavesFromSaveRoot": {
+      "id": "save.extractor.readDissonanceCycleWavesFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readDissonanceCycleWavesFromSaveRoot",
+      "path": "packages/sdk/src/save/dissonance.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readDissonanceCycleWavesFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:dissonance"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.effective-paths-settings": {
+      "id": "save.module.effective-paths-settings",
+      "type": "save.module",
+      "label": "effective-paths-settings",
+      "path": "packages/sdk/src/save/effective-paths-settings.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:effective-paths-settings"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.highestWaveThisTier": {
+      "id": "save.field.highestWaveThisTier",
+      "type": "save.field",
+      "label": "highestWaveThisTier",
+      "path": "packages/sdk/src/save/effective-paths-settings.ts",
+      "saveKey": "highestWaveThisTier",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:effective-paths-settings"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.gameSpeedMemory": {
+      "id": "save.field.gameSpeedMemory",
+      "type": "save.field",
+      "label": "gameSpeedMemory",
+      "path": "packages/sdk/src/save/effective-paths-settings.ts",
+      "saveKey": "gameSpeedMemory",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:effective-paths-settings"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.extractor.readEffectivePathsSettingsFromSaveRoot": {
+      "id": "save.extractor.readEffectivePathsSettingsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readEffectivePathsSettingsFromSaveRoot",
+      "path": "packages/sdk/src/save/effective-paths-settings.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readEffectivePathsSettingsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:effective-paths-settings"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.favorite-labs": {
+      "id": "save.module.favorite-labs",
+      "type": "save.module",
+      "label": "favorite-labs",
+      "path": "packages/sdk/src/save/favorite-labs.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:favorite-labs"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.extractor.readFavoriteLabSlugsFromSaveRoot": {
+      "id": "save.extractor.readFavoriteLabSlugsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readFavoriteLabSlugsFromSaveRoot",
+      "path": "packages/sdk/src/save/favorite-labs.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readFavoriteLabSlugsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:favorite-labs"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.guardians": {
+      "id": "save.module.guardians",
+      "type": "save.module",
+      "label": "guardians",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.guardianUnlocked": {
+      "id": "save.field.guardianUnlocked",
+      "type": "save.field",
+      "label": "guardianUnlocked",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "saveKey": "guardianUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "GUARDIANS_SAVE_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.guardianSlotsUnlocked": {
+      "id": "save.field.guardianSlotsUnlocked",
+      "type": "save.field",
+      "label": "guardianSlotsUnlocked",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "saveKey": "guardianSlotsUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "GUARDIANS_SAVE_SLOTS_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.guardianChipSlot": {
+      "id": "save.field.guardianChipSlot",
+      "type": "save.field",
+      "label": "guardianChipSlot",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "saveKey": "guardianChipSlot",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "GUARDIANS_SAVE_CHIP_SLOT_KEY"
+      ],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.guardianChipUnlocked": {
+      "id": "save.field.guardianChipUnlocked",
+      "type": "save.field",
+      "label": "guardianChipUnlocked",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "saveKey": "guardianChipUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "GUARDIANS_SAVE_CHIP_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.guardianChipLevel": {
+      "id": "save.field.guardianChipLevel",
+      "type": "save.field",
+      "label": "guardianChipLevel",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "saveKey": "guardianChipLevel",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "GUARDIANS_SAVE_CHIP_LEVEL_KEY"
+      ],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.guardianSkinIndex": {
+      "id": "save.field.guardianSkinIndex",
+      "type": "save.field",
+      "label": "guardianSkinIndex",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "saveKey": "guardianSkinIndex",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "GUARDIANS_SAVE_SKIN_INDEX_KEY"
+      ],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.guardianSkinUnlocked": {
+      "id": "save.field.guardianSkinUnlocked",
+      "type": "save.field",
+      "label": "guardianSkinUnlocked",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "saveKey": "guardianSkinUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "GUARDIANS_SAVE_SKIN_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.totalDamageByGuardian": {
+      "id": "save.field.totalDamageByGuardian",
+      "type": "save.field",
+      "label": "totalDamageByGuardian",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "saveKey": "totalDamageByGuardian",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "GUARDIANS_SAVE_DAMAGE_KEY"
+      ],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.totalCoinsByGuardian": {
+      "id": "save.field.totalCoinsByGuardian",
+      "type": "save.field",
+      "label": "totalCoinsByGuardian",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "saveKey": "totalCoinsByGuardian",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "GUARDIANS_SAVE_COINS_KEY"
+      ],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.totalCatchesByGuardian": {
+      "id": "save.field.totalCatchesByGuardian",
+      "type": "save.field",
+      "label": "totalCatchesByGuardian",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "saveKey": "totalCatchesByGuardian",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "GUARDIANS_SAVE_CATCHES_KEY"
+      ],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.extractor.readGuardiansFromSaveRoot": {
+      "id": "save.extractor.readGuardiansFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readGuardiansFromSaveRoot",
+      "path": "packages/sdk/src/save/catalogs/guardians.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readGuardiansFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:guardians"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.import-counts": {
+      "id": "save.module.import-counts",
+      "type": "save.module",
+      "label": "import-counts",
+      "path": "packages/sdk/src/save/import-counts.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:import-counts"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.import-discovery": {
+      "id": "save.module.import-discovery",
+      "type": "save.module",
+      "label": "import-discovery",
+      "path": "packages/sdk/src/save/import-discovery.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:import-discovery"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.import-executor": {
+      "id": "save.module.import-executor",
+      "type": "save.module",
+      "label": "import-executor",
+      "path": "packages/sdk/src/save/import-executor.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:import-executor"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.import-planner": {
+      "id": "save.module.import-planner",
+      "type": "save.module",
+      "label": "import-planner",
+      "path": "packages/sdk/src/save/import-planner.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:import-planner"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.killed-by": {
+      "id": "save.module.killed-by",
+      "type": "save.module",
+      "label": "killed-by",
+      "path": "packages/sdk/src/save/killed-by.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:killed-by"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.extractor.readKilledByEnumIndex": {
+      "id": "save.extractor.readKilledByEnumIndex",
+      "type": "save.extractor",
+      "label": "readKilledByEnumIndex",
+      "path": "packages/sdk/src/save/killed-by.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readKilledByEnumIndex"
+      ],
+      "coverageIds": [
+        "save:killed-by"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.lab-remaining": {
+      "id": "save.module.lab-remaining",
+      "type": "save.module",
+      "label": "lab-remaining",
+      "path": "packages/sdk/src/save/lab-remaining.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:lab-remaining"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.labs": {
+      "id": "save.module.labs",
+      "type": "save.module",
+      "label": "labs",
+      "path": "packages/sdk/src/save/labs.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.labsUnlocked": {
+      "id": "save.field.labsUnlocked",
+      "type": "save.field",
+      "label": "labsUnlocked",
+      "path": "packages/sdk/src/save/labs.ts",
+      "saveKey": "labsUnlocked",
+      "valueKind": "number",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "LABS_SAVE_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture labs-keys.sample.json"
+    },
+    "save.field.researchLevel": {
+      "id": "save.field.researchLevel",
+      "type": "save.field",
+      "label": "researchLevel",
+      "path": "packages/sdk/src/save/labs.ts",
+      "saveKey": "researchLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "LABS_SAVE_RESEARCH_LEVEL_KEY"
+      ],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture labs-keys.sample.json"
+    },
+    "save.field.researchPercentComplete": {
+      "id": "save.field.researchPercentComplete",
+      "type": "save.field",
+      "label": "researchPercentComplete",
+      "path": "packages/sdk/src/save/labs.ts",
+      "saveKey": "researchPercentComplete",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "LABS_SAVE_RESEARCH_PERCENT_KEY"
+      ],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture labs-keys.sample.json"
+    },
+    "save.field.labLevel": {
+      "id": "save.field.labLevel",
+      "type": "save.field",
+      "label": "labLevel",
+      "path": "packages/sdk/src/save/labs.ts",
+      "saveKey": "labLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "LABS_SAVE_LAB_LEVEL_KEY"
+      ],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture labs-keys.sample.json"
+    },
+    "save.field.labResearchInt": {
+      "id": "save.field.labResearchInt",
+      "type": "save.field",
+      "label": "labResearchInt",
+      "path": "packages/sdk/src/save/labs.ts",
+      "saveKey": "labResearchInt",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "LABS_SAVE_LAB_RESEARCH_INT_KEY"
+      ],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture labs-keys.sample.json"
+    },
+    "save.field.labActiveBool": {
+      "id": "save.field.labActiveBool",
+      "type": "save.field",
+      "label": "labActiveBool",
+      "path": "packages/sdk/src/save/labs.ts",
+      "saveKey": "labActiveBool",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "LABS_SAVE_LAB_ACTIVE_KEY"
+      ],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture labs-keys.sample.json"
+    },
+    "save.field.labSpeedUpSpeed": {
+      "id": "save.field.labSpeedUpSpeed",
+      "type": "save.field",
+      "label": "labSpeedUpSpeed",
+      "path": "packages/sdk/src/save/labs.ts",
+      "saveKey": "labSpeedUpSpeed",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "LABS_SAVE_LAB_SPEED_UP_SPEED_KEY"
+      ],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture labs-keys.sample.json"
+    },
+    "save.field.labSpeedUpRemainingSeconds": {
+      "id": "save.field.labSpeedUpRemainingSeconds",
+      "type": "save.field",
+      "label": "labSpeedUpRemainingSeconds",
+      "path": "packages/sdk/src/save/labs.ts",
+      "saveKey": "labSpeedUpRemainingSeconds",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "LABS_SAVE_LAB_SPEED_UP_REMAINING_KEY"
+      ],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture labs-keys.sample.json"
+    },
+    "save.field.researchesComplete": {
+      "id": "save.field.researchesComplete",
+      "type": "save.field",
+      "label": "researchesComplete",
+      "path": "packages/sdk/src/save/labs.ts",
+      "saveKey": "researchesComplete",
+      "valueKind": "number",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "LABS_SAVE_RESEARCHES_COMPLETE_KEY"
+      ],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture labs-keys.sample.json"
+    },
+    "save.field.totalCoinsSpentOnResearch": {
+      "id": "save.field.totalCoinsSpentOnResearch",
+      "type": "save.field",
+      "label": "totalCoinsSpentOnResearch",
+      "path": "packages/sdk/src/save/labs.ts",
+      "saveKey": "totalCoinsSpentOnResearch",
+      "valueKind": "number",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "LABS_SAVE_COINS_SPENT_KEY"
+      ],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture labs-keys.sample.json"
+    },
+    "save.extractor.readLabsFromSaveRoot": {
+      "id": "save.extractor.readLabsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readLabsFromSaveRoot",
+      "path": "packages/sdk/src/save/labs.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readLabsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:labs"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.module.lifetime": {
+      "id": "save.module.lifetime",
+      "type": "save.module",
+      "label": "lifetime",
+      "path": "packages/sdk/src/save/lifetime.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:lifetime"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.totalEnemiesDestryoedByOrbs": {
+      "id": "save.field.totalEnemiesDestryoedByOrbs",
+      "type": "save.field",
+      "label": "totalEnemiesDestryoedByOrbs",
+      "path": "packages/sdk/src/save/lifetime.ts",
+      "saveKey": "totalEnemiesDestryoedByOrbs",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "LIFETIME_SAVE_ORB_KILLS_KEY"
+      ],
+      "coverageIds": [
+        "save:lifetime"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.extractor.readLifetimeFromSaveRoot": {
+      "id": "save.extractor.readLifetimeFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readLifetimeFromSaveRoot",
+      "path": "packages/sdk/src/save/lifetime.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readLifetimeFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:lifetime"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.module-effects-decode": {
+      "id": "save.module.module-effects-decode",
+      "type": "save.module",
+      "label": "module-effects-decode",
+      "path": "packages/sdk/src/save/module-effects-decode.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:module-effects-decode"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.module-effects-display": {
+      "id": "save.module.module-effects-display",
+      "type": "save.module",
+      "label": "module-effects-display",
+      "path": "packages/sdk/src/save/module-effects-display.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:module-effects-display"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.module-effects-ids": {
+      "id": "save.module.module-effects-ids",
+      "type": "save.module",
+      "label": "module-effects-ids",
+      "path": "packages/sdk/src/save/module-effects-ids.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:module-effects-ids"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.module-effects-registry": {
+      "id": "save.module.module-effects-registry",
+      "type": "save.module",
+      "label": "module-effects-registry",
+      "path": "packages/sdk/src/save/module-effects-registry.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:module-effects-registry"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.modules": {
+      "id": "save.module.modules",
+      "type": "save.module",
+      "label": "modules",
+      "path": "packages/sdk/src/save/modules.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.moduleCannonShards": {
+      "id": "save.field.moduleCannonShards",
+      "type": "save.field",
+      "label": "moduleCannonShards",
+      "path": "packages/sdk/src/save/modules.ts",
+      "saveKey": "moduleCannonShards",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "MODULE_SAVE_CANNON_SHARDS_KEY"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.moduleArmorShards": {
+      "id": "save.field.moduleArmorShards",
+      "type": "save.field",
+      "label": "moduleArmorShards",
+      "path": "packages/sdk/src/save/modules.ts",
+      "saveKey": "moduleArmorShards",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "MODULE_SAVE_ARMOR_SHARDS_KEY"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.moduleGeneratorShards": {
+      "id": "save.field.moduleGeneratorShards",
+      "type": "save.field",
+      "label": "moduleGeneratorShards",
+      "path": "packages/sdk/src/save/modules.ts",
+      "saveKey": "moduleGeneratorShards",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "MODULE_SAVE_GENERATOR_SHARDS_KEY"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.moduleCoreShards": {
+      "id": "save.field.moduleCoreShards",
+      "type": "save.field",
+      "label": "moduleCoreShards",
+      "path": "packages/sdk/src/save/modules.ts",
+      "saveKey": "moduleCoreShards",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "MODULE_SAVE_CORE_SHARDS_KEY"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.moduleRerollCurrency": {
+      "id": "save.field.moduleRerollCurrency",
+      "type": "save.field",
+      "label": "moduleRerollCurrency",
+      "path": "packages/sdk/src/save/modules.ts",
+      "saveKey": "moduleRerollCurrency",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "MODULE_SAVE_REROLL_CURRENCY_KEY"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.moduleTickets": {
+      "id": "save.field.moduleTickets",
+      "type": "save.field",
+      "label": "moduleTickets",
+      "path": "packages/sdk/src/save/modules.ts",
+      "saveKey": "moduleTickets",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "MODULE_SAVE_TICKETS_KEY"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.moduleAutoShatter": {
+      "id": "save.field.moduleAutoShatter",
+      "type": "save.field",
+      "label": "moduleAutoShatter",
+      "path": "packages/sdk/src/save/modules.ts",
+      "saveKey": "moduleAutoShatter",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "MODULE_SAVE_AUTO_SHATTER_KEY"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.moduleAutoShatterRare": {
+      "id": "save.field.moduleAutoShatterRare",
+      "type": "save.field",
+      "label": "moduleAutoShatterRare",
+      "path": "packages/sdk/src/save/modules.ts",
+      "saveKey": "moduleAutoShatterRare",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "MODULE_SAVE_AUTO_SHATTER_RARE_KEY"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.moduleEquipped": {
+      "id": "save.field.moduleEquipped",
+      "type": "save.field",
+      "label": "moduleEquipped",
+      "path": "packages/sdk/src/save/modules.ts",
+      "saveKey": "moduleEquipped",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "MODULE_SAVE_EQUIPPED_KEY"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.assistModuleSlots": {
+      "id": "save.field.assistModuleSlots",
+      "type": "save.field",
+      "label": "assistModuleSlots",
+      "path": "packages/sdk/src/save/modules.ts",
+      "saveKey": "assistModuleSlots",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "MODULE_SAVE_ASSIST_SLOTS_KEY"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.inventory": {
+      "id": "save.field.inventory",
+      "type": "save.field",
+      "label": "inventory",
+      "path": "packages/sdk/src/save/modules.ts",
+      "saveKey": "inventory",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "MODULE_SAVE_INVENTORY_KEY"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.extractor.readModulesFromSaveRoot": {
+      "id": "save.extractor.readModulesFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readModulesFromSaveRoot",
+      "path": "packages/sdk/src/save/modules.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readModulesFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:modules"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.perks": {
+      "id": "save.module.perks",
+      "type": "save.module",
+      "label": "perks",
+      "path": "packages/sdk/src/save/catalogs/perks.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:perks"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.bannedPerksIndex": {
+      "id": "save.field.bannedPerksIndex",
+      "type": "save.field",
+      "label": "bannedPerksIndex",
+      "path": "packages/sdk/src/save/catalogs/perks.ts",
+      "saveKey": "bannedPerksIndex",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "fixture:perk-preferences.sample.json"
+      ],
+      "coverageIds": [
+        "save:perks"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture perk-preferences.sample.json"
+    },
+    "save.field.firstPerkIndex": {
+      "id": "save.field.firstPerkIndex",
+      "type": "save.field",
+      "label": "firstPerkIndex",
+      "path": "packages/sdk/src/save/catalogs/perks.ts",
+      "saveKey": "firstPerkIndex",
+      "valueKind": "number",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "fixture:perk-preferences.sample.json"
+      ],
+      "coverageIds": [
+        "save:perks"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture perk-preferences.sample.json"
+    },
+    "save.field.firstTradeOffPerkIndex": {
+      "id": "save.field.firstTradeOffPerkIndex",
+      "type": "save.field",
+      "label": "firstTradeOffPerkIndex",
+      "path": "packages/sdk/src/save/catalogs/perks.ts",
+      "saveKey": "firstTradeOffPerkIndex",
+      "valueKind": "number",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "fixture:perk-preferences.sample.json"
+      ],
+      "coverageIds": [
+        "save:perks"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture perk-preferences.sample.json"
+    },
+    "save.field.autoPickPerk": {
+      "id": "save.field.autoPickPerk",
+      "type": "save.field",
+      "label": "autoPickPerk",
+      "path": "packages/sdk/src/save/catalogs/perks.ts",
+      "saveKey": "autoPickPerk",
+      "valueKind": "boolean",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "fixture:perk-preferences.sample.json"
+      ],
+      "coverageIds": [
+        "save:perks"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture perk-preferences.sample.json"
+    },
+    "save.field.autoPickOrder": {
+      "id": "save.field.autoPickOrder",
+      "type": "save.field",
+      "label": "autoPickOrder",
+      "path": "packages/sdk/src/save/catalogs/perks.ts",
+      "saveKey": "autoPickOrder",
+      "valueKind": "object",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "fixture:perk-preferences.sample.json"
+      ],
+      "coverageIds": [
+        "save:perks"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture perk-preferences.sample.json"
+    },
+    "save.extractor.readSavePerkOrderList": {
+      "id": "save.extractor.readSavePerkOrderList",
+      "type": "save.extractor",
+      "label": "readSavePerkOrderList",
+      "path": "packages/sdk/src/save/catalogs/perks.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readSavePerkOrderList"
+      ],
+      "coverageIds": [
+        "save:perks"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readPerkPreferencesFromSaveRoot": {
+      "id": "save.extractor.readPerkPreferencesFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readPerkPreferencesFromSaveRoot",
+      "path": "packages/sdk/src/save/catalogs/perks.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readPerkPreferencesFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:perks"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.module.read-values": {
+      "id": "save.module.read-values",
+      "type": "save.module",
+      "label": "read-values",
+      "path": "packages/sdk/src/save/read-values.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:read-values"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.extractor.readSaveEnumValue": {
+      "id": "save.extractor.readSaveEnumValue",
+      "type": "save.extractor",
+      "label": "readSaveEnumValue",
+      "path": "packages/sdk/src/save/read-values.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readSaveEnumValue"
+      ],
+      "coverageIds": [
+        "save:read-values"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.extractor.readSaveNumberSource": {
+      "id": "save.extractor.readSaveNumberSource",
+      "type": "save.extractor",
+      "label": "readSaveNumberSource",
+      "path": "packages/sdk/src/save/read-values.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readSaveNumberSource"
+      ],
+      "coverageIds": [
+        "save:read-values"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.extractor.readIndexedNumberArray": {
+      "id": "save.extractor.readIndexedNumberArray",
+      "type": "save.extractor",
+      "label": "readIndexedNumberArray",
+      "path": "packages/sdk/src/save/read-values.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readIndexedNumberArray"
+      ],
+      "coverageIds": [
+        "save:read-values"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.extractor.readSaveBoolean": {
+      "id": "save.extractor.readSaveBoolean",
+      "type": "save.extractor",
+      "label": "readSaveBoolean",
+      "path": "packages/sdk/src/save/read-values.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readSaveBoolean"
+      ],
+      "coverageIds": [
+        "save:read-values"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.extractor.readSaveIntList": {
+      "id": "save.extractor.readSaveIntList",
+      "type": "save.extractor",
+      "label": "readSaveIntList",
+      "path": "packages/sdk/src/save/read-values.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readSaveIntList"
+      ],
+      "coverageIds": [
+        "save:read-values"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.relics": {
+      "id": "save.module.relics",
+      "type": "save.module",
+      "label": "relics",
+      "path": "packages/sdk/src/save/catalogs/relics.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:relics"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.profileRelics": {
+      "id": "save.field.profileRelics",
+      "type": "save.field",
+      "label": "profileRelics",
+      "path": "packages/sdk/src/save/catalogs/relics.ts",
+      "saveKey": "profileRelics",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "RELICS_SAVE_PROFILE_KEY"
+      ],
+      "coverageIds": [
+        "save:relics"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.relicsUnlocked": {
+      "id": "save.field.relicsUnlocked",
+      "type": "save.field",
+      "label": "relicsUnlocked",
+      "path": "packages/sdk/src/save/catalogs/relics.ts",
+      "saveKey": "relicsUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "RELICS_SAVE_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:relics"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.extractor.readRelicsFromSaveRoot": {
+      "id": "save.extractor.readRelicsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readRelicsFromSaveRoot",
+      "path": "packages/sdk/src/save/catalogs/relics.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readRelicsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:relics"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.save-path": {
+      "id": "save.module.save-path",
+      "type": "save.module",
+      "label": "save-path",
+      "path": "packages/sdk/src/save/save-path.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:save-path"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.module.shared-tool-inputs-from-save-extended": {
+      "id": "save.module.shared-tool-inputs-from-save-extended",
+      "type": "save.module",
+      "label": "shared-tool-inputs-from-save-extended",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.ultimateWeaponPlusLevel": {
+      "id": "save.field.ultimateWeaponPlusLevel",
+      "type": "save.field",
+      "label": "ultimateWeaponPlusLevel",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "ultimateWeaponPlusLevel",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "UW_SAVE_PLUS_LEVEL_KEY"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.powerNodesLevel": {
+      "id": "save.field.powerNodesLevel",
+      "type": "save.field",
+      "label": "powerNodesLevel",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "powerNodesLevel",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "VAULT_SAVE_POWER_LEVEL_KEY"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.powerNodesUnlocked": {
+      "id": "save.field.powerNodesUnlocked",
+      "type": "save.field",
+      "label": "powerNodesUnlocked",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "powerNodesUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "VAULT_SAVE_POWER_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.harmonyNodesUnlocked": {
+      "id": "save.field.harmonyNodesUnlocked",
+      "type": "save.field",
+      "label": "harmonyNodesUnlocked",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "harmonyNodesUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "VAULT_SAVE_HARMONY_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.tier2Unlock": {
+      "id": "save.field.tier2Unlock",
+      "type": "save.field",
+      "label": "tier2Unlock",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "tier2Unlock",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "VAULT_SAVE_TIER2_UNLOCK_KEY"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.tier3Unlock": {
+      "id": "save.field.tier3Unlock",
+      "type": "save.field",
+      "label": "tier3Unlock",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "tier3Unlock",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "VAULT_SAVE_TIER3_UNLOCK_KEY"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.keys": {
+      "id": "save.field.keys",
+      "type": "save.field",
+      "label": "keys",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "keys",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "VAULT_SAVE_KEYS_KEY"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.currentTier": {
+      "id": "save.field.currentTier",
+      "type": "save.field",
+      "label": "currentTier",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "currentTier",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.coins": {
+      "id": "save.field.coins",
+      "type": "save.field",
+      "label": "coins",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "coins",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.tournamentJoined": {
+      "id": "save.field.tournamentJoined",
+      "type": "save.field",
+      "label": "tournamentJoined",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "tournamentJoined",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.tierBeforeTournament": {
+      "id": "save.field.tierBeforeTournament",
+      "type": "save.field",
+      "label": "tierBeforeTournament",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "tierBeforeTournament",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.ultimateWeaponLevel": {
+      "id": "save.field.ultimateWeaponLevel",
+      "type": "save.field",
+      "label": "ultimateWeaponLevel",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "ultimateWeaponLevel",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "UW_SAVE_WEAPON_LEVEL_KEY"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.highestWavePerTierThisCycle": {
+      "id": "save.field.highestWavePerTierThisCycle",
+      "type": "save.field",
+      "label": "highestWavePerTierThisCycle",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "saveKey": "highestWavePerTierThisCycle",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.extractor.readWorkshopLevelByTargetKey": {
+      "id": "save.extractor.readWorkshopLevelByTargetKey",
+      "type": "save.extractor",
+      "label": "readWorkshopLevelByTargetKey",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readWorkshopLevelByTargetKey"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readWorkshopEnhancementLevelByTargetKey": {
+      "id": "save.extractor.readWorkshopEnhancementLevelByTargetKey",
+      "type": "save.extractor",
+      "label": "readWorkshopEnhancementLevelByTargetKey",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readWorkshopEnhancementLevelByTargetKey"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readResearchLabLevelsFromSaveRoot": {
+      "id": "save.extractor.readResearchLabLevelsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readResearchLabLevelsFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readResearchLabLevelsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readWorkshopStatLevelsFromSaveRoot": {
+      "id": "save.extractor.readWorkshopStatLevelsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readWorkshopStatLevelsFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readWorkshopStatLevelsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readVaultLevelsFromSaveRoot": {
+      "id": "save.extractor.readVaultLevelsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readVaultLevelsFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readVaultLevelsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readEnemyStatsCoreFromSaveRoot": {
+      "id": "save.extractor.readEnemyStatsCoreFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readEnemyStatsCoreFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readEnemyStatsCoreFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readGeneratorCpkSubstatAdds": {
+      "id": "save.extractor.readGeneratorCpkSubstatAdds",
+      "type": "save.extractor",
+      "label": "readGeneratorCpkSubstatAdds",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readGeneratorCpkSubstatAdds"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readEquippedGeneratorUnique": {
+      "id": "save.extractor.readEquippedGeneratorUnique",
+      "type": "save.extractor",
+      "label": "readEquippedGeneratorUnique",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readEquippedGeneratorUnique"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readElsPlannerInputsFromSaveRoot": {
+      "id": "save.extractor.readElsPlannerInputsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readElsPlannerInputsFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readElsPlannerInputsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readModuleProgressFromSaveRoot": {
+      "id": "save.extractor.readModuleProgressFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readModuleProgressFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readModuleProgressFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readShardSplitterInputsFromSaveRoot": {
+      "id": "save.extractor.readShardSplitterInputsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readShardSplitterInputsFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readShardSplitterInputsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readThornsCalculatorSettings": {
+      "id": "save.extractor.readThornsCalculatorSettings",
+      "type": "save.extractor",
+      "label": "readThornsCalculatorSettings",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readThornsCalculatorSettings"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readDamageReduxCalculatorSettings": {
+      "id": "save.extractor.readDamageReduxCalculatorSettings",
+      "type": "save.extractor",
+      "label": "readDamageReduxCalculatorSettings",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readDamageReduxCalculatorSettings"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readBotMedalSplitterPlanner": {
+      "id": "save.extractor.readBotMedalSplitterPlanner",
+      "type": "save.extractor",
+      "label": "readBotMedalSplitterPlanner",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readBotMedalSplitterPlanner"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readUwCalcProgressFromSaveRoot": {
+      "id": "save.extractor.readUwCalcProgressFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readUwCalcProgressFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readUwCalcProgressFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readDissonanceCycleWaveForTierType": {
+      "id": "save.extractor.readDissonanceCycleWaveForTierType",
+      "type": "save.extractor",
+      "label": "readDissonanceCycleWaveForTierType",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readDissonanceCycleWaveForTierType"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readDissonanceCycleWavesFromSaveRoot": {
+      "id": "save.extractor.readDissonanceCycleWavesFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readDissonanceCycleWavesFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readDissonanceCycleWavesFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readDissonanceBoostWavesByType": {
+      "id": "save.extractor.readDissonanceBoostWavesByType",
+      "type": "save.extractor",
+      "label": "readDissonanceBoostWavesByType",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readDissonanceBoostWavesByType"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readDissonanceBoostWaveForTierType": {
+      "id": "save.extractor.readDissonanceBoostWaveForTierType",
+      "type": "save.extractor",
+      "label": "readDissonanceBoostWaveForTierType",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readDissonanceBoostWaveForTierType"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readDissonanceCalculatorState": {
+      "id": "save.extractor.readDissonanceCalculatorState",
+      "type": "save.extractor",
+      "label": "readDissonanceCalculatorState",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readDissonanceCalculatorState"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readBotsSynchronicityFromSaveRoot": {
+      "id": "save.extractor.readBotsSynchronicityFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readBotsSynchronicityFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readBotsSynchronicityFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readLabsCalcByLabFromResearchLevels": {
+      "id": "save.extractor.readLabsCalcByLabFromResearchLevels",
+      "type": "save.extractor",
+      "label": "readLabsCalcByLabFromResearchLevels",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readLabsCalcByLabFromResearchLevels"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readExtendedSharedToolInputs": {
+      "id": "save.extractor.readExtendedSharedToolInputs",
+      "type": "save.extractor",
+      "label": "readExtendedSharedToolInputs",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save-extended.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readExtendedSharedToolInputs"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save-extended"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.module.shared-tool-inputs-from-save": {
+      "id": "save.module.shared-tool-inputs-from-save",
+      "type": "save.module",
+      "label": "shared-tool-inputs-from-save",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.perkLevel": {
+      "id": "save.field.perkLevel",
+      "type": "save.field",
+      "label": "perkLevel",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "saveKey": "perkLevel",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.upgradeWorkshopLevel": {
+      "id": "save.field.upgradeWorkshopLevel",
+      "type": "save.field",
+      "label": "upgradeWorkshopLevel",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "saveKey": "upgradeWorkshopLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_ATTACK_LEVELS_KEY"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.rangeLevelSelected": {
+      "id": "save.field.rangeLevelSelected",
+      "type": "save.field",
+      "label": "rangeLevelSelected",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "saveKey": "rangeLevelSelected",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.extractor.readTradeOffPerksFromSaveRoot": {
+      "id": "save.extractor.readTradeOffPerksFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readTradeOffPerksFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readTradeOffPerksFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readLabRelicPctFromSaveRoot": {
+      "id": "save.extractor.readLabRelicPctFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readLabRelicPctFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readLabRelicPctFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readGemDiscountMultiplier": {
+      "id": "save.extractor.readGemDiscountMultiplier",
+      "type": "save.extractor",
+      "label": "readGemDiscountMultiplier",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readGemDiscountMultiplier"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readLabSpeedUpFromSaveRoot": {
+      "id": "save.extractor.readLabSpeedUpFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readLabSpeedUpFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readLabSpeedUpFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readTowerRangeMetersFromSaveRoot": {
+      "id": "save.extractor.readTowerRangeMetersFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readTowerRangeMetersFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readTowerRangeMetersFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readBotBotBonusMultiplier": {
+      "id": "save.extractor.readBotBotBonusMultiplier",
+      "type": "save.extractor",
+      "label": "readBotBotBonusMultiplier",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readBotBotBonusMultiplier"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readDeathWaveBaseWavesFromSaveRoot": {
+      "id": "save.extractor.readDeathWaveBaseWavesFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readDeathWaveBaseWavesFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readDeathWaveBaseWavesFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readUptimeModuleRaritiesFromSaveRoot": {
+      "id": "save.extractor.readUptimeModuleRaritiesFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readUptimeModuleRaritiesFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readUptimeModuleRaritiesFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.extractor.readSharedToolInputsFromSaveRoot": {
+      "id": "save.extractor.readSharedToolInputsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readSharedToolInputsFromSaveRoot",
+      "path": "packages/sdk/src/save/shared-tool-inputs-from-save.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readSharedToolInputsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:shared-tool-inputs-from-save"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.module.themes": {
+      "id": "save.module.themes",
+      "type": "save.module",
+      "label": "themes",
+      "path": "packages/sdk/src/save/catalogs/themes.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:themes"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.extractor.readCollectedThemeNamesFromSaveRoot": {
+      "id": "save.extractor.readCollectedThemeNamesFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readCollectedThemeNamesFromSaveRoot",
+      "path": "packages/sdk/src/save/catalogs/themes.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readCollectedThemeNamesFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:themes"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.ultimate-weapons": {
+      "id": "save.module.ultimate-weapons",
+      "type": "save.module",
+      "label": "ultimate-weapons",
+      "path": "packages/sdk/src/save/catalogs/ultimate-weapons.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:ultimate-weapons"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.ultimateWeaponsSystemUnlocked": {
+      "id": "save.field.ultimateWeaponsSystemUnlocked",
+      "type": "save.field",
+      "label": "ultimateWeaponsSystemUnlocked",
+      "path": "packages/sdk/src/save/catalogs/ultimate-weapons.ts",
+      "saveKey": "ultimateWeaponsSystemUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "UW_SAVE_SYSTEM_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:ultimate-weapons"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.ultimateWeaponUnlocked": {
+      "id": "save.field.ultimateWeaponUnlocked",
+      "type": "save.field",
+      "label": "ultimateWeaponUnlocked",
+      "path": "packages/sdk/src/save/catalogs/ultimate-weapons.ts",
+      "saveKey": "ultimateWeaponUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "UW_SAVE_WEAPON_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:ultimate-weapons"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.ultimateWeaponOn": {
+      "id": "save.field.ultimateWeaponOn",
+      "type": "save.field",
+      "label": "ultimateWeaponOn",
+      "path": "packages/sdk/src/save/catalogs/ultimate-weapons.ts",
+      "saveKey": "ultimateWeaponOn",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "UW_SAVE_WEAPON_ON_KEY"
+      ],
+      "coverageIds": [
+        "save:ultimate-weapons"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.ultimateWeaponPlusUnlocked": {
+      "id": "save.field.ultimateWeaponPlusUnlocked",
+      "type": "save.field",
+      "label": "ultimateWeaponPlusUnlocked",
+      "path": "packages/sdk/src/save/catalogs/ultimate-weapons.ts",
+      "saveKey": "ultimateWeaponPlusUnlocked",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "UW_SAVE_PLUS_UNLOCKED_KEY"
+      ],
+      "coverageIds": [
+        "save:ultimate-weapons"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.ultimateWeaponPlusOn": {
+      "id": "save.field.ultimateWeaponPlusOn",
+      "type": "save.field",
+      "label": "ultimateWeaponPlusOn",
+      "path": "packages/sdk/src/save/catalogs/ultimate-weapons.ts",
+      "saveKey": "ultimateWeaponPlusOn",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "UW_SAVE_PLUS_ON_KEY"
+      ],
+      "coverageIds": [
+        "save:ultimate-weapons"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.ultimateWeaponUnlockedIndex": {
+      "id": "save.field.ultimateWeaponUnlockedIndex",
+      "type": "save.field",
+      "label": "ultimateWeaponUnlockedIndex",
+      "path": "packages/sdk/src/save/catalogs/ultimate-weapons.ts",
+      "saveKey": "ultimateWeaponUnlockedIndex",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "UW_SAVE_WEAPON_UNLOCKED_INDEX_KEY"
+      ],
+      "coverageIds": [
+        "save:ultimate-weapons"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.ultimateToggleCount": {
+      "id": "save.field.ultimateToggleCount",
+      "type": "save.field",
+      "label": "ultimateToggleCount",
+      "path": "packages/sdk/src/save/catalogs/ultimate-weapons.ts",
+      "saveKey": "ultimateToggleCount",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "UW_SAVE_TOGGLE_COUNT_KEY"
+      ],
+      "coverageIds": [
+        "save:ultimate-weapons"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.extractor.readUltimateWeaponsFromSaveRoot": {
+      "id": "save.extractor.readUltimateWeaponsFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readUltimateWeaponsFromSaveRoot",
+      "path": "packages/sdk/src/save/catalogs/ultimate-weapons.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readUltimateWeaponsFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:ultimate-weapons"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.vault": {
+      "id": "save.module.vault",
+      "type": "save.module",
+      "label": "vault",
+      "path": "packages/sdk/src/save/catalogs/vault.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:vault"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.totalKeysEarned": {
+      "id": "save.field.totalKeysEarned",
+      "type": "save.field",
+      "label": "totalKeysEarned",
+      "path": "packages/sdk/src/save/catalogs/vault.ts",
+      "saveKey": "totalKeysEarned",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "VAULT_SAVE_TOTAL_KEYS_EARNED_KEY"
+      ],
+      "coverageIds": [
+        "save:vault"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.field.powerNodesMaxLevel": {
+      "id": "save.field.powerNodesMaxLevel",
+      "type": "save.field",
+      "label": "powerNodesMaxLevel",
+      "path": "packages/sdk/src/save/catalogs/vault.ts",
+      "saveKey": "powerNodesMaxLevel",
+      "valueKind": "unknown",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "VAULT_SAVE_POWER_MAX_LEVEL_KEY"
+      ],
+      "coverageIds": [
+        "save:vault"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "unknown-range",
+          "note": "Key discovered from code; range/semantics not asserted until fixture/oracle evidence"
+        }
+      ]
+    },
+    "save.extractor.readVaultFromSaveRoot": {
+      "id": "save.extractor.readVaultFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readVaultFromSaveRoot",
+      "path": "packages/sdk/src/save/catalogs/vault.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readVaultFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:vault"
+      ],
+      "status": "researching",
+      "traps": [
+        {
+          "kind": "missing-fixture",
+          "note": "Extractor listed; bind fixtures explicitly before verified"
+        }
+      ]
+    },
+    "save.module.workshop": {
+      "id": "save.module.workshop",
+      "type": "save.module",
+      "label": "workshop",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "unmodeled",
+      "traps": [
+        {
+          "kind": "unknown-semantics",
+          "note": "Module inventoried from save TS; field semantics require fixture evidence before verified"
+        }
+      ],
+      "notes": "Save module inventoried; mechanic mapping not yet modeled — explicit unknown"
+    },
+    "save.field.upgradeWorkshopDefenseLevel": {
+      "id": "save.field.upgradeWorkshopDefenseLevel",
+      "type": "save.field",
+      "label": "upgradeWorkshopDefenseLevel",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "upgradeWorkshopDefenseLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_DEFENSE_LEVELS_KEY"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.upgradeWorkshopUtilityLevel": {
+      "id": "save.field.upgradeWorkshopUtilityLevel",
+      "type": "save.field",
+      "label": "upgradeWorkshopUtilityLevel",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "upgradeWorkshopUtilityLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_UTILITY_LEVELS_KEY"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.enhancementLevel": {
+      "id": "save.field.enhancementLevel",
+      "type": "save.field",
+      "label": "enhancementLevel",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "enhancementLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_ATTACK_ENHANCEMENT_LEVELS_KEY"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.enhancementDefenseLevel": {
+      "id": "save.field.enhancementDefenseLevel",
+      "type": "save.field",
+      "label": "enhancementDefenseLevel",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "enhancementDefenseLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_DEFENSE_ENHANCEMENT_LEVELS_KEY"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.enhancementUtilityLevel": {
+      "id": "save.field.enhancementUtilityLevel",
+      "type": "save.field",
+      "label": "enhancementUtilityLevel",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "enhancementUtilityLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_UTILITY_ENHANCEMENT_LEVELS_KEY"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.presetUpgradeWorkshopLevel": {
+      "id": "save.field.presetUpgradeWorkshopLevel",
+      "type": "save.field",
+      "label": "presetUpgradeWorkshopLevel",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "presetUpgradeWorkshopLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_PRESET_ATTACK_LEVELS_KEY"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.presetUpgradeWorkshopDefenseLevel": {
+      "id": "save.field.presetUpgradeWorkshopDefenseLevel",
+      "type": "save.field",
+      "label": "presetUpgradeWorkshopDefenseLevel",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "presetUpgradeWorkshopDefenseLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_PRESET_DEFENSE_LEVELS_KEY"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.presetUpgradeWorkshopUtilityLevel": {
+      "id": "save.field.presetUpgradeWorkshopUtilityLevel",
+      "type": "save.field",
+      "label": "presetUpgradeWorkshopUtilityLevel",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "presetUpgradeWorkshopUtilityLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_PRESET_UTILITY_LEVELS_KEY"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.presetEnhancementLevel": {
+      "id": "save.field.presetEnhancementLevel",
+      "type": "save.field",
+      "label": "presetEnhancementLevel",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "presetEnhancementLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_PRESET_ATTACK_ENHANCEMENT_KEY"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.presetEnhancementDefenseLevel": {
+      "id": "save.field.presetEnhancementDefenseLevel",
+      "type": "save.field",
+      "label": "presetEnhancementDefenseLevel",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "presetEnhancementDefenseLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_PRESET_DEFENSE_ENHANCEMENT_KEY"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.presetEnhancementUtilityLevel": {
+      "id": "save.field.presetEnhancementUtilityLevel",
+      "type": "save.field",
+      "label": "presetEnhancementUtilityLevel",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "presetEnhancementUtilityLevel",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "WORKSHOP_SAVE_PRESET_UTILITY_ENHANCEMENT_KEY"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.workshopPresetName": {
+      "id": "save.field.workshopPresetName",
+      "type": "save.field",
+      "label": "workshopPresetName",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "workshopPresetName",
+      "valueKind": "array",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "fixture:workshop-keys.sample.json"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.field.currentWorkshopPreset": {
+      "id": "save.field.currentWorkshopPreset",
+      "type": "save.field",
+      "label": "currentWorkshopPreset",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "saveKey": "currentWorkshopPreset",
+      "valueKind": "number",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "fixture:workshop-keys.sample.json"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": [],
+      "notes": "Present in fixture workshop-keys.sample.json"
+    },
+    "save.extractor.readWorkshopFromSaveRoot": {
+      "id": "save.extractor.readWorkshopFromSaveRoot",
+      "type": "save.extractor",
+      "label": "readWorkshopFromSaveRoot",
+      "path": "packages/sdk/src/save/catalogs/workshop.ts",
+      "mechanicNodeIds": [],
+      "codeSymbols": [
+        "readWorkshopFromSaveRoot"
+      ],
+      "coverageIds": [
+        "save:workshop"
+      ],
+      "status": "verified",
+      "traps": []
+    },
+    "save.fixture.labs-keys.sample": {
+      "id": "save.fixture.labs-keys.sample",
+      "type": "save.fixture",
+      "label": "labs-keys.sample.json",
+      "path": "packages/sdk/fixtures/save/labs-keys.sample.json",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [],
+      "status": "verified",
+      "traps": [],
+      "notes": "Local fixture artifact — not a live player save"
+    },
+    "save.fixture.perk-preferences.sample": {
+      "id": "save.fixture.perk-preferences.sample",
+      "type": "save.fixture",
+      "label": "perk-preferences.sample.json",
+      "path": "packages/sdk/fixtures/save/perk-preferences.sample.json",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [],
+      "status": "verified",
+      "traps": [],
+      "notes": "Local fixture artifact — not a live player save"
+    },
+    "save.fixture.workshop-keys.sample": {
+      "id": "save.fixture.workshop-keys.sample",
+      "type": "save.fixture",
+      "label": "workshop-keys.sample.json",
+      "path": "packages/sdk/fixtures/save/workshop-keys.sample.json",
+      "mechanicNodeIds": [],
+      "codeSymbols": [],
+      "coverageIds": [],
+      "status": "verified",
+      "traps": [],
+      "notes": "Local fixture artifact — not a live player save"
+    }
+  },
+  "edges": [
+    {
+      "id": "extracted:save.extractor.readDurationSecondsFromSave->save.module.battle-duration",
+      "from": "save.extractor.readDurationSecondsFromSave",
+      "to": "save.module.battle-duration",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readBattleReportRawSaveValue->save.module.battle-report-fields",
+      "from": "save.extractor.readBattleReportRawSaveValue",
+      "to": "save.module.battle-report-fields",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readBattleDateFromSave->save.module.battle-reports",
+      "from": "save.extractor.readBattleDateFromSave",
+      "to": "save.module.battle-reports",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.botsUnlocked->save.module.bots",
+      "from": "save.field.botsUnlocked",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.botsActive->save.module.bots",
+      "from": "save.field.botsActive",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.botsLevel->save.module.bots",
+      "from": "save.field.botsLevel",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.botsLevelPresets->save.module.bots",
+      "from": "save.field.botsLevelPresets",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.botsLevelSelectionPresets->save.module.bots",
+      "from": "save.field.botsLevelSelectionPresets",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.botsUnlockedPresets->save.module.bots",
+      "from": "save.field.botsUnlockedPresets",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.botsActivePresets->save.module.bots",
+      "from": "save.field.botsActivePresets",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.currentBotPreset->save.module.bots",
+      "from": "save.field.currentBotPreset",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.botPresetName->save.module.bots",
+      "from": "save.field.botPresetName",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.migratedBotDataToV28->save.module.bots",
+      "from": "save.field.migratedBotDataToV28",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.totalCoinsByBot->save.module.bots",
+      "from": "save.field.totalCoinsByBot",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.totalDamageByBot->save.module.bots",
+      "from": "save.field.totalDamageByBot",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.totalStunsByBot->save.module.bots",
+      "from": "save.field.totalStunsByBot",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.totalStonesSpent->save.module.bots",
+      "from": "save.field.totalStonesSpent",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.totalMedalsSpent->save.module.bots",
+      "from": "save.field.totalMedalsSpent",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.synchronicitySlotUnlocked->save.module.bots",
+      "from": "save.field.synchronicitySlotUnlocked",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.synchronicityPresets->save.module.bots",
+      "from": "save.field.synchronicityPresets",
+      "to": "save.module.bots",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readBotsFromSaveRoot->save.module.bots",
+      "from": "save.extractor.readBotsFromSaveRoot",
+      "to": "save.module.bots",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readBotsPlusAndSyncStonesSpent->save.module.bots",
+      "from": "save.extractor.readBotsPlusAndSyncStonesSpent",
+      "to": "save.module.bots",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readBotsMedalsSpentFromSave->save.module.bots",
+      "from": "save.extractor.readBotsMedalsSpentFromSave",
+      "to": "save.module.bots",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.cardLevel->save.module.cards",
+      "from": "save.field.cardLevel",
+      "to": "save.module.cards",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.cardCount->save.module.cards",
+      "from": "save.field.cardCount",
+      "to": "save.module.cards",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.cardUnlocked->save.module.cards",
+      "from": "save.field.cardUnlocked",
+      "to": "save.module.cards",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.cardActive->save.module.cards",
+      "from": "save.field.cardActive",
+      "to": "save.module.cards",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.cardMasteryUnlocked->save.module.cards",
+      "from": "save.field.cardMasteryUnlocked",
+      "to": "save.module.cards",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.slotsUnlocked->save.module.cards",
+      "from": "save.field.slotsUnlocked",
+      "to": "save.module.cards",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.cardsBoughtTotal->save.module.cards",
+      "from": "save.field.cardsBoughtTotal",
+      "to": "save.module.cards",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.currentPreset->save.module.cards",
+      "from": "save.field.currentPreset",
+      "to": "save.module.cards",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.presetName->save.module.cards",
+      "from": "save.field.presetName",
+      "to": "save.module.cards",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.slotPresetCardInt->save.module.cards",
+      "from": "save.field.slotPresetCardInt",
+      "to": "save.module.cards",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.slotPresetCardAssignedBool->save.module.cards",
+      "from": "save.field.slotPresetCardAssignedBool",
+      "to": "save.module.cards",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readCardsFromSaveRoot->save.module.cards",
+      "from": "save.extractor.readCardsFromSaveRoot",
+      "to": "save.module.cards",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readDissonanceCycleWavesFromSaveRoot->save.module.dissonance",
+      "from": "save.extractor.readDissonanceCycleWavesFromSaveRoot",
+      "to": "save.module.dissonance",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.highestWaveThisTier->save.module.effective-paths-settings",
+      "from": "save.field.highestWaveThisTier",
+      "to": "save.module.effective-paths-settings",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.gameSpeedMemory->save.module.effective-paths-settings",
+      "from": "save.field.gameSpeedMemory",
+      "to": "save.module.effective-paths-settings",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readEffectivePathsSettingsFromSaveRoot->save.module.effective-paths-settings",
+      "from": "save.extractor.readEffectivePathsSettingsFromSaveRoot",
+      "to": "save.module.effective-paths-settings",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readFavoriteLabSlugsFromSaveRoot->save.module.favorite-labs",
+      "from": "save.extractor.readFavoriteLabSlugsFromSaveRoot",
+      "to": "save.module.favorite-labs",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.guardianUnlocked->save.module.guardians",
+      "from": "save.field.guardianUnlocked",
+      "to": "save.module.guardians",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.guardianSlotsUnlocked->save.module.guardians",
+      "from": "save.field.guardianSlotsUnlocked",
+      "to": "save.module.guardians",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.guardianChipSlot->save.module.guardians",
+      "from": "save.field.guardianChipSlot",
+      "to": "save.module.guardians",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.guardianChipUnlocked->save.module.guardians",
+      "from": "save.field.guardianChipUnlocked",
+      "to": "save.module.guardians",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.guardianChipLevel->save.module.guardians",
+      "from": "save.field.guardianChipLevel",
+      "to": "save.module.guardians",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.guardianSkinIndex->save.module.guardians",
+      "from": "save.field.guardianSkinIndex",
+      "to": "save.module.guardians",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.guardianSkinUnlocked->save.module.guardians",
+      "from": "save.field.guardianSkinUnlocked",
+      "to": "save.module.guardians",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.totalDamageByGuardian->save.module.guardians",
+      "from": "save.field.totalDamageByGuardian",
+      "to": "save.module.guardians",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.totalCoinsByGuardian->save.module.guardians",
+      "from": "save.field.totalCoinsByGuardian",
+      "to": "save.module.guardians",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.totalCatchesByGuardian->save.module.guardians",
+      "from": "save.field.totalCatchesByGuardian",
+      "to": "save.module.guardians",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readGuardiansFromSaveRoot->save.module.guardians",
+      "from": "save.extractor.readGuardiansFromSaveRoot",
+      "to": "save.module.guardians",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readKilledByEnumIndex->save.module.killed-by",
+      "from": "save.extractor.readKilledByEnumIndex",
+      "to": "save.module.killed-by",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.labsUnlocked->save.module.labs",
+      "from": "save.field.labsUnlocked",
+      "to": "save.module.labs",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.researchLevel->save.module.labs",
+      "from": "save.field.researchLevel",
+      "to": "save.module.labs",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.researchPercentComplete->save.module.labs",
+      "from": "save.field.researchPercentComplete",
+      "to": "save.module.labs",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.labLevel->save.module.labs",
+      "from": "save.field.labLevel",
+      "to": "save.module.labs",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.labResearchInt->save.module.labs",
+      "from": "save.field.labResearchInt",
+      "to": "save.module.labs",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.labActiveBool->save.module.labs",
+      "from": "save.field.labActiveBool",
+      "to": "save.module.labs",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.labSpeedUpSpeed->save.module.labs",
+      "from": "save.field.labSpeedUpSpeed",
+      "to": "save.module.labs",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.labSpeedUpRemainingSeconds->save.module.labs",
+      "from": "save.field.labSpeedUpRemainingSeconds",
+      "to": "save.module.labs",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.researchesComplete->save.module.labs",
+      "from": "save.field.researchesComplete",
+      "to": "save.module.labs",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.totalCoinsSpentOnResearch->save.module.labs",
+      "from": "save.field.totalCoinsSpentOnResearch",
+      "to": "save.module.labs",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readLabsFromSaveRoot->save.module.labs",
+      "from": "save.extractor.readLabsFromSaveRoot",
+      "to": "save.module.labs",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.totalEnemiesDestryoedByOrbs->save.module.lifetime",
+      "from": "save.field.totalEnemiesDestryoedByOrbs",
+      "to": "save.module.lifetime",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readLifetimeFromSaveRoot->save.module.lifetime",
+      "from": "save.extractor.readLifetimeFromSaveRoot",
+      "to": "save.module.lifetime",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.moduleCannonShards->save.module.modules",
+      "from": "save.field.moduleCannonShards",
+      "to": "save.module.modules",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.moduleArmorShards->save.module.modules",
+      "from": "save.field.moduleArmorShards",
+      "to": "save.module.modules",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.moduleGeneratorShards->save.module.modules",
+      "from": "save.field.moduleGeneratorShards",
+      "to": "save.module.modules",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.moduleCoreShards->save.module.modules",
+      "from": "save.field.moduleCoreShards",
+      "to": "save.module.modules",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.moduleRerollCurrency->save.module.modules",
+      "from": "save.field.moduleRerollCurrency",
+      "to": "save.module.modules",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.moduleTickets->save.module.modules",
+      "from": "save.field.moduleTickets",
+      "to": "save.module.modules",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.moduleAutoShatter->save.module.modules",
+      "from": "save.field.moduleAutoShatter",
+      "to": "save.module.modules",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.moduleAutoShatterRare->save.module.modules",
+      "from": "save.field.moduleAutoShatterRare",
+      "to": "save.module.modules",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.moduleEquipped->save.module.modules",
+      "from": "save.field.moduleEquipped",
+      "to": "save.module.modules",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.assistModuleSlots->save.module.modules",
+      "from": "save.field.assistModuleSlots",
+      "to": "save.module.modules",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.inventory->save.module.modules",
+      "from": "save.field.inventory",
+      "to": "save.module.modules",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readModulesFromSaveRoot->save.module.modules",
+      "from": "save.extractor.readModulesFromSaveRoot",
+      "to": "save.module.modules",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.bannedPerksIndex->save.module.perks",
+      "from": "save.field.bannedPerksIndex",
+      "to": "save.module.perks",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.firstPerkIndex->save.module.perks",
+      "from": "save.field.firstPerkIndex",
+      "to": "save.module.perks",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.firstTradeOffPerkIndex->save.module.perks",
+      "from": "save.field.firstTradeOffPerkIndex",
+      "to": "save.module.perks",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.autoPickPerk->save.module.perks",
+      "from": "save.field.autoPickPerk",
+      "to": "save.module.perks",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.autoPickOrder->save.module.perks",
+      "from": "save.field.autoPickOrder",
+      "to": "save.module.perks",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readSavePerkOrderList->save.module.perks",
+      "from": "save.extractor.readSavePerkOrderList",
+      "to": "save.module.perks",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readPerkPreferencesFromSaveRoot->save.module.perks",
+      "from": "save.extractor.readPerkPreferencesFromSaveRoot",
+      "to": "save.module.perks",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readSaveEnumValue->save.module.read-values",
+      "from": "save.extractor.readSaveEnumValue",
+      "to": "save.module.read-values",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readSaveNumberSource->save.module.read-values",
+      "from": "save.extractor.readSaveNumberSource",
+      "to": "save.module.read-values",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readIndexedNumberArray->save.module.read-values",
+      "from": "save.extractor.readIndexedNumberArray",
+      "to": "save.module.read-values",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readSaveBoolean->save.module.read-values",
+      "from": "save.extractor.readSaveBoolean",
+      "to": "save.module.read-values",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readSaveIntList->save.module.read-values",
+      "from": "save.extractor.readSaveIntList",
+      "to": "save.module.read-values",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.profileRelics->save.module.relics",
+      "from": "save.field.profileRelics",
+      "to": "save.module.relics",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.relicsUnlocked->save.module.relics",
+      "from": "save.field.relicsUnlocked",
+      "to": "save.module.relics",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readRelicsFromSaveRoot->save.module.relics",
+      "from": "save.extractor.readRelicsFromSaveRoot",
+      "to": "save.module.relics",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.cardLevel->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.cardLevel",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.cardMasteryUnlocked->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.cardMasteryUnlocked",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.ultimateWeaponPlusLevel->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.ultimateWeaponPlusLevel",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.researchLevel->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.researchLevel",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.powerNodesLevel->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.powerNodesLevel",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.powerNodesUnlocked->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.powerNodesUnlocked",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.harmonyNodesUnlocked->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.harmonyNodesUnlocked",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.tier2Unlock->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.tier2Unlock",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.tier3Unlock->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.tier3Unlock",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.keys->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.keys",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.currentTier->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.currentTier",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.highestWaveThisTier->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.highestWaveThisTier",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.moduleEquipped->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.moduleEquipped",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.assistModuleSlots->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.assistModuleSlots",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.coins->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.coins",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.tournamentJoined->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.tournamentJoined",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.tierBeforeTournament->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.tierBeforeTournament",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.ultimateWeaponLevel->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.ultimateWeaponLevel",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.highestWavePerTierThisCycle->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.field.highestWavePerTierThisCycle",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readWorkshopLevelByTargetKey->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readWorkshopLevelByTargetKey",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readWorkshopEnhancementLevelByTargetKey->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readWorkshopEnhancementLevelByTargetKey",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readResearchLabLevelsFromSaveRoot->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readResearchLabLevelsFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readWorkshopStatLevelsFromSaveRoot->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readWorkshopStatLevelsFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readVaultLevelsFromSaveRoot->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readVaultLevelsFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readEnemyStatsCoreFromSaveRoot->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readEnemyStatsCoreFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readGeneratorCpkSubstatAdds->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readGeneratorCpkSubstatAdds",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readEquippedGeneratorUnique->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readEquippedGeneratorUnique",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readElsPlannerInputsFromSaveRoot->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readElsPlannerInputsFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readModuleProgressFromSaveRoot->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readModuleProgressFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readShardSplitterInputsFromSaveRoot->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readShardSplitterInputsFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readThornsCalculatorSettings->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readThornsCalculatorSettings",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readDamageReduxCalculatorSettings->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readDamageReduxCalculatorSettings",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readBotMedalSplitterPlanner->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readBotMedalSplitterPlanner",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readUwCalcProgressFromSaveRoot->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readUwCalcProgressFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readDissonanceCycleWaveForTierType->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readDissonanceCycleWaveForTierType",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readDissonanceCycleWavesFromSaveRoot->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readDissonanceCycleWavesFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readDissonanceBoostWavesByType->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readDissonanceBoostWavesByType",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readDissonanceBoostWaveForTierType->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readDissonanceBoostWaveForTierType",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readDissonanceCalculatorState->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readDissonanceCalculatorState",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readBotsSynchronicityFromSaveRoot->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readBotsSynchronicityFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readLabsCalcByLabFromResearchLevels->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readLabsCalcByLabFromResearchLevels",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readExtendedSharedToolInputs->save.module.shared-tool-inputs-from-save-extended",
+      "from": "save.extractor.readExtendedSharedToolInputs",
+      "to": "save.module.shared-tool-inputs-from-save-extended",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.perkLevel->save.module.shared-tool-inputs-from-save",
+      "from": "save.field.perkLevel",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.profileRelics->save.module.shared-tool-inputs-from-save",
+      "from": "save.field.profileRelics",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.researchesComplete->save.module.shared-tool-inputs-from-save",
+      "from": "save.field.researchesComplete",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.labSpeedUpSpeed->save.module.shared-tool-inputs-from-save",
+      "from": "save.field.labSpeedUpSpeed",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.upgradeWorkshopLevel->save.module.shared-tool-inputs-from-save",
+      "from": "save.field.upgradeWorkshopLevel",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.rangeLevelSelected->save.module.shared-tool-inputs-from-save",
+      "from": "save.field.rangeLevelSelected",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.botsLevel->save.module.shared-tool-inputs-from-save",
+      "from": "save.field.botsLevel",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.ultimateWeaponLevel->save.module.shared-tool-inputs-from-save",
+      "from": "save.field.ultimateWeaponLevel",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.moduleEquipped->save.module.shared-tool-inputs-from-save",
+      "from": "save.field.moduleEquipped",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.assistModuleSlots->save.module.shared-tool-inputs-from-save",
+      "from": "save.field.assistModuleSlots",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.tournamentJoined->save.module.shared-tool-inputs-from-save",
+      "from": "save.field.tournamentJoined",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readTradeOffPerksFromSaveRoot->save.module.shared-tool-inputs-from-save",
+      "from": "save.extractor.readTradeOffPerksFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readLabRelicPctFromSaveRoot->save.module.shared-tool-inputs-from-save",
+      "from": "save.extractor.readLabRelicPctFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readGemDiscountMultiplier->save.module.shared-tool-inputs-from-save",
+      "from": "save.extractor.readGemDiscountMultiplier",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readLabSpeedUpFromSaveRoot->save.module.shared-tool-inputs-from-save",
+      "from": "save.extractor.readLabSpeedUpFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readTowerRangeMetersFromSaveRoot->save.module.shared-tool-inputs-from-save",
+      "from": "save.extractor.readTowerRangeMetersFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readBotBotBonusMultiplier->save.module.shared-tool-inputs-from-save",
+      "from": "save.extractor.readBotBotBonusMultiplier",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readDeathWaveBaseWavesFromSaveRoot->save.module.shared-tool-inputs-from-save",
+      "from": "save.extractor.readDeathWaveBaseWavesFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readUptimeModuleRaritiesFromSaveRoot->save.module.shared-tool-inputs-from-save",
+      "from": "save.extractor.readUptimeModuleRaritiesFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readSharedToolInputsFromSaveRoot->save.module.shared-tool-inputs-from-save",
+      "from": "save.extractor.readSharedToolInputsFromSaveRoot",
+      "to": "save.module.shared-tool-inputs-from-save",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "extracted:save.extractor.readCollectedThemeNamesFromSaveRoot->save.module.themes",
+      "from": "save.extractor.readCollectedThemeNamesFromSaveRoot",
+      "to": "save.module.themes",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.ultimateWeaponsSystemUnlocked->save.module.ultimate-weapons",
+      "from": "save.field.ultimateWeaponsSystemUnlocked",
+      "to": "save.module.ultimate-weapons",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.ultimateWeaponLevel->save.module.ultimate-weapons",
+      "from": "save.field.ultimateWeaponLevel",
+      "to": "save.module.ultimate-weapons",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.ultimateWeaponUnlocked->save.module.ultimate-weapons",
+      "from": "save.field.ultimateWeaponUnlocked",
+      "to": "save.module.ultimate-weapons",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.ultimateWeaponOn->save.module.ultimate-weapons",
+      "from": "save.field.ultimateWeaponOn",
+      "to": "save.module.ultimate-weapons",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.ultimateWeaponPlusLevel->save.module.ultimate-weapons",
+      "from": "save.field.ultimateWeaponPlusLevel",
+      "to": "save.module.ultimate-weapons",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.ultimateWeaponPlusUnlocked->save.module.ultimate-weapons",
+      "from": "save.field.ultimateWeaponPlusUnlocked",
+      "to": "save.module.ultimate-weapons",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.ultimateWeaponPlusOn->save.module.ultimate-weapons",
+      "from": "save.field.ultimateWeaponPlusOn",
+      "to": "save.module.ultimate-weapons",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.ultimateWeaponUnlockedIndex->save.module.ultimate-weapons",
+      "from": "save.field.ultimateWeaponUnlockedIndex",
+      "to": "save.module.ultimate-weapons",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.ultimateToggleCount->save.module.ultimate-weapons",
+      "from": "save.field.ultimateToggleCount",
+      "to": "save.module.ultimate-weapons",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readUltimateWeaponsFromSaveRoot->save.module.ultimate-weapons",
+      "from": "save.extractor.readUltimateWeaponsFromSaveRoot",
+      "to": "save.module.ultimate-weapons",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.keys->save.module.vault",
+      "from": "save.field.keys",
+      "to": "save.module.vault",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.totalKeysEarned->save.module.vault",
+      "from": "save.field.totalKeysEarned",
+      "to": "save.module.vault",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.powerNodesLevel->save.module.vault",
+      "from": "save.field.powerNodesLevel",
+      "to": "save.module.vault",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.powerNodesMaxLevel->save.module.vault",
+      "from": "save.field.powerNodesMaxLevel",
+      "to": "save.module.vault",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.powerNodesUnlocked->save.module.vault",
+      "from": "save.field.powerNodesUnlocked",
+      "to": "save.module.vault",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.harmonyNodesUnlocked->save.module.vault",
+      "from": "save.field.harmonyNodesUnlocked",
+      "to": "save.module.vault",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.tier2Unlock->save.module.vault",
+      "from": "save.field.tier2Unlock",
+      "to": "save.module.vault",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.tier3Unlock->save.module.vault",
+      "from": "save.field.tier3Unlock",
+      "to": "save.module.vault",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readVaultFromSaveRoot->save.module.vault",
+      "from": "save.extractor.readVaultFromSaveRoot",
+      "to": "save.module.vault",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "belongs:save.field.upgradeWorkshopLevel->save.module.workshop",
+      "from": "save.field.upgradeWorkshopLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.upgradeWorkshopDefenseLevel->save.module.workshop",
+      "from": "save.field.upgradeWorkshopDefenseLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.upgradeWorkshopUtilityLevel->save.module.workshop",
+      "from": "save.field.upgradeWorkshopUtilityLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.enhancementLevel->save.module.workshop",
+      "from": "save.field.enhancementLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.enhancementDefenseLevel->save.module.workshop",
+      "from": "save.field.enhancementDefenseLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.enhancementUtilityLevel->save.module.workshop",
+      "from": "save.field.enhancementUtilityLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.presetUpgradeWorkshopLevel->save.module.workshop",
+      "from": "save.field.presetUpgradeWorkshopLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.presetUpgradeWorkshopDefenseLevel->save.module.workshop",
+      "from": "save.field.presetUpgradeWorkshopDefenseLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.presetUpgradeWorkshopUtilityLevel->save.module.workshop",
+      "from": "save.field.presetUpgradeWorkshopUtilityLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.presetEnhancementLevel->save.module.workshop",
+      "from": "save.field.presetEnhancementLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.presetEnhancementDefenseLevel->save.module.workshop",
+      "from": "save.field.presetEnhancementDefenseLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.presetEnhancementUtilityLevel->save.module.workshop",
+      "from": "save.field.presetEnhancementUtilityLevel",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.workshopPresetName->save.module.workshop",
+      "from": "save.field.workshopPresetName",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "belongs:save.field.currentWorkshopPreset->save.module.workshop",
+      "from": "save.field.currentWorkshopPreset",
+      "to": "save.module.workshop",
+      "kind": "belongs_to"
+    },
+    {
+      "id": "extracted:save.extractor.readWorkshopFromSaveRoot->save.module.workshop",
+      "from": "save.extractor.readWorkshopFromSaveRoot",
+      "to": "save.module.workshop",
+      "kind": "extracted_by"
+    },
+    {
+      "id": "proven:save.field.labsUnlocked->save.fixture.labs-keys.sample",
+      "from": "save.field.labsUnlocked",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readLabsFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readLabsFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.researchLevel->save.fixture.labs-keys.sample",
+      "from": "save.field.researchLevel",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readWorkshopLevelByTargetKey->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readWorkshopLevelByTargetKey",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readWorkshopEnhancementLevelByTargetKey->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readWorkshopEnhancementLevelByTargetKey",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readResearchLabLevelsFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readResearchLabLevelsFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readWorkshopStatLevelsFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readWorkshopStatLevelsFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readVaultLevelsFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readVaultLevelsFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readEnemyStatsCoreFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readEnemyStatsCoreFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readGeneratorCpkSubstatAdds->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readGeneratorCpkSubstatAdds",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readEquippedGeneratorUnique->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readEquippedGeneratorUnique",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readElsPlannerInputsFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readElsPlannerInputsFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readModuleProgressFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readModuleProgressFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readShardSplitterInputsFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readShardSplitterInputsFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readThornsCalculatorSettings->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readThornsCalculatorSettings",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readDamageReduxCalculatorSettings->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readDamageReduxCalculatorSettings",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readBotMedalSplitterPlanner->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readBotMedalSplitterPlanner",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readUwCalcProgressFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readUwCalcProgressFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readDissonanceCycleWaveForTierType->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readDissonanceCycleWaveForTierType",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readDissonanceCycleWavesFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readDissonanceCycleWavesFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readDissonanceBoostWavesByType->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readDissonanceBoostWavesByType",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readDissonanceBoostWaveForTierType->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readDissonanceBoostWaveForTierType",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readDissonanceCalculatorState->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readDissonanceCalculatorState",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readBotsSynchronicityFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readBotsSynchronicityFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readLabsCalcByLabFromResearchLevels->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readLabsCalcByLabFromResearchLevels",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readExtendedSharedToolInputs->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readExtendedSharedToolInputs",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.researchPercentComplete->save.fixture.labs-keys.sample",
+      "from": "save.field.researchPercentComplete",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.labLevel->save.fixture.labs-keys.sample",
+      "from": "save.field.labLevel",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.labResearchInt->save.fixture.labs-keys.sample",
+      "from": "save.field.labResearchInt",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.labActiveBool->save.fixture.labs-keys.sample",
+      "from": "save.field.labActiveBool",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.labSpeedUpSpeed->save.fixture.labs-keys.sample",
+      "from": "save.field.labSpeedUpSpeed",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readTradeOffPerksFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readTradeOffPerksFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readLabRelicPctFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readLabRelicPctFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readGemDiscountMultiplier->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readGemDiscountMultiplier",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readLabSpeedUpFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readLabSpeedUpFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readTowerRangeMetersFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readTowerRangeMetersFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readBotBotBonusMultiplier->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readBotBotBonusMultiplier",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readDeathWaveBaseWavesFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readDeathWaveBaseWavesFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readUptimeModuleRaritiesFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readUptimeModuleRaritiesFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readSharedToolInputsFromSaveRoot->save.fixture.labs-keys.sample",
+      "from": "save.extractor.readSharedToolInputsFromSaveRoot",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.labSpeedUpRemainingSeconds->save.fixture.labs-keys.sample",
+      "from": "save.field.labSpeedUpRemainingSeconds",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.researchesComplete->save.fixture.labs-keys.sample",
+      "from": "save.field.researchesComplete",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.totalCoinsSpentOnResearch->save.fixture.labs-keys.sample",
+      "from": "save.field.totalCoinsSpentOnResearch",
+      "to": "save.fixture.labs-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.bannedPerksIndex->save.fixture.perk-preferences.sample",
+      "from": "save.field.bannedPerksIndex",
+      "to": "save.fixture.perk-preferences.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readSavePerkOrderList->save.fixture.perk-preferences.sample",
+      "from": "save.extractor.readSavePerkOrderList",
+      "to": "save.fixture.perk-preferences.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readPerkPreferencesFromSaveRoot->save.fixture.perk-preferences.sample",
+      "from": "save.extractor.readPerkPreferencesFromSaveRoot",
+      "to": "save.fixture.perk-preferences.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.firstPerkIndex->save.fixture.perk-preferences.sample",
+      "from": "save.field.firstPerkIndex",
+      "to": "save.fixture.perk-preferences.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.firstTradeOffPerkIndex->save.fixture.perk-preferences.sample",
+      "from": "save.field.firstTradeOffPerkIndex",
+      "to": "save.fixture.perk-preferences.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.autoPickPerk->save.fixture.perk-preferences.sample",
+      "from": "save.field.autoPickPerk",
+      "to": "save.fixture.perk-preferences.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.autoPickOrder->save.fixture.perk-preferences.sample",
+      "from": "save.field.autoPickOrder",
+      "to": "save.fixture.perk-preferences.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.upgradeWorkshopLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.upgradeWorkshopLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.extractor.readWorkshopFromSaveRoot->save.fixture.workshop-keys.sample",
+      "from": "save.extractor.readWorkshopFromSaveRoot",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.upgradeWorkshopDefenseLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.upgradeWorkshopDefenseLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.upgradeWorkshopUtilityLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.upgradeWorkshopUtilityLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.enhancementLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.enhancementLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.enhancementDefenseLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.enhancementDefenseLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.enhancementUtilityLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.enhancementUtilityLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.presetUpgradeWorkshopLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.presetUpgradeWorkshopLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.presetUpgradeWorkshopDefenseLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.presetUpgradeWorkshopDefenseLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.presetUpgradeWorkshopUtilityLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.presetUpgradeWorkshopUtilityLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.presetEnhancementLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.presetEnhancementLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.presetEnhancementDefenseLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.presetEnhancementDefenseLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.presetEnhancementUtilityLevel->save.fixture.workshop-keys.sample",
+      "from": "save.field.presetEnhancementUtilityLevel",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.workshopPresetName->save.fixture.workshop-keys.sample",
+      "from": "save.field.workshopPresetName",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    },
+    {
+      "id": "proven:save.field.currentWorkshopPreset->save.fixture.workshop-keys.sample",
+      "from": "save.field.currentWorkshopPreset",
+      "to": "save.fixture.workshop-keys.sample",
+      "kind": "proven_by_fixture"
+    }
+  ]
+}

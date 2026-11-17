@@ -1,0 +1,121 @@
+{
+  "description": "Documents how Ultimate Weapon data is stored in the savedFile format",
+  "ultimateWeaponHeaders": {
+    "ultimateWeaponUnlocked": "ultimateWeaponUnlocked",
+    "ultimateWeaponPlusUnlocked": "ultimateWeaponPlusUnlocked",
+    "ultimateWeaponLevel": "ultimateWeaponLevel",
+    "ultimateWeaponPlusLevel": "ultimateWeaponPlusLevel"
+  },
+  "fields": {
+    "ultimateWeaponUnlocked": {
+      "description": "Boolean list — one entry per weapon in weaponOrder. True if that weapon is unlocked.",
+      "indexing": "weapon index i → ultimateWeaponUnlocked[i]"
+    },
+    "ultimateWeaponPlusUnlocked": {
+      "description": "Boolean list — one entry per weapon in weaponOrder. True if the plus upgrade for that weapon is unlocked.",
+      "indexing": "weapon index i → ultimateWeaponPlusUnlocked[i]"
+    },
+    "ultimateWeaponLevel": {
+      "description": "Flat integer list — 3 upgrade levels per weapon, packed consecutively. For weapon at index i, its upgrades occupy indices i*3, i*3+1, i*3+2, corresponding to upgrades[0], upgrades[1], upgrades[2] in targetWeapons.",
+      "indexing": "weapon index i, upgrade index j (0-2) → ultimateWeaponLevel[i * 3 + j]"
+    },
+    "ultimateWeaponPlusLevel": {
+      "description": "Integer list — one plus upgrade level per weapon in weaponOrder.",
+      "indexing": "weapon index i → ultimateWeaponPlusLevel[i]"
+    }
+  },
+  "weaponOrder": {
+    "0": "Chain Lightning",
+    "1": "Smart Missiles",
+    "2": "Death Wave",
+    "3": "Chrono Field",
+    "4": "Inner Land Mines",
+    "5": "Golden Tower",
+    "6": "Poison Swamp",
+    "7": "Black Hole",
+    "8": "Spotlight"
+  },
+  "weapons": {
+    "Chain Lightning": {
+      "weaponIndex": 0,
+      "upgrades": {
+        "0": { "name": "Damage", "levelIndex": 0 },
+        "1": { "name": "Quantity", "levelIndex": 1 },
+        "2": { "name": "Chance", "levelIndex": 2 }
+      },
+      "plusUpgrade": { "name": "Smite", "plusLevelIndex": 0 }
+    },
+    "Smart Missiles": {
+      "weaponIndex": 1,
+      "upgrades": {
+        "0": { "name": "Damage", "levelIndex": 3 },
+        "1": { "name": "Quantity", "levelIndex": 4 },
+        "2": { "name": "Cooldown", "levelIndex": 5 }
+      },
+      "plusUpgrade": { "name": "Cover Fire", "plusLevelIndex": 1 }
+    },
+    "Death Wave": {
+      "weaponIndex": 2,
+      "upgrades": {
+        "0": { "name": "Damage", "levelIndex": 6 },
+        "1": { "name": "Quantity", "levelIndex": 7 },
+        "2": { "name": "Cooldown", "levelIndex": 8 }
+      },
+      "plusUpgrade": { "name": "Kill Wall", "plusLevelIndex": 2 }
+    },
+    "Chrono Field": {
+      "weaponIndex": 3,
+      "upgrades": {
+        "0": { "name": "Duration", "levelIndex": 9 },
+        "1": { "name": "Speed Reduction", "levelIndex": 10 },
+        "2": { "name": "Cooldown", "levelIndex": 11 }
+      },
+      "plusUpgrade": { "name": "Chrono Loop", "plusLevelIndex": 3 }
+    },
+    "Inner Land Mines": {
+      "weaponIndex": 4,
+      "upgrades": {
+        "0": { "name": "Damage", "levelIndex": 12 },
+        "1": { "name": "Quantity", "levelIndex": 13 },
+        "2": { "name": "Cooldown", "levelIndex": 14 }
+      },
+      "plusUpgrade": { "name": "Charged Mines", "plusLevelIndex": 4 }
+    },
+    "Golden Tower": {
+      "weaponIndex": 5,
+      "upgrades": {
+        "0": { "name": "Multiplier", "levelIndex": 15 },
+        "1": { "name": "Duration", "levelIndex": 16 },
+        "2": { "name": "Cooldown", "levelIndex": 17 }
+      },
+      "plusUpgrade": { "name": "Golden Combo", "plusLevelIndex": 5 }
+    },
+    "Poison Swamp": {
+      "weaponIndex": 6,
+      "upgrades": {
+        "0": { "name": "Damage", "levelIndex": 18 },
+        "1": { "name": "Duration", "levelIndex": 19 },
+        "2": { "name": "Cooldown", "levelIndex": 20 }
+      },
+      "plusUpgrade": { "name": "Death Creep", "plusLevelIndex": 6 }
+    },
+    "Black Hole": {
+      "weaponIndex": 7,
+      "upgrades": {
+        "0": { "name": "Size", "levelIndex": 21 },
+        "1": { "name": "Duration", "levelIndex": 22 },
+        "2": { "name": "Cooldown", "levelIndex": 23 }
+      },
+      "plusUpgrade": { "name": "Consume", "plusLevelIndex": 7 }
+    },
+    "Spotlight": {
+      "weaponIndex": 8,
+      "upgrades": {
+        "0": { "name": "Multiplier", "levelIndex": 24 },
+        "1": { "name": "Angle", "levelIndex": 25 },
+        "2": { "name": "Quantity", "levelIndex": 26 }
+      },
+      "plusUpgrade": { "name": "Light Range", "plusLevelIndex": 8 }
+    }
+  }
+}

@@ -1,0 +1,546 @@
+{
+ "towerDamage": [
+  {
+   "base": 2882.967,
+   "lab": 12,
+   "wsPlus": 1.9922,
+   "hasCards": true,
+   "inPreset": true,
+   "cardValue": 1.341,
+   "hasMastery": true,
+   "masteryLevel": 2,
+   "disco": 1.2412,
+   "sheet": 26078.794837770423
+  },
+  {
+   "base": 453.344,
+   "lab": 6,
+   "wsPlus": 1.0073,
+   "hasCards": true,
+   "inPreset": true,
+   "cardValue": 2.965,
+   "hasMastery": true,
+   "masteryLevel": 5,
+   "disco": 2.8539,
+   "sheet": 14714.553726907914
+  },
+  {
+   "base": 4130.56,
+   "lab": 30,
+   "wsPlus": 1.1333,
+   "hasCards": true,
+   "inPreset": true,
+   "cardValue": 3.9,
+   "hasMastery": true,
+   "masteryLevel": 7,
+   "disco": 3.1446,
+   "sheet": 385791.907934181
+  },
+  {
+   "base": 4697.278,
+   "lab": 15,
+   "wsPlus": 1.4142,
+   "hasCards": false,
+   "inPreset": true,
+   "cardValue": 1.636,
+   "hasMastery": true,
+   "masteryLevel": 4,
+   "disco": 3.7725,
+   "sheet": 32578.3959680673
+  },
+  {
+   "base": 2102.041,
+   "lab": 9,
+   "wsPlus": 1.1622,
+   "hasCards": false,
+   "inPreset": true,
+   "cardValue": 2.812,
+   "hasMastery": true,
+   "masteryLevel": 2,
+   "disco": 3.4593,
+   "sheet": 9972.230031123094
+  },
+  {
+   "base": 1141.876,
+   "lab": 34,
+   "wsPlus": 1.7891,
+   "hasCards": true,
+   "inPreset": false,
+   "cardValue": 2.005,
+   "hasMastery": true,
+   "masteryLevel": 6,
+   "disco": 3.6282,
+   "sheet": 12452.428634814203
+  },
+  {
+   "base": 19.711,
+   "lab": 30,
+   "wsPlus": 1.923,
+   "hasCards": true,
+   "inPreset": true,
+   "cardValue": 3.165,
+   "hasMastery": false,
+   "masteryLevel": 6,
+   "disco": 3.3858,
+   "sheet": 649.8946171046736
+  },
+  {
+   "base": 2340.818,
+   "lab": 9,
+   "wsPlus": 1.7948,
+   "hasCards": false,
+   "inPreset": false,
+   "cardValue": 1.942,
+   "hasMastery": false,
+   "masteryLevel": 4,
+   "disco": 2.2635,
+   "sheet": 11221.378600024153
+  },
+  {
+   "base": 4627.029,
+   "lab": 28,
+   "wsPlus": 1.0097,
+   "hasCards": true,
+   "inPreset": false,
+   "cardValue": 1.165,
+   "hasMastery": false,
+   "masteryLevel": 7,
+   "disco": 2.4958,
+   "sheet": 18189.843245010125
+  },
+  {
+   "base": 4188.448,
+   "lab": 10,
+   "wsPlus": 1.5548,
+   "hasCards": true,
+   "inPreset": true,
+   "cardValue": 2.954,
+   "hasMastery": false,
+   "masteryLevel": 3,
+   "disco": 2.8231,
+   "sheet": 65169.69057984781
+  },
+  {
+   "base": 1582.347,
+   "lab": 2,
+   "wsPlus": 1.5959,
+   "hasCards": false,
+   "inPreset": false,
+   "cardValue": 2.781,
+   "hasMastery": true,
+   "masteryLevel": 1,
+   "disco": 2.3165,
+   "sheet": 6083.773636528068
+  },
+  {
+   "base": 3380.6,
+   "lab": 5,
+   "wsPlus": 1.35,
+   "hasCards": true,
+   "inPreset": true,
+   "cardValue": 3.363,
+   "hasMastery": false,
+   "masteryLevel": 6,
+   "disco": 3.5435,
+   "sheet": 59824.56441698551
+  },
+  {
+   "base": 1295.123,
+   "lab": 20,
+   "wsPlus": 1.9538,
+   "hasCards": true,
+   "inPreset": true,
+   "cardValue": 1.745,
+   "hasMastery": false,
+   "masteryLevel": 7,
+   "disco": 3.2031,
+   "sheet": 19800.907078936307
+  },
+  {
+   "base": 3400.266,
+   "lab": 27,
+   "wsPlus": 1.8563,
+   "hasCards": false,
+   "inPreset": true,
+   "cardValue": 3.247,
+   "hasMastery": true,
+   "masteryLevel": 0,
+   "disco": 2.4496,
+   "sheet": 23810.96253720751
+  }
+ ],
+ "shock": [
+  {
+   "gate": true,
+   "lab": 8,
+   "dc": 0,
+   "sheet": 1.42
+  },
+  {
+   "gate": true,
+   "lab": 18,
+   "dc": 0.993,
+   "sheet": 2.62852
+  },
+  {
+   "gate": true,
+   "lab": 14,
+   "dc": 0,
+   "sheet": 1.6600000000000001
+  },
+  {
+   "gate": true,
+   "lab": 19,
+   "dc": 0,
+   "sheet": 1.8599999999999999
+  },
+  {
+   "gate": true,
+   "lab": 17,
+   "dc": 1.263,
+   "sheet": 2.97028
+  },
+  {
+   "gate": true,
+   "lab": 7,
+   "dc": 0,
+   "sheet": 1.38
+  },
+  {
+   "gate": true,
+   "lab": 3,
+   "dc": 0,
+   "sheet": 1.22
+  },
+  {
+   "gate": true,
+   "lab": 11,
+   "dc": 1.966,
+   "sheet": 3.1232800000000003
+  },
+  {
+   "gate": false,
+   "lab": 17,
+   "dc": 0.512,
+   "sheet": 1
+  },
+  {
+   "gate": false,
+   "lab": 18,
+   "dc": 2.989,
+   "sheet": 1
+  },
+  {
+   "gate": true,
+   "lab": 1,
+   "dc": 2.33,
+   "sheet": 1.6524
+  },
+  {
+   "gate": true,
+   "lab": 17,
+   "dc": 0,
+   "sheet": 1.78
+  }
+ ],
+ "projectFundingMultiplier": [
+  {
+   "pf": 0.0616,
+   "cash": 315608.52,
+   "sheet": 1.3387475610706159
+  },
+  {
+   "pf": 0.1064,
+   "cash": 328929.8,
+   "sheet": 1.5870197827114358
+  },
+  {
+   "pf": 0.2933,
+   "cash": 796355.95,
+   "sheet": 2.730794750340387
+  },
+  {
+   "pf": 0,
+   "cash": 280172.13,
+   "sheet": 1
+  },
+  {
+   "pf": 0.1144,
+   "cash": 510401.86,
+   "sheet": 1.6529851612131212
+  },
+  {
+   "pf": 0.201,
+   "cash": 670875.54,
+   "sheet": 2.171155033531229
+  },
+  {
+   "pf": 0,
+   "cash": 696159.38,
+   "sheet": 1
+  },
+  {
+   "pf": 0.4237,
+   "cash": 127118.1,
+   "sheet": 3.162652672399353
+  },
+  {
+   "pf": 0.0103,
+   "cash": 767662.9,
+   "sheet": 1.0606172566888048
+  },
+  {
+   "pf": 0.0847,
+   "cash": 226603.88,
+   "sheet": 1.453591143846269
+  },
+  {
+   "pf": 0,
+   "cash": 457551.08,
+   "sheet": 1
+  },
+  {
+   "pf": 0,
+   "cash": 155218.38,
+   "sheet": 1
+  }
+ ],
+ "ampStrike": [
+  {
+   "share": 0.4116,
+   "substat": 30.775,
+   "divisor": 24.838,
+   "sheet": 3.0399371930107093
+  },
+  {
+   "share": 0.704,
+   "substat": 35.755,
+   "divisor": 24.671,
+   "sheet": 5
+  },
+  {
+   "share": 0.1631,
+   "substat": 6.217,
+   "divisor": 20.542,
+   "sheet": 1.197447707136598
+  },
+  {
+   "share": 0.7256,
+   "substat": 7.204,
+   "divisor": 13.864,
+   "sheet": 2.508142642815926
+  },
+  {
+   "share": 0.3473,
+   "substat": 4.67,
+   "divisor": 12.127,
+   "sheet": 1.5349685825018553
+  },
+  {
+   "share": 0.642,
+   "substat": 36.905,
+   "divisor": 33.008,
+   "sheet": 3.8711839554047502
+  },
+  {
+   "share": 0.6593,
+   "substat": 9.578,
+   "divisor": 30.396,
+   "sheet": 1.8310008422160808
+  },
+  {
+   "share": 0.3563,
+   "substat": 28.42,
+   "divisor": 29.095,
+   "sheet": 2.3921355559374464
+  },
+  {
+   "share": 0.7968,
+   "substat": 12.716,
+   "divisor": 34.72,
+   "sheet": 2.1672936405529954
+  },
+  {
+   "share": 0.6139,
+   "substat": 4.964,
+   "divisor": 26.105,
+   "sheet": 1.466944968396859
+  },
+  {
+   "share": 0.0921,
+   "substat": 30.953,
+   "divisor": 16.885,
+   "sheet": 1.6753381818181818
+  },
+  {
+   "share": 0.7434,
+   "substat": 6.465,
+   "divisor": 7.236,
+   "sheet": 3.656761194029851
+  }
+ ],
+ "tradeOffPerk": [
+  {
+   "has": false,
+   "lab": 4,
+   "sheet": 1
+  },
+  {
+   "has": true,
+   "lab": 0,
+   "sheet": 1.5
+  },
+  {
+   "has": true,
+   "lab": 14,
+   "sheet": 1.7100000000000002
+  },
+  {
+   "has": true,
+   "lab": 19,
+   "sheet": 1.785
+  },
+  {
+   "has": true,
+   "lab": 44,
+   "sheet": 2.16
+  },
+  {
+   "has": true,
+   "lab": 13,
+   "sheet": 1.6949999999999998
+  },
+  {
+   "has": true,
+   "lab": 30,
+   "sheet": 1.9500000000000002
+  },
+  {
+   "has": true,
+   "lab": 0,
+   "sheet": 1.5
+  }
+ ],
+ "demonMode": [
+  {
+   "has": false,
+   "lab": 4,
+   "sheet": 1
+  },
+  {
+   "has": true,
+   "lab": 5,
+   "sheet": 4
+  },
+  {
+   "has": true,
+   "lab": 7,
+   "sheet": 5
+  },
+  {
+   "has": true,
+   "lab": 6,
+   "sheet": 4.5
+  },
+  {
+   "has": false,
+   "lab": 7,
+   "sheet": 1
+  },
+  {
+   "has": true,
+   "lab": 5,
+   "sheet": 4
+  },
+  {
+   "has": true,
+   "lab": 8,
+   "sheet": 5.5
+  },
+  {
+   "has": true,
+   "lab": 7,
+   "sheet": 5
+  }
+ ],
+ "baseByRunType": [
+  {
+   "runType": "Regular",
+   "towerDamage": 26078.79,
+   "damagePerk": 1.75,
+   "tradeOffPerk": 1.5,
+   "shock": 1.21,
+   "demonModeMastery": 1.5,
+   "cannonAssist": 1.44,
+   "shockwave": 1.37,
+   "projectFundingMultiplier": 1.09,
+   "ampStrike": 2.15,
+   "sheet": 574435.6587740891
+  },
+  {
+   "runType": "Attack Disso",
+   "towerDamage": 26078.79,
+   "damagePerk": 1.75,
+   "tradeOffPerk": 1.5,
+   "shock": 1.21,
+   "demonModeMastery": 1.5,
+   "cannonAssist": 1.44,
+   "shockwave": 1.37,
+   "projectFundingMultiplier": 1.09,
+   "ampStrike": 2.15,
+   "sheet": 2.9455
+  },
+  {
+   "runType": "Tourney",
+   "towerDamage": 453.344,
+   "damagePerk": 1,
+   "tradeOffPerk": 1,
+   "shock": 1.0073,
+   "demonModeMastery": 1,
+   "cannonAssist": 1.87,
+   "shockwave": 3.11,
+   "projectFundingMultiplier": 1.4412,
+   "ampStrike": 1.02,
+   "sheet": 3904.02982619013
+  },
+  {
+   "runType": "Attack Disso",
+   "towerDamage": 453.344,
+   "damagePerk": 1,
+   "tradeOffPerk": 1,
+   "shock": 1.0073,
+   "demonModeMastery": 1,
+   "cannonAssist": 1.87,
+   "shockwave": 3.11,
+   "projectFundingMultiplier": 1.4412,
+   "ampStrike": 1.02,
+   "sheet": 3.1722
+  },
+  {
+   "runType": "Util Disso",
+   "towerDamage": 4130.56,
+   "damagePerk": 2.3125,
+   "tradeOffPerk": 8,
+   "shock": 1.1333,
+   "demonModeMastery": 1.5,
+   "cannonAssist": 1.09,
+   "shockwave": 5.02,
+   "projectFundingMultiplier": 3.9,
+   "ampStrike": 4.87,
+   "sheet": 13500212.19060175
+  },
+  {
+   "runType": "UW Disso",
+   "towerDamage": 14714.55,
+   "damagePerk": 1,
+   "tradeOffPerk": 1,
+   "shock": 1,
+   "demonModeMastery": 1,
+   "cannonAssist": 1,
+   "shockwave": 1,
+   "projectFundingMultiplier": 1,
+   "ampStrike": 1,
+   "sheet": 14714.55
+  }
+ ]
+}

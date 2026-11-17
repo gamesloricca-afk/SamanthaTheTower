@@ -1,0 +1,588 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--color-bg: #0f1419;
+	--color-panel: #161d26;
+	--color-line: #2a3644;
+	--color-fg: #e8eef4;
+	--color-muted: #9aa7b5;
+	--color-accent: #3d9bfd;
+	--color-accent-dim: #1d4f7a;
+	--color-gold: #e8b84a;
+	/* A second hue, so the page has a palette rather than one blue at varying alpha. */
+	--color-violet: #8b5cf6;
+	/* Recessed sections — the bands sit below the page, not above it. */
+	--color-sunken: #0c1117;
+	--font-sans: 'Segoe UI', 'IBM Plex Sans', system-ui, sans-serif;
+	--font-mono: ui-monospace, 'Cascadia Code', 'IBM Plex Mono', Consolas, monospace;
+}
+
+html {
+	background: var(--color-bg);
+	color: var(--color-fg);
+	scroll-behavior: smooth;
+	/* See `.full-bleed` — removes the scrollbar-gutter overhang. */
+	overflow-x: clip;
+	/*
+	 * 17px root, not the browser's 16px default.
+	 *
+	 * Body copy in the panels is `text-sm`, which at a 16px root is 14px set across a 1152px column
+	 * split in two — small enough to read as fine print, and it looked smaller still once the hero
+	 * grew. Moving the root moves the whole rem-based scale together, so the relationships between
+	 * heading, body and caption are preserved rather than being patched size by size.
+	 */
+	font-size: 17px;
+}
+
+/*
+ * `body` deliberately has no background.
+ *
+ * `html` already carries the page colour, and that background is what paints the canvas. Giving
+ * `body` an opaque background too puts a second opaque layer over the whole document — and because
+ * `body` creates no stacking context, every `z-index: -1` layer beneath it (the section artwork,
+ * the colour fields in `body::before`) paints *behind* that fill and is never seen.
+ *
+ * That is exactly what happened: the section art was rendering correctly, at the right size and
+ * opacity, and was invisible. It looked like an opacity or sizing problem twice over. If a
+ * background layer here ever seems to do nothing, check this before touching the layer itself.
+ */
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: var(--font-sans);
+	line-height: 1.55;
+}
+
+.skip-link {
+	position: fixed;
+	top: 0.5rem;
+	left: 0.5rem;
+	z-index: 100;
+	padding: 0.75rem 1rem;
+	background: var(--color-panel);
+	color: var(--color-fg);
+	transform: translateY(-200%);
+}
+
+.skip-link:focus {
+	transform: translateY(0);
+}
+
+/*
+ * Colour, at a size you can actually see.
+ *
+ * An earlier pass put a 1px lattice and a stepped line-art curve here. Both were dark-on-dark
+ * texture — conceptually tied to the package and effectively invisible; the page looked flat with
+ * them and flat without them. What reads on a dark technical site is large, soft, saturated light,
+ * so this is three broad colour fields and no line work at all.
+ *
+ * Fixed rather than scrolling, so the colour stays put and the content travels over it, and masked
+ * to fade out below the first screen: colour behind the hero is atmosphere, colour behind six
+ * screens of prose is noise.
+ */
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: -2;
+	pointer-events: none;
+	background:
+		radial-gradient(
+			46rem 34rem at 10% -10%,
+			color-mix(in srgb, var(--color-accent) 55%, transparent) 0%,
+			transparent 60%
+		),
+		radial-gradient(
+			40rem 30rem at 90% 0%,
+			color-mix(in srgb, var(--color-violet) 38%, transparent) 0%,
+			transparent 60%
+		),
+		radial-gradient(
+			32rem 26rem at 58% 30%,
+			color-mix(in srgb, var(--color-gold) 14%, transparent) 0%,
+			transparent 62%
+		);
+	mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.45) 45%, transparent 80%);
+}
+
+::selection {
+	background: color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+a {
+	color: var(--color-accent);
+}
+
+a[aria-current='page'] {
+	color: var(--color-fg);
+}
+
+/* CTA links need readable text — global `a` color would make blue-on-blue. */
+a.btn-primary {
+	color: #06101d;
+	background: linear-gradient(135deg, #64b2ff, var(--color-accent));
+	text-decoration: none;
+	box-shadow: 0 6px 20px -6px rgba(61, 155, 253, 0.7);
+}
+a.btn-primary:hover {
+	filter: brightness(1.08);
+}
+
+a.btn-secondary {
+	color: var(--color-fg);
+	background: rgba(22, 29, 38, 0.6);
+	border: 1px solid var(--color-line);
+	text-decoration: none;
+}
+a.btn-secondary:hover {
+	border-color: var(--color-accent);
+	background: rgba(61, 155, 253, 0.1);
+}
+
+code,
+pre {
+	font-family: var(--font-mono);
+}
+
+/*
+ * The headline takes the gradient rather than the background.
+ *
+ * On a dark page the largest block of light is the type itself, so that is where colour registers
+ * most cheaply — a gradient here is visible at a glance, where the same gradient behind the text
+ * would be washed out by the time it is subtle enough to read over.
+ */
+.headline-gradient {
+	background: linear-gradient(100deg, #ffffff 8%, #a9d4ff 46%, #c3a7ff 96%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+/*
+ * The hero stage.
+ *
+ * The whole first screen, edge to edge, with its own light — rather than a block of text sitting in
+ * the same narrow column as everything below it. That column was the reason three passes of colour
+ * tuning made no visible difference: the hero was never large enough for any of it to register.
+ *
+ * `svh` rather than `vh` for the height: on mobile, `vh` is the viewport with the browser chrome
+ * retracted, so a `100vh` hero is taller than the screen on first paint and the call to action
+ * starts below the fold. It is a floor, not a fixed height, so a long slide still grows the stage
+ * instead of overflowing it.
+ */
+.hero-stage-section {
+	position: relative;
+	isolation: isolate;
+	min-height: min(46rem, 92svh);
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	border-bottom: 1px solid var(--color-line);
+	/*
+	 * Only a soft top light now. The artwork supplies the colour, and the full set of radial fields
+	 * that stood in for it before would fight it — two light sources with different geometry read as
+	 * a muddy wash rather than as depth.
+	 */
+	background:
+		radial-gradient(
+			60% 45% at 50% 0%,
+			color-mix(in srgb, var(--color-accent) 18%, transparent) 0%,
+			transparent 62%
+		),
+		var(--color-sunken);
+}
+
+/*
+ * The artwork layer — see `HERO_IMAGE` on the page.
+ *
+ * Shown, not hidden. The previous source was a busy UI screenshot that had to be blurred to 9px to
+ * stop its own text competing with the headline; purpose-made art has no text to suppress, so it
+ * runs sharp and bright enough to actually be seen. That is the whole reason to have art here.
+ *
+ * `object-position: center bottom` keeps the hexagonal floor — the part of the piece that carries
+ * it — rather than centring on the empty upper region.
+ */
+.hero-backdrop {
+	position: absolute;
+	inset: 0;
+	z-index: -2;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center bottom;
+	opacity: 0.85;
+}
+
+/*
+ * The scrim does two jobs, and it exists whether or not there is artwork behind it.
+ *
+ * The radial pass darkens the middle, where the wordmark and headline sit, so the type keeps its
+ * contrast over the brightest part of the art. The linear pass fades the bottom into the page
+ * colour, so the section below reads as a continuation rather than a hard edge — which is why this
+ * still earns its place when no image loads.
+ *
+ * Both passes are kept off the edges. An earlier version darkened the top 55% and faded the bottom
+ * across nearly half the stage, which left the artwork visible only through a band in the middle
+ * and read as empty gaps above and below it. The linear pass is now transparent from 26% to 82%,
+ * so the art reaches close to both edges and only the final stretch resolves to the page colour.
+ */
+.hero-scrim {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	background:
+		radial-gradient(
+			58% 46% at 50% 44%,
+			color-mix(in srgb, var(--color-sunken) 78%, transparent) 0%,
+			transparent 76%
+		),
+		linear-gradient(
+			180deg,
+			color-mix(in srgb, var(--color-sunken) 22%, transparent) 0%,
+			transparent 26%,
+			transparent 82%,
+			var(--color-sunken) 100%
+		);
+}
+
+/*
+ * The brand lockup — mark plus wordmark, overlapping.
+ *
+ * The negative margin pulls the wordmark up over the mark's lower edge so the two read as a single
+ * piece of branding rather than an image with a caption. It is a margin rather than absolute
+ * positioning so the lockup keeps its own height in the flow, which is what stops it colliding with
+ * the carousel underneath at narrow widths.
+ *
+ * The wordmark carries its own dark halo. It sits over both the mark and, potentially, whatever
+ * artwork is behind the hero, and neither is a surface it can rely on for contrast.
+ */
+.hero-lockup {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero-wordmark {
+	margin-top: -1.35rem;
+	font-size: clamp(1.75rem, 6vw, 2.75rem);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	line-height: 1;
+	color: var(--color-fg);
+	text-shadow:
+		0 2px 18px rgba(0, 0, 0, 0.85),
+		0 0 44px color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+@media (min-width: 640px) {
+	.hero-wordmark {
+		margin-top: -1.9rem;
+	}
+}
+
+/*
+ * Section headings get a short accent rule above them.
+ *
+ * The page was a long column of same-weight h2s, which reads as one undifferentiated wall; a small
+ * marker gives the eye somewhere to land when scanning for the section it wants.
+ */
+.section-rule {
+	position: relative;
+	padding-top: 0.9rem;
+}
+.section-rule::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2.25rem;
+	height: 2px;
+	border-radius: 2px;
+	background: linear-gradient(90deg, var(--color-accent), transparent);
+}
+
+/*
+ * Break a section out of its centered container to run edge to edge.
+ *
+ * `100vw` includes the scrollbar gutter, so the band is a scrollbar-width wider than the visible
+ * page on any platform that reserves one. The overflow is clipped on `html` instead of being
+ * measured away here, because there is no pure-CSS way for a descendant to read the viewport width
+ * net of the scrollbar.
+ *
+ * Note what that clip actually does on the root: overflow propagates from `html` to the viewport,
+ * and an axis pair of `clip` with `visible` is invalid, so the used values become `hidden`/`auto`.
+ * The horizontal scrollbar is gone, which is the point, but `scrollLeft` stays programmatically
+ * settable — so `scrollWidth > clientWidth` is NOT evidence the page is broken here. Judge it by
+ * whether a scrollbar renders.
+ */
+.full-bleed {
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
+	width: 100vw;
+}
+
+/*
+ * The counts band.
+ *
+ * Lit from within rather than ruled: a wide accent wash under the tiles, and an accent hairline on
+ * each edge so the band has a defined start and end against the page.
+ */
+/*
+ * The final `--color-sunken` stop is translucent so the section artwork behind it shows through.
+ * An opaque stop here hides that layer completely — the same trap as `body`'s background and the
+ * assistant band's `bg-panel/70`, and it presents as "this section has no backdrop".
+ */
+.stat-band {
+	position: relative;
+	background:
+		radial-gradient(
+			70% 130% at 50% 0%,
+			color-mix(in srgb, var(--color-accent) 16%, transparent) 0%,
+			transparent 62%
+		),
+		radial-gradient(
+			50% 120% at 84% 100%,
+			color-mix(in srgb, var(--color-violet) 14%, transparent) 0%,
+			transparent 64%
+		),
+		color-mix(in srgb, var(--color-sunken) 74%, transparent);
+}
+/*
+ * One hairline, on `::before` only.
+ *
+ * `::after` is reserved for `.section-art`, and an element has exactly one of each pseudo-element —
+ * when this rule claimed both, the artwork layer inherited `height: 1px` from the hairline and the
+ * band appeared to have no backdrop at all. That is the third time this collision has bitten this
+ * stylesheet; before adding a pseudo-element to a shared class, check what already uses it.
+ *
+ * The bottom edge is drawn by the section's own `border-b`, so nothing is lost.
+ */
+.stat-band::before {
+	content: '';
+	position: absolute;
+	top: -1px;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+	opacity: 0.7;
+}
+
+/* Each tile is its own small surface, so the grid reads as a set of readouts. */
+.stat-tile {
+	background:
+		radial-gradient(120% 100% at 50% 0%, rgba(232, 184, 74, 0.1) 0%, transparent 65%),
+		rgba(22, 29, 38, 0.85);
+	backdrop-filter: blur(4px);
+}
+
+/*
+ * The closing band, so the page ends on something rather than trailing off.
+ *
+ * Deliberately the warmest thing on the page: it is the one section asking the reader to leave for
+ * somewhere else, and it is the last thing they see.
+ */
+.closer {
+	position: relative;
+	overflow: hidden;
+	background:
+		radial-gradient(
+			60% 120% at 50% 118%,
+			color-mix(in srgb, var(--color-accent) 30%, transparent) 0%,
+			transparent 66%
+		),
+		radial-gradient(
+			40% 90% at 12% 0%,
+			color-mix(in srgb, var(--color-violet) 22%, transparent) 0%,
+			transparent 62%
+		),
+		var(--color-sunken);
+}
+
+/*
+ * Artwork behind a whole section, edge to edge.
+ *
+ * The tiles were first used as decoration inside the feature cards, which was the wrong read: they
+ * are backdrops, and the page wants them running its full length behind each section rather than
+ * tucked into panel corners.
+ *
+ * The layer is drawn by a pseudo-element rather than an `<img>` so it can escape the content column
+ * without adding an element to every section, using the same `100vw` trick as `.full-bleed` — and
+ * like that rule it relies on `overflow-x: clip` on `html` to absorb the scrollbar-gutter overhang.
+ *
+ * It bleeds past the section's own box vertically so consecutive sections' art overlaps and
+ * cross-fades into one continuous backdrop, instead of stacking as a column of discrete rectangles.
+ * The mask does that fading; without it the seams between sections are hard lines.
+ *
+ * Opacity is low by design. This sits behind body copy for the length of the page, so it has to
+ * survive being read over — it is a surface, not an illustration. The image is set per section via
+ * `--section-art`.
+ */
+.section-art {
+	position: relative;
+}
+
+/*
+ * `::after`, not `::before` — and that is not arbitrary.
+ *
+ * Every section carrying art also carries `.section-rule`, which already draws its accent bar with
+ * `::before`. An element has exactly one of each pseudo-element, so both rule sets cascaded onto the
+ * same box: the art contributed its background and the accent bar contributed `height: 2px`, and
+ * the result was a 2px-tall sliver nobody could see. It looked like an opacity problem and was not.
+ */
+.section-art::after {
+	content: '';
+	position: absolute;
+	left: calc(-50vw + 50%);
+	width: 100vw;
+	top: -4rem;
+	bottom: -4rem;
+	z-index: -1;
+	pointer-events: none;
+	background-image: var(--section-art);
+	/*
+	 * Sized against the viewport, not the section.
+	 *
+	 * Sections run to two thousand pixels tall, and `cover` against a box that shape blows a 800x509
+	 * tile up several times over and shows one small crop of it — which is why the art looked absent
+	 * even once it was painting. `fixed` makes the viewport the positioning area, so each tile is
+	 * seen whole and the content scrolls across it.
+	 */
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	/*
+	 * Set by looking, not by taste. At 0.16 this was invisible on a dark page — the same mistake as
+	 * the lattice it replaced. It is legibility that caps it: section intros sit directly on this
+	 * layer with no panel behind them, so it can only go as far as body copy stays comfortable.
+	 */
+	opacity: 0.52;
+	mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+}
+
+/*
+ * The same backdrop for a page that is one continuous document rather than a run of sections.
+ *
+ * Docs pages have no `<section>` bands to hang art on, so this is a fixed layer behind the whole
+ * page. Placed as its own element at the top of a page: `body::before` is already spoken for by the
+ * colour fields, and `main` cannot host it without covering its own content.
+ */
+.page-art-stack {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+}
+
+/*
+ * Two of these are stacked, and the one on top fades between them as the reader passes a section
+ * boundary. Swapping the image on a single layer cuts to the page's own colour for a frame, which
+ * behind body copy reads as a fault rather than a transition.
+ */
+.page-art {
+	position: absolute;
+	inset: 0;
+	background-image: var(--section-art);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	/*
+	 * Long and eased both ways. A backdrop change is scenery, not feedback: the reader should
+	 * notice the page looks different, not watch a transition happen.
+	 */
+	transition: opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1);
+	mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.55) 60%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.page-art.is-on {
+	opacity: 0.4;
+}
+
+/*
+ * The fade stays under `prefers-reduced-motion`, deliberately.
+ *
+ * Turning it off here was the cause of the jarring backdrop change, not a fix for one: without the
+ * transition a full-viewport image is replaced between two frames, which is a far bigger visual
+ * event than the blend it was standing in for. The preference is about MOVEMENT, and a cross-fade
+ * in place has none — nothing travels, nothing scales, only opacity changes.
+ *
+ * Windows reports this query whenever animations are turned off in the OS, which is a common
+ * setting rather than a rare one. The same assumption had already silently disabled the hero's
+ * rotation; this was the same mistake in a second place.
+ */
+
+/*
+ * A section that is already full-bleed must not escape twice.
+ *
+ * `.section-art::after` widens itself to `100vw` and pulls left to break out of the content column.
+ * On a section already carrying `.full-bleed`, that column is gone — the section spans the viewport
+ * itself — so applying the offset again would shift the art half a viewport off to one side.
+ */
+.section-art.full-bleed::after {
+	left: 0;
+	width: 100%;
+}
+
+/*
+ * An opaque section background would hide the art layer beneath it, for the same reason `body`'s
+ * did. Bands that need their own tint get it here, where it can be kept translucent.
+ */
+.section-art.bg-sunken {
+	background-color: color-mix(in srgb, var(--color-sunken) 72%, transparent);
+}
+
+/*
+ * Panels get more opaque now that they sit on artwork rather than flat colour.
+ *
+ * At `bg-panel/80` the art read straight through the card and put texture behind the code samples
+ * and body copy inside it. The panel has to stay a surface.
+ */
+.section-art .lift,
+.section-art [class*='bg-panel'] {
+	background-color: color-mix(in srgb, var(--color-panel) 92%, transparent);
+}
+
+/*
+ * A panel that is itself a link.
+ *
+ * `display: block` and an explicit `color` are both required: an anchor is inline by default, and
+ * the global `a` rule would otherwise paint every word inside the card accent blue. There is no
+ * "read more" line — the whole card is the target, which is why it does not need one.
+ */
+.tool-card {
+	display: block;
+	border-radius: 0.75rem;
+	border: 1px solid color-mix(in srgb, var(--color-line) 80%, transparent);
+	background-color: color-mix(in srgb, var(--color-panel) 90%, transparent);
+	padding: 1.25rem;
+	color: var(--color-fg);
+	text-decoration: none;
+	backdrop-filter: blur(6px);
+	box-shadow:
+		inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+		0 10px 30px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Panels lift slightly on hover, so a grid of them reads as things rather than boxes. */
+.lift {
+	transition:
+		transform 160ms ease,
+		border-color 160ms ease;
+}
+.lift:hover {
+	transform: translateY(-2px);
+	border-color: color-mix(in srgb, var(--color-accent) 45%, var(--color-line));
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lift {
+		transition: none;
+	}
+	.lift:hover {
+		transform: none;
+	}
+}

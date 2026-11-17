@@ -1,0 +1,79 @@
+name: github-pages
+
+# The documentation site lives in `site/` in this repository, and is published to
+# https://tmrxjd.github.io/TheTowerSDK/.
+#
+# It used to be its own repository, TheTowerSDK-site, which is where the trailing `-site` in
+# the old URL came from — GitHub Pages names the path after the repository. Folding the site
+# in here is what removes it.
+#
+# `BASE_PATH` is derived from the repository name rather than hard-coded, so the site keeps
+# working if the repository is ever renamed, and so a fork publishes under its own name
+# instead of 404ing on assets it expects at /TheTowerSDK/.
+#
+# One-time setup, which cannot be done from a workflow:
+#   Settings → Pages → Build and deployment → Source: **GitHub Actions**.
+#   Until that is set, this workflow runs green and publishes nothing.
+
+on:
+  push:
+    branches: [main]
+    # Examples and catalog pages consume the SDK in this checkout.
+    paths:
+      - 'site/**'
+      - 'src/**'
+      - 'package.json'
+      - 'scripts/copy-assets.mjs'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: site
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          # The lockfile is no longer at the repository root, so the cache key has to be told
+          # where it is. Without this the setup step fails outright looking for it.
+          cache-dependency-path: site/package-lock.json
+      - name: Install SDK dependencies
+        run: npm install --no-audit --no-fund --package-lock=false
+        working-directory: .
+      - name: Build the SDK used by the site
+        run: npm run build
+        working-directory: .
+      - run: npm ci
+      - run: npm run build
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          # Not affected by `defaults.run.working-directory`, which only applies to `run`
+          # steps — an action's inputs are resolved against the repository root.
+          path: site/build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

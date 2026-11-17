@@ -1,0 +1,299 @@
+{
+ "note": "Stone-path ROI from the sheet: (eHP with the capacity one higher / eHP now - 1) / (12 + level * 3). Indexes into the eHP model fixture's cases.",
+ "cases": [
+  {
+   "index": 0,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 21,
+   "sheetRoi": 0.000013699574594738806
+  },
+  {
+   "index": 0,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 29,
+   "sheetRoi": 0.000019505475751939204
+  },
+  {
+   "index": 0,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 2,
+   "sheetRoi": 0.0003642314184336957
+  },
+  {
+   "index": 1,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 11,
+   "sheetRoi": 5.342627706905745e-8
+  },
+  {
+   "index": 1,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 25,
+   "sheetRoi": 3.3311314151518444e-9
+  },
+  {
+   "index": 1,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 7,
+   "sheetRoi": 0.0001323868939602297
+  },
+  {
+   "index": 2,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 10,
+   "sheetRoi": 7.978371882168112e-8
+  },
+  {
+   "index": 2,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 22,
+   "sheetRoi": 0.000027371814615751027
+  },
+  {
+   "index": 2,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 2,
+   "sheetRoi": 0
+  },
+  {
+   "index": 3,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 17,
+   "sheetRoi": 0.00002426678058120243
+  },
+  {
+   "index": 3,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 28,
+   "sheetRoi": 5.836981555783707e-9
+  },
+  {
+   "index": 3,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 3,
+   "sheetRoi": 0
+  },
+  {
+   "index": 4,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 27,
+   "sheetRoi": 0.0000015897116438258012
+  },
+  {
+   "index": 4,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 15,
+   "sheetRoi": 0.000028606997518321186
+  },
+  {
+   "index": 4,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 14,
+   "sheetRoi": 0.00013402423359065913
+  },
+  {
+   "index": 5,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 13,
+   "sheetRoi": 1.7261912261730045e-8
+  },
+  {
+   "index": 5,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 22,
+   "sheetRoi": 4.584566633047274e-9
+  },
+  {
+   "index": 5,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 5,
+   "sheetRoi": 0.00020604053805998537
+  },
+  {
+   "index": 6,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 11,
+   "sheetRoi": 0.000025966423108615227
+  },
+  {
+   "index": 6,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 1,
+   "sheetRoi": 6.468432775827735e-8
+  },
+  {
+   "index": 6,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 9,
+   "sheetRoi": 0
+  },
+  {
+   "index": 7,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 7,
+   "sheetRoi": 0.00006001121578619317
+  },
+  {
+   "index": 7,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 4,
+   "sheetRoi": 0
+  },
+  {
+   "index": 7,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 2,
+   "sheetRoi": 0.00032609970900280655
+  },
+  {
+   "index": 8,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 29,
+   "sheetRoi": 9.383913830103154e-7
+  },
+  {
+   "index": 8,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 0,
+   "sheetRoi": 0
+  },
+  {
+   "index": 8,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 19,
+   "sheetRoi": 0.00004031987450293157
+  },
+  {
+   "index": 9,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 9,
+   "sheetRoi": 0.000142344333451098
+  },
+  {
+   "index": 9,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 29,
+   "sheetRoi": 0
+  },
+  {
+   "index": 9,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 1,
+   "sheetRoi": 0
+  },
+  {
+   "index": 10,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 1,
+   "sheetRoi": 2.399491256922638e-7
+  },
+  {
+   "index": 10,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 26,
+   "sheetRoi": 0
+  },
+  {
+   "index": 10,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 22,
+   "sheetRoi": 0
+  },
+  {
+   "index": 11,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 7,
+   "sheetRoi": 0.00004625545374067588
+  },
+  {
+   "index": 11,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 18,
+   "sheetRoi": 0.00003556269731224363
+  },
+  {
+   "index": 11,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 25,
+   "sheetRoi": 0
+  },
+  {
+   "index": 12,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 24,
+   "sheetRoi": 0.000011166694383089854
+  },
+  {
+   "index": 12,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 25,
+   "sheetRoi": 5.94252717404468e-9
+  },
+  {
+   "index": 12,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 7,
+   "sheetRoi": 0
+  },
+  {
+   "index": 13,
+   "candidate": "armorSubstat",
+   "levelKey": "assistSubstatArmor",
+   "level": 16,
+   "sheetRoi": 0.0000053885556028013305
+  },
+  {
+   "index": 13,
+   "candidate": "generatorSubstat",
+   "levelKey": "assistSubstatGenerator",
+   "level": 0,
+   "sheetRoi": 0.000029795524907486975
+  },
+  {
+   "index": 13,
+   "candidate": "armorBonus",
+   "levelKey": "assistBonusArmor",
+   "level": 23,
+   "sheetRoi": 0
+  }
+ ]
+}

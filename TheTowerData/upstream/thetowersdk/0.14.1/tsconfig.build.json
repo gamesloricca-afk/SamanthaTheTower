@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    // `DOM.Iterable` is what declares `Headers.entries()`. `DOM` alone does not, and the build
+    // only passed here because the monorepo hoists an `@types/node` whose `Headers` has it —
+    // in a clone that installs exactly what this package declares, the DOM one wins and
+    // `wiki-transport-curl.ts` fails to compile.
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "src/**/*.test.ts",
+    "src/**/*.spec.ts",
+    "src/**/fixtures/**",
+  ]
+}

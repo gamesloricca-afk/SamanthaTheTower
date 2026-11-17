@@ -1,0 +1,43 @@
+{
+  "source": {
+    "spreadsheetId": "1YwZtKP6B4WYhRba5T6APJ1YxKNdfnIGQnprgnxmO7zc",
+    "version": "v5.11.08.10",
+    "driveVersion": "82842",
+    "modifiedTime": "2026-11-03T15:59:00.508Z",
+    "xlsxSha256": "78f4eda768d1b81db7f0fdda92a41ab8b95bbca2eb4e63360b04879e73b2a41a",
+    "lambdaCount": 267,
+    "namedRangeCount": 218
+  },
+  "evaluation": {
+    "engine": "Google Sheets",
+    "capturedAt": "2026-11-05T19:42:23.306Z",
+    "method": "Exact current source lambda, literal raw primary bonus and lab level; no SDK values.",
+    "spreadsheetId": "11gD9TYEuDYaagoTTeGrAjvfRcyvhrFisDPCnqGydYEI"
+  },
+  "cases": [
+    {
+      "primaryBonus": 2,
+      "level": 0,
+      "formula": "=LAMBDA(prim_bonus, prim_lab, has_ass, ass_bonus, stone_bac, lab_bac, ((prim_bonus-1)*(1+prim_lab/100)+1)*IF(has_ass, ((ass_bonus-1)*(1+stone_bac+lab_bac)*0.01)+1, 1))(2,0,FALSE,1,0,0)",
+      "sheetValue": 2
+    },
+    {
+      "primaryBonus": 2,
+      "level": 1,
+      "formula": "=LAMBDA(prim_bonus, prim_lab, has_ass, ass_bonus, stone_bac, lab_bac, ((prim_bonus-1)*(1+prim_lab/100)+1)*IF(has_ass, ((ass_bonus-1)*(1+stone_bac+lab_bac)*0.01)+1, 1))(2,1,FALSE,1,0,0)",
+      "sheetValue": 2.01
+    },
+    {
+      "primaryBonus": 2,
+      "level": 30,
+      "formula": "=LAMBDA(prim_bonus, prim_lab, has_ass, ass_bonus, stone_bac, lab_bac, ((prim_bonus-1)*(1+prim_lab/100)+1)*IF(has_ass, ((ass_bonus-1)*(1+stone_bac+lab_bac)*0.01)+1, 1))(2,30,FALSE,1,0,0)",
+      "sheetValue": 2.3
+    },
+    {
+      "primaryBonus": 2,
+      "level": 100,
+      "formula": "=LAMBDA(prim_bonus, prim_lab, has_ass, ass_bonus, stone_bac, lab_bac, ((prim_bonus-1)*(1+prim_lab/100)+1)*IF(has_ass, ((ass_bonus-1)*(1+stone_bac+lab_bac)*0.01)+1, 1))(2,100,FALSE,1,0,0)",
+      "sheetValue": 3
+    }
+  ]
+}

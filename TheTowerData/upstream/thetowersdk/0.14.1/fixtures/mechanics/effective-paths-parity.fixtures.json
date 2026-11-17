@@ -1,0 +1,144 @@
+{
+  "source": "EffectivePaths-v5.09.03.xlsx",
+  "generatedBy": "scripts/extract-effective-paths-parity.mjs",
+  "note": "Cached call sites from the workbook. Regenerate when the sheet is re-exported.",
+  "cases": [
+    {
+      "fn": "EPH_ARMOR",
+      "cell": "eHP!CK5",
+      "args": [
+        1.012,
+        false,
+        1,
+        0,
+        0
+      ],
+      "expected": 1.012
+    },
+    {
+      "fn": "EPH_DEF_PCT",
+      "cell": "eHP!AO19",
+      "args": [
+        0,
+        0,
+        false,
+        0.05,
+        false,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": 0
+    },
+    {
+      "fn": "EPH_DEF_PCT",
+      "cell": "eHP!AP19",
+      "args": [
+        0,
+        0,
+        false,
+        0.05,
+        false,
+        0,
+        0,
+        0,
+        0,
+        0,
+        false,
+        0,
+        0,
+        0
+      ],
+      "expected": 0
+    },
+    {
+      "fn": "EPH_HEALTH",
+      "cell": "eHP!CJ5",
+      "args": [
+        5,
+        0,
+        false,
+        1.5,
+        false,
+        0,
+        0,
+        false,
+        0,
+        false,
+        false,
+        0,
+        0,
+        false,
+        0,
+        1
+      ],
+      "expected": 5
+    },
+    {
+      "fn": "EPH_HEALTH",
+      "cell": "eHP!CJ6",
+      "args": [
+        5,
+        1,
+        false,
+        1.5,
+        false,
+        0,
+        0,
+        false,
+        0,
+        false,
+        false,
+        0,
+        0,
+        false,
+        0,
+        1
+      ],
+      "expected": 5.15
+    },
+    {
+      "fn": "EPH_REGEN",
+      "cell": "eRegen!BW5",
+      "args": [
+        0.0005,
+        0,
+        false,
+        1.4,
+        false,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        false,
+        0,
+        false,
+        false,
+        0,
+        0,
+        0,
+        false,
+        0
+      ],
+      "expected": 0.0005
+    },
+    {
+      "fn": "EPH_WALL_REGEN",
+      "cell": "eRegen!BX5",
+      "args": [
+        0,
+        0,
+        0
+      ],
+      "expected": 0
+    }
+  ]
+}

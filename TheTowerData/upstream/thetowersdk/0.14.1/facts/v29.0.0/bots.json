@@ -1,0 +1,438 @@
+{
+  "gameVersion": "v29.0.0",
+  "note": "Twenty stat slots. `bots` is the authoritative grouping: the four columns are NOT the same four stats for every bot \u2014 only Range and Cooldown are common to all five. `benefitPerLevel` is negative for Cooldown, where lower is better. `baseBenefit` is the value at level 0, so adding base and a level-0 benefit double-counts.",
+  "levelUpCost": {
+    "formula": "100 + 40 * level",
+    "base": 100,
+    "perLevel": 40,
+    "costs": [
+      100,
+      140,
+      180,
+      220,
+      260,
+      300,
+      340,
+      380,
+      420,
+      460,
+      500,
+      540,
+      580,
+      620,
+      660,
+      700,
+      740,
+      780,
+      820,
+      860,
+      900,
+      940,
+      980,
+      1020,
+      1060,
+      1100,
+      1140,
+      1180,
+      1220,
+      1260,
+      1300
+    ]
+  },
+  "botPlus": {
+    "unlockCost": 1250,
+    "upgradeCostFormula": "100 + level * (botType is Amplify ? 200 : 50)",
+    "note": "Amplify's step is four times every other bot's, and its ladder is cut short by plusMaxLevel 9 rather than by the formula."
+  },
+  "synchronicity": {
+    "unlockCost": 1500,
+    "upgradeCosts": [
+      0,
+      0,
+      1500,
+      1500,
+      1500
+    ],
+    "maxBotsFormula": "synchronicityLevel + 2",
+    "requires": "synchronicityUnlocked AND every bot's Bot+ unlocked",
+    "note": "Indexed by bot slot: the first two slots come free with the base level and each further slot costs one entry of upgradeCosts."
+  },
+  "playerState": {
+    "class": "player bot save data, one per preset",
+    "fields": [
+      "unlocked",
+      "active",
+      "levels",
+      "selectedLevels",
+      "plusUnlocked",
+      "plusLevel"
+    ],
+    "note": "`levels` and `selectedLevels` are separate: a level that has been bought is not necessarily the level in use."
+  },
+  "bots": [
+    {
+      "botType": 0,
+      "key": "Flame",
+      "name": "Flame Bot",
+      "statSlots": [
+        0,
+        1,
+        8,
+        12
+      ],
+      "stats": [
+        {
+          "slot": 0,
+          "statName": "Damage",
+          "maxLevel": 30,
+          "baseBenefit": 50.0,
+          "benefitPerLevel": 8.0,
+          "benefitAtMaxLevel": 290.0
+        },
+        {
+          "slot": 1,
+          "statName": "Range",
+          "maxLevel": 15,
+          "baseBenefit": 30.0,
+          "benefitPerLevel": 4.0,
+          "benefitAtMaxLevel": 90.0
+        },
+        {
+          "slot": 8,
+          "statName": "Cooldown",
+          "maxLevel": 15,
+          "baseBenefit": 75.0,
+          "benefitPerLevel": -3.0,
+          "benefitAtMaxLevel": 30.0
+        },
+        {
+          "slot": 12,
+          "statName": "Damage Reduction",
+          "maxLevel": 25,
+          "baseBenefit": 0.2,
+          "benefitPerLevel": 0.03,
+          "benefitAtMaxLevel": 0.95
+        }
+      ],
+      "plus": {
+        "maxLevel": 20,
+        "baseBenefit": 1.5,
+        "benefitPerLevel": 0.10000000149011612,
+        "upgradeCostBase": 100,
+        "upgradeCostPerLevel": 50,
+        "upgradeCosts": [
+          100,
+          150,
+          200,
+          250,
+          300,
+          350,
+          400,
+          450,
+          500,
+          550,
+          600,
+          650,
+          700,
+          750,
+          800,
+          850,
+          900,
+          950,
+          1000,
+          1050
+        ]
+      }
+    },
+    {
+      "botType": 1,
+      "key": "Thunder",
+      "name": "Thunder Bot",
+      "statSlots": [
+        2,
+        3,
+        9,
+        13
+      ],
+      "stats": [
+        {
+          "slot": 2,
+          "statName": "Duration",
+          "maxLevel": 20,
+          "baseBenefit": 5.0,
+          "benefitPerLevel": 0.5,
+          "benefitAtMaxLevel": 15.0
+        },
+        {
+          "slot": 3,
+          "statName": "Range",
+          "maxLevel": 15,
+          "baseBenefit": 25.0,
+          "benefitPerLevel": 3.0,
+          "benefitAtMaxLevel": 70.0
+        },
+        {
+          "slot": 9,
+          "statName": "Cooldown",
+          "maxLevel": 15,
+          "baseBenefit": 120.0,
+          "benefitPerLevel": -3.0,
+          "benefitAtMaxLevel": 75.0
+        },
+        {
+          "slot": 13,
+          "statName": "Linger",
+          "maxLevel": 20,
+          "baseBenefit": 0.2,
+          "benefitPerLevel": 0.03,
+          "benefitAtMaxLevel": 0.8
+        }
+      ],
+      "plus": {
+        "maxLevel": 20,
+        "baseBenefit": 0.05000000074505806,
+        "benefitPerLevel": 0.009999999776482582,
+        "upgradeCostBase": 100,
+        "upgradeCostPerLevel": 50,
+        "upgradeCosts": [
+          100,
+          150,
+          200,
+          250,
+          300,
+          350,
+          400,
+          450,
+          500,
+          550,
+          600,
+          650,
+          700,
+          750,
+          800,
+          850,
+          900,
+          950,
+          1000,
+          1050
+        ]
+      }
+    },
+    {
+      "botType": 2,
+      "key": "Golden",
+      "name": "Golden Bot",
+      "statSlots": [
+        4,
+        5,
+        10,
+        14
+      ],
+      "stats": [
+        {
+          "slot": 4,
+          "statName": "Bonus",
+          "maxLevel": 30,
+          "baseBenefit": 2.0,
+          "benefitPerLevel": 0.2,
+          "benefitAtMaxLevel": 8.0
+        },
+        {
+          "slot": 5,
+          "statName": "Range",
+          "maxLevel": 20,
+          "baseBenefit": 20.0,
+          "benefitPerLevel": 2.0,
+          "benefitAtMaxLevel": 60.0
+        },
+        {
+          "slot": 10,
+          "statName": "Cooldown",
+          "maxLevel": 15,
+          "baseBenefit": 120.0,
+          "benefitPerLevel": -3.0,
+          "benefitAtMaxLevel": 75.0
+        },
+        {
+          "slot": 14,
+          "statName": "Duration",
+          "maxLevel": 30,
+          "baseBenefit": 20.0,
+          "benefitPerLevel": 0.5,
+          "benefitAtMaxLevel": 35.0
+        }
+      ],
+      "plus": {
+        "maxLevel": 25,
+        "baseBenefit": 1.25,
+        "benefitPerLevel": 0.05000000074505806,
+        "upgradeCostBase": 100,
+        "upgradeCostPerLevel": 50,
+        "upgradeCosts": [
+          100,
+          150,
+          200,
+          250,
+          300,
+          350,
+          400,
+          450,
+          500,
+          550,
+          600,
+          650,
+          700,
+          750,
+          800,
+          850,
+          900,
+          950,
+          1000,
+          1050,
+          1100,
+          1150,
+          1200,
+          1250,
+          1300
+        ]
+      }
+    },
+    {
+      "botType": 3,
+      "key": "Amplify",
+      "name": "Amplify Bot",
+      "statSlots": [
+        6,
+        7,
+        11,
+        15
+      ],
+      "stats": [
+        {
+          "slot": 6,
+          "statName": "Bonus",
+          "maxLevel": 30,
+          "baseBenefit": 3.5,
+          "benefitPerLevel": 0.4,
+          "benefitAtMaxLevel": 15.5
+        },
+        {
+          "slot": 7,
+          "statName": "Range",
+          "maxLevel": 18,
+          "baseBenefit": 25.0,
+          "benefitPerLevel": 2.0,
+          "benefitAtMaxLevel": 61.0
+        },
+        {
+          "slot": 11,
+          "statName": "Cooldown",
+          "maxLevel": 15,
+          "baseBenefit": 120.0,
+          "benefitPerLevel": -3.0,
+          "benefitAtMaxLevel": 75.0
+        },
+        {
+          "slot": 15,
+          "statName": "Duration",
+          "maxLevel": 30,
+          "baseBenefit": 20.0,
+          "benefitPerLevel": 0.5,
+          "benefitAtMaxLevel": 35.0
+        }
+      ],
+      "plus": {
+        "maxLevel": 9,
+        "baseBenefit": 3.0,
+        "benefitPerLevel": 1.0,
+        "upgradeCostBase": 100,
+        "upgradeCostPerLevel": 200,
+        "upgradeCosts": [
+          100,
+          300,
+          500,
+          700,
+          900,
+          1100,
+          1300,
+          1500,
+          1700
+        ]
+      }
+    },
+    {
+      "botType": 4,
+      "key": "Bot",
+      "name": "Bot Bot",
+      "statSlots": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "stats": [
+        {
+          "slot": 16,
+          "statName": "Bonus",
+          "maxLevel": 19,
+          "baseBenefit": 1.05,
+          "benefitPerLevel": 0.05,
+          "benefitAtMaxLevel": 2.0
+        },
+        {
+          "slot": 17,
+          "statName": "Range",
+          "maxLevel": 20,
+          "baseBenefit": 20.0,
+          "benefitPerLevel": 2.0,
+          "benefitAtMaxLevel": 60.0
+        },
+        {
+          "slot": 18,
+          "statName": "Cooldown",
+          "maxLevel": 15,
+          "baseBenefit": 120.0,
+          "benefitPerLevel": -3.0,
+          "benefitAtMaxLevel": 75.0
+        },
+        {
+          "slot": 19,
+          "statName": "Duration",
+          "maxLevel": 30,
+          "baseBenefit": 20.0,
+          "benefitPerLevel": 0.5,
+          "benefitAtMaxLevel": 35.0
+        }
+      ],
+      "plus": {
+        "maxLevel": 20,
+        "baseBenefit": 1.25,
+        "benefitPerLevel": 0.05000000074505806,
+        "upgradeCostBase": 100,
+        "upgradeCostPerLevel": 50,
+        "upgradeCosts": [
+          100,
+          150,
+          200,
+          250,
+          300,
+          350,
+          400,
+          450,
+          500,
+          550,
+          600,
+          650,
+          700,
+          750,
+          800,
+          850,
+          900,
+          950,
+          1000,
+          1050
+        ]
+      }
+    }
+  ]
+}

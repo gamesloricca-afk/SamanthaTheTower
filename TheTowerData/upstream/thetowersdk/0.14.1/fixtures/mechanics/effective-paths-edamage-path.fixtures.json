@@ -1,0 +1,1223 @@
+{
+ "source": "live spreadsheet via tools/effective-paths-oracle",
+ "sheetVersion": "v5.09.03.01",
+ "pathName": "eDamage Lab path (time focused)",
+ "note": "From an all-zero starting state with Run Type \"Tourney\". eDamage!AI21 was forced to 100 so the grid plans more than one step; it normally gates that on a linked IDS Master sheet. ROI is relative gain over lab duration in days.",
+ "runType": "Tourney",
+ "startingEffectiveDamage": 383.270751668376,
+ "factors": {
+  "base": {
+   "cell": "DI5",
+   "value": 3.036
+  },
+  "crit": {
+   "cell": "DN5",
+   "value": 1.002
+  },
+  "uwCrit": {
+   "cell": "DO5",
+   "value": 1.012
+  },
+  "bulletDmgMulti": {
+   "cell": "EA5",
+   "value": 125.990033
+  },
+  "spotlight": {
+   "cell": "ED5",
+   "value": 1
+  },
+  "uws": {
+   "cell": "EO5",
+   "value": 0
+  },
+  "slow": {
+   "cell": "ER5",
+   "value": 1
+  },
+  "eDamage": {
+   "cell": "ES5",
+   "value": 383.270751668376
+  },
+  "damage": {
+   "cell": "CZ5",
+   "value": 3
+  },
+  "standardPerksBonus": {
+   "cell": "DA5",
+   "value": 1
+  },
+  "tradeOffPerks": {
+   "cell": "DB5",
+   "value": 1
+  },
+  "shock": {
+   "cell": "DC5",
+   "value": 1
+  },
+  "damageMastery": {
+   "cell": "DD5",
+   "value": 1
+  },
+  "cannon": {
+   "cell": "DE5",
+   "value": 1.012
+  },
+  "acp": {
+   "cell": "DF5",
+   "value": 1
+  },
+  "projectFundingMultiplier": {
+   "cell": "DG5",
+   "value": 1
+  },
+  "ampStrike": {
+   "cell": "DH5",
+   "value": 1
+  },
+  "critChance": {
+   "cell": "DJ5",
+   "value": 0.01
+  },
+  "critFactor": {
+   "cell": "DK5",
+   "value": 1.2
+  },
+  "superCritChance": {
+   "cell": "DL5",
+   "value": 0
+  },
+  "superCritMulti": {
+   "cell": "DM5",
+   "value": 1.2
+  },
+  "multishot": {
+   "cell": "DP5",
+   "value": 1
+  },
+  "bounceAd": {
+   "cell": "DQ5",
+   "value": 1
+  },
+  "bounceNoAd": {
+   "cell": "DR5",
+   "value": 1
+  },
+  "rapidFire": {
+   "cell": "DS5",
+   "value": 1
+  },
+  "bps": {
+   "cell": "DT5",
+   "value": 125.990033
+  },
+  "range": {
+   "cell": "DU5",
+   "value": 30
+  },
+  "damagePerMeter": {
+   "cell": "DV5",
+   "value": 0
+  },
+  "rangeDpm": {
+   "cell": "DW5",
+   "value": 1
+  },
+  "superTower": {
+   "cell": "DX5",
+   "value": 1
+  },
+  "superTowerUw": {
+   "cell": "DY5",
+   "value": 1
+  },
+  "maxRendArmor": {
+   "cell": "DZ5",
+   "value": 1
+  },
+  "discoUw": {
+   "cell": "EB5",
+   "value": 1
+  },
+  "core": {
+   "cell": "EN5",
+   "value": 1.04
+  },
+  "chronoField": {
+   "cell": "EP5",
+   "value": 1
+  },
+  "chronoFieldPlus": {
+   "cell": "EQ5",
+   "value": 1
+  }
+ },
+ "candidates": [
+  {
+   "column": "BO",
+   "name": "Damage",
+   "level": 0
+  },
+  {
+   "column": "BP",
+   "name": "Damage Mastery",
+   "level": 0
+  },
+  {
+   "column": "BQ",
+   "name": "Std Perk",
+   "level": 0
+  },
+  {
+   "column": "BR",
+   "name": "TO Perk",
+   "level": 0
+  },
+  {
+   "column": "BS",
+   "name": "Shock Multiplier",
+   "level": 0
+  },
+  {
+   "column": "BT",
+   "name": "Demon Mode Mastery",
+   "level": 0
+  },
+  {
+   "column": "BU",
+   "name": "Critical Chance Mastery",
+   "level": 0
+  },
+  {
+   "column": "BV",
+   "name": "Crit. Factor",
+   "level": 0
+  },
+  {
+   "column": "BW",
+   "name": "SCrit Chance",
+   "level": 0
+  },
+  {
+   "column": "BX",
+   "name": "SCrit Mult.",
+   "level": 0
+  },
+  {
+   "column": "BY",
+   "name": "Starting Cash",
+   "level": 0
+  },
+  {
+   "column": "BZ",
+   "name": "Atk Speed",
+   "level": 0
+  },
+  {
+   "column": "CA",
+   "name": "Attack Speed Mastery",
+   "level": 0
+  },
+  {
+   "column": "CB",
+   "name": "Range",
+   "level": 0
+  },
+  {
+   "column": "CC",
+   "name": "Damage / Meter",
+   "level": 0
+  },
+  {
+   "column": "CD",
+   "name": "Range Mastery",
+   "level": 0
+  },
+  {
+   "column": "CE",
+   "name": "S.T. Bonus",
+   "level": 0
+  },
+  {
+   "column": "CF",
+   "name": "Super Tower Mastery",
+   "level": 0
+  },
+  {
+   "column": "CG",
+   "name": "Rend Mult.",
+   "level": 0
+  },
+  {
+   "column": "CH",
+   "name": "SLM",
+   "level": 0
+  },
+  {
+   "column": "CI",
+   "name": "Swamp Rend",
+   "level": 0
+  },
+  {
+   "column": "CJ",
+   "name": "Death Wave Damage Amplifier",
+   "level": 0
+  },
+  {
+   "column": "CK",
+   "name": "Missile Amplifier",
+   "level": 0
+  },
+  {
+   "column": "CL",
+   "name": "Inner Land Mine - Chrono Jump",
+   "level": 0
+  },
+  {
+   "column": "CM",
+   "name": "Ultimate Crit Mastery",
+   "level": 0
+  },
+  {
+   "column": "CN",
+   "name": "AssM Bonus - Cannon",
+   "level": 0
+  },
+  {
+   "column": "CO",
+   "name": "AssM Substat - Cannon",
+   "level": 0
+  },
+  {
+   "column": "CP",
+   "name": "AssM Substat - Armor",
+   "level": 0
+  },
+  {
+   "column": "CQ",
+   "name": "AssM Substat - Generator",
+   "level": 0
+  },
+  {
+   "column": "CR",
+   "name": "AssM Bonus - Core",
+   "level": 0
+  },
+  {
+   "column": "CS",
+   "name": "AssM Substat - Core",
+   "level": 0
+  },
+  {
+   "column": "CT",
+   "name": "Dissonant Echo - Attack",
+   "level": 0
+  },
+  {
+   "column": "CU",
+   "name": "Dissonant Echo - Ultimate Weapons",
+   "level": 0
+  }
+ ],
+ "steps": [
+  {
+   "step": 1,
+   "name": "Damage",
+   "level": 1,
+   "cost": 30,
+   "duration": "0d  0h  0m",
+   "roi": 123.42857142857154,
+   "eDamage": 390.9361667017435
+  },
+  {
+   "step": 2,
+   "name": "Attack Speed",
+   "level": 1,
+   "cost": 30,
+   "duration": "0d  0h  0m",
+   "roi": 5.146907753885799,
+   "eDamage": 391.2622034312273
+  },
+  {
+   "step": 3,
+   "name": "Damage",
+   "level": 2,
+   "cost": 71,
+   "duration": "0d  0h  6m",
+   "roi": 4.411764705882337,
+   "eDamage": 398.93401134164355
+  },
+  {
+   "step": 4,
+   "name": "Critical Factor",
+   "level": 1,
+   "cost": 30,
+   "duration": "0d  0h  0m",
+   "roi": 2.2172797262608617,
+   "eDamage": 399.0773409265567
+  },
+  {
+   "step": 5,
+   "name": "Damage",
+   "level": 3,
+   "cost": 178,
+   "duration": "0d  0h 16m",
+   "roi": 1.6885553470919263,
+   "eDamage": 406.7519051751443
+  },
+  {
+   "step": 6,
+   "name": "Damage",
+   "level": 4,
+   "cost": 398,
+   "duration": "0d  0h 31m",
+   "roi": 0.8616219234911642,
+   "eDamage": 414.426469423732
+  },
+  {
+   "step": 7,
+   "name": "Damage",
+   "level": 5,
+   "cost": 772,
+   "duration": "0d  0h 52m",
+   "roi": 0.505529225908375,
+   "eDamage": 422.1010336723196
+  },
+  {
+   "step": 8,
+   "name": "Damage",
+   "level": 6,
+   "cost": "1.34 K",
+   "duration": "0d  1h 20m",
+   "roi": 0.3272727272727294,
+   "eDamage": 429.7755979209072
+  },
+  {
+   "step": 9,
+   "name": "Damage",
+   "level": 7,
+   "cost": "2.12 K",
+   "duration": "0d  1h 56m",
+   "roi": 0.22167487684728984,
+   "eDamage": 437.4501621694949
+  },
+  {
+   "step": 10,
+   "name": "Attack Speed",
+   "level": 2,
+   "cost": 71,
+   "duration": "0d  0h  6m",
+   "roi": 0.18751753434270713,
+   "eDamage": 437.8147380619742
+  },
+  {
+   "step": 11,
+   "name": "Damage",
+   "level": 8,
+   "cost": "3.17 K",
+   "duration": "0d  2h 39m",
+   "roi": 0.15888778550148805,
+   "eDamage": 445.49569837885076
+  },
+  {
+   "step": 12,
+   "name": "Damage",
+   "level": 9,
+   "cost": "4.51 K",
+   "duration": "0d  3h 31m",
+   "roi": 0.11766628534074142,
+   "eDamage": 453.17665869572755
+  },
+  {
+   "step": 13,
+   "name": "Damage",
+   "level": 10,
+   "cost": "6.17 K",
+   "duration": "0d  4h 32m",
+   "roi": 0.08973080757726797,
+   "eDamage": 460.8576190126043
+  },
+  {
+   "step": 14,
+   "name": "Critical Factor",
+   "level": 2,
+   "cost": 71,
+   "duration": "0d  0h  6m",
+   "roi": 0.08080929007547866,
+   "eDamage": 461.0231371326855
+  },
+  {
+   "step": 15,
+   "name": "Attack Speed",
+   "level": 3,
+   "cost": 178,
+   "duration": "0d  0h 16m",
+   "roi": 0.07312686246030323,
+   "eDamage": 461.40709274300355
+  },
+  {
+   "step": 16,
+   "name": "Damage",
+   "level": 11,
+   "cost": "8.17 K",
+   "duration": "0d  5h 43m",
+   "roi": 0.06997084548104932,
+   "eDamage": 469.09721095538697
+  },
+  {
+   "step": 17,
+   "name": "Damage",
+   "level": 12,
+   "cost": "10.56 K",
+   "duration": "0d  7h  3m",
+   "roi": 0.05580746424834328,
+   "eDamage": 476.78732916777034
+  },
+  {
+   "step": 18,
+   "name": "Damage",
+   "level": 13,
+   "cost": "13.35 K",
+   "duration": "0d  8h 34m",
+   "roi": 0.045186393874733236,
+   "eDamage": 484.4774473801538
+  },
+  {
+   "step": 19,
+   "name": "Attack Speed",
+   "level": 4,
+   "cost": 398,
+   "duration": "0d  0h 31m",
+   "roi": 0.038005817550250925,
+   "eDamage": 484.88065713832134
+  },
+  {
+   "step": 20,
+   "name": "Damage",
+   "level": 14,
+   "cost": "16.58 K",
+   "duration": "0d 10h 15m",
+   "roi": 0.03716608594657362,
+   "eDamage": 492.57717550559624
+  },
+  {
+   "step": 21,
+   "name": "Critical Factor",
+   "level": 3,
+   "cost": 178,
+   "duration": "0d  0h 16m",
+   "roi": 0.031524010788222735,
+   "eDamage": 492.75402226559106
+  },
+  {
+   "step": 22,
+   "name": "Damage",
+   "level": 15,
+   "cost": "20.27 K",
+   "duration": "0d 12h  7m",
+   "roi": 0.03094910591471802,
+   "eDamage": 500.453303863491
+  },
+  {
+   "step": 23,
+   "name": "Damage",
+   "level": 16,
+   "cost": "24.44 K",
+   "duration": "0d 14h 10m",
+   "roi": 0.0260633484162895,
+   "eDamage": 508.15258546139086
+  },
+  {
+   "step": 24,
+   "name": "Attack Speed",
+   "level": 5,
+   "cost": 772,
+   "duration": "0d  0h 52m",
+   "roi": 0.02270371420256145,
+   "eDamage": 508.57520641210425
+  },
+  {
+   "step": 25,
+   "name": "Damage",
+   "level": 17,
+   "cost": "29.13 K",
+   "duration": "0d 16h 25m",
+   "roi": 0.022150438394093197,
+   "eDamage": 516.2808913577422
+  },
+  {
+   "step": 26,
+   "name": "Damage",
+   "level": 18,
+   "cost": "34.36 K",
+   "duration": "0d 18h 52m",
+   "roi": 0.01898634038289097,
+   "eDamage": 523.9865763033802
+  },
+  {
+   "step": 27,
+   "name": "Damage",
+   "level": 19,
+   "cost": "40.16 K",
+   "duration": "0d 21h 31m",
+   "roi": 0.016403153050530764,
+   "eDamage": 531.6922612490181
+  },
+  {
+   "step": 28,
+   "name": "Critical Factor",
+   "level": 4,
+   "cost": 398,
+   "duration": "0d  0h 31m",
+   "roi": 0.01638926735674346,
+   "eDamage": 531.8830827328973
+  },
+  {
+   "step": 29,
+   "name": "Attack Speed",
+   "level": 6,
+   "cost": "1.34 K",
+   "duration": "0d  1h 20m",
+   "roi": 0.014959912173056367,
+   "eDamage": 532.3251340775649
+  },
+  {
+   "step": 30,
+   "name": "Damage",
+   "level": 20,
+   "cost": "46.54 K",
+   "duration": "1d  0h 22m",
+   "roi": 0.014274668411348425,
+   "eDamage": 540.0399910931817
+  },
+  {
+   "step": 31,
+   "name": "Damage",
+   "level": 21,
+   "cost": "53.53 K",
+   "duration": "1d  3h 26m",
+   "roi": 0.012497830237805893,
+   "eDamage": 547.7548481087987
+  },
+  {
+   "step": 32,
+   "name": "Damage",
+   "level": 22,
+   "cost": "61.16 K",
+   "duration": "1d  6h 44m",
+   "roi": 0.01099874736488343,
+   "eDamage": 555.4697051244157
+  },
+  {
+   "step": 33,
+   "name": "Attack Speed",
+   "level": 7,
+   "cost": "2.12 K",
+   "duration": "0d  1h 56m",
+   "roi": 0.010310053962054559,
+   "eDamage": 555.9310405588309
+  },
+  {
+   "step": 34,
+   "name": "Critical Factor",
+   "level": 5,
+   "cost": 772,
+   "duration": "0d  0h 52m",
+   "roi": 0.009793797488300098,
+   "eDamage": 556.130489628632
+  },
+  {
+   "step": 35,
+   "name": "Damage",
+   "level": 23,
+   "cost": "69.46 K",
+   "duration": "1d 10h 14m",
+   "roi": 0.009737098344693246,
+   "eDamage": 563.8545242068072
+  },
+  {
+   "step": 36,
+   "name": "Damage",
+   "level": 24,
+   "cost": "78.43 K",
+   "duration": "1d 13h 58m",
+   "roi": 0.00865936233417926,
+   "eDamage": 571.5785587849828
+  },
+  {
+   "step": 37,
+   "name": "Damage",
+   "level": 25,
+   "cost": "88.12 K",
+   "duration": "1d 17h 56m",
+   "roi": 0.007734284363855159,
+   "eDamage": 579.3025933631583
+  },
+  {
+   "step": 38,
+   "name": "Attack Speed",
+   "level": 8,
+   "cost": "3.17 K",
+   "duration": "0d  2h 39m",
+   "roi": 0.007516608670795517,
+   "eDamage": 579.78339069129
+  },
+  {
+   "step": 39,
+   "name": "Damage",
+   "level": 26,
+   "cost": "98.53 K",
+   "duration": "1d 22h  7m",
+   "roi": 0.006938923021322777,
+   "eDamage": 587.5138359005073
+  },
+  {
+   "step": 40,
+   "name": "Critical Factor",
+   "level": 6,
+   "cost": "1.34 K",
+   "duration": "0d  1h 20m",
+   "roi": 0.006455469216973597,
+   "eDamage": 587.724540205074
+  },
+  {
+   "step": 41,
+   "name": "Damage",
+   "level": 27,
+   "cost": "109.7 K",
+   "duration": "2d  2h 33m",
+   "roi": 0.006247071685147553,
+   "eDamage": 595.4577578393513
+  },
+  {
+   "step": 42,
+   "name": "Attack Speed",
+   "level": 9,
+   "cost": "4.51 K",
+   "duration": "0d  3h 31m",
+   "roi": 0.005660267906349607,
+   "eDamage": 595.9516224518903
+  },
+  {
+   "step": 43,
+   "name": "Damage",
+   "level": 28,
+   "cost": "121.65 K",
+   "duration": "2d  7h 13m",
+   "roi": 0.0056448230308780165,
+   "eDamage": 603.6912539123045
+  },
+  {
+   "step": 44,
+   "name": "Damage",
+   "level": 29,
+   "cost": "134.39 K",
+   "duration": "2d 12h  8m",
+   "roi": 0.00511683438512705,
+   "eDamage": 611.4308853727188
+  },
+  {
+   "step": 45,
+   "name": "Damage",
+   "level": 30,
+   "cost": "147.95 K",
+   "duration": "2d 17h 18m",
+   "roi": 0.004652334890573232,
+   "eDamage": 619.170516833133
+  },
+  {
+   "step": 46,
+   "name": "Critical Factor",
+   "level": 7,
+   "cost": "2.12 K",
+   "duration": "0d  1h 56m",
+   "roi": 0.004450451638426867,
+   "eDamage": 619.3924947908887
+  },
+  {
+   "step": 47,
+   "name": "Attack Speed",
+   "level": 10,
+   "cost": "6.17 K",
+   "duration": "0d  4h 32m",
+   "roi": 0.004387843770496424,
+   "eDamage": 619.9058565408434
+  },
+  {
+   "step": 48,
+   "name": "Damage",
+   "level": 31,
+   "cost": "162.35 K",
+   "duration": "2d 22h 43m",
+   "roi": 0.004242281404666494,
+   "eDamage": 627.6546797476038
+  },
+  {
+   "step": 49,
+   "name": "Damage",
+   "level": 32,
+   "cost": "177.62 K",
+   "duration": "3d  4h 23m",
+   "roi": 0.0038790699929692027,
+   "eDamage": 635.4035029543644
+  },
+  {
+   "step": 50,
+   "name": "Damage",
+   "level": 33,
+   "cost": "193.78 K",
+   "duration": "3d 10h 18m",
+   "roi": 0.003556293157099253,
+   "eDamage": 643.152326161125
+  },
+  {
+   "step": 51,
+   "name": "Attack Speed",
+   "level": 11,
+   "cost": "8.17 K",
+   "duration": "0d  5h 43m",
+   "roi": 0.0034771769909537013,
+   "eDamage": 643.6850133717364
+  },
+  {
+   "step": 52,
+   "name": "Damage",
+   "level": 34,
+   "cost": "210.83 K",
+   "duration": "3d 16h 30m",
+   "roi": 0.003267306514192343,
+   "eDamage": 651.4402544966973
+  },
+  {
+   "step": 53,
+   "name": "Critical Factor",
+   "level": 8,
+   "cost": "3.17 K",
+   "duration": "0d  2h 39m",
+   "roi": 0.0032457067639151712,
+   "eDamage": 651.6737177344812
+  },
+  {
+   "step": 54,
+   "name": "Damage",
+   "level": 35,
+   "cost": "228.82 K",
+   "duration": "3d 22h 57m",
+   "roi": 0.0030091025351688754,
+   "eDamage": 659.4317381837012
+  },
+  {
+   "step": 55,
+   "name": "Attack Speed",
+   "level": 12,
+   "cost": "10.56 K",
+   "duration": "0d  7h  3m",
+   "roi": 0.0028176149703336337,
+   "eDamage": 659.9775329503182
+  },
+  {
+   "step": 56,
+   "name": "Damage",
+   "level": 36,
+   "cost": "247.76 K",
+   "duration": "4d  5h 40m",
+   "roi": 0.0027772420443587173,
+   "eDamage": 667.7419745144394
+  },
+  {
+   "step": 57,
+   "name": "Damage",
+   "level": 37,
+   "cost": "267.66 K",
+   "duration": "4d 12h 40m",
+   "roi": 0.0025681266942502545,
+   "eDamage": 675.5064160785608
+  },
+  {
+   "step": 58,
+   "name": "Critical Factor",
+   "level": 9,
+   "cost": "4.51 K",
+   "duration": "0d  3h 31m",
+   "roi": 0.0024449407271652478,
+   "eDamage": 675.7484174217941
+  },
+  {
+   "step": 59,
+   "name": "Damage",
+   "level": 38,
+   "cost": "288.56 K",
+   "duration": "4d 19h 55m",
+   "roi": 0.002379830932844166,
+   "eDamage": 683.5156406105505
+  },
+  {
+   "step": 60,
+   "name": "Attack Speed",
+   "level": 13,
+   "cost": "13.35 K",
+   "duration": "0d  8h 34m",
+   "roi": 0.0023171824445327007,
+   "eDamage": 684.0809800881163
+  },
+  {
+   "step": 61,
+   "name": "Damage",
+   "level": 39,
+   "cost": "310.47 K",
+   "duration": "5d  3h 28m",
+   "roi": 0.002208914195955252,
+   "eDamage": 691.8546275891175
+  },
+  {
+   "step": 62,
+   "name": "Damage",
+   "level": 40,
+   "cost": "333.4 K",
+   "duration": "5d 11h 17m",
+   "roi": 0.00205405297459679,
+   "eDamage": 699.6282750901189
+  },
+  {
+   "step": 63,
+   "name": "Attack Speed",
+   "level": 14,
+   "cost": "16.58 K",
+   "duration": "0d 10h 15m",
+   "roi": 0.0019353067272720567,
+   "eDamage": 700.2065439193088
+  },
+  {
+   "step": 64,
+   "name": "Damage",
+   "level": 41,
+   "cost": "357.39 K",
+   "duration": "5d 19h 24m",
+   "roi": 0.0019129603060736421,
+   "eDamage": 707.9866166295234
+  },
+  {
+   "step": 65,
+   "name": "Critical Factor",
+   "level": 10,
+   "cost": "6.17 K",
+   "duration": "0d  4h 32m",
+   "roi": 0.0018959475875844705,
+   "eDamage": 708.2401632273377
+  },
+  {
+   "step": 66,
+   "name": "Damage",
+   "level": 42,
+   "cost": "382.45 K",
+   "duration": "6d  3h 47m",
+   "roi": 0.0017846143931629377,
+   "eDamage": 716.0230221639017
+  },
+  {
+   "step": 67,
+   "name": "Damage",
+   "level": 43,
+   "cost": "408.6 K",
+   "duration": "6d 12h 28m",
+   "roi": 0.0016672532928252606,
+   "eDamage": 723.805881100466
+  },
+  {
+   "step": 68,
+   "name": "Attack Speed",
+   "level": 15,
+   "cost": "20.27 K",
+   "duration": "0d 12h  7m",
+   "roi": 0.001636033991841803,
+   "eDamage": 724.4037229998806
+  },
+  {
+   "step": 69,
+   "name": "Damage",
+   "level": 44,
+   "cost": "435.87 K",
+   "duration": "6d 21h 26m",
+   "roi": 0.0015599305830890512,
+   "eDamage": 732.1930103439654
+  },
+  {
+   "step": 70,
+   "name": "Critical Factor",
+   "level": 11,
+   "cost": "8.17 K",
+   "duration": "0d  5h 43m",
+   "roi": 0.001502953721549952,
+   "eDamage": 732.4551319467138
+  },
+  {
+   "step": 71,
+   "name": "Damage",
+   "level": 45,
+   "cost": "464.26 K",
+   "duration": "7d  6h 42m",
+   "roi": 0.0014614719458281163,
+   "eDamage": 740.2472078184873
+  },
+  {
+   "step": 72,
+   "name": "Attack Speed",
+   "level": 16,
+   "cost": "24.44 K",
+   "duration": "0d 14h 10m",
+   "roi": 0.0013983305860661818,
+   "eDamage": 740.8582104331756
+  },
+  {
+   "step": 73,
+   "name": "Damage",
+   "level": 46,
+   "cost": "493.81 K",
+   "duration": "7d 16h 15m",
+   "roi": 0.0013711347568378248,
+   "eDamage": 748.6567179114195
+  },
+  {
+   "step": 74,
+   "name": "Damage",
+   "level": 47,
+   "cost": "524.53 K",
+   "duration": "8d  2h  7m",
+   "roi": 0.0012878852923499707,
+   "eDamage": 756.4552253896636
+  },
+  {
+   "step": 75,
+   "name": "Critical Factor",
+   "level": 12,
+   "cost": "10.56 K",
+   "duration": "0d  7h  3m",
+   "roi": 0.0012182710196165295,
+   "eDamage": 756.7259358365404
+  },
+  {
+   "step": 76,
+   "name": "Damage",
+   "level": 48,
+   "cost": "556.43 K",
+   "duration": "8d 12h 17m",
+   "roi": 0.0012111740902947061,
+   "eDamage": 764.5272341441337
+  },
+  {
+   "step": 77,
+   "name": "Attack Speed",
+   "level": 17,
+   "cost": "29.13 K",
+   "duration": "0d 16h 25m",
+   "roi": 0.0012058543074302925,
+   "eDamage": 765.1578451382753
+  },
+  {
+   "step": 78,
+   "name": "Damage",
+   "level": 49,
+   "cost": "589.55 K",
+   "duration": "8d 22h 45m",
+   "roi": 0.0011403863058610994,
+   "eDamage": 772.965578251931
+  },
+  {
+   "step": 79,
+   "name": "Damage",
+   "level": 50,
+   "cost": "623.89 K",
+   "duration": "9d  9h 31m",
+   "roi": 0.0010749726217910457,
+   "eDamage": 780.773311365587
+  },
+  {
+   "step": 80,
+   "name": "Attack Speed",
+   "level": 18,
+   "cost": "34.36 K",
+   "duration": "0d 18h 52m",
+   "roi": 0.001048545223807797,
+   "eDamage": 781.4168817650371
+  },
+  {
+   "step": 81,
+   "name": "Damage",
+   "level": 51,
+   "cost": "659.49 K",
+   "duration": "9d 20h 37m",
+   "roi": 0.0010142987955201813,
+   "eDamage": 789.2310505826877
+  },
+  {
+   "step": 82,
+   "name": "Critical Factor",
+   "level": 13,
+   "cost": "13.35 K",
+   "duration": "0d  8h 34m",
+   "roi": 0.0010022262414380646,
+   "eDamage": 789.5133893797004
+  },
+  {
+   "step": 83,
+   "name": "Damage",
+   "level": 52,
+   "cost": "696.34 K",
+   "duration": "10d  8h  0m",
+   "roi": 0.0009581603321622493,
+   "eDamage": 797.3303536309843
+  },
+  {
+   "step": 84,
+   "name": "Attack Speed",
+   "level": 19,
+   "cost": "40.16 K",
+   "duration": "0d 21h 31m",
+   "roi": 0.0009187769922948857,
+   "eDamage": 797.9871218951297
+  },
+  {
+   "step": 85,
+   "name": "Damage",
+   "level": 53,
+   "cost": "734.49 K",
+   "duration": "10d 19h 43m",
+   "roi": 0.0009059646447297362,
+   "eDamage": 805.8105250509643
+  },
+  {
+   "step": 86,
+   "name": "Damage",
+   "level": 54,
+   "cost": "773.94 K",
+   "duration": "11d  7h 45m",
+   "roi": 0.0008574414304981196,
+   "eDamage": 813.6339282067989
+  },
+  {
+   "step": 87,
+   "name": "Critical Factor",
+   "level": 14,
+   "cost": "16.58 K",
+   "duration": "0d 10h 15m",
+   "roi": 0.0008373334418765961,
+   "eDamage": 813.9248927776204
+  },
+  {
+   "step": 88,
+   "name": "Damage",
+   "level": 55,
+   "cost": "814.71 K",
+   "duration": "11d 20h  6m",
+   "roi": 0.000812281699293312,
+   "eDamage": 821.7510936697128
+  },
+  {
+   "step": 89,
+   "name": "Attack Speed",
+   "level": 20,
+   "cost": "46.54 K",
+   "duration": "1d  0h 22m",
+   "roi": 0.0008107593715695517,
+   "eDamage": 822.4275147733407
+  },
+  {
+   "step": 90,
+   "name": "Damage",
+   "level": 56,
+   "cost": "856.83 K",
+   "duration": "12d  8h 46m",
+   "roi": 0.000770205869610562,
+   "eDamage": 830.260157771182
+  },
+  {
+   "step": 91,
+   "name": "Damage",
+   "level": 57,
+   "cost": "900.3 K",
+   "duration": "12d 21h 46m",
+   "roi": 0.0007309214279768381,
+   "eDamage": 838.0928007690233
+  },
+  {
+   "step": 92,
+   "name": "Attack Speed",
+   "level": 21,
+   "cost": "53.53 K",
+   "duration": "1d  3h 26m",
+   "roi": 0.0007196357856705547,
+   "eDamage": 838.7822022315974
+  },
+  {
+   "step": 93,
+   "name": "Critical Factor",
+   "level": 15,
+   "cost": "20.27 K",
+   "duration": "0d 12h  7m",
+   "roi": 0.000708082499479077,
+   "eDamage": 839.0820528758652
+  },
+  {
+   "step": 94,
+   "name": "Damage",
+   "level": 58,
+   "cost": "945.16 K",
+   "duration": "13d 11h  5m",
+   "roi": 0.0006942452373089402,
+   "eDamage": 846.9239412204995
+  },
+  {
+   "step": 95,
+   "name": "Damage",
+   "level": 59,
+   "cost": "991.41 K",
+   "duration": "14d  0h 44m",
+   "roi": 0.000659935326338006,
+   "eDamage": 854.7658295651336
+  },
+  {
+   "step": 96,
+   "name": "Attack Speed",
+   "level": 22,
+   "cost": "61.16 K",
+   "duration": "1d  6h 44m",
+   "roi": 0.0006419262474589064,
+   "eDamage": 855.4684660720188
+  },
+  {
+   "step": 97,
+   "name": "Damage",
+   "level": 60,
+   "cost": "1.04 M",
+   "duration": "14d 14h 43m",
+   "roi": 0.0006278101589275373,
+   "eDamage": 863.3168006231385
+  },
+  {
+   "step": 98,
+   "name": "Critical Factor",
+   "level": 16,
+   "cost": "24.44 K",
+   "duration": "0d 14h 10m",
+   "roi": 0.0006054023753632306,
+   "eDamage": 863.6253116894719
+  },
+  {
+   "step": 99,
+   "name": "Damage",
+   "level": 61,
+   "cost": "1.09 M",
+   "duration": "15d  5h  3m",
+   "roi": 0.000597676532479966,
+   "eDamage": 871.4764508866488
+  },
+  {
+   "step": 100,
+   "name": "Attack Speed",
+   "level": 23,
+   "cost": "69.46 K",
+   "duration": "1d 10h 14m",
+   "roi": 0.0005759029648841511,
+   "eDamage": 872.1923353178064
+  }
+ ]
+}

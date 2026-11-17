@@ -1,0 +1,267 @@
+{
+  "note": "Perk-relevant slice of a real mid-run save, for validating perk maths. Trimmed from temp/ep-save-root.json.",
+  "perkLevel": [
+    5,
+    5,
+    0,
+    5,
+    0,
+    0,
+    0,
+    2,
+    5,
+    5,
+    3,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0
+  ],
+  "perksPickedCount": 48,
+  "bannedPerksIndex": [
+    6,
+    43,
+    13,
+    49,
+    14,
+    2,
+    5,
+    4
+  ],
+  "firstPerkIndex": 10,
+  "perkPickWaves": [
+    {
+      "wave": 190,
+      "perk": 10
+    },
+    {
+      "wave": 280,
+      "perk": 12
+    },
+    {
+      "wave": 420,
+      "perk": 3
+    },
+    {
+      "wave": 560,
+      "perk": 8
+    },
+    {
+      "wave": 700,
+      "perk": 3
+    },
+    {
+      "wave": 840,
+      "perk": 10
+    },
+    {
+      "wave": 840,
+      "perk": 10
+    },
+    {
+      "wave": 840,
+      "perk": 24
+    },
+    {
+      "wave": 840,
+      "perk": 27
+    },
+    {
+      "wave": 840,
+      "perk": 7
+    },
+    {
+      "wave": 840,
+      "perk": 3
+    },
+    {
+      "wave": 840,
+      "perk": 3
+    },
+    {
+      "wave": 840,
+      "perk": 8
+    },
+    {
+      "wave": 840,
+      "perk": 8
+    },
+    {
+      "wave": 840,
+      "perk": 8
+    },
+    {
+      "wave": 840,
+      "perk": 8
+    },
+    {
+      "wave": 840,
+      "perk": 3
+    },
+    {
+      "wave": 840,
+      "perk": 22
+    },
+    {
+      "wave": 880,
+      "perk": 7
+    },
+    {
+      "wave": 920,
+      "perk": 42
+    },
+    {
+      "wave": 980,
+      "perk": 1
+    },
+    {
+      "wave": 1040,
+      "perk": 28
+    },
+    {
+      "wave": 1100,
+      "perk": 1
+    },
+    {
+      "wave": 1160,
+      "perk": 1
+    },
+    {
+      "wave": 1220,
+      "perk": 1
+    },
+    {
+      "wave": 1280,
+      "perk": 1
+    },
+    {
+      "wave": 1340,
+      "perk": 41
+    },
+    {
+      "wave": 1400,
+      "perk": 9
+    },
+    {
+      "wave": 1460,
+      "perk": 23
+    },
+    {
+      "wave": 1510,
+      "perk": 9
+    },
+    {
+      "wave": 1590,
+      "perk": 40
+    },
+    {
+      "wave": 1660,
+      "perk": 9
+    },
+    {
+      "wave": 1730,
+      "perk": 9
+    },
+    {
+      "wave": 1800,
+      "perk": 45
+    },
+    {
+      "wave": 1866,
+      "perk": 9
+    },
+    {
+      "wave": 1937,
+      "perk": 0
+    },
+    {
+      "wave": 2011,
+      "perk": 47
+    },
+    {
+      "wave": 2078,
+      "perk": 21
+    },
+    {
+      "wave": 2149,
+      "perk": 0
+    },
+    {
+      "wave": 2220,
+      "perk": 0
+    },
+    {
+      "wave": 2305,
+      "perk": 25
+    },
+    {
+      "wave": 2388,
+      "perk": 0
+    },
+    {
+      "wave": 2476,
+      "perk": 0
+    },
+    {
+      "wave": 2557,
+      "perk": 46
+    },
+    {
+      "wave": 2640,
+      "perk": 26
+    },
+    {
+      "wave": 2724,
+      "perk": 44
+    },
+    {
+      "wave": 2811,
+      "perk": 48
+    },
+    {
+      "wave": 2892,
+      "perk": 20
+    }
+  ],
+  "researchLevel": {
+    "81_wavesRequired": 13,
+    "83_standardPerksBonus": 25,
+    "88_improveTradeOffPerks": 10
+  },
+  "currentWave": 4875
+}

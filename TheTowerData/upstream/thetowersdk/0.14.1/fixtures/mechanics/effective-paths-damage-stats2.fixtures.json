@@ -1,0 +1,964 @@
+{
+  "attackSpeed": [
+    {
+      "ws": 16,
+      "wsp": 40,
+      "lab": 0,
+      "hasCard": true,
+      "cardLevel": 3,
+      "sub": 0.919,
+      "relic": 0.0256,
+      "vault": 0.1498,
+      "hasMastery": false,
+      "masteryLevel": 2,
+      "sheet": 6.123295037887999
+    },
+    {
+      "ws": 34,
+      "wsp": 11,
+      "lab": 11,
+      "hasCard": true,
+      "cardLevel": 0,
+      "sub": 2.129,
+      "relic": 0.1399,
+      "vault": 0.1176,
+      "hasMastery": false,
+      "masteryLevel": 5,
+      "sheet": 8.13439398056736
+    },
+    {
+      "ws": 19,
+      "wsp": 17,
+      "lab": 5,
+      "hasCard": false,
+      "cardLevel": 5,
+      "sub": 1.22,
+      "relic": 0.0255,
+      "vault": 0.0303,
+      "hasMastery": true,
+      "masteryLevel": 2,
+      "sheet": 4.159779351682501
+    },
+    {
+      "ws": 35,
+      "wsp": 39,
+      "lab": 20,
+      "hasCard": false,
+      "cardLevel": 7,
+      "sub": 2.491,
+      "relic": 0.0138,
+      "vault": 0.0206,
+      "hasMastery": false,
+      "masteryLevel": 7,
+      "sheet": 9.119696897077201
+    },
+    {
+      "ws": 30,
+      "wsp": 34,
+      "lab": 18,
+      "hasCard": false,
+      "cardLevel": 7,
+      "sub": 1.093,
+      "relic": 0.0457,
+      "vault": 0.1662,
+      "hasMastery": true,
+      "masteryLevel": 8,
+      "sheet": 7.3421180339108
+    },
+    {
+      "ws": 3,
+      "wsp": 33,
+      "lab": 3,
+      "hasCard": false,
+      "cardLevel": 0,
+      "sub": 2.328,
+      "relic": 0.0518,
+      "vault": 0.1159,
+      "hasMastery": true,
+      "masteryLevel": 7,
+      "sheet": 5.536958564386199
+    },
+    {
+      "ws": 16,
+      "wsp": 36,
+      "lab": 33,
+      "hasCard": false,
+      "cardLevel": 6,
+      "sub": 1.388,
+      "relic": 0.0894,
+      "vault": 0.1106,
+      "hasMastery": false,
+      "masteryLevel": 2,
+      "sheet": 7.2004769051904
+    },
+    {
+      "ws": 38,
+      "wsp": 0,
+      "lab": 4,
+      "hasCard": false,
+      "cardLevel": 3,
+      "sub": 2.074,
+      "relic": 0.152,
+      "vault": 0.1382,
+      "hasMastery": false,
+      "masteryLevel": 2,
+      "sheet": 6.826140518399999
+    },
+    {
+      "ws": 28,
+      "wsp": 11,
+      "lab": 14,
+      "hasCard": true,
+      "cardLevel": 2,
+      "sub": 2.601,
+      "relic": 0.1265,
+      "vault": 0.15,
+      "hasMastery": false,
+      "masteryLevel": 4,
+      "sheet": 9.924631384050004
+    },
+    {
+      "ws": 1,
+      "wsp": 51,
+      "lab": 35,
+      "hasCard": true,
+      "cardLevel": 6,
+      "sub": 2.135,
+      "relic": 0.0267,
+      "vault": 0.0058,
+      "hasMastery": true,
+      "masteryLevel": 5,
+      "sheet": 9.89786878389736
+    },
+    {
+      "ws": 24,
+      "wsp": 41,
+      "lab": 31,
+      "hasCard": true,
+      "cardLevel": 1,
+      "sub": 2.186,
+      "relic": 0.0586,
+      "vault": 0.0221,
+      "hasMastery": false,
+      "masteryLevel": 8,
+      "sheet": 10.131596162778603
+    },
+    {
+      "ws": 38,
+      "wsp": 23,
+      "lab": 1,
+      "hasCard": false,
+      "cardLevel": 7,
+      "sub": 2.314,
+      "relic": 0.1383,
+      "vault": 0.1388,
+      "hasMastery": false,
+      "masteryLevel": 4,
+      "sheet": 8.405909449142401
+    },
+    {
+      "ws": 31,
+      "wsp": 25,
+      "lab": 31,
+      "hasCard": true,
+      "cardLevel": 6,
+      "sub": 2.884,
+      "relic": 0.103,
+      "vault": 0.1046,
+      "hasMastery": false,
+      "masteryLevel": 5,
+      "sheet": 16.9749929685
+    },
+    {
+      "ws": 18,
+      "wsp": 52,
+      "lab": 7,
+      "hasCard": true,
+      "cardLevel": 1,
+      "sub": 0.677,
+      "relic": 0.0308,
+      "vault": 0.1745,
+      "hasMastery": true,
+      "masteryLevel": 2,
+      "sheet": 6.676659761619601
+    },
+    {
+      "ws": 9,
+      "wsp": 24,
+      "lab": 9,
+      "hasCard": false,
+      "cardLevel": 0,
+      "sub": 1.047,
+      "relic": 0.1021,
+      "vault": 0.0804,
+      "hasMastery": false,
+      "masteryLevel": 8,
+      "sheet": 4.072128976092801
+    },
+    {
+      "ws": 16,
+      "wsp": 42,
+      "lab": 2,
+      "hasCard": false,
+      "cardLevel": 7,
+      "sub": 0.89,
+      "relic": 0.1368,
+      "vault": 0.0308,
+      "hasMastery": true,
+      "masteryLevel": 6,
+      "sheet": 4.5958991842176005
+    },
+    {
+      "ws": 23,
+      "wsp": 47,
+      "lab": 4,
+      "hasCard": false,
+      "cardLevel": 6,
+      "sub": 2.692,
+      "relic": 0.099,
+      "vault": 0.121,
+      "hasMastery": true,
+      "masteryLevel": 0,
+      "sheet": 9.080399777820002
+    },
+    {
+      "ws": 7,
+      "wsp": 12,
+      "lab": 26,
+      "hasCard": true,
+      "cardLevel": 3,
+      "sub": 0.419,
+      "relic": 0.0304,
+      "vault": 0.0458,
+      "hasMastery": true,
+      "masteryLevel": 3,
+      "sheet": 4.805010706754766
+    },
+    {
+      "ws": 30,
+      "wsp": 39,
+      "lab": 26,
+      "hasCard": false,
+      "cardLevel": 1,
+      "sub": 1.738,
+      "relic": 0.0854,
+      "vault": 0.0818,
+      "hasMastery": false,
+      "masteryLevel": 8,
+      "sheet": 9.0386703191304
+    },
+    {
+      "ws": 22,
+      "wsp": 3,
+      "lab": 33,
+      "hasCard": true,
+      "cardLevel": 2,
+      "sub": 0.203,
+      "relic": 0.1557,
+      "vault": 0.0652,
+      "hasMastery": false,
+      "masteryLevel": 8,
+      "sheet": 6.445665743979282
+    }
+  ],
+  "damagePerMeter": [
+    {
+      "wsLevel": 78,
+      "wsp": 48,
+      "lab": 35,
+      "sub": 0.1679,
+      "relic": 0.1441,
+      "vault": 0.1293,
+      "hasMastery": false,
+      "masteryLevel": 2,
+      "sheet": 0.4335356913064761,
+      "sheetWorkshopValue": 34.59999847
+    },
+    {
+      "wsLevel": 43,
+      "wsp": 42,
+      "lab": 3,
+      "sub": 0.2805,
+      "relic": 0.0851,
+      "vault": 0.1955,
+      "hasMastery": false,
+      "masteryLevel": 2,
+      "sheet": 0.5652370506536474,
+      "sheetWorkshopValue": 24.85636139
+    },
+    {
+      "wsLevel": 51,
+      "wsp": 22,
+      "lab": 14,
+      "sub": 0.0393,
+      "relic": 0.1424,
+      "vault": 0.1937,
+      "hasMastery": true,
+      "masteryLevel": 8,
+      "sheet": 0.3485451386310843,
+      "sheetWorkshopValue": 27.75135612
+    },
+    {
+      "wsLevel": 44,
+      "wsp": 18,
+      "lab": 21,
+      "sub": 0.1133,
+      "relic": 0.0464,
+      "vault": 0.1049,
+      "hasMastery": false,
+      "masteryLevel": 1,
+      "sheet": 0.20347512545323593,
+      "sheetWorkshopValue": 25.24293709
+    },
+    {
+      "wsLevel": 52,
+      "wsp": 57,
+      "lab": 21,
+      "sub": 0.4677,
+      "relic": 0.1336,
+      "vault": 0.1797,
+      "hasMastery": false,
+      "masteryLevel": 3,
+      "sheet": 1.0656954502293654,
+      "sheetWorkshopValue": 28.08248329
+    },
+    {
+      "wsLevel": 7,
+      "wsp": 28,
+      "lab": 27,
+      "sub": 0.0138,
+      "relic": 0.0293,
+      "vault": 0.0585,
+      "hasMastery": true,
+      "masteryLevel": 8,
+      "sheet": 0.08582660343898542,
+      "sheetWorkshopValue": 5.311471462
+    },
+    {
+      "wsLevel": 66,
+      "wsp": 35,
+      "lab": 17,
+      "sub": 0.3987,
+      "relic": 0.1093,
+      "vault": 0.1086,
+      "hasMastery": true,
+      "masteryLevel": 2,
+      "sheet": 1.1732013133267236,
+      "sheetWorkshopValue": 32.064888
+    },
+    {
+      "wsLevel": 16,
+      "wsp": 22,
+      "lab": 26,
+      "sub": 0.4055,
+      "relic": 0.1677,
+      "vault": 0.1892,
+      "hasMastery": true,
+      "masteryLevel": 5,
+      "sheet": 1.5755866339170808,
+      "sheetWorkshopValue": 11.34226704
+    },
+    {
+      "wsLevel": 78,
+      "wsp": 16,
+      "lab": 38,
+      "sub": 0.29,
+      "relic": 0.1829,
+      "vault": 0.0891,
+      "hasMastery": true,
+      "masteryLevel": 7,
+      "sheet": 1.3634070685344875,
+      "sheetWorkshopValue": 34.59999847
+    },
+    {
+      "wsLevel": 71,
+      "wsp": 53,
+      "lab": 17,
+      "sub": 0.0418,
+      "relic": 0.0074,
+      "vault": 0.1884,
+      "hasMastery": false,
+      "masteryLevel": 7,
+      "sheet": 0.15805434107287294,
+      "sheetWorkshopValue": 33.20000076
+    },
+    {
+      "wsLevel": 39,
+      "wsp": 41,
+      "lab": 13,
+      "sub": 0.4929,
+      "relic": 0.0209,
+      "vault": 0.0806,
+      "hasMastery": true,
+      "masteryLevel": 5,
+      "sheet": 1.7869318544799564,
+      "sheetWorkshopValue": 23.23599243
+    },
+    {
+      "wsLevel": 13,
+      "wsp": 36,
+      "lab": 38,
+      "sub": 0.2332,
+      "relic": 0.0998,
+      "vault": 0.1432,
+      "hasMastery": false,
+      "masteryLevel": 0,
+      "sheet": 0.4271222778441727,
+      "sheetWorkshopValue": 9.42689991
+    },
+    {
+      "wsLevel": 3,
+      "wsp": 38,
+      "lab": 38,
+      "sub": 0.3468,
+      "relic": 0.0862,
+      "vault": 0.0563,
+      "hasMastery": true,
+      "masteryLevel": 1,
+      "sheet": 0.777900144227365,
+      "sheetWorkshopValue": 2.346203089
+    },
+    {
+      "wsLevel": 62,
+      "wsp": 19,
+      "lab": 19,
+      "sub": 0.2713,
+      "relic": 0.1036,
+      "vault": 0.0048,
+      "hasMastery": true,
+      "masteryLevel": 7,
+      "sheet": 1.0778035095166152,
+      "sheetWorkshopValue": 31.04595566
+    },
+    {
+      "wsLevel": 47,
+      "wsp": 4,
+      "lab": 38,
+      "sub": 0.3087,
+      "relic": 0.0514,
+      "vault": 0.1732,
+      "hasMastery": false,
+      "masteryLevel": 6,
+      "sheet": 0.45552837283088776,
+      "sheetWorkshopValue": 26.35963821
+    },
+    {
+      "wsLevel": 61,
+      "wsp": 12,
+      "lab": 1,
+      "sub": 0.3662,
+      "relic": 0.133,
+      "vault": 0.0492,
+      "hasMastery": false,
+      "masteryLevel": 5,
+      "sheet": 0.5293517366500675,
+      "sheetWorkshopValue": 30.77691078
+    },
+    {
+      "wsLevel": 65,
+      "wsp": 42,
+      "lab": 17,
+      "sub": 0.4733,
+      "relic": 0.0644,
+      "vault": 0.1118,
+      "hasMastery": false,
+      "masteryLevel": 3,
+      "sheet": 0.8669947897366181,
+      "sheetWorkshopValue": 31.81859779
+    },
+    {
+      "wsLevel": 45,
+      "wsp": 22,
+      "lab": 16,
+      "sub": 0.0889,
+      "relic": 0.0836,
+      "vault": 0.129,
+      "hasMastery": true,
+      "masteryLevel": 1,
+      "sheet": 0.25643137321779313,
+      "sheetWorkshopValue": 25.62228394
+    },
+    {
+      "wsLevel": 78,
+      "wsp": 41,
+      "lab": 27,
+      "sub": 0.409,
+      "relic": 0.1577,
+      "vault": 0.1275,
+      "hasMastery": false,
+      "masteryLevel": 6,
+      "sheet": 0.850825615783425,
+      "sheetWorkshopValue": 34.59999847
+    },
+    {
+      "wsLevel": 19,
+      "wsp": 48,
+      "lab": 22,
+      "sub": 0.2795,
+      "relic": 0.1372,
+      "vault": 0.1221,
+      "hasMastery": true,
+      "masteryLevel": 0,
+      "sheet": 0.6763917027343594,
+      "sheetWorkshopValue": 13.16703033
+    }
+  ],
+  "range": [
+    {
+      "ws": 131,
+      "hasCard": false,
+      "cardLevel": 6,
+      "lab": 28,
+      "sub": 3.96,
+      "sheet": 140.184804
+    },
+    {
+      "ws": 135,
+      "hasCard": true,
+      "cardLevel": 0,
+      "lab": 22,
+      "sub": 13.74,
+      "sheet": 151.22745600000002
+    },
+    {
+      "ws": 70,
+      "hasCard": false,
+      "cardLevel": 2,
+      "lab": 39,
+      "sub": 24.43,
+      "sheet": 130.503069
+    },
+    {
+      "ws": 108,
+      "hasCard": true,
+      "cardLevel": 0,
+      "lab": 26,
+      "sub": 16.21,
+      "sheet": 142.9347592
+    },
+    {
+      "ws": 71,
+      "hasCard": true,
+      "cardLevel": 0,
+      "lab": 16,
+      "sub": 16.21,
+      "sheet": 107.33088720000002
+    },
+    {
+      "ws": 267,
+      "hasCard": false,
+      "cardLevel": 2,
+      "lab": 38,
+      "sub": 21.86,
+      "sheet": 260.0808
+    },
+    {
+      "ws": 23,
+      "hasCard": true,
+      "cardLevel": 2,
+      "lab": 22,
+      "sub": 16.45,
+      "sheet": 87.34209340000001
+    },
+    {
+      "ws": 118,
+      "hasCard": true,
+      "cardLevel": 5,
+      "lab": 11,
+      "sub": 18.25,
+      "sheet": 148.844199
+    },
+    {
+      "ws": 101,
+      "hasCard": true,
+      "cardLevel": 1,
+      "lab": 38,
+      "sub": 23.38,
+      "sheet": 163.67509200000003
+    },
+    {
+      "ws": 85,
+      "hasCard": false,
+      "cardLevel": 2,
+      "lab": 3,
+      "sub": 14.23,
+      "sheet": 89.92328400000001
+    },
+    {
+      "ws": 94,
+      "hasCard": true,
+      "cardLevel": 4,
+      "lab": 34,
+      "sub": 12.43,
+      "sheet": 159.82923000000005
+    },
+    {
+      "ws": 104,
+      "hasCard": false,
+      "cardLevel": 2,
+      "lab": 31,
+      "sub": 20.53,
+      "sheet": 140.50225700000001
+    },
+    {
+      "ws": 18,
+      "hasCard": false,
+      "cardLevel": 5,
+      "lab": 11,
+      "sub": 9.07,
+      "sheet": 56.65
+    },
+    {
+      "ws": 281,
+      "hasCard": true,
+      "cardLevel": 4,
+      "lab": 37,
+      "sub": 18.49,
+      "sheet": 339.49523999999997
+    },
+    {
+      "ws": 140,
+      "hasCard": true,
+      "cardLevel": 2,
+      "lab": 33,
+      "sub": 29,
+      "sheet": 191.68800000000005
+    },
+    {
+      "ws": 166,
+      "hasCard": true,
+      "cardLevel": 4,
+      "lab": 9,
+      "sub": 14.97,
+      "sheet": 164.99897439999998
+    },
+    {
+      "ws": 149,
+      "hasCard": false,
+      "cardLevel": 3,
+      "lab": 17,
+      "sub": 8.03,
+      "sheet": 136.540932
+    },
+    {
+      "ws": 251,
+      "hasCard": false,
+      "cardLevel": 5,
+      "lab": 14,
+      "sub": 13.32,
+      "sheet": 180.229932
+    },
+    {
+      "ws": 131,
+      "hasCard": true,
+      "cardLevel": 1,
+      "lab": 6,
+      "sub": 7.08,
+      "sheet": 122.64319520000002
+    },
+    {
+      "ws": 274,
+      "hasCard": true,
+      "cardLevel": 4,
+      "lab": 21,
+      "sub": 0.31,
+      "sheet": 259.21727999999996
+    }
+  ],
+  "maxRend": [
+    {
+      "has": true,
+      "lab": 4,
+      "sub": 5.41,
+      "wsp": 16,
+      "sheet": 16.7156
+    },
+    {
+      "has": true,
+      "lab": 6,
+      "sub": 2.58,
+      "wsp": 21,
+      "sheet": 14.6168
+    },
+    {
+      "has": true,
+      "lab": 14,
+      "sub": 1.42,
+      "wsp": 12,
+      "sheet": 14.470400000000001
+    },
+    {
+      "has": true,
+      "lab": 5,
+      "sub": 0.92,
+      "wsp": 10,
+      "sheet": 11.187000000000001
+    },
+    {
+      "has": true,
+      "lab": 16,
+      "sub": 2.37,
+      "wsp": 16,
+      "sheet": 16.6692
+    },
+    {
+      "has": true,
+      "lab": 9,
+      "sub": 0.84,
+      "wsp": 5,
+      "sheet": 11.6445
+    },
+    {
+      "has": true,
+      "lab": 5,
+      "sub": 3.57,
+      "wsp": 10,
+      "sheet": 14.102000000000002
+    },
+    {
+      "has": true,
+      "lab": 11,
+      "sub": 6,
+      "wsp": 39,
+      "sheet": 23.282500000000002
+    },
+    {
+      "has": true,
+      "lab": 9,
+      "sub": 0.04,
+      "wsp": 8,
+      "sheet": 11.113199999999999
+    },
+    {
+      "has": true,
+      "lab": 14,
+      "sub": 3.83,
+      "wsp": 3,
+      "sheet": 15.789900000000001
+    },
+    {
+      "has": false,
+      "lab": 16,
+      "sub": 5.92,
+      "wsp": 36,
+      "sheet": 1
+    },
+    {
+      "has": false,
+      "lab": 17,
+      "sub": 2.1,
+      "wsp": 13,
+      "sheet": 1
+    },
+    {
+      "has": true,
+      "lab": 15,
+      "sub": 3.81,
+      "wsp": 21,
+      "sheet": 18.8276
+    },
+    {
+      "has": true,
+      "lab": 15,
+      "sub": 5.03,
+      "wsp": 31,
+      "sheet": 21.981800000000003
+    },
+    {
+      "has": false,
+      "lab": 12,
+      "sub": 2.53,
+      "wsp": 21,
+      "sheet": 1
+    },
+    {
+      "has": true,
+      "lab": 3,
+      "sub": 2.01,
+      "wsp": 29,
+      "sheet": 13.8804
+    },
+    {
+      "has": true,
+      "lab": 4,
+      "sub": 4.02,
+      "wsp": 27,
+      "sheet": 16.5354
+    },
+    {
+      "has": false,
+      "lab": 3,
+      "sub": 0.07,
+      "wsp": 1,
+      "sheet": 1
+    },
+    {
+      "has": true,
+      "lab": 18,
+      "sub": 1.16,
+      "wsp": 8,
+      "sheet": 14.7528
+    },
+    {
+      "has": true,
+      "lab": 1,
+      "sub": 5.86,
+      "wsp": 23,
+      "sheet": 17.3553
+    }
+  ],
+  "damagePerk": [
+    {
+      "has": true,
+      "lab": 0,
+      "qty": 2,
+      "sheet": 1.3
+    },
+    {
+      "has": false,
+      "lab": 40,
+      "qty": 5,
+      "sheet": 1
+    },
+    {
+      "has": true,
+      "lab": 32,
+      "qty": 7,
+      "sheet": 2.706
+    },
+    {
+      "has": true,
+      "lab": 7,
+      "qty": 7,
+      "sheet": 2.1935
+    },
+    {
+      "has": true,
+      "lab": 45,
+      "qty": 1,
+      "sheet": 1.6674999999999998
+    },
+    {
+      "has": true,
+      "lab": 34,
+      "qty": 2,
+      "sheet": 1.7420000000000002
+    },
+    {
+      "has": false,
+      "lab": 36,
+      "qty": 2,
+      "sheet": 1
+    },
+    {
+      "has": false,
+      "lab": 52,
+      "qty": 2,
+      "sheet": 1
+    },
+    {
+      "has": false,
+      "lab": 3,
+      "qty": 0,
+      "sheet": 1
+    },
+    {
+      "has": false,
+      "lab": 55,
+      "qty": 6,
+      "sheet": 1
+    }
+  ],
+  "aoeCard": [
+    {
+      "has": false,
+      "level": 1,
+      "sheet": 1
+    },
+    {
+      "has": true,
+      "level": 1,
+      "sheet": 1.05
+    },
+    {
+      "has": true,
+      "level": 2,
+      "sheet": 1.08
+    },
+    {
+      "has": true,
+      "level": 3,
+      "sheet": 1.11
+    },
+    {
+      "has": true,
+      "level": 4,
+      "sheet": 1.1400000000000001
+    },
+    {
+      "has": true,
+      "level": 5,
+      "sheet": 1.17
+    },
+    {
+      "has": true,
+      "level": 6,
+      "sheet": 1.2
+    },
+    {
+      "has": true,
+      "level": 7,
+      "sheet": 1.25
+    }
+  ],
+  "rangeDamage": [
+    {
+      "range": 37.847,
+      "dpm": 0.11527,
+      "kill": 0.587,
+      "sheet": 3.5608601060300002
+    },
+    {
+      "range": 229.103,
+      "dpm": 0.11404,
+      "kill": 0.674,
+      "sheet": 18.609534724880003
+    },
+    {
+      "range": 111.108,
+      "dpm": 0.17204,
+      "kill": 0.137,
+      "sheet": 3.61875778384
+    },
+    {
+      "range": 220.806,
+      "dpm": 0.24467,
+      "kill": 0.599,
+      "sheet": 33.36073780798
+    },
+    {
+      "range": 87.153,
+      "dpm": 0.23589,
+      "kill": 0.081,
+      "sheet": 2.66524021477
+    },
+    {
+      "range": 135.644,
+      "dpm": 0.33113,
+      "kill": 0.741,
+      "sheet": 34.28260611052
+    },
+    {
+      "range": 125.981,
+      "dpm": 0.04801,
+      "kill": 0.444,
+      "sheet": 3.6854664276399998
+    },
+    {
+      "range": 136.048,
+      "dpm": 0.33689,
+      "kill": 0.445,
+      "sheet": 21.395778770400003
+    }
+  ]
+}

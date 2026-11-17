@@ -1,0 +1,3928 @@
+{
+ "source": "Effective Paths spreadsheet, DVT_UWs tab",
+ "url": "https://docs.google.com/spreadsheets/d/1YwZtKP6B4WYhRba5T6APJ1YxKNdfnIGQnprgnxmO7zc/edit?gid=1162053972",
+ "note": "The tab misspells Chain Lightning as \"Chain Ligtning\".",
+ "weaponCount": 9,
+ "weapons": [
+  {
+   "name": "Chain Ligtning",
+   "stats": [
+    {
+     "stat": "Chain Lightning Damage",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x2",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x3",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "x5",
+       "cost": 11
+      },
+      {
+       "level": 3,
+       "display": "x9",
+       "cost": 17
+      },
+      {
+       "level": 4,
+       "display": "x14",
+       "cost": 23
+      },
+      {
+       "level": 5,
+       "display": "x22",
+       "cost": 29
+      },
+      {
+       "level": 6,
+       "display": "x32",
+       "cost": 35
+      },
+      {
+       "level": 7,
+       "display": "x46",
+       "cost": 41
+      },
+      {
+       "level": 8,
+       "display": "x63",
+       "cost": 47
+      },
+      {
+       "level": 9,
+       "display": "x85",
+       "cost": 53
+      },
+      {
+       "level": 10,
+       "display": "x113",
+       "cost": 61
+      },
+      {
+       "level": 11,
+       "display": "x148",
+       "cost": 71
+      },
+      {
+       "level": 12,
+       "display": "x191",
+       "cost": 84
+      },
+      {
+       "level": 13,
+       "display": "x244",
+       "cost": 100
+      },
+      {
+       "level": 14,
+       "display": "x309",
+       "cost": 120
+      },
+      {
+       "level": 15,
+       "display": "x387",
+       "cost": 144
+      },
+      {
+       "level": 16,
+       "display": "x482",
+       "cost": 174
+      },
+      {
+       "level": 17,
+       "display": "x596",
+       "cost": 210
+      },
+      {
+       "level": 18,
+       "display": "x733",
+       "cost": 252
+      },
+      {
+       "level": 19,
+       "display": "x898",
+       "cost": 302
+      },
+      {
+       "level": 20,
+       "display": "x1,094",
+       "cost": 362
+      },
+      {
+       "level": 21,
+       "display": "x1,328",
+       "cost": 434
+      },
+      {
+       "level": 22,
+       "display": "x1,607",
+       "cost": 525
+      },
+      {
+       "level": 23,
+       "display": "x1,937",
+       "cost": 636
+      },
+      {
+       "level": 24,
+       "display": "x2,329",
+       "cost": 767
+      },
+      {
+       "level": 25,
+       "display": "x2,794",
+       "cost": 923
+      },
+      {
+       "level": 26,
+       "display": "x3,342",
+       "cost": 1109
+      },
+      {
+       "level": 27,
+       "display": "x3,990",
+       "cost": 1295
+      },
+      {
+       "level": 28,
+       "display": "x4,755",
+       "cost": 1521
+      },
+      {
+       "level": 29,
+       "display": "x5,655",
+       "cost": 1787
+      },
+      {
+       "level": 30,
+       "display": "x6,715",
+       "cost": 2103
+      },
+      {
+       "level": 31,
+       "display": "x7,961",
+       "cost": 2469
+      }
+     ]
+    },
+    {
+     "stat": "Quantity",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x1",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x2",
+       "cost": 30
+      },
+      {
+       "level": 2,
+       "display": "x3",
+       "cost": 75
+      },
+      {
+       "level": 3,
+       "display": "x4",
+       "cost": 150
+      },
+      {
+       "level": 4,
+       "display": "x5",
+       "cost": 400
+      }
+     ]
+    },
+    {
+     "stat": "Chance",
+     "levels": [
+      {
+       "level": 0,
+       "display": "5.0%",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "6.5%",
+       "cost": 8
+      },
+      {
+       "level": 2,
+       "display": "8.0%",
+       "cost": 26
+      },
+      {
+       "level": 3,
+       "display": "9.5%",
+       "cost": 44
+      },
+      {
+       "level": 4,
+       "display": "11.0%",
+       "cost": 62
+      },
+      {
+       "level": 5,
+       "display": "12.5%",
+       "cost": 80
+      },
+      {
+       "level": 6,
+       "display": "14.0%",
+       "cost": 98
+      },
+      {
+       "level": 7,
+       "display": "15.5%",
+       "cost": 116
+      },
+      {
+       "level": 8,
+       "display": "17.0%",
+       "cost": 134
+      },
+      {
+       "level": 9,
+       "display": "18.5%",
+       "cost": 152
+      },
+      {
+       "level": 10,
+       "display": "20.0%",
+       "cost": 170
+      },
+      {
+       "level": 11,
+       "display": "21.5%",
+       "cost": 188
+      },
+      {
+       "level": 12,
+       "display": "23.0%",
+       "cost": 206
+      },
+      {
+       "level": 13,
+       "display": "24.5%",
+       "cost": 224
+      },
+      {
+       "level": 14,
+       "display": "26.0%",
+       "cost": 242
+      },
+      {
+       "level": 15,
+       "display": "27.5%",
+       "cost": 260
+      }
+     ]
+    },
+    {
+     "stat": "Chain Lightning + Smite",
+     "levels": [
+      {
+       "level": 0,
+       "display": "0.05%",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "0.10%",
+       "cost": 300
+      },
+      {
+       "level": 2,
+       "display": "0.15%",
+       "cost": 375
+      },
+      {
+       "level": 3,
+       "display": "0.20%",
+       "cost": 475
+      },
+      {
+       "level": 4,
+       "display": "0.25%",
+       "cost": 600
+      },
+      {
+       "level": 5,
+       "display": "0.30%",
+       "cost": 725
+      },
+      {
+       "level": 6,
+       "display": "0.35%",
+       "cost": 925
+      },
+      {
+       "level": 7,
+       "display": "0.40%",
+       "cost": 1150
+      },
+      {
+       "level": 8,
+       "display": "0.45%",
+       "cost": 1450
+      },
+      {
+       "level": 9,
+       "display": "0.50%",
+       "cost": 1800
+      },
+      {
+       "level": 10,
+       "display": "0.55%",
+       "cost": 2200
+      },
+      {
+       "level": 11,
+       "display": "0.60%",
+       "cost": 2650
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Smart Missiles",
+   "stats": [
+    {
+     "stat": "Smart Missiles Damage",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x10",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x11",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "x13",
+       "cost": 11
+      },
+      {
+       "level": 3,
+       "display": "x16",
+       "cost": 17
+      },
+      {
+       "level": 4,
+       "display": "x20",
+       "cost": 23
+      },
+      {
+       "level": 5,
+       "display": "x26",
+       "cost": 29
+      },
+      {
+       "level": 6,
+       "display": "x34",
+       "cost": 35
+      },
+      {
+       "level": 7,
+       "display": "x43",
+       "cost": 41
+      },
+      {
+       "level": 8,
+       "display": "x55",
+       "cost": 47
+      },
+      {
+       "level": 9,
+       "display": "x69",
+       "cost": 53
+      },
+      {
+       "level": 10,
+       "display": "x87",
+       "cost": 61
+      },
+      {
+       "level": 11,
+       "display": "x108",
+       "cost": 71
+      },
+      {
+       "level": 12,
+       "display": "x134",
+       "cost": 84
+      },
+      {
+       "level": 13,
+       "display": "x164",
+       "cost": 100
+      },
+      {
+       "level": 14,
+       "display": "x200",
+       "cost": 120
+      },
+      {
+       "level": 15,
+       "display": "x243",
+       "cost": 144
+      },
+      {
+       "level": 16,
+       "display": "x293",
+       "cost": 174
+      },
+      {
+       "level": 17,
+       "display": "x352",
+       "cost": 210
+      },
+      {
+       "level": 18,
+       "display": "x421",
+       "cost": 252
+      },
+      {
+       "level": 19,
+       "display": "x502",
+       "cost": 302
+      },
+      {
+       "level": 20,
+       "display": "x597",
+       "cost": 362
+      },
+      {
+       "level": 21,
+       "display": "x708",
+       "cost": 432
+      },
+      {
+       "level": 22,
+       "display": "x838",
+       "cost": 528
+      },
+      {
+       "level": 23,
+       "display": "x989",
+       "cost": 654
+      },
+      {
+       "level": 24,
+       "display": "x1,165",
+       "cost": 810
+      },
+      {
+       "level": 25,
+       "display": "x1,370",
+       "cost": 996
+      },
+      {
+       "level": 26,
+       "display": "x1,608",
+       "cost": 1222
+      },
+      {
+       "level": 27,
+       "display": "x1,886",
+       "cost": 1488
+      },
+      {
+       "level": 28,
+       "display": "x2,209",
+       "cost": 1804
+      },
+      {
+       "level": 29,
+       "display": "x2,585",
+       "cost": 2180
+      },
+      {
+       "level": 30,
+       "display": "x3,021",
+       "cost": 2636
+      },
+      {
+       "level": 31,
+       "display": "x3,776",
+       "cost": 2742
+      },
+      {
+       "level": 32,
+       "display": "x4,720",
+       "cost": 2848
+      },
+      {
+       "level": 33,
+       "display": "x5,900",
+       "cost": 2954
+      },
+      {
+       "level": 34,
+       "display": "x7,375",
+       "cost": 3060
+      },
+      {
+       "level": 35,
+       "display": "x9,219",
+       "cost": 3166
+      }
+     ]
+    },
+    {
+     "stat": "Quantity",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x5",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x6",
+       "cost": 4
+      },
+      {
+       "level": 2,
+       "display": "x7",
+       "cost": 12
+      },
+      {
+       "level": 3,
+       "display": "x8",
+       "cost": 35
+      },
+      {
+       "level": 4,
+       "display": "x9",
+       "cost": 70
+      },
+      {
+       "level": 5,
+       "display": "x10",
+       "cost": 120
+      },
+      {
+       "level": 6,
+       "display": "x11",
+       "cost": 180
+      },
+      {
+       "level": 7,
+       "display": "x12",
+       "cost": 275
+      },
+      {
+       "level": 8,
+       "display": "x13",
+       "cost": 350
+      },
+      {
+       "level": 9,
+       "display": "x14",
+       "cost": 420
+      },
+      {
+       "level": 10,
+       "display": "x15",
+       "cost": 500
+      },
+      {
+       "level": 11,
+       "display": "x16",
+       "cost": 600
+      },
+      {
+       "level": 12,
+       "display": "x17",
+       "cost": 750
+      },
+      {
+       "level": 13,
+       "display": "x18",
+       "cost": 950
+      },
+      {
+       "level": 14,
+       "display": "x19",
+       "cost": 1200
+      },
+      {
+       "level": 15,
+       "display": "x20",
+       "cost": 1500
+      }
+     ]
+    },
+    {
+     "stat": "Cooldown",
+     "levels": [
+      {
+       "level": 0,
+       "display": "180s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "170s",
+       "cost": 8
+      },
+      {
+       "level": 2,
+       "display": "160s",
+       "cost": 24
+      },
+      {
+       "level": 3,
+       "display": "150s",
+       "cost": 40
+      },
+      {
+       "level": 4,
+       "display": "140s",
+       "cost": 56
+      },
+      {
+       "level": 5,
+       "display": "130s",
+       "cost": 72
+      },
+      {
+       "level": 6,
+       "display": "120s",
+       "cost": 88
+      },
+      {
+       "level": 7,
+       "display": "110s",
+       "cost": 104
+      },
+      {
+       "level": 8,
+       "display": "100s",
+       "cost": 120
+      },
+      {
+       "level": 9,
+       "display": "90s",
+       "cost": 136
+      },
+      {
+       "level": 10,
+       "display": "80s",
+       "cost": 152
+      },
+      {
+       "level": 11,
+       "display": "70s",
+       "cost": 168
+      },
+      {
+       "level": 12,
+       "display": "60s",
+       "cost": 184
+      },
+      {
+       "level": 13,
+       "display": "50s",
+       "cost": 200
+      },
+      {
+       "level": 14,
+       "display": "40s",
+       "cost": 216
+      },
+      {
+       "level": 15,
+       "display": "30s",
+       "cost": 232
+      },
+      {
+       "level": 16,
+       "display": "20s",
+       "cost": 750
+      }
+     ]
+    },
+    {
+     "stat": "Smart Missiles + Cover Fire",
+     "levels": [
+      {
+       "level": 0,
+       "display": "13s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "12s",
+       "cost": 300
+      },
+      {
+       "level": 2,
+       "display": "11s",
+       "cost": 375
+      },
+      {
+       "level": 3,
+       "display": "10s",
+       "cost": 475
+      },
+      {
+       "level": 4,
+       "display": "9s",
+       "cost": 600
+      },
+      {
+       "level": 5,
+       "display": "8s",
+       "cost": 725
+      },
+      {
+       "level": 6,
+       "display": "7s",
+       "cost": 925
+      },
+      {
+       "level": 7,
+       "display": "6s",
+       "cost": 1150
+      },
+      {
+       "level": 8,
+       "display": "5s",
+       "cost": 1450
+      },
+      {
+       "level": 9,
+       "display": "4s",
+       "cost": 1800
+      },
+      {
+       "level": 10,
+       "display": "3s",
+       "cost": 2200
+      },
+      {
+       "level": 11,
+       "display": "2s",
+       "cost": 2650
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DEATH WAVE",
+   "stats": [
+    {
+     "stat": "Death Wave Damage",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x2",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x3",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "x5",
+       "cost": 11
+      },
+      {
+       "level": 3,
+       "display": "x9",
+       "cost": 17
+      },
+      {
+       "level": 4,
+       "display": "x14",
+       "cost": 23
+      },
+      {
+       "level": 5,
+       "display": "x22",
+       "cost": 29
+      },
+      {
+       "level": 6,
+       "display": "x32",
+       "cost": 35
+      },
+      {
+       "level": 7,
+       "display": "x46",
+       "cost": 41
+      },
+      {
+       "level": 8,
+       "display": "x63",
+       "cost": 47
+      },
+      {
+       "level": 9,
+       "display": "x85",
+       "cost": 53
+      },
+      {
+       "level": 10,
+       "display": "x113",
+       "cost": 61
+      },
+      {
+       "level": 11,
+       "display": "x148",
+       "cost": 71
+      },
+      {
+       "level": 12,
+       "display": "x191",
+       "cost": 84
+      },
+      {
+       "level": 13,
+       "display": "x244",
+       "cost": 100
+      },
+      {
+       "level": 14,
+       "display": "x309",
+       "cost": 120
+      },
+      {
+       "level": 15,
+       "display": "x387",
+       "cost": 144
+      },
+      {
+       "level": 16,
+       "display": "x482",
+       "cost": 174
+      },
+      {
+       "level": 17,
+       "display": "x596",
+       "cost": 210
+      },
+      {
+       "level": 18,
+       "display": "x723",
+       "cost": 254
+      },
+      {
+       "level": 19,
+       "display": "x877",
+       "cost": 308
+      },
+      {
+       "level": 20,
+       "display": "x1,064",
+       "cost": 374
+      },
+      {
+       "level": 21,
+       "display": "x1,290",
+       "cost": 452
+      },
+      {
+       "level": 22,
+       "display": "x1,569",
+       "cost": 558
+      },
+      {
+       "level": 23,
+       "display": "x1,916",
+       "cost": 694
+      },
+      {
+       "level": 24,
+       "display": "x2,356",
+       "cost": 880
+      },
+      {
+       "level": 25,
+       "display": "x2,919",
+       "cost": 1126
+      },
+      {
+       "level": 26,
+       "display": "x3,637",
+       "cost": 1432
+      },
+      {
+       "level": 27,
+       "display": "x4,544",
+       "cost": 1813
+      },
+      {
+       "level": 28,
+       "display": "x5,678",
+       "cost": 2269
+      },
+      {
+       "level": 29,
+       "display": "x7,078",
+       "cost": 2800
+      },
+      {
+       "level": 30,
+       "display": "x9,119",
+       "cost": 3406
+      }
+     ]
+    },
+    {
+     "stat": "Quantity",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x1",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x2",
+       "cost": 200
+      },
+      {
+       "level": 2,
+       "display": "x3",
+       "cost": 500
+      },
+      {
+       "level": 3,
+       "display": "x4",
+       "cost": 850
+      },
+      {
+       "level": 4,
+       "display": "x5",
+       "cost": 1400
+      }
+     ]
+    },
+    {
+     "stat": "Cooldown",
+     "levels": [
+      {
+       "level": 0,
+       "display": "300s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "290s",
+       "cost": 8
+      },
+      {
+       "level": 2,
+       "display": "280s",
+       "cost": 24
+      },
+      {
+       "level": 3,
+       "display": "270s",
+       "cost": 40
+      },
+      {
+       "level": 4,
+       "display": "260s",
+       "cost": 56
+      },
+      {
+       "level": 5,
+       "display": "250s",
+       "cost": 72
+      },
+      {
+       "level": 6,
+       "display": "240s",
+       "cost": 88
+      },
+      {
+       "level": 7,
+       "display": "230s",
+       "cost": 104
+      },
+      {
+       "level": 8,
+       "display": "220s",
+       "cost": 120
+      },
+      {
+       "level": 9,
+       "display": "210s",
+       "cost": 136
+      },
+      {
+       "level": 10,
+       "display": "200s",
+       "cost": 152
+      },
+      {
+       "level": 11,
+       "display": "190s",
+       "cost": 168
+      },
+      {
+       "level": 12,
+       "display": "180s",
+       "cost": 184
+      },
+      {
+       "level": 13,
+       "display": "170s",
+       "cost": 200
+      },
+      {
+       "level": 14,
+       "display": "160s",
+       "cost": 216
+      },
+      {
+       "level": 15,
+       "display": "150s",
+       "cost": 232
+      },
+      {
+       "level": 16,
+       "display": "140s",
+       "cost": 248
+      },
+      {
+       "level": 17,
+       "display": "130s",
+       "cost": 264
+      },
+      {
+       "level": 18,
+       "display": "120s",
+       "cost": 280
+      },
+      {
+       "level": 19,
+       "display": "110s",
+       "cost": 346
+      },
+      {
+       "level": 20,
+       "display": "100s",
+       "cost": 512
+      },
+      {
+       "level": 21,
+       "display": "90s",
+       "cost": 688
+      },
+      {
+       "level": 22,
+       "display": "80s",
+       "cost": 874
+      },
+      {
+       "level": 23,
+       "display": "70s",
+       "cost": 1070
+      },
+      {
+       "level": 24,
+       "display": "60s",
+       "cost": 1276
+      },
+      {
+       "level": 25,
+       "display": "50s",
+       "cost": 1492
+      }
+     ]
+    },
+    {
+     "stat": "Death Wave + Kill Wall",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x3",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x4",
+       "cost": 400
+      },
+      {
+       "level": 2,
+       "display": "x6",
+       "cost": 500
+      },
+      {
+       "level": 3,
+       "display": "x9",
+       "cost": 610
+      },
+      {
+       "level": 4,
+       "display": "x13",
+       "cost": 730
+      },
+      {
+       "level": 5,
+       "display": "x18",
+       "cost": 860
+      },
+      {
+       "level": 6,
+       "display": "x24",
+       "cost": 1000
+      },
+      {
+       "level": 7,
+       "display": "x31",
+       "cost": 1150
+      },
+      {
+       "level": 8,
+       "display": "x39",
+       "cost": 1300
+      },
+      {
+       "level": 9,
+       "display": "x48",
+       "cost": 1500
+      },
+      {
+       "level": 10,
+       "display": "x58",
+       "cost": 1700
+      },
+      {
+       "level": 11,
+       "display": "x69",
+       "cost": 1950
+      },
+      {
+       "level": 12,
+       "display": "x81",
+       "cost": 2200
+      },
+      {
+       "level": 13,
+       "display": "x94",
+       "cost": 2450
+      },
+      {
+       "level": 14,
+       "display": "x108",
+       "cost": 2700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Chrono Field",
+   "stats": [
+    {
+     "stat": "Chrono Field Duration",
+     "levels": [
+      {
+       "level": 0,
+       "display": "5s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "6s",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "7s",
+       "cost": 14
+      },
+      {
+       "level": 3,
+       "display": "8s",
+       "cost": 23
+      },
+      {
+       "level": 4,
+       "display": "9s",
+       "cost": 32
+      },
+      {
+       "level": 5,
+       "display": "10s",
+       "cost": 41
+      },
+      {
+       "level": 6,
+       "display": "11s",
+       "cost": 50
+      },
+      {
+       "level": 7,
+       "display": "12s",
+       "cost": 59
+      },
+      {
+       "level": 8,
+       "display": "13s",
+       "cost": 68
+      },
+      {
+       "level": 9,
+       "display": "14s",
+       "cost": 77
+      },
+      {
+       "level": 10,
+       "display": "15s",
+       "cost": 86
+      },
+      {
+       "level": 11,
+       "display": "16s",
+       "cost": 95
+      },
+      {
+       "level": 12,
+       "display": "17s",
+       "cost": 104
+      },
+      {
+       "level": 13,
+       "display": "18s",
+       "cost": 113
+      },
+      {
+       "level": 14,
+       "display": "19s",
+       "cost": 122
+      },
+      {
+       "level": 15,
+       "display": "20s",
+       "cost": 131
+      },
+      {
+       "level": 16,
+       "display": "21s",
+       "cost": 140
+      },
+      {
+       "level": 17,
+       "display": "22s",
+       "cost": 149
+      },
+      {
+       "level": 18,
+       "display": "23s",
+       "cost": 158
+      },
+      {
+       "level": 19,
+       "display": "24s",
+       "cost": 167
+      },
+      {
+       "level": 20,
+       "display": "25s",
+       "cost": 176
+      },
+      {
+       "level": 21,
+       "display": "26s",
+       "cost": 185
+      },
+      {
+       "level": 22,
+       "display": "27s",
+       "cost": 194
+      },
+      {
+       "level": 23,
+       "display": "28s",
+       "cost": 203
+      },
+      {
+       "level": 24,
+       "display": "29s",
+       "cost": 212
+      },
+      {
+       "level": 25,
+       "display": "30s",
+       "cost": 221
+      },
+      {
+       "level": 26,
+       "display": "31s",
+       "cost": 230
+      },
+      {
+       "level": 27,
+       "display": "32s",
+       "cost": 239
+      },
+      {
+       "level": 28,
+       "display": "33s",
+       "cost": 248
+      },
+      {
+       "level": 29,
+       "display": "34s",
+       "cost": 257
+      },
+      {
+       "level": 30,
+       "display": "35s",
+       "cost": 266
+      },
+      {
+       "level": 31,
+       "display": "36s",
+       "cost": 275
+      },
+      {
+       "level": 32,
+       "display": "37s",
+       "cost": 284
+      },
+      {
+       "level": 33,
+       "display": "38s",
+       "cost": 293
+      },
+      {
+       "level": 34,
+       "display": "39s",
+       "cost": 302
+      },
+      {
+       "level": 35,
+       "display": "40s",
+       "cost": 311
+      }
+     ]
+    },
+    {
+     "stat": "Speed Reduction",
+     "levels": [
+      {
+       "level": 0,
+       "display": "20%",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "25%",
+       "cost": 15
+      },
+      {
+       "level": 2,
+       "display": "30%",
+       "cost": 25
+      },
+      {
+       "level": 3,
+       "display": "35%",
+       "cost": 40
+      },
+      {
+       "level": 4,
+       "display": "40%",
+       "cost": 60
+      },
+      {
+       "level": 5,
+       "display": "45%",
+       "cost": 120
+      },
+      {
+       "level": 6,
+       "display": "50%",
+       "cost": 150
+      },
+      {
+       "level": 7,
+       "display": "55%",
+       "cost": 200
+      },
+      {
+       "level": 8,
+       "display": "60%",
+       "cost": 300
+      },
+      {
+       "level": 9,
+       "display": "65%",
+       "cost": 450
+      },
+      {
+       "level": 10,
+       "display": "70%",
+       "cost": 650
+      },
+      {
+       "level": 11,
+       "display": "75%",
+       "cost": 900
+      }
+     ]
+    },
+    {
+     "stat": "Cooldown",
+     "levels": [
+      {
+       "level": 0,
+       "display": "180s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "170s",
+       "cost": 10
+      },
+      {
+       "level": 2,
+       "display": "160s",
+       "cost": 31
+      },
+      {
+       "level": 3,
+       "display": "150s",
+       "cost": 52
+      },
+      {
+       "level": 4,
+       "display": "140s",
+       "cost": 73
+      },
+      {
+       "level": 5,
+       "display": "130s",
+       "cost": 94
+      },
+      {
+       "level": 6,
+       "display": "120s",
+       "cost": 115
+      },
+      {
+       "level": 7,
+       "display": "110s",
+       "cost": 136
+      },
+      {
+       "level": 8,
+       "display": "100s",
+       "cost": 157
+      },
+      {
+       "level": 9,
+       "display": "90s",
+       "cost": 178
+      },
+      {
+       "level": 10,
+       "display": "80s",
+       "cost": 199
+      },
+      {
+       "level": 11,
+       "display": "70s",
+       "cost": 220
+      },
+      {
+       "level": 12,
+       "display": "60s",
+       "cost": 241
+      }
+     ]
+    },
+    {
+     "stat": "Chrono Field + Chrono Loop",
+     "levels": [
+      {
+       "level": 0,
+       "display": "10%",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "15%",
+       "cost": 400
+      },
+      {
+       "level": 2,
+       "display": "20%",
+       "cost": 500
+      },
+      {
+       "level": 3,
+       "display": "25%",
+       "cost": 610
+      },
+      {
+       "level": 4,
+       "display": "30%",
+       "cost": 730
+      },
+      {
+       "level": 5,
+       "display": "35%",
+       "cost": 860
+      },
+      {
+       "level": 6,
+       "display": "40%",
+       "cost": 1000
+      },
+      {
+       "level": 7,
+       "display": "45%",
+       "cost": 1150
+      },
+      {
+       "level": 8,
+       "display": "50%",
+       "cost": 1300
+      },
+      {
+       "level": 9,
+       "display": "55%",
+       "cost": 1500
+      },
+      {
+       "level": 10,
+       "display": "60%",
+       "cost": 1700
+      },
+      {
+       "level": 11,
+       "display": "65%",
+       "cost": 1950
+      },
+      {
+       "level": 12,
+       "display": "70%",
+       "cost": 2200
+      },
+      {
+       "level": 13,
+       "display": "75%",
+       "cost": 2450
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "INNER LAND MINES",
+   "stats": [
+    {
+     "stat": "Inner Land Mines Damage",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x10",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x11",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "x13",
+       "cost": 11
+      },
+      {
+       "level": 3,
+       "display": "x16",
+       "cost": 17
+      },
+      {
+       "level": 4,
+       "display": "x20",
+       "cost": 23
+      },
+      {
+       "level": 5,
+       "display": "x26",
+       "cost": 29
+      },
+      {
+       "level": 6,
+       "display": "x34",
+       "cost": 35
+      },
+      {
+       "level": 7,
+       "display": "x43",
+       "cost": 41
+      },
+      {
+       "level": 8,
+       "display": "x55",
+       "cost": 47
+      },
+      {
+       "level": 9,
+       "display": "x69",
+       "cost": 53
+      },
+      {
+       "level": 10,
+       "display": "x87",
+       "cost": 61
+      },
+      {
+       "level": 11,
+       "display": "x108",
+       "cost": 71
+      },
+      {
+       "level": 12,
+       "display": "x134",
+       "cost": 84
+      },
+      {
+       "level": 13,
+       "display": "x164",
+       "cost": 100
+      },
+      {
+       "level": 14,
+       "display": "x200",
+       "cost": 120
+      },
+      {
+       "level": 15,
+       "display": "x243",
+       "cost": 144
+      },
+      {
+       "level": 16,
+       "display": "x293",
+       "cost": 174
+      },
+      {
+       "level": 17,
+       "display": "x352",
+       "cost": 210
+      },
+      {
+       "level": 18,
+       "display": "x421",
+       "cost": 254
+      },
+      {
+       "level": 19,
+       "display": "x502",
+       "cost": 308
+      },
+      {
+       "level": 20,
+       "display": "x597",
+       "cost": 374
+      },
+      {
+       "level": 21,
+       "display": "x708",
+       "cost": 454
+      },
+      {
+       "level": 22,
+       "display": "x838",
+       "cost": 540
+      },
+      {
+       "level": 23,
+       "display": "x989",
+       "cost": 632
+      },
+      {
+       "level": 24,
+       "display": "x1,165",
+       "cost": 730
+      },
+      {
+       "level": 25,
+       "display": "x1,370",
+       "cost": 834
+      },
+      {
+       "level": 26,
+       "display": "x1,608",
+       "cost": 944
+      },
+      {
+       "level": 27,
+       "display": "x1,886",
+       "cost": 1060
+      },
+      {
+       "level": 28,
+       "display": "x2,209",
+       "cost": 1182
+      },
+      {
+       "level": 29,
+       "display": "x2,585",
+       "cost": 1312
+      },
+      {
+       "level": 30,
+       "display": "x3,021",
+       "cost": 1448
+      },
+      {
+       "level": 31,
+       "display": "x3,776",
+       "cost": 1592
+      },
+      {
+       "level": 32,
+       "display": "x4,720",
+       "cost": 1742
+      },
+      {
+       "level": 33,
+       "display": "x5,900",
+       "cost": 1898
+      },
+      {
+       "level": 34,
+       "display": "x7,375",
+       "cost": 2060
+      },
+      {
+       "level": 35,
+       "display": "x9,219",
+       "cost": 2228
+      }
+     ]
+    },
+    {
+     "stat": "Quantity",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x3",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x4",
+       "cost": 50
+      },
+      {
+       "level": 2,
+       "display": "x5",
+       "cost": 125
+      },
+      {
+       "level": 3,
+       "display": "x6",
+       "cost": 250
+      }
+     ]
+    },
+    {
+     "stat": "Cooldown",
+     "levels": [
+      {
+       "level": 0,
+       "display": "200s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "190s",
+       "cost": 8
+      },
+      {
+       "level": 2,
+       "display": "180s",
+       "cost": 24
+      },
+      {
+       "level": 3,
+       "display": "170s",
+       "cost": 40
+      },
+      {
+       "level": 4,
+       "display": "160s",
+       "cost": 56
+      },
+      {
+       "level": 5,
+       "display": "150s",
+       "cost": 72
+      },
+      {
+       "level": 6,
+       "display": "140s",
+       "cost": 88
+      },
+      {
+       "level": 7,
+       "display": "130s",
+       "cost": 104
+      },
+      {
+       "level": 8,
+       "display": "120s",
+       "cost": 120
+      },
+      {
+       "level": 9,
+       "display": "110s",
+       "cost": 136
+      },
+      {
+       "level": 10,
+       "display": "100s",
+       "cost": 152
+      },
+      {
+       "level": 11,
+       "display": "90s",
+       "cost": 168
+      },
+      {
+       "level": 12,
+       "display": "80s",
+       "cost": 184
+      },
+      {
+       "level": 13,
+       "display": "70s",
+       "cost": 200
+      },
+      {
+       "level": 14,
+       "display": "60s",
+       "cost": 216
+      },
+      {
+       "level": 15,
+       "display": "50s",
+       "cost": 232
+      }
+     ]
+    },
+    {
+     "stat": "Inner Land Mines + Charged Mines",
+     "levels": [
+      {
+       "level": 0,
+       "display": "0.50/s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "1.50/s",
+       "cost": 300
+      },
+      {
+       "level": 2,
+       "display": "2.90/s",
+       "cost": 360
+      },
+      {
+       "level": 3,
+       "display": "4.70/s",
+       "cost": 430
+      },
+      {
+       "level": 4,
+       "display": "6.90/s",
+       "cost": 510
+      },
+      {
+       "level": 5,
+       "display": "9.50/s",
+       "cost": 620
+      },
+      {
+       "level": 6,
+       "display": "12.50/s",
+       "cost": 750
+      },
+      {
+       "level": 7,
+       "display": "15.90/s",
+       "cost": 900
+      },
+      {
+       "level": 8,
+       "display": "19.70/s",
+       "cost": 1100
+      },
+      {
+       "level": 9,
+       "display": "23.90/s",
+       "cost": 1350
+      },
+      {
+       "level": 10,
+       "display": "28.50/s",
+       "cost": 1650
+      },
+      {
+       "level": 11,
+       "display": "33.50/s",
+       "cost": 2000
+      },
+      {
+       "level": 12,
+       "display": "38.90/s",
+       "cost": 2400
+      },
+      {
+       "level": 13,
+       "display": "44.70/s",
+       "cost": 2850
+      },
+      {
+       "level": 14,
+       "display": "50.90/s",
+       "cost": 3350
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "GOLDEN TOWER",
+   "stats": [
+    {
+     "stat": "Golden Tower Multiplier",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x5.0",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x5.8",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "x6.6",
+       "cost": 13
+      },
+      {
+       "level": 3,
+       "display": "x7.4",
+       "cost": 22
+      },
+      {
+       "level": 4,
+       "display": "x8.2",
+       "cost": 32
+      },
+      {
+       "level": 5,
+       "display": "x9.0",
+       "cost": 43
+      },
+      {
+       "level": 6,
+       "display": "x9.8",
+       "cost": 55
+      },
+      {
+       "level": 7,
+       "display": "x10.6",
+       "cost": 68
+      },
+      {
+       "level": 8,
+       "display": "x11.4",
+       "cost": 82
+      },
+      {
+       "level": 9,
+       "display": "x12.2",
+       "cost": 98
+      },
+      {
+       "level": 10,
+       "display": "x13.0",
+       "cost": 116
+      },
+      {
+       "level": 11,
+       "display": "x13.8",
+       "cost": 138
+      },
+      {
+       "level": 12,
+       "display": "x14.6",
+       "cost": 162
+      },
+      {
+       "level": 13,
+       "display": "x15.4",
+       "cost": 250
+      },
+      {
+       "level": 14,
+       "display": "x16.2",
+       "cost": 350
+      },
+      {
+       "level": 15,
+       "display": "x17.0",
+       "cost": 500
+      },
+      {
+       "level": 16,
+       "display": "x17.8",
+       "cost": 700
+      },
+      {
+       "level": 17,
+       "display": "x18.6",
+       "cost": 950
+      },
+      {
+       "level": 18,
+       "display": "x19.4",
+       "cost": 1250
+      },
+      {
+       "level": 19,
+       "display": "x20.2",
+       "cost": 1600
+      },
+      {
+       "level": 20,
+       "display": "x21.0",
+       "cost": 2000
+      }
+     ]
+    },
+    {
+     "stat": "Duration",
+     "levels": [
+      {
+       "level": 0,
+       "display": "15s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "16s",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "17s",
+       "cost": 14
+      },
+      {
+       "level": 3,
+       "display": "18s",
+       "cost": 23
+      },
+      {
+       "level": 4,
+       "display": "19s",
+       "cost": 32
+      },
+      {
+       "level": 5,
+       "display": "20s",
+       "cost": 41
+      },
+      {
+       "level": 6,
+       "display": "21s",
+       "cost": 50
+      },
+      {
+       "level": 7,
+       "display": "22s",
+       "cost": 59
+      },
+      {
+       "level": 8,
+       "display": "23s",
+       "cost": 68
+      },
+      {
+       "level": 9,
+       "display": "24s",
+       "cost": 77
+      },
+      {
+       "level": 10,
+       "display": "25s",
+       "cost": 87
+      },
+      {
+       "level": 11,
+       "display": "26s",
+       "cost": 98
+      },
+      {
+       "level": 12,
+       "display": "27s",
+       "cost": 110
+      },
+      {
+       "level": 13,
+       "display": "28s",
+       "cost": 123
+      },
+      {
+       "level": 14,
+       "display": "29s",
+       "cost": 137
+      },
+      {
+       "level": 15,
+       "display": "30s",
+       "cost": 152
+      },
+      {
+       "level": 16,
+       "display": "31s",
+       "cost": 168
+      },
+      {
+       "level": 17,
+       "display": "32s",
+       "cost": 185
+      },
+      {
+       "level": 18,
+       "display": "33s",
+       "cost": 203
+      },
+      {
+       "level": 19,
+       "display": "34s",
+       "cost": 222
+      },
+      {
+       "level": 20,
+       "display": "35s",
+       "cost": 242
+      },
+      {
+       "level": 21,
+       "display": "36s",
+       "cost": 263
+      },
+      {
+       "level": 22,
+       "display": "37s",
+       "cost": 285
+      },
+      {
+       "level": 23,
+       "display": "38s",
+       "cost": 308
+      },
+      {
+       "level": 24,
+       "display": "39s",
+       "cost": 332
+      },
+      {
+       "level": 25,
+       "display": "40s",
+       "cost": 356
+      },
+      {
+       "level": 26,
+       "display": "41s",
+       "cost": 380
+      },
+      {
+       "level": 27,
+       "display": "42s",
+       "cost": 404
+      },
+      {
+       "level": 28,
+       "display": "43s",
+       "cost": 428
+      },
+      {
+       "level": 29,
+       "display": "44s",
+       "cost": 452
+      },
+      {
+       "level": 30,
+       "display": "45s",
+       "cost": 476
+      },
+      {
+       "level": 31,
+       "display": "46s",
+       "cost": 530
+      },
+      {
+       "level": 32,
+       "display": "47s",
+       "cost": 614
+      },
+      {
+       "level": 33,
+       "display": "48s",
+       "cost": 728
+      },
+      {
+       "level": 34,
+       "display": "49s",
+       "cost": 872
+      },
+      {
+       "level": 35,
+       "display": "50s",
+       "cost": 1046
+      },
+      {
+       "level": 36,
+       "display": "51s",
+       "cost": 1250
+      },
+      {
+       "level": 37,
+       "display": "52s",
+       "cost": 1484
+      },
+      {
+       "level": 38,
+       "display": "53s",
+       "cost": 1748
+      }
+     ]
+    },
+    {
+     "stat": "Cooldown",
+     "levels": [
+      {
+       "level": 0,
+       "display": "300s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "290s",
+       "cost": 10
+      },
+      {
+       "level": 2,
+       "display": "280s",
+       "cost": 28
+      },
+      {
+       "level": 3,
+       "display": "270s",
+       "cost": 46
+      },
+      {
+       "level": 4,
+       "display": "260s",
+       "cost": 64
+      },
+      {
+       "level": 5,
+       "display": "250s",
+       "cost": 82
+      },
+      {
+       "level": 6,
+       "display": "240s",
+       "cost": 100
+      },
+      {
+       "level": 7,
+       "display": "230s",
+       "cost": 118
+      },
+      {
+       "level": 8,
+       "display": "220s",
+       "cost": 136
+      },
+      {
+       "level": 9,
+       "display": "210s",
+       "cost": 154
+      },
+      {
+       "level": 10,
+       "display": "200s",
+       "cost": 172
+      },
+      {
+       "level": 11,
+       "display": "190s",
+       "cost": 190
+      },
+      {
+       "level": 12,
+       "display": "180s",
+       "cost": 208
+      },
+      {
+       "level": 13,
+       "display": "170s",
+       "cost": 226
+      },
+      {
+       "level": 14,
+       "display": "160s",
+       "cost": 244
+      },
+      {
+       "level": 15,
+       "display": "150s",
+       "cost": 262
+      },
+      {
+       "level": 16,
+       "display": "140s",
+       "cost": 300
+      },
+      {
+       "level": 17,
+       "display": "130s",
+       "cost": 368
+      },
+      {
+       "level": 18,
+       "display": "120s",
+       "cost": 476
+      },
+      {
+       "level": 19,
+       "display": "110s",
+       "cost": 644
+      },
+      {
+       "level": 20,
+       "display": "100s",
+       "cost": 872
+      }
+     ]
+    },
+    {
+     "stat": "Golden Tower + Golden Combo",
+     "levels": [
+      {
+       "level": 0,
+       "display": "0.03%",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "0.06%",
+       "cost": 300
+      },
+      {
+       "level": 2,
+       "display": "0.09%",
+       "cost": 360
+      },
+      {
+       "level": 3,
+       "display": "0.12%",
+       "cost": 430
+      },
+      {
+       "level": 4,
+       "display": "0.15%",
+       "cost": 510
+      },
+      {
+       "level": 5,
+       "display": "0.18%",
+       "cost": 620
+      },
+      {
+       "level": 6,
+       "display": "0.21%",
+       "cost": 750
+      },
+      {
+       "level": 7,
+       "display": "0.24%",
+       "cost": 900
+      },
+      {
+       "level": 8,
+       "display": "0.27%",
+       "cost": 1100
+      },
+      {
+       "level": 9,
+       "display": "0.30%",
+       "cost": 1350
+      },
+      {
+       "level": 10,
+       "display": "0.33%",
+       "cost": 1650
+      },
+      {
+       "level": 11,
+       "display": "0.36%",
+       "cost": 2050
+      },
+      {
+       "level": 12,
+       "display": "0.39%",
+       "cost": 2600
+      },
+      {
+       "level": 13,
+       "display": "0.42%",
+       "cost": 3300
+      },
+      {
+       "level": 14,
+       "display": "0.45%",
+       "cost": 4150
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "POISON SWAMP",
+   "stats": [
+    {
+     "stat": "Poison Swamp Damage",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x10",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x11",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "x13",
+       "cost": 11
+      },
+      {
+       "level": 3,
+       "display": "x16",
+       "cost": 17
+      },
+      {
+       "level": 4,
+       "display": "x20",
+       "cost": 23
+      },
+      {
+       "level": 5,
+       "display": "x26",
+       "cost": 29
+      },
+      {
+       "level": 6,
+       "display": "x34",
+       "cost": 35
+      },
+      {
+       "level": 7,
+       "display": "x43",
+       "cost": 41
+      },
+      {
+       "level": 8,
+       "display": "x55",
+       "cost": 47
+      },
+      {
+       "level": 9,
+       "display": "x69",
+       "cost": 53
+      },
+      {
+       "level": 10,
+       "display": "x87",
+       "cost": 61
+      },
+      {
+       "level": 11,
+       "display": "x108",
+       "cost": 71
+      },
+      {
+       "level": 12,
+       "display": "x134",
+       "cost": 84
+      },
+      {
+       "level": 13,
+       "display": "x164",
+       "cost": 100
+      },
+      {
+       "level": 14,
+       "display": "x200",
+       "cost": 120
+      },
+      {
+       "level": 15,
+       "display": "x243",
+       "cost": 144
+      },
+      {
+       "level": 16,
+       "display": "x293",
+       "cost": 174
+      },
+      {
+       "level": 17,
+       "display": "x352",
+       "cost": 210
+      },
+      {
+       "level": 18,
+       "display": "x421",
+       "cost": 252
+      },
+      {
+       "level": 19,
+       "display": "x502",
+       "cost": 302
+      },
+      {
+       "level": 20,
+       "display": "x597",
+       "cost": 362
+      },
+      {
+       "level": 21,
+       "display": "x708",
+       "cost": 434
+      },
+      {
+       "level": 22,
+       "display": "x838",
+       "cost": 525
+      },
+      {
+       "level": 23,
+       "display": "x989",
+       "cost": 636
+      },
+      {
+       "level": 24,
+       "display": "x1,165",
+       "cost": 772
+      },
+      {
+       "level": 25,
+       "display": "x1,370",
+       "cost": 938
+      },
+      {
+       "level": 26,
+       "display": "x1,608",
+       "cost": 1134
+      },
+      {
+       "level": 27,
+       "display": "x1,886",
+       "cost": 1360
+      },
+      {
+       "level": 28,
+       "display": "x2,209",
+       "cost": 1616
+      },
+      {
+       "level": 29,
+       "display": "x2,585",
+       "cost": 1902
+      },
+      {
+       "level": 30,
+       "display": "x3,021",
+       "cost": 2228
+      },
+      {
+       "level": 31,
+       "display": "x3,776",
+       "cost": 2594
+      },
+      {
+       "level": 32,
+       "display": "x4,720",
+       "cost": 2800
+      },
+      {
+       "level": 33,
+       "display": "x5,900",
+       "cost": 3006
+      },
+      {
+       "level": 34,
+       "display": "x7,375",
+       "cost": 3212
+      },
+      {
+       "level": 35,
+       "display": "x9,219",
+       "cost": 3418
+      }
+     ]
+    },
+    {
+     "stat": "Duration",
+     "levels": [
+      {
+       "level": 0,
+       "display": "30s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "35s",
+       "cost": 10
+      },
+      {
+       "level": 2,
+       "display": "40s",
+       "cost": 20
+      },
+      {
+       "level": 3,
+       "display": "45s",
+       "cost": 35
+      },
+      {
+       "level": 4,
+       "display": "50s",
+       "cost": 55
+      },
+      {
+       "level": 5,
+       "display": "55s",
+       "cost": 100
+      },
+      {
+       "level": 6,
+       "display": "60s",
+       "cost": 120
+      },
+      {
+       "level": 7,
+       "display": "65s",
+       "cost": 150
+      },
+      {
+       "level": 8,
+       "display": "70s",
+       "cost": 200
+      },
+      {
+       "level": 9,
+       "display": "75s",
+       "cost": 260
+      },
+      {
+       "level": 10,
+       "display": "80s",
+       "cost": 330
+      },
+      {
+       "level": 11,
+       "display": "85s",
+       "cost": 410
+      },
+      {
+       "level": 12,
+       "display": "90s",
+       "cost": 500
+      },
+      {
+       "level": 13,
+       "display": "95s",
+       "cost": 600
+      },
+      {
+       "level": 14,
+       "display": "100s",
+       "cost": 710
+      }
+     ]
+    },
+    {
+     "stat": "Cooldown",
+     "levels": [
+      {
+       "level": 0,
+       "display": "125s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "120s",
+       "cost": 8
+      },
+      {
+       "level": 2,
+       "display": "115s",
+       "cost": 26
+      },
+      {
+       "level": 3,
+       "display": "110s",
+       "cost": 44
+      },
+      {
+       "level": 4,
+       "display": "105s",
+       "cost": 62
+      },
+      {
+       "level": 5,
+       "display": "100s",
+       "cost": 80
+      },
+      {
+       "level": 6,
+       "display": "95s",
+       "cost": 98
+      },
+      {
+       "level": 7,
+       "display": "90s",
+       "cost": 116
+      },
+      {
+       "level": 8,
+       "display": "85s",
+       "cost": 134
+      },
+      {
+       "level": 9,
+       "display": "80s",
+       "cost": 152
+      },
+      {
+       "level": 10,
+       "display": "75s",
+       "cost": 170
+      },
+      {
+       "level": 11,
+       "display": "70s",
+       "cost": 188
+      },
+      {
+       "level": 12,
+       "display": "65s",
+       "cost": 206
+      },
+      {
+       "level": 13,
+       "display": "60s",
+       "cost": 224
+      },
+      {
+       "level": 14,
+       "display": "55s",
+       "cost": 242
+      },
+      {
+       "level": 15,
+       "display": "50s",
+       "cost": 260
+      }
+     ]
+    },
+    {
+     "stat": "Poison Swamp + Death Creep",
+     "levels": [
+      {
+       "level": 0,
+       "display": "120%",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "190%",
+       "cost": 300
+      },
+      {
+       "level": 2,
+       "display": "260%",
+       "cost": 375
+      },
+      {
+       "level": 3,
+       "display": "330%",
+       "cost": 475
+      },
+      {
+       "level": 4,
+       "display": "400%",
+       "cost": 600
+      },
+      {
+       "level": 5,
+       "display": "470%",
+       "cost": 725
+      },
+      {
+       "level": 6,
+       "display": "540%",
+       "cost": 925
+      },
+      {
+       "level": 7,
+       "display": "610%",
+       "cost": 1150
+      },
+      {
+       "level": 8,
+       "display": "680%",
+       "cost": 1450
+      },
+      {
+       "level": 9,
+       "display": "750%",
+       "cost": 1800
+      },
+      {
+       "level": 10,
+       "display": "820%",
+       "cost": 2200
+      },
+      {
+       "level": 11,
+       "display": "890%",
+       "cost": 2650
+      },
+      {
+       "level": 12,
+       "display": "960%",
+       "cost": 3150
+      },
+      {
+       "level": 13,
+       "display": "1030%",
+       "cost": 3700
+      },
+      {
+       "level": 14,
+       "display": "1110%",
+       "cost": 4300
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "BLACK HOLE",
+   "stats": [
+    {
+     "stat": "Black Hole Size",
+     "levels": [
+      {
+       "level": 0,
+       "display": "30m",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "32m",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "34m",
+       "cost": 12
+      },
+      {
+       "level": 3,
+       "display": "36m",
+       "cost": 19
+      },
+      {
+       "level": 4,
+       "display": "38m",
+       "cost": 26
+      },
+      {
+       "level": 5,
+       "display": "40m",
+       "cost": 34
+      },
+      {
+       "level": 6,
+       "display": "42m",
+       "cost": 43
+      },
+      {
+       "level": 7,
+       "display": "44m",
+       "cost": 53
+      },
+      {
+       "level": 8,
+       "display": "46m",
+       "cost": 64
+      },
+      {
+       "level": 9,
+       "display": "48m",
+       "cost": 76
+      },
+      {
+       "level": 10,
+       "display": "50m",
+       "cost": 89
+      },
+      {
+       "level": 11,
+       "display": "52m",
+       "cost": 103
+      },
+      {
+       "level": 12,
+       "display": "54m",
+       "cost": 118
+      },
+      {
+       "level": 13,
+       "display": "56m",
+       "cost": 134
+      },
+      {
+       "level": 14,
+       "display": "58m",
+       "cost": 151
+      },
+      {
+       "level": 15,
+       "display": "60m",
+       "cost": 169
+      },
+      {
+       "level": 16,
+       "display": "62m",
+       "cost": 189
+      },
+      {
+       "level": 17,
+       "display": "64m",
+       "cost": 211
+      },
+      {
+       "level": 18,
+       "display": "66m",
+       "cost": 236
+      },
+      {
+       "level": 19,
+       "display": "68m",
+       "cost": 264
+      },
+      {
+       "level": 20,
+       "display": "70m",
+       "cost": 295
+      }
+     ]
+    },
+    {
+     "stat": "Duration",
+     "levels": [
+      {
+       "level": 0,
+       "display": "15s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "16s",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "17s",
+       "cost": 14
+      },
+      {
+       "level": 3,
+       "display": "18s",
+       "cost": 23
+      },
+      {
+       "level": 4,
+       "display": "19s",
+       "cost": 32
+      },
+      {
+       "level": 5,
+       "display": "20s",
+       "cost": 41
+      },
+      {
+       "level": 6,
+       "display": "21s",
+       "cost": 50
+      },
+      {
+       "level": 7,
+       "display": "22s",
+       "cost": 59
+      },
+      {
+       "level": 8,
+       "display": "23s",
+       "cost": 68
+      },
+      {
+       "level": 9,
+       "display": "24s",
+       "cost": 77
+      },
+      {
+       "level": 10,
+       "display": "25s",
+       "cost": 86
+      },
+      {
+       "level": 11,
+       "display": "26s",
+       "cost": 95
+      },
+      {
+       "level": 12,
+       "display": "27s",
+       "cost": 104
+      },
+      {
+       "level": 13,
+       "display": "28s",
+       "cost": 113
+      },
+      {
+       "level": 14,
+       "display": "29s",
+       "cost": 122
+      },
+      {
+       "level": 15,
+       "display": "30s",
+       "cost": 131
+      },
+      {
+       "level": 16,
+       "display": "31s",
+       "cost": 165
+      },
+      {
+       "level": 17,
+       "display": "32s",
+       "cost": 224
+      },
+      {
+       "level": 18,
+       "display": "33s",
+       "cost": 308
+      },
+      {
+       "level": 19,
+       "display": "34s",
+       "cost": 417
+      },
+      {
+       "level": 20,
+       "display": "35s",
+       "cost": 551
+      },
+      {
+       "level": 21,
+       "display": "36s",
+       "cost": 710
+      },
+      {
+       "level": 22,
+       "display": "37s",
+       "cost": 894
+      },
+      {
+       "level": 23,
+       "display": "38s",
+       "cost": 1103
+      }
+     ]
+    },
+    {
+     "stat": "Cooldown",
+     "levels": [
+      {
+       "level": 0,
+       "display": "200s",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "190s",
+       "cost": 10
+      },
+      {
+       "level": 2,
+       "display": "180s",
+       "cost": 28
+      },
+      {
+       "level": 3,
+       "display": "170s",
+       "cost": 46
+      },
+      {
+       "level": 4,
+       "display": "160s",
+       "cost": 64
+      },
+      {
+       "level": 5,
+       "display": "150s",
+       "cost": 82
+      },
+      {
+       "level": 6,
+       "display": "140s",
+       "cost": 100
+      },
+      {
+       "level": 7,
+       "display": "130s",
+       "cost": 118
+      },
+      {
+       "level": 8,
+       "display": "120s",
+       "cost": 136
+      },
+      {
+       "level": 9,
+       "display": "110s",
+       "cost": 154
+      },
+      {
+       "level": 10,
+       "display": "100s",
+       "cost": 172
+      },
+      {
+       "level": 11,
+       "display": "90s",
+       "cost": 190
+      },
+      {
+       "level": 12,
+       "display": "80s",
+       "cost": 208
+      },
+      {
+       "level": 13,
+       "display": "70s",
+       "cost": 226
+      },
+      {
+       "level": 14,
+       "display": "60s",
+       "cost": 244
+      },
+      {
+       "level": 15,
+       "display": "50s",
+       "cost": 262
+      }
+     ]
+    },
+    {
+     "stat": "Black Hole + Consume",
+     "levels": [
+      {
+       "level": 0,
+       "display": "0.05%",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "0.10%",
+       "cost": 400
+      },
+      {
+       "level": 2,
+       "display": "0.15%",
+       "cost": 500
+      },
+      {
+       "level": 3,
+       "display": "0.20%",
+       "cost": 610
+      },
+      {
+       "level": 4,
+       "display": "0.25%",
+       "cost": 730
+      },
+      {
+       "level": 5,
+       "display": "0.30%",
+       "cost": 860
+      },
+      {
+       "level": 6,
+       "display": "0.35%",
+       "cost": 1000
+      },
+      {
+       "level": 7,
+       "display": "0.40%",
+       "cost": 1150
+      },
+      {
+       "level": 8,
+       "display": "0.45%",
+       "cost": 1300
+      },
+      {
+       "level": 9,
+       "display": "0.50%",
+       "cost": 1500
+      },
+      {
+       "level": 10,
+       "display": "0.55%",
+       "cost": 1700
+      },
+      {
+       "level": 11,
+       "display": "0.60%",
+       "cost": 1950
+      },
+      {
+       "level": 12,
+       "display": "0.65%",
+       "cost": 2200
+      },
+      {
+       "level": 13,
+       "display": "0.70%",
+       "cost": 2450
+      },
+      {
+       "level": 14,
+       "display": "0.75%",
+       "cost": 2700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Spotlight",
+   "stats": [
+    {
+     "stat": "Spotlight Multiplier",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x8.0",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x9.4",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "x10.8",
+       "cost": 13
+      },
+      {
+       "level": 3,
+       "display": "x12.2",
+       "cost": 21
+      },
+      {
+       "level": 4,
+       "display": "x13.6",
+       "cost": 30
+      },
+      {
+       "level": 5,
+       "display": "x15.0",
+       "cost": 40
+      },
+      {
+       "level": 6,
+       "display": "x16.4",
+       "cost": 52
+      },
+      {
+       "level": 7,
+       "display": "x17.8",
+       "cost": 65
+      },
+      {
+       "level": 8,
+       "display": "x19.2",
+       "cost": 80
+      },
+      {
+       "level": 9,
+       "display": "x20.6",
+       "cost": 95
+      },
+      {
+       "level": 10,
+       "display": "x22.0",
+       "cost": 112
+      },
+      {
+       "level": 11,
+       "display": "x23.4",
+       "cost": 133
+      },
+      {
+       "level": 12,
+       "display": "x24.8",
+       "cost": 150
+      },
+      {
+       "level": 13,
+       "display": "x26.2",
+       "cost": 180
+      },
+      {
+       "level": 14,
+       "display": "x27.6",
+       "cost": 220
+      },
+      {
+       "level": 15,
+       "display": "x29.0",
+       "cost": 280
+      },
+      {
+       "level": 16,
+       "display": "x30.4",
+       "cost": 320
+      },
+      {
+       "level": 17,
+       "display": "x31.8",
+       "cost": 360
+      },
+      {
+       "level": 18,
+       "display": "x33.2",
+       "cost": 420
+      },
+      {
+       "level": 19,
+       "display": "x34.6",
+       "cost": 500
+      },
+      {
+       "level": 20,
+       "display": "x36.0",
+       "cost": 600
+      },
+      {
+       "level": 21,
+       "display": "x37.4",
+       "cost": 720
+      },
+      {
+       "level": 22,
+       "display": "x38.8",
+       "cost": 850
+      },
+      {
+       "level": 23,
+       "display": "x40.2",
+       "cost": 1000
+      },
+      {
+       "level": 24,
+       "display": "x41.6",
+       "cost": 1175
+      },
+      {
+       "level": 25,
+       "display": "x43.0",
+       "cost": 1400
+      },
+      {
+       "level": 26,
+       "display": "x44.4",
+       "cost": 1650
+      },
+      {
+       "level": 27,
+       "display": "x45.8",
+       "cost": 1925
+      },
+      {
+       "level": 28,
+       "display": "x47.2",
+       "cost": 2225
+      },
+      {
+       "level": 29,
+       "display": "x48.6",
+       "cost": 2550
+      },
+      {
+       "level": 30,
+       "display": "x50.0",
+       "cost": 2900
+      }
+     ]
+    },
+    {
+     "stat": "Angle",
+     "levels": [
+      {
+       "level": 0,
+       "display": "30°",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "31°",
+       "cost": 5
+      },
+      {
+       "level": 2,
+       "display": "32°",
+       "cost": 16
+      },
+      {
+       "level": 3,
+       "display": "33°",
+       "cost": 27
+      },
+      {
+       "level": 4,
+       "display": "34°",
+       "cost": 38
+      },
+      {
+       "level": 5,
+       "display": "35°",
+       "cost": 49
+      },
+      {
+       "level": 6,
+       "display": "36°",
+       "cost": 60
+      },
+      {
+       "level": 7,
+       "display": "37°",
+       "cost": 71
+      },
+      {
+       "level": 8,
+       "display": "38°",
+       "cost": 82
+      },
+      {
+       "level": 9,
+       "display": "39°",
+       "cost": 93
+      },
+      {
+       "level": 10,
+       "display": "40°",
+       "cost": 104
+      },
+      {
+       "level": 11,
+       "display": "41°",
+       "cost": 115
+      },
+      {
+       "level": 12,
+       "display": "42°",
+       "cost": 126
+      },
+      {
+       "level": 13,
+       "display": "43°",
+       "cost": 137
+      },
+      {
+       "level": 14,
+       "display": "44°",
+       "cost": 148
+      },
+      {
+       "level": 15,
+       "display": "45°",
+       "cost": 159
+      },
+      {
+       "level": 16,
+       "display": "46°",
+       "cost": 170
+      },
+      {
+       "level": 17,
+       "display": "47°",
+       "cost": 181
+      },
+      {
+       "level": 18,
+       "display": "48°",
+       "cost": 192
+      },
+      {
+       "level": 19,
+       "display": "49°",
+       "cost": 203
+      },
+      {
+       "level": 20,
+       "display": "50°",
+       "cost": 214
+      },
+      {
+       "level": 21,
+       "display": "51°",
+       "cost": 225
+      },
+      {
+       "level": 22,
+       "display": "52°",
+       "cost": 236
+      },
+      {
+       "level": 23,
+       "display": "53°",
+       "cost": 247
+      },
+      {
+       "level": 24,
+       "display": "54°",
+       "cost": 258
+      },
+      {
+       "level": 25,
+       "display": "55°",
+       "cost": 269
+      },
+      {
+       "level": 26,
+       "display": "56°",
+       "cost": 280
+      },
+      {
+       "level": 27,
+       "display": "57°",
+       "cost": 291
+      },
+      {
+       "level": 28,
+       "display": "58°",
+       "cost": 302
+      },
+      {
+       "level": 29,
+       "display": "59°",
+       "cost": 313
+      },
+      {
+       "level": 30,
+       "display": "60°",
+       "cost": 324
+      },
+      {
+       "level": 31,
+       "display": "61°",
+       "cost": 337
+      },
+      {
+       "level": 32,
+       "display": "62°",
+       "cost": 352
+      },
+      {
+       "level": 33,
+       "display": "63°",
+       "cost": 369
+      },
+      {
+       "level": 34,
+       "display": "64°",
+       "cost": 388
+      },
+      {
+       "level": 35,
+       "display": "65°",
+       "cost": 409
+      },
+      {
+       "level": 36,
+       "display": "66°",
+       "cost": 432
+      },
+      {
+       "level": 37,
+       "display": "67°",
+       "cost": 457
+      },
+      {
+       "level": 38,
+       "display": "68°",
+       "cost": 484
+      },
+      {
+       "level": 39,
+       "display": "69°",
+       "cost": 513
+      },
+      {
+       "level": 40,
+       "display": "70°",
+       "cost": 544
+      },
+      {
+       "level": 41,
+       "display": "71°",
+       "cost": 577
+      },
+      {
+       "level": 42,
+       "display": "72°",
+       "cost": 612
+      },
+      {
+       "level": 43,
+       "display": "73°",
+       "cost": 649
+      },
+      {
+       "level": 44,
+       "display": "74°",
+       "cost": 688
+      },
+      {
+       "level": 45,
+       "display": "75°",
+       "cost": 729
+      },
+      {
+       "level": 46,
+       "display": "76°",
+       "cost": 772
+      },
+      {
+       "level": 47,
+       "display": "77°",
+       "cost": 817
+      },
+      {
+       "level": 48,
+       "display": "78°",
+       "cost": 864
+      },
+      {
+       "level": 49,
+       "display": "79°",
+       "cost": 913
+      },
+      {
+       "level": 50,
+       "display": "80°",
+       "cost": 964
+      },
+      {
+       "level": 51,
+       "display": "81°",
+       "cost": 1017
+      },
+      {
+       "level": 52,
+       "display": "82°",
+       "cost": 1072
+      },
+      {
+       "level": 53,
+       "display": "83°",
+       "cost": 1129
+      },
+      {
+       "level": 54,
+       "display": "84°",
+       "cost": 1188
+      },
+      {
+       "level": 55,
+       "display": "85°",
+       "cost": 1249
+      },
+      {
+       "level": 56,
+       "display": "86°",
+       "cost": 1312
+      },
+      {
+       "level": 57,
+       "display": "87°",
+       "cost": 1377
+      },
+      {
+       "level": 58,
+       "display": "88°",
+       "cost": 1444
+      },
+      {
+       "level": 59,
+       "display": "89°",
+       "cost": 1513
+      },
+      {
+       "level": 60,
+       "display": "90°",
+       "cost": 1584
+      }
+     ]
+    },
+    {
+     "stat": "Quantity",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x1",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x2",
+       "cost": 375
+      },
+      {
+       "level": 2,
+       "display": "x3",
+       "cost": 850
+      },
+      {
+       "level": 3,
+       "display": "x4",
+       "cost": 2500
+      }
+     ]
+    },
+    {
+     "stat": "Spotlight + Light Range",
+     "levels": [
+      {
+       "level": 0,
+       "display": "x0.01",
+       "cost": 0
+      },
+      {
+       "level": 1,
+       "display": "x0.02",
+       "cost": 400
+      },
+      {
+       "level": 2,
+       "display": "x0.03",
+       "cost": 500
+      },
+      {
+       "level": 3,
+       "display": "x0.04",
+       "cost": 610
+      },
+      {
+       "level": 4,
+       "display": "x0.05",
+       "cost": 730
+      },
+      {
+       "level": 5,
+       "display": "x0.06",
+       "cost": 860
+      },
+      {
+       "level": 6,
+       "display": "x0.07",
+       "cost": 1000
+      },
+      {
+       "level": 7,
+       "display": "x0.08",
+       "cost": 1150
+      },
+      {
+       "level": 8,
+       "display": "x0.09",
+       "cost": 1300
+      },
+      {
+       "level": 9,
+       "display": "x0.10",
+       "cost": 1500
+      },
+      {
+       "level": 10,
+       "display": "x0.11",
+       "cost": 1700
+      },
+      {
+       "level": 11,
+       "display": "x0.12",
+       "cost": 1950
+      },
+      {
+       "level": 12,
+       "display": "x0.13",
+       "cost": 2200
+      },
+      {
+       "level": 13,
+       "display": "x0.14",
+       "cost": 2450
+      },
+      {
+       "level": 14,
+       "display": "x0.15",
+       "cost": 2700
+      },
+      {
+       "level": 15,
+       "display": "x0.16",
+       "cost": 3000
+      },
+      {
+       "level": 16,
+       "display": "x0.17",
+       "cost": 3300
+      },
+      {
+       "level": 17,
+       "display": "x0.18",
+       "cost": 3600
+      },
+      {
+       "level": 18,
+       "display": "x0.19",
+       "cost": 3900
+      },
+      {
+       "level": 19,
+       "display": "x0.20",
+       "cost": 4200
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

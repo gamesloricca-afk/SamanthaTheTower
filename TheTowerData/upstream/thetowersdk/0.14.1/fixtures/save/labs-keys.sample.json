@@ -1,0 +1,13 @@
+{
+  "_comment": "Synthetic labs key fragment for save-graph fixture verification. Not a real save.",
+  "labsUnlocked": 5,
+  "researchLevel": [0, 0, 0],
+  "researchPercentComplete": [0, 0, 0],
+  "labLevel": [1, 1, 1, 1, 1],
+  "labResearchInt": [-1, -1, -1, -1, -1],
+  "labActiveBool": [false, false, false, false, false],
+  "labSpeedUpSpeed": [1, 1, 1, 1, 1],
+  "labSpeedUpRemainingSeconds": [0, 0, 0, 0, 0],
+  "researchesComplete": 0,
+  "totalCoinsSpentOnResearch": 0
+}

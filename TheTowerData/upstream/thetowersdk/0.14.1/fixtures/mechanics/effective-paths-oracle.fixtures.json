@@ -1,0 +1,31 @@
+{
+  "source": "live spreadsheet via tools/effective-paths-oracle",
+  "sheetVersion": "v5.09.02.01",
+  "note": "Answers from the live sheet, for input vectors the exported workbook never cached. Add a case by asking the oracle: eval_formula { formula: \"EPH_HEALTH(...)\" }.",
+  "cases": [
+    {
+      "fn": "EPH_HEALTH",
+      "why": "the snapshot's baseline, re-asked of the live sheet",
+      "args": [5, 0, false, 1.5, false, 0, 0, true, 0, true, true, 0, 0, false, 0, 1],
+      "expected": 1.2000000000000002
+    },
+    {
+      "fn": "EPH_HEALTH",
+      "why": "one lab level, to pin the 3% per level term",
+      "args": [5, 1, false, 1.5, false, 0, 0, true, 0, true, true, 0, 0, false, 0, 1],
+      "expected": 1.2360000000000002
+    },
+    {
+      "fn": "EPH_REGEN",
+      "why": "rare tournament override multiplies regen by 8",
+      "args": [0.0005, 0, false, 1.4, false, 0, 0, 0, 0, 0, 0, true, 0, false, true, 0, 0, 0, false, 0],
+      "expected": 0.019
+    },
+    {
+      "fn": "EPH_HEALTH",
+      "why": "every multiplier live at once — card mastery, enhancement, perk, relic, vault, death wave, dissonance",
+      "args": [1000, 25, true, 2.4, true, 3, 40, true, 12, false, false, 0.15, 0.08, true, 6, 1.2],
+      "expected": 229675.17081600003
+    }
+  ]
+}

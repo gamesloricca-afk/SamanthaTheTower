@@ -1,0 +1,158 @@
+{
+ "bulletsPerSecond": [
+  {
+   "attackSpeed": 35.0826,
+   "sheet": 326.37579220167845
+  },
+  {
+   "attackSpeed": 37.8325,
+   "sheet": 344.40411315025625
+  },
+  {
+   "attackSpeed": 6.7867,
+   "sheet": 157.0047074583724
+  },
+  {
+   "attackSpeed": 35.5677,
+   "sheet": 329.53592248055406
+  },
+  {
+   "attackSpeed": 16.2731,
+   "sheet": 210.5098956745321
+  },
+  {
+   "attackSpeed": 16.9053,
+   "sheet": 214.1931358828452
+  },
+  {
+   "attackSpeed": 12.6639,
+   "sheet": 189.7636447124045
+  },
+  {
+   "attackSpeed": 51.5382,
+   "sheet": 438.4014273769796
+  },
+  {
+   "attackSpeed": 5.8708,
+   "sheet": 152.01385880070416
+  },
+  {
+   "attackSpeed": 46.7201,
+   "sheet": 404.57103843111975
+  },
+  {
+   "attackSpeed": 35.381,
+   "sheet": 328.318662626409
+  },
+  {
+   "attackSpeed": 1.7307,
+   "sheet": 129.8384649286188
+  },
+  {
+   "attackSpeed": 19.2167,
+   "sheet": 227.7844892090504
+  },
+  {
+   "attackSpeed": 27.2241,
+   "sheet": 276.38688532005887
+  }
+ ],
+ "combinedSubstat": [
+  {
+   "has": false,
+   "stone": 17,
+   "lab": 20,
+   "primary": 1.266,
+   "assist": 2.367,
+   "sheet": 1.266
+  },
+  {
+   "has": true,
+   "stone": 1,
+   "lab": 14,
+   "primary": 4.714,
+   "assist": 4.749,
+   "sheet": 5.47384
+  },
+  {
+   "has": false,
+   "stone": 59,
+   "lab": 2,
+   "primary": 1.791,
+   "assist": 1.488,
+   "sheet": 1.791
+  },
+  {
+   "has": true,
+   "stone": 9,
+   "lab": 29,
+   "primary": 3.916,
+   "assist": 0.129,
+   "sheet": 3.96631
+  },
+  {
+   "has": true,
+   "stone": 28,
+   "lab": 29,
+   "primary": 3.529,
+   "assist": 3.089,
+   "sheet": 5.32062
+  },
+  {
+   "has": true,
+   "stone": 31,
+   "lab": 28,
+   "primary": 0.962,
+   "assist": 4.539,
+   "sheet": 3.6853999999999996
+  },
+  {
+   "has": true,
+   "stone": 35,
+   "lab": 24,
+   "primary": 4.551,
+   "assist": 1.752,
+   "sheet": 5.6022
+  },
+  {
+   "has": false,
+   "stone": 47,
+   "lab": 3,
+   "primary": 4.128,
+   "assist": 0.674,
+   "sheet": 4.128
+  },
+  {
+   "has": true,
+   "stone": 67,
+   "lab": 28,
+   "primary": 4.847,
+   "assist": 1.317,
+   "sheet": 6.11132
+  },
+  {
+   "has": true,
+   "stone": 50,
+   "lab": 18,
+   "primary": 4.17,
+   "assist": 0.877,
+   "sheet": 4.77513
+  },
+  {
+   "has": true,
+   "stone": 39,
+   "lab": 28,
+   "primary": 1.394,
+   "assist": 3.674,
+   "sheet": 3.89232
+  },
+  {
+   "has": false,
+   "stone": 61,
+   "lab": 0,
+   "primary": 1.456,
+   "assist": 3.446,
+   "sheet": 1.456
+  }
+ ]
+}

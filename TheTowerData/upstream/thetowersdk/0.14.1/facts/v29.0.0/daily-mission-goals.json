@@ -1,0 +1,346 @@
+{
+  "gameVersion": "v29.0.0",
+  "note": "goalValues are the mission's goal per tier, in tier order",
+  "missions": [
+    {
+      "index": 0,
+      "text": "Participate in {0} tournaments",
+      "missionType": "Common",
+      "goalValues": [
+        1.0
+      ]
+    },
+    {
+      "index": 1,
+      "text": "Kill {0} bosses",
+      "missionType": "Common",
+      "goalValues": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Kill {0} basic enemies",
+      "missionType": "Common",
+      "goalValues": [
+        50.0,
+        75.0,
+        100.0,
+        150.0,
+        200.0
+      ]
+    },
+    {
+      "index": 3,
+      "text": "Kill {0} fast enemies",
+      "missionType": "Common",
+      "goalValues": [
+        20.0,
+        35.0,
+        50.0
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Kill {0} ranged enemies",
+      "missionType": "Common",
+      "goalValues": [
+        2.0,
+        4.0,
+        6.0
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Kill {0} tank enemies",
+      "missionType": "Common",
+      "goalValues": [
+        20.0,
+        35.0,
+        50.0
+      ]
+    },
+    {
+      "index": 6,
+      "text": "Tap {0} floating gems",
+      "missionType": "Common",
+      "goalValues": [
+        1.0,
+        2.0,
+        3.0
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Claim Ad Gems {0} times",
+      "missionType": "Common",
+      "goalValues": [
+        1.0,
+        2.0,
+        3.0
+      ]
+    },
+    {
+      "index": 8,
+      "text": "Advance through a total of {0} waves",
+      "missionType": "Common",
+      "goalValues": [
+        30.0,
+        50.0,
+        70.0
+      ]
+    },
+    {
+      "index": 9,
+      "text": "Hit {0} enemies with critical hits",
+      "missionType": "Common",
+      "goalValues": [
+        100.0,
+        150.0,
+        200.0
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Bounce shots through {0} enemies",
+      "missionType": "Perk",
+      "goalValues": [
+        100.0,
+        150.0,
+        200.0
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Hit {0} enemies with super critical hits",
+      "missionType": "Perk",
+      "goalValues": [
+        10.0,
+        20.0,
+        30.0
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Apply knockback on {0} enemies",
+      "missionType": "Fixed",
+      "goalValues": [
+        40.0,
+        60.0,
+        80.0
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Kill {0} enemies with orbs",
+      "missionType": "Fixed",
+      "goalValues": [
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Kill {0} enemies with workshop land mines",
+      "missionType": "Fixed",
+      "goalValues": [
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ]
+    },
+    {
+      "index": 15,
+      "text": "Skip enemy level {0} times",
+      "missionType": "UtlUpgrade",
+      "goalValues": [
+        3.0,
+        5.0,
+        7.0,
+        10.0
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Hit {0} enemies with Chain Lightning",
+      "missionType": "UltimateWeapon",
+      "goalValues": [
+        25.0,
+        40.0,
+        60.0,
+        80.0
+      ]
+    },
+    {
+      "index": 17,
+      "text": "Kill {0} enemies with Death Wave",
+      "missionType": "UltimateWeapon",
+      "goalValues": [
+        15.0,
+        25.0,
+        35.0,
+        50.0
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Poison {0} enemies with Poison Swamp",
+      "missionType": "UltimateWeapon",
+      "goalValues": [
+        60.0,
+        100.0,
+        150.0,
+        200.0
+      ]
+    },
+    {
+      "index": 19,
+      "text": "Kill {0} enemies with Smart Missiles",
+      "missionType": "UltimateWeapon",
+      "goalValues": [
+        25.0,
+        40.0,
+        60.0,
+        80.0
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Kill {0} enemies while Golden Tower is active",
+      "missionType": "UltimateWeapon",
+      "goalValues": [
+        50.0,
+        75.0,
+        100.0,
+        150.0
+      ]
+    },
+    {
+      "index": 21,
+      "text": "Kill {0} enemies slowed down by Chrono Field",
+      "missionType": "UltimateWeapon",
+      "goalValues": [
+        50.0,
+        75.0,
+        100.0,
+        150.0
+      ]
+    },
+    {
+      "index": 22,
+      "text": "Kill {0} enemies with Inner Land Mines",
+      "missionType": "UltimateWeapon",
+      "goalValues": [
+        15.0,
+        25.0,
+        35.0,
+        50.0
+      ]
+    },
+    {
+      "index": 23,
+      "text": "Kill {0} enemies in spotlight",
+      "missionType": "UltimateWeapon",
+      "goalValues": [
+        15.0,
+        25.0,
+        35.0,
+        50.0
+      ]
+    },
+    {
+      "index": 24,
+      "text": "Skip a total of {0} waves",
+      "missionType": "Card",
+      "goalValues": [
+        3.0,
+        5.0,
+        7.0,
+        10.0
+      ]
+    },
+    {
+      "index": 25,
+      "text": "Kill {0} enemies with Death Ray",
+      "missionType": "Card",
+      "goalValues": [
+        50.0,
+        75.0,
+        100.0,
+        150.0
+      ]
+    },
+    {
+      "index": 26,
+      "text": "Hit a boss with an energy net {0} times",
+      "missionType": "Card",
+      "goalValues": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ]
+    },
+    {
+      "index": 27,
+      "text": "Kill {0} enemies while in Demon Mode",
+      "missionType": "Card",
+      "goalValues": [
+        40.0,
+        60.0,
+        80.0,
+        100.0
+      ]
+    },
+    {
+      "index": 28,
+      "text": "Buy {0} workshop upgrades",
+      "missionType": "UpgradeSomething",
+      "goalValues": [
+        1.0
+      ]
+    },
+    {
+      "index": 29,
+      "text": "Buy {0} battle upgrades",
+      "missionType": "UpgradeSomething",
+      "goalValues": [
+        10.0,
+        20.0,
+        30.0
+      ]
+    },
+    {
+      "index": 30,
+      "text": "Change {0} skins",
+      "missionType": "ChangeSkin",
+      "goalValues": [
+        1.0
+      ]
+    },
+    {
+      "index": 31,
+      "text": "Buy {0} cards",
+      "missionType": "BuyCard",
+      "goalValues": [
+        1.0
+      ]
+    },
+    {
+      "index": 32,
+      "text": "Start {0} battles",
+      "missionType": "Common",
+      "goalValues": [
+        1.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+*.mjs text eol=lf
+docs/generated/snippets.json text eol=lf

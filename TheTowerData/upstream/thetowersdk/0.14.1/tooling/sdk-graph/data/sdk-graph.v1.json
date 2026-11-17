@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "updatedAt": "2026-08-14",
+  "sheetVersion": "v5.09.03.01",
+  "historicalAllowlist": [],
+  "nodes": {
+    "lab.Damage": {
+      "id": "lab.Damage",
+      "family": "lab",
+      "type": "stat",
+      "label": "Lab Damage",
+      "module": "core",
+      "sourceCells": [],
+      "wikiPages": ["Laboratory"],
+      "codeSymbols": ["labMaxCatalogLevel", "EFFECTIVE_DAMAGE_UPGRADES"],
+      "dependsOn": [],
+      "status": "researching",
+      "traps": [{ "kind": "other", "note": "Seed from catalog/code — sheet cell provenance still to attach via oracle" }]
+    },
+    "lab.AttackSpeed": {
+      "id": "lab.AttackSpeed",
+      "family": "lab",
+      "type": "stat",
+      "label": "Lab Attack Speed",
+      "module": "core",
+      "sourceCells": [],
+      "wikiPages": ["Laboratory"],
+      "codeSymbols": ["labMaxCatalogLevel"],
+      "dependsOn": [],
+      "status": "researching",
+      "traps": []
+    },
+    "workshop.Damage": {
+      "id": "workshop.Damage",
+      "family": "workshop",
+      "type": "stat",
+      "label": "Workshop Damage",
+      "module": "core",
+      "sourceCells": [],
+      "wikiPages": ["Workshop Upgrades", "Damage"],
+      "codeSymbols": ["WORKSHOP_DATA"],
+      "dependsOn": [],
+      "status": "researching",
+      "traps": []
+    },
+    "workshop.enhancement.CoinBonus": {
+      "id": "workshop.enhancement.CoinBonus",
+      "family": "workshop",
+      "type": "stat",
+      "label": "Workshop Enhancement Coin Bonus",
+      "module": "core",
+      "sourceCells": [],
+      "wikiPages": ["Workshop Enhancement/Utility/Coin Bonus", "Workshop Enhancement"],
+      "codeSymbols": ["UTILITY_ENHANCEMENT_SPEND_UNLOCKS", "workshopEnhancementCoinsInvested"],
+      "dependsOn": ["workshop.enhancement.utilitySpend"],
+      "status": "verified",
+      "traps": [{ "kind": "other", "note": "EP hide EO2 also models this — see ep module candidate.eEcon.time.CoinBonus" }]
+    },
+    "workshop.enhancement.utilitySpend": {
+      "id": "workshop.enhancement.utilitySpend",
+      "family": "workshop",
+      "type": "resource",
+      "label": "Utility enhancement coins invested",
+      "module": "core",
+      "sourceCells": [],
+      "wikiPages": ["Workshop Enhancement"],
+      "codeSymbols": ["workshopEnhancementCoinsInvested", "WSPUTILITY_TOTAL_COINS_INVESTED"],
+      "dependsOn": [],
+      "lambdaName": "WSPUTILITY_TOTAL_COINS_INVESTED",
+      "status": "verified",
+      "traps": []
+    },
+    "sdk.mechanics.root": {
+      "id": "sdk.mechanics.root",
+      "family": "sdk",
+      "type": "ui",
+      "label": "SDK mechanics graph root",
+      "module": "core",
+      "sourceCells": [],
+      "wikiPages": [],
+      "codeSymbols": ["loadSdkGraph", "applySdkGraphMutations"],
+      "dependsOn": [],
+      "status": "verified",
+      "traps": []
+    }
+  },
+  "edges": [
+    {
+      "id": "e.utilitySpend.produces.CoinBonus",
+      "from": "workshop.enhancement.utilitySpend",
+      "to": "workshop.enhancement.CoinBonus",
+      "kind": "unlocks",
+      "module": "core",
+      "evidence": {
+        "wikiTitle": "Workshop Enhancement/Utility/Coin Bonus",
+        "codeSymbol": "UTILITY_ENHANCEMENT_SPEND_UNLOCKS"
+      }
+    },
+    {
+      "id": "e.sdk.root.reads.utilitySpend",
+      "from": "sdk.mechanics.root",
+      "to": "workshop.enhancement.utilitySpend",
+      "kind": "reads",
+      "module": "core",
+      "evidence": {
+        "codeSymbol": "loadSdkGraph"
+      }
+    }
+  ]
+}

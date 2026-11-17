@@ -1,0 +1,243 @@
+{
+  "source": {
+    "version": "v5.11.08.10",
+    "spreadsheetId": "1YwZtKP6B4WYhRba5T6APJ1YxKNdfnIGQnprgnxmO7zc",
+    "driveVersion": "82842",
+    "modifiedTime": "2026-11-03T15:59:00.508Z",
+    "sha256": "78f4eda768d1b81db7f0fdda92a41ab8b95bbca2eb4e63360b04879e73b2a41a",
+    "lambdaCount": 267,
+    "namedRangeCount": 218
+  },
+  "range": "eDamage!IG4:JZ4",
+  "excluded": "Coin-only candidates and the intentionally empty Generator substat column JP.",
+  "candidates": [
+    {
+      "column": "IG",
+      "sheetName": "Damage"
+    },
+    {
+      "column": "II",
+      "sheetName": "Damage Mastery"
+    },
+    {
+      "column": "IJ",
+      "sheetName": "Standard Perks Bonus"
+    },
+    {
+      "column": "IK",
+      "sheetName": "Improve Trade-off Perks"
+    },
+    {
+      "column": "IL",
+      "sheetName": "Shock Multiplier"
+    },
+    {
+      "column": "IM",
+      "sheetName": "Demon Mode Mastery"
+    },
+    {
+      "column": "IN",
+      "sheetName": "Starting Cash"
+    },
+    {
+      "column": "IP",
+      "sheetName": "Critical Chance Mastery"
+    },
+    {
+      "column": "IQ",
+      "sheetName": "Critical Factor"
+    },
+    {
+      "column": "IS",
+      "sheetName": "Super Crit Chance"
+    },
+    {
+      "column": "IT",
+      "sheetName": "Super Crit Multi"
+    },
+    {
+      "column": "IV",
+      "sheetName": "Attack Speed"
+    },
+    {
+      "column": "IX",
+      "sheetName": "Attack Speed Mastery"
+    },
+    {
+      "column": "IY",
+      "sheetName": "Range"
+    },
+    {
+      "column": "IZ",
+      "sheetName": "Damage / Meter"
+    },
+    {
+      "column": "JB",
+      "sheetName": "Range Mastery"
+    },
+    {
+      "column": "JC",
+      "sheetName": "Super Tower Bonus"
+    },
+    {
+      "column": "JD",
+      "sheetName": "Super Tower Mastery"
+    },
+    {
+      "column": "JE",
+      "sheetName": "Max Rend Armor Multiplier"
+    },
+    {
+      "column": "JG",
+      "sheetName": "Spotlight Missiles"
+    },
+    {
+      "column": "JH",
+      "sheetName": "Swamp Rend"
+    },
+    {
+      "column": "JI",
+      "sheetName": "Death Wave Damage Amplifier"
+    },
+    {
+      "column": "JJ",
+      "sheetName": "Missile Amplifier"
+    },
+    {
+      "column": "JK",
+      "sheetName": "Inner Land Mine - Chrono Jump"
+    },
+    {
+      "column": "JL",
+      "sheetName": "Ultimate Crit Mastery"
+    },
+    {
+      "column": "JM",
+      "sheetName": "Assist Module Bonus - Cannon"
+    },
+    {
+      "column": "JN",
+      "sheetName": "Assist Module Substats - Cannon"
+    },
+    {
+      "column": "JO",
+      "sheetName": "Assist Module Substats - Armor"
+    },
+    {
+      "column": "JQ",
+      "sheetName": "Assist Module Bonus - Core"
+    },
+    {
+      "column": "JR",
+      "sheetName": "Assist Module Substats - Core"
+    },
+    {
+      "column": "JS",
+      "sheetName": "Primary Module Bonus - Cannon"
+    },
+    {
+      "column": "JT",
+      "sheetName": "Primary Module Bonus - Core"
+    },
+    {
+      "column": "JY",
+      "sheetName": "Dissonant Echo - Attack"
+    },
+    {
+      "column": "JZ",
+      "sheetName": "Dissonant Echo - Ultimate Weapons"
+    }
+  ],
+  "attackDissonanceHidden": [
+    {
+      "sheetName": "Attack Speed",
+      "cell": "FM2",
+      "formula": "OR(\n  AND($AW$27, NOT($BF$31), $AV$20<>\"UW Disso\"),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA9+1, BB9, BC9),\n  AND($AW$28, BA9=0, NOT(IDS_LAB_HAS_UNLOCKED(FM4))))"
+    },
+    {
+      "sheetName": "Attack Speed Mastery",
+      "cell": "FN2",
+      "formula": "OR(\n  AND($AW$27, NOT($BF$31)),\n  NOT($AW$49),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA39+1, BB39, BC39),\n  AND($AW$28, BA39=0, NOT(IDS_LAB_HAS_UNLOCKED(FN4))\n))"
+    },
+    {
+      "sheetName": "Range",
+      "cell": "FO2",
+      "formula": "OR(\n  AND($AW$27, $BJ$33=\"Locked\"),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA12+1, BB12, BC12),\n  AND($AW$28, BA12=0, NOT(IDS_LAB_HAS_UNLOCKED(FO4))\n))"
+    },
+    {
+      "sheetName": "Damage / Meter",
+      "cell": "FP2",
+      "formula": "OR(\n  AND($AW$27, $BJ$33=\"Locked\", $AV$20<>\"UW Disso\"),\n  EQ($BE$13, 0),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA13+1, BB13, BC13),\n  AND($AW$28, BA13=0, NOT(IDS_LAB_HAS_UNLOCKED(FP4))\n))"
+    },
+    {
+      "sheetName": "Range Mastery",
+      "cell": "FQ2",
+      "formula": "OR(\n  AND($AW$27, $BJ$33=\"Locked\"),\n  NOT($AW$53),\n  $AV$20=\"Attack Disso\",\n  EQ($BE$13, 0), EPG_LEVEL_CHECK(BA41+1, BB41, BC41),\n  AND($AW$28, BA41=0, NOT(IDS_LAB_HAS_UNLOCKED(FQ4))\n))"
+    },
+    {
+      "sheetName": "Max Rend Armor Multiplier",
+      "cell": "FT2",
+      "formula": "OR(\n  AND($AW$27, $BA$35=0, $AV$20<>\"UW Disso\"),\n  NOT($AJ$71),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA22+1, BB22, BC22),\n  AND($AW$28, BA22=0, NOT(IDS_LAB_HAS_UNLOCKED(FT4)))\n)"
+    },
+    {
+      "sheetName": "Swamp Rend",
+      "cell": "FV2",
+      "formula": "OR(\n  NOT($BF$35),\n  NOT($AJ$71),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA35+1, BB35, BC35),\n  AND($AW$28, BA35=0, NOT(IDS_LAB_HAS_UNLOCKED(FV4))\n))"
+    },
+    {
+      "sheetName": "Ultimate Crit Mastery",
+      "cell": "FZ2",
+      "formula": "OR(\n  NOT($AW$58),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA43+1, BB43, BC43),\n  AND($AW$28, BA43=0, NOT(IDS_LAB_HAS_UNLOCKED(FZ4))\n))"
+    },
+    {
+      "sheetName": "Assist Module Substats - Cannon",
+      "cell": "GA2",
+      "formula": "OR(\n  NOT(AM5),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA45+1, BB45, BC45),\n  AND($AW$28, BA45=0, NOT(IDS_LAB_HAS_UNLOCKED(GA4))\n))"
+    },
+    {
+      "sheetName": "Damage",
+      "cell": "GL2",
+      "formula": "OR(\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA8+1, BB8, BC8),\n  AND($AW$28, BA8=0, NOT(IDS_LAB_HAS_UNLOCKED(GL4))\n))"
+    },
+    {
+      "sheetName": "Damage Mastery",
+      "cell": "GN2",
+      "formula": "OR(\n  $AV$20=\"Attack Disso\",\n  NOT($AW$46),\n  EPG_LEVEL_CHECK(BA38+1, BB38, BC38),\n  AND($AW$28, BA38=0, NOT(IDS_LAB_HAS_UNLOCKED(GN4))\n))"
+    },
+    {
+      "sheetName": "Standard Perks Bonus",
+      "cell": "GO2",
+      "formula": "OR(\n  $AV$20=\"Attack Disso\",\n  NOT(AND($AW$64, $AW$66)),\n  EPG_LEVEL_CHECK(BA28+1, BB28, BC28),\n  AND($AW$28, BA28=0, NOT(IDS_LAB_HAS_UNLOCKED(GO4))\n))"
+    },
+    {
+      "sheetName": "Improve Trade-off Perks",
+      "cell": "GP2",
+      "formula": "OR(\n  NOT(AND($AW$64, $AW$68)),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA29+1, BB29, BC29),\n  AND($AW$28, BA29=0, NOT(IDS_LAB_HAS_UNLOCKED(GP4))\n))"
+    },
+    {
+      "sheetName": "Shock Multiplier",
+      "cell": "GQ2",
+      "formula": "OR(\n  NOT(AND($BF$31, $AJ$77)),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA31+1, BB31, BC31),\n  AND($AW$28, BA31=0, NOT(IDS_LAB_HAS_UNLOCKED(GQ4))\n))"
+    },
+    {
+      "sheetName": "Demon Mode Mastery",
+      "cell": "GR2",
+      "formula": "OR(\n  NOT($AW$61),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA44+1, BB44, BC44),\n  AND($AW$28, BA44=0, NOT(IDS_LAB_HAS_UNLOCKED(GR4))\n))"
+    },
+    {
+      "sheetName": "Assist Module Bonus - Cannon",
+      "cell": "HR2",
+      "formula": "OR(\n  NOT(AM5),\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA49+1, BB49, BC49),\n  AND($AW$28, BA49=0, NOT(IDS_LAB_HAS_UNLOCKED(HR4))\n))"
+    },
+    {
+      "sheetName": "Primary Module Bonus - Cannon",
+      "cell": "HX2",
+      "formula": "OR(\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA$51+1, BB$51, BC$51),\n  AND($AW$28, BA$51=0, NOT(IDS_LAB_HAS_UNLOCKED(HX4))\n))"
+    },
+    {
+      "sheetName": "Dissonant Echo - Attack",
+      "cell": "ID2",
+      "formula": "OR(\n  $AV$20=\"Attack Disso\",\n  EPG_LEVEL_CHECK(BA5+1, BB5, BC5),\n  AND($AW$28, BA5=0, NOT(IDS_LAB_HAS_UNLOCKED(ID4))\n))"
+    }
+  ]
+}

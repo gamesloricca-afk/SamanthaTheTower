@@ -1,0 +1,1967 @@
+{
+  "version": 1,
+  "surface": "sheet",
+  "generatedAt": "2026-08-30T22:11:25.944Z",
+  "notes": "Seeded from EP planner Tab!Cell citations. modeled = in graph byCell; unmodeled = allowlisted unknown.",
+  "entries": [
+    {
+      "id": "All UWs!E6",
+      "surface": "sheet",
+      "label": "All UWs!E6",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "Data_Val_Tables!EV4",
+      "surface": "sheet",
+      "label": "Data_Val_Tables!EV4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "EP_HELPER!A2",
+      "surface": "sheet",
+      "label": "EP_HELPER!A2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "Home Page!D1",
+      "surface": "sheet",
+      "label": "Home Page!D1",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!BO5",
+      "surface": "sheet",
+      "label": "eDamage Coins!BO5",
+      "graphNodeIds": [
+        "control.eDamageCoins.bandDamage"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Coins!BO5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!BS5",
+      "surface": "sheet",
+      "label": "eDamage Coins!BS5",
+      "graphNodeIds": [
+        "control.eDamageCoins.bandCriticalFactor"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Coins!BS5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!BU5",
+      "surface": "sheet",
+      "label": "eDamage Coins!BU5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!CJ5",
+      "surface": "sheet",
+      "label": "eDamage Coins!CJ5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!DM5",
+      "surface": "sheet",
+      "label": "eDamage Coins!DM5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!DO5",
+      "surface": "sheet",
+      "label": "eDamage Coins!DO5",
+      "graphNodeIds": [
+        "stat.eDamageCoins.coreModulePair"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Coins!DO5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!EF5",
+      "surface": "sheet",
+      "label": "eDamage Coins!EF5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!EG5",
+      "surface": "sheet",
+      "label": "eDamage Coins!EG5",
+      "graphNodeIds": [
+        "candidate.eDamageCoins.criticalChanceMastery"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Coins!EG5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!EJ2",
+      "surface": "sheet",
+      "label": "eDamage Coins!EJ2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!EJ5",
+      "surface": "sheet",
+      "label": "eDamage Coins!EJ5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!EL5",
+      "surface": "sheet",
+      "label": "eDamage Coins!EL5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!EM5",
+      "surface": "sheet",
+      "label": "eDamage Coins!EM5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!EU5",
+      "surface": "sheet",
+      "label": "eDamage Coins!EU5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!EZ2",
+      "surface": "sheet",
+      "label": "eDamage Coins!EZ2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!EZ5",
+      "surface": "sheet",
+      "label": "eDamage Coins!EZ5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Coins!GA4",
+      "surface": "sheet",
+      "label": "eDamage Coins!GA4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Keys!BO5",
+      "surface": "sheet",
+      "label": "eDamage Keys!BO5",
+      "graphNodeIds": [
+        "display.eDamageKeys.vaultLevelColumns"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Keys!BO5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Keys!BP5",
+      "surface": "sheet",
+      "label": "eDamage Keys!BP5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Keys!BU5",
+      "surface": "sheet",
+      "label": "eDamage Keys!BU5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Keys!CH5",
+      "surface": "sheet",
+      "label": "eDamage Keys!CH5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Keys!CU5",
+      "surface": "sheet",
+      "label": "eDamage Keys!CU5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Keys!DL5",
+      "surface": "sheet",
+      "label": "eDamage Keys!DL5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Keys!DW5",
+      "surface": "sheet",
+      "label": "eDamage Keys!DW5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Keys!EI4",
+      "surface": "sheet",
+      "label": "eDamage Keys!EI4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Stone!BX5",
+      "surface": "sheet",
+      "label": "eDamage Stone!BX5",
+      "graphNodeIds": [
+        "display.eDamageStone.uwPlusLockedSentinel"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Stone!BX5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Stone!CM5",
+      "surface": "sheet",
+      "label": "eDamage Stone!CM5",
+      "graphNodeIds": [
+        "display.eDamageStone.assistCannonBonusLevel"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Stone!CM5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Stone!DY5",
+      "surface": "sheet",
+      "label": "eDamage Stone!DY5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Stone!DZ2",
+      "surface": "sheet",
+      "label": "eDamage Stone!DZ2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Stone!EB5",
+      "surface": "sheet",
+      "label": "eDamage Stone!EB5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Stone!EE5",
+      "surface": "sheet",
+      "label": "eDamage Stone!EE5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Stone!ER5",
+      "surface": "sheet",
+      "label": "eDamage Stone!ER5",
+      "graphNodeIds": [
+        "gate.eDamageStone.uwPlusRequiresNineUws"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Stone!ER5"
+      ],
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "eDamage Stone!EU5",
+      "surface": "sheet",
+      "label": "eDamage Stone!EU5",
+      "graphNodeIds": [
+        "gate.eDamageStone.spotlightAngleCap"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Stone!EU5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Stone!EY2",
+      "surface": "sheet",
+      "label": "eDamage Stone!EY2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Stone!FF5",
+      "surface": "sheet",
+      "label": "eDamage Stone!FF5",
+      "graphNodeIds": [
+        "gate.eDamageStone.uwPlusRequiresNineUws"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Stone!FF5"
+      ],
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "eDamage Stone!FG5",
+      "surface": "sheet",
+      "label": "eDamage Stone!FG5",
+      "graphNodeIds": [
+        "stat.eDamage.chronoSlowMultiplier"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Stone!FG5",
+        "fixtures/mechanics/effective-paths-v5.11.01.03-audit.json"
+      ],
+      "reviewedAt": "2026-10-09"
+    },
+    {
+      "id": "eDamage Stone!FH2",
+      "surface": "sheet",
+      "label": "eDamage Stone!FH2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Stone!FH5",
+      "surface": "sheet",
+      "label": "eDamage Stone!FH5",
+      "graphNodeIds": [
+        "gate.eDamageStone.moduleLevelCaps"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage Stone!FH5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage Stone!GQ4",
+      "surface": "sheet",
+      "label": "eDamage Stone!GQ4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AI21",
+      "surface": "sheet",
+      "label": "eDamage!AI21",
+      "graphNodeIds": [
+        "control.eDamage.rowsCalculated"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!AI21"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AL23",
+      "surface": "sheet",
+      "label": "eDamage!AL23",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AL4",
+      "surface": "sheet",
+      "label": "eDamage!AL4",
+      "graphNodeIds": [
+        "display.eDamage.moduleLevelHorizon"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!AL4"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AT42",
+      "surface": "sheet",
+      "label": "eDamage!AT42",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AT63",
+      "surface": "sheet",
+      "label": "eDamage!AT63",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AX19",
+      "surface": "sheet",
+      "label": "eDamage!AX19",
+      "graphNodeIds": [
+        "control.eDamage.runType"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!AX19"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AY10",
+      "surface": "sheet",
+      "label": "eDamage!AY10",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AY24",
+      "surface": "sheet",
+      "label": "eDamage!AY24",
+      "graphNodeIds": [
+        "control.eDamage.hideUwCooldown"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!AY24"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AY25",
+      "surface": "sheet",
+      "label": "eDamage!AY25",
+      "graphNodeIds": [
+        "control.eDamage.hideNonUwUpgrades"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!AY25"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AY26",
+      "surface": "sheet",
+      "label": "eDamage!AY26",
+      "graphNodeIds": [
+        "control.eDamage.hideNonUnlockedLabs"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!AY26"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AY27",
+      "surface": "sheet",
+      "label": "eDamage!AY27",
+      "graphNodeIds": [
+        "control.eDamage.showLabsOnCoinPath"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!AY27"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AY39",
+      "surface": "sheet",
+      "label": "eDamage!AY39",
+      "graphNodeIds": [
+        "control.eDamage.cardsMaster"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!AY39"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!AY61",
+      "surface": "sheet",
+      "label": "eDamage!AY61",
+      "graphNodeIds": [
+        "display.eDamage.perksMaster"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!AY61"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!BB5",
+      "surface": "sheet",
+      "label": "eDamage!BB5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!BH33",
+      "surface": "sheet",
+      "label": "eDamage!BH33",
+      "graphNodeIds": [
+        "gate.eDamage.spotlightOwned"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!BH33"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!BM39",
+      "surface": "sheet",
+      "label": "eDamage!BM39",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!BO5",
+      "surface": "sheet",
+      "label": "eDamage!BO5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!BP5",
+      "surface": "sheet",
+      "label": "eDamage!BP5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!BS5",
+      "surface": "sheet",
+      "label": "eDamage!BS5",
+      "graphNodeIds": [
+        "control.eDamage.poisonSwampLabLevel"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!BS5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!CN5",
+      "surface": "sheet",
+      "label": "eDamage!CN5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!CX6",
+      "surface": "sheet",
+      "label": "eDamage!CX6",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!CX7",
+      "surface": "sheet",
+      "label": "eDamage!CX7",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!CX9",
+      "surface": "sheet",
+      "label": "eDamage!CX9",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!CZ5",
+      "surface": "sheet",
+      "label": "eDamage!CZ5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!D5",
+      "surface": "sheet",
+      "label": "eDamage!D5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!D6",
+      "surface": "sheet",
+      "label": "eDamage!D6",
+      "graphNodeIds": [
+        "display.eDamage.pathDuration"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!D6"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!DA5",
+      "surface": "sheet",
+      "label": "eDamage!DA5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!DB5",
+      "surface": "sheet",
+      "label": "eDamage!DB5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!DC5",
+      "surface": "sheet",
+      "label": "eDamage!DC5",
+      "graphNodeIds": [
+        "stat.eDamage.shockMultiplier"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!DC5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!DD5",
+      "surface": "sheet",
+      "label": "eDamage!DD5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!DG5",
+      "surface": "sheet",
+      "label": "eDamage!DG5",
+      "graphNodeIds": [
+        "stat.eDamage.projectFundingMultiplier"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!DG5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!DH5",
+      "surface": "sheet",
+      "label": "eDamage!DH5",
+      "graphNodeIds": [
+        "stat.eDamage.ampStrikeMultiplier"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!DH5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!DI5",
+      "surface": "sheet",
+      "label": "eDamage!DI5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!DL5",
+      "surface": "sheet",
+      "label": "eDamage!DL5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!DZ5",
+      "surface": "sheet",
+      "label": "eDamage!DZ5",
+      "graphNodeIds": [
+        "stat.eDamage.maxRendArmorMultiplier"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!DZ5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!EA5",
+      "surface": "sheet",
+      "label": "eDamage!EA5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!EC5",
+      "surface": "sheet",
+      "label": "eDamage!EC5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!EH5",
+      "surface": "sheet",
+      "label": "eDamage!EH5",
+      "graphNodeIds": [
+        "stat.eDamage.spotlightMissilesDps"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!EH5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!EL5",
+      "surface": "sheet",
+      "label": "eDamage!EL5",
+      "graphNodeIds": [
+        "stat.eDamage.innerLandMinesDps"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!EL5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!EN5",
+      "surface": "sheet",
+      "label": "eDamage!EN5",
+      "graphNodeIds": [
+        "stat.eDamage.coreModulePair"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!EN5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!EP5",
+      "surface": "sheet",
+      "label": "eDamage!EP5",
+      "graphNodeIds": [
+        "stat.eDamage.chronoSlowMultiplier"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!EP5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!EQ5",
+      "surface": "sheet",
+      "label": "eDamage!EQ5",
+      "graphNodeIds": [
+        "stat.eDamage.chronoLoopMultiplier"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!EQ5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!ER5",
+      "surface": "sheet",
+      "label": "eDamage!ER5",
+      "graphNodeIds": [
+        "stat.eDamage.chronoTotalMultiplier"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!ER5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!ES5",
+      "surface": "sheet",
+      "label": "eDamage!ES5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!EV5",
+      "surface": "sheet",
+      "label": "eDamage!EV5",
+      "graphNodeIds": [
+        "stat.eDamage.critChanceMasteryShadow"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!EV5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!FF2",
+      "surface": "sheet",
+      "label": "eDamage!FF2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!FI5",
+      "surface": "sheet",
+      "label": "eDamage!FI5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!FM5",
+      "surface": "sheet",
+      "label": "eDamage!FM5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!FV2",
+      "surface": "sheet",
+      "label": "eDamage!FV2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!FY2",
+      "surface": "sheet",
+      "label": "eDamage!FY2",
+      "graphNodeIds": [
+        "hide.eDamage.improveTradeOffPerksColumn"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eDamage!FY2"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!GK5",
+      "surface": "sheet",
+      "label": "eDamage!GK5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!GO5",
+      "surface": "sheet",
+      "label": "eDamage!GO5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!H6",
+      "surface": "sheet",
+      "label": "eDamage!H6",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!HD4",
+      "surface": "sheet",
+      "label": "eDamage!HD4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!L3",
+      "surface": "sheet",
+      "label": "eDamage!L3",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!O5",
+      "surface": "sheet",
+      "label": "eDamage!O5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Discount!AY14",
+      "surface": "sheet",
+      "label": "eEcon Discount!AY14",
+      "graphNodeIds": [
+        "display.eEconDiscount.mirroredHideRetroactive"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon Discount!AY14"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Discount!CL4",
+      "surface": "sheet",
+      "label": "eEcon Discount!CL4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Discount!CS4",
+      "surface": "sheet",
+      "label": "eEcon Discount!CS4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Stones!AZ18",
+      "surface": "sheet",
+      "label": "eEcon Stones!AZ18",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Stones!CA5",
+      "surface": "sheet",
+      "label": "eEcon Stones!CA5",
+      "graphNodeIds": [
+        "display.eEconStones.syncedUwCooldown"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon Stones!CA5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Stones!DM2",
+      "surface": "sheet",
+      "label": "eEcon Stones!DM2",
+      "graphNodeIds": [
+        "hide.eEconStones.uwTargetColumn"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon Stones!DM2"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Stones!DP2",
+      "surface": "sheet",
+      "label": "eEcon Stones!DP2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Stones!DQ2",
+      "surface": "sheet",
+      "label": "eEcon Stones!DQ2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Stones!DW5",
+      "surface": "sheet",
+      "label": "eEcon Stones!DW5",
+      "graphNodeIds": [
+        "candidate.eEcon.stone.UwCdComposite",
+        "stat.eEconStones.uwCooldownBundle"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon Stones!DW5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Stones!EA2",
+      "surface": "sheet",
+      "label": "eEcon Stones!EA2",
+      "graphNodeIds": [
+        "hide.eEconStones.masteryColumns"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon Stones!EA2"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Stones!EA5",
+      "surface": "sheet",
+      "label": "eEcon Stones!EA5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Stones!EC5",
+      "surface": "sheet",
+      "label": "eEcon Stones!EC5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon Stones!EG4",
+      "surface": "sheet",
+      "label": "eEcon Stones!EG4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AW35",
+      "surface": "sheet",
+      "label": "eEcon!AW35",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AW45",
+      "surface": "sheet",
+      "label": "eEcon!AW45",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AX29",
+      "surface": "sheet",
+      "label": "eEcon!AX29",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AX32",
+      "surface": "sheet",
+      "label": "eEcon!AX32",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AX36",
+      "surface": "sheet",
+      "label": "eEcon!AX36",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AZ11",
+      "surface": "sheet",
+      "label": "eEcon!AZ11",
+      "graphNodeIds": [
+        "control.eEcon.hideNonUnlockedLabs"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!AZ11"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AZ12",
+      "surface": "sheet",
+      "label": "eEcon!AZ12",
+      "graphNodeIds": [
+        "control.eEcon.showLabs"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!AZ12"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AZ13",
+      "surface": "sheet",
+      "label": "eEcon!AZ13",
+      "graphNodeIds": [
+        "control.eEcon.showEnhancements"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!AZ13"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AZ17",
+      "surface": "sheet",
+      "label": "eEcon!AZ17",
+      "graphNodeIds": [
+        "control.eEcon.keepUwCdSynced"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!AZ17"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AZ19",
+      "surface": "sheet",
+      "label": "eEcon!AZ19",
+      "graphNodeIds": [
+        "control.eEcon.blackHoleKillShare"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!AZ19"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AZ28",
+      "surface": "sheet",
+      "label": "eEcon!AZ28",
+      "graphNodeIds": [
+        "control.eEcon.cardsMaster"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!AZ28"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AZ34",
+      "surface": "sheet",
+      "label": "eEcon!AZ34",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AZ43",
+      "surface": "sheet",
+      "label": "eEcon!AZ43",
+      "graphNodeIds": [
+        "control.eEcon.perksMaster"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!AZ43"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!AZ45",
+      "surface": "sheet",
+      "label": "eEcon!AZ45",
+      "graphNodeIds": [
+        "display.eEcon.perkActiveBlock"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!AZ45"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!BD20",
+      "surface": "sheet",
+      "label": "eEcon!BD20",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!DL5",
+      "surface": "sheet",
+      "label": "eEcon!DL5",
+      "graphNodeIds": [
+        "stat.eEcon.uwCooldownSync"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!DL5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!DS5",
+      "surface": "sheet",
+      "label": "eEcon!DS5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!DV2",
+      "surface": "sheet",
+      "label": "eEcon!DV2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!DW5",
+      "surface": "sheet",
+      "label": "eEcon!DW5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!E4",
+      "surface": "sheet",
+      "label": "eEcon!E4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!E6",
+      "surface": "sheet",
+      "label": "eEcon!E6",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!EF5",
+      "surface": "sheet",
+      "label": "eEcon!EF5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!EG5",
+      "surface": "sheet",
+      "label": "eEcon!EG5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!EL5",
+      "surface": "sheet",
+      "label": "eEcon!EL5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!EO2",
+      "surface": "sheet",
+      "label": "eEcon!EO2",
+      "graphNodeIds": [
+        "hide.eEcon.EO2.coinBonus"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!EO2"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!EP2",
+      "surface": "sheet",
+      "label": "eEcon!EP2",
+      "graphNodeIds": [
+        "hide.eEcon.EP2.freeUpgrades"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!EP2"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!ET4",
+      "surface": "sheet",
+      "label": "eEcon!ET4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!O3",
+      "surface": "sheet",
+      "label": "eEcon!O3",
+      "graphNodeIds": [
+        "control.eEcon.costMode"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eEcon!O3"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!O5",
+      "surface": "sheet",
+      "label": "eEcon!O5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eEcon!O6",
+      "surface": "sheet",
+      "label": "eEcon!O6",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eHP!AJ22",
+      "surface": "sheet",
+      "label": "eHP!AJ22",
+      "graphNodeIds": [
+        "control.eHP.rowsCalculated"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eHP!AJ22"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eHP!AL3",
+      "surface": "sheet",
+      "label": "eHP!AL3",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eHP!AY13",
+      "surface": "sheet",
+      "label": "eHP!AY13",
+      "graphNodeIds": [
+        "control.eHP.ignoreTargetLevels"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eHP!AY13"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eHP!AY14",
+      "surface": "sheet",
+      "label": "eHP!AY14",
+      "graphNodeIds": [
+        "control.eHP.hideNonUnlockedLabs"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eHP!AY14"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eHP!AY16",
+      "surface": "sheet",
+      "label": "eHP!AY16",
+      "graphNodeIds": [
+        "control.eHP.cardsMaster"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eHP!AY16"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eHP!CP5",
+      "surface": "sheet",
+      "label": "eHP!CP5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eHP!CS5",
+      "surface": "sheet",
+      "label": "eHP!CS5",
+      "graphNodeIds": [
+        "stat.eHP.currentEffectiveHealth"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eHP!CS5"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eHP!DE5",
+      "surface": "sheet",
+      "label": "eHP!DE5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eHP!DT2",
+      "surface": "sheet",
+      "label": "eHP!DT2",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eHP!DT5",
+      "surface": "sheet",
+      "label": "eHP!DT5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eHP!O5",
+      "surface": "sheet",
+      "label": "eHP!O5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eRegen!AL3",
+      "surface": "sheet",
+      "label": "eRegen!AL3",
+      "graphNodeIds": [
+        "display.eRegen.mirroredPanel"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "graph byCell eRegen!AL3"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eRegen!BO4",
+      "surface": "sheet",
+      "label": "eRegen!BO4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eRegen!BY5",
+      "surface": "sheet",
+      "label": "eRegen!BY5",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eRegen!CB4",
+      "surface": "sheet",
+      "label": "eRegen!CB4",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "reason": "Cited in effective-paths-*.ts; not yet a graph node — explicit unknown (not a silent gap)",
+      "sources": [
+        "ep planner citation scan"
+      ],
+      "reviewedAt": "2026-08-30"
+    },
+    {
+      "id": "eDamage!IG4",
+      "surface": "sheet",
+      "label": "eDamage!IG4",
+      "graphNodeIds": [
+        "candidate.eDamage.currentMatrix"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "canonical v5.11.08.10 eDamage!IG4:JZ4 consumed by H6"
+      ],
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "eEcon!EX4",
+      "surface": "sheet",
+      "label": "eEcon!EX4",
+      "graphNodeIds": [
+        "candidate.eEcon.currentMatrix"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "canonical v5.11.08.10 eEcon!EX4:FU4 consumed by G6"
+      ],
+      "reviewedAt": "2026-11-05"
+    }
+  ]
+}

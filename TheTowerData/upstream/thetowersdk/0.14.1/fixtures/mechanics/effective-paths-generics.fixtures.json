@@ -1,0 +1,262 @@
+{
+ "assistSubCap": [
+  {
+   "hasAssist": true,
+   "stone": 58,
+   "lab": 0,
+   "sheet": 0.59
+  },
+  {
+   "hasAssist": true,
+   "stone": 12,
+   "lab": 28,
+   "sheet": 0.41
+  },
+  {
+   "hasAssist": true,
+   "stone": 14,
+   "lab": 24,
+   "sheet": 0.39
+  },
+  {
+   "hasAssist": true,
+   "stone": 10,
+   "lab": 10,
+   "sheet": 0.21
+  },
+  {
+   "hasAssist": false,
+   "stone": 4,
+   "lab": 13,
+   "sheet": 0
+  },
+  {
+   "hasAssist": true,
+   "stone": 29,
+   "lab": 19,
+   "sheet": 0.49
+  },
+  {
+   "hasAssist": true,
+   "stone": 29,
+   "lab": 25,
+   "sheet": 0.55
+  },
+  {
+   "hasAssist": false,
+   "stone": 40,
+   "lab": 18,
+   "sheet": 0
+  },
+  {
+   "hasAssist": true,
+   "stone": 11,
+   "lab": 15,
+   "sheet": 0.27
+  },
+  {
+   "hasAssist": true,
+   "stone": 10,
+   "lab": 20,
+   "sheet": 0.31
+  },
+  {
+   "hasAssist": false,
+   "stone": 9,
+   "lab": 3,
+   "sheet": 0
+  },
+  {
+   "hasAssist": true,
+   "stone": 35,
+   "lab": 26,
+   "sheet": 0.62
+  },
+  {
+   "hasAssist": true,
+   "stone": 66,
+   "lab": 6,
+   "sheet": 0.73
+  },
+  {
+   "hasAssist": true,
+   "stone": 13,
+   "lab": 14,
+   "sheet": 0.28
+  }
+ ],
+ "moduleBonus": [
+  {
+   "prim": 6.03,
+   "hasAssist": true,
+   "ass": 2.4699999999999998,
+   "stone": 8,
+   "lab": 13,
+   "sheet": 7.980101999999986
+  },
+  {
+   "prim": 3.38,
+   "hasAssist": true,
+   "ass": 10.87,
+   "stone": 68,
+   "lab": 1,
+   "sheet": 26.732419999999998
+  },
+  {
+   "prim": 12.02,
+   "hasAssist": true,
+   "ass": 3.87,
+   "stone": 13,
+   "lab": 19,
+   "sheet": 23.404142
+  },
+  {
+   "prim": 1.3,
+   "hasAssist": true,
+   "ass": 13.85,
+   "stone": 65,
+   "lab": 17,
+   "sheet": 15.16515
+  },
+  {
+   "prim": 2.61,
+   "hasAssist": false,
+   "ass": 2.55,
+   "stone": 10,
+   "lab": 0,
+   "sheet": 2.61
+  },
+  {
+   "prim": 0.65,
+   "hasAssist": true,
+   "ass": 2.65,
+   "stone": 45,
+   "lab": 1,
+   "sheet": 1.1540750000000002
+  },
+  {
+   "prim": 18.12,
+   "hasAssist": false,
+   "ass": 6.02,
+   "stone": 11,
+   "lab": 30,
+   "sheet": 18.12
+  },
+  {
+   "prim": 15.1,
+   "hasAssist": false,
+   "ass": 7.63,
+   "stone": 83,
+   "lab": 5,
+   "sheet": 15.1
+  },
+  {
+   "prim": 4,
+   "hasAssist": true,
+   "ass": 15.53,
+   "stone": 48,
+   "lab": 23,
+   "sheet": 45.846399999999996
+  },
+  {
+   "prim": 12.16,
+   "hasAssist": true,
+   "ass": 11.02,
+   "stone": 67,
+   "lab": 11,
+   "sheet": 108.41612799999999
+  },
+  {
+   "prim": 15.84,
+   "hasAssist": false,
+   "ass": 6.48,
+   "stone": 98,
+   "lab": 28,
+   "sheet": 15.84
+  },
+  {
+   "prim": 5.77,
+   "hasAssist": false,
+   "ass": 5.8,
+   "stone": 56,
+   "lab": 21,
+   "sheet": 5.77
+  },
+  {
+   "prim": 7.66,
+   "hasAssist": true,
+   "ass": 14.42,
+   "stone": 60,
+   "lab": 27,
+   "sheet": 98.121536
+  },
+  {
+   "prim": 13.53,
+   "hasAssist": true,
+   "ass": 3.02,
+   "stone": 90,
+   "lab": 12,
+   "sheet": 41.680518
+  }
+ ],
+ "standardPerksBonus": [
+  {
+   "level": 19,
+   "sheet": 1.19
+  },
+  {
+   "level": 7,
+   "sheet": 1.07
+  },
+  {
+   "level": 16,
+   "sheet": 1.16
+  },
+  {
+   "level": 45,
+   "sheet": 1.45
+  },
+  {
+   "level": 54,
+   "sheet": 1.54
+  },
+  {
+   "level": 35,
+   "sheet": 1.35
+  },
+  {
+   "level": 38,
+   "sheet": 1.38
+  },
+  {
+   "level": 46,
+   "sheet": 1.46
+  }
+ ],
+ "moduleLevelLimit": [
+  {
+   "text": "none",
+   "sheet": 0
+  },
+  {
+   "text": "all",
+   "sheet": 300
+  },
+  {
+   "text": "240",
+   "sheet": 240
+  },
+  {
+   "text": "160 (locked)",
+   "sheet": 160
+  },
+  {
+   "text": "x",
+   "sheet": 0
+  },
+  {
+   "text": "",
+   "sheet": 0
+  }
+ ]
+}

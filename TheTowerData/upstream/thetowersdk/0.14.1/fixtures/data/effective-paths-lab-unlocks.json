@@ -1,0 +1,1022 @@
+{
+ "source": "Effective Paths spreadsheet, DVT_Laboratory_Unlock tab",
+ "url": "https://docs.google.com/spreadsheets/d/1YwZtKP6B4WYhRba5T6APJ1YxKNdfnIGQnprgnxmO7zc/edit?gid=421045311",
+ "unlockCount": 203,
+ "unlocks": [
+  {
+   "name": "Amp Bot - Cooldown",
+   "tier": 5,
+   "wave": 90
+  },
+  {
+   "name": "Amp Bot - Duration",
+   "tier": 10,
+   "wave": 60
+  },
+  {
+   "name": "Area of Effect Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Armor Effect Bans",
+   "tier": 2,
+   "wave": 20
+  },
+  {
+   "name": "Armored Enemies",
+   "tier": 20,
+   "wave": 60
+  },
+  {
+   "name": "Assist Module Bonus - Armor",
+   "tier": 19,
+   "wave": 50
+  },
+  {
+   "name": "Assist Module Bonus - Cannon",
+   "tier": 19,
+   "wave": 50
+  },
+  {
+   "name": "Assist Module Bonus - Core",
+   "tier": 19,
+   "wave": 50
+  },
+  {
+   "name": "Assist Module Bonus - Generator",
+   "tier": 19,
+   "wave": 50
+  },
+  {
+   "name": "Assist Module Substats - Armor",
+   "tier": 19,
+   "wave": 50
+  },
+  {
+   "name": "Assist Module Substats - Cannon",
+   "tier": 19,
+   "wave": 50
+  },
+  {
+   "name": "Assist Module Substats - Core",
+   "tier": 19,
+   "wave": 50
+  },
+  {
+   "name": "Assist Module Substats - Generator",
+   "tier": 19,
+   "wave": 50
+  },
+  {
+   "name": "Attack Speed Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Auto Pick Perks",
+   "tier": 4,
+   "wave": 50
+  },
+  {
+   "name": "Auto Pick Ranking",
+   "tier": 6,
+   "wave": 10
+  },
+  {
+   "name": "Ban Perks",
+   "tier": 5,
+   "wave": 40
+  },
+  {
+   "name": "Basic Enemy Attack",
+   "tier": 9,
+   "wave": 10
+  },
+  {
+   "name": "Basic Enemy Health",
+   "tier": 9,
+   "wave": 10
+  },
+  {
+   "name": "Basic's Ultimate",
+   "tier": 19,
+   "wave": 500
+  },
+  {
+   "name": "Battle Condition Reduction",
+   "tier": 18,
+   "wave": 1000
+  },
+  {
+   "name": "Berserker Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Black Hole Coin Bonus",
+   "tier": 5,
+   "wave": 150
+  },
+  {
+   "name": "Black Hole Damage",
+   "tier": 5,
+   "wave": 150
+  },
+  {
+   "name": "Black Hole Disable Ranged Enemies",
+   "tier": 14,
+   "wave": 20
+  },
+  {
+   "name": "Boss Attack",
+   "tier": 9,
+   "wave": 50
+  },
+  {
+   "name": "Boss Health",
+   "tier": 9,
+   "wave": 50
+  },
+  {
+   "name": "Boss's Ultimate",
+   "tier": 19,
+   "wave": 500
+  },
+  {
+   "name": "Bot Bot - Cooldown",
+   "tier": 10,
+   "wave": 60
+  },
+  {
+   "name": "Bot Bot - Duration",
+   "tier": 10,
+   "wave": 60
+  },
+  {
+   "name": "Buy Multiplier",
+   "tier": 2,
+   "wave": 20
+  },
+  {
+   "name": "Cannon Effect Bans",
+   "tier": 2,
+   "wave": 20
+  },
+  {
+   "name": "Card Presets",
+   "tier": 1,
+   "wave": 400
+  },
+  {
+   "name": "Cash Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Chain Lightning Shock",
+   "tier": 7,
+   "wave": 60
+  },
+  {
+   "name": "Chain Thunder",
+   "tier": 16,
+   "wave": 60
+  },
+  {
+   "name": "Chrono Field Damage Reduction",
+   "tier": 7,
+   "wave": 90
+  },
+  {
+   "name": "Chrono Field Duration",
+   "tier": 7,
+   "wave": 90
+  },
+  {
+   "name": "Chrono Field Range",
+   "tier": 7,
+   "wave": 90
+  },
+  {
+   "name": "Chrono Field Reduction %",
+   "tier": 7,
+   "wave": 90
+  },
+  {
+   "name": "Coins Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Common Drop Chance",
+   "tier": 4,
+   "wave": 70
+  },
+  {
+   "name": "Core Effect Bans",
+   "tier": 2,
+   "wave": 20
+  },
+  {
+   "name": "Critical Chance Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Critical Coin Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Daily Mission Shards",
+   "tier": 4,
+   "wave": 70
+  },
+  {
+   "name": "Damage / Meter",
+   "tier": 3,
+   "wave": 30
+  },
+  {
+   "name": "Damage Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Death Defy Down",
+   "tier": 21,
+   "wave": 1000
+  },
+  {
+   "name": "Death Ray Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Death Ray Resistance",
+   "tier": 19,
+   "wave": 100
+  },
+  {
+   "name": "Death Wave Armor Stripping",
+   "tier": 3,
+   "wave": 250
+  },
+  {
+   "name": "Death Wave Cells Bonus",
+   "tier": 3,
+   "wave": 250
+  },
+  {
+   "name": "Death Wave Coin Bonus",
+   "tier": 3,
+   "wave": 250
+  },
+  {
+   "name": "Death Wave Damage Amplifier",
+   "tier": 3,
+   "wave": 250
+  },
+  {
+   "name": "Death Wave Health",
+   "tier": 3,
+   "wave": 250
+  },
+  {
+   "name": "Defense %",
+   "tier": 5,
+   "wave": 30
+  },
+  {
+   "name": "Demon Mode Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Dissonant Echo - Attack",
+   "tier": 17,
+   "wave": 60
+  },
+  {
+   "name": "Dissonant Echo - Defense",
+   "tier": 17,
+   "wave": 60
+  },
+  {
+   "name": "Dissonant Echo - Ultimate Weapons",
+   "tier": 17,
+   "wave": 60
+  },
+  {
+   "name": "Dissonant Echo - Utility",
+   "tier": 17,
+   "wave": 60
+  },
+  {
+   "name": "Double Death Ray",
+   "tier": 3,
+   "wave": 300
+  },
+  {
+   "name": "Enemy Attack Level Skip",
+   "tier": 11,
+   "wave": 200
+  },
+  {
+   "name": "Enemy Attack Speed",
+   "tier": 20,
+   "wave": 60
+  },
+  {
+   "name": "Enemy Balance Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Enemy Health Level Skip",
+   "tier": 11,
+   "wave": 200
+  },
+  {
+   "name": "Enemy Level Skip Reduction",
+   "tier": 21,
+   "wave": 1000
+  },
+  {
+   "name": "Enemy Speed",
+   "tier": 20,
+   "wave": 60
+  },
+  {
+   "name": "Energy Net Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Energy Shield Extra Hit",
+   "tier": 4,
+   "wave": 300
+  },
+  {
+   "name": "Energy Shield Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Energy Shields Down",
+   "tier": 21,
+   "wave": 1000
+  },
+  {
+   "name": "Enhancement Attack - Coin Discount",
+   "tier": 21,
+   "wave": 60
+  },
+  {
+   "name": "Enhancement Defense - Coin Discount",
+   "tier": 21,
+   "wave": 60
+  },
+  {
+   "name": "Enhancement Utility - Coin Discount",
+   "tier": 21,
+   "wave": 60
+  },
+  {
+   "name": "Extra Black Hole",
+   "tier": 5,
+   "wave": 500
+  },
+  {
+   "name": "Extra Defense Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Extra Extra Orbs",
+   "tier": 6,
+   "wave": 80
+  },
+  {
+   "name": "Extra Orb Adjuster",
+   "tier": 6,
+   "wave": 50
+  },
+  {
+   "name": "Extra Orb Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Fast Enemy Attack",
+   "tier": 9,
+   "wave": 20
+  },
+  {
+   "name": "Fast Enemy Health",
+   "tier": 9,
+   "wave": 20
+  },
+  {
+   "name": "Fast Enemy Speed",
+   "tier": 9,
+   "wave": 300
+  },
+  {
+   "name": "Fast's Ultimate",
+   "tier": 19,
+   "wave": 500
+  },
+  {
+   "name": "First Perk Choice",
+   "tier": 2,
+   "wave": 250
+  },
+  {
+   "name": "Flame Bot - Burn Stack",
+   "tier": 10,
+   "wave": 60
+  },
+  {
+   "name": "Flame Bot - Cooldown",
+   "tier": 5,
+   "wave": 60
+  },
+  {
+   "name": "Fortress Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Free Upgrades Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Garlic Thorns",
+   "tier": 2,
+   "wave": 1000
+  },
+  {
+   "name": "Generator Effect Bans",
+   "tier": 2,
+   "wave": 20
+  },
+  {
+   "name": "Gold Bot - Cooldown",
+   "tier": 5,
+   "wave": 80
+  },
+  {
+   "name": "Gold Bot - Duration",
+   "tier": 10,
+   "wave": 60
+  },
+  {
+   "name": "Golden Tower Bonus",
+   "tier": 4,
+   "wave": 200
+  },
+  {
+   "name": "Golden Tower Duration",
+   "tier": 4,
+   "wave": 200
+  },
+  {
+   "name": "Health Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Health Regen Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Improve Trade-off Perks",
+   "tier": 2,
+   "wave": 400
+  },
+  {
+   "name": "Inner Mine Blast Radius",
+   "tier": 7,
+   "wave": 40
+  },
+  {
+   "name": "Inner Mine Rotation Speed",
+   "tier": 7,
+   "wave": 40
+  },
+  {
+   "name": "Inner Mine Stun",
+   "tier": 7,
+   "wave": 40
+  },
+  {
+   "name": "Interest",
+   "tier": 2,
+   "wave": 80
+  },
+  {
+   "name": "Intro Sprint Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Knockback Resistance",
+   "tier": 19,
+   "wave": 100
+  },
+  {
+   "name": "Labs Speed",
+   "tier": 1,
+   "wave": 150
+  },
+  {
+   "name": "Land Mine Damage",
+   "tier": 6,
+   "wave": 30
+  },
+  {
+   "name": "Land Mine Decay",
+   "tier": 6,
+   "wave": 30
+  },
+  {
+   "name": "Land Mine Stun Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Light Speed Shots",
+   "tier": 7,
+   "wave": 10
+  },
+  {
+   "name": "Lightning Amplifier - Scatter",
+   "tier": 16,
+   "wave": 60
+  },
+  {
+   "name": "Max Interest",
+   "tier": 2,
+   "wave": 80
+  },
+  {
+   "name": "Max Rend Armor Multiplier",
+   "tier": 13,
+   "wave": 10
+  },
+  {
+   "name": "Missile Amplifier",
+   "tier": 7,
+   "wave": 30
+  },
+  {
+   "name": "Missile Barrage",
+   "tier": 8,
+   "wave": 50
+  },
+  {
+   "name": "Missile Barrage Quantity",
+   "tier": 8,
+   "wave": 50
+  },
+  {
+   "name": "Missile Despawn Time",
+   "tier": 7,
+   "wave": 30
+  },
+  {
+   "name": "Missile Radius",
+   "tier": 7,
+   "wave": 30
+  },
+  {
+   "name": "Missiles Explosion",
+   "tier": 7,
+   "wave": 30
+  },
+  {
+   "name": "Module Coin Cost",
+   "tier": 10,
+   "wave": 40
+  },
+  {
+   "name": "Module Shards Cost",
+   "tier": 10,
+   "wave": 40
+  },
+  {
+   "name": "More Enemies",
+   "tier": 20,
+   "wave": 60
+  },
+  {
+   "name": "More Round Stats",
+   "tier": 1,
+   "wave": 250
+  },
+  {
+   "name": "Nuke Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Orb Boss Hit",
+   "tier": 6,
+   "wave": 750
+  },
+  {
+   "name": "Orb Resistance",
+   "tier": 19,
+   "wave": 100
+  },
+  {
+   "name": "Orbs Speed",
+   "tier": 3,
+   "wave": 80
+  },
+  {
+   "name": "Package After Boss",
+   "tier": 3,
+   "wave": 200
+  },
+  {
+   "name": "Perk Option Quantity",
+   "tier": 4,
+   "wave": 80
+  },
+  {
+   "name": "Plasma Cannon Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Plasma Cannon Resistance",
+   "tier": 19,
+   "wave": 100
+  },
+  {
+   "name": "Protector Damage Reduction",
+   "tier": 9,
+   "wave": 400
+  },
+  {
+   "name": "Protector Health",
+   "tier": 9,
+   "wave": 60
+  },
+  {
+   "name": "Protector Radius",
+   "tier": 9,
+   "wave": 60
+  },
+  {
+   "name": "Protector's Ultimate",
+   "tier": 19,
+   "wave": 500
+  },
+  {
+   "name": "Range",
+   "tier": 2,
+   "wave": 30
+  },
+  {
+   "name": "Range Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Ranged Enemy Attack",
+   "tier": 9,
+   "wave": 40
+  },
+  {
+   "name": "Ranged Enemy Health",
+   "tier": 9,
+   "wave": 40
+  },
+  {
+   "name": "Ranged Enemy Range",
+   "tier": 13,
+   "wave": 80
+  },
+  {
+   "name": "Ranged Ultimate",
+   "tier": 19,
+   "wave": 500
+  },
+  {
+   "name": "Rare Drop Chance",
+   "tier": 10,
+   "wave": 40
+  },
+  {
+   "name": "Ray Enemy Attack",
+   "tier": 19,
+   "wave": 60
+  },
+  {
+   "name": "Ray Enemy Health",
+   "tier": 19,
+   "wave": 60
+  },
+  {
+   "name": "Recharge Demon Mode",
+   "tier": 14,
+   "wave": 60
+  },
+  {
+   "name": "Recharge Missile Barrage",
+   "tier": 14,
+   "wave": 60
+  },
+  {
+   "name": "Recharge Nuke",
+   "tier": 14,
+   "wave": 60
+  },
+  {
+   "name": "Recharge Second Wind",
+   "tier": 14,
+   "wave": 60
+  },
+  {
+   "name": "Recovery Package Amount",
+   "tier": 6,
+   "wave": 150
+  },
+  {
+   "name": "Recovery Package Chance",
+   "tier": 6,
+   "wave": 150
+  },
+  {
+   "name": "Recovery Package Chance Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Recovery Package Max",
+   "tier": 6,
+   "wave": 150
+  },
+  {
+   "name": "Reroll Daily Mission",
+   "tier": 4,
+   "wave": 30
+  },
+  {
+   "name": "Reroll Shards",
+   "tier": 4,
+   "wave": 70
+  },
+  {
+   "name": "Scatter Enemy Attack",
+   "tier": 19,
+   "wave": 60
+  },
+  {
+   "name": "Scatter Enemy Health",
+   "tier": 19,
+   "wave": 60
+  },
+  {
+   "name": "Second Wind Blast",
+   "tier": 3,
+   "wave": 150
+  },
+  {
+   "name": "Second Wind Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Shatter Shards",
+   "tier": 16,
+   "wave": 40
+  },
+  {
+   "name": "Shock Chance",
+   "tier": 7,
+   "wave": 60
+  },
+  {
+   "name": "Shock Multiplier",
+   "tier": 7,
+   "wave": 60
+  },
+  {
+   "name": "Shockwave Size",
+   "tier": 3,
+   "wave": 50
+  },
+  {
+   "name": "Slow Aura Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Spotlight Coin Bonus",
+   "tier": 7,
+   "wave": 80
+  },
+  {
+   "name": "Spotlight Missiles",
+   "tier": 3,
+   "wave": 400
+  },
+  {
+   "name": "Standard Perks Bonus",
+   "tier": 2,
+   "wave": 150
+  },
+  {
+   "name": "Super Crit Chance",
+   "tier": 5,
+   "wave": 200
+  },
+  {
+   "name": "Super Crit Multi",
+   "tier": 5,
+   "wave": 200
+  },
+  {
+   "name": "Super Tower Bonus",
+   "tier": 8,
+   "wave": 300
+  },
+  {
+   "name": "Super Tower Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Swamp Radius",
+   "tier": 7,
+   "wave": 50
+  },
+  {
+   "name": "Swamp Rend",
+   "tier": 16,
+   "wave": 60
+  },
+  {
+   "name": "Swamp Rend - Additional Enemies",
+   "tier": 16,
+   "wave": 60
+  },
+  {
+   "name": "Swamp Stun",
+   "tier": 7,
+   "wave": 50
+  },
+  {
+   "name": "Swamp Stun Chance",
+   "tier": 7,
+   "wave": 50
+  },
+  {
+   "name": "Swamp Stun Time",
+   "tier": 7,
+   "wave": 50
+  },
+  {
+   "name": "Tank Enemy Attack",
+   "tier": 9,
+   "wave": 30
+  },
+  {
+   "name": "Tank Enemy Health",
+   "tier": 9,
+   "wave": 30
+  },
+  {
+   "name": "Tank's Ultimate",
+   "tier": 19,
+   "wave": 500
+  },
+  {
+   "name": "Target Priority",
+   "tier": 4,
+   "wave": 150
+  },
+  {
+   "name": "Thorns Resistance",
+   "tier": 19,
+   "wave": 100
+  },
+  {
+   "name": "Thunder Bot - Cooldown",
+   "tier": 5,
+   "wave": 70
+  },
+  {
+   "name": "Thunder Bot - Linger Time",
+   "tier": 10,
+   "wave": 60
+  },
+  {
+   "name": "Ultimate Crit Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Ultimate Weapon Durations",
+   "tier": 21,
+   "wave": 1000
+  },
+  {
+   "name": "Unlock Perks",
+   "tier": 2,
+   "wave": 150
+  },
+  {
+   "name": "Unmerge Module",
+   "tier": 8,
+   "wave": 20
+  },
+  {
+   "name": "Vampire Enemy Attack",
+   "tier": 19,
+   "wave": 60
+  },
+  {
+   "name": "Vampire Enemy Health",
+   "tier": 19,
+   "wave": 60
+  },
+  {
+   "name": "Wall Fortification",
+   "tier": 14,
+   "wave": 40
+  },
+  {
+   "name": "Wall Health",
+   "tier": 8,
+   "wave": 10
+  },
+  {
+   "name": "Wall Invincibility",
+   "tier": 12,
+   "wave": 10
+  },
+  {
+   "name": "Wall Rebuild",
+   "tier": 8,
+   "wave": 10
+  },
+  {
+   "name": "Wall Regen",
+   "tier": 10,
+   "wave": 70
+  },
+  {
+   "name": "Wall Thorns",
+   "tier": 10,
+   "wave": 70
+  },
+  {
+   "name": "Wave Accelerator Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Wave Skip Mastery",
+   "tier": 16,
+   "wave": 100
+  },
+  {
+   "name": "Waves Required",
+   "tier": 2,
+   "wave": 150
+  },
+  {
+   "name": "Workshop Attack Discount",
+   "tier": 2,
+   "wave": 40
+  },
+  {
+   "name": "Workshop Defense Discount",
+   "tier": 2,
+   "wave": 50
+  },
+  {
+   "name": "Workshop Enhancements",
+   "tier": 12,
+   "wave": 60
+  },
+  {
+   "name": "Workshop Respec",
+   "tier": 4,
+   "wave": 30
+  },
+  {
+   "name": "Workshop Utility Discount",
+   "tier": 2,
+   "wave": 60
+  }
+ ]
+}

@@ -1,0 +1,474 @@
+{
+  "schema": 1,
+  "source": {
+    "spreadsheetId": "1YwZtKP6B4WYhRba5T6APJ1YxKNdfnIGQnprgnxmO7zc",
+    "version": "v5.11.08.10",
+    "driveVersion": "82842",
+    "modifiedTime": "2026-11-03T15:59:00.508Z",
+    "xlsxSha256": "78f4eda768d1b81db7f0fdda92a41ab8b95bbca2eb4e63360b04879e73b2a41a",
+    "lambdaCount": 267,
+    "namedRangeCount": 218
+  },
+  "evaluation": {
+    "engine": "Google Sheets",
+    "method": "Captured current LAMBDAs evaluated inline with their changed dependencies inlined; historical oracle workbook data was not used."
+  },
+  "bulletsPerSecond": [
+    {
+      "attackSpeed": 0,
+      "sheet": 0
+    },
+    {
+      "attackSpeed": 2.3,
+      "sheet": 2.2079999999999997
+    },
+    {
+      "attackSpeed": 4,
+      "sheet": 3.36
+    },
+    {
+      "attackSpeed": 8,
+      "sheet": 5.36
+    },
+    {
+      "attackSpeed": 15,
+      "sheet": 7.65
+    },
+    {
+      "attackSpeed": 16,
+      "sheet": 8.08
+    },
+    {
+      "attackSpeed": 16.9,
+      "sheet": 8.5345
+    },
+    {
+      "attackSpeed": 41.99,
+      "sheet": 15.9562
+    },
+    {
+      "attackSpeed": 42,
+      "sheet": 15.75
+    },
+    {
+      "attackSpeed": 100,
+      "sheet": 37.5
+    }
+  ],
+  "rapidFire": [
+    {
+      "input": {
+        "chance": 0,
+        "duration": 0.6,
+        "attackSpeed": 30,
+        "framesPerSecond": 120,
+        "displayedGameSpeed": 5,
+        "lightSpeedShots": false
+      },
+      "sheet": 1
+    },
+    {
+      "input": {
+        "chance": 0.2,
+        "duration": 1,
+        "attackSpeed": 2.29,
+        "framesPerSecond": 120,
+        "displayedGameSpeed": 5,
+        "lightSpeedShots": false
+      },
+      "sheet": 1.6306726507297713
+    },
+    {
+      "input": {
+        "chance": 0.2,
+        "duration": 1,
+        "attackSpeed": 2.3,
+        "framesPerSecond": 120,
+        "displayedGameSpeed": 5,
+        "lightSpeedShots": false
+      },
+      "sheet": 1.6092743428359868
+    },
+    {
+      "input": {
+        "chance": 0.2,
+        "duration": 1,
+        "attackSpeed": 3.99,
+        "framesPerSecond": 120,
+        "displayedGameSpeed": 5,
+        "lightSpeedShots": false
+      },
+      "sheet": 1.7717491117575201
+    },
+    {
+      "input": {
+        "chance": 0.2,
+        "duration": 1,
+        "attackSpeed": 4,
+        "framesPerSecond": 120,
+        "displayedGameSpeed": 5,
+        "lightSpeedShots": false
+      },
+      "sheet": 1.7169954476479516
+    },
+    {
+      "input": {
+        "chance": 0.2,
+        "duration": 1,
+        "attackSpeed": 7.99,
+        "framesPerSecond": 120,
+        "displayedGameSpeed": 5,
+        "lightSpeedShots": false
+      },
+      "sheet": 1.8799612531093457
+    },
+    {
+      "input": {
+        "chance": 0.2,
+        "duration": 1,
+        "attackSpeed": 8,
+        "framesPerSecond": 120,
+        "displayedGameSpeed": 5,
+        "lightSpeedShots": false
+      },
+      "sheet": 1.8188673793701244
+    },
+    {
+      "input": {
+        "chance": 0.5,
+        "duration": 2,
+        "attackSpeed": 100,
+        "framesPerSecond": 30,
+        "displayedGameSpeed": 5,
+        "lightSpeedShots": false
+      },
+      "sheet": 1
+    },
+    {
+      "input": {
+        "chance": 0.5,
+        "duration": 2,
+        "attackSpeed": 100,
+        "framesPerSecond": 120,
+        "displayedGameSpeed": 5,
+        "lightSpeedShots": false
+      },
+      "sheet": 1
+    },
+    {
+      "input": {
+        "chance": 0.5,
+        "duration": 2,
+        "attackSpeed": 100,
+        "framesPerSecond": 120,
+        "displayedGameSpeed": 5,
+        "lightSpeedShots": true
+      },
+      "sheet": 2.624839948783611
+    }
+  ],
+  "chainLightning": [
+    {
+      "input": {
+        "damage": 10,
+        "quantity": 3,
+        "chance": 0.15,
+        "attackSpeed": 20,
+        "rapidFire": 2,
+        "multishot": 3,
+        "bounce": 1.5,
+        "displayedGameSpeed": 5,
+        "framesPerSecond": 120,
+        "lightSpeedShots": false
+      },
+      "sheet": 810
+    },
+    {
+      "input": {
+        "damage": 10,
+        "quantity": 3,
+        "chance": 0.15,
+        "attackSpeed": 20,
+        "rapidFire": 2,
+        "multishot": 3,
+        "bounce": 1.5,
+        "displayedGameSpeed": 5,
+        "framesPerSecond": 120,
+        "lightSpeedShots": true
+      },
+      "sheet": 1052.038791316675
+    },
+    {
+      "input": {
+        "damage": 10,
+        "quantity": 3,
+        "chance": 0.15,
+        "attackSpeed": 20,
+        "rapidFire": 2,
+        "multishot": 3,
+        "bounce": 1.5,
+        "displayedGameSpeed": 5,
+        "framesPerSecond": 60,
+        "lightSpeedShots": true
+      },
+      "sheet": 1899.1172829231555
+    },
+    {
+      "input": {
+        "damage": 10,
+        "quantity": 3,
+        "chance": 0.15,
+        "attackSpeed": 20,
+        "rapidFire": 2,
+        "multishot": 3,
+        "bounce": 1.5,
+        "displayedGameSpeed": 6.25,
+        "framesPerSecond": 120,
+        "lightSpeedShots": true
+      },
+      "sheet": 1281.3144504978302
+    },
+    {
+      "input": {
+        "damage": 10,
+        "quantity": 3,
+        "chance": 0,
+        "attackSpeed": 20,
+        "rapidFire": 2,
+        "multishot": 3,
+        "bounce": 1.5,
+        "displayedGameSpeed": 5,
+        "framesPerSecond": 120,
+        "lightSpeedShots": true
+      },
+      "sheet": 0
+    }
+  ],
+  "amplifiedChainLightning": [
+    {
+      "input": {
+        "damage": 10,
+        "quantity": 3,
+        "chance": 0.15,
+        "attackSpeed": 20,
+        "rapidFire": 2,
+        "multishot": 3,
+        "bounce": 1.5,
+        "displayedGameSpeed": 5,
+        "framesPerSecond": 120,
+        "lightSpeedShots": true,
+        "coverage": 0,
+        "amplificationBonus": 6,
+        "echoHits": 6.5
+      },
+      "sheet": 1052.038791316675
+    },
+    {
+      "input": {
+        "damage": 10,
+        "quantity": 3,
+        "chance": 0.15,
+        "attackSpeed": 20,
+        "rapidFire": 2,
+        "multishot": 3,
+        "bounce": 1.5,
+        "displayedGameSpeed": 5,
+        "framesPerSecond": 120,
+        "lightSpeedShots": true,
+        "coverage": 0.25,
+        "amplificationBonus": 6,
+        "echoHits": 6.5
+      },
+      "sheet": 40565.555938684214
+    },
+    {
+      "input": {
+        "damage": 10,
+        "quantity": 3,
+        "chance": 0.15,
+        "attackSpeed": 20,
+        "rapidFire": 2,
+        "multishot": 3,
+        "bounce": 1.5,
+        "displayedGameSpeed": 5,
+        "framesPerSecond": 120,
+        "lightSpeedShots": false,
+        "coverage": 0.25,
+        "amplificationBonus": 6,
+        "echoHits": 7
+      },
+      "sheet": 9112.5
+    },
+    {
+      "input": {
+        "damage": 10,
+        "quantity": 3,
+        "chance": 0.15,
+        "attackSpeed": 20,
+        "rapidFire": 2,
+        "multishot": 3,
+        "bounce": 1.5,
+        "displayedGameSpeed": 5,
+        "framesPerSecond": 120,
+        "lightSpeedShots": true,
+        "coverage": 1,
+        "amplificationBonus": 6,
+        "echoHits": 6.5
+      },
+      "sheet": 159106.10738078682
+    }
+  ],
+  "effectiveHealth": [
+    {
+      "input": {
+        "health": 100,
+        "armor": 2,
+        "defenseAbsolute": 10,
+        "wallHealth": 0.2,
+        "maxRecovery": 0.3,
+        "defensePercent": 0.5,
+        "chronoFieldReduction": 0.5,
+        "chainThunderReduction": 0.5,
+        "tradeOffReduction": 0.2
+      },
+      "sheet": 2100
+    },
+    {
+      "input": {
+        "health": 100,
+        "armor": 2,
+        "defenseAbsolute": 10,
+        "wallHealth": 2,
+        "maxRecovery": 3,
+        "defensePercent": 0.5,
+        "chronoFieldReduction": 0.5,
+        "chainThunderReduction": 0.5,
+        "tradeOffReduction": 0
+      },
+      "sheet": 8080
+    },
+    {
+      "input": {
+        "health": 100,
+        "armor": 1,
+        "defenseAbsolute": 0,
+        "defensePercent": 0
+      },
+      "sheet": 100
+    }
+  ],
+  "amplifiedWeaponFactors": {
+    "inputAmplifyBotCase": 0,
+    "missileAmplifierLabLevel": 2,
+    "hitsOnSameTarget": 4,
+    "tacticalBarrageSeconds": 0,
+    "coverage": 0.03594674556213017,
+    "deathWaveAndMines": 1.3954142011834318,
+    "poisonSwamp": 1.1797337278106508,
+    "smartMissiles": 1.7651521555367706,
+    "spotlightMissiles": 1.3646027049873202,
+    "sourceCells": [
+      "eDamage!BA63:BA71",
+      "eDamage!EQ5:EX5"
+    ]
+  },
+  "amplifyBot": [
+    {
+      "input": {
+        "towerRangeMetres": 60,
+        "rangeMetres": 30,
+        "durationSeconds": 20,
+        "cooldownSeconds": 100,
+        "bonus": 4,
+        "echoingShotLevel": 2,
+        "allBotsOwned": true,
+        "syncedWithBotBot": true,
+        "botBotBonus": 1.5,
+        "maximumPowerLevel": 1,
+        "lightSpeedShots": true,
+        "unlocked": true
+      },
+      "sheet": 2.3659763313609465
+    },
+    {
+      "input": {
+        "towerRangeMetres": 60,
+        "rangeMetres": 30,
+        "durationSeconds": 20,
+        "cooldownSeconds": 100,
+        "bonus": 4,
+        "echoingShotLevel": 2,
+        "allBotsOwned": true,
+        "syncedWithBotBot": true,
+        "botBotBonus": 1.5,
+        "maximumPowerLevel": 1,
+        "lightSpeedShots": false,
+        "unlocked": true
+      },
+      "sheet": 2.473816568047337
+    },
+    {
+      "input": {
+        "towerRangeMetres": 120,
+        "rangeMetres": 40,
+        "durationSeconds": 30,
+        "cooldownSeconds": 50,
+        "bonus": 3,
+        "echoingShotLevel": 0,
+        "allBotsOwned": false,
+        "syncedWithBotBot": false,
+        "botBotBonus": 1.5,
+        "maximumPowerLevel": 0,
+        "lightSpeedShots": true,
+        "unlocked": true
+      },
+      "sheet": 1.4000000000000001
+    }
+  ],
+  "moduleBonus": [
+    {
+      "input": {
+        "primaryBonus": 2,
+        "primaryLabLevel": 0,
+        "hasAssist": true,
+        "assistBonus": 1.5,
+        "stoneBonusCap": 4,
+        "labBonusCap": 5
+      },
+      "sheet": 2.1
+    },
+    {
+      "input": {
+        "primaryBonus": 2,
+        "primaryLabLevel": 10,
+        "hasAssist": true,
+        "assistBonus": 1.5,
+        "stoneBonusCap": 4,
+        "labBonusCap": 5
+      },
+      "sheet": 2.205
+    },
+    {
+      "input": {
+        "primaryBonus": 2,
+        "primaryLabLevel": 30,
+        "hasAssist": false,
+        "assistBonus": 10,
+        "stoneBonusCap": 4,
+        "labBonusCap": 5
+      },
+      "sheet": 2.3
+    },
+    {
+      "input": {
+        "primaryBonus": 1,
+        "primaryLabLevel": 30,
+        "hasAssist": true,
+        "assistBonus": 1.5,
+        "stoneBonusCap": 4,
+        "labBonusCap": 5
+      },
+      "sheet": 1.05
+    }
+  ]
+}

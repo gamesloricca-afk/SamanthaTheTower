@@ -1,0 +1,81 @@
+name: Publish wiki
+
+# The GitHub wiki is a separate repository (`<repo>.wiki.git`) that is not versioned with
+# the code and not reviewed in a pull request. Everything in it is generated from this
+# repo by `scripts/build-wiki.mjs`, so it cannot drift from the README and docs — and every
+# page says so. Do not edit pages in the wiki UI; they are overwritten on the next push.
+#
+# One-time setup before this can run:
+#   1. Enable the wiki in Settings → Features, and create any page once in the UI. The
+#      `.wiki.git` repository does not exist until a first page is saved, and cloning it
+#      before then fails with "repository not found".
+#   2. Add a secret `WIKI_TOKEN`: a **classic** PAT with the `repo` scope.
+#      Two traps here. The built-in GITHUB_TOKEN cannot push to a wiki repository at all.
+#      And a fine-grained PAT is not a substitute: wiki (`.wiki.git`) access is not covered
+#      by its Contents permission, so it authenticates against the code repo and still fails
+#      against the wiki. Verify before trusting CI:
+#        git clone https://<token>@github.com/TmRxJD/TheTowerSDK.wiki.git
+
+# Manual only. The wiki is normally published from a workstation with `npm run wiki:publish`,
+# which uses whatever git credentials are already present and needs no secret at all. This job
+# needs a WIKI_TOKEN, so leaving it on `push` meant a red run on every commit for a step nobody
+# was relying on — a permanently failing check teaches people to ignore the ones that matter.
+#
+# Set WIKI_TOKEN (classic PAT, `repo` scope) if you want to run it from here instead.
+on:
+  workflow_dispatch:
+
+# Two pushes racing would fight over the same wiki repo.
+concurrency:
+  group: publish-wiki
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # The generator only reads files and writes markdown — no dependencies needed.
+      - name: Render the wiki
+        run: node scripts/build-wiki.mjs --out "$RUNNER_TEMP/wiki-pages"
+
+      - name: Clone the wiki repository
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
+        run: |
+          if [ -z "$WIKI_TOKEN" ]; then
+            echo "WIKI_TOKEN is not set — see the header of this workflow for setup." >&2
+            exit 1
+          fi
+          git clone \
+            "https://x-access-token:${WIKI_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" \
+            "$RUNNER_TEMP/wiki-repo"
+
+      - name: Sync pages
+        run: |
+          cd "$RUNNER_TEMP/wiki-repo"
+          # Delete tracked pages first so a removed source file removes its page too;
+          # copying over the top would leave orphans behind forever.
+          git rm -rq --ignore-unmatch '*.md'
+          cp "$RUNNER_TEMP"/wiki-pages/*.md .
+          git add -A
+
+      - name: Commit and push
+        run: |
+          cd "$RUNNER_TEMP/wiki-repo"
+          if git diff --cached --quiet; then
+            echo "Wiki already matches the sources; nothing to push."
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m "Regenerate wiki from ${GITHUB_SHA:0:7}"
+          git push origin HEAD

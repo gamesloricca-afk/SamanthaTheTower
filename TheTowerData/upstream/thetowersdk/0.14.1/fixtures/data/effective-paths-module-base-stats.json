@@ -1,0 +1,143 @@
+{
+ "source": "Effective Paths spreadsheet, Module Base Stat tab",
+ "url": "https://docs.google.com/spreadsheets/d/1YwZtKP6B4WYhRba5T6APJ1YxKNdfnIGQnprgnxmO7zc/edit?gid=310534174",
+ "note": "Values are the level 1 stat, not a level 0 base.",
+ "rarityCount": 15,
+ "rarities": [
+  {
+   "rarity": "Common",
+   "levelOneStats": {
+    "Cannon Damage": 0.012,
+    "Armor Hp": 0.012,
+    "Generator Coin": 0.011,
+    "Core UW": 0.04
+   }
+  },
+  {
+   "rarity": "Rare",
+   "levelOneStats": {
+    "Cannon Damage": 0.032,
+    "Armor Hp": 0.032,
+    "Generator Coin": 0.013,
+    "Core UW": 0.06
+   }
+  },
+  {
+   "rarity": "Rare+",
+   "levelOneStats": {
+    "Cannon Damage": 0.052,
+    "Armor Hp": 0.052,
+    "Generator Coin": 0.016,
+    "Core UW": 0.09
+   }
+  },
+  {
+   "rarity": "Epic",
+   "levelOneStats": {
+    "Cannon Damage": 0.072,
+    "Armor Hp": 0.072,
+    "Generator Coin": 0.019,
+    "Core UW": 0.13
+   }
+  },
+  {
+   "rarity": "Epic+",
+   "levelOneStats": {
+    "Cannon Damage": 0.102,
+    "Armor Hp": 0.102,
+    "Generator Coin": 0.023,
+    "Core UW": 0.16
+   }
+  },
+  {
+   "rarity": "Legendary",
+   "levelOneStats": {
+    "Cannon Damage": 0.132,
+    "Armor Hp": 0.132,
+    "Generator Coin": 0.026,
+    "Core UW": 0.21
+   }
+  },
+  {
+   "rarity": "Legendary+",
+   "levelOneStats": {
+    "Cannon Damage": 0.162,
+    "Armor Hp": 0.162,
+    "Generator Coin": 0.029,
+    "Core UW": 0.26
+   }
+  },
+  {
+   "rarity": "Mythic",
+   "levelOneStats": {
+    "Cannon Damage": 0.202,
+    "Armor Hp": 0.202,
+    "Generator Coin": 0.033,
+    "Core UW": 0.31
+   }
+  },
+  {
+   "rarity": "Mythic+",
+   "levelOneStats": {
+    "Cannon Damage": 0.252,
+    "Armor Hp": 0.252,
+    "Generator Coin": 0.036,
+    "Core UW": 0.36
+   }
+  },
+  {
+   "rarity": "Ancestral",
+   "levelOneStats": {
+    "Cannon Damage": 0.302,
+    "Armor Hp": 0.302,
+    "Generator Coin": 0.041,
+    "Core UW": 0.41
+   }
+  },
+  {
+   "rarity": "Ancestral 1*",
+   "levelOneStats": {
+    "Cannon Damage": 0.314,
+    "Armor Hp": 0.314,
+    "Generator Coin": 0.043,
+    "Core UW": 0.426
+   }
+  },
+  {
+   "rarity": "Ancestral 2*",
+   "levelOneStats": {
+    "Cannon Damage": 0.326,
+    "Armor Hp": 0.326,
+    "Generator Coin": 0.044,
+    "Core UW": 0.443
+   }
+  },
+  {
+   "rarity": "Ancestral 3*",
+   "levelOneStats": {
+    "Cannon Damage": 0.338,
+    "Armor Hp": 0.338,
+    "Generator Coin": 0.046,
+    "Core UW": 0.459
+   }
+  },
+  {
+   "rarity": "Ancestral 4*",
+   "levelOneStats": {
+    "Cannon Damage": 0.35,
+    "Armor Hp": 0.35,
+    "Generator Coin": 0.048,
+    "Core UW": 0.476
+   }
+  },
+  {
+   "rarity": "Ancestral 5*",
+   "levelOneStats": {
+    "Cannon Damage": 0.362,
+    "Armor Hp": 0.362,
+    "Generator Coin": 0.049,
+    "Core UW": 0.492
+   }
+  }
+ ]
+}

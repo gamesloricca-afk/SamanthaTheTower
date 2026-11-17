@@ -1,0 +1,123 @@
+{
+  "description": "Documents how Guardian chip data is stored in the savedFile format",
+  "guardianHeaders": {
+    "guardianChipUnlocked": "guardianChipUnlocked",
+    "guardianChipLevel": "guardianChipLevel",
+    "guardianChipSlot": "guardianChipSlot"
+  },
+  "fields": {
+    "guardianChipUnlocked": {
+      "description": "Boolean list — one entry per chip in chipOrder. True if that chip is unlocked. Attack and Ally are always unlocked and have no checkbox, so the app emits null for them instead of reading this list; every other chip falls back to false when the entry is missing.",
+      "indexing": "chip index i → guardianChipUnlocked[i]",
+      "alwaysUnlocked": ["Attack", "Ally"]
+    },
+    "guardianChipLevel": {
+      "description": "Flat integer list — 3 upgrade levels per chip, packed consecutively. For chip at index i, its upgrades occupy indices i*3, i*3+1, i*3+2, corresponding to upgrades[0], upgrades[1], upgrades[2] in targetGuardians. Levels are written as String(level).padStart(2, '0'); a falsy level becomes '00'. Slots whose upgrade name is null (unreleased chips) are skipped.",
+      "indexing": "chip index i, upgrade index j (0-2) → guardianChipLevel[i * 3 + j]"
+    },
+    "guardianChipSlot": {
+      "description": "List of chip indices that are currently equipped. A chip counts as equipped when its own index appears anywhere in this list, so the app tests guardianChipSlot.includes(i) rather than reading a fixed slot position.",
+      "indexing": "chip index i → equipped = guardianChipSlot.includes(i)",
+      "status": "in use"
+    }
+  },
+  "presets": {
+    "description": "Guardians have no preset system in the save file. The app emits a single preset named 'Farming' holding every chip's levels and equipped state."
+  },
+  "chipOrder": {
+    "0": "Bounty",
+    "1": "Catch",
+    "2": "Attack",
+    "3": "Scare",
+    "4": "Rush",
+    "5": "Ally",
+    "6": "Fetch",
+    "7": "Summon",
+    "8": "Scout"
+  },
+  "chips": {
+    "Bounty": {
+      "chipIndex": 0,
+      "released": true,
+      "upgrades": {
+        "0": { "name": "Multiplier", "levelIndex": 0 },
+        "1": { "name": "Cooldown", "levelIndex": 1 },
+        "2": { "name": "Targets", "levelIndex": 2 }
+      }
+    },
+    "Catch": {
+      "chipIndex": 1,
+      "released": false,
+      "upgrades": {
+        "0": { "name": null, "levelIndex": 3 },
+        "1": { "name": null, "levelIndex": 4 },
+        "2": { "name": null, "levelIndex": 5 }
+      }
+    },
+    "Attack": {
+      "chipIndex": 2,
+      "released": true,
+      "alwaysUnlocked": true,
+      "upgrades": {
+        "0": { "name": "Percentage", "levelIndex": 6 },
+        "1": { "name": "Cooldown", "levelIndex": 7 },
+        "2": { "name": "Targets", "levelIndex": 8 }
+      }
+    },
+    "Scare": {
+      "chipIndex": 3,
+      "released": false,
+      "upgrades": {
+        "0": { "name": null, "levelIndex": 9 },
+        "1": { "name": null, "levelIndex": 10 },
+        "2": { "name": null, "levelIndex": 11 }
+      }
+    },
+    "Rush": {
+      "chipIndex": 4,
+      "released": false,
+      "upgrades": {
+        "0": { "name": null, "levelIndex": 12 },
+        "1": { "name": null, "levelIndex": 13 },
+        "2": { "name": null, "levelIndex": 14 }
+      }
+    },
+    "Ally": {
+      "chipIndex": 5,
+      "released": true,
+      "alwaysUnlocked": true,
+      "upgrades": {
+        "0": { "name": "Recovery Amount", "levelIndex": 15 },
+        "1": { "name": "Max Recovery", "levelIndex": 16 },
+        "2": { "name": "Cooldown", "levelIndex": 17 }
+      }
+    },
+    "Fetch": {
+      "chipIndex": 6,
+      "released": true,
+      "upgrades": {
+        "0": { "name": "Cooldown", "levelIndex": 18 },
+        "1": { "name": "Find Chance", "levelIndex": 19 },
+        "2": { "name": "Double Find Chance", "levelIndex": 20 }
+      }
+    },
+    "Summon": {
+      "chipIndex": 7,
+      "released": true,
+      "upgrades": {
+        "0": { "name": "Cooldown", "levelIndex": 21 },
+        "1": { "name": "Duration", "levelIndex": 22 },
+        "2": { "name": "Cash Bonus", "levelIndex": 23 }
+      }
+    },
+    "Scout": {
+      "chipIndex": 8,
+      "released": true,
+      "upgrades": {
+        "0": { "name": "Cooldown", "levelIndex": 24 },
+        "1": { "name": "Range Bonus", "levelIndex": 25 },
+        "2": { "name": "Duration", "levelIndex": 26 }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+---
+description: TheTowerSDK-site owns 4173 — durable Vite HMR; never mutate node_modules while it is up
+alwaysApply: true
+---
+
+# Fixed port + durable HMR (hard — machine-enforced)
+
+This repo owns **http://127.0.0.1:4173/** exclusively.
+
+Hook: `.cursor/hooks.json` → `beforeShellExecution` → `.cursor/hooks/block-preview-server.mjs`  
+Reload the Cursor window after changing hooks so they bind.
+
+## Why AGS “stays up” and this kept dying
+
+**Different architecture, not magic agent luck.**
+
+| Surface | Local process | What agents usually do |
+|---|---|---|
+| **AGS public site** | Mostly static docs — **no always-on Vite holding `node_modules` locks** | Push → GitHub Pages. Nothing local to kill. |
+| **TheTowerSDK-site** | Durable **Vite HMR** on 4173 (supervisor). Native addons (`lightningcss`, etc.) stay mapped. | Agents “fix CI” with `npm ci` / wipe caches **in the same tree** → Windows `EPERM` unlink → Vite dies or restarts into a broken install. |
+
+The repeated root cause is **not** “forgot to restart.” It is **mutating `node_modules` (or killing the process) while HMR is up**, then treating the crash as a symptom to restart around.
+
+Instruction-only README rules failed. The shell hook denies the destructive commands.
+
+## Required
+
+- `npm run serve:status` — if `UP … mode=hmr` → **leave it alone**.
+- After code edits, assume **HMR**. Hard-refresh the browser if needed.
+- Production / GitHub Pages verification → **push and watch Actions**. Do not `npm ci` locally to “match CI.”
+
+## Forbidden — zero exceptions unless the user literally says to restart / reinstall
+
+- Killing or freeing port **4173** / `hmr-supervisor` / Vite
+- `npm ci`, `npm install`, wiping `node_modules`, `.svelte-kit`, or `node_modules/.vite` while HMR is up (hook-denied even when DOWN unless user asked)
+- `vite preview` / a second `vite dev` on another port
+- Using local package reinstall as a substitute for reading CI logs
+
+## If status is DOWN
+
+Run **only** `npm run serve`, then `npm run serve:status`. Read `temp/preview-out.log` / `temp/preview-err.log`. Do not improvise ports. Do not `npm ci` unless the user explicitly asks to reinstall dependencies.

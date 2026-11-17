@@ -1,0 +1,1344 @@
+{
+ "coinsPerKill": [
+  {
+   "wsVal": 33.4052,
+   "labLvl": 25,
+   "stoneCap": 12,
+   "labCap": 14,
+   "prim": 4.6077,
+   "ass": 4.699,
+   "wse": 10,
+   "hasPerk": true,
+   "spb": 24,
+   "hasCto": true,
+   "ito": 4,
+   "vault": 0.1575,
+   "sheet": 318.5206971579033
+  },
+  {
+   "wsVal": 4.3878,
+   "labLvl": 23,
+   "stoneCap": 22,
+   "labCap": 14,
+   "prim": 3.2572,
+   "ass": 2.7539,
+   "wse": 21,
+   "hasPerk": false,
+   "spb": 9,
+   "hasCto": true,
+   "ito": 6,
+   "vault": 0.0525,
+   "sheet": 31.407780440875708
+  },
+  {
+   "wsVal": 38.962,
+   "labLvl": 1,
+   "stoneCap": 47,
+   "labCap": 13,
+   "prim": 2.0411,
+   "ass": 1.3293,
+   "wse": 9,
+   "hasPerk": false,
+   "spb": 6,
+   "hasCto": false,
+   "ito": 7,
+   "vault": 0.2429,
+   "sheet": 62.89694998243139
+  },
+  {
+   "wsVal": 28.6511,
+   "labLvl": 4,
+   "stoneCap": 5,
+   "labCap": 28,
+   "prim": 4.0615,
+   "ass": 3.5387,
+   "wse": 34,
+   "hasPerk": true,
+   "spb": 24,
+   "hasCto": true,
+   "ito": 9,
+   "vault": 0.0163,
+   "sheet": 281.3150381276109
+  },
+  {
+   "wsVal": 26.2928,
+   "labLvl": 28,
+   "stoneCap": 32,
+   "labCap": 18,
+   "prim": 2.9037,
+   "ass": 3.6958,
+   "wse": 49,
+   "hasPerk": true,
+   "spb": 1,
+   "hasCto": true,
+   "ito": 3,
+   "vault": 0.2687,
+   "sheet": 422.7821153396415
+  },
+  {
+   "wsVal": 22.5088,
+   "labLvl": 32,
+   "stoneCap": 56,
+   "labCap": 14,
+   "prim": 3.1778,
+   "ass": 2.3497,
+   "wse": 46,
+   "hasPerk": false,
+   "spb": 1,
+   "hasCto": false,
+   "ito": 8,
+   "vault": 0.2994,
+   "sheet": 115.66832895713974
+  },
+  {
+   "wsVal": 29.8702,
+   "labLvl": 25,
+   "stoneCap": 6,
+   "labCap": 12,
+   "prim": 3.6546,
+   "ass": 1.1849,
+   "wse": 19,
+   "hasPerk": false,
+   "spb": 0,
+   "hasCto": false,
+   "ito": 3,
+   "vault": 0.0912,
+   "sheet": 75.2304623618979
+  },
+  {
+   "wsVal": 32.1897,
+   "labLvl": 7,
+   "stoneCap": 32,
+   "labCap": 30,
+   "prim": 0.8579,
+   "ass": 2.7442,
+   "wse": 52,
+   "hasPerk": true,
+   "spb": 12,
+   "hasCto": false,
+   "ito": 9,
+   "vault": 0.2564,
+   "sheet": 223.4991450533475
+  }
+ ],
+ "coinsCard": [
+  {
+   "has": true,
+   "val": 2.8225,
+   "hasMastery": true,
+   "lvl": 9,
+   "sheet": 3.66925
+  },
+  {
+   "has": false,
+   "val": 2.6194,
+   "hasMastery": true,
+   "lvl": 0,
+   "sheet": 1
+  },
+  {
+   "has": false,
+   "val": 2.3546,
+   "hasMastery": true,
+   "lvl": 1,
+   "sheet": 1
+  },
+  {
+   "has": true,
+   "val": 2.0739,
+   "hasMastery": true,
+   "lvl": 6,
+   "sheet": 2.509419
+  },
+  {
+   "has": true,
+   "val": 2.2857,
+   "hasMastery": true,
+   "lvl": 0,
+   "sheet": 2.354271
+  },
+  {
+   "has": true,
+   "val": 1.0997,
+   "hasMastery": true,
+   "lvl": 1,
+   "sheet": 1.1656819999999999
+  },
+  {
+   "has": true,
+   "val": 2.5506,
+   "hasMastery": true,
+   "lvl": 0,
+   "sheet": 2.6271180000000003
+  },
+  {
+   "has": false,
+   "val": 1.4935,
+   "hasMastery": false,
+   "lvl": 8,
+   "sheet": 1
+  }
+ ],
+ "extraOrbMastery": [
+  {
+   "has": false,
+   "lvl": 7,
+   "hit": 1.0256,
+   "sheet": 1
+  },
+  {
+   "has": true,
+   "lvl": 5,
+   "hit": 0.6406,
+   "sheet": 1.153744
+  },
+  {
+   "has": true,
+   "lvl": 8,
+   "hit": 0.7064,
+   "sheet": 1.2543039999999999
+  },
+  {
+   "has": false,
+   "lvl": 0,
+   "hit": 0.4345,
+   "sheet": 1
+  },
+  {
+   "has": true,
+   "lvl": 3,
+   "hit": 0.4829,
+   "sheet": 1.077264
+  },
+  {
+   "has": true,
+   "lvl": 6,
+   "hit": 1.0164,
+   "sheet": 1.28
+  },
+  {
+   "has": false,
+   "lvl": 6,
+   "hit": 1.219,
+   "sheet": 1
+  },
+  {
+   "has": false,
+   "lvl": 6,
+   "hit": 0.2624,
+   "sheet": 1
+  }
+ ],
+ "freeUpgrade": [
+  {
+   "wsVal": 0.2609,
+   "hasCard": false,
+   "cardVal": 0.0983,
+   "hasPerk": true,
+   "spb": 0,
+   "stoneCap": 51,
+   "labCap": 28,
+   "prim": 0.0021,
+   "ass": 0.0405,
+   "wse": 2,
+   "relic": 0.2373,
+   "vault": 0.0321,
+   "sheet": 0.71041495681764
+  },
+  {
+   "wsVal": 0.2133,
+   "hasCard": false,
+   "cardVal": 0.0366,
+   "hasPerk": true,
+   "spb": 17,
+   "stoneCap": 17,
+   "labCap": 21,
+   "prim": 0.0954,
+   "ass": 0.0691,
+   "wse": 16,
+   "relic": 0.0783,
+   "vault": 0.0076,
+   "sheet": 0.7916777256880274
+  },
+  {
+   "wsVal": 0.0254,
+   "hasCard": false,
+   "cardVal": 0.0281,
+   "hasPerk": false,
+   "spb": 2,
+   "stoneCap": 13,
+   "labCap": 14,
+   "prim": 0.054,
+   "ass": 0.0691,
+   "wse": 48,
+   "relic": 0.128,
+   "vault": 0.0016,
+   "sheet": 0.16511762729779203
+  },
+  {
+   "wsVal": 0.1498,
+   "hasCard": true,
+   "cardVal": 0.041,
+   "hasPerk": true,
+   "spb": 12,
+   "stoneCap": 60,
+   "labCap": 20,
+   "prim": 0.0152,
+   "ass": 0.0914,
+   "wse": 34,
+   "relic": 0.1375,
+   "vault": 0.1763,
+   "sheet": 1.00412711515935
+  },
+  {
+   "wsVal": 0.0877,
+   "hasCard": true,
+   "cardVal": 0.065,
+   "hasPerk": true,
+   "spb": 12,
+   "stoneCap": 23,
+   "labCap": 22,
+   "prim": 0.0865,
+   "ass": 0.0793,
+   "wse": 42,
+   "relic": 0.2211,
+   "vault": 0.0366,
+   "sheet": 0.9987895342622376
+  },
+  {
+   "wsVal": 0.1738,
+   "hasCard": true,
+   "cardVal": 0.033,
+   "hasPerk": false,
+   "spb": 25,
+   "stoneCap": 54,
+   "labCap": 29,
+   "prim": 0.087,
+   "ass": 0.073,
+   "wse": 50,
+   "relic": 0.1798,
+   "vault": 0.0997,
+   "sheet": 0.6911129136408
+  },
+  {
+   "wsVal": 0.1219,
+   "hasCard": true,
+   "cardVal": 0.0968,
+   "hasPerk": true,
+   "spb": 21,
+   "stoneCap": 38,
+   "labCap": 26,
+   "prim": 0.0092,
+   "ass": 0.0053,
+   "wse": 49,
+   "relic": 0.1686,
+   "vault": 0.1075,
+   "sheet": 1.0294637645217248
+  },
+  {
+   "wsVal": 0.1372,
+   "hasCard": true,
+   "cardVal": 0.0954,
+   "hasPerk": false,
+   "spb": 25,
+   "stoneCap": 6,
+   "labCap": 8,
+   "prim": 0.0976,
+   "ass": 0.0275,
+   "wse": 22,
+   "relic": 0.1123,
+   "vault": 0.0721,
+   "sheet": 0.48639143328149503
+  }
+ ],
+ "galaxyCompressor": [
+  {
+   "wsVal": 0.1501,
+   "labLvl": 13,
+   "hasCard": true,
+   "cardVal": 0.1309,
+   "stoneCap": 43,
+   "labCap": 0,
+   "prim": 0.0897,
+   "ass": 0.0245,
+   "pab": 0,
+   "bossWave": 2,
+   "gcomp": 4.6497,
+   "waveDur": 53.8366,
+   "sheet": 1.0364764917733096
+  },
+  {
+   "wsVal": 0.0399,
+   "labLvl": 0,
+   "hasCard": true,
+   "cardVal": 0.1099,
+   "stoneCap": 6,
+   "labCap": 23,
+   "prim": 0.0971,
+   "ass": 0.0997,
+   "pab": 0,
+   "bossWave": 4,
+   "gcomp": 2.3103,
+   "waveDur": 39.7706,
+   "sheet": 1.016342867288095
+  },
+  {
+   "wsVal": 0.1062,
+   "labLvl": 1,
+   "hasCard": true,
+   "cardVal": 0.1619,
+   "stoneCap": 37,
+   "labCap": 17,
+   "prim": 0.0953,
+   "ass": 0.0684,
+   "pab": 0,
+   "bossWave": 16,
+   "gcomp": 2.2535,
+   "waveDur": 29.9217,
+   "sheet": 1.0313028674360891
+  },
+  {
+   "wsVal": 0.1256,
+   "labLvl": 24,
+   "hasCard": true,
+   "cardVal": 0.0054,
+   "stoneCap": 20,
+   "labCap": 4,
+   "prim": 0.059,
+   "ass": 0.006,
+   "pab": 0,
+   "bossWave": 2,
+   "gcomp": 1.6512,
+   "waveDur": 39.4621,
+   "sheet": 1.0101227652107947
+  },
+  {
+   "wsVal": 0.1016,
+   "labLvl": 1,
+   "hasCard": false,
+   "cardVal": 0.0516,
+   "stoneCap": 4,
+   "labCap": 16,
+   "prim": 0.0817,
+   "ass": 0.0955,
+   "pab": 0,
+   "bossWave": 16,
+   "gcomp": 3.7799,
+   "waveDur": 42.7991,
+   "sheet": 1.0184713991450425
+  },
+  {
+   "wsVal": 0.1399,
+   "labLvl": 29,
+   "hasCard": false,
+   "cardVal": 0.1653,
+   "stoneCap": 15,
+   "labCap": 6,
+   "prim": 0.0266,
+   "ass": 0.0402,
+   "pab": 0,
+   "bossWave": 11,
+   "gcomp": 0.9442,
+   "waveDur": 36.3796,
+   "sheet": 1.0060931364105123
+  },
+  {
+   "wsVal": 0.0848,
+   "labLvl": 6,
+   "hasCard": false,
+   "cardVal": 0.1026,
+   "stoneCap": 12,
+   "labCap": 6,
+   "prim": 0.0479,
+   "ass": 0.0825,
+   "pab": 1,
+   "bossWave": 20,
+   "gcomp": 4.2212,
+   "waveDur": 21.0108,
+   "sheet": 1.0423774653362632
+  },
+  {
+   "wsVal": 0.1837,
+   "labLvl": 18,
+   "hasCard": true,
+   "cardVal": 0.1592,
+   "stoneCap": 4,
+   "labCap": 8,
+   "prim": 0.0781,
+   "ass": 0.0341,
+   "pab": 1,
+   "bossWave": 12,
+   "gcomp": 2.3302,
+   "waveDur": 34.5633,
+   "sheet": 1.0353411815077318
+  }
+ ],
+ "goldenTowerBonus": [
+  {
+   "stoneLvl": 1,
+   "labLvl": 11,
+   "hasPerk": false,
+   "stoneCap": 0,
+   "labCap": 13,
+   "prim": 3.0227,
+   "ass": 4.9923,
+   "sheet": 11.171622
+  },
+  {
+   "stoneLvl": 28,
+   "labLvl": 22,
+   "hasPerk": false,
+   "stoneCap": 17,
+   "labCap": 6,
+   "prim": 2.7314,
+   "ass": 4.6524,
+   "sheet": 34.547976000000006
+  },
+  {
+   "stoneLvl": 2,
+   "labLvl": 8,
+   "hasPerk": true,
+   "stoneCap": 20,
+   "labCap": 6,
+   "prim": 3.2623,
+   "ass": 2.8667,
+   "sheet": 15.736308999999999
+  },
+  {
+   "stoneLvl": 20,
+   "labLvl": 5,
+   "hasPerk": true,
+   "stoneCap": 19,
+   "labCap": 15,
+   "prim": 0.4361,
+   "ass": 3.4691,
+   "sheet": 34.275285
+  },
+  {
+   "stoneLvl": 30,
+   "labLvl": 8,
+   "hasPerk": true,
+   "stoneCap": 18,
+   "labCap": 28,
+   "prim": 1.2249,
+   "ass": 2.4494,
+   "sheet": 47.676117999999995
+  },
+  {
+   "stoneLvl": 11,
+   "labLvl": 24,
+   "hasPerk": true,
+   "stoneCap": 57,
+   "labCap": 23,
+   "prim": 4.657,
+   "ass": 0.9727,
+   "sheet": 31.544886999999996
+  },
+  {
+   "stoneLvl": 0,
+   "labLvl": 24,
+   "hasPerk": false,
+   "stoneCap": 5,
+   "labCap": 15,
+   "prim": 2.4514,
+   "ass": 1.4315,
+   "sheet": 11.352015
+  },
+  {
+   "stoneLvl": 13,
+   "labLvl": 16,
+   "hasPerk": false,
+   "stoneCap": 0,
+   "labCap": 29,
+   "prim": 0.5286,
+   "ass": 4.9984,
+   "sheet": 19.828120000000002
+  }
+ ],
+ "goldenTowerDuration": [
+  {
+   "stoneLvl": 6,
+   "labLvl": 25,
+   "stoneCap": 6,
+   "labCap": 27,
+   "prim": 2.5505,
+   "ass": 0.755,
+   "sheet": 48.8072
+  },
+  {
+   "stoneLvl": 26,
+   "labLvl": 26,
+   "stoneCap": 46,
+   "labCap": 16,
+   "prim": 4.9826,
+   "ass": 1.809,
+   "sheet": 73.12227
+  },
+  {
+   "stoneLvl": 8,
+   "labLvl": 17,
+   "stoneCap": 5,
+   "labCap": 29,
+   "prim": 4.4252,
+   "ass": 0.8177,
+   "sheet": 44.711395
+  },
+  {
+   "stoneLvl": 30,
+   "labLvl": 20,
+   "stoneCap": 11,
+   "labCap": 6,
+   "prim": 3.675,
+   "ass": 3.5973,
+   "sheet": 69.322514
+  },
+  {
+   "stoneLvl": 6,
+   "labLvl": 9,
+   "stoneCap": 36,
+   "labCap": 24,
+   "prim": 0.2065,
+   "ass": 4.6227,
+   "sheet": 33.026347
+  },
+  {
+   "stoneLvl": 7,
+   "labLvl": 24,
+   "stoneCap": 6,
+   "labCap": 30,
+   "prim": 4.3109,
+   "ass": 3.9972,
+   "sheet": 51.789864
+  },
+  {
+   "stoneLvl": 22,
+   "labLvl": 16,
+   "stoneCap": 16,
+   "labCap": 25,
+   "prim": 0.1226,
+   "ass": 1.6743,
+   "sheet": 53.825806
+  },
+  {
+   "stoneLvl": 19,
+   "labLvl": 10,
+   "stoneCap": 8,
+   "labCap": 8,
+   "prim": 0.7252,
+   "ass": 1.3516,
+   "sheet": 44.954972
+  }
+ ],
+ "goldenTowerCooldown": [
+  {
+   "has": false,
+   "stoneLvl": 5,
+   "stoneCap": 15,
+   "labCap": 1,
+   "prim": -2.3241,
+   "ass": -0.1373,
+   "sheet": 0
+  },
+  {
+   "has": true,
+   "stoneLvl": 9,
+   "stoneCap": 0,
+   "labCap": 9,
+   "prim": -1.8947,
+   "ass": -4.2016,
+   "sheet": 207.68514
+  },
+  {
+   "has": false,
+   "stoneLvl": 24,
+   "stoneCap": 25,
+   "labCap": 5,
+   "prim": -0.0093,
+   "ass": -2.3739,
+   "sheet": 0
+  },
+  {
+   "has": true,
+   "stoneLvl": 11,
+   "stoneCap": 17,
+   "labCap": 17,
+   "prim": -3.0325,
+   "ass": -3.0274,
+   "sheet": 185.90791
+  },
+  {
+   "has": true,
+   "stoneLvl": 19,
+   "stoneCap": 50,
+   "labCap": 11,
+   "prim": -1.2396,
+   "ass": -4.4095,
+   "sheet": 106.02651
+  },
+  {
+   "has": true,
+   "stoneLvl": 8,
+   "stoneCap": 53,
+   "labCap": 13,
+   "prim": -3.3329,
+   "ass": -4.0241,
+   "sheet": 213.970953
+  },
+  {
+   "has": false,
+   "stoneLvl": 21,
+   "stoneCap": 11,
+   "labCap": 7,
+   "prim": -1.6274,
+   "ass": -2.5079,
+   "sheet": 0
+  },
+  {
+   "has": true,
+   "stoneLvl": 4,
+   "stoneCap": 25,
+   "labCap": 10,
+   "prim": -2.431,
+   "ass": -3.7899,
+   "sheet": 256.204636
+  }
+ ],
+ "goldenCombo": [
+  {
+   "has": false,
+   "stoneLvl": 19,
+   "kps": 9.0325,
+   "gtd": 46.4868,
+   "sheet": 1
+  },
+  {
+   "has": true,
+   "stoneLvl": 19,
+   "kps": 9.4433,
+   "gtd": 43.9748,
+   "sheet": 11.991023500705387
+  },
+  {
+   "has": true,
+   "stoneLvl": 0,
+   "kps": 23.7519,
+   "gtd": 20.6577,
+   "sheet": 1.158557633600107
+  },
+  {
+   "has": true,
+   "stoneLvl": 10,
+   "kps": 24.5827,
+   "gtd": 53.6033,
+   "sheet": 76.80705329058891
+  },
+  {
+   "has": true,
+   "stoneLvl": 14,
+   "kps": 24.6669,
+   "gtd": 22.0298,
+   "sheet": 11.471267000627336
+  },
+  {
+   "has": true,
+   "stoneLvl": 4,
+   "kps": 17.4443,
+   "gtd": 58.8587,
+   "sheet": 4.659784917300276
+  },
+  {
+   "has": false,
+   "stoneLvl": 15,
+   "kps": 8.8467,
+   "gtd": 54.2992,
+   "sheet": 1
+  },
+  {
+   "has": false,
+   "stoneLvl": 6,
+   "kps": 25.8362,
+   "gtd": 38.7227,
+   "sheet": 1
+  }
+ ],
+ "blackHoleCoinBonus": [
+  {
+   "labLvl": 10,
+   "killShare": 0.1145,
+   "sheet": 1.5725
+  },
+  {
+   "labLvl": 6,
+   "killShare": 0.4797,
+   "sheet": 2.4391
+  },
+  {
+   "labLvl": 9,
+   "killShare": 0.5943,
+   "sheet": 3.6743500000000004
+  },
+  {
+   "labLvl": 6,
+   "killShare": 0.6626,
+   "sheet": 2.9878
+  },
+  {
+   "labLvl": 1,
+   "killShare": 0.5229,
+   "sheet": 1.26145
+  },
+  {
+   "labLvl": 15,
+   "killShare": 0.8854,
+   "sheet": 7.640499999999999
+  },
+  {
+   "labLvl": 19,
+   "killShare": 0.8537,
+   "sheet": 9.11015
+  },
+  {
+   "labLvl": 7,
+   "killShare": 0.664,
+   "sheet": 3.3240000000000003
+  }
+ ],
+ "blackHoleDuration": [
+  {
+   "stoneLvl": 7,
+   "hasPerk": false,
+   "stoneCap": 31,
+   "labCap": 4,
+   "prim": 1.9807,
+   "ass": 2.8268,
+   "sheet": 24.998348
+  },
+  {
+   "stoneLvl": 22,
+   "hasPerk": false,
+   "stoneCap": 35,
+   "labCap": 25,
+   "prim": 3.1564,
+   "ass": 2.8489,
+   "sheet": 41.894229
+  },
+  {
+   "stoneLvl": 14,
+   "hasPerk": false,
+   "stoneCap": 11,
+   "labCap": 11,
+   "prim": 3.1342,
+   "ass": 3.8013,
+   "sheet": 33.008499
+  },
+  {
+   "stoneLvl": 20,
+   "hasPerk": true,
+   "stoneCap": 19,
+   "labCap": 1,
+   "prim": 4.7261,
+   "ass": 0.7341,
+   "sheet": 51.880261
+  },
+  {
+   "stoneLvl": 20,
+   "hasPerk": false,
+   "stoneCap": 44,
+   "labCap": 25,
+   "prim": 4.4904,
+   "ass": 4.8377,
+   "sheet": 42.87679
+  },
+  {
+   "stoneLvl": 20,
+   "hasPerk": true,
+   "stoneCap": 28,
+   "labCap": 29,
+   "prim": 0.4408,
+   "ass": 1.1842,
+   "sheet": 48.127636
+  },
+  {
+   "stoneLvl": 17,
+   "hasPerk": true,
+   "stoneCap": 49,
+   "labCap": 5,
+   "prim": 2.2772,
+   "ass": 1.5528,
+   "sheet": 47.13124
+  },
+  {
+   "stoneLvl": 4,
+   "hasPerk": true,
+   "stoneCap": 38,
+   "labCap": 23,
+   "prim": 0.7135,
+   "ass": 3.5542,
+   "sheet": 33.917104
+  }
+ ],
+ "blackHoleCooldown": [
+  {
+   "has": false,
+   "stoneLvl": 14,
+   "stoneCap": 47,
+   "labCap": 18,
+   "prim": -3.7803,
+   "ass": -2.9049,
+   "sheet": 0
+  },
+  {
+   "has": false,
+   "stoneLvl": 14,
+   "stoneCap": 54,
+   "labCap": 26,
+   "prim": -2.229,
+   "ass": -1.848,
+   "sheet": 0
+  },
+  {
+   "has": true,
+   "stoneLvl": 11,
+   "stoneCap": 28,
+   "labCap": 20,
+   "prim": -4.1721,
+   "ass": -2.4008,
+   "sheet": 84.651508
+  },
+  {
+   "has": true,
+   "stoneLvl": 6,
+   "stoneCap": 14,
+   "labCap": 14,
+   "prim": -4.5345,
+   "ass": -3.7228,
+   "sheet": 134.385888
+  },
+  {
+   "has": false,
+   "stoneLvl": 1,
+   "stoneCap": 14,
+   "labCap": 22,
+   "prim": -2.007,
+   "ass": -2.255,
+   "sheet": 0
+  },
+  {
+   "has": false,
+   "stoneLvl": 10,
+   "stoneCap": 6,
+   "labCap": 22,
+   "prim": -2.6602,
+   "ass": -1.236,
+   "sheet": 0
+  },
+  {
+   "has": true,
+   "stoneLvl": 6,
+   "stoneCap": 52,
+   "labCap": 13,
+   "prim": -4.3108,
+   "ass": -4.519,
+   "sheet": 132.70666
+  },
+  {
+   "has": true,
+   "stoneLvl": 10,
+   "stoneCap": 12,
+   "labCap": 15,
+   "prim": -3.7952,
+   "ass": -1.031,
+   "sheet": 95.91612
+  }
+ ],
+ "deathWaveCoinBonus": [
+  {
+   "labLvl": 21,
+   "sheet": 2.55
+  },
+  {
+   "labLvl": 28,
+   "sheet": 2.9000000000000004
+  },
+  {
+   "labLvl": 3,
+   "sheet": 1.65
+  },
+  {
+   "labLvl": 28,
+   "sheet": 2.9000000000000004
+  },
+  {
+   "labLvl": 7,
+   "sheet": 1.85
+  },
+  {
+   "labLvl": 13,
+   "sheet": 2.15
+  },
+  {
+   "labLvl": 11,
+   "sheet": 2.05
+  },
+  {
+   "labLvl": 5,
+   "sheet": 1.75
+  }
+ ],
+ "spotlightCoinBonus": [
+  {
+   "labLvl": 10,
+   "sheet": 2
+  },
+  {
+   "labLvl": 4,
+   "sheet": 1.4
+  },
+  {
+   "labLvl": 7,
+   "sheet": 1.7000000000000002
+  },
+  {
+   "labLvl": 8,
+   "sheet": 1.8
+  },
+  {
+   "labLvl": 8,
+   "sheet": 1.8
+  },
+  {
+   "labLvl": 9,
+   "sheet": 1.9
+  },
+  {
+   "labLvl": 6,
+   "sheet": 1.6
+  },
+  {
+   "labLvl": 26,
+   "sheet": 3.6
+  }
+ ],
+ "spotlightAngle": [
+  {
+   "stoneLvl": 16,
+   "stoneCap": 32,
+   "labCap": 12,
+   "prim": 6.5947,
+   "ass": 3.2638,
+   "sheet": 58.06341
+  },
+  {
+   "stoneLvl": 20,
+   "stoneCap": 47,
+   "labCap": 0,
+   "prim": 6.7991,
+   "ass": 0.5077,
+   "sheet": 61.042796
+  },
+  {
+   "stoneLvl": 16,
+   "stoneCap": 23,
+   "labCap": 6,
+   "prim": 6.8033,
+   "ass": 2.195,
+   "sheet": 57.4618
+  },
+  {
+   "stoneLvl": 2,
+   "stoneCap": 39,
+   "labCap": 8,
+   "prim": 1.1249,
+   "ass": 0.2328,
+   "sheet": 37.236644
+  },
+  {
+   "stoneLvl": 19,
+   "stoneCap": 45,
+   "labCap": 8,
+   "prim": 8.1873,
+   "ass": 8.3457,
+   "sheet": 65.693978
+  },
+  {
+   "stoneLvl": 24,
+   "stoneCap": 42,
+   "labCap": 4,
+   "prim": 3.8134,
+   "ass": 5.7299,
+   "sheet": 64.506453
+  },
+  {
+   "stoneLvl": 20,
+   "stoneCap": 27,
+   "labCap": 10,
+   "prim": 5.5155,
+   "ass": 0.4051,
+   "sheet": 59.669438
+  },
+  {
+   "stoneLvl": 10,
+   "stoneCap": 16,
+   "labCap": 12,
+   "prim": 6.6477,
+   "ass": 8.252,
+   "sheet": 53.04078
+  }
+ ],
+ "spotlightQuantity": [
+  {
+   "stoneLvl": 1,
+   "sheet": 2
+  },
+  {
+   "stoneLvl": 1,
+   "sheet": 2
+  },
+  {
+   "stoneLvl": 5,
+   "sheet": 6
+  },
+  {
+   "stoneLvl": 1,
+   "sheet": 2
+  },
+  {
+   "stoneLvl": 5,
+   "sheet": 6
+  },
+  {
+   "stoneLvl": 2,
+   "sheet": 3
+  },
+  {
+   "stoneLvl": 1,
+   "sheet": 2
+  },
+  {
+   "stoneLvl": 1,
+   "sheet": 2
+  }
+ ],
+ "maxValueNuke": [
+  {
+   "mvn": 20,
+   "assMvn": 0,
+   "gt": 7,
+   "bh": 0,
+   "dw": 0,
+   "count": 2,
+   "sheet": 24
+  },
+  {
+   "mvn": 6.5595,
+   "assMvn": 24.7036,
+   "gt": 104.9355,
+   "bh": 35.9458,
+   "dw": 84.1808,
+   "count": 2,
+   "sheet": 119
+  },
+  {
+   "mvn": 20,
+   "assMvn": 0,
+   "gt": 9,
+   "bh": 0,
+   "dw": 0,
+   "count": 2,
+   "sheet": 24
+  },
+  {
+   "mvn": 8.328,
+   "assMvn": 11.5977,
+   "gt": 281.871,
+   "bh": 1.4593,
+   "dw": 185.4255,
+   "count": 4,
+   "sheet": 126
+  },
+  {
+   "mvn": 20,
+   "assMvn": 0,
+   "gt": 61,
+   "bh": 0,
+   "dw": 0,
+   "count": 2,
+   "sheet": 50
+  },
+  {
+   "mvn": 1.2241,
+   "assMvn": 13.6419,
+   "gt": 69.8367,
+   "bh": 16.1108,
+   "dw": 88.5454,
+   "count": 1,
+   "sheet": 176
+  },
+  {
+   "mvn": 20,
+   "assMvn": 0,
+   "gt": 51,
+   "bh": 0,
+   "dw": 0,
+   "count": 2,
+   "sheet": 46
+  },
+  {
+   "mvn": 5.0727,
+   "assMvn": 33.3602,
+   "gt": 3.6361,
+   "bh": 42.6405,
+   "dw": 260.2587,
+   "count": 3,
+   "sheet": 107
+  }
+ ],
+ "deathWaveCooldown": [
+  {
+   "has": true,
+   "stoneLvl": 17,
+   "stoneCap": 36,
+   "labCap": 15,
+   "prim": -2.3592,
+   "ass": -2.4732,
+   "sheet": 126.354736
+  },
+  {
+   "has": false,
+   "stoneLvl": 14,
+   "stoneCap": 21,
+   "labCap": 28,
+   "prim": -2.4377,
+   "ass": -0.911,
+   "sheet": 0
+  },
+  {
+   "has": true,
+   "stoneLvl": 20,
+   "stoneCap": 29,
+   "labCap": 17,
+   "prim": -0.9573,
+   "ass": -0.8824,
+   "sheet": 98.627972
+  },
+  {
+   "has": false,
+   "stoneLvl": 16,
+   "stoneCap": 20,
+   "labCap": 10,
+   "prim": -0.2656,
+   "ass": -1.1218,
+   "sheet": 0
+  },
+  {
+   "has": false,
+   "stoneLvl": 24,
+   "stoneCap": 48,
+   "labCap": 10,
+   "prim": -2.8503,
+   "ass": -0.3366,
+   "sheet": 0
+  },
+  {
+   "has": true,
+   "stoneLvl": 15,
+   "stoneCap": 33,
+   "labCap": 4,
+   "prim": -4.9623,
+   "ass": -2.4625,
+   "sheet": 144.10195
+  },
+  {
+   "has": false,
+   "stoneLvl": 9,
+   "stoneCap": 8,
+   "labCap": 15,
+   "prim": -0.0967,
+   "ass": -4.8195,
+   "sheet": 0
+  },
+  {
+   "has": true,
+   "stoneLvl": 22,
+   "stoneCap": 15,
+   "labCap": 17,
+   "prim": -4.5246,
+   "ass": -0.2144,
+   "sheet": 75.404648
+  }
+ ],
+ "deathWaveQuantity": [
+  {
+   "stoneLvl": 2,
+   "hasPerk": true,
+   "stoneCap": 43,
+   "labCap": 6,
+   "prim": 0.3065,
+   "ass": 12.408,
+   "sheet": 10.3065
+  },
+  {
+   "stoneLvl": 8,
+   "hasPerk": true,
+   "stoneCap": 12,
+   "labCap": 12,
+   "prim": 0.0329,
+   "ass": 13.651,
+   "sheet": 13.0329
+  },
+  {
+   "stoneLvl": 5,
+   "hasPerk": false,
+   "stoneCap": 44,
+   "labCap": 16,
+   "prim": 0.0747,
+   "ass": 8.7986,
+   "sheet": 11.0747
+  },
+  {
+   "stoneLvl": 8,
+   "hasPerk": false,
+   "stoneCap": 44,
+   "labCap": 30,
+   "prim": 2.6315,
+   "ass": 37.9988,
+   "sheet": 39.6315
+  },
+  {
+   "stoneLvl": 7,
+   "hasPerk": false,
+   "stoneCap": 47,
+   "labCap": 8,
+   "prim": 1.1057,
+   "ass": 29.2641,
+   "sheet": 25.1057
+  },
+  {
+   "stoneLvl": 0,
+   "hasPerk": true,
+   "stoneCap": 9,
+   "labCap": 14,
+   "prim": 1.2142,
+   "ass": 33.2229,
+   "sheet": 10.2142
+  },
+  {
+   "stoneLvl": 8,
+   "hasPerk": true,
+   "stoneCap": 50,
+   "labCap": 0,
+   "prim": 0.9349,
+   "ass": 11.9825,
+   "sheet": 16.9349
+  },
+  {
+   "stoneLvl": 4,
+   "hasPerk": false,
+   "stoneCap": 21,
+   "labCap": 21,
+   "prim": 2.6133,
+   "ass": 31.6084,
+   "sheet": 20.613300000000002
+  }
+ ]
+}

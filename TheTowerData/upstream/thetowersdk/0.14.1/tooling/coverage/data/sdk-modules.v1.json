@@ -1,0 +1,2517 @@
+{
+  "version": 1,
+  "surface": "sdk-module",
+  "generatedAt": "2026-08-24T19:44:20.371Z",
+  "notes": "Seeded recursively from mechanics/**/*.ts (skip data/) + formula-coverage fidelity. Link graphNodeIds as nodes grow.",
+  "entries": [
+    {
+      "id": "sdk-module:battle-conditions/conditions",
+      "surface": "sdk-module",
+      "label": "battle-conditions/conditions",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/battle-conditions/conditions.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:battle-conditions/config",
+      "surface": "sdk-module",
+      "label": "battle-conditions/config",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/battle-conditions/config.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:battle-conditions/heat-bc-index",
+      "surface": "sdk-module",
+      "label": "battle-conditions/heat-bc-index",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/battle-conditions/heat-bc-index.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:battle-conditions/tournament-heat-bc",
+      "surface": "sdk-module",
+      "label": "battle-conditions/tournament-heat-bc",
+      "graphNodeIds": [
+        "oracle.tournament.heat",
+        "oracle.tournament.heat.elsReduction"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "src/mechanics/battle-conditions/tournament-heat-bc.ts"
+      ],
+      "reason": "Linked to knowledge-oracle nodes via implementedBy."
+    },
+    {
+      "id": "sdk-module:battle-conditions/types",
+      "surface": "sdk-module",
+      "label": "battle-conditions/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/battle-conditions/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/amplification",
+      "surface": "sdk-module",
+      "label": "bots/amplification",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/amplification.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/coin-bonus",
+      "surface": "sdk-module",
+      "label": "bots/coin-bonus",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/coin-bonus.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/compute",
+      "surface": "sdk-module",
+      "label": "bots/compute",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/compute.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/constants",
+      "surface": "sdk-module",
+      "label": "bots/constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/effective-range",
+      "surface": "sdk-module",
+      "label": "bots/effective-range",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/effective-range.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/geometry",
+      "surface": "sdk-module",
+      "label": "bots/geometry",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/geometry.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/get-benefit",
+      "surface": "sdk-module",
+      "label": "bots/get-benefit",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/get-benefit.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/hit-multiplier",
+      "surface": "sdk-module",
+      "label": "bots/hit-multiplier",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/hit-multiplier.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/lab-levels-from-research",
+      "surface": "sdk-module",
+      "label": "bots/lab-levels-from-research",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/lab-levels-from-research.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/medal-hit-signal",
+      "surface": "sdk-module",
+      "label": "bots/medal-hit-signal",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/medal-hit-signal.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/medal-planner-insights",
+      "surface": "sdk-module",
+      "label": "bots/medal-planner-insights",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/medal-planner-insights.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/medal-planner-scoring",
+      "surface": "sdk-module",
+      "label": "bots/medal-planner-scoring",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/medal-planner-scoring.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/medal-planner-types",
+      "surface": "sdk-module",
+      "label": "bots/medal-planner-types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/medal-planner-types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/medal-plus-effects",
+      "surface": "sdk-module",
+      "label": "bots/medal-plus-effects",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/medal-plus-effects.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/medal-simulation",
+      "surface": "sdk-module",
+      "label": "bots/medal-simulation",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/medal-simulation.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/medal-sync-scoring",
+      "surface": "sdk-module",
+      "label": "bots/medal-sync-scoring",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/medal-sync-scoring.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/movement",
+      "surface": "sdk-module",
+      "label": "bots/movement",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/movement.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/overlap",
+      "surface": "sdk-module",
+      "label": "bots/overlap",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/overlap.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:bots/types",
+      "surface": "sdk-module",
+      "label": "bots/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/bots/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:cards/costs",
+      "surface": "sdk-module",
+      "label": "cards/costs",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/cards/costs.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:cards/effect-lookup",
+      "surface": "sdk-module",
+      "label": "cards/effect-lookup",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/cards/effect-lookup.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/berserker",
+      "surface": "sdk-module",
+      "label": "combat/berserker",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/berserker.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/bonuses",
+      "surface": "sdk-module",
+      "label": "combat/bonuses",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/bonuses.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/chrono-field",
+      "surface": "sdk-module",
+      "label": "combat/chrono-field",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/chrono-field.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/crowd-control",
+      "surface": "sdk-module",
+      "label": "combat/crowd-control",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/crowd-control.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/damage",
+      "surface": "sdk-module",
+      "label": "combat/damage",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/damage.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/damage-reduction",
+      "surface": "sdk-module",
+      "label": "combat/damage-reduction",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/damage-reduction.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/damage-redux-calculator",
+      "surface": "sdk-module",
+      "label": "combat/damage-redux-calculator",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/damage-redux-calculator.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/damage-redux-constants",
+      "surface": "sdk-module",
+      "label": "combat/damage-redux-constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/damage-redux-constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/damage-redux-layers",
+      "surface": "sdk-module",
+      "label": "combat/damage-redux-layers",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/damage-redux-layers.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/damage-redux-wave-stats",
+      "surface": "sdk-module",
+      "label": "combat/damage-redux-wave-stats",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/damage-redux-wave-stats.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/distances",
+      "surface": "sdk-module",
+      "label": "combat/distances",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/distances.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/golden-combo",
+      "surface": "sdk-module",
+      "label": "combat/golden-combo",
+      "graphNodeIds": [
+        "oracle.ultimateWeaponPlus.goldenCombo"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "src/mechanics/combat/golden-combo.ts"
+      ],
+      "reason": "Linked to knowledge-oracle nodes via implementedBy."
+    },
+    {
+      "id": "sdk-module:combat/impetus",
+      "surface": "sdk-module",
+      "label": "combat/impetus",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/impetus.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/knockback",
+      "surface": "sdk-module",
+      "label": "combat/knockback",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/knockback.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/land-mines",
+      "surface": "sdk-module",
+      "label": "combat/land-mines",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/land-mines.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/multishot-bounce",
+      "surface": "sdk-module",
+      "label": "combat/multishot-bounce",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/multishot-bounce.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/poison-swamp",
+      "surface": "sdk-module",
+      "label": "combat/poison-swamp",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/poison-swamp.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/projectile-damage",
+      "surface": "sdk-module",
+      "label": "combat/projectile-damage",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/projectile-damage.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/rend-armor",
+      "surface": "sdk-module",
+      "label": "combat/rend-armor",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/rend-armor.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/shockwave",
+      "surface": "sdk-module",
+      "label": "combat/shockwave",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/shockwave.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/thorns",
+      "surface": "sdk-module",
+      "label": "combat/thorns",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/thorns.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/thorns-calculator",
+      "surface": "sdk-module",
+      "label": "combat/thorns-calculator",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/thorns-calculator.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/tower-fire",
+      "surface": "sdk-module",
+      "label": "combat/tower-fire",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/tower-fire.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/tower-range",
+      "surface": "sdk-module",
+      "label": "combat/tower-range",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/tower-range.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/types",
+      "surface": "sdk-module",
+      "label": "combat/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/ultimates",
+      "surface": "sdk-module",
+      "label": "combat/ultimates",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/ultimates.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/uw-stat-values",
+      "surface": "sdk-module",
+      "label": "combat/uw-stat-values",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/uw-stat-values.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:combat/wildfire",
+      "surface": "sdk-module",
+      "label": "combat/wildfire",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/combat/wildfire.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/aliases",
+      "surface": "sdk-module",
+      "label": "effective-paths/aliases",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/aliases.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/assist-efficiency",
+      "surface": "sdk-module",
+      "label": "effective-paths/assist-efficiency",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/assist-efficiency.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/coin-costs",
+      "surface": "sdk-module",
+      "label": "effective-paths/coin-costs",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/coin-costs.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/common/types",
+      "surface": "sdk-module",
+      "label": "effective-paths/common/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/common/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/credits",
+      "surface": "sdk-module",
+      "label": "effective-paths/credits",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/credits.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/currencies",
+      "surface": "sdk-module",
+      "label": "effective-paths/currencies",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/currencies.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/damage-base",
+      "surface": "sdk-module",
+      "label": "effective-paths/damage-base",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/damage-base.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/damage-stats",
+      "surface": "sdk-module",
+      "label": "effective-paths/damage-stats",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/damage-stats.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/damage-substats",
+      "surface": "sdk-module",
+      "label": "effective-paths/damage-substats",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/damage-substats.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-candidates",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-candidates",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-candidates.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-coin-levels",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-coin-levels",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-coin-levels.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-compute",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-compute",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-compute.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-config",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-config",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-config.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-costs",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-costs",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-costs.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-eligibility",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-eligibility",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-eligibility.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-farm-time",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-farm-time",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-farm-time.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-lab-levels",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-lab-levels",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-lab-levels.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-lab-targets",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-lab-targets",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-lab-targets.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-levels",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-levels",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-levels.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-model",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-model",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-model.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-plan",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-plan",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-plan.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage-schema",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage-schema",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage-schema.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/edamage/types",
+      "surface": "sdk-module",
+      "label": "effective-paths/edamage/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/edamage/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/eecon-candidates",
+      "surface": "sdk-module",
+      "label": "effective-paths/eecon-candidates",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/eecon-candidates.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/eecon-compute",
+      "surface": "sdk-module",
+      "label": "effective-paths/eecon-compute",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/eecon-compute.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/eecon-discount",
+      "surface": "sdk-module",
+      "label": "effective-paths/eecon-discount",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/eecon-discount.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/eecon-levels",
+      "surface": "sdk-module",
+      "label": "effective-paths/eecon-levels",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/eecon-levels.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/eecon-plan",
+      "surface": "sdk-module",
+      "label": "effective-paths/eecon-plan",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/eecon-plan.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/eecon-stats",
+      "surface": "sdk-module",
+      "label": "effective-paths/eecon-stats",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/eecon-stats.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/eecon-stone-mastery",
+      "surface": "sdk-module",
+      "label": "effective-paths/eecon-stone-mastery",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/eecon-stone-mastery.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/eecon-uw-cd",
+      "surface": "sdk-module",
+      "label": "effective-paths/eecon-uw-cd",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/eecon-uw-cd.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/eecon/types",
+      "surface": "sdk-module",
+      "label": "effective-paths/eecon/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/eecon/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/ehp-from-sheet",
+      "surface": "sdk-module",
+      "label": "effective-paths/ehp-from-sheet",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/ehp-from-sheet.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/ehp-model",
+      "surface": "sdk-module",
+      "label": "effective-paths/ehp-model",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/ehp-model.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/ehp-plan",
+      "surface": "sdk-module",
+      "label": "effective-paths/ehp-plan",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/ehp-plan.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/enhancement-costs",
+      "surface": "sdk-module",
+      "label": "effective-paths/enhancement-costs",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/enhancement-costs.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/firing/compute",
+      "surface": "sdk-module",
+      "label": "effective-paths/firing/compute",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/firing/compute.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/firing/types",
+      "surface": "sdk-module",
+      "label": "effective-paths/firing/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/firing/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/formula",
+      "surface": "sdk-module",
+      "label": "effective-paths/formula",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/formula.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/generics",
+      "surface": "sdk-module",
+      "label": "effective-paths/generics",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/generics.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/hp",
+      "surface": "sdk-module",
+      "label": "effective-paths/hp",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/hp.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/input-ranges",
+      "surface": "sdk-module",
+      "label": "effective-paths/input-ranges",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/input-ranges.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/lab-costs",
+      "surface": "sdk-module",
+      "label": "effective-paths/lab-costs",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/lab-costs.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/levels-schema",
+      "surface": "sdk-module",
+      "label": "effective-paths/levels-schema",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/levels-schema.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/path-display",
+      "surface": "sdk-module",
+      "label": "effective-paths/path-display",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/path-display.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/planner",
+      "surface": "sdk-module",
+      "label": "effective-paths/planner",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/planner.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/regen-levels",
+      "surface": "sdk-module",
+      "label": "effective-paths/regen-levels",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/regen-levels.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/regen-plan",
+      "surface": "sdk-module",
+      "label": "effective-paths/regen-plan",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/regen-plan.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/schema",
+      "surface": "sdk-module",
+      "label": "effective-paths/schema",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/schema.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/stone-costs",
+      "surface": "sdk-module",
+      "label": "effective-paths/stone-costs",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/stone-costs.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/types",
+      "surface": "sdk-module",
+      "label": "effective-paths/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/ultimate-weapons",
+      "surface": "sdk-module",
+      "label": "effective-paths/ultimate-weapons",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/ultimate-weapons.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/uw-dps",
+      "surface": "sdk-module",
+      "label": "effective-paths/uw-dps",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/uw-dps.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/workbook",
+      "surface": "sdk-module",
+      "label": "effective-paths/workbook",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/workbook.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:effective-paths/workshop-values",
+      "surface": "sdk-module",
+      "label": "effective-paths/workshop-values",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/effective-paths/workshop-values.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/constants",
+      "surface": "sdk-module",
+      "label": "enemies/constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/drops-game-data",
+      "surface": "sdk-module",
+      "label": "enemies/drops-game-data",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/drops-game-data.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/drops-shared",
+      "surface": "sdk-module",
+      "label": "enemies/drops-shared",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/drops-shared.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/drops-simulation",
+      "surface": "sdk-module",
+      "label": "enemies/drops-simulation",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/drops-simulation.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/drops-wave-context",
+      "surface": "sdk-module",
+      "label": "enemies/drops-wave-context",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/drops-wave-context.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/elite-spawn-chance",
+      "surface": "sdk-module",
+      "label": "enemies/elite-spawn-chance",
+      "graphNodeIds": [
+        "oracle.enemy.eliteSpawnChance"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "src/mechanics/enemies/elite-spawn-chance.ts"
+      ],
+      "reason": "Linked to knowledge-oracle nodes via implementedBy."
+    },
+    {
+      "id": "sdk-module:enemies/fleet-lab-effects",
+      "surface": "sdk-module",
+      "label": "enemies/fleet-lab-effects",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/fleet-lab-effects.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/get-resistance-level",
+      "surface": "sdk-module",
+      "label": "enemies/get-resistance-level",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/get-resistance-level.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/level-skip",
+      "surface": "sdk-module",
+      "label": "enemies/level-skip",
+      "graphNodeIds": [
+        "oracle.enemyLevelSkip.consumer",
+        "oracle.enemyLevelSkip.pipeline"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "src/mechanics/enemies/level-skip.ts"
+      ],
+      "reason": "Linked to knowledge-oracle nodes via implementedBy."
+    },
+    {
+      "id": "sdk-module:enemies/overcharge-hit-scaling",
+      "surface": "sdk-module",
+      "label": "enemies/overcharge-hit-scaling",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/overcharge-hit-scaling.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/ray-attack",
+      "surface": "sdk-module",
+      "label": "enemies/ray-attack",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/ray-attack.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/stat-display",
+      "surface": "sdk-module",
+      "label": "enemies/stat-display",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/stat-display.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/stats-simplified",
+      "surface": "sdk-module",
+      "label": "enemies/stats-simplified",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/stats-simplified.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/type-mix",
+      "surface": "sdk-module",
+      "label": "enemies/type-mix",
+      "graphNodeIds": [
+        "oracle.enemy.typeMix"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "src/mechanics/enemies/type-mix.ts"
+      ],
+      "reason": "Linked to knowledge-oracle nodes via implementedBy."
+    },
+    {
+      "id": "sdk-module:enemies/type-mults",
+      "surface": "sdk-module",
+      "label": "enemies/type-mults",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/type-mults.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/types",
+      "surface": "sdk-module",
+      "label": "enemies/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/vampire-beam",
+      "surface": "sdk-module",
+      "label": "enemies/vampire-beam",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/vampire-beam.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/wave-info-labs",
+      "surface": "sdk-module",
+      "label": "enemies/wave-info-labs",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/wave-info-labs.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/wave-info-pipeline",
+      "surface": "sdk-module",
+      "label": "enemies/wave-info-pipeline",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/wave-info-pipeline.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/wave-panel",
+      "surface": "sdk-module",
+      "label": "enemies/wave-panel",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/wave-panel.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:enemies/wave-stats",
+      "surface": "sdk-module",
+      "label": "enemies/wave-stats",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/enemies/wave-stats.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-controls/control-path-affects",
+      "surface": "sdk-module",
+      "label": "ep-controls/control-path-affects",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-controls/control-path-affects.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-controls/control-relations",
+      "surface": "sdk-module",
+      "label": "ep-controls/control-relations",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-controls/control-relations.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-controls/sheet-ast",
+      "surface": "sdk-module",
+      "label": "ep-controls/sheet-ast",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-controls/sheet-ast.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-controls/sheet-graph",
+      "surface": "sdk-module",
+      "label": "ep-controls/sheet-graph",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-controls/sheet-graph.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-controls/types",
+      "surface": "sdk-module",
+      "label": "ep-controls/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-controls/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-controls/web-control-map",
+      "surface": "sdk-module",
+      "label": "ep-controls/web-control-map",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-controls/web-control-map.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-graph/build-index",
+      "surface": "sdk-module",
+      "label": "ep-graph/build-index",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-graph/build-index.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-graph/mutate",
+      "surface": "sdk-module",
+      "label": "ep-graph/mutate",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-graph/mutate.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-graph/narrative",
+      "surface": "sdk-module",
+      "label": "ep-graph/narrative",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-graph/narrative.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-graph/render-mermaid",
+      "surface": "sdk-module",
+      "label": "ep-graph/render-mermaid",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-graph/render-mermaid.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-graph/schema",
+      "surface": "sdk-module",
+      "label": "ep-graph/schema",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-graph/schema.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-graph/types",
+      "surface": "sdk-module",
+      "label": "ep-graph/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-graph/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:ep-graph/validate",
+      "surface": "sdk-module",
+      "label": "ep-graph/validate",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/ep-graph/validate.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:guardians/compute",
+      "surface": "sdk-module",
+      "label": "guardians/compute",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/guardians/compute.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:guardians/types",
+      "surface": "sdk-module",
+      "label": "guardians/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/guardians/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:labs/bc-counter-labs",
+      "surface": "sdk-module",
+      "label": "labs/bc-counter-labs",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/labs/bc-counter-labs.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:labs/compute",
+      "surface": "sdk-module",
+      "label": "labs/compute",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/labs/compute.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:labs/constants",
+      "surface": "sdk-module",
+      "label": "labs/constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/labs/constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:labs/research",
+      "surface": "sdk-module",
+      "label": "labs/research",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/labs/research.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:labs/types",
+      "surface": "sdk-module",
+      "label": "labs/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/labs/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:modules/assist-module-efficiency",
+      "surface": "sdk-module",
+      "label": "modules/assist-module-efficiency",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/modules/assist-module-efficiency.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:modules/banner-pulls",
+      "surface": "sdk-module",
+      "label": "modules/banner-pulls",
+      "graphNodeIds": [
+        "oracle.module.banner"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "src/mechanics/modules/banner-pulls.ts"
+      ],
+      "reason": "Linked to knowledge-oracle nodes via implementedBy."
+    },
+    {
+      "id": "sdk-module:modules/els-calculator-options",
+      "surface": "sdk-module",
+      "label": "modules/els-calculator-options",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/modules/els-calculator-options.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:modules/els-module-cluster",
+      "surface": "sdk-module",
+      "label": "modules/els-module-cluster",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/modules/els-module-cluster.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:modules/els-upgrade-path",
+      "surface": "sdk-module",
+      "label": "modules/els-upgrade-path",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/modules/els-upgrade-path.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:modules/ilm-calculator-options",
+      "surface": "sdk-module",
+      "label": "modules/ilm-calculator-options",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/modules/ilm-calculator-options.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:modules/ilm-calculator-resolve",
+      "surface": "sdk-module",
+      "label": "modules/ilm-calculator-resolve",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/modules/ilm-calculator-resolve.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:modules/ilm-charge",
+      "surface": "sdk-module",
+      "label": "modules/ilm-charge",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/modules/ilm-charge.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:modules/sentry-protocol",
+      "surface": "sdk-module",
+      "label": "modules/sentry-protocol",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/modules/sentry-protocol.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:modules/types",
+      "surface": "sdk-module",
+      "label": "modules/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/modules/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:perks/benefit",
+      "surface": "sdk-module",
+      "label": "perks/benefit",
+      "graphNodeIds": [
+        "oracle.perk.benefitFormula",
+        "oracle.perk.index"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "src/mechanics/perks/benefit.ts"
+      ],
+      "reason": "Linked to knowledge-oracle nodes via implementedBy."
+    },
+    {
+      "id": "sdk-module:perks/types",
+      "surface": "sdk-module",
+      "label": "perks/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/perks/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:planning/roi-scaling",
+      "surface": "sdk-module",
+      "label": "planning/roi-scaling",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/planning/roi-scaling.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:primitives/constants",
+      "surface": "sdk-module",
+      "label": "primitives/constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/primitives/constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:primitives/math",
+      "surface": "sdk-module",
+      "label": "primitives/math",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/primitives/math.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:primitives/types",
+      "surface": "sdk-module",
+      "label": "primitives/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/primitives/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:primitives/units",
+      "surface": "sdk-module",
+      "label": "primitives/units",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/primitives/units.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:primitives/unity-random",
+      "surface": "sdk-module",
+      "label": "primitives/unity-random",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/primitives/unity-random.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/accumulate-wave-econ",
+      "surface": "sdk-module",
+      "label": "resource-drops/accumulate-wave-econ",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/accumulate-wave-econ.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/card-rewards",
+      "surface": "sdk-module",
+      "label": "resource-drops/card-rewards",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/card-rewards.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/coin-fetch",
+      "surface": "sdk-module",
+      "label": "resource-drops/coin-fetch",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/coin-fetch.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/coin-generator-modules",
+      "surface": "sdk-module",
+      "label": "resource-drops/coin-generator-modules",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/coin-generator-modules.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/coin-iap",
+      "surface": "sdk-module",
+      "label": "resource-drops/coin-iap",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/coin-iap.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/coin-intro-sprint",
+      "surface": "sdk-module",
+      "label": "resource-drops/coin-intro-sprint",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/coin-intro-sprint.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/coin-module-cpk",
+      "surface": "sdk-module",
+      "label": "resource-drops/coin-module-cpk",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/coin-module-cpk.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/coin-multipliers",
+      "surface": "sdk-module",
+      "label": "resource-drops/coin-multipliers",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/coin-multipliers.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/coin-perks",
+      "surface": "sdk-module",
+      "label": "resource-drops/coin-perks",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/coin-perks.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/coin-simulation",
+      "surface": "sdk-module",
+      "label": "resource-drops/coin-simulation",
+      "graphNodeIds": [
+        "oracle.roundKillVolume"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "src/mechanics/resource-drops/coin-simulation.ts"
+      ],
+      "reason": "Linked to knowledge-oracle nodes via implementedBy."
+    },
+    {
+      "id": "sdk-module:resource-drops/coin-simulation-types",
+      "surface": "sdk-module",
+      "label": "resource-drops/coin-simulation-types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/coin-simulation-types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/coin-trade-off",
+      "surface": "sdk-module",
+      "label": "resource-drops/coin-trade-off",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/coin-trade-off.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/enemy-drop-roi",
+      "surface": "sdk-module",
+      "label": "resource-drops/enemy-drop-roi",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/enemy-drop-roi.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/simulate-wave-coins",
+      "surface": "sdk-module",
+      "label": "resource-drops/simulate-wave-coins",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/simulate-wave-coins.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/simulate-wave-econ",
+      "surface": "sdk-module",
+      "label": "resource-drops/simulate-wave-econ",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/simulate-wave-econ.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/types",
+      "surface": "sdk-module",
+      "label": "resource-drops/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/wave-drop-yield",
+      "surface": "sdk-module",
+      "label": "resource-drops/wave-drop-yield",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/wave-drop-yield.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/wave-ordinary-coin-weight",
+      "surface": "sdk-module",
+      "label": "resource-drops/wave-ordinary-coin-weight",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/wave-ordinary-coin-weight.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:resource-drops/wave-skip-per-wave",
+      "surface": "sdk-module",
+      "label": "resource-drops/wave-skip-per-wave",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/resource-drops/wave-skip-per-wave.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:uptime/compute",
+      "surface": "sdk-module",
+      "label": "uptime/compute",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/uptime/compute.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:uptime/types",
+      "surface": "sdk-module",
+      "label": "uptime/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/uptime/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:uptime/uw-field-map",
+      "surface": "sdk-module",
+      "label": "uptime/uw-field-map",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/uptime/uw-field-map.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:vault/compute",
+      "surface": "sdk-module",
+      "label": "vault/compute",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/vault/compute.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:vault/constants",
+      "surface": "sdk-module",
+      "label": "vault/constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/vault/constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:vault/types",
+      "surface": "sdk-module",
+      "label": "vault/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/vault/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/accelerator-spawn-rate-cap",
+      "surface": "sdk-module",
+      "label": "waves/accelerator-spawn-rate-cap",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/accelerator-spawn-rate-cap.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/base-empirical-scaling",
+      "surface": "sdk-module",
+      "label": "waves/base-empirical-scaling",
+      "graphNodeIds": [
+        "oracle.enemy.waveScaling"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "src/mechanics/waves/base-empirical-scaling.ts"
+      ],
+      "reason": "Linked to knowledge-oracle nodes via implementedBy."
+    },
+    {
+      "id": "sdk-module:waves/base-scaling",
+      "surface": "sdk-module",
+      "label": "waves/base-scaling",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/base-scaling.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/info-enemy-constants",
+      "surface": "sdk-module",
+      "label": "waves/info-enemy-constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/info-enemy-constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/info-enemy-stats",
+      "surface": "sdk-module",
+      "label": "waves/info-enemy-stats",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/info-enemy-stats.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/info-panel-constants",
+      "surface": "sdk-module",
+      "label": "waves/info-panel-constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/info-panel-constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/info-panel-stats",
+      "surface": "sdk-module",
+      "label": "waves/info-panel-stats",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/info-panel-stats.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/info-panel-timing",
+      "surface": "sdk-module",
+      "label": "waves/info-panel-timing",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/info-panel-timing.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/main-spawn-type-chances-constants",
+      "surface": "sdk-module",
+      "label": "waves/main-spawn-type-chances-constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/main-spawn-type-chances-constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/new-wave-spawn-type-chances",
+      "surface": "sdk-module",
+      "label": "waves/new-wave-spawn-type-chances",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/new-wave-spawn-type-chances.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/reference/base-constants",
+      "surface": "sdk-module",
+      "label": "waves/reference/base-constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/reference/base-constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/reference/base-scaling-legacy",
+      "surface": "sdk-module",
+      "label": "waves/reference/base-scaling-legacy",
+      "graphNodeIds": [
+        "oracle.enemy.waveScaling"
+      ],
+      "coverageStatus": "modeled",
+      "sources": [
+        "src/mechanics/waves/reference/base-scaling-legacy.ts"
+      ],
+      "reason": "Linked to knowledge-oracle nodes via implementedBy."
+    },
+    {
+      "id": "sdk-module:waves/reference/public-wave-formulas",
+      "surface": "sdk-module",
+      "label": "waves/reference/public-wave-formulas",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/reference/public-wave-formulas.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/reference/types",
+      "surface": "sdk-module",
+      "label": "waves/reference/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/reference/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/resolve-wave-spawn-yield",
+      "surface": "sdk-module",
+      "label": "waves/resolve-wave-spawn-yield",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/resolve-wave-spawn-yield.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/scaling-regression-profile",
+      "surface": "sdk-module",
+      "label": "waves/scaling-regression-profile",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/scaling-regression-profile.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/skip",
+      "surface": "sdk-module",
+      "label": "waves/skip",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/skip.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/spawn-gate-constants",
+      "surface": "sdk-module",
+      "label": "waves/spawn-gate-constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/spawn-gate-constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/spawn-tick-constants",
+      "surface": "sdk-module",
+      "label": "waves/spawn-tick-constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/spawn-tick-constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/spawn-type-chances-coin-mix",
+      "surface": "sdk-module",
+      "label": "waves/spawn-type-chances-coin-mix",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/spawn-type-chances-coin-mix.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/spawn-yield",
+      "surface": "sdk-module",
+      "label": "waves/spawn-yield",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/spawn-yield.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/types",
+      "surface": "sdk-module",
+      "label": "waves/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:waves/update-spawn-gate-pass",
+      "surface": "sdk-module",
+      "label": "waves/update-spawn-gate-pass",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/waves/update-spawn-gate-pass.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:workshop/attack-stats",
+      "surface": "sdk-module",
+      "label": "workshop/attack-stats",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/workshop/attack-stats.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:workshop/damage",
+      "surface": "sdk-module",
+      "label": "workshop/damage",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/workshop/damage.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:workshop/defense-stats",
+      "surface": "sdk-module",
+      "label": "workshop/defense-stats",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/workshop/defense-stats.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:workshop/lab-workshop-calculations",
+      "surface": "sdk-module",
+      "label": "workshop/lab-workshop-calculations",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/workshop/lab-workshop-calculations.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:workshop/lab-workshop-constants",
+      "surface": "sdk-module",
+      "label": "workshop/lab-workshop-constants",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/workshop/lab-workshop-constants.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:workshop/overcap",
+      "surface": "sdk-module",
+      "label": "workshop/overcap",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/workshop/overcap.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:workshop/stats",
+      "surface": "sdk-module",
+      "label": "workshop/stats",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/workshop/stats.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:workshop/table-build",
+      "surface": "sdk-module",
+      "label": "workshop/table-build",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/workshop/table-build.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:workshop/types",
+      "surface": "sdk-module",
+      "label": "workshop/types",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/workshop/types.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    },
+    {
+      "id": "sdk-module:workshop/utility-stats",
+      "surface": "sdk-module",
+      "label": "workshop/utility-stats",
+      "graphNodeIds": [],
+      "coverageStatus": "unmodeled",
+      "sources": [
+        "src/mechanics/workshop/utility-stats.ts"
+      ],
+      "reason": "No knowledge-oracle node names an export of this module. The oracle is anchored to game constants and catalog data (194 of its 336 implementedBy symbols live in the knowledge compartments themselves), so an unlinked module here is not evidence that the mechanic is undocumented — see tooling/coverage/oracle-links.ts."
+    }
+  ]
+}

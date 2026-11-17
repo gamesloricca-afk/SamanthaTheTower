@@ -1,0 +1,1953 @@
+{
+  "schemaVersion": 1,
+  "sheetVersion": "v5.09.03.01",
+  "generatedAt": "2026-08-11T16:54:25.893Z",
+  "aliases": [
+    {
+      "sheetName": "Health",
+      "sheetAliases": [],
+      "id": "health",
+      "label": "Health",
+      "domain": "lab",
+      "category": "Defense",
+      "saveKey": "health",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Health Regen",
+      "sheetAliases": [],
+      "id": "health-regen",
+      "label": "Health Regen",
+      "domain": "lab",
+      "category": "Defense",
+      "saveKey": "health_regen",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Defense Absolute",
+      "sheetAliases": [],
+      "id": "defense-absolute",
+      "label": "Defense Absolute",
+      "domain": "lab",
+      "category": "Defense",
+      "saveKey": "defense_absolute",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Defense %",
+      "sheetAliases": [],
+      "id": "defense-percent",
+      "label": "Defense %",
+      "domain": "lab",
+      "category": "Defense",
+      "saveKey": "defense",
+      "isUnlock": false,
+      "note": "The catalog keys this one simply \"defense\"."
+    },
+    {
+      "sheetName": "Wall Health",
+      "sheetAliases": [],
+      "id": "wall-health",
+      "label": "Wall Health",
+      "domain": "lab",
+      "category": "Defense",
+      "saveKey": "wall_health",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Wall Regen",
+      "sheetAliases": [],
+      "id": "wall-regen",
+      "label": "Wall Regen",
+      "domain": "lab",
+      "category": "Defense",
+      "saveKey": "wall_regen",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Wall Fortification",
+      "sheetAliases": [],
+      "id": "wall-fortification",
+      "label": "Wall Fortification",
+      "domain": "lab",
+      "category": "Defense",
+      "saveKey": "wall_fortification",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Recovery Package Max",
+      "sheetAliases": [],
+      "id": "recovery-package-max",
+      "label": "Recovery Package Max",
+      "domain": "lab",
+      "category": "Utility",
+      "saveKey": "recovery_package_max",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Standard Perks Bonus",
+      "sheetAliases": [],
+      "id": "standard-perks-bonus",
+      "label": "Standard Perks Bonus",
+      "domain": "lab",
+      "category": "Perks",
+      "saveKey": "standard_perks_bonus",
+      "isUnlock": false,
+      "note": "Scales every perk, so it feeds both health and defense %."
+    },
+    {
+      "sheetName": "Improve Trade-off Perks",
+      "sheetAliases": [],
+      "id": "improve-trade-off-perks",
+      "label": "Improve Trade-off Perks",
+      "domain": "lab",
+      "category": "Perks",
+      "saveKey": "improve_trade_off_perks",
+      "isUnlock": false,
+      "note": "The sheet also writes this \"Improve Trade-Off Perks\". Lookup is case-insensitive, so that needs no separate alias."
+    },
+    {
+      "sheetName": "Chrono Field Reduction %",
+      "sheetAliases": [],
+      "id": "chrono-field-reduction-amount",
+      "label": "Chrono Field Damage Reduction",
+      "domain": "lab",
+      "category": "Ultimate Weapon",
+      "saveKey": "chrono_field_reduction",
+      "isUnlock": false,
+      "note": "How much damage Chrono Field removes: a 10% base plus 0.5% a level, over 30 levels. Gated by the unlock lab, and distinct from the weapon's default speed reduction."
+    },
+    {
+      "sheetName": "Chrono Field Damage Reduction Unlock",
+      "sheetAliases": [],
+      "id": "chrono-field-reduction-unlock",
+      "label": "Chrono Field Damage Reduction (unlock)",
+      "domain": "lab",
+      "category": "Ultimate Weapon",
+      "saveKey": "chrono_field_damage_reduction",
+      "isUnlock": true,
+      "note": "A single level that turns Chrono Field's damage reduction on. Not a path candidate — it gates one."
+    },
+    {
+      "sheetName": "Death Wave Health",
+      "sheetAliases": [],
+      "id": "death-wave-health",
+      "label": "Death Wave Health",
+      "domain": "lab",
+      "category": "Ultimate Weapon",
+      "saveKey": "death_wave_health",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Chain Thunder",
+      "sheetAliases": [],
+      "id": "chain-thunder",
+      "label": "Chain Thunder",
+      "domain": "lab",
+      "category": "Ultimate Weapon",
+      "saveKey": "chain_thunder",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Assist Module Substats - Armor",
+      "sheetAliases": [],
+      "id": "assist-substat-armor",
+      "label": "Assist Module Substats — Armor",
+      "domain": "module",
+      "category": "Modules",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Assist Module Substats - Generator",
+      "sheetAliases": [],
+      "id": "assist-substat-generator",
+      "label": "Assist Module Substats — Generator",
+      "domain": "module",
+      "category": "Modules",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Assist Module Bonus - Armor",
+      "sheetAliases": [],
+      "id": "assist-bonus-armor",
+      "label": "Assist Module Bonus — Armor",
+      "domain": "module",
+      "category": "Modules",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Health Mastery",
+      "sheetAliases": [],
+      "id": "health-mastery",
+      "label": "Health Mastery",
+      "domain": "card",
+      "category": "Card Mastery",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Extra Defense Mastery",
+      "sheetAliases": [],
+      "id": "extra-defense-mastery",
+      "label": "Extra Defense Mastery",
+      "domain": "card",
+      "category": "Card Mastery",
+      "isUnlock": false
+    },
+    {
+      "sheetName": "Dissonant Echo - Defense",
+      "sheetAliases": [],
+      "id": "dissonant-echo-defense",
+      "label": "Dissonant Echo — Defense",
+      "domain": "relic",
+      "category": "Dissonance",
+      "isUnlock": false
+    }
+  ],
+  "stats": [
+    {
+      "id": "eph_armor",
+      "label": "EPH_ARMOR",
+      "sheetFunction": "EPH_ARMOR",
+      "inputs": [
+        "prim_bonus",
+        "has_ass",
+        "ass_bonus",
+        "stone_bac",
+        "lab_bac"
+      ],
+      "terms": [],
+      "result": {
+        "kind": "product",
+        "of": [
+          {
+            "kind": "input",
+            "ref": "prim_bonus"
+          },
+          {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_ass"
+            },
+            "then": {
+              "kind": "sum",
+              "of": [
+                {
+                  "kind": "product",
+                  "of": [
+                    {
+                      "kind": "product",
+                      "of": [
+                        {
+                          "kind": "sum",
+                          "of": [
+                            {
+                              "kind": "input",
+                              "ref": "ass_bonus"
+                            },
+                            {
+                              "kind": "const",
+                              "value": -1
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "sum",
+                          "of": [
+                            {
+                              "kind": "linear",
+                              "base": 1,
+                              "perLevel": 1,
+                              "level": "stone_bac"
+                            },
+                            {
+                              "kind": "input",
+                              "ref": "lab_bac"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "const",
+                      "value": 0.01
+                    }
+                  ]
+                },
+                {
+                  "kind": "const",
+                  "value": 1
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "eph_dabs",
+      "label": "EPH_DABS",
+      "sheetFunction": "EPH_DABS",
+      "inputs": [
+        "ws_val",
+        "lab_lvl",
+        "has_card",
+        "card_val",
+        "stone_sac",
+        "lab_sac",
+        "prim_sub",
+        "ass_sub",
+        "wse_lvl",
+        "has_perk",
+        "spb_lvl",
+        "relic_pct",
+        "vault_pct"
+      ],
+      "terms": [
+        {
+          "id": "WS",
+          "label": "WS",
+          "expr": {
+            "kind": "input",
+            "ref": "ws_val"
+          }
+        },
+        {
+          "id": "LAB",
+          "label": "LAB",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.03,
+            "level": "lab_lvl"
+          }
+        },
+        {
+          "id": "CARD",
+          "label": "CARD",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_card"
+            },
+            "then": {
+              "kind": "input",
+              "ref": "card_val"
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": "SAC",
+          "label": "SAC",
+          "expr": {
+            "kind": "product",
+            "of": [
+              {
+                "kind": "sum",
+                "of": [
+                  {
+                    "kind": "linear",
+                    "base": 1,
+                    "perLevel": 1,
+                    "level": "stone_sac"
+                  },
+                  {
+                    "kind": "input",
+                    "ref": "lab_sac"
+                  }
+                ]
+              },
+              {
+                "kind": "const",
+                "value": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "id": "SUBSTAT",
+          "label": "SUBSTAT",
+          "expr": {
+            "kind": "sum",
+            "of": [
+              {
+                "kind": "linear",
+                "base": 1,
+                "perLevel": 1,
+                "level": "prim_sub"
+              },
+              {
+                "kind": "product",
+                "of": [
+                  {
+                    "kind": "input",
+                    "ref": "ass_sub"
+                  },
+                  {
+                    "kind": "ref",
+                    "term": "SAC"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "WSE",
+          "label": "WSE",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.01,
+            "level": "wse_lvl"
+          }
+        },
+        {
+          "id": "PERKDABS",
+          "label": "PERKDABS",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_perk"
+            },
+            "then": {
+              "kind": "product",
+              "of": [
+                {
+                  "kind": "const",
+                  "value": 1.75
+                },
+                {
+                  "kind": "linear",
+                  "base": 1,
+                  "perLevel": 0.01,
+                  "level": "spb_lvl"
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": "RELIC",
+          "label": "RELIC",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1,
+            "level": "relic_pct"
+          }
+        },
+        {
+          "id": "VAULT",
+          "label": "VAULT",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1,
+            "level": "vault_pct"
+          }
+        }
+      ],
+      "result": {
+        "kind": "product",
+        "of": [
+          {
+            "kind": "product",
+            "of": [
+              {
+                "kind": "product",
+                "of": [
+                  {
+                    "kind": "product",
+                    "of": [
+                      {
+                        "kind": "product",
+                        "of": [
+                          {
+                            "kind": "product",
+                            "of": [
+                              {
+                                "kind": "product",
+                                "of": [
+                                  {
+                                    "kind": "ref",
+                                    "term": "WS"
+                                  },
+                                  {
+                                    "kind": "ref",
+                                    "term": "LAB"
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "ref",
+                                "term": "CARD"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "ref",
+                            "term": "SUBSTAT"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ref",
+                        "term": "WSE"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "ref",
+                    "term": "PERKDABS"
+                  }
+                ]
+              },
+              {
+                "kind": "ref",
+                "term": "RELIC"
+              }
+            ]
+          },
+          {
+            "kind": "ref",
+            "term": "VAULT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "eph_def_pct",
+      "label": "EPH_DEF_PCT",
+      "sheetFunction": "EPH_DEF_PCT",
+      "inputs": [
+        "ws_val",
+        "lab_lvl",
+        "has_card",
+        "card_val",
+        "has_mastery",
+        "mastery_lvl",
+        "stone_sac",
+        "lab_sac",
+        "prim_sub",
+        "ass_sub",
+        "has_perk",
+        "spb_lvl",
+        "relic_pct",
+        "vault_pct"
+      ],
+      "terms": [
+        {
+          "id": "WS",
+          "label": "WS",
+          "expr": {
+            "kind": "input",
+            "ref": "ws_val"
+          }
+        },
+        {
+          "id": "LAB",
+          "label": "LAB",
+          "expr": {
+            "kind": "linear",
+            "base": 0,
+            "perLevel": 0.002,
+            "level": "lab_lvl"
+          }
+        },
+        {
+          "id": "CARD",
+          "label": "CARD",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_card"
+            },
+            "then": {
+              "kind": "sum",
+              "of": [
+                {
+                  "kind": "input",
+                  "ref": "card_val"
+                },
+                {
+                  "kind": "gated",
+                  "when": {
+                    "kind": "input",
+                    "ref": "has_mastery"
+                  },
+                  "then": {
+                    "kind": "product",
+                    "of": [
+                      {
+                        "kind": "const",
+                        "value": 0.006999999999999999
+                      },
+                      {
+                        "kind": "linear",
+                        "base": 1,
+                        "perLevel": 1,
+                        "level": "mastery_lvl"
+                      }
+                    ]
+                  },
+                  "otherwise": {
+                    "kind": "const",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 0
+            }
+          }
+        },
+        {
+          "id": "SAC",
+          "label": "SAC",
+          "expr": {
+            "kind": "product",
+            "of": [
+              {
+                "kind": "sum",
+                "of": [
+                  {
+                    "kind": "linear",
+                    "base": 1,
+                    "perLevel": 1,
+                    "level": "stone_sac"
+                  },
+                  {
+                    "kind": "input",
+                    "ref": "lab_sac"
+                  }
+                ]
+              },
+              {
+                "kind": "const",
+                "value": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "id": "SUBSTAT",
+          "label": "SUBSTAT",
+          "expr": {
+            "kind": "sum",
+            "of": [
+              {
+                "kind": "input",
+                "ref": "prim_sub"
+              },
+              {
+                "kind": "product",
+                "of": [
+                  {
+                    "kind": "input",
+                    "ref": "ass_sub"
+                  },
+                  {
+                    "kind": "ref",
+                    "term": "SAC"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "PERKDEF",
+          "label": "PERKDEF",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_perk"
+            },
+            "then": {
+              "kind": "product",
+              "of": [
+                {
+                  "kind": "const",
+                  "value": 0.2
+                },
+                {
+                  "kind": "linear",
+                  "base": 1,
+                  "perLevel": 0.01,
+                  "level": "spb_lvl"
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 0
+            }
+          }
+        },
+        {
+          "id": "RELIC",
+          "label": "RELIC",
+          "expr": {
+            "kind": "input",
+            "ref": "relic_pct"
+          }
+        },
+        {
+          "id": "VAULT",
+          "label": "VAULT",
+          "expr": {
+            "kind": "input",
+            "ref": "vault_pct"
+          }
+        }
+      ],
+      "result": {
+        "kind": "min",
+        "of": [
+          {
+            "kind": "const",
+            "value": 0.98
+          },
+          {
+            "kind": "sum",
+            "of": [
+              {
+                "kind": "sum",
+                "of": [
+                  {
+                    "kind": "sum",
+                    "of": [
+                      {
+                        "kind": "sum",
+                        "of": [
+                          {
+                            "kind": "sum",
+                            "of": [
+                              {
+                                "kind": "sum",
+                                "of": [
+                                  {
+                                    "kind": "ref",
+                                    "term": "WS"
+                                  },
+                                  {
+                                    "kind": "ref",
+                                    "term": "LAB"
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "ref",
+                                "term": "CARD"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "ref",
+                            "term": "SUBSTAT"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ref",
+                        "term": "PERKDEF"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "ref",
+                    "term": "RELIC"
+                  }
+                ]
+              },
+              {
+                "kind": "ref",
+                "term": "VAULT"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "eph_health",
+      "label": "EPH_HEALTH",
+      "sheetFunction": "EPH_HEALTH",
+      "inputs": [
+        "ws_val",
+        "lab_lvl",
+        "has_card",
+        "card_val",
+        "has_mastery",
+        "mastery_lvl",
+        "wse_lvl",
+        "has_perk",
+        "spb_lvl",
+        "has_cto",
+        "has_rto",
+        "relic_pct",
+        "vault_pct",
+        "has_dwhp",
+        "dwhp_lvl",
+        "disco"
+      ],
+      "terms": [
+        {
+          "id": "WS",
+          "label": "WS",
+          "expr": {
+            "kind": "input",
+            "ref": "ws_val"
+          }
+        },
+        {
+          "id": "LAB",
+          "label": "LAB",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.03,
+            "level": "lab_lvl"
+          }
+        },
+        {
+          "id": "CARD",
+          "label": "CARD",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_card"
+            },
+            "then": {
+              "kind": "product",
+              "of": [
+                {
+                  "kind": "input",
+                  "ref": "card_val"
+                },
+                {
+                  "kind": "gated",
+                  "when": {
+                    "kind": "input",
+                    "ref": "has_mastery"
+                  },
+                  "then": {
+                    "kind": "sum",
+                    "of": [
+                      {
+                        "kind": "const",
+                        "value": 1
+                      },
+                      {
+                        "kind": "product",
+                        "of": [
+                          {
+                            "kind": "const",
+                            "value": 0.2
+                          },
+                          {
+                            "kind": "linear",
+                            "base": 1,
+                            "perLevel": 1,
+                            "level": "mastery_lvl"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "otherwise": {
+                    "kind": "const",
+                    "value": 1
+                  }
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": "WSE",
+          "label": "WSE",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.01,
+            "level": "wse_lvl"
+          }
+        },
+        {
+          "id": "PERKHP",
+          "label": "PERKHP",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_perk"
+            },
+            "then": {
+              "kind": "product",
+              "of": [
+                {
+                  "kind": "const",
+                  "value": 2
+                },
+                {
+                  "kind": "linear",
+                  "base": 1,
+                  "perLevel": 0.01,
+                  "level": "spb_lvl"
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": "CTO",
+          "label": "CTO",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_cto"
+            },
+            "then": {
+              "kind": "const",
+              "value": 0.3
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": "RTO",
+          "label": "RTO",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_rto"
+            },
+            "then": {
+              "kind": "const",
+              "value": 0.4
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": "RELIC",
+          "label": "RELIC",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1,
+            "level": "relic_pct"
+          }
+        },
+        {
+          "id": "VAULT",
+          "label": "VAULT",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1,
+            "level": "vault_pct"
+          }
+        },
+        {
+          "id": "DWHP",
+          "label": "DWHP",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_dwhp"
+            },
+            "then": {
+              "kind": "linear",
+              "base": 5,
+              "perLevel": 0.25,
+              "level": "dwhp_lvl"
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        }
+      ],
+      "result": {
+        "kind": "product",
+        "of": [
+          {
+            "kind": "product",
+            "of": [
+              {
+                "kind": "product",
+                "of": [
+                  {
+                    "kind": "product",
+                    "of": [
+                      {
+                        "kind": "product",
+                        "of": [
+                          {
+                            "kind": "product",
+                            "of": [
+                              {
+                                "kind": "product",
+                                "of": [
+                                  {
+                                    "kind": "product",
+                                    "of": [
+                                      {
+                                        "kind": "product",
+                                        "of": [
+                                          {
+                                            "kind": "product",
+                                            "of": [
+                                              {
+                                                "kind": "ref",
+                                                "term": "WS"
+                                              },
+                                              {
+                                                "kind": "ref",
+                                                "term": "LAB"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "kind": "ref",
+                                            "term": "CARD"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "ref",
+                                        "term": "WSE"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "ref",
+                                    "term": "PERKHP"
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "ref",
+                                "term": "CTO"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "ref",
+                            "term": "RTO"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ref",
+                        "term": "RELIC"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "ref",
+                    "term": "VAULT"
+                  }
+                ]
+              },
+              {
+                "kind": "ref",
+                "term": "DWHP"
+              }
+            ]
+          },
+          {
+            "kind": "input",
+            "ref": "disco"
+          }
+        ]
+      }
+    },
+    {
+      "id": "eph_max_rcvr",
+      "label": "EPH_MAX_RCVR",
+      "sheetFunction": "EPH_MAX_RCVR",
+      "inputs": [
+        "ws_val",
+        "lab_lvl",
+        "stone_sac",
+        "lab_sac",
+        "prim_sub",
+        "ass_sub",
+        "wse_lvl",
+        "vault_pct"
+      ],
+      "terms": [
+        {
+          "id": "WS",
+          "label": "WS",
+          "expr": {
+            "kind": "input",
+            "ref": "ws_val"
+          }
+        },
+        {
+          "id": "LAB",
+          "label": "LAB",
+          "expr": {
+            "kind": "linear",
+            "base": 0,
+            "perLevel": 0.01,
+            "level": "lab_lvl"
+          }
+        },
+        {
+          "id": "SAC",
+          "label": "SAC",
+          "expr": {
+            "kind": "product",
+            "of": [
+              {
+                "kind": "sum",
+                "of": [
+                  {
+                    "kind": "linear",
+                    "base": 1,
+                    "perLevel": 1,
+                    "level": "stone_sac"
+                  },
+                  {
+                    "kind": "input",
+                    "ref": "lab_sac"
+                  }
+                ]
+              },
+              {
+                "kind": "const",
+                "value": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "id": "SUBSTAT",
+          "label": "SUBSTAT",
+          "expr": {
+            "kind": "sum",
+            "of": [
+              {
+                "kind": "input",
+                "ref": "prim_sub"
+              },
+              {
+                "kind": "product",
+                "of": [
+                  {
+                    "kind": "input",
+                    "ref": "ass_sub"
+                  },
+                  {
+                    "kind": "ref",
+                    "term": "SAC"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "WSE",
+          "label": "WSE",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.01,
+            "level": "wse_lvl"
+          }
+        },
+        {
+          "id": "VAULT",
+          "label": "VAULT",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1,
+            "level": "vault_pct"
+          }
+        }
+      ],
+      "result": {
+        "kind": "product",
+        "of": [
+          {
+            "kind": "product",
+            "of": [
+              {
+                "kind": "sum",
+                "of": [
+                  {
+                    "kind": "sum",
+                    "of": [
+                      {
+                        "kind": "ref",
+                        "term": "WS"
+                      },
+                      {
+                        "kind": "ref",
+                        "term": "LAB"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "ref",
+                    "term": "SUBSTAT"
+                  }
+                ]
+              },
+              {
+                "kind": "ref",
+                "term": "WSE"
+              }
+            ]
+          },
+          {
+            "kind": "ref",
+            "term": "VAULT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "eph_regen",
+      "label": "EPH_REGEN",
+      "sheetFunction": "EPH_REGEN",
+      "inputs": [
+        "ws_val",
+        "lab_lvl",
+        "has_card",
+        "card_val",
+        "has_mastery",
+        "mastery_lvl",
+        "stone_sac",
+        "lab_sac",
+        "prim_sub",
+        "ass_sub",
+        "wse_lvl",
+        "has_perk",
+        "spb_lvl",
+        "has_rgnto",
+        "has_rto",
+        "ito_lvl",
+        "relic_pct",
+        "vault_pct",
+        "has_swm",
+        "swm_lvl"
+      ],
+      "terms": [
+        {
+          "id": "WS",
+          "label": "WS",
+          "expr": {
+            "kind": "input",
+            "ref": "ws_val"
+          }
+        },
+        {
+          "id": "LAB",
+          "label": "LAB",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.03,
+            "level": "lab_lvl"
+          }
+        },
+        {
+          "id": "CARD",
+          "label": "CARD",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_card"
+            },
+            "then": {
+              "kind": "product",
+              "of": [
+                {
+                  "kind": "input",
+                  "ref": "card_val"
+                },
+                {
+                  "kind": "gated",
+                  "when": {
+                    "kind": "input",
+                    "ref": "has_mastery"
+                  },
+                  "then": {
+                    "kind": "sum",
+                    "of": [
+                      {
+                        "kind": "const",
+                        "value": 1
+                      },
+                      {
+                        "kind": "product",
+                        "of": [
+                          {
+                            "kind": "const",
+                            "value": 0.4
+                          },
+                          {
+                            "kind": "linear",
+                            "base": 1,
+                            "perLevel": 1,
+                            "level": "mastery_lvl"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "otherwise": {
+                    "kind": "const",
+                    "value": 1
+                  }
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": "SAC",
+          "label": "SAC",
+          "expr": {
+            "kind": "product",
+            "of": [
+              {
+                "kind": "sum",
+                "of": [
+                  {
+                    "kind": "linear",
+                    "base": 1,
+                    "perLevel": 1,
+                    "level": "stone_sac"
+                  },
+                  {
+                    "kind": "input",
+                    "ref": "lab_sac"
+                  }
+                ]
+              },
+              {
+                "kind": "const",
+                "value": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "id": "SUBSTAT",
+          "label": "SUBSTAT",
+          "expr": {
+            "kind": "sum",
+            "of": [
+              {
+                "kind": "linear",
+                "base": 1,
+                "perLevel": 1,
+                "level": "prim_sub"
+              },
+              {
+                "kind": "product",
+                "of": [
+                  {
+                    "kind": "input",
+                    "ref": "ass_sub"
+                  },
+                  {
+                    "kind": "ref",
+                    "term": "SAC"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "WSE",
+          "label": "WSE",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.01,
+            "level": "wse_lvl"
+          }
+        },
+        {
+          "id": "PERKREGEN",
+          "label": "PERKREGEN",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_perk"
+            },
+            "then": {
+              "kind": "product",
+              "of": [
+                {
+                  "kind": "const",
+                  "value": 4.75
+                },
+                {
+                  "kind": "linear",
+                  "base": 1,
+                  "perLevel": 0.01,
+                  "level": "spb_lvl"
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": "RGNTO",
+          "label": "RGNTO",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_rgnto"
+            },
+            "then": {
+              "kind": "const",
+              "value": 0.1
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": "RTO",
+          "label": "RTO",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_rto"
+            },
+            "then": {
+              "kind": "product",
+              "of": [
+                {
+                  "kind": "const",
+                  "value": 8
+                },
+                {
+                  "kind": "linear",
+                  "base": 1,
+                  "perLevel": 0.01,
+                  "level": "ito_lvl"
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": "RELIC",
+          "label": "RELIC",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1,
+            "level": "relic_pct"
+          }
+        },
+        {
+          "id": "VAULT",
+          "label": "VAULT",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1,
+            "level": "vault_pct"
+          }
+        },
+        {
+          "id": "SWM",
+          "label": "SWM",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "input",
+              "ref": "has_swm"
+            },
+            "then": {
+              "kind": "sum",
+              "of": [
+                {
+                  "kind": "const",
+                  "value": 1
+                },
+                {
+                  "kind": "product",
+                  "of": [
+                    {
+                      "kind": "const",
+                      "value": 0.9
+                    },
+                    {
+                      "kind": "linear",
+                      "base": 1,
+                      "perLevel": 1,
+                      "level": "swm_lvl"
+                    }
+                  ]
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        }
+      ],
+      "result": {
+        "kind": "product",
+        "of": [
+          {
+            "kind": "product",
+            "of": [
+              {
+                "kind": "product",
+                "of": [
+                  {
+                    "kind": "product",
+                    "of": [
+                      {
+                        "kind": "product",
+                        "of": [
+                          {
+                            "kind": "product",
+                            "of": [
+                              {
+                                "kind": "product",
+                                "of": [
+                                  {
+                                    "kind": "product",
+                                    "of": [
+                                      {
+                                        "kind": "product",
+                                        "of": [
+                                          {
+                                            "kind": "product",
+                                            "of": [
+                                              {
+                                                "kind": "ref",
+                                                "term": "WS"
+                                              },
+                                              {
+                                                "kind": "ref",
+                                                "term": "LAB"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "kind": "ref",
+                                            "term": "CARD"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "ref",
+                                        "term": "SUBSTAT"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "ref",
+                                    "term": "WSE"
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "ref",
+                                "term": "PERKREGEN"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "ref",
+                            "term": "RGNTO"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ref",
+                        "term": "RTO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "ref",
+                    "term": "RELIC"
+                  }
+                ]
+              },
+              {
+                "kind": "ref",
+                "term": "VAULT"
+              }
+            ]
+          },
+          {
+            "kind": "ref",
+            "term": "SWM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "eph_wall_health",
+      "label": "EPH_WALL_HEALTH",
+      "sheetFunction": "EPH_WALL_HEALTH",
+      "inputs": [
+        "ws_val",
+        "lab_lvl",
+        "stone_sac",
+        "lab_sac",
+        "prim_sub",
+        "ass_sub",
+        "wse_lvl",
+        "prim_effect",
+        "ass_effect",
+        "fort_lvl"
+      ],
+      "terms": [
+        {
+          "id": "WS",
+          "label": "WS",
+          "expr": {
+            "kind": "input",
+            "ref": "ws_val"
+          }
+        },
+        {
+          "id": "LAB",
+          "label": "LAB",
+          "expr": {
+            "kind": "linear",
+            "base": 0,
+            "perLevel": 0.02,
+            "level": "lab_lvl"
+          }
+        },
+        {
+          "id": "SAC",
+          "label": "SAC",
+          "expr": {
+            "kind": "product",
+            "of": [
+              {
+                "kind": "sum",
+                "of": [
+                  {
+                    "kind": "linear",
+                    "base": 1,
+                    "perLevel": 1,
+                    "level": "stone_sac"
+                  },
+                  {
+                    "kind": "input",
+                    "ref": "lab_sac"
+                  }
+                ]
+              },
+              {
+                "kind": "const",
+                "value": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "id": "SUBSTAT",
+          "label": "SUBSTAT",
+          "expr": {
+            "kind": "sum",
+            "of": [
+              {
+                "kind": "input",
+                "ref": "prim_sub"
+              },
+              {
+                "kind": "product",
+                "of": [
+                  {
+                    "kind": "input",
+                    "ref": "ass_sub"
+                  },
+                  {
+                    "kind": "ref",
+                    "term": "SAC"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "WSE",
+          "label": "WSE",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.01,
+            "level": "wse_lvl"
+          }
+        },
+        {
+          "id": "SF",
+          "label": "SF",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "compare",
+              "op": "neq",
+              "left": {
+                "kind": "sum",
+                "of": [
+                  {
+                    "kind": "input",
+                    "ref": "prim_effect"
+                  },
+                  {
+                    "kind": "input",
+                    "ref": "ass_effect"
+                  }
+                ]
+              },
+              "right": {
+                "kind": "const",
+                "value": 0
+              }
+            },
+            "then": {
+              "kind": "sum",
+              "of": [
+                {
+                  "kind": "input",
+                  "ref": "prim_effect"
+                },
+                {
+                  "kind": "input",
+                  "ref": "ass_effect"
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": "WALLHP",
+          "label": "WALLHP",
+          "expr": {
+            "kind": "product",
+            "of": [
+              {
+                "kind": "product",
+                "of": [
+                  {
+                    "kind": "sum",
+                    "of": [
+                      {
+                        "kind": "sum",
+                        "of": [
+                          {
+                            "kind": "ref",
+                            "term": "WS"
+                          },
+                          {
+                            "kind": "ref",
+                            "term": "LAB"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "ref",
+                        "term": "SUBSTAT"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "ref",
+                    "term": "WSE"
+                  }
+                ]
+              },
+              {
+                "kind": "ref",
+                "term": "SF"
+              }
+            ]
+          }
+        },
+        {
+          "id": "FORT",
+          "label": "FORT",
+          "expr": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.2,
+            "level": "fort_lvl"
+          }
+        }
+      ],
+      "result": {
+        "kind": "product",
+        "of": [
+          {
+            "kind": "ref",
+            "term": "WALLHP"
+          },
+          {
+            "kind": "ref",
+            "term": "FORT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "eph_wall_regen",
+      "label": "EPH_WALL_REGEN",
+      "sheetFunction": "EPH_WALL_REGEN",
+      "inputs": [
+        "lab_lvl",
+        "prim_effect",
+        "ass_effect"
+      ],
+      "terms": [
+        {
+          "id": "LAB",
+          "label": "LAB",
+          "expr": {
+            "kind": "linear",
+            "base": 0,
+            "perLevel": 0.1,
+            "level": "lab_lvl"
+          }
+        },
+        {
+          "id": "SF",
+          "label": "SF",
+          "expr": {
+            "kind": "gated",
+            "when": {
+              "kind": "compare",
+              "op": "neq",
+              "left": {
+                "kind": "sum",
+                "of": [
+                  {
+                    "kind": "input",
+                    "ref": "prim_effect"
+                  },
+                  {
+                    "kind": "input",
+                    "ref": "ass_effect"
+                  }
+                ]
+              },
+              "right": {
+                "kind": "const",
+                "value": 0
+              }
+            },
+            "then": {
+              "kind": "sum",
+              "of": [
+                {
+                  "kind": "input",
+                  "ref": "prim_effect"
+                },
+                {
+                  "kind": "input",
+                  "ref": "ass_effect"
+                }
+              ]
+            },
+            "otherwise": {
+              "kind": "const",
+              "value": 1
+            }
+          }
+        }
+      ],
+      "result": {
+        "kind": "product",
+        "of": [
+          {
+            "kind": "ref",
+            "term": "LAB"
+          },
+          {
+            "kind": "ref",
+            "term": "SF"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1678 @@
+{
+  "source": "live spreadsheet via tools/effective-paths-oracle",
+  "sheetVersion": "v5.09.03.01",
+  "note": "How each workshop stat in workshop.json lines up with the sheet's DVT_WS_VALUE. scale is sdkValue divided by sheetValue, derived by probing levels 1, 3, 11 and 37 rather than assumed. Stats under 'diverges' have no consistent scale: the sheet's closed-form approximation and the game data genuinely disagree.",
+  "mapped": {
+    "Attack Speed": {
+      "sheetName": "Attack Speed",
+      "scale": 1
+    },
+    "Bounce Shot Chance": {
+      "sheetName": "Bounce Shot Chance",
+      "scale": 100
+    },
+    "Bounce Shot Targets": {
+      "sheetName": "Bounce Shot Targets",
+      "scale": 1
+    },
+    "Cash / Wave": {
+      "sheetName": "Cash / Wave",
+      "scale": 1
+    },
+    "Coins / Wave": {
+      "sheetName": "Coin / Wave",
+      "scale": 1
+    },
+    "Critical Chance": {
+      "sheetName": "Critical Chance",
+      "scale": 100
+    },
+    "Critical Factor": {
+      "sheetName": "Critical Factor",
+      "scale": 1
+    },
+    "Damage": {
+      "sheetName": "Damage",
+      "scale": 1
+    },
+    "Damage / Meter": {
+      "sheetName": "Damage / Meter",
+      "scale": 1
+    },
+    "Death Defy": {
+      "sheetName": "Death Defy",
+      "scale": 100
+    },
+    "Defense Absolute": {
+      "sheetName": "Defense Absolute",
+      "scale": 1
+    },
+    "Defense Percent": {
+      "sheetName": "Defense %",
+      "scale": 100
+    },
+    "Enemy Attack Level Skip": {
+      "sheetName": "Enemy Attack Level Skip",
+      "scale": 0.1
+    },
+    "Enemy Health Level Skip": {
+      "sheetName": "Enemy Health Level Skip",
+      "scale": 0.1
+    },
+    "Free Attack Upgrade": {
+      "sheetName": "Free Attack Upgrade",
+      "scale": 100
+    },
+    "Free Defense Upgrade": {
+      "sheetName": "Free Defense Upgrade",
+      "scale": 100
+    },
+    "Free Utility Upgrade": {
+      "sheetName": "Free Utility Upgrade",
+      "scale": 100
+    },
+    "Health": {
+      "sheetName": "Health",
+      "scale": 1
+    },
+    "Interest / Wave": {
+      "sheetName": "Interest / Wave",
+      "scale": 100
+    },
+    "Knockback Chance": {
+      "sheetName": "Knockback Chance",
+      "scale": 100
+    },
+    "Land Mine Damage": {
+      "sheetName": "Land Mine Damage",
+      "scale": 1
+    },
+    "Land Mine Radius": {
+      "sheetName": "Land Mine Radius",
+      "scale": 1
+    },
+    "Lifesteal": {
+      "sheetName": "Lifesteal",
+      "scale": 1
+    },
+    "Max Recovery": {
+      "sheetName": "Max Recovery",
+      "scale": 1
+    },
+    "Multishot Chance": {
+      "sheetName": "Multishot Chance",
+      "scale": 100
+    },
+    "Multishot Targets": {
+      "sheetName": "Multishot Targets",
+      "scale": 1
+    },
+    "Orb Speed": {
+      "sheetName": "Orb Speed",
+      "scale": 0.1
+    },
+    "Orbs": {
+      "sheetName": "Orbs",
+      "scale": 1
+    },
+    "Package Chance": {
+      "sheetName": "Package Chance",
+      "scale": 1
+    },
+    "Range": {
+      "sheetName": "Range",
+      "scale": 0.1
+    },
+    "Rapid Fire Chance": {
+      "sheetName": "Rapid Fire Chance",
+      "scale": 100
+    },
+    "Rapid Fire Duration": {
+      "sheetName": "Rapid Fire Duration",
+      "scale": 1
+    },
+    "Recovery Amount": {
+      "sheetName": "Recovery Amount",
+      "scale": 100
+    },
+    "Health Regen": {
+      "sheetName": "Health Regen",
+      "scale": 1
+    },
+    "Rend Armor Mult": {
+      "sheetName": "Rend Armor Mult",
+      "scale": 1
+    },
+    "Super Crit Chance": {
+      "sheetName": "Super Critical Chance",
+      "scale": 100
+    },
+    "Super Crit Mult": {
+      "sheetName": "Super Critical Mult",
+      "scale": 1
+    },
+    "Shockwave Size": {
+      "sheetName": "Shockwave Size",
+      "scale": 1
+    },
+    "Thorns": {
+      "sheetName": "Thorn Damage",
+      "scale": 100
+    },
+    "Wall Health": {
+      "sheetName": "Wall Health",
+      "scale": 100
+    }
+  },
+  "diverges": {
+    "Cash Bonus": {
+      "sheetName": "Cash Bonus",
+      "observedRatios": [
+        1.009899,
+        1.0296911,
+        1.1087803,
+        1.3649497
+      ]
+    },
+    "Coins / Kill Bonus": {
+      "sheetName": "Coin / Kill Bonus",
+      "observedRatios": [
+        1.009899,
+        1.0296911,
+        1.1087803,
+        1.3649497
+      ]
+    },
+    "Knockback Force": {
+      "sheetName": "Knockback Force",
+      "observedRatios": [
+        1,
+        1,
+        1.0000001,
+        0.95000003
+      ]
+    },
+    "Land Mine Chance": {
+      "sheetName": "Land Mine Chance",
+      "observedRatios": [
+        3.3333335,
+        6.0000002,
+        8.461539,
+        9.4871798
+      ]
+    },
+    "Rend Armor Chance": {
+      "sheetName": "Rend Armor Chance",
+      "observedRatios": [
+        33.333334,
+        50.000001,
+        75.000003,
+        90.476189
+      ]
+    },
+    "Shockwave Frequency": {
+      "sheetName": "Shockwave Frequency",
+      "observedRatios": [
+        1.1780416,
+        1.1812688,
+        1.1954398,
+        1.2620087
+      ]
+    },
+    "Wall Rebuild": {
+      "sheetName": "Wall Rebuild",
+      "observedRatios": [
+        99.916597,
+        99.749373,
+        99.074853,
+        96.818573
+      ]
+    }
+  },
+  "absentFromSheet": [
+    "Bounce Shot Range"
+  ],
+  "probeLevels": [
+    1,
+    3,
+    11,
+    37
+  ],
+  "samples": [
+    {
+      "sdkKey": "Attack Speed",
+      "sheetName": "Attack Speed",
+      "level": 1,
+      "sdkValue": 1.049999952,
+      "sheetValue": 1.05
+    },
+    {
+      "sdkKey": "Attack Speed",
+      "sheetName": "Attack Speed",
+      "level": 3,
+      "sdkValue": 1.149999976,
+      "sheetValue": 1.15
+    },
+    {
+      "sdkKey": "Attack Speed",
+      "sheetName": "Attack Speed",
+      "level": 11,
+      "sdkValue": 1.549999952,
+      "sheetValue": 1.55
+    },
+    {
+      "sdkKey": "Attack Speed",
+      "sheetName": "Attack Speed",
+      "level": 37,
+      "sdkValue": 2.849999905,
+      "sheetValue": 2.85
+    },
+    {
+      "sdkKey": "Bounce Shot Chance",
+      "sheetName": "Bounce Shot Chance",
+      "level": 1,
+      "sdkValue": 0.8000000119,
+      "sheetValue": 0.008
+    },
+    {
+      "sdkKey": "Bounce Shot Chance",
+      "sheetName": "Bounce Shot Chance",
+      "level": 3,
+      "sdkValue": 2.400000095,
+      "sheetValue": 0.024
+    },
+    {
+      "sdkKey": "Bounce Shot Chance",
+      "sheetName": "Bounce Shot Chance",
+      "level": 11,
+      "sdkValue": 8.800000191,
+      "sheetValue": 0.088
+    },
+    {
+      "sdkKey": "Bounce Shot Chance",
+      "sheetName": "Bounce Shot Chance",
+      "level": 37,
+      "sdkValue": 29.60000038,
+      "sheetValue": 0.296
+    },
+    {
+      "sdkKey": "Bounce Shot Targets",
+      "sheetName": "Bounce Shot Targets",
+      "level": 1,
+      "sdkValue": 2,
+      "sheetValue": 2
+    },
+    {
+      "sdkKey": "Bounce Shot Targets",
+      "sheetName": "Bounce Shot Targets",
+      "level": 3,
+      "sdkValue": 4,
+      "sheetValue": 4
+    },
+    {
+      "sdkKey": "Cash Bonus",
+      "sheetName": "Cash Bonus",
+      "level": 1,
+      "sdkValue": 1.01,
+      "sheetValue": 1.0001
+    },
+    {
+      "sdkKey": "Cash Bonus",
+      "sheetName": "Cash Bonus",
+      "level": 3,
+      "sdkValue": 1.03,
+      "sheetValue": 1.0003
+    },
+    {
+      "sdkKey": "Cash Bonus",
+      "sheetName": "Cash Bonus",
+      "level": 11,
+      "sdkValue": 1.11,
+      "sheetValue": 1.0011
+    },
+    {
+      "sdkKey": "Cash Bonus",
+      "sheetName": "Cash Bonus",
+      "level": 37,
+      "sdkValue": 1.37,
+      "sheetValue": 1.0037
+    },
+    {
+      "sdkKey": "Cash / Wave",
+      "sheetName": "Cash / Wave",
+      "level": 1,
+      "sdkValue": 4,
+      "sheetValue": 4
+    },
+    {
+      "sdkKey": "Cash / Wave",
+      "sheetName": "Cash / Wave",
+      "level": 3,
+      "sdkValue": 12,
+      "sheetValue": 12
+    },
+    {
+      "sdkKey": "Cash / Wave",
+      "sheetName": "Cash / Wave",
+      "level": 11,
+      "sdkValue": 44,
+      "sheetValue": 44
+    },
+    {
+      "sdkKey": "Cash / Wave",
+      "sheetName": "Cash / Wave",
+      "level": 37,
+      "sdkValue": 148,
+      "sheetValue": 148
+    },
+    {
+      "sdkKey": "Coins / Kill Bonus",
+      "sheetName": "Coins / Kill Bonus",
+      "level": 1,
+      "sdkValue": 1.01,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Coins / Kill Bonus",
+      "sheetName": "Coins / Kill Bonus",
+      "level": 3,
+      "sdkValue": 1.03,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Coins / Kill Bonus",
+      "sheetName": "Coins / Kill Bonus",
+      "level": 11,
+      "sdkValue": 1.11,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Coins / Kill Bonus",
+      "sheetName": "Coins / Kill Bonus",
+      "level": 37,
+      "sdkValue": 1.37,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Coins / Kill Bonus",
+      "sheetName": "Coin / Kill Bonus",
+      "level": 1,
+      "sdkValue": 1.01,
+      "sheetValue": 1.0001
+    },
+    {
+      "sdkKey": "Coins / Kill Bonus",
+      "sheetName": "Coin / Kill Bonus",
+      "level": 3,
+      "sdkValue": 1.03,
+      "sheetValue": 1.0003
+    },
+    {
+      "sdkKey": "Coins / Kill Bonus",
+      "sheetName": "Coin / Kill Bonus",
+      "level": 11,
+      "sdkValue": 1.11,
+      "sheetValue": 1.0011
+    },
+    {
+      "sdkKey": "Coins / Kill Bonus",
+      "sheetName": "Coin / Kill Bonus",
+      "level": 37,
+      "sdkValue": 1.37,
+      "sheetValue": 1.0037
+    },
+    {
+      "sdkKey": "Coins / Wave",
+      "sheetName": "Coins / Wave",
+      "level": 1,
+      "sdkValue": 2,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Coins / Wave",
+      "sheetName": "Coins / Wave",
+      "level": 3,
+      "sdkValue": 4,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Coins / Wave",
+      "sheetName": "Coins / Wave",
+      "level": 11,
+      "sdkValue": 12,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Coins / Wave",
+      "sheetName": "Coins / Wave",
+      "level": 37,
+      "sdkValue": 38,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Coins / Wave",
+      "sheetName": "Coin / Wave",
+      "level": 1,
+      "sdkValue": 2,
+      "sheetValue": 2
+    },
+    {
+      "sdkKey": "Coins / Wave",
+      "sheetName": "Coin / Wave",
+      "level": 3,
+      "sdkValue": 4,
+      "sheetValue": 4
+    },
+    {
+      "sdkKey": "Coins / Wave",
+      "sheetName": "Coin / Wave",
+      "level": 11,
+      "sdkValue": 12,
+      "sheetValue": 12
+    },
+    {
+      "sdkKey": "Coins / Wave",
+      "sheetName": "Coin / Wave",
+      "level": 37,
+      "sdkValue": 38,
+      "sheetValue": 38
+    },
+    {
+      "sdkKey": "Critical Chance",
+      "sheetName": "Critical Chance",
+      "level": 1,
+      "sdkValue": 2,
+      "sheetValue": 0.02
+    },
+    {
+      "sdkKey": "Critical Chance",
+      "sheetName": "Critical Chance",
+      "level": 3,
+      "sdkValue": 4,
+      "sheetValue": 0.04
+    },
+    {
+      "sdkKey": "Critical Chance",
+      "sheetName": "Critical Chance",
+      "level": 11,
+      "sdkValue": 12,
+      "sheetValue": 0.12
+    },
+    {
+      "sdkKey": "Critical Chance",
+      "sheetName": "Critical Chance",
+      "level": 37,
+      "sdkValue": 38,
+      "sheetValue": 0.38
+    },
+    {
+      "sdkKey": "Critical Factor",
+      "sheetName": "Critical Factor",
+      "level": 1,
+      "sdkValue": 1.300000072,
+      "sheetValue": 1.3
+    },
+    {
+      "sdkKey": "Critical Factor",
+      "sheetName": "Critical Factor",
+      "level": 3,
+      "sdkValue": 1.5,
+      "sheetValue": 1.5
+    },
+    {
+      "sdkKey": "Critical Factor",
+      "sheetName": "Critical Factor",
+      "level": 11,
+      "sdkValue": 2.300000191,
+      "sheetValue": 2.3
+    },
+    {
+      "sdkKey": "Critical Factor",
+      "sheetName": "Critical Factor",
+      "level": 37,
+      "sdkValue": 4.900000095,
+      "sheetValue": 4.9
+    },
+    {
+      "sdkKey": "Damage",
+      "sheetName": "Damage",
+      "level": 1,
+      "sdkValue": 5.877,
+      "sheetValue": 5.877
+    },
+    {
+      "sdkKey": "Damage",
+      "sheetName": "Damage",
+      "level": 3,
+      "sdkValue": 12.093,
+      "sheetValue": 12.093
+    },
+    {
+      "sdkKey": "Damage",
+      "sheetName": "Damage",
+      "level": 11,
+      "sdkValue": 43.117,
+      "sheetValue": 43.117
+    },
+    {
+      "sdkKey": "Damage",
+      "sheetName": "Damage",
+      "level": 37,
+      "sdkValue": 212.013,
+      "sheetValue": 212.013
+    },
+    {
+      "sdkKey": "Damage / Meter",
+      "sheetName": "Damage / Meter",
+      "level": 1,
+      "sdkValue": 0.7939773798,
+      "sheetValue": 0.7939773798
+    },
+    {
+      "sdkKey": "Damage / Meter",
+      "sheetName": "Damage / Meter",
+      "level": 3,
+      "sdkValue": 2.346203089,
+      "sheetValue": 2.346203089
+    },
+    {
+      "sdkKey": "Damage / Meter",
+      "sheetName": "Damage / Meter",
+      "level": 11,
+      "sdkValue": 8.098078728,
+      "sheetValue": 8.098078728
+    },
+    {
+      "sdkKey": "Damage / Meter",
+      "sheetName": "Damage / Meter",
+      "level": 37,
+      "sdkValue": 22.38010406,
+      "sheetValue": 22.38010406
+    },
+    {
+      "sdkKey": "Death Defy",
+      "sheetName": "Death Defy",
+      "level": 1,
+      "sdkValue": 0.400000006,
+      "sheetValue": 0.004
+    },
+    {
+      "sdkKey": "Death Defy",
+      "sheetName": "Death Defy",
+      "level": 3,
+      "sdkValue": 1.200000048,
+      "sheetValue": 0.012
+    },
+    {
+      "sdkKey": "Death Defy",
+      "sheetName": "Death Defy",
+      "level": 11,
+      "sdkValue": 4.400000095,
+      "sheetValue": 0.044
+    },
+    {
+      "sdkKey": "Death Defy",
+      "sheetName": "Death Defy",
+      "level": 37,
+      "sdkValue": 14.80000019,
+      "sheetValue": 0.148
+    },
+    {
+      "sdkKey": "Defense Absolute",
+      "sheetName": "Defense Absolute",
+      "level": 1,
+      "sdkValue": 0.504999995231628,
+      "sheetValue": 0.504999995231628
+    },
+    {
+      "sdkKey": "Defense Absolute",
+      "sheetName": "Defense Absolute",
+      "level": 3,
+      "sdkValue": 2.55563557463949,
+      "sheetValue": 2.55563557463949
+    },
+    {
+      "sdkKey": "Defense Absolute",
+      "sheetName": "Defense Absolute",
+      "level": 11,
+      "sdkValue": 12.7161425721298,
+      "sheetValue": 12.7161425721298
+    },
+    {
+      "sdkKey": "Defense Absolute",
+      "sheetName": "Defense Absolute",
+      "level": 37,
+      "sdkValue": 99.1558526575542,
+      "sheetValue": 99.1558526575542
+    },
+    {
+      "sdkKey": "Defense Percent",
+      "sheetName": "Defense Percent",
+      "level": 1,
+      "sdkValue": 0.5,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Defense Percent",
+      "sheetName": "Defense Percent",
+      "level": 3,
+      "sdkValue": 1.5,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Defense Percent",
+      "sheetName": "Defense Percent",
+      "level": 11,
+      "sdkValue": 5.5,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Defense Percent",
+      "sheetName": "Defense Percent",
+      "level": 37,
+      "sdkValue": 18.5,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Defense Percent",
+      "sheetName": "Defense %",
+      "level": 1,
+      "sdkValue": 0.5,
+      "sheetValue": 0.005
+    },
+    {
+      "sdkKey": "Defense Percent",
+      "sheetName": "Defense %",
+      "level": 3,
+      "sdkValue": 1.5,
+      "sheetValue": 0.015
+    },
+    {
+      "sdkKey": "Defense Percent",
+      "sheetName": "Defense %",
+      "level": 11,
+      "sdkValue": 5.5,
+      "sheetValue": 0.055
+    },
+    {
+      "sdkKey": "Defense Percent",
+      "sheetName": "Defense %",
+      "level": 37,
+      "sdkValue": 18.5,
+      "sheetValue": 0.185
+    },
+    {
+      "sdkKey": "Enemy Attack Level Skip",
+      "sheetName": "Enemy Attack Level Skip",
+      "level": 1,
+      "sdkValue": 0.001000000047,
+      "sheetValue": 0.01
+    },
+    {
+      "sdkKey": "Enemy Attack Level Skip",
+      "sheetName": "Enemy Attack Level Skip",
+      "level": 3,
+      "sdkValue": 0.002000000095,
+      "sheetValue": 0.02
+    },
+    {
+      "sdkKey": "Enemy Attack Level Skip",
+      "sheetName": "Enemy Attack Level Skip",
+      "level": 11,
+      "sdkValue": 0.006000000518,
+      "sheetValue": 0.06
+    },
+    {
+      "sdkKey": "Enemy Attack Level Skip",
+      "sheetName": "Enemy Attack Level Skip",
+      "level": 37,
+      "sdkValue": 0.01899999939,
+      "sheetValue": 0.19
+    },
+    {
+      "sdkKey": "Enemy Health Level Skip",
+      "sheetName": "Enemy Health Level Skip",
+      "level": 1,
+      "sdkValue": 0.001000000047,
+      "sheetValue": 0.01
+    },
+    {
+      "sdkKey": "Enemy Health Level Skip",
+      "sheetName": "Enemy Health Level Skip",
+      "level": 3,
+      "sdkValue": 0.002000000095,
+      "sheetValue": 0.02
+    },
+    {
+      "sdkKey": "Enemy Health Level Skip",
+      "sheetName": "Enemy Health Level Skip",
+      "level": 11,
+      "sdkValue": 0.006000000518,
+      "sheetValue": 0.06
+    },
+    {
+      "sdkKey": "Enemy Health Level Skip",
+      "sheetName": "Enemy Health Level Skip",
+      "level": 37,
+      "sdkValue": 0.01899999939,
+      "sheetValue": 0.19
+    },
+    {
+      "sdkKey": "Free Attack Upgrade",
+      "sheetName": "Free Attack Upgrade",
+      "level": 1,
+      "sdkValue": 0.5,
+      "sheetValue": 0.005
+    },
+    {
+      "sdkKey": "Free Attack Upgrade",
+      "sheetName": "Free Attack Upgrade",
+      "level": 3,
+      "sdkValue": 1.5,
+      "sheetValue": 0.015
+    },
+    {
+      "sdkKey": "Free Attack Upgrade",
+      "sheetName": "Free Attack Upgrade",
+      "level": 11,
+      "sdkValue": 5.5,
+      "sheetValue": 0.055
+    },
+    {
+      "sdkKey": "Free Attack Upgrade",
+      "sheetName": "Free Attack Upgrade",
+      "level": 37,
+      "sdkValue": 18.5,
+      "sheetValue": 0.185
+    },
+    {
+      "sdkKey": "Free Defense Upgrade",
+      "sheetName": "Free Defense Upgrade",
+      "level": 1,
+      "sdkValue": 0.5,
+      "sheetValue": 0.005
+    },
+    {
+      "sdkKey": "Free Defense Upgrade",
+      "sheetName": "Free Defense Upgrade",
+      "level": 3,
+      "sdkValue": 1.5,
+      "sheetValue": 0.015
+    },
+    {
+      "sdkKey": "Free Defense Upgrade",
+      "sheetName": "Free Defense Upgrade",
+      "level": 11,
+      "sdkValue": 5.5,
+      "sheetValue": 0.055
+    },
+    {
+      "sdkKey": "Free Defense Upgrade",
+      "sheetName": "Free Defense Upgrade",
+      "level": 37,
+      "sdkValue": 18.5,
+      "sheetValue": 0.185
+    },
+    {
+      "sdkKey": "Free Utility Upgrade",
+      "sheetName": "Free Utility Upgrade",
+      "level": 1,
+      "sdkValue": 0.5,
+      "sheetValue": 0.005
+    },
+    {
+      "sdkKey": "Free Utility Upgrade",
+      "sheetName": "Free Utility Upgrade",
+      "level": 3,
+      "sdkValue": 1.5,
+      "sheetValue": 0.015
+    },
+    {
+      "sdkKey": "Free Utility Upgrade",
+      "sheetName": "Free Utility Upgrade",
+      "level": 11,
+      "sdkValue": 5.5,
+      "sheetValue": 0.055
+    },
+    {
+      "sdkKey": "Free Utility Upgrade",
+      "sheetName": "Free Utility Upgrade",
+      "level": 37,
+      "sdkValue": 18.5,
+      "sheetValue": 0.185
+    },
+    {
+      "sdkKey": "Health",
+      "sheetName": "Health",
+      "level": 1,
+      "sdkValue": 10,
+      "sheetValue": 10
+    },
+    {
+      "sdkKey": "Health",
+      "sheetName": "Health",
+      "level": 3,
+      "sdkValue": 20.097185602328,
+      "sheetValue": 20.097185602328
+    },
+    {
+      "sdkKey": "Health",
+      "sheetName": "Health",
+      "level": 11,
+      "sdkValue": 98.4019699937853,
+      "sheetValue": 98.4019699937853
+    },
+    {
+      "sdkKey": "Health",
+      "sheetName": "Health",
+      "level": 37,
+      "sdkValue": 1484.53786579816,
+      "sheetValue": 1484.53786579816
+    },
+    {
+      "sdkKey": "Interest / Wave",
+      "sheetName": "Interest / Wave",
+      "level": 1,
+      "sdkValue": 0.05999999866,
+      "sheetValue": 0.0006
+    },
+    {
+      "sdkKey": "Interest / Wave",
+      "sheetName": "Interest / Wave",
+      "level": 3,
+      "sdkValue": 0.1799999923,
+      "sheetValue": 0.0018
+    },
+    {
+      "sdkKey": "Interest / Wave",
+      "sheetName": "Interest / Wave",
+      "level": 11,
+      "sdkValue": 0.6599999666,
+      "sheetValue": 0.006599999999999999
+    },
+    {
+      "sdkKey": "Interest / Wave",
+      "sheetName": "Interest / Wave",
+      "level": 37,
+      "sdkValue": 2.220000029,
+      "sheetValue": 0.022199999999999998
+    },
+    {
+      "sdkKey": "Knockback Chance",
+      "sheetName": "Knockback Chance",
+      "level": 1,
+      "sdkValue": 1,
+      "sheetValue": 0.01
+    },
+    {
+      "sdkKey": "Knockback Chance",
+      "sheetName": "Knockback Chance",
+      "level": 3,
+      "sdkValue": 3,
+      "sheetValue": 0.03
+    },
+    {
+      "sdkKey": "Knockback Chance",
+      "sheetName": "Knockback Chance",
+      "level": 11,
+      "sdkValue": 11,
+      "sheetValue": 0.11
+    },
+    {
+      "sdkKey": "Knockback Chance",
+      "sheetName": "Knockback Chance",
+      "level": 37,
+      "sdkValue": 37,
+      "sheetValue": 0.37
+    },
+    {
+      "sdkKey": "Knockback Force",
+      "sheetName": "Knockback Force",
+      "level": 1,
+      "sdkValue": 0.5500000119,
+      "sheetValue": 0.55
+    },
+    {
+      "sdkKey": "Knockback Force",
+      "sheetName": "Knockback Force",
+      "level": 3,
+      "sdkValue": 0.8500000238,
+      "sheetValue": 0.85
+    },
+    {
+      "sdkKey": "Knockback Force",
+      "sheetName": "Knockback Force",
+      "level": 11,
+      "sdkValue": 2.050000191,
+      "sheetValue": 2.05
+    },
+    {
+      "sdkKey": "Knockback Force",
+      "sheetName": "Knockback Force",
+      "level": 37,
+      "sdkValue": 5.652500153,
+      "sheetValue": 5.95
+    },
+    {
+      "sdkKey": "Land Mine Chance",
+      "sheetName": "Land Mine Chance",
+      "level": 1,
+      "sdkValue": 0.6000000238,
+      "sheetValue": 0.18
+    },
+    {
+      "sdkKey": "Land Mine Chance",
+      "sheetName": "Land Mine Chance",
+      "level": 3,
+      "sdkValue": 1.800000072,
+      "sheetValue": 0.3
+    },
+    {
+      "sdkKey": "Land Mine Chance",
+      "sheetName": "Land Mine Chance",
+      "level": 11,
+      "sdkValue": 6.600000381,
+      "sheetValue": 0.7799999999999999
+    },
+    {
+      "sdkKey": "Land Mine Chance",
+      "sheetName": "Land Mine Chance",
+      "level": 37,
+      "sdkValue": 22.20000076,
+      "sheetValue": 2.34
+    },
+    {
+      "sdkKey": "Land Mine Damage",
+      "sheetName": "Land Mine Damage",
+      "level": 1,
+      "sdkValue": 110,
+      "sheetValue": 110
+    },
+    {
+      "sdkKey": "Land Mine Damage",
+      "sheetName": "Land Mine Damage",
+      "level": 3,
+      "sdkValue": 130,
+      "sheetValue": 130
+    },
+    {
+      "sdkKey": "Land Mine Damage",
+      "sheetName": "Land Mine Damage",
+      "level": 11,
+      "sdkValue": 210,
+      "sheetValue": 210
+    },
+    {
+      "sdkKey": "Land Mine Damage",
+      "sheetName": "Land Mine Damage",
+      "level": 37,
+      "sdkValue": 470,
+      "sheetValue": 470
+    },
+    {
+      "sdkKey": "Land Mine Radius",
+      "sheetName": "Land Mine Radius",
+      "level": 1,
+      "sdkValue": 0.5199999809,
+      "sheetValue": 0.52
+    },
+    {
+      "sdkKey": "Land Mine Radius",
+      "sheetName": "Land Mine Radius",
+      "level": 3,
+      "sdkValue": 0.5600000024,
+      "sheetValue": 0.56
+    },
+    {
+      "sdkKey": "Land Mine Radius",
+      "sheetName": "Land Mine Radius",
+      "level": 11,
+      "sdkValue": 0.7200000286,
+      "sheetValue": 0.72
+    },
+    {
+      "sdkKey": "Land Mine Radius",
+      "sheetName": "Land Mine Radius",
+      "level": 37,
+      "sdkValue": 1.24000001,
+      "sheetValue": 1.24
+    },
+    {
+      "sdkKey": "Lifesteal",
+      "sheetName": "Lifesteal",
+      "level": 1,
+      "sdkValue": 0.09927235544,
+      "sheetValue": 0.09927235544
+    },
+    {
+      "sdkKey": "Lifesteal",
+      "sheetName": "Lifesteal",
+      "level": 3,
+      "sdkValue": 0.2934987247,
+      "sheetValue": 0.2934987247
+    },
+    {
+      "sdkKey": "Lifesteal",
+      "sheetName": "Lifesteal",
+      "level": 11,
+      "sdkValue": 1.015088916,
+      "sheetValue": 1.015088916
+    },
+    {
+      "sdkKey": "Lifesteal",
+      "sheetName": "Lifesteal",
+      "level": 37,
+      "sdkValue": 2.823899031,
+      "sheetValue": 2.823899031
+    },
+    {
+      "sdkKey": "Max Recovery",
+      "sheetName": "Max Recovery",
+      "level": 1,
+      "sdkValue": 1.53,
+      "sheetValue": 1.53
+    },
+    {
+      "sdkKey": "Max Recovery",
+      "sheetName": "Max Recovery",
+      "level": 3,
+      "sdkValue": 1.59,
+      "sheetValue": 1.59
+    },
+    {
+      "sdkKey": "Max Recovery",
+      "sheetName": "Max Recovery",
+      "level": 11,
+      "sdkValue": 1.83,
+      "sheetValue": 1.83
+    },
+    {
+      "sdkKey": "Max Recovery",
+      "sheetName": "Max Recovery",
+      "level": 37,
+      "sdkValue": 2.61,
+      "sheetValue": 2.61
+    },
+    {
+      "sdkKey": "Multishot Chance",
+      "sheetName": "Multishot Chance",
+      "level": 1,
+      "sdkValue": 0.5,
+      "sheetValue": 0.005
+    },
+    {
+      "sdkKey": "Multishot Chance",
+      "sheetName": "Multishot Chance",
+      "level": 3,
+      "sdkValue": 1.5,
+      "sheetValue": 0.015
+    },
+    {
+      "sdkKey": "Multishot Chance",
+      "sheetName": "Multishot Chance",
+      "level": 11,
+      "sdkValue": 5.5,
+      "sheetValue": 0.055
+    },
+    {
+      "sdkKey": "Multishot Chance",
+      "sheetName": "Multishot Chance",
+      "level": 37,
+      "sdkValue": 18.5,
+      "sheetValue": 0.185
+    },
+    {
+      "sdkKey": "Multishot Targets",
+      "sheetName": "Multishot Targets",
+      "level": 1,
+      "sdkValue": 3,
+      "sheetValue": 3
+    },
+    {
+      "sdkKey": "Multishot Targets",
+      "sheetName": "Multishot Targets",
+      "level": 3,
+      "sdkValue": 5,
+      "sheetValue": 5
+    },
+    {
+      "sdkKey": "Orb Speed",
+      "sheetName": "Orb Speed",
+      "level": 1,
+      "sdkValue": 0.0549999997,
+      "sheetValue": 0.55
+    },
+    {
+      "sdkKey": "Orb Speed",
+      "sheetName": "Orb Speed",
+      "level": 3,
+      "sdkValue": 0.08499999344,
+      "sheetValue": 0.85
+    },
+    {
+      "sdkKey": "Orb Speed",
+      "sheetName": "Orb Speed",
+      "level": 11,
+      "sdkValue": 0.2049999833,
+      "sheetValue": 2.05
+    },
+    {
+      "sdkKey": "Orb Speed",
+      "sheetName": "Orb Speed",
+      "level": 37,
+      "sdkValue": 0.5950000286,
+      "sheetValue": 5.95
+    },
+    {
+      "sdkKey": "Orbs",
+      "sheetName": "Orbs",
+      "level": 1,
+      "sdkValue": 1,
+      "sheetValue": 1
+    },
+    {
+      "sdkKey": "Orbs",
+      "sheetName": "Orbs",
+      "level": 3,
+      "sdkValue": 3,
+      "sheetValue": 3
+    },
+    {
+      "sdkKey": "Package Chance",
+      "sheetName": "Package Chance",
+      "level": 1,
+      "sdkValue": 0.06399999559,
+      "sheetValue": 0.064
+    },
+    {
+      "sdkKey": "Package Chance",
+      "sheetName": "Package Chance",
+      "level": 3,
+      "sdkValue": 0.0719999969,
+      "sheetValue": 0.072
+    },
+    {
+      "sdkKey": "Package Chance",
+      "sheetName": "Package Chance",
+      "level": 11,
+      "sdkValue": 0.1040000021,
+      "sheetValue": 0.104
+    },
+    {
+      "sdkKey": "Package Chance",
+      "sheetName": "Package Chance",
+      "level": 37,
+      "sdkValue": 0.2080000043,
+      "sheetValue": 0.208
+    },
+    {
+      "sdkKey": "Range",
+      "sheetName": "Range",
+      "level": 1,
+      "sdkValue": 3.049999952,
+      "sheetValue": 30.5
+    },
+    {
+      "sdkKey": "Range",
+      "sheetName": "Range",
+      "level": 3,
+      "sdkValue": 3.150000095,
+      "sheetValue": 31.5
+    },
+    {
+      "sdkKey": "Range",
+      "sheetName": "Range",
+      "level": 11,
+      "sdkValue": 3.549999952,
+      "sheetValue": 35.5
+    },
+    {
+      "sdkKey": "Range",
+      "sheetName": "Range",
+      "level": 37,
+      "sdkValue": 4.849999905,
+      "sheetValue": 48.5
+    },
+    {
+      "sdkKey": "Rapid Fire Chance",
+      "sheetName": "Rapid Fire Chance",
+      "level": 1,
+      "sdkValue": 0.400000006,
+      "sheetValue": 0.004
+    },
+    {
+      "sdkKey": "Rapid Fire Chance",
+      "sheetName": "Rapid Fire Chance",
+      "level": 3,
+      "sdkValue": 1.200000048,
+      "sheetValue": 0.012
+    },
+    {
+      "sdkKey": "Rapid Fire Chance",
+      "sheetName": "Rapid Fire Chance",
+      "level": 11,
+      "sdkValue": 4.400000095,
+      "sheetValue": 0.044
+    },
+    {
+      "sdkKey": "Rapid Fire Chance",
+      "sheetName": "Rapid Fire Chance",
+      "level": 37,
+      "sdkValue": 14.80000019,
+      "sheetValue": 0.148
+    },
+    {
+      "sdkKey": "Rapid Fire Duration",
+      "sheetName": "Rapid Fire Duration",
+      "level": 1,
+      "sdkValue": 0.6500000358,
+      "sheetValue": 0.65
+    },
+    {
+      "sdkKey": "Rapid Fire Duration",
+      "sheetName": "Rapid Fire Duration",
+      "level": 3,
+      "sdkValue": 0.75,
+      "sheetValue": 0.75
+    },
+    {
+      "sdkKey": "Rapid Fire Duration",
+      "sheetName": "Rapid Fire Duration",
+      "level": 11,
+      "sdkValue": 1.150000095,
+      "sheetValue": 1.15
+    },
+    {
+      "sdkKey": "Rapid Fire Duration",
+      "sheetName": "Rapid Fire Duration",
+      "level": 37,
+      "sdkValue": 2.450000048,
+      "sheetValue": 2.45
+    },
+    {
+      "sdkKey": "Recovery Amount",
+      "sheetName": "Recovery Amount",
+      "level": 1,
+      "sdkValue": 0.144,
+      "sheetValue": 0.0014400000000000003
+    },
+    {
+      "sdkKey": "Recovery Amount",
+      "sheetName": "Recovery Amount",
+      "level": 3,
+      "sdkValue": 0.152,
+      "sheetValue": 0.0015200000000000003
+    },
+    {
+      "sdkKey": "Recovery Amount",
+      "sheetName": "Recovery Amount",
+      "level": 11,
+      "sdkValue": 0.184,
+      "sheetValue": 0.0018400000000000003
+    },
+    {
+      "sdkKey": "Recovery Amount",
+      "sheetName": "Recovery Amount",
+      "level": 37,
+      "sdkValue": 0.288,
+      "sheetValue": 0.0028800000000000006
+    },
+    {
+      "sdkKey": "Health Regen",
+      "sheetName": "Health Regen",
+      "level": 1,
+      "sdkValue": 0.0399999991059303,
+      "sheetValue": 0.0399999991059303
+    },
+    {
+      "sdkKey": "Health Regen",
+      "sheetName": "Health Regen",
+      "level": 3,
+      "sdkValue": 0.151587081611156,
+      "sheetValue": 0.151587081611156
+    },
+    {
+      "sdkKey": "Health Regen",
+      "sheetName": "Health Regen",
+      "level": 11,
+      "sdkValue": 1.58461926031113,
+      "sheetValue": 1.58461926031113
+    },
+    {
+      "sdkKey": "Health Regen",
+      "sheetName": "Health Regen",
+      "level": 37,
+      "sdkValue": 25.2165925483704,
+      "sheetValue": 25.2165925483704
+    },
+    {
+      "sdkKey": "Rend Armor Chance",
+      "sheetName": "Rend Armor Chance",
+      "level": 1,
+      "sdkValue": 0.200000003,
+      "sheetValue": 0.006
+    },
+    {
+      "sdkKey": "Rend Armor Chance",
+      "sheetName": "Rend Armor Chance",
+      "level": 3,
+      "sdkValue": 0.400000006,
+      "sheetValue": 0.008
+    },
+    {
+      "sdkKey": "Rend Armor Chance",
+      "sheetName": "Rend Armor Chance",
+      "level": 11,
+      "sdkValue": 1.200000048,
+      "sheetValue": 0.016
+    },
+    {
+      "sdkKey": "Rend Armor Chance",
+      "sheetName": "Rend Armor Chance",
+      "level": 37,
+      "sdkValue": 3.799999952,
+      "sheetValue": 0.041999999999999996
+    },
+    {
+      "sdkKey": "Rend Armor Mult",
+      "sheetName": "Rend Armor Mult",
+      "level": 1,
+      "sdkValue": 0.002000000095,
+      "sheetValue": 0.002
+    },
+    {
+      "sdkKey": "Rend Armor Mult",
+      "sheetName": "Rend Armor Mult",
+      "level": 3,
+      "sdkValue": 0.00400000019,
+      "sheetValue": 0.004
+    },
+    {
+      "sdkKey": "Rend Armor Mult",
+      "sheetName": "Rend Armor Mult",
+      "level": 11,
+      "sdkValue": 0.01200000104,
+      "sheetValue": 0.012
+    },
+    {
+      "sdkKey": "Rend Armor Mult",
+      "sheetName": "Rend Armor Mult",
+      "level": 37,
+      "sdkValue": 0.03799999878,
+      "sheetValue": 0.038
+    },
+    {
+      "sdkKey": "Super Crit Chance",
+      "sheetName": "Super Crit Chance",
+      "level": 1,
+      "sdkValue": 0.200000003,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Super Crit Chance",
+      "sheetName": "Super Crit Chance",
+      "level": 3,
+      "sdkValue": 0.6000000238,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Super Crit Chance",
+      "sheetName": "Super Crit Chance",
+      "level": 11,
+      "sdkValue": 2.200000048,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Super Crit Chance",
+      "sheetName": "Super Crit Chance",
+      "level": 37,
+      "sdkValue": 7.400000095,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Super Crit Chance",
+      "sheetName": "Super Critical Chance",
+      "level": 1,
+      "sdkValue": 0.200000003,
+      "sheetValue": 0.002
+    },
+    {
+      "sdkKey": "Super Crit Chance",
+      "sheetName": "Super Critical Chance",
+      "level": 3,
+      "sdkValue": 0.6000000238,
+      "sheetValue": 0.006
+    },
+    {
+      "sdkKey": "Super Crit Chance",
+      "sheetName": "Super Critical Chance",
+      "level": 11,
+      "sdkValue": 2.200000048,
+      "sheetValue": 0.022
+    },
+    {
+      "sdkKey": "Super Crit Chance",
+      "sheetName": "Super Critical Chance",
+      "level": 37,
+      "sdkValue": 7.400000095,
+      "sheetValue": 0.074
+    },
+    {
+      "sdkKey": "Super Crit Mult",
+      "sheetName": "Super Crit Mult",
+      "level": 1,
+      "sdkValue": 1.300000072,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Super Crit Mult",
+      "sheetName": "Super Crit Mult",
+      "level": 3,
+      "sdkValue": 1.5,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Super Crit Mult",
+      "sheetName": "Super Crit Mult",
+      "level": 11,
+      "sdkValue": 2.300000191,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Super Crit Mult",
+      "sheetName": "Super Crit Mult",
+      "level": 37,
+      "sdkValue": 4.900000095,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Super Crit Mult",
+      "sheetName": "Super Critical Mult",
+      "level": 1,
+      "sdkValue": 1.300000072,
+      "sheetValue": 1.3
+    },
+    {
+      "sdkKey": "Super Crit Mult",
+      "sheetName": "Super Critical Mult",
+      "level": 3,
+      "sdkValue": 1.5,
+      "sheetValue": 1.5
+    },
+    {
+      "sdkKey": "Super Crit Mult",
+      "sheetName": "Super Critical Mult",
+      "level": 11,
+      "sdkValue": 2.300000191,
+      "sheetValue": 2.3
+    },
+    {
+      "sdkKey": "Super Crit Mult",
+      "sheetName": "Super Critical Mult",
+      "level": 37,
+      "sdkValue": 4.900000095,
+      "sheetValue": 4.9
+    },
+    {
+      "sdkKey": "Shockwave Frequency",
+      "sheetName": "Shockwave Frequency",
+      "level": 1,
+      "sdkValue": 19.85000038,
+      "sheetValue": 16.85
+    },
+    {
+      "sdkKey": "Shockwave Frequency",
+      "sheetName": "Shockwave Frequency",
+      "level": 3,
+      "sdkValue": 19.54999924,
+      "sheetValue": 16.55
+    },
+    {
+      "sdkKey": "Shockwave Frequency",
+      "sheetName": "Shockwave Frequency",
+      "level": 11,
+      "sdkValue": 18.35000038,
+      "sheetValue": 15.35
+    },
+    {
+      "sdkKey": "Shockwave Frequency",
+      "sheetName": "Shockwave Frequency",
+      "level": 37,
+      "sdkValue": 14.44999981,
+      "sheetValue": 11.45
+    },
+    {
+      "sdkKey": "Shockwave Size",
+      "sheetName": "Shockwave Size",
+      "level": 1,
+      "sdkValue": 0.6500000358,
+      "sheetValue": 0.65
+    },
+    {
+      "sdkKey": "Shockwave Size",
+      "sheetName": "Shockwave Size",
+      "level": 3,
+      "sdkValue": 0.75,
+      "sheetValue": 0.75
+    },
+    {
+      "sdkKey": "Shockwave Size",
+      "sheetName": "Shockwave Size",
+      "level": 11,
+      "sdkValue": 1.150000095,
+      "sheetValue": 1.15
+    },
+    {
+      "sdkKey": "Thorns",
+      "sheetName": "Thorns",
+      "level": 1,
+      "sdkValue": 1,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Thorns",
+      "sheetName": "Thorns",
+      "level": 3,
+      "sdkValue": 3,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Thorns",
+      "sheetName": "Thorns",
+      "level": 11,
+      "sdkValue": 11,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Thorns",
+      "sheetName": "Thorns",
+      "level": 37,
+      "sdkValue": 37,
+      "sheetValue": 0
+    },
+    {
+      "sdkKey": "Thorns",
+      "sheetName": "Thorn Damage",
+      "level": 1,
+      "sdkValue": 1,
+      "sheetValue": 0.01
+    },
+    {
+      "sdkKey": "Thorns",
+      "sheetName": "Thorn Damage",
+      "level": 3,
+      "sdkValue": 3,
+      "sheetValue": 0.03
+    },
+    {
+      "sdkKey": "Thorns",
+      "sheetName": "Thorn Damage",
+      "level": 11,
+      "sdkValue": 11,
+      "sheetValue": 0.11
+    },
+    {
+      "sdkKey": "Thorns",
+      "sheetName": "Thorn Damage",
+      "level": 37,
+      "sdkValue": 37,
+      "sheetValue": 0.37
+    },
+    {
+      "sdkKey": "Wall Health",
+      "sheetName": "Wall Health",
+      "level": 1,
+      "sdkValue": 20.1000003814697,
+      "sheetValue": 0.201
+    },
+    {
+      "sdkKey": "Wall Health",
+      "sheetName": "Wall Health",
+      "level": 3,
+      "sdkValue": 20.2999992370605,
+      "sheetValue": 0.203
+    },
+    {
+      "sdkKey": "Wall Health",
+      "sheetName": "Wall Health",
+      "level": 11,
+      "sdkValue": 21.1000003814697,
+      "sheetValue": 0.21100000000000002
+    },
+    {
+      "sdkKey": "Wall Health",
+      "sheetName": "Wall Health",
+      "level": 37,
+      "sdkValue": 23.7000007629395,
+      "sheetValue": 0.23700000000000002
+    },
+    {
+      "sdkKey": "Wall Rebuild",
+      "sheetName": "Wall Rebuild",
+      "level": 1,
+      "sdkValue": 1198,
+      "sheetValue": 11.99
+    },
+    {
+      "sdkKey": "Wall Rebuild",
+      "sheetName": "Wall Rebuild",
+      "level": 3,
+      "sdkValue": 1194,
+      "sheetValue": 11.97
+    },
+    {
+      "sdkKey": "Wall Rebuild",
+      "sheetName": "Wall Rebuild",
+      "level": 11,
+      "sdkValue": 1178,
+      "sheetValue": 11.89
+    },
+    {
+      "sdkKey": "Wall Rebuild",
+      "sheetName": "Wall Rebuild",
+      "level": 37,
+      "sdkValue": 1126,
+      "sheetValue": 11.63
+    }
+  ]
+}

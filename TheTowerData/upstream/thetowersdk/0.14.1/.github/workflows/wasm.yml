@@ -1,0 +1,53 @@
+# Build `thetowersdk.wasm` and attach it to a release.
+#
+# The module is ~6.6 MB, against an npm tarball of ~3.6 MB, and the people it is FOR do not use
+# npm — they are writing Python, Rust, Go or C#. So it ships as a release asset rather than inside
+# the package: a JavaScript caller pays nothing for it, and everyone else downloads one file.
+#
+# Runs on a release, and on demand. Not on every push: nothing in CI consumes the module, and
+# building it on each commit spends several minutes producing an artifact nobody reads.
+name: WASM
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      # The module is compiled from `dist`, so a stale dist means a module that answers with
+      # yesterday's numbers. Build it here rather than trusting whatever is checked out.
+      - run: npm run build
+
+      - run: npm run wasm:build
+
+      # The parity suite is the point of the whole exercise: a WASM build that disagrees with the
+      # library is the drift this exists to prevent. Publishing one that fails would be worse than
+      # publishing none.
+      - run: npx vitest run wasm/
+
+      - name: Attach to the release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" wasm/.build/thetowersdk.wasm --clobber
+
+      - name: Keep it as a build artifact otherwise
+        if: github.event_name != 'release'
+        uses: actions/upload-artifact@v4
+        with:
+          name: thetowersdk-wasm
+          path: wasm/.build/thetowersdk.wasm
