@@ -1,3 +1,4 @@
+```yaml
 name: Samantha - GKB SDK Runtime Test
 
 on:
@@ -28,6 +29,9 @@ jobs:
       - name: Run origin compatibility self-test
         run: node GKB/adapter/origin-compatibility.mjs
 
+      - name: Run origin mapping adapter self-test
+        run: node GKB/adapter/origin-mapping.mjs
+
       - name: Install TheTowerSDK runtime dependency
         working-directory: GKB/runtime
         run: npm install --ignore-scripts --no-audit --no-fund
@@ -43,3 +47,4 @@ jobs:
       - name: Run SDK JSON export smoke test
         working-directory: GKB/runtime
         run: npm run test:sdk-json-exports
+```
