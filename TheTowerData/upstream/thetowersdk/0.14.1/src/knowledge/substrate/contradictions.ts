@@ -72,7 +72,7 @@ export function findContradictions(graph: KnowledgeGraph): readonly Contradictio
   const buckets = new Map<string, Assertion[]>()
 
   for (const assertion of collectAssertions(graph)) {
-    const key = `${assertion.subject}�${assertion.predicate}`
+    const key = `${assertion.subject}\u0000${assertion.predicate}`
     const bucket = buckets.get(key)
     if (bucket) bucket.push(assertion)
     else buckets.set(key, [assertion])
@@ -84,7 +84,7 @@ export function findContradictions(graph: KnowledgeGraph): readonly Contradictio
     const distinct = new Set(assertions.map(a => normaliseValue(a.value)))
     if (distinct.size < 2) continue
 
-    const [subject, predicate] = key.split('�')
+    const [subject, predicate] = key.split('\u0000')
     const claims = assertions
       .map(a => ({
         value: a.value,
