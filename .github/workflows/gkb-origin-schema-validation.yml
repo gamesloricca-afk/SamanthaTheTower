@@ -26,6 +26,10 @@ jobs:
       - name: Verify Node.js
         run: node --version
 
+      - name: Install GKB runtime dependencies
+        working-directory: GKB/runtime
+        run: npm install --no-audit --no-fund
+
       - name: Run origin mapping adapter self-test
         run: node GKB/adapter/origin-mapping.mjs
 
