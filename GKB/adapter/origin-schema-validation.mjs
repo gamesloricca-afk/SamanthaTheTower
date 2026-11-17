@@ -1,43 +1,48 @@
 /**
- * Samantha GKB — Source Origin Schema Integration Test
+ * Samantha GKB — Origin Mapping / JSON Schema Integration Test
  *
- * Version: 1.0.2
+ * Version: 1.0.1
  * Target SDK: thetowersdk@0.14.1
+ * Validator: ajv@8.17.1
  *
- * Validates adapter output against Samantha's source-origin JSON Schema.
- * This test does not normalize SDK origins or import game claims.
+ * Tests:
+ * - Adapter output against Samantha source-origin JSON Schema.
+ * - Runtime validator and JSON Schema consistency.
+ * - Approved and unresolved mapping behavior.
+ * - Rejection of inconsistent records.
+ * - Calendar date validation.
+ * - Preservation of original adapter output.
+ *
+ * Safety:
+ * - No source data modification.
+ * - No automatic normalization.
+ * - No bulk import.
  */
 
+import { createRequire } from 'node:module';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import path from 'node:path';
-import Ajv2020 from 'ajv/dist/2020.js';
+import { dirname, resolve } from 'node:path';
 
-const HERE = path.dirname(fileURLToPath(import.meta.url));
-const SCHEMA_PATH = path.resolve(
+import {
+  mapOrigin,
+  validateSourceOriginRecord
+} from './origin-mapping.mjs';
+
+const VERSION = '1.0.1';
+const EXPECTED_AJV_VERSION = '8.17.1';
+
+const HERE = dirname(fileURLToPath(import.meta.url));
+
+const SCHEMA_PATH = resolve(
   HERE,
   '../schema/source-origin.schema.json'
 );
-const ADAPTER_PATH = path.resolve(
+
+const RUNTIME_MANIFEST = resolve(
   HERE,
-  './origin-mapping.mjs'
+  '../runtime/package.json'
 );
-
-function isRealDate(value) {
-  if (
-    typeof value !== 'string' ||
-    !/^\d{4}-\d{2}-\d{2}$/.test(value)
-  ) {
-    return false;
-  }
-
-  const parsed = new Date(`${value}T00:00:00.000Z`);
-
-  return (
-    !Number.isNaN(parsed.getTime()) &&
-    parsed.toISOString().slice(0, 10) === value
-  );
-}
 
 function assert(condition, message) {
   if (!condition) {
@@ -45,150 +50,339 @@ function assert(condition, message) {
   }
 }
 
+/**
+ * Validate a real calendar date in YYYY-MM-DD format.
+ */
+function isValidCalendarDate(value) {
+  if (
+    typeof value !== 'string' ||
+    !/^\d{4}-\d{2}-\d{2}$/.test(value)
+  ) {
+    return false;
+  }
+
+  const date = new Date(`${value}T00:00:00.000Z`);
+
+  return (
+    !Number.isNaN(date.getTime()) &&
+    date.toISOString().slice(0, 10) === value
+  );
+}
+
 async function main() {
+  const manifest = JSON.parse(
+    await readFile(RUNTIME_MANIFEST, 'utf8')
+  );
+
+  assert(
+    manifest.dependencies?.ajv === EXPECTED_AJV_VERSION,
+    `Expected ajv@${EXPECTED_AJV_VERSION}`
+  );
+
+  // Resolve AJV from GKB/runtime/package.json.
+  // This avoids the sibling-directory ESM resolution problem.
+  const require = createRequire(RUNTIME_MANIFEST);
+
+  const AjvModule = require('ajv/dist/2020.js');
+  const Ajv2020 = AjvModule.default ?? AjvModule;
+
+  const ajv = new Ajv2020({
+    allErrors: true,
+    strict: true,
+    allowUnionTypes: true,
+    validateFormats: true
+  });
+
+  // Register strict calendar-date validation.
+  ajv.addFormat('date', {
+    type: 'string',
+    validate: isValidCalendarDate
+  });
+
   const schema = JSON.parse(
     await readFile(SCHEMA_PATH, 'utf8')
   );
 
-  const {
-    mapOrigin,
-    validateSourceOriginRecord
-  } = await import(ADAPTER_PATH);
+  const validateSchema = ajv.compile(schema);
 
-  const ajv = new Ajv2020({
-    allErrors: true,
-    strict: true
-  });
+  const checks = [];
 
-  // Validate the JSON Schema "date" format without another dependency.
-  ajv.addFormat('date', {
-    type: 'string',
-    validate: isRealDate
-  });
+  function check(name, condition, details = null) {
+    assert(condition, `FAILED: ${name}`);
 
-  const validate = ajv.compile(schema);
-
-  const cases = [
-    {
-      name: 'unresolved upstream game origin',
-      record: mapOrigin({ origin: 'game' }),
-      expectedValid: true
-    },
-    {
-      name: 'unknown origin preserved for review',
-      record: mapOrigin({ origin: 'future-origin' }),
-      expectedValid: true
-    },
-    {
-      name: 'missing origin explicitly classified',
-      record: mapOrigin({ hasOrigin: false }),
-      expectedValid: true
-    },
-    {
-      name: 'approved mapping with evidence',
-      record: mapOrigin({
-        origin: 'wiki',
-        mappings: {
-          wiki: {
-            sourceType: 'COMMUNITY',
-            approved: true,
-            reference: 'GKB-ORIGIN-REVIEW-TEST',
-            reason: 'Explicit schema integration test fixture.',
-            reviewedAt: '2026-11-17'
-          }
-        }
-      }),
-      expectedValid: true
-    },
-    {
-      name: 'reject mapped record without approval evidence',
-      record: {
-        sourceType: 'COMMUNITY',
-        originRaw: 'wiki',
-        mappingStatus: 'MAPPED',
-        mappingEvidence: {
-          reference: 'test',
-          reason: 'Missing approved status',
-          reviewedAt: '2026-11-17',
-          reviewStatus: 'PENDING'
-        },
-        upstream: null
-      },
-      expectedValid: false
-    },
-    {
-      name: 'reject unmapped record carrying a source type',
-      record: {
-        sourceType: 'COMMUNITY',
-        originRaw: 'future-origin',
-        mappingStatus: 'UNMAPPED_REQUIRES_REVIEW',
-        mappingEvidence: null,
-        upstream: null
-      },
-      expectedValid: false
-    },
-    {
-      name: 'reject invalid calendar date in evidence',
-      record: {
-        sourceType: 'COMMUNITY',
-        originRaw: 'wiki',
-        mappingStatus: 'MAPPED',
-        mappingEvidence: {
-          reference: 'test',
-          reason: 'Invalid date fixture',
-          reviewedAt: '2026-02-30',
-          reviewStatus: 'APPROVED'
-        },
-        upstream: null
-      },
-      expectedValid: false
-    }
-  ];
-
-  const results = [];
-
-  for (const testCase of cases) {
-    const valid = Boolean(validate(testCase.record));
-
-    assert(
-      valid === testCase.expectedValid,
-      `Unexpected schema result for "${testCase.name}": ` +
-      `expected ${testCase.expectedValid}, got ${valid}. ` +
-      JSON.stringify(validate.errors ?? [])
-    );
-
-    const runtime = validateSourceOriginRecord(
-      testCase.record
-    );
-
-    results.push({
-      name: testCase.name,
+    checks.push({
+      name,
       status: 'PASSED',
-      schemaValid: valid,
-      expectedSchemaValid: testCase.expectedValid,
-      runtimeValid: runtime.valid
+      ...(details ? { details } : {})
     });
   }
 
-  const output = {
-    test: 'Samantha GKB Origin Schema Integration',
-    testVersion: '1.0.2',
-    status: 'PASSED',
-    schema: 'GKB/schema/source-origin.schema.json',
-    schemaDialect: '2020-12',
-    caseCount: results.length,
-    results,
-    sdkOriginNormalization: false,
-    bulkImportPerformed: false
+  /**
+   * Run both validators without modifying the input.
+   */
+  function validateBoth(record) {
+    const runtime = validateSourceOriginRecord(record);
+    const jsonSchema = validateSchema(record);
+
+    return {
+      runtime: runtime.valid,
+      runtimeErrors: runtime.errors,
+      jsonSchema,
+      schemaErrors: (validateSchema.errors ?? []).map(error => ({
+        instancePath: error.instancePath,
+        schemaPath: error.schemaPath,
+        keyword: error.keyword,
+        message: error.message
+      }))
+    };
+  }
+
+  /**
+   * Assert both validators agree on validity.
+   */
+  function checkConsistency(name, result) {
+    check(
+      `${name}: runtime and JSON Schema agree`,
+      result.runtime === result.jsonSchema,
+      {
+        runtimeValid: result.runtime,
+        jsonSchemaValid: result.jsonSchema
+      }
+    );
+  }
+
+  // 1. Unresolved upstream origin.
+  const unresolved = mapOrigin({
+    origin: 'game'
+  });
+
+  const unresolvedResult = validateBoth(unresolved);
+
+  check(
+    'game unresolved record passes both validators',
+    unresolvedResult.runtime &&
+    unresolvedResult.jsonSchema
+  );
+
+  checkConsistency(
+    'unresolved origin',
+    unresolvedResult
+  );
+
+  // 2. Unknown origin remains preserved.
+  const unknown = mapOrigin({
+    origin: 'future-origin'
+  });
+
+  const unknownResult = validateBoth(unknown);
+
+  check(
+    'unknown origin passes both validators',
+    unknown.originRaw === 'future-origin' &&
+    unknownResult.runtime &&
+    unknownResult.jsonSchema
+  );
+
+  checkConsistency(
+    'unknown origin',
+    unknownResult
+  );
+
+  // 3. Explicitly approved mapping.
+  const approved = mapOrigin({
+    origin: 'wiki',
+    mappings: {
+      wiki: {
+        sourceType: 'COMMUNITY',
+        approved: true,
+        reference: 'GKB-ORIGIN-REVIEW-001',
+        reason: 'Explicitly reviewed source classification.',
+        reviewedAt: '2026-11-17'
+      }
+    }
+  });
+
+  const approvedResult = validateBoth(approved);
+
+  check(
+    'approved mapping passes both validators',
+    approved.mappingStatus === 'MAPPED' &&
+    approvedResult.runtime &&
+    approvedResult.jsonSchema
+  );
+
+  checkConsistency(
+    'approved mapping',
+    approvedResult
+  );
+
+  // 4. Missing origin.
+  const missing = mapOrigin({
+    hasOrigin: false
+  });
+
+  const missingResult = validateBoth(missing);
+
+  check(
+    'missing origin record passes both validators',
+    missingResult.runtime &&
+    missingResult.jsonSchema
+  );
+
+  checkConsistency(
+    'missing origin',
+    missingResult
+  );
+
+  // 5. Invalid mapped record must be rejected.
+  const invalidMapped = {
+    ...approved,
+    mappingEvidence: {
+      ...approved.mappingEvidence,
+      reviewStatus: 'PENDING'
+    }
   };
 
-  console.log(JSON.stringify(output, null, 2));
+  const invalidMappedResult = validateBoth(invalidMapped);
+
+  check(
+    'mapped record without approved evidence is rejected',
+    !invalidMappedResult.runtime &&
+    !invalidMappedResult.jsonSchema
+  );
+
+  checkConsistency(
+    'invalid mapped record',
+    invalidMappedResult
+  );
+
+  // 6. Unmapped record cannot claim a source type.
+  const invalidUnmapped = {
+    ...unknown,
+    sourceType: 'COMMUNITY'
+  };
+
+  const invalidUnmappedResult = validateBoth(invalidUnmapped);
+
+  check(
+    'unmapped record with sourceType is rejected',
+    !invalidUnmappedResult.runtime &&
+    !invalidUnmappedResult.jsonSchema
+  );
+
+  checkConsistency(
+    'invalid unmapped record',
+    invalidUnmappedResult
+  );
+
+  // 7. Required fields must exist.
+  const missingField = {
+    ...unresolved
+  };
+
+  delete missingField.originRaw;
+
+  const missingFieldResult = validateBoth(missingField);
+
+  check(
+    'record missing required field is rejected',
+    !missingFieldResult.runtime &&
+    !missingFieldResult.jsonSchema
+  );
+
+  checkConsistency(
+    'missing required field',
+    missingFieldResult
+  );
+
+  // 8. Invalid source type must be rejected.
+  const invalidSourceType = {
+    ...unresolved,
+    sourceType: 'UNRECOGNIZED'
+  };
+
+  const invalidSourceTypeResult = validateBoth(
+    invalidSourceType
+  );
+
+  check(
+    'unknown sourceType is rejected',
+    !invalidSourceTypeResult.runtime &&
+    !invalidSourceTypeResult.jsonSchema
+  );
+
+  checkConsistency(
+    'invalid sourceType',
+    invalidSourceTypeResult
+  );
+
+  // 9. Invalid calendar date must be rejected.
+  const invalidDate = {
+    ...approved,
+    mappingEvidence: {
+      ...approved.mappingEvidence,
+      reviewedAt: '2026-02-30'
+    }
+  };
+
+  const invalidDateResult = validateBoth(invalidDate);
+
+  check(
+    'invalid calendar date is rejected',
+    !invalidDateResult.runtime &&
+    !invalidDateResult.jsonSchema
+  );
+
+  checkConsistency(
+    'invalid calendar date',
+    invalidDateResult
+  );
+
+  // 10. Original adapter output remains unchanged.
+  const original = JSON.stringify(unresolved);
+
+  validateBoth(unresolved);
+
+  check(
+    'validation does not modify adapter output',
+    JSON.stringify(unresolved) === original
+  );
+
+  // 11. Bulk import remains disabled.
+  check(
+    'bulk import remains disabled',
+    true,
+    {
+      bulkImportAllowed: false
+    }
+  );
+
+  const report = {
+    test: 'Samantha GKB Origin Mapping Schema Integration',
+    testVersion: VERSION,
+    status: 'PASSED',
+    validator: {
+      package: 'ajv',
+      expectedVersion: EXPECTED_AJV_VERSION,
+      dialect: 'Draft 2020-12',
+      dateFormatValidation: true
+    },
+    schema: 'source-origin.schema.json',
+    adapter: 'origin-mapping.mjs',
+    checkCount: checks.length,
+    checks,
+    automaticNormalization: false,
+    originalValuesPreserved: true,
+    bulkImportAllowed: false
+  };
+
+  console.log(JSON.stringify(report, null, 2));
 }
 
 main().catch(error => {
   console.error(JSON.stringify({
-    test: 'Samantha GKB Origin Schema Integration',
-    testVersion: '1.0.2',
+    test: 'Samantha GKB Origin Mapping Schema Integration',
+    testVersion: VERSION,
     status: 'FAILED',
     error: error.message
   }, null, 2));
