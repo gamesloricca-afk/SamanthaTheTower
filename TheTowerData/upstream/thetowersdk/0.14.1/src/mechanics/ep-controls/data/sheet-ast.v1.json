@@ -1,0 +1,4958 @@
+{
+  "schemaVersion": 1,
+  "sheetVersion": "v5.10.02.02",
+  "builtAt": "2026-08-29",
+  "source": "scripts/effective-paths/build-sheet-ast.mjs",
+  "surfaceSource": "scripts/effective-paths/capture-control-surface.mjs",
+  "spreadsheetId": "1J38GZ4eaU7jO5J-qmiyQE6AIQvPjBJYjwBSF418-RU4",
+  "visibleTabs": [
+    "Home Page",
+    "IDS",
+    "Giveaways",
+    "eHP",
+    "eDamage",
+    "eEcon"
+  ],
+  "stats": {
+    "interactive": 59,
+    "boundInteractive": 43,
+    "missingUiInteractive": 0
+  },
+  "interactiveControlTypes": [
+    "TOGGLE",
+    "DROPDOWN",
+    "NUMBER",
+    "TEXT"
+  ],
+  "tabs": {
+    "eEcon": {
+      "playerVisible": true,
+      "labelCol": "AU",
+      "valueCol": "AZ",
+      "merges": [
+        {
+          "a1": "AU3:AZ3",
+          "startRowIndex": 2,
+          "endRowIndex": 3,
+          "startColumnIndex": 46,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU4:AX4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU5:AX5",
+          "startRowIndex": 4,
+          "endRowIndex": 5,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU26:AX26",
+          "startRowIndex": 25,
+          "endRowIndex": 26,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU28:AX28",
+          "startRowIndex": 27,
+          "endRowIndex": 28,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AZ28:AZ29",
+          "startRowIndex": 27,
+          "endRowIndex": 29,
+          "startColumnIndex": 51,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU29:AW29",
+          "startRowIndex": 28,
+          "endRowIndex": 29,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU43:AX43",
+          "startRowIndex": 42,
+          "endRowIndex": 43,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU44:AV44",
+          "startRowIndex": 43,
+          "endRowIndex": 44,
+          "startColumnIndex": 46,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AU45:AV45",
+          "startRowIndex": 44,
+          "endRowIndex": 45,
+          "startColumnIndex": 46,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AU46:AV46",
+          "startRowIndex": 45,
+          "endRowIndex": 46,
+          "startColumnIndex": 46,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AU47:AW47",
+          "startRowIndex": 46,
+          "endRowIndex": 47,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU48:AW48",
+          "startRowIndex": 47,
+          "endRowIndex": 48,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU49:AW49",
+          "startRowIndex": 48,
+          "endRowIndex": 49,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU50:AW50",
+          "startRowIndex": 49,
+          "endRowIndex": 50,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU6:AX6",
+          "startRowIndex": 5,
+          "endRowIndex": 6,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU7:AX7",
+          "startRowIndex": 6,
+          "endRowIndex": 7,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU12:AX12",
+          "startRowIndex": 11,
+          "endRowIndex": 12,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU13:AX13",
+          "startRowIndex": 12,
+          "endRowIndex": 13,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU14:AX14",
+          "startRowIndex": 13,
+          "endRowIndex": 14,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU15:AX15",
+          "startRowIndex": 14,
+          "endRowIndex": 15,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU16:AZ16",
+          "startRowIndex": 15,
+          "endRowIndex": 16,
+          "startColumnIndex": 46,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU17:AX17",
+          "startRowIndex": 16,
+          "endRowIndex": 17,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU18:AX18",
+          "startRowIndex": 17,
+          "endRowIndex": 18,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU19:AX19",
+          "startRowIndex": 18,
+          "endRowIndex": 19,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU20:AX20",
+          "startRowIndex": 19,
+          "endRowIndex": 20,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU21:AZ21",
+          "startRowIndex": 20,
+          "endRowIndex": 21,
+          "startColumnIndex": 46,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU8:AX8",
+          "startRowIndex": 7,
+          "endRowIndex": 8,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU9:AX9",
+          "startRowIndex": 8,
+          "endRowIndex": 9,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU10:AZ10",
+          "startRowIndex": 9,
+          "endRowIndex": 10,
+          "startColumnIndex": 46,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU11:AX11",
+          "startRowIndex": 10,
+          "endRowIndex": 11,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU22:AX22",
+          "startRowIndex": 21,
+          "endRowIndex": 22,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU23:AW23",
+          "startRowIndex": 22,
+          "endRowIndex": 23,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU24:AZ24",
+          "startRowIndex": 23,
+          "endRowIndex": 24,
+          "startColumnIndex": 46,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU25:AX25",
+          "startRowIndex": 24,
+          "endRowIndex": 25,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        }
+      ],
+      "layoutBlocks": [
+        {
+          "id": "eecon-user-inputs-3",
+          "type": "FORM_GROUP",
+          "label": "User Inputs",
+          "sheetRow": 3,
+          "bounds": "AU4:AZ4",
+          "controls": [
+            {
+              "id": "eEcon!AZ4",
+              "tab": "eEcon",
+              "cell": "AZ4",
+              "row": 4,
+              "label": "PRESETS 🔗",
+              "labelRaw": "PRESETS 🔗",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eEcon!$BJ$26:$BJ$35"
+              ],
+              "backgroundColor": {
+                "red": 0.6431373,
+                "green": 0.7607843,
+                "blue": 0.95686275
+              },
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "PRESETS master — IDS spill; must render on every planner tab"
+            }
+          ],
+          "headerCell": "AZ3",
+          "headerLabel": "User Inputs"
+        },
+        {
+          "id": "eecon-user-inputs-paint-5",
+          "type": "FORM_GROUP",
+          "label": "User Inputs (paint)",
+          "sheetRow": 5,
+          "bounds": "AU5:AZ9",
+          "controls": [
+            {
+              "id": "eEcon!AZ5",
+              "tab": "eEcon",
+              "cell": "AZ5",
+              "row": 5,
+              "label": "Workshop",
+              "labelRaw": "Workshop",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eEcon!$BK$26:$BK$30"
+              ],
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            },
+            {
+              "id": "eEcon!AZ6",
+              "tab": "eEcon",
+              "cell": "AZ6",
+              "row": 6,
+              "label": "Cards",
+              "labelRaw": "Cards",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eEcon!$BL$26:$BL$30"
+              ],
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            },
+            {
+              "id": "eEcon!AZ7",
+              "tab": "eEcon",
+              "cell": "AZ7",
+              "row": 7,
+              "label": "Modules",
+              "labelRaw": "Modules",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eEcon!$BM$26:$BM$30"
+              ],
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            },
+            {
+              "id": "eEcon!AZ8",
+              "tab": "eEcon",
+              "cell": "AZ8",
+              "row": 8,
+              "label": "Bots",
+              "labelRaw": "Bots",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eEcon!$BN$26:$BN$30"
+              ],
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            },
+            {
+              "id": "eEcon!AZ9",
+              "tab": "eEcon",
+              "cell": "AZ9",
+              "row": 9,
+              "label": "Perks",
+              "labelRaw": "Perks",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eEcon!$BO$26:$BO$30"
+              ],
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            }
+          ]
+        },
+        {
+          "id": "eecon-lab-specific-inputs-10",
+          "type": "FORM_GROUP",
+          "label": "Lab Specific Inputs",
+          "sheetRow": 10,
+          "bounds": "AU11:AZ15",
+          "controls": [
+            {
+              "id": "eEcon!AZ11",
+              "tab": "eEcon",
+              "cell": "AZ11",
+              "row": 11,
+              "label": "Hide Non-unlocked Labs",
+              "labelRaw": "Hide Non-unlocked Labs",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": false,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "hideNonUnlockedLabs",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp",
+                "damage",
+                "econ"
+              ]
+            },
+            {
+              "id": "eEcon!AZ12",
+              "tab": "eEcon",
+              "cell": "AZ12",
+              "row": 12,
+              "label": "Show Labs",
+              "labelRaw": "Show Labs",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "All",
+              "optionValues": [
+                "None",
+                "1 level",
+                "4 level",
+                "10 level",
+                "All"
+              ],
+              "webKey": "showLabs",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "econ"
+              ]
+            },
+            {
+              "id": "eEcon!AZ13",
+              "tab": "eEcon",
+              "cell": "AZ13",
+              "row": 13,
+              "label": "Show Enhancements",
+              "labelRaw": "Show Enhancements",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "All",
+              "optionValues": [
+                "None",
+                "1 level",
+                "4 level",
+                "10 level",
+                "All"
+              ],
+              "webKey": "showEnhancements",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "econ"
+              ]
+            },
+            {
+              "id": "eEcon!AZ14",
+              "tab": "eEcon",
+              "cell": "AZ14",
+              "row": 14,
+              "label": "Hide Retroactive Discount Labs",
+              "labelRaw": "Hide Retroactive Discount Labs",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": true,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "showRetroactiveDiscountLabs",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "econ"
+              ]
+            },
+            {
+              "id": "eEcon!AZ15",
+              "tab": "eEcon",
+              "cell": "AZ15",
+              "row": 15,
+              "label": "Ignore Lab Target Levels",
+              "labelRaw": "Ignore Lab Target Levels",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": false,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "ignoreTargetLevels",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp",
+                "damage",
+                "econ"
+              ]
+            }
+          ],
+          "headerCell": "AZ10",
+          "headerLabel": "Lab Specific Inputs"
+        },
+        {
+          "id": "eecon-uw-specific-inputs-16",
+          "type": "FORM_GROUP",
+          "label": "UW Specific Inputs",
+          "sheetRow": 16,
+          "bounds": "AU17:AZ20",
+          "controls": [
+            {
+              "id": "eEcon!AZ17",
+              "tab": "eEcon",
+              "cell": "AZ17",
+              "row": 17,
+              "label": "Keep GT|BH|DW CD Synced",
+              "labelRaw": "Keep GT|BH|DW CD Synced",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": false,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "keepCooldownsSynced",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "econ"
+              ]
+            },
+            {
+              "id": "eEcon!AZ18",
+              "tab": "eEcon",
+              "cell": "AZ18",
+              "row": 18,
+              "label": "Ignore UW Target Levels",
+              "labelRaw": "Ignore UW Target Levels",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": false,
+              "webKey": "ignoreUwTargetLevels",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage",
+                "econ"
+              ]
+            },
+            {
+              "id": "eEcon!AZ19",
+              "tab": "eEcon",
+              "cell": "AZ19",
+              "row": 19,
+              "label": "% of Enemies that die in BH while it is active",
+              "labelRaw": "% of Enemies that die in BH while it is active",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": 1,
+              "optionValues": [
+                "1"
+              ],
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "economyEstimates.blackHoleKillShare",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "econ"
+              ]
+            },
+            {
+              "id": "eEcon!AZ20",
+              "tab": "eEcon",
+              "cell": "AZ20",
+              "row": 20,
+              "label": "// // Requires GT+ // //",
+              "labelRaw": "// // Requires GT+ // //",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 7,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "economyEstimates.killsPerSecond",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "econ"
+              ]
+            }
+          ],
+          "headerCell": "AZ16",
+          "headerLabel": "UW Specific Inputs"
+        },
+        {
+          "id": "eecon-bot-specific-inputs-21",
+          "type": "FORM_GROUP",
+          "label": "Bot Specific Inputs",
+          "sheetRow": 21,
+          "bounds": "AU22:AZ23",
+          "controls": [
+            {
+              "id": "eEcon!AZ22",
+              "tab": "eEcon",
+              "cell": "AZ22",
+              "row": 22,
+              "label": "% of Enemies that die in GB while active",
+              "labelRaw": "% of Enemies that die in GB while active",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": 1,
+              "optionValues": [
+                "1"
+              ],
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "economyEstimates.goldBotKillShare",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "econ"
+              ]
+            },
+            {
+              "id": "eEcon!AZ23",
+              "tab": "eEcon",
+              "cell": "AZ23",
+              "row": 23,
+              "label": "GB Sync Desired Ratio:",
+              "labelRaw": "GB Sync Desired Ratio:",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": "1",
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "economyEstimates.goldBotSyncRatio",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "econ"
+              ]
+            }
+          ],
+          "headerCell": "AZ21",
+          "headerLabel": "Bot Specific Inputs"
+        },
+        {
+          "id": "eecon-other-inputs-24",
+          "type": "FORM_GROUP",
+          "label": "Other Inputs",
+          "sheetRow": 24,
+          "bounds": "AU25:AZ26",
+          "controls": [
+            {
+              "id": "eEcon!AZ25",
+              "tab": "eEcon",
+              "cell": "AZ25",
+              "row": 25,
+              "label": "Boss spawns every # of waves",
+              "labelRaw": "Boss spawns every # of waves",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 10,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "economyEstimates.bossWaveInterval",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "econ"
+              ]
+            },
+            {
+              "id": "eEcon!AZ26",
+              "tab": "eEcon",
+              "cell": "AZ26",
+              "row": 26,
+              "label": "Extra Orb % enemies tagged",
+              "labelRaw": "Extra Orb % enemies tagged",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 0.9,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "economyEstimates.extraOrbTagShare",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "econ"
+              ]
+            }
+          ],
+          "headerCell": "AZ24",
+          "headerLabel": "Other Inputs"
+        },
+        {
+          "id": "eecon-other-inputs-paint-28",
+          "type": "FORM_GROUP",
+          "label": "Other Inputs (paint)",
+          "sheetRow": 28,
+          "bounds": "AU28:AZ29",
+          "controls": [
+            {
+              "id": "eEcon!AZ28",
+              "tab": "eEcon",
+              "cell": "AZ28",
+              "row": 28,
+              "label": "Cards📝",
+              "labelRaw": "Cards📝",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "useCards",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp",
+                "damage",
+                "econ"
+              ],
+              "note": "Cards📝 master on eEcon"
+            },
+            {
+              "id": "eEcon!AZ29",
+              "tab": "eEcon",
+              "cell": "AZ29",
+              "row": 29,
+              "label": "Compare Masteries at",
+              "labelRaw": "Compare Masteries at",
+              "controlType": "UNKNOWN",
+              "interactive": false,
+              "classifiedBy": "empty",
+              "value": null,
+              "webKey": null,
+              "webStatus": "display_only",
+              "webPlacement": "tab",
+              "note": "Compare Masteries at"
+            }
+          ]
+        },
+        {
+          "id": "eecon-name-30",
+          "type": "FORM_GROUP",
+          "label": "Name",
+          "sheetRow": 30,
+          "bounds": "AU31:AZ41",
+          "controls": [
+            {
+              "id": "eEcon!AZ31",
+              "tab": "eEcon",
+              "cell": "AZ31",
+              "row": 31,
+              "label": "Coins",
+              "labelRaw": "Coins",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ32",
+              "tab": "eEcon",
+              "cell": "AZ32",
+              "row": 32,
+              "label": "Coins Mastery",
+              "labelRaw": "Coins Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ33",
+              "tab": "eEcon",
+              "cell": "AZ33",
+              "row": 33,
+              "label": "Free Upgrades",
+              "labelRaw": "Free Upgrades",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ34",
+              "tab": "eEcon",
+              "cell": "AZ34",
+              "row": 34,
+              "label": "Extra Orb Mastery",
+              "labelRaw": "Extra Orb Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ35",
+              "tab": "eEcon",
+              "cell": "AZ35",
+              "row": 35,
+              "label": "Wave Skip",
+              "labelRaw": "Wave Skip",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ36",
+              "tab": "eEcon",
+              "cell": "AZ36",
+              "row": 36,
+              "label": "Wave Skip Mastery",
+              "labelRaw": "Wave Skip Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ37",
+              "tab": "eEcon",
+              "cell": "AZ37",
+              "row": 37,
+              "label": "Intro Sprint",
+              "labelRaw": "Intro Sprint",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ38",
+              "tab": "eEcon",
+              "cell": "AZ38",
+              "row": 38,
+              "label": "Intro Sprint Mastery",
+              "labelRaw": "Intro Sprint Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ39",
+              "tab": "eEcon",
+              "cell": "AZ39",
+              "row": 39,
+              "label": "Recovery Package Chance",
+              "labelRaw": "Recovery Package Chance",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ40",
+              "tab": "eEcon",
+              "cell": "AZ40",
+              "row": 40,
+              "label": "Wave Accelerator",
+              "labelRaw": "Wave Accelerator",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ41",
+              "tab": "eEcon",
+              "cell": "AZ41",
+              "row": 41,
+              "label": "Wave Accelerator Mastery",
+              "labelRaw": "Wave Accelerator Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            }
+          ],
+          "headerCell": "AZ30",
+          "headerLabel": "Name"
+        },
+        {
+          "id": "eecon-name-paint-43",
+          "type": "FORM_GROUP",
+          "label": "Name (paint)",
+          "sheetRow": 43,
+          "bounds": "AU43:AZ43",
+          "controls": [
+            {
+              "id": "eEcon!AZ43",
+              "tab": "eEcon",
+              "cell": "AZ43",
+              "row": 43,
+              "label": "Perks",
+              "labelRaw": "Perks",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "economyPerksEquipped",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "econ"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "eecon-name-44",
+          "type": "FORM_GROUP",
+          "label": "Name",
+          "sheetRow": 44,
+          "bounds": "AU45:AZ50",
+          "controls": [
+            {
+              "id": "eEcon!AZ45",
+              "tab": "eEcon",
+              "cell": "AZ45",
+              "row": 45,
+              "label": "Coins",
+              "labelRaw": "Coins",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": true,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "economyPerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ46",
+              "tab": "eEcon",
+              "cell": "AZ46",
+              "row": 46,
+              "label": "Free Upgrades",
+              "labelRaw": "Free Upgrades",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": true,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "economyPerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ47",
+              "tab": "eEcon",
+              "cell": "AZ47",
+              "row": 47,
+              "label": "x1.8 Coins / Health - 70%",
+              "labelRaw": "x1.8 Coins / Health - 70%",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "economyPerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ48",
+              "tab": "eEcon",
+              "cell": "AZ48",
+              "row": 48,
+              "label": "Golden Tower Bonus x1.5",
+              "labelRaw": "Golden Tower Bonus x1.5",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "economyPerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ49",
+              "tab": "eEcon",
+              "cell": "AZ49",
+              "row": 49,
+              "label": "Black Hole Duration",
+              "labelRaw": "Black Hole Duration",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "economyPerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eEcon!AZ50",
+              "tab": "eEcon",
+              "cell": "AZ50",
+              "row": 50,
+              "label": "Death Wave Quantity",
+              "labelRaw": "Death Wave Quantity",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "economyPerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            }
+          ],
+          "headerCell": "AZ44",
+          "headerLabel": "Name"
+        }
+      ],
+      "controlCount": 39,
+      "interactiveCount": 21
+    },
+    "eHP": {
+      "playerVisible": true,
+      "labelCol": "AT",
+      "valueCol": "AY",
+      "merges": [
+        {
+          "a1": "AX3:AY3",
+          "startRowIndex": 2,
+          "endRowIndex": 3,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX4:AY4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX5:AY5",
+          "startRowIndex": 4,
+          "endRowIndex": 5,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX6:AY6",
+          "startRowIndex": 5,
+          "endRowIndex": 6,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT32:AU32",
+          "startRowIndex": 31,
+          "endRowIndex": 32,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT33:AU33",
+          "startRowIndex": 32,
+          "endRowIndex": 33,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT34:AV34",
+          "startRowIndex": 33,
+          "endRowIndex": 34,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT35:AV35",
+          "startRowIndex": 34,
+          "endRowIndex": 35,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT36:AV36",
+          "startRowIndex": 35,
+          "endRowIndex": 36,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT37:AV37",
+          "startRowIndex": 36,
+          "endRowIndex": 37,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT4:AV4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT5:AV5",
+          "startRowIndex": 4,
+          "endRowIndex": 5,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT17:AV17",
+          "startRowIndex": 16,
+          "endRowIndex": 17,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT28:AX28",
+          "startRowIndex": 27,
+          "endRowIndex": 28,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT29:AU29",
+          "startRowIndex": 28,
+          "endRowIndex": 29,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT30:AU30",
+          "startRowIndex": 29,
+          "endRowIndex": 30,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT31:AU31",
+          "startRowIndex": 30,
+          "endRowIndex": 31,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT3:AV3",
+          "startRowIndex": 2,
+          "endRowIndex": 3,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT10:AX10",
+          "startRowIndex": 9,
+          "endRowIndex": 10,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT7:AV7",
+          "startRowIndex": 6,
+          "endRowIndex": 7,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX7:AY7",
+          "startRowIndex": 6,
+          "endRowIndex": 7,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT6:AV6",
+          "startRowIndex": 5,
+          "endRowIndex": 6,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT9:AY9",
+          "startRowIndex": 8,
+          "endRowIndex": 9,
+          "startColumnIndex": 45,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT11:AX11",
+          "startRowIndex": 10,
+          "endRowIndex": 11,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT12:AX12",
+          "startRowIndex": 11,
+          "endRowIndex": 12,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT13:AX13",
+          "startRowIndex": 12,
+          "endRowIndex": 13,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT14:AX14",
+          "startRowIndex": 13,
+          "endRowIndex": 14,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT16:AX16",
+          "startRowIndex": 15,
+          "endRowIndex": 16,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AY16:AY17",
+          "startRowIndex": 15,
+          "endRowIndex": 17,
+          "startColumnIndex": 50,
+          "endColumnIndex": 51
+        }
+      ],
+      "layoutBlocks": [
+        {
+          "id": "ehp-panel-3",
+          "type": "FORM_GROUP",
+          "label": "Panel",
+          "sheetRow": 3,
+          "bounds": "AT3:AY7",
+          "controls": [
+            {
+              "id": "eHP!AX3",
+              "tab": "eHP",
+              "cell": "AX3",
+              "row": 3,
+              "label": "PRESETS 🔗",
+              "labelRaw": "PRESETS 🔗",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eHP!$BB$28:$BB$37"
+              ],
+              "backgroundColor": {
+                "red": 0.7058824,
+                "green": 0.654902,
+                "blue": 0.8392157
+              },
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "PRESETS master — IDS spill; must render on every planner tab"
+            },
+            {
+              "id": "eHP!AX4",
+              "tab": "eHP",
+              "cell": "AX4",
+              "row": 4,
+              "label": "Workshop",
+              "labelRaw": "Workshop",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eHP!$BC$28:$BC$32"
+              ],
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            },
+            {
+              "id": "eHP!AX5",
+              "tab": "eHP",
+              "cell": "AX5",
+              "row": 5,
+              "label": "Cards",
+              "labelRaw": "Cards",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eHP!$BD$28:$BD$32"
+              ],
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            },
+            {
+              "id": "eHP!AX6",
+              "tab": "eHP",
+              "cell": "AX6",
+              "row": 6,
+              "label": "Modules",
+              "labelRaw": "Modules",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eHP!$BE$28:$BE$32"
+              ],
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            },
+            {
+              "id": "eHP!AX7",
+              "tab": "eHP",
+              "cell": "AX7",
+              "row": 7,
+              "label": "Perks",
+              "labelRaw": "Perks",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eHP!$BG$28:$BG$32"
+              ],
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            }
+          ]
+        },
+        {
+          "id": "ehp-user-specific-guesses-9",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses",
+          "sheetRow": 9,
+          "bounds": "AT10:AY14",
+          "controls": [
+            {
+              "id": "eHP!AY10",
+              "tab": "eHP",
+              "cell": "AY10",
+              "row": 10,
+              "label": "Simulated Tier",
+              "labelRaw": "Simulated Tier",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "T1",
+              "optionValues": [
+                "T1",
+                "T2",
+                "T3",
+                "T4",
+                "T5",
+                "T6",
+                "T7",
+                "T8",
+                "T9",
+                "T10",
+                "T11",
+                "T12",
+                "T13",
+                "T14",
+                "T15",
+                "T16",
+                "T17",
+                "T18",
+                "T19",
+                "T20",
+                "T21",
+                "Tourney"
+              ],
+              "webKey": "simulatedTier",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp"
+              ]
+            },
+            {
+              "id": "eHP!AY11",
+              "tab": "eHP",
+              "cell": "AY11",
+              "row": 11,
+              "label": "Enemies Attacking Together",
+              "labelRaw": "Enemies Attacking Together",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 1,
+              "webKey": "enemiesAttackingTogether",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp"
+              ]
+            },
+            {
+              "id": "eHP!AY12",
+              "tab": "eHP",
+              "cell": "AY12",
+              "row": 12,
+              "label": "CL DMG does % of Total Damage:",
+              "labelRaw": "CL DMG does % of Total Damage:",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 0.01,
+              "webKey": "chainLightningDamagePct",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp"
+              ]
+            },
+            {
+              "id": "eHP!AY13",
+              "tab": "eHP",
+              "cell": "AY13",
+              "row": 13,
+              "label": "Ignore Target Levels",
+              "labelRaw": "Ignore Target Levels",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": false,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "ignoreTargetLevels",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp",
+                "damage",
+                "econ"
+              ]
+            },
+            {
+              "id": "eHP!AY14",
+              "tab": "eHP",
+              "cell": "AY14",
+              "row": 14,
+              "label": "Hide Non-unlocked Labs",
+              "labelRaw": "Hide Non-unlocked Labs",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": false,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "hideNonUnlockedLabs",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp",
+                "damage",
+                "econ"
+              ]
+            }
+          ],
+          "headerCell": "AY9",
+          "headerLabel": "User Specific Guesses"
+        },
+        {
+          "id": "ehp-user-specific-guesses-paint-16",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint)",
+          "sheetRow": 16,
+          "bounds": "AT16:AY17",
+          "controls": [
+            {
+              "id": "eHP!AY16",
+              "tab": "eHP",
+              "cell": "AY16",
+              "row": 16,
+              "label": "Cards📝",
+              "labelRaw": "Cards📝",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "useCards",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp",
+                "damage",
+                "econ"
+              ]
+            },
+            {
+              "id": "eHP!AY17",
+              "tab": "eHP",
+              "cell": "AY17",
+              "row": 17,
+              "label": "Compare Masteries at",
+              "labelRaw": "Compare Masteries at",
+              "controlType": "UNKNOWN",
+              "interactive": false,
+              "classifiedBy": "empty",
+              "value": null,
+              "webKey": null,
+              "webStatus": "display_only",
+              "webPlacement": "tab",
+              "note": "Compare Masteries at — ROI display"
+            }
+          ]
+        },
+        {
+          "id": "ehp-name-18",
+          "type": "FORM_GROUP",
+          "label": "Name",
+          "sheetRow": 18,
+          "bounds": "AT19:AY26",
+          "controls": [
+            {
+              "id": "eHP!AY19",
+              "tab": "eHP",
+              "cell": "AY19",
+              "row": 19,
+              "label": "Health",
+              "labelRaw": "Health",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY20",
+              "tab": "eHP",
+              "cell": "AY20",
+              "row": 20,
+              "label": "Health Mastery",
+              "labelRaw": "Health Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY21",
+              "tab": "eHP",
+              "cell": "AY21",
+              "row": 21,
+              "label": "Health Regen",
+              "labelRaw": "Health Regen",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY22",
+              "tab": "eHP",
+              "cell": "AY22",
+              "row": 22,
+              "label": "Health Regen Mastery",
+              "labelRaw": "Health Regen Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY23",
+              "tab": "eHP",
+              "cell": "AY23",
+              "row": 23,
+              "label": "Extra Defense",
+              "labelRaw": "Extra Defense",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY24",
+              "tab": "eHP",
+              "cell": "AY24",
+              "row": 24,
+              "label": "Extra Defense Mastery",
+              "labelRaw": "Extra Defense Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY25",
+              "tab": "eHP",
+              "cell": "AY25",
+              "row": 25,
+              "label": "Fortress",
+              "labelRaw": "Fortress",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY26",
+              "tab": "eHP",
+              "cell": "AY26",
+              "row": 26,
+              "label": "Second Wind Mastery",
+              "labelRaw": "Second Wind Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            }
+          ],
+          "headerCell": "AY18",
+          "headerLabel": "Name"
+        },
+        {
+          "id": "ehp-name-paint-28",
+          "type": "FORM_GROUP",
+          "label": "Name (paint)",
+          "sheetRow": 28,
+          "bounds": "AT28:AY28",
+          "controls": [
+            {
+              "id": "eHP!AY28",
+              "tab": "eHP",
+              "cell": "AY28",
+              "row": 28,
+              "label": "Perks",
+              "labelRaw": "Perks",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "perks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp"
+              ],
+              "note": "Perks master; per-row in perks/perkQuantity"
+            }
+          ]
+        },
+        {
+          "id": "ehp-name-29",
+          "type": "FORM_GROUP",
+          "label": "Name",
+          "sheetRow": 29,
+          "bounds": "AT30:AY37",
+          "controls": [
+            {
+              "id": "eHP!AY30",
+              "tab": "eHP",
+              "cell": "AY30",
+              "row": 30,
+              "label": "Max Health",
+              "labelRaw": "Max Health",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "perks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY31",
+              "tab": "eHP",
+              "cell": "AY31",
+              "row": 31,
+              "label": "Health Regen",
+              "labelRaw": "Health Regen",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "perks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY32",
+              "tab": "eHP",
+              "cell": "AY32",
+              "row": 32,
+              "label": "Defense %",
+              "labelRaw": "Defense %",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "perks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY33",
+              "tab": "eHP",
+              "cell": "AY33",
+              "row": 33,
+              "label": "Defense Absolute",
+              "labelRaw": "Defense Absolute",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "perks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY34",
+              "tab": "eHP",
+              "cell": "AY34",
+              "row": 34,
+              "label": "E. Dmg -50% / Dmg -50%",
+              "labelRaw": "E. Dmg -50% / Dmg -50%",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "perks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY35",
+              "tab": "eHP",
+              "cell": "AY35",
+              "row": 35,
+              "label": "E. HP -50% / Rgn & Lifesteal -90%",
+              "labelRaw": "E. HP -50% / Rgn & Lifesteal -90%",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "perks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY36",
+              "tab": "eHP",
+              "cell": "AY36",
+              "row": 36,
+              "label": "x1.8 Coin / Health -70%",
+              "labelRaw": "x1.8 Coin / Health -70%",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "perks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eHP!AY37",
+              "tab": "eHP",
+              "cell": "AY37",
+              "row": 37,
+              "label": "Regen x8 / Health -60%",
+              "labelRaw": "Regen x8 / Health -60%",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "perks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            }
+          ],
+          "headerCell": "AY29",
+          "headerLabel": "Name"
+        }
+      ],
+      "controlCount": 29,
+      "interactiveCount": 12
+    },
+    "eRegen": {
+      "playerVisible": false,
+      "labelCol": "AT",
+      "valueCol": "AY",
+      "merges": [
+        {
+          "a1": "AT4:AV4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX4:AY4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX5:AY5",
+          "startRowIndex": 4,
+          "endRowIndex": 5,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT5:AV5",
+          "startRowIndex": 4,
+          "endRowIndex": 5,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT6:AV6",
+          "startRowIndex": 5,
+          "endRowIndex": 6,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT13:AX13",
+          "startRowIndex": 12,
+          "endRowIndex": 13,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT14:AX14",
+          "startRowIndex": 13,
+          "endRowIndex": 14,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT16:AX16",
+          "startRowIndex": 15,
+          "endRowIndex": 16,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AY16:AY17",
+          "startRowIndex": 15,
+          "endRowIndex": 17,
+          "startColumnIndex": 50,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT17:AV17",
+          "startRowIndex": 16,
+          "endRowIndex": 17,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT3:AY3",
+          "startRowIndex": 2,
+          "endRowIndex": 3,
+          "startColumnIndex": 45,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT33:AU33",
+          "startRowIndex": 32,
+          "endRowIndex": 33,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT34:AV34",
+          "startRowIndex": 33,
+          "endRowIndex": 34,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT35:AV35",
+          "startRowIndex": 34,
+          "endRowIndex": 35,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT36:AV36",
+          "startRowIndex": 35,
+          "endRowIndex": 36,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT37:AV37",
+          "startRowIndex": 36,
+          "endRowIndex": 37,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT28:AX28",
+          "startRowIndex": 27,
+          "endRowIndex": 28,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT29:AU29",
+          "startRowIndex": 28,
+          "endRowIndex": 29,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT30:AU30",
+          "startRowIndex": 29,
+          "endRowIndex": 30,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT31:AU31",
+          "startRowIndex": 30,
+          "endRowIndex": 31,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT32:AU32",
+          "startRowIndex": 31,
+          "endRowIndex": 32,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AX6:AY6",
+          "startRowIndex": 5,
+          "endRowIndex": 6,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT7:AV7",
+          "startRowIndex": 6,
+          "endRowIndex": 7,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX7:AY7",
+          "startRowIndex": 6,
+          "endRowIndex": 7,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT9:AY9",
+          "startRowIndex": 8,
+          "endRowIndex": 9,
+          "startColumnIndex": 45,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT10:AX10",
+          "startRowIndex": 9,
+          "endRowIndex": 10,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT11:AX11",
+          "startRowIndex": 10,
+          "endRowIndex": 11,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT12:AX12",
+          "startRowIndex": 11,
+          "endRowIndex": 12,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        }
+      ],
+      "layoutBlocks": [
+        {
+          "id": "eregen-panel-3",
+          "type": "FORM_GROUP",
+          "label": "Panel",
+          "sheetRow": 3,
+          "bounds": "AT3:AY7",
+          "controls": [
+            {
+              "id": "eRegen!AX3",
+              "tab": "eRegen",
+              "cell": "AX3",
+              "row": 3,
+              "label": "PRESETS 🔗",
+              "labelRaw": "PRESETS 🔗",
+              "controlType": "UNKNOWN",
+              "interactive": false,
+              "classifiedBy": "empty",
+              "value": null,
+              "mirroredFrom": "eHP",
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AX4",
+              "tab": "eRegen",
+              "cell": "AX4",
+              "row": 4,
+              "label": "Workshop",
+              "labelRaw": "Workshop",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": "Farming",
+              "mirroredFrom": "eHP",
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AX5",
+              "tab": "eRegen",
+              "cell": "AX5",
+              "row": 5,
+              "label": "Cards",
+              "labelRaw": "Cards",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": "Farming",
+              "mirroredFrom": "eHP",
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AX6",
+              "tab": "eRegen",
+              "cell": "AX6",
+              "row": 6,
+              "label": "Modules",
+              "labelRaw": "Modules",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": "Farming",
+              "mirroredFrom": "eHP",
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AX7",
+              "tab": "eRegen",
+              "cell": "AX7",
+              "row": 7,
+              "label": "Perks",
+              "labelRaw": "Perks",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": "Farming",
+              "mirroredFrom": "eHP",
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        },
+        {
+          "id": "eregen-user-specific-guesses-9",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses",
+          "sheetRow": 9,
+          "bounds": "AT10:AY14",
+          "controls": [
+            {
+              "id": "eRegen!AY10",
+              "tab": "eRegen",
+              "cell": "AY10",
+              "row": 10,
+              "label": "Simulated Tier",
+              "labelRaw": "Simulated Tier",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": "T1",
+              "mirroredFrom": "eHP",
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY11",
+              "tab": "eRegen",
+              "cell": "AY11",
+              "row": 11,
+              "label": "Enemies Attacking Together",
+              "labelRaw": "Enemies Attacking Together",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 1,
+              "mirroredFrom": "eHP",
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY12",
+              "tab": "eRegen",
+              "cell": "AY12",
+              "row": 12,
+              "label": "CL DMG does % of Total Damage:",
+              "labelRaw": "CL DMG does % of Total Damage:",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 0.01,
+              "mirroredFrom": "eHP",
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY13",
+              "tab": "eRegen",
+              "cell": "AY13",
+              "row": 13,
+              "label": "Ignore Target Levels",
+              "labelRaw": "Ignore Target Levels",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY14",
+              "tab": "eRegen",
+              "cell": "AY14",
+              "row": 14,
+              "label": "Hide Non-unlocked Labs",
+              "labelRaw": "Hide Non-unlocked Labs",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ],
+          "headerCell": "AY9",
+          "headerLabel": "User Specific Guesses"
+        },
+        {
+          "id": "eregen-user-specific-guesses-paint-16",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint)",
+          "sheetRow": 16,
+          "bounds": "AT16:AY17",
+          "controls": [
+            {
+              "id": "eRegen!AY16",
+              "tab": "eRegen",
+              "cell": "AY16",
+              "row": 16,
+              "label": "Cards📝",
+              "labelRaw": "Cards📝",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": true,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY17",
+              "tab": "eRegen",
+              "cell": "AY17",
+              "row": 17,
+              "label": "Compare Masteries at",
+              "labelRaw": "Compare Masteries at",
+              "controlType": "UNKNOWN",
+              "interactive": false,
+              "classifiedBy": "empty",
+              "value": null,
+              "mirroredFrom": "eHP",
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        },
+        {
+          "id": "eregen-user-specific-guesses-paint-paint-18",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint) (paint)",
+          "sheetRow": 18,
+          "bounds": "AT18:AY18",
+          "controls": [
+            {
+              "id": "eRegen!AY18",
+              "tab": "eRegen",
+              "cell": "AY18",
+              "row": 18,
+              "label": "Name",
+              "labelRaw": "Name",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": "Active",
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        },
+        {
+          "id": "eregen-user-specific-guesses-paint-paint-paint-19",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint) (paint) (paint)",
+          "sheetRow": 19,
+          "bounds": "AT19:AY19",
+          "controls": [
+            {
+              "id": "eRegen!AY19",
+              "tab": "eRegen",
+              "cell": "AY19",
+              "row": 19,
+              "label": "Health",
+              "labelRaw": "Health",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        },
+        {
+          "id": "eregen-user-specific-guesses-paint-paint-paint-paint-20",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint) (paint) (paint) (paint)",
+          "sheetRow": 20,
+          "bounds": "AT20:AY20",
+          "controls": [
+            {
+              "id": "eRegen!AY20",
+              "tab": "eRegen",
+              "cell": "AY20",
+              "row": 20,
+              "label": "Health Mastery",
+              "labelRaw": "Health Mastery",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        },
+        {
+          "id": "eregen-user-specific-guesses-paint-paint-paint-paint-paint-21",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint) (paint) (paint) (paint) (paint)",
+          "sheetRow": 21,
+          "bounds": "AT21:AY21",
+          "controls": [
+            {
+              "id": "eRegen!AY21",
+              "tab": "eRegen",
+              "cell": "AY21",
+              "row": 21,
+              "label": "Health Regen",
+              "labelRaw": "Health Regen",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        },
+        {
+          "id": "eregen-user-specific-guesses-paint-paint-paint-paint-paint-paint-22",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint) (paint) (paint) (paint) (paint) (paint)",
+          "sheetRow": 22,
+          "bounds": "AT22:AY22",
+          "controls": [
+            {
+              "id": "eRegen!AY22",
+              "tab": "eRegen",
+              "cell": "AY22",
+              "row": 22,
+              "label": "Health Regen Mastery",
+              "labelRaw": "Health Regen Mastery",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        },
+        {
+          "id": "eregen-user-specific-guesses-paint-paint-paint-paint-paint-paint-paint-23",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint) (paint) (paint) (paint) (paint) (paint) (paint)",
+          "sheetRow": 23,
+          "bounds": "AT23:AY23",
+          "controls": [
+            {
+              "id": "eRegen!AY23",
+              "tab": "eRegen",
+              "cell": "AY23",
+              "row": 23,
+              "label": "Extra Defense",
+              "labelRaw": "Extra Defense",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        },
+        {
+          "id": "eregen-user-specific-guesses-paint-paint-paint-paint-paint-paint-paint-paint-24",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint) (paint) (paint) (paint) (paint) (paint) (paint) (paint)",
+          "sheetRow": 24,
+          "bounds": "AT24:AY26",
+          "controls": [
+            {
+              "id": "eRegen!AY24",
+              "tab": "eRegen",
+              "cell": "AY24",
+              "row": 24,
+              "label": "Extra Defense Mastery",
+              "labelRaw": "Extra Defense Mastery",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY25",
+              "tab": "eRegen",
+              "cell": "AY25",
+              "row": 25,
+              "label": "Fortress",
+              "labelRaw": "Fortress",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY26",
+              "tab": "eRegen",
+              "cell": "AY26",
+              "row": 26,
+              "label": "Second Wind Mastery",
+              "labelRaw": "Second Wind Mastery",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        },
+        {
+          "id": "eregen-user-specific-guesses-paint-paint-paint-paint-paint-paint-paint-paint-paint-28",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint) (paint) (paint) (paint) (paint) (paint) (paint) (paint) (paint)",
+          "sheetRow": 28,
+          "bounds": "AT28:AY28",
+          "controls": [
+            {
+              "id": "eRegen!AY28",
+              "tab": "eRegen",
+              "cell": "AY28",
+              "row": 28,
+              "label": "Perks",
+              "labelRaw": "Perks",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": true,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        },
+        {
+          "id": "eregen-user-specific-guesses-paint-paint-paint-paint-paint-paint-paint-paint-paint-paint-29",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint) (paint) (paint) (paint) (paint) (paint) (paint) (paint) (paint) (paint)",
+          "sheetRow": 29,
+          "bounds": "AT29:AY29",
+          "controls": [
+            {
+              "id": "eRegen!AY29",
+              "tab": "eRegen",
+              "cell": "AY29",
+              "row": 29,
+              "label": "Name",
+              "labelRaw": "Name",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": "Active",
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.91764706,
+                "green": 0.2627451,
+                "blue": 0.20784314
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        },
+        {
+          "id": "eregen-user-specific-guesses-paint-paint-paint-paint-paint-paint-paint-paint-paint-paint-paint-30",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint) (paint) (paint) (paint) (paint) (paint) (paint) (paint) (paint) (paint) (paint)",
+          "sheetRow": 30,
+          "bounds": "AT30:AY37",
+          "controls": [
+            {
+              "id": "eRegen!AY30",
+              "tab": "eRegen",
+              "cell": "AY30",
+              "row": 30,
+              "label": "Max Health",
+              "labelRaw": "Max Health",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY31",
+              "tab": "eRegen",
+              "cell": "AY31",
+              "row": 31,
+              "label": "Health Regen",
+              "labelRaw": "Health Regen",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY32",
+              "tab": "eRegen",
+              "cell": "AY32",
+              "row": 32,
+              "label": "Defense %",
+              "labelRaw": "Defense %",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY33",
+              "tab": "eRegen",
+              "cell": "AY33",
+              "row": 33,
+              "label": "Defense Absolute",
+              "labelRaw": "Defense Absolute",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY34",
+              "tab": "eRegen",
+              "cell": "AY34",
+              "row": 34,
+              "label": "E. Dmg -50% / Dmg -50%",
+              "labelRaw": "E. Dmg -50% / Dmg -50%",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY35",
+              "tab": "eRegen",
+              "cell": "AY35",
+              "row": 35,
+              "label": "E. HP -50% / Rgn & Lifesteal -90%",
+              "labelRaw": "E. HP -50% / Rgn & Lifesteal -90%",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY36",
+              "tab": "eRegen",
+              "cell": "AY36",
+              "row": 36,
+              "label": "x1.8 Coin / Health -70%",
+              "labelRaw": "x1.8 Coin / Health -70%",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            },
+            {
+              "id": "eRegen!AY37",
+              "tab": "eRegen",
+              "cell": "AY37",
+              "row": 37,
+              "label": "Regen x8 / Health -60%",
+              "labelRaw": "Regen x8 / Health -60%",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": false,
+              "mirroredFrom": "eHP",
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": null,
+              "webStatus": "mirrored",
+              "webPlacement": "tab"
+            }
+          ]
+        }
+      ],
+      "controlCount": 31,
+      "interactiveCount": 29
+    },
+    "eDamage": {
+      "playerVisible": true,
+      "labelCol": "AT",
+      "valueCol": "AY",
+      "merges": [
+        {
+          "a1": "AT12:AV12",
+          "startRowIndex": 11,
+          "endRowIndex": 12,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT68:AV68",
+          "startRowIndex": 67,
+          "endRowIndex": 68,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT71:AV71",
+          "startRowIndex": 70,
+          "endRowIndex": 71,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AV3:AY3",
+          "startRowIndex": 2,
+          "endRowIndex": 3,
+          "startColumnIndex": 47,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX4:AY4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX12:AY12",
+          "startRowIndex": 11,
+          "endRowIndex": 12,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT13:AV13",
+          "startRowIndex": 12,
+          "endRowIndex": 13,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AV23:AX23",
+          "startRowIndex": 22,
+          "endRowIndex": 23,
+          "startColumnIndex": 47,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT24:AX24",
+          "startRowIndex": 23,
+          "endRowIndex": 24,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT25:AX25",
+          "startRowIndex": 24,
+          "endRowIndex": 25,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT26:AX26",
+          "startRowIndex": 25,
+          "endRowIndex": 26,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT27:AX27",
+          "startRowIndex": 26,
+          "endRowIndex": 27,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT69:AV69",
+          "startRowIndex": 68,
+          "endRowIndex": 69,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT70:AV70",
+          "startRowIndex": 69,
+          "endRowIndex": 70,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX13:AY13",
+          "startRowIndex": 12,
+          "endRowIndex": 13,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT14:AV14",
+          "startRowIndex": 13,
+          "endRowIndex": 14,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX14:AY14",
+          "startRowIndex": 13,
+          "endRowIndex": 14,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT15:AV15",
+          "startRowIndex": 14,
+          "endRowIndex": 15,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX15:AY15",
+          "startRowIndex": 14,
+          "endRowIndex": 15,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT16:AV16",
+          "startRowIndex": 15,
+          "endRowIndex": 16,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX16:AY16",
+          "startRowIndex": 15,
+          "endRowIndex": 16,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT18:AY18",
+          "startRowIndex": 17,
+          "endRowIndex": 18,
+          "startColumnIndex": 45,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT19:AV19",
+          "startRowIndex": 18,
+          "endRowIndex": 19,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX19:AY19",
+          "startRowIndex": 18,
+          "endRowIndex": 19,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT20:AV20",
+          "startRowIndex": 19,
+          "endRowIndex": 20,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX20:AY20",
+          "startRowIndex": 19,
+          "endRowIndex": 20,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT21:AX21",
+          "startRowIndex": 20,
+          "endRowIndex": 21,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT22:AX22",
+          "startRowIndex": 21,
+          "endRowIndex": 22,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT28:AX28",
+          "startRowIndex": 27,
+          "endRowIndex": 28,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT29:AX29",
+          "startRowIndex": 28,
+          "endRowIndex": 29,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT30:AX30",
+          "startRowIndex": 29,
+          "endRowIndex": 30,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT31:AX31",
+          "startRowIndex": 30,
+          "endRowIndex": 31,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT32:AX32",
+          "startRowIndex": 31,
+          "endRowIndex": 32,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT33:AX33",
+          "startRowIndex": 32,
+          "endRowIndex": 33,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT34:AX34",
+          "startRowIndex": 33,
+          "endRowIndex": 34,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT35:AX35",
+          "startRowIndex": 34,
+          "endRowIndex": 35,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT36:AX36",
+          "startRowIndex": 35,
+          "endRowIndex": 36,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT37:AX37",
+          "startRowIndex": 36,
+          "endRowIndex": 37,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT39:AX39",
+          "startRowIndex": 38,
+          "endRowIndex": 39,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AY39:AY40",
+          "startRowIndex": 38,
+          "endRowIndex": 40,
+          "startColumnIndex": 50,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT40:AV40",
+          "startRowIndex": 39,
+          "endRowIndex": 40,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT66:AV66",
+          "startRowIndex": 65,
+          "endRowIndex": 66,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT67:AV67",
+          "startRowIndex": 66,
+          "endRowIndex": 67,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT61:AX61",
+          "startRowIndex": 60,
+          "endRowIndex": 61,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT62:AU62",
+          "startRowIndex": 61,
+          "endRowIndex": 62,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT63:AU63",
+          "startRowIndex": 62,
+          "endRowIndex": 63,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT64:AU64",
+          "startRowIndex": 63,
+          "endRowIndex": 64,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT65:AV65",
+          "startRowIndex": 64,
+          "endRowIndex": 65,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        }
+      ],
+      "layoutBlocks": [
+        {
+          "id": "edamage-panel-3",
+          "type": "FORM_GROUP",
+          "label": "Panel",
+          "sheetRow": 3,
+          "bounds": "AT3:AY10",
+          "controls": [
+            {
+              "id": "eDamage!AY3",
+              "tab": "eDamage",
+              "cell": "AY3",
+              "row": 3,
+              "label": "Bullet Damage %",
+              "labelRaw": "Bullet Damage %",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": null,
+              "isComputedDisplay": true,
+              "webKey": null,
+              "webStatus": "display_only",
+              "webPlacement": "tab",
+              "note": "Computed display / Active column formula"
+            },
+            {
+              "id": "eDamage!AY4",
+              "tab": "eDamage",
+              "cell": "AY4",
+              "row": 4,
+              "label": "UW* Damage %",
+              "labelRaw": "UW* Damage %",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": null,
+              "isComputedDisplay": true,
+              "webKey": null,
+              "webStatus": "display_only",
+              "webPlacement": "tab",
+              "note": "Computed display / Active column formula"
+            },
+            {
+              "id": "eDamage!AY5",
+              "tab": "eDamage",
+              "cell": "AY5",
+              "row": 5,
+              "label": "Death Wave",
+              "labelRaw": "Death Wave",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": null,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.95686275,
+                "green": 0.8,
+                "blue": 0.8
+              },
+              "webKey": null,
+              "webStatus": "display_only",
+              "webPlacement": "tab",
+              "note": "Computed display / Active column formula"
+            },
+            {
+              "id": "eDamage!AY6",
+              "tab": "eDamage",
+              "cell": "AY6",
+              "row": 6,
+              "label": "Chain Lightning",
+              "labelRaw": "Chain Lightning",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": 0.05,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.8117647,
+                "green": 0.8862745,
+                "blue": 0.9529412
+              },
+              "webKey": null,
+              "webStatus": "display_only",
+              "webPlacement": "tab",
+              "note": "Computed display / Active column formula"
+            },
+            {
+              "id": "eDamage!AY7",
+              "tab": "eDamage",
+              "cell": "AY7",
+              "row": 7,
+              "label": "Smart Missiles",
+              "labelRaw": "Smart Missiles",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": null,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.8509804,
+                "green": 0.91764706,
+                "blue": 0.827451
+              },
+              "webKey": null,
+              "webStatus": "display_only",
+              "webPlacement": "tab",
+              "note": "Computed display / Active column formula"
+            },
+            {
+              "id": "eDamage!AY8",
+              "tab": "eDamage",
+              "cell": "AY8",
+              "row": 8,
+              "label": "Spotlight",
+              "labelRaw": "Spotlight",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": 0,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.7058824,
+                "green": 0.654902,
+                "blue": 0.8392157
+              },
+              "webKey": null,
+              "webStatus": "display_only",
+              "webPlacement": "tab",
+              "note": "Computed display / Active column formula"
+            },
+            {
+              "id": "eDamage!AY9",
+              "tab": "eDamage",
+              "cell": "AY9",
+              "row": 9,
+              "label": "Spotlight Missiles ⚠️",
+              "labelRaw": "Spotlight Missiles ⚠️",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": null,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.8509804,
+                "green": 0.91764706,
+                "blue": 0.827451
+              },
+              "webKey": null,
+              "webStatus": "display_only",
+              "webPlacement": "tab",
+              "note": "Computed display / Active column formula"
+            },
+            {
+              "id": "eDamage!AY10",
+              "tab": "eDamage",
+              "cell": "AY10",
+              "row": 10,
+              "label": "Inner Land Mines",
+              "labelRaw": "Inner Land Mines",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": 200,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.8,
+                "green": 0.25490198,
+                "blue": 0.14509805
+              },
+              "webKey": null,
+              "webStatus": "display_only",
+              "webPlacement": "tab",
+              "note": "Computed display / Active column formula"
+            }
+          ]
+        },
+        {
+          "id": "edamage-panel-paint-12",
+          "type": "FORM_GROUP",
+          "label": "Panel (paint)",
+          "sheetRow": 12,
+          "bounds": "AT12:AY16",
+          "controls": [
+            {
+              "id": "eDamage!AX12",
+              "tab": "eDamage",
+              "cell": "AX12",
+              "row": 12,
+              "label": "PRESETS 🔗",
+              "labelRaw": "PRESETS 🔗",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eDamage!$BH$51:$BH$60"
+              ],
+              "backgroundColor": {
+                "red": 0.7058824,
+                "green": 0.654902,
+                "blue": 0.8392157
+              },
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "PRESETS master — IDS spill; must render on every planner tab"
+            },
+            {
+              "id": "eDamage!AX13",
+              "tab": "eDamage",
+              "cell": "AX13",
+              "row": 13,
+              "label": "Workshop",
+              "labelRaw": "Workshop",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eDamage!$BI$51:$BI$55"
+              ],
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            },
+            {
+              "id": "eDamage!AX14",
+              "tab": "eDamage",
+              "cell": "AX14",
+              "row": 14,
+              "label": "Cards",
+              "labelRaw": "Cards",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eDamage!$BJ$51:$BJ$55"
+              ],
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            },
+            {
+              "id": "eDamage!AX15",
+              "tab": "eDamage",
+              "cell": "AX15",
+              "row": 15,
+              "label": "Modules",
+              "labelRaw": "Modules",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eDamage!$BK$51:$BK$55"
+              ],
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            },
+            {
+              "id": "eDamage!AX16",
+              "tab": "eDamage",
+              "cell": "AX16",
+              "row": 16,
+              "label": "Perks",
+              "labelRaw": "Perks",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Farming",
+              "optionValues": [
+                "=eDamage!$BM$51:$BM$55"
+              ],
+              "webKey": "presets",
+              "webStatus": "ids_derived",
+              "webPlacement": "tab",
+              "note": "Preset spill from IDS — not a free dropdown"
+            }
+          ]
+        },
+        {
+          "id": "edamage-user-specific-guesses-18",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses",
+          "sheetRow": 18,
+          "bounds": "AT19:AY37",
+          "controls": [
+            {
+              "id": "eDamage!AX19",
+              "tab": "eDamage",
+              "cell": "AX19",
+              "row": 19,
+              "label": "Run Type",
+              "labelRaw": "Run Type",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "Regular",
+              "optionValues": [
+                "Regular",
+                "Tourney",
+                "Attack Disso",
+                "UW Disso",
+                "Util Disso"
+              ],
+              "webKey": "runType",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AX20",
+              "tab": "eDamage",
+              "cell": "AX20",
+              "row": 20,
+              "label": "Simulated Tier",
+              "labelRaw": "Simulated Tier",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": "Tier 1",
+              "isComputedDisplay": true,
+              "webKey": "simulatedTier",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp",
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY21",
+              "tab": "eDamage",
+              "cell": "AY21",
+              "row": 21,
+              "label": "Game Speed",
+              "labelRaw": "Game Speed",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": 6.25,
+              "optionValues": [
+                "1.00",
+                "2.00",
+                "3.00",
+                "4.00",
+                "5.00",
+                "6.00",
+                "6.25"
+              ],
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "gameSpeed",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY22",
+              "tab": "eDamage",
+              "cell": "AY22",
+              "row": 22,
+              "label": "DPM - Damage at % range :",
+              "labelRaw": "DPM - Damage at % range :",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 0.25,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "damageAtRangePct",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AU23",
+              "tab": "eDamage",
+              "cell": "AU23",
+              "row": 23,
+              "label": "Ignore Lab Target Levels",
+              "labelRaw": "Ignore Lab Target Levels",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": false,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "ignoreTargetLevels",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp",
+                "damage",
+                "econ"
+              ]
+            },
+            {
+              "id": "eDamage!AY23",
+              "tab": "eDamage",
+              "cell": "AY23",
+              "row": 23,
+              "label": "Ignore UW Target Levels",
+              "labelRaw": "Ignore UW Target Levels",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": false,
+              "webKey": "ignoreUwTargetLevels",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage",
+                "econ"
+              ]
+            },
+            {
+              "id": "eDamage!AY24",
+              "tab": "eDamage",
+              "cell": "AY24",
+              "row": 24,
+              "label": "Hide UW Cooldown",
+              "labelRaw": "Hide UW Cooldown",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": false,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "hideUwCooldown",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY25",
+              "tab": "eDamage",
+              "cell": "AY25",
+              "row": 25,
+              "label": "Hide non-UW Upgrades",
+              "labelRaw": "Hide non-UW Upgrades",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": false,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "hideNonUwUpgrades",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY26",
+              "tab": "eDamage",
+              "cell": "AY26",
+              "row": 26,
+              "label": "Hide Non-unlocked Labs",
+              "labelRaw": "Hide Non-unlocked Labs",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": false,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "hideNonUnlockedLabs",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp",
+                "damage",
+                "econ"
+              ]
+            },
+            {
+              "id": "eDamage!AY27",
+              "tab": "eDamage",
+              "cell": "AY27",
+              "row": 27,
+              "label": "Show Labs on Coin path",
+              "labelRaw": "Show Labs on Coin path",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": "All         | Show all labs levels on Coin path",
+              "optionValues": [
+                "None      | Don't show Labs on Coin path",
+                "1 level   | Show only the next labs level on Coin path",
+                "4 level  | Show the 4 next labs levels on Coin path",
+                "10 level  | Show the 10 next labs levels on Coin path",
+                "All         | Show all labs levels on Coin path"
+              ],
+              "webKey": "showLabsOnCoinPath",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY28",
+              "tab": "eDamage",
+              "cell": "AY28",
+              "row": 28,
+              "label": "Boss spawns every # of waves",
+              "labelRaw": "// Equip Galaxy Compressor //",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 10,
+              "labelWhenUnlocked": "Boss spawns every # of waves",
+              "unlockCondition": "Galaxy Compressor equipped",
+              "valueIsComputed": true,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "damageEstimates.bossWaveInterval",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ],
+              "note": "Galaxy Compressor / Boss spawns"
+            },
+            {
+              "id": "eDamage!AY29",
+              "tab": "eDamage",
+              "cell": "AY29",
+              "row": 29,
+              "label": "SM - Hits on same target",
+              "labelRaw": "SM - Hits on same target",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 12,
+              "labelWhenUnlocked": "SM - Hits on same target",
+              "unlockCondition": "Smart Missiles unlocked",
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "damageEstimates.smartMissilesHits",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY30",
+              "tab": "eDamage",
+              "cell": "AY30",
+              "row": 30,
+              "label": "SM - Enemies inside SM Area",
+              "labelRaw": "SM - Enemies inside SM Area",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 15,
+              "labelWhenUnlocked": "SM - Enemies inside SM Area",
+              "unlockCondition": "Smart Missiles unlocked",
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "damageEstimates.smartMissilesArea",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY31",
+              "tab": "eDamage",
+              "cell": "AY31",
+              "row": 31,
+              "label": "PS - Average Enemies poisoned",
+              "labelRaw": "PS - Average Enemies poisoned",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 40,
+              "labelWhenUnlocked": "PS - Average Enemies poisoned",
+              "unlockCondition": "Poison Swamp unlocked and PS Beta Testing enabled",
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "damageEstimates.poisonSwampArea",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY32",
+              "tab": "eDamage",
+              "cell": "AY32",
+              "row": 32,
+              "label": "PS Death Creep - PS average Ticks before enemy dies",
+              "labelRaw": "PS Death Creep - PS average Ticks before enemy dies 📝",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 10,
+              "labelWhenUnlocked": "PS Death Creep - PS average Ticks before enemy dies",
+              "unlockCondition": "Poison Swamp unlocked and PS Beta Testing enabled",
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "damageEstimates.poisonSwampHits",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY33",
+              "tab": "eDamage",
+              "cell": "AY33",
+              "row": 33,
+              "label": "CF - Enable CF Slow",
+              "labelRaw": "// Unlock CF //",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": true,
+              "labelWhenUnlocked": "CF - Enable CF Slow",
+              "unlockCondition": "Chrono Field owned",
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "chronoFieldSlowCounted",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY34",
+              "tab": "eDamage",
+              "cell": "AY34",
+              "row": 34,
+              "label": "Project Funding Cash",
+              "labelRaw": "// Equip Project Funding //",
+              "controlType": "DROPDOWN",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": "100B",
+              "labelWhenUnlocked": "Project Funding Cash",
+              "unlockCondition": "Project Funding equipped",
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "damageEstimates.projectFundingCash",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ],
+              "note": "Project Funding Cash"
+            },
+            {
+              "id": "eDamage!AY35",
+              "tab": "eDamage",
+              "cell": "AY35",
+              "row": 35,
+              "label": "Elites per Wave",
+              "labelRaw": "// Equip Amplifying Strike //",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 3,
+              "labelWhenUnlocked": "Elites per Wave",
+              "unlockCondition": "Amplifying Strike equipped",
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "damageEstimates.ampStrikeShare",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY36",
+              "tab": "eDamage",
+              "cell": "AY36",
+              "row": 36,
+              "label": "ILM - Enemies inside ILM Area",
+              "labelRaw": "ILM - Enemies inside ILM Area",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 42,
+              "labelWhenUnlocked": "ILM - Enemies inside ILM Area",
+              "unlockCondition": "Inner Land Mines unlocked",
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "damageEstimates.innerLandMinesArea",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            },
+            {
+              "id": "eDamage!AY37",
+              "tab": "eDamage",
+              "cell": "AY37",
+              "row": 37,
+              "label": "ILM+ - Hits on same targets",
+              "labelRaw": "// Unlock ILM+ //",
+              "controlType": "NUMBER",
+              "interactive": true,
+              "classifiedBy": "valueShape",
+              "value": 17,
+              "labelWhenUnlocked": "ILM+ - Hits on same targets",
+              "unlockCondition": "Inner Land Mines+ unlocked",
+              "valueIsComputed": true,
+              "backgroundColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "webKey": "damageEstimates.innerLandMinesHits",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ]
+            }
+          ],
+          "headerCell": "AY18",
+          "headerLabel": "User Specific Guesses"
+        },
+        {
+          "id": "edamage-user-specific-guesses-paint-39",
+          "type": "FORM_GROUP",
+          "label": "User Specific Guesses (paint)",
+          "sheetRow": 39,
+          "bounds": "AT39:AY40",
+          "controls": [
+            {
+              "id": "eDamage!AY39",
+              "tab": "eDamage",
+              "cell": "AY39",
+              "row": 39,
+              "label": "Cards",
+              "labelRaw": "Cards",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "useCards",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "ehp",
+                "damage",
+                "econ"
+              ]
+            },
+            {
+              "id": "eDamage!AY40",
+              "tab": "eDamage",
+              "cell": "AY40",
+              "row": 40,
+              "label": "Compare Masteries at",
+              "labelRaw": "Compare Masteries at",
+              "controlType": "UNKNOWN",
+              "interactive": false,
+              "classifiedBy": "empty",
+              "value": null,
+              "webKey": null,
+              "webStatus": "display_only",
+              "webPlacement": "tab",
+              "note": "Compare Masteries at"
+            }
+          ]
+        },
+        {
+          "id": "edamage-name-41",
+          "type": "FORM_GROUP",
+          "label": "Name",
+          "sheetRow": 41,
+          "bounds": "AT42:AY61",
+          "controls": [
+            {
+              "id": "eDamage!AY42",
+              "tab": "eDamage",
+              "cell": "AY42",
+              "row": 42,
+              "label": "Damage",
+              "labelRaw": "Damage",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY43",
+              "tab": "eDamage",
+              "cell": "AY43",
+              "row": 43,
+              "label": "Damage Mastery",
+              "labelRaw": "Damage Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY44",
+              "tab": "eDamage",
+              "cell": "AY44",
+              "row": 44,
+              "label": "Berserker",
+              "labelRaw": "Berserker",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY45",
+              "tab": "eDamage",
+              "cell": "AY45",
+              "row": 45,
+              "label": "Attack Speed",
+              "labelRaw": "Attack Speed",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY46",
+              "tab": "eDamage",
+              "cell": "AY46",
+              "row": 46,
+              "label": "Attack Speed Mastery",
+              "labelRaw": "Attack Speed Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY47",
+              "tab": "eDamage",
+              "cell": "AY47",
+              "row": 47,
+              "label": "Critical Chance",
+              "labelRaw": "Critical Chance",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY48",
+              "tab": "eDamage",
+              "cell": "AY48",
+              "row": 48,
+              "label": "Critical Chance Mastery",
+              "labelRaw": "Critical Chance Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY49",
+              "tab": "eDamage",
+              "cell": "AY49",
+              "row": 49,
+              "label": "Range",
+              "labelRaw": "Range",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY50",
+              "tab": "eDamage",
+              "cell": "AY50",
+              "row": 50,
+              "label": "Range Mastery (DPM)",
+              "labelRaw": "Range Mastery (DPM)",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY51",
+              "tab": "eDamage",
+              "cell": "AY51",
+              "row": 51,
+              "label": "Enemy Balance",
+              "labelRaw": "Enemy Balance",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY52",
+              "tab": "eDamage",
+              "cell": "AY52",
+              "row": 52,
+              "label": "Super Tower",
+              "labelRaw": "Super Tower",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY53",
+              "tab": "eDamage",
+              "cell": "AY53",
+              "row": 53,
+              "label": "Super Tower Mastery",
+              "labelRaw": "Super Tower Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY54",
+              "tab": "eDamage",
+              "cell": "AY54",
+              "row": 54,
+              "label": "Ultimate Crit",
+              "labelRaw": "Ultimate Crit",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY55",
+              "tab": "eDamage",
+              "cell": "AY55",
+              "row": 55,
+              "label": "Ultimate Crit Mastery",
+              "labelRaw": "Ultimate Crit Mastery",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY56",
+              "tab": "eDamage",
+              "cell": "AY56",
+              "row": 56,
+              "label": "Recovery Package Chance",
+              "labelRaw": "Recovery Package Chance",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY57",
+              "tab": "eDamage",
+              "cell": "AY57",
+              "row": 57,
+              "label": "Wave Accelerator",
+              "labelRaw": "Wave Accelerator",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY58",
+              "tab": "eDamage",
+              "cell": "AY58",
+              "row": 58,
+              "label": "Demon Mode Mastery ⚠️",
+              "labelRaw": "Demon Mode Mastery ⚠️",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY59",
+              "tab": "eDamage",
+              "cell": "AY59",
+              "row": 59,
+              "label": "Area of Effect",
+              "labelRaw": "Area of Effect",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "cardsActive",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY61",
+              "tab": "eDamage",
+              "cell": "AY61",
+              "row": 61,
+              "label": "Perks",
+              "labelRaw": "Perks",
+              "controlType": "TOGGLE",
+              "interactive": true,
+              "classifiedBy": "dataValidation",
+              "value": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "damagePerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "families": [
+                "damage"
+              ],
+              "note": "Perks master"
+            }
+          ],
+          "headerCell": "AY41",
+          "headerLabel": "Name"
+        },
+        {
+          "id": "edamage-name-62",
+          "type": "FORM_GROUP",
+          "label": "Name",
+          "sheetRow": 62,
+          "bounds": "AT63:AY71",
+          "controls": [
+            {
+              "id": "eDamage!AY63",
+              "tab": "eDamage",
+              "cell": "AY63",
+              "row": 63,
+              "label": "Damage",
+              "labelRaw": "Damage",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "damagePerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY64",
+              "tab": "eDamage",
+              "cell": "AY64",
+              "row": 64,
+              "label": "Bounce Shot",
+              "labelRaw": "Bounce Shot",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "damagePerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY65",
+              "tab": "eDamage",
+              "cell": "AY65",
+              "row": 65,
+              "label": "x1.62 Damage / Boss Health x8",
+              "labelRaw": "x1.62 Damage / Boss Health x8",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "damagePerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY66",
+              "tab": "eDamage",
+              "cell": "AY66",
+              "row": 66,
+              "label": "E. Dmg -54% / Dmg -50%",
+              "labelRaw": "E. Dmg -54% / Dmg -50%",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "damagePerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY67",
+              "tab": "eDamage",
+              "cell": "AY67",
+              "row": 67,
+              "label": "Death Wave Quantity",
+              "labelRaw": "Death Wave Quantity",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "damagePerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY68",
+              "tab": "eDamage",
+              "cell": "AY68",
+              "row": 68,
+              "label": "Spotlight Damage Bonus",
+              "labelRaw": "Spotlight Damage Bonus",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "damagePerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY69",
+              "tab": "eDamage",
+              "cell": "AY69",
+              "row": 69,
+              "label": "More Smart Missiles",
+              "labelRaw": "More Smart Missiles",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "damagePerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY70",
+              "tab": "eDamage",
+              "cell": "AY70",
+              "row": 70,
+              "label": "Chain Lightning Damage",
+              "labelRaw": "Chain Lightning Damage",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "damagePerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            },
+            {
+              "id": "eDamage!AY71",
+              "tab": "eDamage",
+              "cell": "AY71",
+              "row": 71,
+              "label": "Extra set of Inner Mines",
+              "labelRaw": "Extra set of Inner Mines",
+              "controlType": "DISPLAY",
+              "interactive": false,
+              "classifiedBy": "flag:isComputedDisplay",
+              "value": false,
+              "isComputedDisplay": true,
+              "backgroundColor": {
+                "red": 0.20392157,
+                "green": 0.65882355,
+                "blue": 0.3254902
+              },
+              "webKey": "damagePerks",
+              "webStatus": "bound",
+              "webPlacement": "tab",
+              "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+            }
+          ],
+          "headerCell": "AY62",
+          "headerLabel": "Name"
+        }
+      ],
+      "controlCount": 63,
+      "interactiveCount": 26
+    }
+  }
+}

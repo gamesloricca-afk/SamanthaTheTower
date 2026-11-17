@@ -1,0 +1,3494 @@
+{
+  "sheetVersion": "v5.10.02.02",
+  "capturedAt": "2026-08-29",
+  "source": "scripts/effective-paths/capture-control-surface.mjs",
+  "spreadsheetId": "1J38GZ4eaU7jO5J-qmiyQE6AIQvPjBJYjwBSF418-RU4",
+  "tabs": {
+    "eEcon": {
+      "playerVisible": true,
+      "labelCol": "AU",
+      "valueCol": "AZ",
+      "reportedControlCount": 46,
+      "rows": [
+        {
+          "row": 3,
+          "label": "User Inputs",
+          "value": null,
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader"
+        },
+        {
+          "row": 4,
+          "label": "PRESETS 🔗",
+          "value": "Farming",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eEcon!$BJ$26:$BJ$35"
+          ],
+          "backgroundColor": {
+            "red": 0.6431373,
+            "green": 0.7607843,
+            "blue": 0.95686275
+          }
+        },
+        {
+          "row": 5,
+          "label": "Workshop",
+          "value": "Farming",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eEcon!$BK$26:$BK$30"
+          ],
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 6,
+          "label": "Cards",
+          "value": "Farming",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eEcon!$BL$26:$BL$30"
+          ],
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 7,
+          "label": "Modules",
+          "value": "Farming",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eEcon!$BM$26:$BM$30"
+          ],
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 8,
+          "label": "Bots",
+          "value": "Farming",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eEcon!$BN$26:$BN$30"
+          ],
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 9,
+          "label": "Perks",
+          "value": "Farming",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eEcon!$BO$26:$BO$30"
+          ],
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 10,
+          "label": "Lab Specific Inputs",
+          "value": null,
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader"
+        },
+        {
+          "row": 11,
+          "label": "Hide Non-unlocked Labs",
+          "value": false,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 12,
+          "label": "Show Labs",
+          "value": "All",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_LIST",
+          "optionValues": [
+            "None",
+            "1 level",
+            "4 level",
+            "10 level",
+            "All"
+          ]
+        },
+        {
+          "row": 13,
+          "label": "Show Enhancements",
+          "value": "All",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_LIST",
+          "optionValues": [
+            "None",
+            "1 level",
+            "4 level",
+            "10 level",
+            "All"
+          ]
+        },
+        {
+          "row": 14,
+          "label": "Hide Retroactive Discount Labs",
+          "value": true,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 15,
+          "label": "Ignore Lab Target Levels",
+          "value": false,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 16,
+          "label": "UW Specific Inputs",
+          "value": null,
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader"
+        },
+        {
+          "row": 17,
+          "label": "Keep GT|BH|DW CD Synced",
+          "value": false,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 18,
+          "label": "Ignore UW Target Levels",
+          "value": false,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN"
+        },
+        {
+          "row": 19,
+          "label": "% of Enemies that die in BH while it is active",
+          "value": 1,
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "NUMBER_LESS_THAN_EQ",
+          "optionValues": [
+            "1"
+          ],
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 20,
+          "label": "// // Requires GT+ // //",
+          "value": 7,
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 21,
+          "label": "Bot Specific Inputs",
+          "value": null,
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader"
+        },
+        {
+          "row": 22,
+          "label": "% of Enemies that die in GB while active",
+          "value": 1,
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "NUMBER_LESS_THAN_EQ",
+          "optionValues": [
+            "1"
+          ],
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 23,
+          "label": "GB Sync Desired Ratio:",
+          "value": "1",
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "string",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 24,
+          "label": "Other Inputs",
+          "value": null,
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader"
+        },
+        {
+          "row": 25,
+          "label": "Boss spawns every # of waves",
+          "value": 10,
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 26,
+          "label": "Extra Orb % enemies tagged",
+          "value": 0.9,
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 28,
+          "label": "Cards📝",
+          "value": true,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 29,
+          "label": "Compare Masteries at",
+          "value": null,
+          "controlType": "UNKNOWN",
+          "interactive": false,
+          "classifiedBy": "empty"
+        },
+        {
+          "row": 30,
+          "label": "Name",
+          "value": "Active",
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 31,
+          "label": "Coins",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 32,
+          "label": "Coins Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 33,
+          "label": "Free Upgrades",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 34,
+          "label": "Extra Orb Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 35,
+          "label": "Wave Skip",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 36,
+          "label": "Wave Skip Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 37,
+          "label": "Intro Sprint",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 38,
+          "label": "Intro Sprint Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 39,
+          "label": "Recovery Package Chance",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 40,
+          "label": "Wave Accelerator",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 41,
+          "label": "Wave Accelerator Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 43,
+          "label": "Perks",
+          "value": true,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 44,
+          "label": "Name",
+          "value": "Active",
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 45,
+          "label": "Coins",
+          "value": true,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 46,
+          "label": "Free Upgrades",
+          "value": true,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 47,
+          "label": "x1.8 Coins / Health - 70%",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 48,
+          "label": "Golden Tower Bonus x1.5",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 49,
+          "label": "Black Hole Duration",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 50,
+          "label": "Death Wave Quantity",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        }
+      ],
+      "merges": [
+        {
+          "a1": "AU3:AZ3",
+          "startRowIndex": 2,
+          "endRowIndex": 3,
+          "startColumnIndex": 46,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU4:AX4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU5:AX5",
+          "startRowIndex": 4,
+          "endRowIndex": 5,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU26:AX26",
+          "startRowIndex": 25,
+          "endRowIndex": 26,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU28:AX28",
+          "startRowIndex": 27,
+          "endRowIndex": 28,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AZ28:AZ29",
+          "startRowIndex": 27,
+          "endRowIndex": 29,
+          "startColumnIndex": 51,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU29:AW29",
+          "startRowIndex": 28,
+          "endRowIndex": 29,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU43:AX43",
+          "startRowIndex": 42,
+          "endRowIndex": 43,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU44:AV44",
+          "startRowIndex": 43,
+          "endRowIndex": 44,
+          "startColumnIndex": 46,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AU45:AV45",
+          "startRowIndex": 44,
+          "endRowIndex": 45,
+          "startColumnIndex": 46,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AU46:AV46",
+          "startRowIndex": 45,
+          "endRowIndex": 46,
+          "startColumnIndex": 46,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AU47:AW47",
+          "startRowIndex": 46,
+          "endRowIndex": 47,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU48:AW48",
+          "startRowIndex": 47,
+          "endRowIndex": 48,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU49:AW49",
+          "startRowIndex": 48,
+          "endRowIndex": 49,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU50:AW50",
+          "startRowIndex": 49,
+          "endRowIndex": 50,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU6:AX6",
+          "startRowIndex": 5,
+          "endRowIndex": 6,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU7:AX7",
+          "startRowIndex": 6,
+          "endRowIndex": 7,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU12:AX12",
+          "startRowIndex": 11,
+          "endRowIndex": 12,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU13:AX13",
+          "startRowIndex": 12,
+          "endRowIndex": 13,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU14:AX14",
+          "startRowIndex": 13,
+          "endRowIndex": 14,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU15:AX15",
+          "startRowIndex": 14,
+          "endRowIndex": 15,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU16:AZ16",
+          "startRowIndex": 15,
+          "endRowIndex": 16,
+          "startColumnIndex": 46,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU17:AX17",
+          "startRowIndex": 16,
+          "endRowIndex": 17,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU18:AX18",
+          "startRowIndex": 17,
+          "endRowIndex": 18,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU19:AX19",
+          "startRowIndex": 18,
+          "endRowIndex": 19,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU20:AX20",
+          "startRowIndex": 19,
+          "endRowIndex": 20,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU21:AZ21",
+          "startRowIndex": 20,
+          "endRowIndex": 21,
+          "startColumnIndex": 46,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU8:AX8",
+          "startRowIndex": 7,
+          "endRowIndex": 8,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU9:AX9",
+          "startRowIndex": 8,
+          "endRowIndex": 9,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU10:AZ10",
+          "startRowIndex": 9,
+          "endRowIndex": 10,
+          "startColumnIndex": 46,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU11:AX11",
+          "startRowIndex": 10,
+          "endRowIndex": 11,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU22:AX22",
+          "startRowIndex": 21,
+          "endRowIndex": 22,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AU23:AW23",
+          "startRowIndex": 22,
+          "endRowIndex": 23,
+          "startColumnIndex": 46,
+          "endColumnIndex": 49
+        },
+        {
+          "a1": "AU24:AZ24",
+          "startRowIndex": 23,
+          "endRowIndex": 24,
+          "startColumnIndex": 46,
+          "endColumnIndex": 52
+        },
+        {
+          "a1": "AU25:AX25",
+          "startRowIndex": 24,
+          "endRowIndex": 25,
+          "startColumnIndex": 46,
+          "endColumnIndex": 50
+        }
+      ]
+    },
+    "eHP": {
+      "playerVisible": true,
+      "labelCol": "AT",
+      "valueCol": "AY",
+      "reportedControlCount": 32,
+      "rows": [
+        {
+          "row": 3,
+          "label": "PRESETS 🔗",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eHP!$BB$28:$BB$37"
+          ],
+          "backgroundColor": {
+            "red": 0.7058824,
+            "green": 0.654902,
+            "blue": 0.8392157
+          }
+        },
+        {
+          "row": 4,
+          "label": "Workshop",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eHP!$BC$28:$BC$32"
+          ]
+        },
+        {
+          "row": 5,
+          "label": "Cards",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eHP!$BD$28:$BD$32"
+          ]
+        },
+        {
+          "row": 6,
+          "label": "Modules",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eHP!$BE$28:$BE$32"
+          ]
+        },
+        {
+          "row": 7,
+          "label": "Perks",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eHP!$BG$28:$BG$32"
+          ]
+        },
+        {
+          "row": 9,
+          "label": "User Specific Guesses",
+          "value": null,
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader"
+        },
+        {
+          "row": 10,
+          "label": "Simulated Tier",
+          "value": "T1",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_LIST",
+          "optionValues": [
+            "T1",
+            "T2",
+            "T3",
+            "T4",
+            "T5",
+            "T6",
+            "T7",
+            "T8",
+            "T9",
+            "T10",
+            "T11",
+            "T12",
+            "T13",
+            "T14",
+            "T15",
+            "T16",
+            "T17",
+            "T18",
+            "T19",
+            "T20",
+            "T21",
+            "Tourney"
+          ]
+        },
+        {
+          "row": 11,
+          "label": "Enemies Attacking Together",
+          "value": 1,
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number"
+        },
+        {
+          "row": 12,
+          "label": "CL DMG does % of Total Damage:",
+          "value": 0.01,
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number"
+        },
+        {
+          "row": 13,
+          "label": "Ignore Target Levels",
+          "value": false,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 14,
+          "label": "Hide Non-unlocked Labs",
+          "value": false,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 16,
+          "label": "Cards📝",
+          "value": true,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 17,
+          "label": "Compare Masteries at",
+          "value": null,
+          "controlType": "UNKNOWN",
+          "interactive": false,
+          "classifiedBy": "empty"
+        },
+        {
+          "row": 18,
+          "label": "Name",
+          "value": "Active",
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 19,
+          "label": "Health",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 20,
+          "label": "Health Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 21,
+          "label": "Health Regen",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 22,
+          "label": "Health Regen Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 23,
+          "label": "Extra Defense",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 24,
+          "label": "Extra Defense Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 25,
+          "label": "Fortress",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 26,
+          "label": "Second Wind Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 28,
+          "label": "Perks",
+          "value": true,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 29,
+          "label": "Name",
+          "value": "Active",
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 30,
+          "label": "Max Health",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 31,
+          "label": "Health Regen",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 32,
+          "label": "Defense %",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 33,
+          "label": "Defense Absolute",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 34,
+          "label": "E. Dmg -50% / Dmg -50%",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 35,
+          "label": "E. HP -50% / Rgn & Lifesteal -90%",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 36,
+          "label": "x1.8 Coin / Health -70%",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 37,
+          "label": "Regen x8 / Health -60%",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        }
+      ],
+      "merges": [
+        {
+          "a1": "AX3:AY3",
+          "startRowIndex": 2,
+          "endRowIndex": 3,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX4:AY4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX5:AY5",
+          "startRowIndex": 4,
+          "endRowIndex": 5,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX6:AY6",
+          "startRowIndex": 5,
+          "endRowIndex": 6,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT32:AU32",
+          "startRowIndex": 31,
+          "endRowIndex": 32,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT33:AU33",
+          "startRowIndex": 32,
+          "endRowIndex": 33,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT34:AV34",
+          "startRowIndex": 33,
+          "endRowIndex": 34,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT35:AV35",
+          "startRowIndex": 34,
+          "endRowIndex": 35,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT36:AV36",
+          "startRowIndex": 35,
+          "endRowIndex": 36,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT37:AV37",
+          "startRowIndex": 36,
+          "endRowIndex": 37,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT4:AV4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT5:AV5",
+          "startRowIndex": 4,
+          "endRowIndex": 5,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT17:AV17",
+          "startRowIndex": 16,
+          "endRowIndex": 17,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT28:AX28",
+          "startRowIndex": 27,
+          "endRowIndex": 28,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT29:AU29",
+          "startRowIndex": 28,
+          "endRowIndex": 29,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT30:AU30",
+          "startRowIndex": 29,
+          "endRowIndex": 30,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT31:AU31",
+          "startRowIndex": 30,
+          "endRowIndex": 31,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT3:AV3",
+          "startRowIndex": 2,
+          "endRowIndex": 3,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT10:AX10",
+          "startRowIndex": 9,
+          "endRowIndex": 10,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT7:AV7",
+          "startRowIndex": 6,
+          "endRowIndex": 7,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX7:AY7",
+          "startRowIndex": 6,
+          "endRowIndex": 7,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT6:AV6",
+          "startRowIndex": 5,
+          "endRowIndex": 6,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT9:AY9",
+          "startRowIndex": 8,
+          "endRowIndex": 9,
+          "startColumnIndex": 45,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT11:AX11",
+          "startRowIndex": 10,
+          "endRowIndex": 11,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT12:AX12",
+          "startRowIndex": 11,
+          "endRowIndex": 12,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT13:AX13",
+          "startRowIndex": 12,
+          "endRowIndex": 13,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT14:AX14",
+          "startRowIndex": 13,
+          "endRowIndex": 14,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT16:AX16",
+          "startRowIndex": 15,
+          "endRowIndex": 16,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AY16:AY17",
+          "startRowIndex": 15,
+          "endRowIndex": 17,
+          "startColumnIndex": 50,
+          "endColumnIndex": 51
+        }
+      ]
+    },
+    "eRegen": {
+      "playerVisible": false,
+      "labelCol": "AT",
+      "valueCol": "AY",
+      "reportedControlCount": 32,
+      "rows": [
+        {
+          "row": 3,
+          "label": "PRESETS 🔗",
+          "value": null,
+          "valueColumn": "AX",
+          "mirroredFrom": "eHP",
+          "controlType": "UNKNOWN",
+          "interactive": false,
+          "classifiedBy": "empty"
+        },
+        {
+          "row": 4,
+          "label": "Workshop",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "mirroredFrom": "eHP",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "string"
+        },
+        {
+          "row": 5,
+          "label": "Cards",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "mirroredFrom": "eHP",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "string"
+        },
+        {
+          "row": 6,
+          "label": "Modules",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "mirroredFrom": "eHP",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "string"
+        },
+        {
+          "row": 7,
+          "label": "Perks",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "mirroredFrom": "eHP",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "string"
+        },
+        {
+          "row": 9,
+          "label": "User Specific Guesses",
+          "value": null,
+          "isHeader": true,
+          "mirroredFrom": "eHP",
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader"
+        },
+        {
+          "row": 10,
+          "label": "Simulated Tier",
+          "value": "T1",
+          "mirroredFrom": "eHP",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "string"
+        },
+        {
+          "row": 11,
+          "label": "Enemies Attacking Together",
+          "value": 1,
+          "mirroredFrom": "eHP",
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number"
+        },
+        {
+          "row": 12,
+          "label": "CL DMG does % of Total Damage:",
+          "value": 0.01,
+          "mirroredFrom": "eHP",
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number"
+        },
+        {
+          "row": 13,
+          "label": "Ignore Target Levels",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 14,
+          "label": "Hide Non-unlocked Labs",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 16,
+          "label": "Cards📝",
+          "value": true,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 17,
+          "label": "Compare Masteries at",
+          "value": null,
+          "mirroredFrom": "eHP",
+          "controlType": "UNKNOWN",
+          "interactive": false,
+          "classifiedBy": "empty"
+        },
+        {
+          "row": 18,
+          "label": "Name",
+          "value": "Active",
+          "mirroredFrom": "eHP",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "string",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 19,
+          "label": "Health",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 20,
+          "label": "Health Mastery",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 21,
+          "label": "Health Regen",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 22,
+          "label": "Health Regen Mastery",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 23,
+          "label": "Extra Defense",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 24,
+          "label": "Extra Defense Mastery",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 25,
+          "label": "Fortress",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 26,
+          "label": "Second Wind Mastery",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 28,
+          "label": "Perks",
+          "value": true,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 29,
+          "label": "Name",
+          "value": "Active",
+          "mirroredFrom": "eHP",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "string",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 30,
+          "label": "Max Health",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 31,
+          "label": "Health Regen",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 32,
+          "label": "Defense %",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 33,
+          "label": "Defense Absolute",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 34,
+          "label": "E. Dmg -50% / Dmg -50%",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 35,
+          "label": "E. HP -50% / Rgn & Lifesteal -90%",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 36,
+          "label": "x1.8 Coin / Health -70%",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 37,
+          "label": "Regen x8 / Health -60%",
+          "value": false,
+          "mirroredFrom": "eHP",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "boolean",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        }
+      ],
+      "merges": [
+        {
+          "a1": "AT4:AV4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX4:AY4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX5:AY5",
+          "startRowIndex": 4,
+          "endRowIndex": 5,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT5:AV5",
+          "startRowIndex": 4,
+          "endRowIndex": 5,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT6:AV6",
+          "startRowIndex": 5,
+          "endRowIndex": 6,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT13:AX13",
+          "startRowIndex": 12,
+          "endRowIndex": 13,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT14:AX14",
+          "startRowIndex": 13,
+          "endRowIndex": 14,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT16:AX16",
+          "startRowIndex": 15,
+          "endRowIndex": 16,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AY16:AY17",
+          "startRowIndex": 15,
+          "endRowIndex": 17,
+          "startColumnIndex": 50,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT17:AV17",
+          "startRowIndex": 16,
+          "endRowIndex": 17,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT3:AY3",
+          "startRowIndex": 2,
+          "endRowIndex": 3,
+          "startColumnIndex": 45,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT33:AU33",
+          "startRowIndex": 32,
+          "endRowIndex": 33,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT34:AV34",
+          "startRowIndex": 33,
+          "endRowIndex": 34,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT35:AV35",
+          "startRowIndex": 34,
+          "endRowIndex": 35,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT36:AV36",
+          "startRowIndex": 35,
+          "endRowIndex": 36,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT37:AV37",
+          "startRowIndex": 36,
+          "endRowIndex": 37,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT28:AX28",
+          "startRowIndex": 27,
+          "endRowIndex": 28,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT29:AU29",
+          "startRowIndex": 28,
+          "endRowIndex": 29,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT30:AU30",
+          "startRowIndex": 29,
+          "endRowIndex": 30,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT31:AU31",
+          "startRowIndex": 30,
+          "endRowIndex": 31,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT32:AU32",
+          "startRowIndex": 31,
+          "endRowIndex": 32,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AX6:AY6",
+          "startRowIndex": 5,
+          "endRowIndex": 6,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT7:AV7",
+          "startRowIndex": 6,
+          "endRowIndex": 7,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX7:AY7",
+          "startRowIndex": 6,
+          "endRowIndex": 7,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT9:AY9",
+          "startRowIndex": 8,
+          "endRowIndex": 9,
+          "startColumnIndex": 45,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT10:AX10",
+          "startRowIndex": 9,
+          "endRowIndex": 10,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT11:AX11",
+          "startRowIndex": 10,
+          "endRowIndex": 11,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT12:AX12",
+          "startRowIndex": 11,
+          "endRowIndex": 12,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        }
+      ]
+    },
+    "eDamage": {
+      "playerVisible": true,
+      "labelCol": "AT",
+      "valueCol": "AY",
+      "reportedControlCount": 65,
+      "rows": [
+        {
+          "row": 3,
+          "label": "Bullet Damage %",
+          "value": null,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay"
+        },
+        {
+          "row": 4,
+          "label": "UW* Damage %",
+          "value": null,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay"
+        },
+        {
+          "row": 5,
+          "label": "Death Wave",
+          "value": null,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.95686275,
+            "green": 0.8,
+            "blue": 0.8
+          }
+        },
+        {
+          "row": 6,
+          "label": "Chain Lightning",
+          "value": 0.05,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.8117647,
+            "green": 0.8862745,
+            "blue": 0.9529412
+          }
+        },
+        {
+          "row": 7,
+          "label": "Smart Missiles",
+          "value": null,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.8509804,
+            "green": 0.91764706,
+            "blue": 0.827451
+          }
+        },
+        {
+          "row": 8,
+          "label": "Spotlight",
+          "value": 0,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.7058824,
+            "green": 0.654902,
+            "blue": 0.8392157
+          }
+        },
+        {
+          "row": 9,
+          "label": "Spotlight Missiles ⚠️",
+          "value": null,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.8509804,
+            "green": 0.91764706,
+            "blue": 0.827451
+          }
+        },
+        {
+          "row": 10,
+          "label": "Inner Land Mines",
+          "value": 200,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.8,
+            "green": 0.25490198,
+            "blue": 0.14509805
+          }
+        },
+        {
+          "row": 12,
+          "label": "PRESETS 🔗",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eDamage!$BH$51:$BH$60"
+          ],
+          "backgroundColor": {
+            "red": 0.7058824,
+            "green": 0.654902,
+            "blue": 0.8392157
+          }
+        },
+        {
+          "row": 13,
+          "label": "Workshop",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eDamage!$BI$51:$BI$55"
+          ]
+        },
+        {
+          "row": 14,
+          "label": "Cards",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eDamage!$BJ$51:$BJ$55"
+          ]
+        },
+        {
+          "row": 15,
+          "label": "Modules",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eDamage!$BK$51:$BK$55"
+          ]
+        },
+        {
+          "row": 16,
+          "label": "Perks",
+          "value": "Farming",
+          "valueColumn": "AX",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_RANGE",
+          "optionValues": [
+            "=eDamage!$BM$51:$BM$55"
+          ]
+        },
+        {
+          "row": 18,
+          "label": "User Specific Guesses",
+          "value": null,
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader"
+        },
+        {
+          "row": 19,
+          "label": "Run Type",
+          "value": "Regular",
+          "valueColumn": "AX",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_LIST",
+          "optionValues": [
+            "Regular",
+            "Tourney",
+            "Attack Disso",
+            "UW Disso",
+            "Util Disso"
+          ]
+        },
+        {
+          "row": 20,
+          "label": "Simulated Tier",
+          "value": "Tier 1",
+          "valueColumn": "AX",
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay"
+        },
+        {
+          "row": 21,
+          "label": "Game Speed",
+          "value": 6.25,
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_LIST",
+          "optionValues": [
+            "1.00",
+            "2.00",
+            "3.00",
+            "4.00",
+            "5.00",
+            "6.00",
+            "6.25"
+          ],
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 22,
+          "label": "DPM - Damage at % range :",
+          "value": 0.25,
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 23,
+          "label": "Ignore Lab Target Levels",
+          "value": false,
+          "valueColumn": "AU",
+          "discoveredBy": "read_range AT23:AY23",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 23,
+          "label": "Ignore UW Target Levels",
+          "value": false,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN"
+        },
+        {
+          "row": 24,
+          "label": "Hide UW Cooldown",
+          "value": false,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 25,
+          "label": "Hide non-UW Upgrades",
+          "value": false,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 26,
+          "label": "Hide Non-unlocked Labs",
+          "value": false,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 27,
+          "label": "Show Labs on Coin path",
+          "value": "All         | Show all labs levels on Coin path",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "ONE_OF_LIST",
+          "optionValues": [
+            "None      | Don't show Labs on Coin path",
+            "1 level   | Show only the next labs level on Coin path",
+            "4 level  | Show the 4 next labs levels on Coin path",
+            "10 level  | Show the 10 next labs levels on Coin path",
+            "All         | Show all labs levels on Coin path"
+          ]
+        },
+        {
+          "row": 28,
+          "label": "// Equip Galaxy Compressor //",
+          "value": 10,
+          "labelIsConditional": true,
+          "labelWhenUnlocked": "Boss spawns every # of waves",
+          "unlockCondition": "Galaxy Compressor equipped",
+          "valueIsComputed": true,
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 29,
+          "label": "SM - Hits on same target",
+          "value": 12,
+          "labelIsConditional": true,
+          "labelWhenUnlocked": "SM - Hits on same target",
+          "unlockCondition": "Smart Missiles unlocked",
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 30,
+          "label": "SM - Enemies inside SM Area",
+          "value": 15,
+          "labelIsConditional": true,
+          "labelWhenUnlocked": "SM - Enemies inside SM Area",
+          "unlockCondition": "Smart Missiles unlocked",
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 31,
+          "label": "PS - Average Enemies poisoned",
+          "value": 40,
+          "labelIsConditional": true,
+          "labelWhenUnlocked": "PS - Average Enemies poisoned",
+          "unlockCondition": "Poison Swamp unlocked and PS Beta Testing enabled",
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 32,
+          "label": "PS Death Creep - PS average Ticks before enemy dies 📝",
+          "value": 10,
+          "labelIsConditional": true,
+          "labelWhenUnlocked": "PS Death Creep - PS average Ticks before enemy dies",
+          "unlockCondition": "Poison Swamp unlocked and PS Beta Testing enabled",
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 33,
+          "label": "// Unlock CF //",
+          "value": true,
+          "labelIsConditional": true,
+          "labelWhenUnlocked": "CF - Enable CF Slow",
+          "unlockCondition": "Chrono Field owned",
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 34,
+          "label": "// Equip Project Funding //",
+          "value": "100B",
+          "labelIsConditional": true,
+          "labelWhenUnlocked": "Project Funding Cash",
+          "unlockCondition": "Project Funding equipped",
+          "controlType": "DROPDOWN",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "string",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 35,
+          "label": "// Equip Amplifying Strike //",
+          "value": 3,
+          "labelIsConditional": true,
+          "labelWhenUnlocked": "Elites per Wave",
+          "unlockCondition": "Amplifying Strike equipped",
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 36,
+          "label": "ILM - Enemies inside ILM Area",
+          "value": 42,
+          "labelIsConditional": true,
+          "labelWhenUnlocked": "ILM - Enemies inside ILM Area",
+          "unlockCondition": "Inner Land Mines unlocked",
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 37,
+          "label": "// Unlock ILM+ //",
+          "value": 17,
+          "labelIsConditional": true,
+          "labelWhenUnlocked": "ILM+ - Hits on same targets",
+          "unlockCondition": "Inner Land Mines+ unlocked",
+          "valueIsComputed": true,
+          "controlType": "NUMBER",
+          "interactive": true,
+          "classifiedBy": "valueShape",
+          "validationType": "number",
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          }
+        },
+        {
+          "row": 39,
+          "label": "Cards",
+          "value": true,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 40,
+          "label": "Compare Masteries at",
+          "value": null,
+          "controlType": "UNKNOWN",
+          "interactive": false,
+          "classifiedBy": "empty"
+        },
+        {
+          "row": 41,
+          "label": "Name",
+          "value": "Active",
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 42,
+          "label": "Damage",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 43,
+          "label": "Damage Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 44,
+          "label": "Berserker",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 45,
+          "label": "Attack Speed",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 46,
+          "label": "Attack Speed Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 47,
+          "label": "Critical Chance",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 48,
+          "label": "Critical Chance Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 49,
+          "label": "Range",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 50,
+          "label": "Range Mastery (DPM)",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 51,
+          "label": "Enemy Balance",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 52,
+          "label": "Super Tower",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 53,
+          "label": "Super Tower Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 54,
+          "label": "Ultimate Crit",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 55,
+          "label": "Ultimate Crit Mastery",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 56,
+          "label": "Recovery Package Chance",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 57,
+          "label": "Wave Accelerator",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 58,
+          "label": "Demon Mode Mastery ⚠️",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 59,
+          "label": "Area of Effect",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 61,
+          "label": "Perks",
+          "value": true,
+          "controlType": "TOGGLE",
+          "interactive": true,
+          "classifiedBy": "dataValidation",
+          "validationType": "BOOLEAN",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 62,
+          "label": "Name",
+          "value": "Active",
+          "isHeader": true,
+          "controlType": "HEADER",
+          "interactive": false,
+          "classifiedBy": "flag:isHeader",
+          "backgroundColor": {
+            "red": 0.91764706,
+            "green": 0.2627451,
+            "blue": 0.20784314
+          }
+        },
+        {
+          "row": 63,
+          "label": "Damage",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 64,
+          "label": "Bounce Shot",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 65,
+          "label": "x1.62 Damage / Boss Health x8",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 66,
+          "label": "E. Dmg -54% / Dmg -50%",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 67,
+          "label": "Death Wave Quantity",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 68,
+          "label": "Spotlight Damage Bonus",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 69,
+          "label": "More Smart Missiles",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 70,
+          "label": "Chain Lightning Damage",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        },
+        {
+          "row": 71,
+          "label": "Extra set of Inner Mines",
+          "value": false,
+          "isComputedDisplay": true,
+          "controlType": "DISPLAY",
+          "interactive": false,
+          "classifiedBy": "flag:isComputedDisplay",
+          "backgroundColor": {
+            "red": 0.20392157,
+            "green": 0.65882355,
+            "blue": 0.3254902
+          }
+        }
+      ],
+      "merges": [
+        {
+          "a1": "AT12:AV12",
+          "startRowIndex": 11,
+          "endRowIndex": 12,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT68:AV68",
+          "startRowIndex": 67,
+          "endRowIndex": 68,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT71:AV71",
+          "startRowIndex": 70,
+          "endRowIndex": 71,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AV3:AY3",
+          "startRowIndex": 2,
+          "endRowIndex": 3,
+          "startColumnIndex": 47,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX4:AY4",
+          "startRowIndex": 3,
+          "endRowIndex": 4,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AX12:AY12",
+          "startRowIndex": 11,
+          "endRowIndex": 12,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT13:AV13",
+          "startRowIndex": 12,
+          "endRowIndex": 13,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AV23:AX23",
+          "startRowIndex": 22,
+          "endRowIndex": 23,
+          "startColumnIndex": 47,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT24:AX24",
+          "startRowIndex": 23,
+          "endRowIndex": 24,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT25:AX25",
+          "startRowIndex": 24,
+          "endRowIndex": 25,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT26:AX26",
+          "startRowIndex": 25,
+          "endRowIndex": 26,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT27:AX27",
+          "startRowIndex": 26,
+          "endRowIndex": 27,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT69:AV69",
+          "startRowIndex": 68,
+          "endRowIndex": 69,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT70:AV70",
+          "startRowIndex": 69,
+          "endRowIndex": 70,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX13:AY13",
+          "startRowIndex": 12,
+          "endRowIndex": 13,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT14:AV14",
+          "startRowIndex": 13,
+          "endRowIndex": 14,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX14:AY14",
+          "startRowIndex": 13,
+          "endRowIndex": 14,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT15:AV15",
+          "startRowIndex": 14,
+          "endRowIndex": 15,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX15:AY15",
+          "startRowIndex": 14,
+          "endRowIndex": 15,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT16:AV16",
+          "startRowIndex": 15,
+          "endRowIndex": 16,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX16:AY16",
+          "startRowIndex": 15,
+          "endRowIndex": 16,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT18:AY18",
+          "startRowIndex": 17,
+          "endRowIndex": 18,
+          "startColumnIndex": 45,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT19:AV19",
+          "startRowIndex": 18,
+          "endRowIndex": 19,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX19:AY19",
+          "startRowIndex": 18,
+          "endRowIndex": 19,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT20:AV20",
+          "startRowIndex": 19,
+          "endRowIndex": 20,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AX20:AY20",
+          "startRowIndex": 19,
+          "endRowIndex": 20,
+          "startColumnIndex": 49,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT21:AX21",
+          "startRowIndex": 20,
+          "endRowIndex": 21,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT22:AX22",
+          "startRowIndex": 21,
+          "endRowIndex": 22,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT28:AX28",
+          "startRowIndex": 27,
+          "endRowIndex": 28,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT29:AX29",
+          "startRowIndex": 28,
+          "endRowIndex": 29,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT30:AX30",
+          "startRowIndex": 29,
+          "endRowIndex": 30,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT31:AX31",
+          "startRowIndex": 30,
+          "endRowIndex": 31,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT32:AX32",
+          "startRowIndex": 31,
+          "endRowIndex": 32,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT33:AX33",
+          "startRowIndex": 32,
+          "endRowIndex": 33,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT34:AX34",
+          "startRowIndex": 33,
+          "endRowIndex": 34,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT35:AX35",
+          "startRowIndex": 34,
+          "endRowIndex": 35,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT36:AX36",
+          "startRowIndex": 35,
+          "endRowIndex": 36,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT37:AX37",
+          "startRowIndex": 36,
+          "endRowIndex": 37,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT39:AX39",
+          "startRowIndex": 38,
+          "endRowIndex": 39,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AY39:AY40",
+          "startRowIndex": 38,
+          "endRowIndex": 40,
+          "startColumnIndex": 50,
+          "endColumnIndex": 51
+        },
+        {
+          "a1": "AT40:AV40",
+          "startRowIndex": 39,
+          "endRowIndex": 40,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT66:AV66",
+          "startRowIndex": 65,
+          "endRowIndex": 66,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT67:AV67",
+          "startRowIndex": 66,
+          "endRowIndex": 67,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        },
+        {
+          "a1": "AT61:AX61",
+          "startRowIndex": 60,
+          "endRowIndex": 61,
+          "startColumnIndex": 45,
+          "endColumnIndex": 50
+        },
+        {
+          "a1": "AT62:AU62",
+          "startRowIndex": 61,
+          "endRowIndex": 62,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT63:AU63",
+          "startRowIndex": 62,
+          "endRowIndex": 63,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT64:AU64",
+          "startRowIndex": 63,
+          "endRowIndex": 64,
+          "startColumnIndex": 45,
+          "endColumnIndex": 47
+        },
+        {
+          "a1": "AT65:AV65",
+          "startRowIndex": 64,
+          "endRowIndex": 65,
+          "startColumnIndex": 45,
+          "endColumnIndex": 48
+        }
+      ]
+    }
+  },
+  "visibleTabs": [
+    "Home Page",
+    "IDS",
+    "Giveaways",
+    "eHP",
+    "eDamage",
+    "eEcon"
+  ],
+  "visibilityNote": "Most workbook tabs are hidden. eRegen is a spilled mirror of eHP — do not wire twice."
+}

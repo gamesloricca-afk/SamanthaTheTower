@@ -1,0 +1,1960 @@
+{
+  "sheetVersion": "v5.10.02.02",
+  "capturedAt": "2026-08-29",
+  "source": "scripts/effective-paths/build-web-control-map.mjs",
+  "nonSheetAllowlist": [
+    "highestTier",
+    "highestWave"
+  ],
+  "entries": [
+    {
+      "tab": "eEcon",
+      "cell": "AZ3",
+      "label": "User Inputs",
+      "sheetGroup": "User Inputs",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ4",
+      "label": "PRESETS",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "PRESETS master — Settings only (cross-path IDS spill)"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ5",
+      "label": "Workshop",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ6",
+      "label": "Cards",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ7",
+      "label": "Modules",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ8",
+      "label": "Bots",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ9",
+      "label": "Perks",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ10",
+      "label": "Lab Specific Inputs",
+      "sheetGroup": "Lab Specific Inputs",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ11",
+      "label": "Hide Non-unlocked Labs",
+      "sheetGroup": "Lab Specific Inputs",
+      "webKey": "hideNonUnlockedLabs",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp",
+        "damage",
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ12",
+      "label": "Show Labs",
+      "sheetGroup": "Lab Specific Inputs",
+      "webKey": "showLabs",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ13",
+      "label": "Show Enhancements",
+      "sheetGroup": "Lab Specific Inputs",
+      "webKey": "showEnhancements",
+      "placement": "settings",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ14",
+      "label": "Hide Retroactive Discount Labs",
+      "sheetGroup": "Lab Specific Inputs",
+      "webKey": "showRetroactiveDiscountLabs",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ15",
+      "label": "Ignore Lab Target Levels",
+      "sheetGroup": "Lab Specific Inputs",
+      "webKey": "ignoreTargetLevels",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp",
+        "damage",
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ16",
+      "label": "UW Specific Inputs",
+      "sheetGroup": "UW Specific Inputs",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ17",
+      "label": "Keep GT|BH|DW CD Synced",
+      "sheetGroup": "UW Specific Inputs",
+      "webKey": "keepCooldownsSynced",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ18",
+      "label": "Ignore UW Target Levels",
+      "sheetGroup": "UW Specific Inputs",
+      "webKey": "ignoreUwTargetLevels",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage",
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ19",
+      "label": "% of Enemies that die in BH while it is active",
+      "sheetGroup": "UW Specific Inputs",
+      "webKey": "economyEstimates.blackHoleKillShare",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ20",
+      "label": "// // Requires GT+ // //",
+      "sheetGroup": "UW Specific Inputs",
+      "webKey": "economyEstimates.killsPerSecond",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ21",
+      "label": "Bot Specific Inputs",
+      "sheetGroup": "Bot Specific Inputs",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ22",
+      "label": "% of Enemies that die in GB while active",
+      "sheetGroup": "Bot Specific Inputs",
+      "webKey": "economyEstimates.goldBotKillShare",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ23",
+      "label": "GB Sync Desired Ratio:",
+      "sheetGroup": "Bot Specific Inputs",
+      "webKey": "economyEstimates.goldBotSyncRatio",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ24",
+      "label": "Other Inputs",
+      "sheetGroup": "Other Inputs",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ25",
+      "label": "Boss spawns every # of waves",
+      "sheetGroup": "Other Inputs",
+      "webKey": "economyEstimates.bossWaveInterval",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ26",
+      "label": "Extra Orb % enemies tagged",
+      "sheetGroup": "Other Inputs",
+      "webKey": "economyEstimates.extraOrbTagShare",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ28",
+      "label": "Cards",
+      "sheetGroup": "Cards",
+      "webKey": "useCards",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp",
+        "damage",
+        "econ"
+      ],
+      "note": "Cards📝 master on eEcon"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ29",
+      "label": "Compare Masteries at",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "display_only",
+      "note": "Sheet formula ROUND(avg mastery labs) then RIGHT digit — derived via compareMasteriesAtFromLabLevels; not an editable web control"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ30",
+      "label": "Name",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ31",
+      "label": "Coins",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ32",
+      "label": "Coins Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ33",
+      "label": "Free Upgrades",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ34",
+      "label": "Extra Orb Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ35",
+      "label": "Wave Skip",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ36",
+      "label": "Wave Skip Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ37",
+      "label": "Intro Sprint",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ38",
+      "label": "Intro Sprint Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ39",
+      "label": "Recovery Package Chance",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ40",
+      "label": "Wave Accelerator",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ41",
+      "label": "Wave Accelerator Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ43",
+      "label": "Perks",
+      "sheetGroup": "Perks",
+      "webKey": "economyPerksEquipped",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ44",
+      "label": "Name",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ45",
+      "label": "Coins",
+      "sheetGroup": "Perks",
+      "webKey": "economyPerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ46",
+      "label": "Free Upgrades",
+      "sheetGroup": "Perks",
+      "webKey": "economyPerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ47",
+      "label": "x1.8 Coins / Health - 70%",
+      "sheetGroup": "Perks",
+      "webKey": "economyPerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ48",
+      "label": "Golden Tower Bonus x1.5",
+      "sheetGroup": "Perks",
+      "webKey": "economyPerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ49",
+      "label": "Black Hole Duration",
+      "sheetGroup": "Perks",
+      "webKey": "economyPerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "AZ50",
+      "label": "Death Wave Quantity",
+      "sheetGroup": "Perks",
+      "webKey": "economyPerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AX3",
+      "label": "PRESETS",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "PRESETS master — Settings only (cross-path IDS spill)"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AX4",
+      "label": "Workshop",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AX5",
+      "label": "Cards",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AX6",
+      "label": "Modules",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AX7",
+      "label": "Perks",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY9",
+      "label": "User Specific Guesses",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY10",
+      "label": "Simulated Tier",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "simulatedTier",
+      "placement": "settings",
+      "status": "bound",
+      "families": [
+        "ehp"
+      ]
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY11",
+      "label": "Enemies Attacking Together",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "enemiesAttackingTogether",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp"
+      ]
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY12",
+      "label": "CL DMG does % of Total Damage:",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "chainLightningDamagePct",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp"
+      ]
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY13",
+      "label": "Ignore Target Levels",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "ignoreTargetLevels",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp",
+        "damage",
+        "econ"
+      ]
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY14",
+      "label": "Hide Non-unlocked Labs",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "hideNonUnlockedLabs",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp",
+        "damage",
+        "econ"
+      ]
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY16",
+      "label": "Cards",
+      "sheetGroup": "Cards",
+      "webKey": "useCards",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp",
+        "damage",
+        "econ"
+      ]
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY17",
+      "label": "Compare Masteries at",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "display_only",
+      "note": "Compare Masteries at — ROI display"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY18",
+      "label": "Name",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY19",
+      "label": "Health",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY20",
+      "label": "Health Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY21",
+      "label": "Health Regen",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY22",
+      "label": "Health Regen Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY23",
+      "label": "Extra Defense",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY24",
+      "label": "Extra Defense Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY25",
+      "label": "Fortress",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY26",
+      "label": "Second Wind Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY28",
+      "label": "Perks",
+      "sheetGroup": "Perks",
+      "webKey": "perks",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp"
+      ],
+      "note": "Perks master; per-row in perks/perkQuantity"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY29",
+      "label": "Name",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY30",
+      "label": "Max Health",
+      "sheetGroup": "Perks",
+      "webKey": "perks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY31",
+      "label": "Health Regen",
+      "sheetGroup": "Perks",
+      "webKey": "perks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY32",
+      "label": "Defense %",
+      "sheetGroup": "Perks",
+      "webKey": "perks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY33",
+      "label": "Defense Absolute",
+      "sheetGroup": "Perks",
+      "webKey": "perks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY34",
+      "label": "E. Dmg -50% / Dmg -50%",
+      "sheetGroup": "Perks",
+      "webKey": "perks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY35",
+      "label": "E. HP -50% / Rgn & Lifesteal -90%",
+      "sheetGroup": "Perks",
+      "webKey": "perks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY36",
+      "label": "x1.8 Coin / Health -70%",
+      "sheetGroup": "Perks",
+      "webKey": "perks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eHP",
+      "cell": "AY37",
+      "label": "Regen x8 / Health -60%",
+      "sheetGroup": "Perks",
+      "webKey": "perks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AX3",
+      "label": "PRESETS",
+      "sheetGroup": "PRESETS",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AX4",
+      "label": "Workshop",
+      "sheetGroup": "PRESETS",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AX5",
+      "label": "Cards",
+      "sheetGroup": "PRESETS",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AX6",
+      "label": "Modules",
+      "sheetGroup": "PRESETS",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AX7",
+      "label": "Perks",
+      "sheetGroup": "PRESETS",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY9",
+      "label": "User Specific Guesses",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY10",
+      "label": "Simulated Tier",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY11",
+      "label": "Enemies Attacking Together",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY12",
+      "label": "CL DMG does % of Total Damage:",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY13",
+      "label": "Ignore Target Levels",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY14",
+      "label": "Hide Non-unlocked Labs",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY16",
+      "label": "Cards",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY17",
+      "label": "Compare Masteries at",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY18",
+      "label": "Name",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY19",
+      "label": "Health",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY20",
+      "label": "Health Mastery",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY21",
+      "label": "Health Regen",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY22",
+      "label": "Health Regen Mastery",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY23",
+      "label": "Extra Defense",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY24",
+      "label": "Extra Defense Mastery",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY25",
+      "label": "Fortress",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY26",
+      "label": "Second Wind Mastery",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY28",
+      "label": "Perks",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY29",
+      "label": "Name",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY30",
+      "label": "Max Health",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY31",
+      "label": "Health Regen",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY32",
+      "label": "Defense %",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY33",
+      "label": "Defense Absolute",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY34",
+      "label": "E. Dmg -50% / Dmg -50%",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY35",
+      "label": "E. HP -50% / Rgn & Lifesteal -90%",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY36",
+      "label": "x1.8 Coin / Health -70%",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eRegen",
+      "cell": "AY37",
+      "label": "Regen x8 / Health -60%",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "mirrored",
+      "mirroredFrom": "eHP"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY3",
+      "label": "Bullet Damage %",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "display_only",
+      "note": "Computed display / Active column formula"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY4",
+      "label": "UW* Damage %",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "display_only",
+      "note": "Computed display / Active column formula"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY5",
+      "label": "Death Wave",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "display_only",
+      "note": "Computed display / Active column formula"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY6",
+      "label": "Chain Lightning",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "display_only",
+      "note": "Computed display / Active column formula"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY7",
+      "label": "Smart Missiles",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "display_only",
+      "note": "Computed display / Active column formula"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY8",
+      "label": "Spotlight",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "display_only",
+      "note": "Computed display / Active column formula"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY9",
+      "label": "Spotlight Missiles ⚠️",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "display_only",
+      "note": "Computed display / Active column formula"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY10",
+      "label": "Inner Land Mines",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "display_only",
+      "note": "Computed display / Active column formula"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AX12",
+      "label": "PRESETS",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "PRESETS master — Settings only (cross-path IDS spill)"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AX13",
+      "label": "Workshop",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AX14",
+      "label": "Cards",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AX15",
+      "label": "Modules",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AX16",
+      "label": "Perks",
+      "sheetGroup": "PRESETS",
+      "webKey": "presets",
+      "placement": "settings",
+      "status": "ids_derived",
+      "note": "Preset spill from IDS — Settings only"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY18",
+      "label": "User Specific Guesses",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AX19",
+      "label": "Run Type",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "runType",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AX20",
+      "label": "Simulated Tier",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "simulatedTier",
+      "placement": "settings",
+      "status": "bound",
+      "families": [
+        "ehp",
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY21",
+      "label": "Game Speed",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "gameSpeed",
+      "placement": "settings",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY22",
+      "label": "DPM - Damage at % range :",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "damageAtRangePct",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AU23",
+      "label": "Ignore Lab Target Levels",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "ignoreTargetLevels",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp",
+        "damage",
+        "econ"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY23",
+      "label": "Ignore UW Target Levels",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "ignoreUwTargetLevels",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage",
+        "econ"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY24",
+      "label": "Hide UW Cooldown",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "hideUwCooldown",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY25",
+      "label": "Hide non-UW Upgrades",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "hideNonUwUpgrades",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY26",
+      "label": "Hide Non-unlocked Labs",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "hideNonUnlockedLabs",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp",
+        "damage",
+        "econ"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY27",
+      "label": "Show Labs on Coin path",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "showLabsOnCoinPath",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY28",
+      "label": "Boss spawns every # of waves",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "damageEstimates.bossWaveInterval",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ],
+      "note": "Galaxy Compressor / Boss spawns"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY29",
+      "label": "SM - Hits on same target",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "damageEstimates.smartMissilesHits",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY30",
+      "label": "SM - Enemies inside SM Area",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "damageEstimates.smartMissilesArea",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY31",
+      "label": "PS - Average Enemies poisoned",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "damageEstimates.poisonSwampArea",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY32",
+      "label": "PS Death Creep - PS average Ticks before enemy dies",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "damageEstimates.poisonSwampHits",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY33",
+      "label": "CF - Enable CF Slow",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "chronoFieldSlowCounted",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY34",
+      "label": "Project Funding Cash",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "damageEstimates.projectFundingCash",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ],
+      "note": "Project Funding Cash"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY35",
+      "label": "Elites per Wave",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "damageEstimates.ampStrikeShare",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY36",
+      "label": "ILM - Enemies inside ILM Area",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "damageEstimates.innerLandMinesArea",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY37",
+      "label": "ILM+ - Hits on same targets",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "damageEstimates.innerLandMinesHits",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY39",
+      "label": "Cards",
+      "sheetGroup": "Cards",
+      "webKey": "useCards",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "ehp",
+        "damage",
+        "econ"
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY40",
+      "label": "Compare Masteries at",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "display_only",
+      "note": "Compare Masteries at"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY41",
+      "label": "Name",
+      "sheetGroup": "Cards",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY42",
+      "label": "Damage",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY43",
+      "label": "Damage Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY44",
+      "label": "Berserker",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY45",
+      "label": "Attack Speed",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY46",
+      "label": "Attack Speed Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY47",
+      "label": "Critical Chance",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY48",
+      "label": "Critical Chance Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY49",
+      "label": "Range",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY50",
+      "label": "Range Mastery (DPM)",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY51",
+      "label": "Enemy Balance",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY52",
+      "label": "Super Tower",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY53",
+      "label": "Super Tower Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY54",
+      "label": "Ultimate Crit",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY55",
+      "label": "Ultimate Crit Mastery",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY56",
+      "label": "Recovery Package Chance",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY57",
+      "label": "Wave Accelerator",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY58",
+      "label": "Demon Mode Mastery ⚠️",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY59",
+      "label": "Area of Effect",
+      "sheetGroup": "Cards",
+      "webKey": "cardsActive",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY61",
+      "label": "Perks",
+      "sheetGroup": "Perks",
+      "webKey": "damagePerks",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ],
+      "note": "Perks master"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY62",
+      "label": "Name",
+      "sheetGroup": "Perks",
+      "webKey": null,
+      "placement": "tab",
+      "status": "header"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY63",
+      "label": "Damage",
+      "sheetGroup": "Perks",
+      "webKey": "damagePerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY64",
+      "label": "Bounce Shot",
+      "sheetGroup": "Perks",
+      "webKey": "damagePerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY65",
+      "label": "x1.62 Damage / Boss Health x8",
+      "sheetGroup": "Perks",
+      "webKey": "damagePerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY66",
+      "label": "E. Dmg -54% / Dmg -50%",
+      "sheetGroup": "Perks",
+      "webKey": "damagePerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY67",
+      "label": "Death Wave Quantity",
+      "sheetGroup": "Perks",
+      "webKey": "damagePerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY68",
+      "label": "Spotlight Damage Bonus",
+      "sheetGroup": "Perks",
+      "webKey": "damagePerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY69",
+      "label": "More Smart Missiles",
+      "sheetGroup": "Perks",
+      "webKey": "damagePerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY70",
+      "label": "Chain Lightning Damage",
+      "sheetGroup": "Perks",
+      "webKey": "damagePerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "AY71",
+      "label": "Extra set of Inner Mines",
+      "sheetGroup": "Perks",
+      "webKey": "damagePerks",
+      "placement": "tab",
+      "status": "bound",
+      "note": "Per-row Active — sheet formula; web Active column / cardsActive overrides"
+    },
+    {
+      "tab": "eEcon",
+      "cell": "O3",
+      "label": "Count research days only",
+      "sheetGroup": "Lab Specific Inputs",
+      "webKey": "daysOnly",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "O5",
+      "label": "Lab Speed Multiplier",
+      "sheetGroup": "Lab Specific Inputs",
+      "webKey": "labSpeedMultiplier",
+      "placement": "settings",
+      "status": "bound",
+      "families": [
+        "econ"
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "cell": "coinsPerHour",
+      "label": "Coins / Hour",
+      "sheetGroup": "Lab Specific Inputs",
+      "webKey": "coinsPerHour",
+      "placement": "settings",
+      "status": "bound",
+      "families": [
+        "econ"
+      ],
+      "note": "Prices lab path in time; Settings with other shared path inputs"
+    },
+    {
+      "tab": "eDamage",
+      "cell": "towerDamage",
+      "label": "Tower Damage",
+      "sheetGroup": "User Specific Guesses",
+      "webKey": "towerDamage",
+      "placement": "tab",
+      "status": "bound",
+      "families": [
+        "damage"
+      ],
+      "note": "Web override when IDS-derived tower damage is unavailable"
+    },
+    {
+      "tab": null,
+      "cell": null,
+      "label": "Highest Tier",
+      "sheetGroup": "Player",
+      "webKey": "highestTier",
+      "placement": "settings",
+      "status": "non_sheet",
+      "families": [
+        "ehp",
+        "damage",
+        "econ"
+      ],
+      "note": "Account substitute when IDS is not linked"
+    },
+    {
+      "tab": null,
+      "cell": null,
+      "label": "Highest Wave",
+      "sheetGroup": "Player",
+      "webKey": "highestWave",
+      "placement": "settings",
+      "status": "non_sheet",
+      "families": [
+        "ehp",
+        "damage",
+        "econ"
+      ],
+      "note": "Account substitute when IDS is not linked"
+    }
+  ],
+  "stats": {
+    "header": 13,
+    "ids_derived": 16,
+    "bound": 108,
+    "display_only": 11,
+    "mirrored": 32,
+    "non_sheet": 2
+  }
+}

@@ -1,0 +1,6058 @@
+{
+  "schemaVersion": 1,
+  "sheetVersion": "v5.10.02.02",
+  "builtAt": "2026-08-29",
+  "source": "scripts/effective-paths/build-sheet-graph.mjs",
+  "formulasSource": "ep-formulas.json",
+  "spreadsheetId": "1YwZtKP6B4WYhRba5T6APJ1YxKNdfnIGQnprgnxmO7zc",
+  "stats": {
+    "inputLeaves": 59,
+    "requiredInputLeaves": 57,
+    "unreferencedInputLeaves": 2,
+    "computedNodes": 362,
+    "computedNodesTotal": 38142,
+    "edges": 388,
+    "edgesTotal": 73162,
+    "formulasScanned": 107023,
+    "formulasWithHits": 38145,
+    "samplePerLeaf": 8
+  },
+  "graphNodes": {
+    "eDamage Coins!BV5": {
+      "id": "eDamage Coins!BV5",
+      "label": "eDamage Coins!BV5",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WSE_PRESET_LEVEL($AX$13, BV4&\" +\")",
+      "tab": "eDamage Coins",
+      "cell": "BV5"
+    },
+    "eDamage Coins!CD5": {
+      "id": "eDamage Coins!CD5",
+      "label": "eDamage Coins!CD5",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_MOD_CANNON_LEVEL(IDS_MOD_CANNON_NAME(AX15))",
+      "tab": "eDamage Coins",
+      "cell": "CD5"
+    },
+    "eDamage Coins!CF5": {
+      "id": "eDamage Coins!CF5",
+      "label": "eDamage Coins!CF5",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_MOD_CORE_LEVEL(IDS_MOD_CORE_NAME(AX15))",
+      "tab": "eDamage Coins",
+      "cell": "CF5"
+    },
+    "eDamage Coins!CQ10": {
+      "id": "eDamage Coins!CQ10",
+      "label": "eDamage Coins!CQ10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, EPG_MODULE_BONUS( MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_NAME($AX$15)), CD10), $AN$4, MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_ASSIST_NAME($AX$15)), CE10), $BL$41, CK10))",
+      "tab": "eDamage Coins",
+      "cell": "CQ10"
+    },
+    "eDamage Coins!CQ100": {
+      "id": "eDamage Coins!CQ100",
+      "label": "eDamage Coins!CQ100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, EPG_MODULE_BONUS( MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_NAME($AX$15)), CD100), $AN$4, MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_ASSIST_NAME($AX$15)), CE100), $BL$41, CK100))",
+      "tab": "eDamage Coins",
+      "cell": "CQ100"
+    },
+    "eDamage Coins!CQ101": {
+      "id": "eDamage Coins!CQ101",
+      "label": "eDamage Coins!CQ101",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, EPG_MODULE_BONUS( MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_NAME($AX$15)), CD101), $AN$4, MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_ASSIST_NAME($AX$15)), CE101), $BL$41, CK101))",
+      "tab": "eDamage Coins",
+      "cell": "CQ101"
+    },
+    "eDamage Coins!CQ102": {
+      "id": "eDamage Coins!CQ102",
+      "label": "eDamage Coins!CQ102",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, EPG_MODULE_BONUS( MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_NAME($AX$15)), CD102), $AN$4, MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_ASSIST_NAME($AX$15)), CE102), $BL$41, CK102))",
+      "tab": "eDamage Coins",
+      "cell": "CQ102"
+    },
+    "eDamage Coins!CQ103": {
+      "id": "eDamage Coins!CQ103",
+      "label": "eDamage Coins!CQ103",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, EPG_MODULE_BONUS( MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_NAME($AX$15)), CD103), $AN$4, MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_ASSIST_NAME($AX$15)), CE103), $BL$41, CK103))",
+      "tab": "eDamage Coins",
+      "cell": "CQ103"
+    },
+    "eDamage Coins!CQ104": {
+      "id": "eDamage Coins!CQ104",
+      "label": "eDamage Coins!CQ104",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, EPG_MODULE_BONUS( MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_NAME($AX$15)), CD104), $AN$4, MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_ASSIST_NAME($AX$15)), CE104), $BL$41, CK104))",
+      "tab": "eDamage Coins",
+      "cell": "CQ104"
+    },
+    "eDamage Coins!CQ105": {
+      "id": "eDamage Coins!CQ105",
+      "label": "eDamage Coins!CQ105",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, EPG_MODULE_BONUS( MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_NAME($AX$15)), CD105), $AN$4, MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_ASSIST_NAME($AX$15)), CE105), $BL$41, CK105))",
+      "tab": "eDamage Coins",
+      "cell": "CQ105"
+    },
+    "eDamage Coins!CQ106": {
+      "id": "eDamage Coins!CQ106",
+      "label": "eDamage Coins!CQ106",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, EPG_MODULE_BONUS( MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_NAME($AX$15)), CD106), $AN$4, MODSTAT_CANNON(IDS_MOD_CANNON_RARITY(IDS_MOD_CANNON_ASSIST_NAME($AX$15)), CE106), $BL$41, CK106))",
+      "tab": "eDamage Coins",
+      "cell": "CQ106"
+    },
+    "eDamage Coins!CR10": {
+      "id": "eDamage Coins!CR10",
+      "label": "eDamage Coins!CR10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, LET( Cannon, CQ10, Base, $AN$55 * Cannon, Lab, $BF$8, WSPlus, 1+(1%*BP10), CardDMG, IF(AND($AY$39, $AY$42), $AV$42*IF($AY$43, 1+(0.4*(1+BQ10)), 1), 1), Base * Lab * WSPlus * CardDMG))",
+      "tab": "eDamage Coins",
+      "cell": "CR10"
+    },
+    "eDamage Coins!CR100": {
+      "id": "eDamage Coins!CR100",
+      "label": "eDamage Coins!CR100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, LET( Cannon, CQ100, Base, $AN$55 * Cannon, Lab, $BF$8, WSPlus, 1+(1%*BP100), CardDMG, IF(AND($AY$39, $AY$42), $AV$42*IF($AY$43, 1+(0.4*(1+BQ100)), 1), 1), Base * Lab * WSPlus * CardDMG))",
+      "tab": "eDamage Coins",
+      "cell": "CR100"
+    },
+    "eDamage Coins!CR101": {
+      "id": "eDamage Coins!CR101",
+      "label": "eDamage Coins!CR101",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, LET( Cannon, CQ101, Base, $AN$55 * Cannon, Lab, $BF$8, WSPlus, 1+(1%*BP101), CardDMG, IF(AND($AY$39, $AY$42), $AV$42*IF($AY$43, 1+(0.4*(1+BQ101)), 1), 1), Base * Lab * WSPlus * CardDMG))",
+      "tab": "eDamage Coins",
+      "cell": "CR101"
+    },
+    "eDamage Coins!CR102": {
+      "id": "eDamage Coins!CR102",
+      "label": "eDamage Coins!CR102",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, LET( Cannon, CQ102, Base, $AN$55 * Cannon, Lab, $BF$8, WSPlus, 1+(1%*BP102), CardDMG, IF(AND($AY$39, $AY$42), $AV$42*IF($AY$43, 1+(0.4*(1+BQ102)), 1), 1), Base * Lab * WSPlus * CardDMG))",
+      "tab": "eDamage Coins",
+      "cell": "CR102"
+    },
+    "eDamage Coins!CR103": {
+      "id": "eDamage Coins!CR103",
+      "label": "eDamage Coins!CR103",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, LET( Cannon, CQ103, Base, $AN$55 * Cannon, Lab, $BF$8, WSPlus, 1+(1%*BP103), CardDMG, IF(AND($AY$39, $AY$42), $AV$42*IF($AY$43, 1+(0.4*(1+BQ103)), 1), 1), Base * Lab * WSPlus * CardDMG))",
+      "tab": "eDamage Coins",
+      "cell": "CR103"
+    },
+    "eDamage Coins!CR104": {
+      "id": "eDamage Coins!CR104",
+      "label": "eDamage Coins!CR104",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, LET( Cannon, CQ104, Base, $AN$55 * Cannon, Lab, $BF$8, WSPlus, 1+(1%*BP104), CardDMG, IF(AND($AY$39, $AY$42), $AV$42*IF($AY$43, 1+(0.4*(1+BQ104)), 1), 1), Base * Lab * WSPlus * CardDMG))",
+      "tab": "eDamage Coins",
+      "cell": "CR104"
+    },
+    "eDamage Coins!CR105": {
+      "id": "eDamage Coins!CR105",
+      "label": "eDamage Coins!CR105",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, LET( Cannon, CQ105, Base, $AN$55 * Cannon, Lab, $BF$8, WSPlus, 1+(1%*BP105), CardDMG, IF(AND($AY$39, $AY$42), $AV$42*IF($AY$43, 1+(0.4*(1+BQ105)), 1), 1), Base * Lab * WSPlus * CardDMG))",
+      "tab": "eDamage Coins",
+      "cell": "CR105"
+    },
+    "eDamage Coins!CR106": {
+      "id": "eDamage Coins!CR106",
+      "label": "eDamage Coins!CR106",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AX$19=\"Attack Disso\", 1, LET( Cannon, CQ106, Base, $AN$55 * Cannon, Lab, $BF$8, WSPlus, 1+(1%*BP106), CardDMG, IF(AND($AY$39, $AY$42), $AV$42*IF($AY$43, 1+(0.4*(1+BQ106)), 1), 1), Base * Lab * WSPlus * CardDMG))",
+      "tab": "eDamage Coins",
+      "cell": "CR106"
+    },
+    "eDamage Coins!CU10": {
+      "id": "eDamage Coins!CU10",
+      "label": "eDamage Coins!CU10",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( PF, $AM$45 + $AR$45, CashBInit, 1 + $BV$5/100, CashB, 1 + BV10/100, OldPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34)), 0), NewPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34) / CashBInit * CashB), 0), NewPF/OldPF)",
+      "tab": "eDamage Coins",
+      "cell": "CU10"
+    },
+    "eDamage Coins!CU100": {
+      "id": "eDamage Coins!CU100",
+      "label": "eDamage Coins!CU100",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( PF, $AM$45 + $AR$45, CashBInit, 1 + $BV$5/100, CashB, 1 + BV100/100, OldPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34)), 0), NewPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34) / CashBInit * CashB), 0), NewPF/OldPF)",
+      "tab": "eDamage Coins",
+      "cell": "CU100"
+    },
+    "eDamage Coins!CU101": {
+      "id": "eDamage Coins!CU101",
+      "label": "eDamage Coins!CU101",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( PF, $AM$45 + $AR$45, CashBInit, 1 + $BV$5/100, CashB, 1 + BV101/100, OldPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34)), 0), NewPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34) / CashBInit * CashB), 0), NewPF/OldPF)",
+      "tab": "eDamage Coins",
+      "cell": "CU101"
+    },
+    "eDamage Coins!CU102": {
+      "id": "eDamage Coins!CU102",
+      "label": "eDamage Coins!CU102",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( PF, $AM$45 + $AR$45, CashBInit, 1 + $BV$5/100, CashB, 1 + BV102/100, OldPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34)), 0), NewPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34) / CashBInit * CashB), 0), NewPF/OldPF)",
+      "tab": "eDamage Coins",
+      "cell": "CU102"
+    },
+    "eDamage Coins!CU103": {
+      "id": "eDamage Coins!CU103",
+      "label": "eDamage Coins!CU103",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( PF, $AM$45 + $AR$45, CashBInit, 1 + $BV$5/100, CashB, 1 + BV103/100, OldPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34)), 0), NewPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34) / CashBInit * CashB), 0), NewPF/OldPF)",
+      "tab": "eDamage Coins",
+      "cell": "CU103"
+    },
+    "eDamage Coins!CU104": {
+      "id": "eDamage Coins!CU104",
+      "label": "eDamage Coins!CU104",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( PF, $AM$45 + $AR$45, CashBInit, 1 + $BV$5/100, CashB, 1 + BV104/100, OldPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34)), 0), NewPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34) / CashBInit * CashB), 0), NewPF/OldPF)",
+      "tab": "eDamage Coins",
+      "cell": "CU104"
+    },
+    "eDamage Coins!CU105": {
+      "id": "eDamage Coins!CU105",
+      "label": "eDamage Coins!CU105",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( PF, $AM$45 + $AR$45, CashBInit, 1 + $BV$5/100, CashB, 1 + BV105/100, OldPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34)), 0), NewPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34) / CashBInit * CashB), 0), NewPF/OldPF)",
+      "tab": "eDamage Coins",
+      "cell": "CU105"
+    },
+    "eDamage Coins!CU106": {
+      "id": "eDamage Coins!CU106",
+      "label": "eDamage Coins!CU106",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( PF, $AM$45 + $AR$45, CashBInit, 1 + $BV$5/100, CashB, 1 + BV106/100, OldPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34)), 0), NewPF, 1 + IF(PF<>0, PF*log10(UNFORMAT_NUMBER($AY$34) / CashBInit * CashB), 0), NewPF/OldPF)",
+      "tab": "eDamage Coins",
+      "cell": "CU106"
+    },
+    "eDamage Coins!CW10": {
+      "id": "eDamage Coins!CW10",
+      "label": "eDamage Coins!CW10",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( DMG, CR10, CardDMMastery, CS10, PerkDMG, IF(AND($AY$61, $AY$63), $AX$63, 1), TODMG, IF(AND($AY$61, $AY$65), $AX$65, 1), Shock, eDamage!$DD$5, ACP, CT10, PF, CU10, AmpStrike, CV$5, Disco, CP10, IF($AX$19=\"Attack Disso\", ACP * AmpStrike",
+      "tab": "eDamage Coins",
+      "cell": "CW10"
+    },
+    "eDamage Coins!CW100": {
+      "id": "eDamage Coins!CW100",
+      "label": "eDamage Coins!CW100",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( DMG, CR100, CardDMMastery, CS100, PerkDMG, IF(AND($AY$61, $AY$63), $AX$63, 1), TODMG, IF(AND($AY$61, $AY$65), $AX$65, 1), Shock, eDamage!$DD$5, ACP, CT100, PF, CU100, AmpStrike, CV$5, Disco, CP100, IF($AX$19=\"Attack Disso\", ACP * AmpS",
+      "tab": "eDamage Coins",
+      "cell": "CW100"
+    },
+    "eDamage Coins!CW101": {
+      "id": "eDamage Coins!CW101",
+      "label": "eDamage Coins!CW101",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( DMG, CR101, CardDMMastery, CS101, PerkDMG, IF(AND($AY$61, $AY$63), $AX$63, 1), TODMG, IF(AND($AY$61, $AY$65), $AX$65, 1), Shock, eDamage!$DD$5, ACP, CT101, PF, CU101, AmpStrike, CV$5, Disco, CP101, IF($AX$19=\"Attack Disso\", ACP * AmpS",
+      "tab": "eDamage Coins",
+      "cell": "CW101"
+    },
+    "eDamage Coins!CW102": {
+      "id": "eDamage Coins!CW102",
+      "label": "eDamage Coins!CW102",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( DMG, CR102, CardDMMastery, CS102, PerkDMG, IF(AND($AY$61, $AY$63), $AX$63, 1), TODMG, IF(AND($AY$61, $AY$65), $AX$65, 1), Shock, eDamage!$DD$5, ACP, CT102, PF, CU102, AmpStrike, CV$5, Disco, CP102, IF($AX$19=\"Attack Disso\", ACP * AmpS",
+      "tab": "eDamage Coins",
+      "cell": "CW102"
+    },
+    "eDamage Coins!CW103": {
+      "id": "eDamage Coins!CW103",
+      "label": "eDamage Coins!CW103",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( DMG, CR103, CardDMMastery, CS103, PerkDMG, IF(AND($AY$61, $AY$63), $AX$63, 1), TODMG, IF(AND($AY$61, $AY$65), $AX$65, 1), Shock, eDamage!$DD$5, ACP, CT103, PF, CU103, AmpStrike, CV$5, Disco, CP103, IF($AX$19=\"Attack Disso\", ACP * AmpS",
+      "tab": "eDamage Coins",
+      "cell": "CW103"
+    },
+    "eDamage Coins!CW104": {
+      "id": "eDamage Coins!CW104",
+      "label": "eDamage Coins!CW104",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( DMG, CR104, CardDMMastery, CS104, PerkDMG, IF(AND($AY$61, $AY$63), $AX$63, 1), TODMG, IF(AND($AY$61, $AY$65), $AX$65, 1), Shock, eDamage!$DD$5, ACP, CT104, PF, CU104, AmpStrike, CV$5, Disco, CP104, IF($AX$19=\"Attack Disso\", ACP * AmpS",
+      "tab": "eDamage Coins",
+      "cell": "CW104"
+    },
+    "eDamage Coins!CW105": {
+      "id": "eDamage Coins!CW105",
+      "label": "eDamage Coins!CW105",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( DMG, CR105, CardDMMastery, CS105, PerkDMG, IF(AND($AY$61, $AY$63), $AX$63, 1), TODMG, IF(AND($AY$61, $AY$65), $AX$65, 1), Shock, eDamage!$DD$5, ACP, CT105, PF, CU105, AmpStrike, CV$5, Disco, CP105, IF($AX$19=\"Attack Disso\", ACP * AmpS",
+      "tab": "eDamage Coins",
+      "cell": "CW105"
+    },
+    "eDamage Coins!CW106": {
+      "id": "eDamage Coins!CW106",
+      "label": "eDamage Coins!CW106",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( DMG, CR106, CardDMMastery, CS106, PerkDMG, IF(AND($AY$61, $AY$63), $AX$63, 1), TODMG, IF(AND($AY$61, $AY$65), $AX$65, 1), Shock, eDamage!$DD$5, ACP, CT106, PF, CU106, AmpStrike, CV$5, Disco, CP106, IF($AX$19=\"Attack Disso\", ACP * AmpS",
+      "tab": "eDamage Coins",
+      "cell": "CW106"
+    },
+    "eDamage Coins!DK10": {
+      "id": "eDamage Coins!DK10",
+      "label": "eDamage Coins!DK10",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPD_RANGEDPM($DI$5, DJ10, $AY$22)",
+      "tab": "eDamage Coins",
+      "cell": "DK10"
+    },
+    "eDamage Coins!DK100": {
+      "id": "eDamage Coins!DK100",
+      "label": "eDamage Coins!DK100",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPD_RANGEDPM($DI$5, DJ100, $AY$22)",
+      "tab": "eDamage Coins",
+      "cell": "DK100"
+    },
+    "eDamage Coins!DK101": {
+      "id": "eDamage Coins!DK101",
+      "label": "eDamage Coins!DK101",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPD_RANGEDPM($DI$5, DJ101, $AY$22)",
+      "tab": "eDamage Coins",
+      "cell": "DK101"
+    },
+    "eDamage Coins!DK102": {
+      "id": "eDamage Coins!DK102",
+      "label": "eDamage Coins!DK102",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPD_RANGEDPM($DI$5, DJ102, $AY$22)",
+      "tab": "eDamage Coins",
+      "cell": "DK102"
+    },
+    "eDamage Coins!DK103": {
+      "id": "eDamage Coins!DK103",
+      "label": "eDamage Coins!DK103",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPD_RANGEDPM($DI$5, DJ103, $AY$22)",
+      "tab": "eDamage Coins",
+      "cell": "DK103"
+    },
+    "eDamage Coins!DK104": {
+      "id": "eDamage Coins!DK104",
+      "label": "eDamage Coins!DK104",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPD_RANGEDPM($DI$5, DJ104, $AY$22)",
+      "tab": "eDamage Coins",
+      "cell": "DK104"
+    },
+    "eDamage Coins!DK105": {
+      "id": "eDamage Coins!DK105",
+      "label": "eDamage Coins!DK105",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPD_RANGEDPM($DI$5, DJ105, $AY$22)",
+      "tab": "eDamage Coins",
+      "cell": "DK105"
+    },
+    "eDamage Coins!DK106": {
+      "id": "eDamage Coins!DK106",
+      "label": "eDamage Coins!DK106",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPD_RANGEDPM($DI$5, DJ106, $AY$22)",
+      "tab": "eDamage Coins",
+      "cell": "DK106"
+    },
+    "eDamage Coins!DT10": {
+      "id": "eDamage Coins!DT10",
+      "label": "eDamage Coins!DT10",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ10), HasDC, ($AM$25+$AR$25)>0, CLB, LET( Substat, $AM$34 + SubstatAssistCap * $AO$34, STAT_UW_CL_FINAL_DMG($BI$31, Substat, AND($AY$61, $AY$70), $BM$31)), CLQ, LET( Substat, $AM$3",
+      "tab": "eDamage Coins",
+      "cell": "DT10"
+    },
+    "eDamage Coins!DT100": {
+      "id": "eDamage Coins!DT100",
+      "label": "eDamage Coins!DT100",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ100), HasDC, ($AM$25+$AR$25)>0, CLB, LET( Substat, $AM$34 + SubstatAssistCap * $AO$34, STAT_UW_CL_FINAL_DMG($BI$31, Substat, AND($AY$61, $AY$70), $BM$31)), CLQ, LET( Substat, $AM$",
+      "tab": "eDamage Coins",
+      "cell": "DT100"
+    },
+    "eDamage Coins!DT101": {
+      "id": "eDamage Coins!DT101",
+      "label": "eDamage Coins!DT101",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ101), HasDC, ($AM$25+$AR$25)>0, CLB, LET( Substat, $AM$34 + SubstatAssistCap * $AO$34, STAT_UW_CL_FINAL_DMG($BI$31, Substat, AND($AY$61, $AY$70), $BM$31)), CLQ, LET( Substat, $AM$",
+      "tab": "eDamage Coins",
+      "cell": "DT101"
+    },
+    "eDamage Coins!DT102": {
+      "id": "eDamage Coins!DT102",
+      "label": "eDamage Coins!DT102",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ102), HasDC, ($AM$25+$AR$25)>0, CLB, LET( Substat, $AM$34 + SubstatAssistCap * $AO$34, STAT_UW_CL_FINAL_DMG($BI$31, Substat, AND($AY$61, $AY$70), $BM$31)), CLQ, LET( Substat, $AM$",
+      "tab": "eDamage Coins",
+      "cell": "DT102"
+    },
+    "eDamage Coins!DT103": {
+      "id": "eDamage Coins!DT103",
+      "label": "eDamage Coins!DT103",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ103), HasDC, ($AM$25+$AR$25)>0, CLB, LET( Substat, $AM$34 + SubstatAssistCap * $AO$34, STAT_UW_CL_FINAL_DMG($BI$31, Substat, AND($AY$61, $AY$70), $BM$31)), CLQ, LET( Substat, $AM$",
+      "tab": "eDamage Coins",
+      "cell": "DT103"
+    },
+    "eDamage Coins!DT104": {
+      "id": "eDamage Coins!DT104",
+      "label": "eDamage Coins!DT104",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ104), HasDC, ($AM$25+$AR$25)>0, CLB, LET( Substat, $AM$34 + SubstatAssistCap * $AO$34, STAT_UW_CL_FINAL_DMG($BI$31, Substat, AND($AY$61, $AY$70), $BM$31)), CLQ, LET( Substat, $AM$",
+      "tab": "eDamage Coins",
+      "cell": "DT104"
+    },
+    "eDamage Coins!DT105": {
+      "id": "eDamage Coins!DT105",
+      "label": "eDamage Coins!DT105",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ105), HasDC, ($AM$25+$AR$25)>0, CLB, LET( Substat, $AM$34 + SubstatAssistCap * $AO$34, STAT_UW_CL_FINAL_DMG($BI$31, Substat, AND($AY$61, $AY$70), $BM$31)), CLQ, LET( Substat, $AM$",
+      "tab": "eDamage Coins",
+      "cell": "DT105"
+    },
+    "eDamage Coins!DT106": {
+      "id": "eDamage Coins!DT106",
+      "label": "eDamage Coins!DT106",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ106), HasDC, ($AM$25+$AR$25)>0, CLB, LET( Substat, $AM$34 + SubstatAssistCap * $AO$34, STAT_UW_CL_FINAL_DMG($BI$31, Substat, AND($AY$61, $AY$70), $BM$31)), CLQ, LET( Substat, $AM$",
+      "tab": "eDamage Coins",
+      "cell": "DT106"
+    },
+    "eDamage Coins!DU10": {
+      "id": "eDamage Coins!DU10",
+      "label": "eDamage Coins!DU10",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ10), SMB, LET( Substat, $AM$31 + SubstatAssistCap * $AO$31, STAT_UW_SM_FINAL_DMG($BI$32, Substat, $BM$32)), SMQ, LET( Substat, $AM$32 + SubstatAssistCap * $AO$32, STAT_UW_SM_FINAL",
+      "tab": "eDamage Coins",
+      "cell": "DU10"
+    },
+    "eDamage Coins!DU100": {
+      "id": "eDamage Coins!DU100",
+      "label": "eDamage Coins!DU100",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ100), SMB, LET( Substat, $AM$31 + SubstatAssistCap * $AO$31, STAT_UW_SM_FINAL_DMG($BI$32, Substat, $BM$32)), SMQ, LET( Substat, $AM$32 + SubstatAssistCap * $AO$32, STAT_UW_SM_FINA",
+      "tab": "eDamage Coins",
+      "cell": "DU100"
+    },
+    "eDamage Coins!DU101": {
+      "id": "eDamage Coins!DU101",
+      "label": "eDamage Coins!DU101",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ101), SMB, LET( Substat, $AM$31 + SubstatAssistCap * $AO$31, STAT_UW_SM_FINAL_DMG($BI$32, Substat, $BM$32)), SMQ, LET( Substat, $AM$32 + SubstatAssistCap * $AO$32, STAT_UW_SM_FINA",
+      "tab": "eDamage Coins",
+      "cell": "DU101"
+    },
+    "eDamage Coins!DU102": {
+      "id": "eDamage Coins!DU102",
+      "label": "eDamage Coins!DU102",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ102), SMB, LET( Substat, $AM$31 + SubstatAssistCap * $AO$31, STAT_UW_SM_FINAL_DMG($BI$32, Substat, $BM$32)), SMQ, LET( Substat, $AM$32 + SubstatAssistCap * $AO$32, STAT_UW_SM_FINA",
+      "tab": "eDamage Coins",
+      "cell": "DU102"
+    },
+    "eDamage Coins!DU103": {
+      "id": "eDamage Coins!DU103",
+      "label": "eDamage Coins!DU103",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ103), SMB, LET( Substat, $AM$31 + SubstatAssistCap * $AO$31, STAT_UW_SM_FINAL_DMG($BI$32, Substat, $BM$32)), SMQ, LET( Substat, $AM$32 + SubstatAssistCap * $AO$32, STAT_UW_SM_FINA",
+      "tab": "eDamage Coins",
+      "cell": "DU103"
+    },
+    "eDamage Coins!DU104": {
+      "id": "eDamage Coins!DU104",
+      "label": "eDamage Coins!DU104",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ104), SMB, LET( Substat, $AM$31 + SubstatAssistCap * $AO$31, STAT_UW_SM_FINAL_DMG($BI$32, Substat, $BM$32)), SMQ, LET( Substat, $AM$32 + SubstatAssistCap * $AO$32, STAT_UW_SM_FINA",
+      "tab": "eDamage Coins",
+      "cell": "DU104"
+    },
+    "eDamage Coins!DU105": {
+      "id": "eDamage Coins!DU105",
+      "label": "eDamage Coins!DU105",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ105), SMB, LET( Substat, $AM$31 + SubstatAssistCap * $AO$31, STAT_UW_SM_FINAL_DMG($BI$32, Substat, $BM$32)), SMQ, LET( Substat, $AM$32 + SubstatAssistCap * $AO$32, STAT_UW_SM_FINA",
+      "tab": "eDamage Coins",
+      "cell": "DU105"
+    },
+    "eDamage Coins!DU106": {
+      "id": "eDamage Coins!DU106",
+      "label": "eDamage Coins!DU106",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ106), SMB, LET( Substat, $AM$31 + SubstatAssistCap * $AO$31, STAT_UW_SM_FINAL_DMG($BI$32, Substat, $BM$32)), SMQ, LET( Substat, $AM$32 + SubstatAssistCap * $AO$32, STAT_UW_SM_FINA",
+      "tab": "eDamage Coins",
+      "cell": "DU106"
+    },
+    "eDamage Coins!DX10": {
+      "id": "eDamage Coins!DX10",
+      "label": "eDamage Coins!DX10",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ10), Substat, $AM$37 + SubstatAssistCap * $AO$37, PSDmg, STAT_UW_PS_FINAL_DMG($BI$35, Substat, $BM$35), PSDur, $BJ$35, PSCD, $BK$35, PSRend, 1+(DM10-1)*$BF$35, EP_PS_DPS($BH$35, P",
+      "tab": "eDamage Coins",
+      "cell": "DX10"
+    },
+    "eDamage Coins!DX100": {
+      "id": "eDamage Coins!DX100",
+      "label": "eDamage Coins!DX100",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ100), Substat, $AM$37 + SubstatAssistCap * $AO$37, PSDmg, STAT_UW_PS_FINAL_DMG($BI$35, Substat, $BM$35), PSDur, $BJ$35, PSCD, $BK$35, PSRend, 1+(DM100-1)*$BF$35, EP_PS_DPS($BH$35,",
+      "tab": "eDamage Coins",
+      "cell": "DX100"
+    },
+    "eDamage Coins!DX101": {
+      "id": "eDamage Coins!DX101",
+      "label": "eDamage Coins!DX101",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ101), Substat, $AM$37 + SubstatAssistCap * $AO$37, PSDmg, STAT_UW_PS_FINAL_DMG($BI$35, Substat, $BM$35), PSDur, $BJ$35, PSCD, $BK$35, PSRend, 1+(DM101-1)*$BF$35, EP_PS_DPS($BH$35,",
+      "tab": "eDamage Coins",
+      "cell": "DX101"
+    },
+    "eDamage Coins!DX102": {
+      "id": "eDamage Coins!DX102",
+      "label": "eDamage Coins!DX102",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ102), Substat, $AM$37 + SubstatAssistCap * $AO$37, PSDmg, STAT_UW_PS_FINAL_DMG($BI$35, Substat, $BM$35), PSDur, $BJ$35, PSCD, $BK$35, PSRend, 1+(DM102-1)*$BF$35, EP_PS_DPS($BH$35,",
+      "tab": "eDamage Coins",
+      "cell": "DX102"
+    },
+    "eDamage Coins!DX103": {
+      "id": "eDamage Coins!DX103",
+      "label": "eDamage Coins!DX103",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ103), Substat, $AM$37 + SubstatAssistCap * $AO$37, PSDmg, STAT_UW_PS_FINAL_DMG($BI$35, Substat, $BM$35), PSDur, $BJ$35, PSCD, $BK$35, PSRend, 1+(DM103-1)*$BF$35, EP_PS_DPS($BH$35,",
+      "tab": "eDamage Coins",
+      "cell": "DX103"
+    },
+    "eDamage Coins!DX104": {
+      "id": "eDamage Coins!DX104",
+      "label": "eDamage Coins!DX104",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ104), Substat, $AM$37 + SubstatAssistCap * $AO$37, PSDmg, STAT_UW_PS_FINAL_DMG($BI$35, Substat, $BM$35), PSDur, $BJ$35, PSCD, $BK$35, PSRend, 1+(DM104-1)*$BF$35, EP_PS_DPS($BH$35,",
+      "tab": "eDamage Coins",
+      "cell": "DX104"
+    },
+    "eDamage Coins!DX105": {
+      "id": "eDamage Coins!DX105",
+      "label": "eDamage Coins!DX105",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ105), Substat, $AM$37 + SubstatAssistCap * $AO$37, PSDmg, STAT_UW_PS_FINAL_DMG($BI$35, Substat, $BM$35), PSDur, $BJ$35, PSCD, $BK$35, PSRend, 1+(DM105-1)*$BF$35, EP_PS_DPS($BH$35,",
+      "tab": "eDamage Coins",
+      "cell": "DX105"
+    },
+    "eDamage Coins!DX106": {
+      "id": "eDamage Coins!DX106",
+      "label": "eDamage Coins!DX106",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ106), Substat, $AM$37 + SubstatAssistCap * $AO$37, PSDmg, STAT_UW_PS_FINAL_DMG($BI$35, Substat, $BM$35), PSDur, $BJ$35, PSCD, $BK$35, PSRend, 1+(DM106-1)*$BF$35, EP_PS_DPS($BH$35,",
+      "tab": "eDamage Coins",
+      "cell": "DX106"
+    },
+    "eDamage Coins!DZ10": {
+      "id": "eDamage Coins!DZ10",
+      "label": "eDamage Coins!DZ10",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCapArmor, EPG_ASSIST_SUB_CAP($AN$47, $BL$44, CI10), SubstatAssistCapCore, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ10), LandMineChance, $BH$25 + $AM$52 + SubstatAssistCapArmor*$AO$52, SpawnPerSec, eDamage!$CY$10, SDchance, Sp",
+      "tab": "eDamage Coins",
+      "cell": "DZ10"
+    },
+    "eDamage Coins!DZ100": {
+      "id": "eDamage Coins!DZ100",
+      "label": "eDamage Coins!DZ100",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCapArmor, EPG_ASSIST_SUB_CAP($AN$47, $BL$44, CI100), SubstatAssistCapCore, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ100), LandMineChance, $BH$25 + $AM$52 + SubstatAssistCapArmor*$AO$52, SpawnPerSec, eDamage!$CY$10, SDchance, ",
+      "tab": "eDamage Coins",
+      "cell": "DZ100"
+    },
+    "eDamage Coins!DZ101": {
+      "id": "eDamage Coins!DZ101",
+      "label": "eDamage Coins!DZ101",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCapArmor, EPG_ASSIST_SUB_CAP($AN$47, $BL$44, CI101), SubstatAssistCapCore, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ101), LandMineChance, $BH$25 + $AM$52 + SubstatAssistCapArmor*$AO$52, SpawnPerSec, eDamage!$CY$10, SDchance, ",
+      "tab": "eDamage Coins",
+      "cell": "DZ101"
+    },
+    "eDamage Coins!DZ102": {
+      "id": "eDamage Coins!DZ102",
+      "label": "eDamage Coins!DZ102",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCapArmor, EPG_ASSIST_SUB_CAP($AN$47, $BL$44, CI102), SubstatAssistCapCore, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ102), LandMineChance, $BH$25 + $AM$52 + SubstatAssistCapArmor*$AO$52, SpawnPerSec, eDamage!$CY$10, SDchance, ",
+      "tab": "eDamage Coins",
+      "cell": "DZ102"
+    },
+    "eDamage Coins!DZ103": {
+      "id": "eDamage Coins!DZ103",
+      "label": "eDamage Coins!DZ103",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCapArmor, EPG_ASSIST_SUB_CAP($AN$47, $BL$44, CI103), SubstatAssistCapCore, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ103), LandMineChance, $BH$25 + $AM$52 + SubstatAssistCapArmor*$AO$52, SpawnPerSec, eDamage!$CY$10, SDchance, ",
+      "tab": "eDamage Coins",
+      "cell": "DZ103"
+    },
+    "eDamage Coins!DZ104": {
+      "id": "eDamage Coins!DZ104",
+      "label": "eDamage Coins!DZ104",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCapArmor, EPG_ASSIST_SUB_CAP($AN$47, $BL$44, CI104), SubstatAssistCapCore, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ104), LandMineChance, $BH$25 + $AM$52 + SubstatAssistCapArmor*$AO$52, SpawnPerSec, eDamage!$CY$10, SDchance, ",
+      "tab": "eDamage Coins",
+      "cell": "DZ104"
+    },
+    "eDamage Coins!DZ105": {
+      "id": "eDamage Coins!DZ105",
+      "label": "eDamage Coins!DZ105",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCapArmor, EPG_ASSIST_SUB_CAP($AN$47, $BL$44, CI105), SubstatAssistCapCore, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ105), LandMineChance, $BH$25 + $AM$52 + SubstatAssistCapArmor*$AO$52, SpawnPerSec, eDamage!$CY$10, SDchance, ",
+      "tab": "eDamage Coins",
+      "cell": "DZ105"
+    },
+    "eDamage Coins!DZ106": {
+      "id": "eDamage Coins!DZ106",
+      "label": "eDamage Coins!DZ106",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCapArmor, EPG_ASSIST_SUB_CAP($AN$47, $BL$44, CI106), SubstatAssistCapCore, EPG_ASSIST_SUB_CAP($AN$23, $BL$48, CJ106), LandMineChance, $BH$25 + $AM$52 + SubstatAssistCapArmor*$AO$52, SpawnPerSec, eDamage!$CY$10, SDchance, ",
+      "tab": "eDamage Coins",
+      "cell": "DZ106"
+    },
+    "eDamage Coins!EH10": {
+      "id": "eDamage Coins!EH10",
+      "label": "eDamage Coins!EH10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EF10, EH$2), , OR(EPG_LEVEL_CHECK(BS10+1, $BD$40, $BE$40), BS$5+EPG_MODULE_LEVEL_LIMIT($AY$27)<=BS10), , TRUE, LET( CardCCMastery, 1+(1%*(1+BS10+1)), CC, CX10+1%, CF, CY10, SCC, CZ10+1%, SCM, ($AN$68*$BF$21+$AM$15+$AR$15)*(1+1%*BU",
+      "tab": "eDamage Coins",
+      "cell": "EH10"
+    },
+    "eDamage Coins!EH100": {
+      "id": "eDamage Coins!EH100",
+      "label": "eDamage Coins!EH100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EF100, EH$2), , OR(EPG_LEVEL_CHECK(BS100+1, $BD$40, $BE$40), BS$5+EPG_MODULE_LEVEL_LIMIT($AY$27)<=BS100), , TRUE, LET( CardCCMastery, 1+(1%*(1+BS100+1)), CC, CX100+1%, CF, CY100, SCC, CZ100+1%, SCM, ($AN$68*$BF$21+$AM$15+$AR$15)*(",
+      "tab": "eDamage Coins",
+      "cell": "EH100"
+    },
+    "eDamage Coins!EH101": {
+      "id": "eDamage Coins!EH101",
+      "label": "eDamage Coins!EH101",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EF101, EH$2), , OR(EPG_LEVEL_CHECK(BS101+1, $BD$40, $BE$40), BS$5+EPG_MODULE_LEVEL_LIMIT($AY$27)<=BS101), , TRUE, LET( CardCCMastery, 1+(1%*(1+BS101+1)), CC, CX101+1%, CF, CY101, SCC, CZ101+1%, SCM, ($AN$68*$BF$21+$AM$15+$AR$15)*(",
+      "tab": "eDamage Coins",
+      "cell": "EH101"
+    },
+    "eDamage Coins!EH102": {
+      "id": "eDamage Coins!EH102",
+      "label": "eDamage Coins!EH102",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EF102, EH$2), , OR(EPG_LEVEL_CHECK(BS102+1, $BD$40, $BE$40), BS$5+EPG_MODULE_LEVEL_LIMIT($AY$27)<=BS102), , TRUE, LET( CardCCMastery, 1+(1%*(1+BS102+1)), CC, CX102+1%, CF, CY102, SCC, CZ102+1%, SCM, ($AN$68*$BF$21+$AM$15+$AR$15)*(",
+      "tab": "eDamage Coins",
+      "cell": "EH102"
+    },
+    "eDamage Coins!EH103": {
+      "id": "eDamage Coins!EH103",
+      "label": "eDamage Coins!EH103",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EF103, EH$2), , OR(EPG_LEVEL_CHECK(BS103+1, $BD$40, $BE$40), BS$5+EPG_MODULE_LEVEL_LIMIT($AY$27)<=BS103), , TRUE, LET( CardCCMastery, 1+(1%*(1+BS103+1)), CC, CX103+1%, CF, CY103, SCC, CZ103+1%, SCM, ($AN$68*$BF$21+$AM$15+$AR$15)*(",
+      "tab": "eDamage Coins",
+      "cell": "EH103"
+    },
+    "eDamage Coins!EH104": {
+      "id": "eDamage Coins!EH104",
+      "label": "eDamage Coins!EH104",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EF104, EH$2), , OR(EPG_LEVEL_CHECK(BS104+1, $BD$40, $BE$40), BS$5+EPG_MODULE_LEVEL_LIMIT($AY$27)<=BS104), , TRUE, LET( CardCCMastery, 1+(1%*(1+BS104+1)), CC, CX104+1%, CF, CY104, SCC, CZ104+1%, SCM, ($AN$68*$BF$21+$AM$15+$AR$15)*(",
+      "tab": "eDamage Coins",
+      "cell": "EH104"
+    },
+    "eDamage Coins!EH105": {
+      "id": "eDamage Coins!EH105",
+      "label": "eDamage Coins!EH105",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EF105, EH$2), , OR(EPG_LEVEL_CHECK(BS105+1, $BD$40, $BE$40), BS$5+EPG_MODULE_LEVEL_LIMIT($AY$27)<=BS105), , TRUE, LET( CardCCMastery, 1+(1%*(1+BS105+1)), CC, CX105+1%, CF, CY105, SCC, CZ105+1%, SCM, ($AN$68*$BF$21+$AM$15+$AR$15)*(",
+      "tab": "eDamage Coins",
+      "cell": "EH105"
+    },
+    "eDamage Coins!EH106": {
+      "id": "eDamage Coins!EH106",
+      "label": "eDamage Coins!EH106",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EF106, EH$2), , OR(EPG_LEVEL_CHECK(BS106+1, $BD$40, $BE$40), BS$5+EPG_MODULE_LEVEL_LIMIT($AY$27)<=BS106), , TRUE, LET( CardCCMastery, 1+(1%*(1+BS106+1)), CC, CX106+1%, CF, CY106, SCC, CZ106+1%, SCM, ($AN$68*$BF$21+$AM$15+$AR$15)*(",
+      "tab": "eDamage Coins",
+      "cell": "EH106"
+    },
+    "eDamage Coins!EH2": {
+      "id": "eDamage Coins!EH2",
+      "label": "eDamage Coins!EH2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT($AY$48), $AX$19=\"Attack Disso\", EPG_LEVEL_CHECK(BC40+1, BD40, BE40), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(EH4))) )",
+      "tab": "eDamage Coins",
+      "cell": "EH2"
+    },
+    "eDamage Coins!EL2": {
+      "id": "eDamage Coins!EL2",
+      "label": "eDamage Coins!EL2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AND($AY$25, NOT($BH$31), $AX$19<>\"UW Disso\"), $AX$19=\"Attack Disso\" )",
+      "tab": "eDamage Coins",
+      "cell": "EL2"
+    },
+    "eDamage Coins!EM2": {
+      "id": "eDamage Coins!EM2",
+      "label": "eDamage Coins!EM2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( EL2, NOT($AY$46), $AX$19=\"Attack Disso\", REGEXMATCH(TO_TEXT($AY$27), \"^None\"), EPG_LEVEL_CHECK(BC39+1, BD39, BE39), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(EM4))) )",
+      "tab": "eDamage Coins",
+      "cell": "EM2"
+    },
+    "eDamage Coins!EN2": {
+      "id": "eDamage Coins!EN2",
+      "label": "eDamage Coins!EN2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AND($AY$25, $BL$33=\"Locked\", $AX$19<>\"UW Disso\"), EQ($BG$13, 0), $AX$19=\"Attack Disso\" )",
+      "tab": "eDamage Coins",
+      "cell": "EN2"
+    },
+    "eDamage Coins!EO2": {
+      "id": "eDamage Coins!EO2",
+      "label": "eDamage Coins!EO2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( EN2, NOT($AY$50), REGEXMATCH(TO_TEXT($AY$27), \"^None\"), EPG_LEVEL_CHECK(BC41+1, BD41, BE41), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(EO4))) )",
+      "tab": "eDamage Coins",
+      "cell": "EO2"
+    },
+    "eDamage Coins!EP2": {
+      "id": "eDamage Coins!EP2",
+      "label": "eDamage Coins!EP2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT($AY$52), NOT($AY$53), REGEXMATCH(TO_TEXT($AY$27), \"^None\"), EPG_LEVEL_CHECK(BC42+1, BD42, BE42), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(EP4))) )",
+      "tab": "eDamage Coins",
+      "cell": "EP2"
+    },
+    "eDamage Coins!EQ2": {
+      "id": "eDamage Coins!EQ2",
+      "label": "eDamage Coins!EQ2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AND($AY$25, $BC$35=0, $AX$19<>\"UW Disso\"), NOT($AL$69), $AX$19=\"Attack Disso\" )",
+      "tab": "eDamage Coins",
+      "cell": "EQ2"
+    },
+    "eDamage Coins!ER2": {
+      "id": "eDamage Coins!ER2",
+      "label": "eDamage Coins!ER2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT($AY$55), REGEXMATCH(TO_TEXT($AY$27), \"^None\"), $AX$19=\"Attack Disso\", EPG_LEVEL_CHECK(BC43+1, BD43, BE43), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(ER4))) )",
+      "tab": "eDamage Coins",
+      "cell": "ER2"
+    },
+    "eDamage Coins!EU2": {
+      "id": "eDamage Coins!EU2",
+      "label": "eDamage Coins!EU2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT($AN$4), REGEXMATCH(TO_TEXT($AY$27), \"^None\"), $AX$19=\"Attack Disso\", EPG_LEVEL_CHECK(BC45+1, BD45, BE45), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(EU4))) )",
+      "tab": "eDamage Coins",
+      "cell": "EU2"
+    },
+    "eDamage Coins!EV2": {
+      "id": "eDamage Coins!EV2",
+      "label": "eDamage Coins!EV2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT($AN$47), REGEXMATCH(TO_TEXT($AY$27), \"^None\"), EPG_LEVEL_CHECK(BC46+1, BD46, BE46), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(EV4))) )",
+      "tab": "eDamage Coins",
+      "cell": "EV2"
+    },
+    "eDamage Coins!EW2": {
+      "id": "eDamage Coins!EW2",
+      "label": "eDamage Coins!EW2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT(AN23), REGEXMATCH(TO_TEXT($AY$27), \"^None\"), EPG_LEVEL_CHECK(BC48+1, BD48, BE48), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(EW4))) )",
+      "tab": "eDamage Coins",
+      "cell": "EW2"
+    },
+    "eDamage Stone!DY10": {
+      "id": "eDamage Stone!DY10",
+      "label": "eDamage Stone!DY10",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+IF(CG10=-1,0.5,DVT_UW_STAT(\"Poison Swamp\", \"Death Creep\", CG10)), MAX(1, $AY$32))",
+      "tab": "eDamage Stone",
+      "cell": "DY10"
+    },
+    "eDamage Stone!DY100": {
+      "id": "eDamage Stone!DY100",
+      "label": "eDamage Stone!DY100",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+IF(CG100=-1,0.5,DVT_UW_STAT(\"Poison Swamp\", \"Death Creep\", CG100)), MAX(1, $AY$32))",
+      "tab": "eDamage Stone",
+      "cell": "DY100"
+    },
+    "eDamage Stone!DY101": {
+      "id": "eDamage Stone!DY101",
+      "label": "eDamage Stone!DY101",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+IF(CG101=-1,0.5,DVT_UW_STAT(\"Poison Swamp\", \"Death Creep\", CG101)), MAX(1, $AY$32))",
+      "tab": "eDamage Stone",
+      "cell": "DY101"
+    },
+    "eDamage Stone!DY102": {
+      "id": "eDamage Stone!DY102",
+      "label": "eDamage Stone!DY102",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+IF(CG102=-1,0.5,DVT_UW_STAT(\"Poison Swamp\", \"Death Creep\", CG102)), MAX(1, $AY$32))",
+      "tab": "eDamage Stone",
+      "cell": "DY102"
+    },
+    "eDamage Stone!DY103": {
+      "id": "eDamage Stone!DY103",
+      "label": "eDamage Stone!DY103",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+IF(CG103=-1,0.5,DVT_UW_STAT(\"Poison Swamp\", \"Death Creep\", CG103)), MAX(1, $AY$32))",
+      "tab": "eDamage Stone",
+      "cell": "DY103"
+    },
+    "eDamage Stone!DY104": {
+      "id": "eDamage Stone!DY104",
+      "label": "eDamage Stone!DY104",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+IF(CG104=-1,0.5,DVT_UW_STAT(\"Poison Swamp\", \"Death Creep\", CG104)), MAX(1, $AY$32))",
+      "tab": "eDamage Stone",
+      "cell": "DY104"
+    },
+    "eDamage Stone!DY105": {
+      "id": "eDamage Stone!DY105",
+      "label": "eDamage Stone!DY105",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+IF(CG105=-1,0.5,DVT_UW_STAT(\"Poison Swamp\", \"Death Creep\", CG105)), MAX(1, $AY$32))",
+      "tab": "eDamage Stone",
+      "cell": "DY105"
+    },
+    "eDamage Stone!DY106": {
+      "id": "eDamage Stone!DY106",
+      "label": "eDamage Stone!DY106",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+IF(CG106=-1,0.5,DVT_UW_STAT(\"Poison Swamp\", \"Death Creep\", CG106)), MAX(1, $AY$32))",
+      "tab": "eDamage Stone",
+      "cell": "DY106"
+    },
+    "eDamage Stone!EC10": {
+      "id": "eDamage Stone!EC10",
+      "label": "eDamage Stone!EC10",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR10, $BC$48), Substat, $AM$38 + SubstatAssistCap * $AO$38, IF(AND($AY$33,$BH$36), 1/(1-MIN(90%, DVT_UW_STAT(\"Chrono Field\", \"Speed Reduction\", CL10)+Substat)), 1))",
+      "tab": "eDamage Stone",
+      "cell": "EC10"
+    },
+    "eDamage Stone!EC100": {
+      "id": "eDamage Stone!EC100",
+      "label": "eDamage Stone!EC100",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR100, $BC$48), Substat, $AM$38 + SubstatAssistCap * $AO$38, IF(AND($AY$33,$BH$36), 1/(1-MIN(90%, DVT_UW_STAT(\"Chrono Field\", \"Speed Reduction\", CL100)+Substat)), 1))",
+      "tab": "eDamage Stone",
+      "cell": "EC100"
+    },
+    "eDamage Stone!EC101": {
+      "id": "eDamage Stone!EC101",
+      "label": "eDamage Stone!EC101",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR101, $BC$48), Substat, $AM$38 + SubstatAssistCap * $AO$38, IF(AND($AY$33,$BH$36), 1/(1-MIN(90%, DVT_UW_STAT(\"Chrono Field\", \"Speed Reduction\", CL101)+Substat)), 1))",
+      "tab": "eDamage Stone",
+      "cell": "EC101"
+    },
+    "eDamage Stone!EC102": {
+      "id": "eDamage Stone!EC102",
+      "label": "eDamage Stone!EC102",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR102, $BC$48), Substat, $AM$38 + SubstatAssistCap * $AO$38, IF(AND($AY$33,$BH$36), 1/(1-MIN(90%, DVT_UW_STAT(\"Chrono Field\", \"Speed Reduction\", CL102)+Substat)), 1))",
+      "tab": "eDamage Stone",
+      "cell": "EC102"
+    },
+    "eDamage Stone!EC103": {
+      "id": "eDamage Stone!EC103",
+      "label": "eDamage Stone!EC103",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR103, $BC$48), Substat, $AM$38 + SubstatAssistCap * $AO$38, IF(AND($AY$33,$BH$36), 1/(1-MIN(90%, DVT_UW_STAT(\"Chrono Field\", \"Speed Reduction\", CL103)+Substat)), 1))",
+      "tab": "eDamage Stone",
+      "cell": "EC103"
+    },
+    "eDamage Stone!EC104": {
+      "id": "eDamage Stone!EC104",
+      "label": "eDamage Stone!EC104",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR104, $BC$48), Substat, $AM$38 + SubstatAssistCap * $AO$38, IF(AND($AY$33,$BH$36), 1/(1-MIN(90%, DVT_UW_STAT(\"Chrono Field\", \"Speed Reduction\", CL104)+Substat)), 1))",
+      "tab": "eDamage Stone",
+      "cell": "EC104"
+    },
+    "eDamage Stone!EC105": {
+      "id": "eDamage Stone!EC105",
+      "label": "eDamage Stone!EC105",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR105, $BC$48), Substat, $AM$38 + SubstatAssistCap * $AO$38, IF(AND($AY$33,$BH$36), 1/(1-MIN(90%, DVT_UW_STAT(\"Chrono Field\", \"Speed Reduction\", CL105)+Substat)), 1))",
+      "tab": "eDamage Stone",
+      "cell": "EC105"
+    },
+    "eDamage Stone!EC106": {
+      "id": "eDamage Stone!EC106",
+      "label": "eDamage Stone!EC106",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR106, $BC$48), Substat, $AM$38 + SubstatAssistCap * $AO$38, IF(AND($AY$33,$BH$36), 1/(1-MIN(90%, DVT_UW_STAT(\"Chrono Field\", \"Speed Reduction\", CL106)+Substat)), 1))",
+      "tab": "eDamage Stone",
+      "cell": "EC106"
+    },
+    "eDamage Stone!EK10": {
+      "id": "eDamage Stone!EK10",
+      "label": "eDamage Stone!EK10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EI10, EK$2), , EPG_UW_TARGET_LEVEL(BP10+1, \"Death Wave\", \"Damage\", $AY$23), , DVT_UW_STAT(\"Death Wave\", \"Damage\", BP10+1)=\"\", , TRUE, LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR10, $BC$48), DW, LET( DWB, LET( Substat, $AM",
+      "tab": "eDamage Stone",
+      "cell": "EK10"
+    },
+    "eDamage Stone!EK100": {
+      "id": "eDamage Stone!EK100",
+      "label": "eDamage Stone!EK100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EI100, EK$2), , EPG_UW_TARGET_LEVEL(BP100+1, \"Death Wave\", \"Damage\", $AY$23), , DVT_UW_STAT(\"Death Wave\", \"Damage\", BP100+1)=\"\", , TRUE, LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR100, $BC$48), DW, LET( DWB, LET( Substat,",
+      "tab": "eDamage Stone",
+      "cell": "EK100"
+    },
+    "eDamage Stone!EK101": {
+      "id": "eDamage Stone!EK101",
+      "label": "eDamage Stone!EK101",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EI101, EK$2), , EPG_UW_TARGET_LEVEL(BP101+1, \"Death Wave\", \"Damage\", $AY$23), , DVT_UW_STAT(\"Death Wave\", \"Damage\", BP101+1)=\"\", , TRUE, LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR101, $BC$48), DW, LET( DWB, LET( Substat,",
+      "tab": "eDamage Stone",
+      "cell": "EK101"
+    },
+    "eDamage Stone!EK102": {
+      "id": "eDamage Stone!EK102",
+      "label": "eDamage Stone!EK102",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EI102, EK$2), , EPG_UW_TARGET_LEVEL(BP102+1, \"Death Wave\", \"Damage\", $AY$23), , DVT_UW_STAT(\"Death Wave\", \"Damage\", BP102+1)=\"\", , TRUE, LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR102, $BC$48), DW, LET( DWB, LET( Substat,",
+      "tab": "eDamage Stone",
+      "cell": "EK102"
+    },
+    "eDamage Stone!EK103": {
+      "id": "eDamage Stone!EK103",
+      "label": "eDamage Stone!EK103",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EI103, EK$2), , EPG_UW_TARGET_LEVEL(BP103+1, \"Death Wave\", \"Damage\", $AY$23), , DVT_UW_STAT(\"Death Wave\", \"Damage\", BP103+1)=\"\", , TRUE, LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR103, $BC$48), DW, LET( DWB, LET( Substat,",
+      "tab": "eDamage Stone",
+      "cell": "EK103"
+    },
+    "eDamage Stone!EK104": {
+      "id": "eDamage Stone!EK104",
+      "label": "eDamage Stone!EK104",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EI104, EK$2), , EPG_UW_TARGET_LEVEL(BP104+1, \"Death Wave\", \"Damage\", $AY$23), , DVT_UW_STAT(\"Death Wave\", \"Damage\", BP104+1)=\"\", , TRUE, LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR104, $BC$48), DW, LET( DWB, LET( Substat,",
+      "tab": "eDamage Stone",
+      "cell": "EK104"
+    },
+    "eDamage Stone!EK105": {
+      "id": "eDamage Stone!EK105",
+      "label": "eDamage Stone!EK105",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EI105, EK$2), , EPG_UW_TARGET_LEVEL(BP105+1, \"Death Wave\", \"Damage\", $AY$23), , DVT_UW_STAT(\"Death Wave\", \"Damage\", BP105+1)=\"\", , TRUE, LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR105, $BC$48), DW, LET( DWB, LET( Substat,",
+      "tab": "eDamage Stone",
+      "cell": "EK105"
+    },
+    "eDamage Stone!EK106": {
+      "id": "eDamage Stone!EK106",
+      "label": "eDamage Stone!EK106",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR($EI106, EK$2), , EPG_UW_TARGET_LEVEL(BP106+1, \"Death Wave\", \"Damage\", $AY$23), , DVT_UW_STAT(\"Death Wave\", \"Damage\", BP106+1)=\"\", , TRUE, LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$23, CR106, $BC$48), DW, LET( DWB, LET( Substat,",
+      "tab": "eDamage Stone",
+      "cell": "EK106"
+    },
+    "eDamage Stone!EM2": {
+      "id": "eDamage Stone!EM2",
+      "label": "eDamage Stone!EM2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR(NOT($BH$30), $AY$24)",
+      "tab": "eDamage Stone",
+      "cell": "EM2"
+    },
+    "eDamage Stone!ES2": {
+      "id": "eDamage Stone!ES2",
+      "label": "eDamage Stone!ES2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR(NOT($BH$32), $AY$24)",
+      "tab": "eDamage Stone",
+      "cell": "ES2"
+    },
+    "eDamage!AL46": {
+      "id": "eDamage!AL46",
+      "label": "eDamage!AL46",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(EQ(AM46, 15%), \"-\", LET( Tier, $AM$43, TierList, {\"Epic\";\"Legendary\";\"Mythic\";\"Ancestral\"}, ValueList, {5%; 8%; 11%; 15%}, TierVal, XLOOKUP(Tier, TierList, ValueList, 0), NextVal, XLOOKUP(AM46, ValueList, DROP(ValueList,1), 0), Planner,",
+      "tab": "eDamage",
+      "cell": "AL46"
+    },
+    "eDamage!AO71": {
+      "id": "eDamage!AO71",
+      "label": "eDamage!AO71",
+      "type": "COMPUTED_NODE",
+      "formula": "=(AO70*(AY28-1)+100%)/AY28",
+      "tab": "eDamage",
+      "cell": "AO71"
+    },
+    "eDamage!AP46": {
+      "id": "eDamage!AP46",
+      "label": "eDamage!AP46",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(EQ(AO46, 15%), \"-\", LET( Tier, $AP$43, TierList, {\"Epic\";\"Legendary\";\"Mythic\";\"Ancestral\"}, ValueList, {5%; 8%; 11%; 15%}, TierVal, XLOOKUP(Tier, TierList, ValueList, 0), NextVal, XLOOKUP(AO46, ValueList, DROP(ValueList,1), 0), Planner,",
+      "tab": "eDamage",
+      "cell": "AP46"
+    },
+    "eDamage!AP8": {
+      "id": "eDamage!AP8",
+      "label": "eDamage!AP8",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(OR(NOT($AN$4), AR8=6, AM8>0, AR8=0), \"-\", LET( VALUELIST, {0; 5; 11; 18; 26}, POS, MATCH(AR8, VALUELIST, 1), PLANNER, INDEX(VALUELIST, MIN(POS+1, ROWS(VALUELIST))), Cost, SWITCH(AR8, 4, 1200, 5, 1400, 1000), ASdmg, 1+4*MIN(1, AY35*(Plan",
+      "tab": "eDamage",
+      "cell": "AP8"
+    },
+    "eDamage!AU23": {
+      "id": "eDamage!AU23",
+      "label": "Ignore Lab Target Levels",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eDamage",
+      "cell": "AU23",
+      "webKey": "ignoreTargetLevels",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AX12": {
+      "id": "eDamage!AX12",
+      "label": "PRESETS 🔗",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eDamage",
+      "cell": "AX12",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AX13": {
+      "id": "eDamage!AX13",
+      "label": "Workshop",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eDamage",
+      "cell": "AX13",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AX14": {
+      "id": "eDamage!AX14",
+      "label": "Cards",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eDamage",
+      "cell": "AX14",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AX15": {
+      "id": "eDamage!AX15",
+      "label": "Modules",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eDamage",
+      "cell": "AX15",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AX16": {
+      "id": "eDamage!AX16",
+      "label": "Perks",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eDamage",
+      "cell": "AX16",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AX19": {
+      "id": "eDamage!AX19",
+      "label": "Run Type",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eDamage",
+      "cell": "AX19",
+      "webKey": "runType",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AY21": {
+      "id": "eDamage!AY21",
+      "label": "Game Speed",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eDamage",
+      "cell": "AY21",
+      "webKey": "gameSpeed",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AY22": {
+      "id": "eDamage!AY22",
+      "label": "DPM - Damage at % range :",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eDamage",
+      "cell": "AY22",
+      "webKey": "damageAtRangePct",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eDamage!AY23": {
+      "id": "eDamage!AY23",
+      "label": "Ignore UW Target Levels",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eDamage",
+      "cell": "AY23",
+      "webKey": "ignoreUwTargetLevels",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AY24": {
+      "id": "eDamage!AY24",
+      "label": "Hide UW Cooldown",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eDamage",
+      "cell": "AY24",
+      "webKey": "hideUwCooldown",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AY25": {
+      "id": "eDamage!AY25",
+      "label": "Hide non-UW Upgrades",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eDamage",
+      "cell": "AY25",
+      "webKey": "hideNonUwUpgrades",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AY26": {
+      "id": "eDamage!AY26",
+      "label": "Hide Non-unlocked Labs",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eDamage",
+      "cell": "AY26",
+      "webKey": "hideNonUnlockedLabs",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AY27": {
+      "id": "eDamage!AY27",
+      "label": "Show Labs on Coin path",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eDamage",
+      "cell": "AY27",
+      "webKey": "showLabsOnCoinPath",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AY28": {
+      "id": "eDamage!AY28",
+      "label": "Boss spawns every # of waves",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eDamage",
+      "cell": "AY28",
+      "webKey": "damageEstimates.bossWaveInterval",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eDamage!AY29": {
+      "id": "eDamage!AY29",
+      "label": "SM - Hits on same target",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eDamage",
+      "cell": "AY29",
+      "webKey": "damageEstimates.smartMissilesHits",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eDamage!AY30": {
+      "id": "eDamage!AY30",
+      "label": "SM - Enemies inside SM Area",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eDamage",
+      "cell": "AY30",
+      "webKey": "damageEstimates.smartMissilesArea",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eDamage!AY31": {
+      "id": "eDamage!AY31",
+      "label": "PS - Average Enemies poisoned",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eDamage",
+      "cell": "AY31",
+      "webKey": "damageEstimates.poisonSwampArea",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eDamage!AY32": {
+      "id": "eDamage!AY32",
+      "label": "PS Death Creep - PS average Ticks before enemy dies",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eDamage",
+      "cell": "AY32",
+      "webKey": "damageEstimates.poisonSwampHits",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eDamage!AY33": {
+      "id": "eDamage!AY33",
+      "label": "CF - Enable CF Slow",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eDamage",
+      "cell": "AY33",
+      "webKey": "chronoFieldSlowCounted",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AY34": {
+      "id": "eDamage!AY34",
+      "label": "Project Funding Cash",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": null,
+      "tab": "eDamage",
+      "cell": "AY34",
+      "webKey": "damageEstimates.projectFundingCash",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eDamage!AY35": {
+      "id": "eDamage!AY35",
+      "label": "Elites per Wave",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eDamage",
+      "cell": "AY35",
+      "webKey": "damageEstimates.ampStrikeShare",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eDamage!AY36": {
+      "id": "eDamage!AY36",
+      "label": "ILM - Enemies inside ILM Area",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eDamage",
+      "cell": "AY36",
+      "webKey": "damageEstimates.innerLandMinesArea",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eDamage!AY37": {
+      "id": "eDamage!AY37",
+      "label": "ILM+ - Hits on same targets",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eDamage",
+      "cell": "AY37",
+      "webKey": "damageEstimates.innerLandMinesHits",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eDamage!AY39": {
+      "id": "eDamage!AY39",
+      "label": "Cards",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eDamage",
+      "cell": "AY39",
+      "webKey": "useCards",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AY42": {
+      "id": "eDamage!AY42",
+      "label": "eDamage!AY42",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$14, AT42)",
+      "tab": "eDamage",
+      "cell": "AY42"
+    },
+    "eDamage!AY44": {
+      "id": "eDamage!AY44",
+      "label": "eDamage!AY44",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$14, AT44)",
+      "tab": "eDamage",
+      "cell": "AY44"
+    },
+    "eDamage!AY45": {
+      "id": "eDamage!AY45",
+      "label": "eDamage!AY45",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$14, AT45)",
+      "tab": "eDamage",
+      "cell": "AY45"
+    },
+    "eDamage!AY47": {
+      "id": "eDamage!AY47",
+      "label": "eDamage!AY47",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$14, AT47)",
+      "tab": "eDamage",
+      "cell": "AY47"
+    },
+    "eDamage!AY49": {
+      "id": "eDamage!AY49",
+      "label": "eDamage!AY49",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$14, AT49)",
+      "tab": "eDamage",
+      "cell": "AY49"
+    },
+    "eDamage!AY51": {
+      "id": "eDamage!AY51",
+      "label": "eDamage!AY51",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$14, AT51)",
+      "tab": "eDamage",
+      "cell": "AY51"
+    },
+    "eDamage!AY52": {
+      "id": "eDamage!AY52",
+      "label": "eDamage!AY52",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$14, AT52)",
+      "tab": "eDamage",
+      "cell": "AY52"
+    },
+    "eDamage!AY54": {
+      "id": "eDamage!AY54",
+      "label": "eDamage!AY54",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$14, AT54)",
+      "tab": "eDamage",
+      "cell": "AY54"
+    },
+    "eDamage!AY61": {
+      "id": "eDamage!AY61",
+      "label": "Perks",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eDamage",
+      "cell": "AY61",
+      "webKey": "damagePerks",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eDamage!AY63": {
+      "id": "eDamage!AY63",
+      "label": "eDamage!AY63",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$16, AT63)",
+      "tab": "eDamage",
+      "cell": "AY63"
+    },
+    "eDamage!AY64": {
+      "id": "eDamage!AY64",
+      "label": "eDamage!AY64",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$16, AT64)",
+      "tab": "eDamage",
+      "cell": "AY64"
+    },
+    "eDamage!AY65": {
+      "id": "eDamage!AY65",
+      "label": "eDamage!AY65",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$16, \"Damage / Boss Health\")",
+      "tab": "eDamage",
+      "cell": "AY65"
+    },
+    "eDamage!AY66": {
+      "id": "eDamage!AY66",
+      "label": "eDamage!AY66",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$16, \"- Enemies Damage / - Damage\")",
+      "tab": "eDamage",
+      "cell": "AY66"
+    },
+    "eDamage!AY67": {
+      "id": "eDamage!AY67",
+      "label": "eDamage!AY67",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$16, \"Wave on Death Wave (Effect Wave)\")",
+      "tab": "eDamage",
+      "cell": "AY67"
+    },
+    "eDamage!AY68": {
+      "id": "eDamage!AY68",
+      "label": "eDamage!AY68",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$16, AT68)",
+      "tab": "eDamage",
+      "cell": "AY68"
+    },
+    "eDamage!AY69": {
+      "id": "eDamage!AY69",
+      "label": "eDamage!AY69",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$16, AT69)",
+      "tab": "eDamage",
+      "cell": "AY69"
+    },
+    "eDamage!AY70": {
+      "id": "eDamage!AY70",
+      "label": "eDamage!AY70",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$16, AT70)",
+      "tab": "eDamage",
+      "cell": "AY70"
+    },
+    "eDamage!BC12": {
+      "id": "eDamage!BC12",
+      "label": "eDamage!BC12",
+      "type": "COMPUTED_NODE",
+      "formula": "=MIN(IDS_LAB_LEVEL(BB12), IDS_PRESET_PRESET(AX12, \"Range\"), BE12)",
+      "tab": "eDamage",
+      "cell": "BC12"
+    },
+    "eDamage!BD11": {
+      "id": "eDamage!BD11",
+      "label": "eDamage!BD11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AU$23, ,IDS_LAB_TARGET(BB11))",
+      "tab": "eDamage",
+      "cell": "BD11"
+    },
+    "eDamage!BD12": {
+      "id": "eDamage!BD12",
+      "label": "eDamage!BD12",
+      "type": "COMPUTED_NODE",
+      "formula": "=MIN(IDS_LAB_TARGET(BB12), IDS_PRESET_PRESET(AX12, \"Range\"), BE12)",
+      "tab": "eDamage",
+      "cell": "BD12"
+    },
+    "eDamage!BD13": {
+      "id": "eDamage!BD13",
+      "label": "eDamage!BD13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AU$23, ,IDS_LAB_TARGET(BB13))",
+      "tab": "eDamage",
+      "cell": "BD13"
+    },
+    "eDamage!BD20": {
+      "id": "eDamage!BD20",
+      "label": "eDamage!BD20",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AU$23, ,IDS_LAB_TARGET(\"Super Crit Chance\"))",
+      "tab": "eDamage",
+      "cell": "BD20"
+    },
+    "eDamage!BD21": {
+      "id": "eDamage!BD21",
+      "label": "eDamage!BD21",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AU$23, ,IDS_LAB_TARGET(\"Super Crit Multi\"))",
+      "tab": "eDamage",
+      "cell": "BD21"
+    },
+    "eDamage!BD22": {
+      "id": "eDamage!BD22",
+      "label": "eDamage!BD22",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AU$23, ,IDS_LAB_TARGET(BB22))",
+      "tab": "eDamage",
+      "cell": "BD22"
+    },
+    "eDamage!BD23": {
+      "id": "eDamage!BD23",
+      "label": "eDamage!BD23",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AU$23, ,IDS_LAB_TARGET(BB23))",
+      "tab": "eDamage",
+      "cell": "BD23"
+    },
+    "eDamage!BD26": {
+      "id": "eDamage!BD26",
+      "label": "eDamage!BD26",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AU$23, ,IDS_LAB_TARGET(\"Recovery Package Chance\"))",
+      "tab": "eDamage",
+      "cell": "BD26"
+    },
+    "eDamage!BD27": {
+      "id": "eDamage!BD27",
+      "label": "eDamage!BD27",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AU$23, ,IDS_LAB_TARGET(BB27))",
+      "tab": "eDamage",
+      "cell": "BD27"
+    },
+    "eDamage!BG10": {
+      "id": "eDamage!BG10",
+      "label": "eDamage!BG10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$13, BB10)",
+      "tab": "eDamage",
+      "cell": "BG10"
+    },
+    "eDamage!BG11": {
+      "id": "eDamage!BG11",
+      "label": "eDamage!BG11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$13, BB11)",
+      "tab": "eDamage",
+      "cell": "BG11"
+    },
+    "eDamage!BG12": {
+      "id": "eDamage!BG12",
+      "label": "eDamage!BG12",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$13, BB12)",
+      "tab": "eDamage",
+      "cell": "BG12"
+    },
+    "eDamage!BG13": {
+      "id": "eDamage!BG13",
+      "label": "eDamage!BG13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$13, BB13)",
+      "tab": "eDamage",
+      "cell": "BG13"
+    },
+    "eDamage!BG14": {
+      "id": "eDamage!BG14",
+      "label": "eDamage!BG14",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$13, BB14)",
+      "tab": "eDamage",
+      "cell": "BG14"
+    },
+    "eDamage!BG15": {
+      "id": "eDamage!BG15",
+      "label": "eDamage!BG15",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$13, BB15)",
+      "tab": "eDamage",
+      "cell": "BG15"
+    },
+    "eDamage!BG16": {
+      "id": "eDamage!BG16",
+      "label": "eDamage!BG16",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$13, BB16)",
+      "tab": "eDamage",
+      "cell": "BG16"
+    },
+    "eDamage!DI5": {
+      "id": "eDamage!DI5",
+      "label": "eDamage!DI5",
+      "type": "COMPUTED_NODE",
+      "formula": "=1+4*MIN(1, AY35*(AM8+AR8)/CY7)",
+      "tab": "eDamage",
+      "cell": "DI5"
+    },
+    "eDamage!ED5": {
+      "id": "eDamage!ED5",
+      "label": "eDamage!ED5",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( SubstatAssistCap, EPG_ASSIST_SUB_CAP($AN$42, $BL$46, 0), WdReco, AN$70+$BF$26, WdRecoBoss, IF(EQ($BC$27, 1), (WdReco*($AY$28-1)+100%)/$AY$28, WdReco), PackageTimeGain, -IF(AM$44+AR$44, (AM$44+AR$44)*WdRecoBoss,0), 1-PackageTimeGain/(C",
+      "tab": "eDamage",
+      "cell": "ED5"
+    },
+    "eDamage!EJ10": {
+      "id": "eDamage!EJ10",
+      "label": "eDamage!EJ10",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+(1.5*CL10), MAX(1,$AY$29))",
+      "tab": "eDamage",
+      "cell": "EJ10"
+    },
+    "eDamage!EJ100": {
+      "id": "eDamage!EJ100",
+      "label": "eDamage!EJ100",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+(1.5*CL100), MAX(1,$AY$29))",
+      "tab": "eDamage",
+      "cell": "EJ100"
+    },
+    "eDamage!EJ101": {
+      "id": "eDamage!EJ101",
+      "label": "eDamage!EJ101",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+(1.5*CL101), MAX(1,$AY$29))",
+      "tab": "eDamage",
+      "cell": "EJ101"
+    },
+    "eDamage!EJ102": {
+      "id": "eDamage!EJ102",
+      "label": "eDamage!EJ102",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+(1.5*CL102), MAX(1,$AY$29))",
+      "tab": "eDamage",
+      "cell": "EJ102"
+    },
+    "eDamage!EJ103": {
+      "id": "eDamage!EJ103",
+      "label": "eDamage!EJ103",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+(1.5*CL103), MAX(1,$AY$29))",
+      "tab": "eDamage",
+      "cell": "EJ103"
+    },
+    "eDamage!EJ104": {
+      "id": "eDamage!EJ104",
+      "label": "eDamage!EJ104",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+(1.5*CL104), MAX(1,$AY$29))",
+      "tab": "eDamage",
+      "cell": "EJ104"
+    },
+    "eDamage!EJ105": {
+      "id": "eDamage!EJ105",
+      "label": "eDamage!EJ105",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+(1.5*CL105), MAX(1,$AY$29))",
+      "tab": "eDamage",
+      "cell": "EJ105"
+    },
+    "eDamage!EJ106": {
+      "id": "eDamage!EJ106",
+      "label": "eDamage!EJ106",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1+(1.5*CL106), MAX(1,$AY$29))",
+      "tab": "eDamage",
+      "cell": "EJ106"
+    },
+    "eDamage!EN5": {
+      "id": "eDamage!EN5",
+      "label": "eDamage!EN5",
+      "type": "COMPUTED_NODE",
+      "formula": "=EP_UW_HEATUP(1, $AY$37)",
+      "tab": "eDamage",
+      "cell": "EN5"
+    },
+    "eDamage!FB2": {
+      "id": "eDamage!FB2",
+      "label": "eDamage!FB2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AND($AY$25, NOT($BH$31), $AX$19<>\"UW Disso\"), $AX$19=\"Attack Disso\", EPG_LEVEL_CHECK(BC9+1, BD9, BE9), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(FB4))))",
+      "tab": "eDamage",
+      "cell": "FB2"
+    },
+    "eDamage!FC2": {
+      "id": "eDamage!FC2",
+      "label": "eDamage!FC2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AND($AY$25, NOT($BH$31)), NOT($AY$46), $AX$19=\"Attack Disso\", EPG_LEVEL_CHECK(BC39+1, BD39, BE39), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(FC4)) ))",
+      "tab": "eDamage",
+      "cell": "FC2"
+    },
+    "eDamage!FD2": {
+      "id": "eDamage!FD2",
+      "label": "eDamage!FD2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AND($AY$25, $BL$33=\"Locked\"), $AX$19=\"Attack Disso\", EPG_LEVEL_CHECK(BC12+1, BD12, BE12), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(FD4)) ))",
+      "tab": "eDamage",
+      "cell": "FD2"
+    },
+    "eDamage!FE2": {
+      "id": "eDamage!FE2",
+      "label": "eDamage!FE2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AND($AY$25, $BL$33=\"Locked\", $AX$19<>\"UW Disso\"), EQ($BG$13, 0), $AX$19=\"Attack Disso\", EPG_LEVEL_CHECK(BC13+1, BD13, BE13), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(FE4)) ))",
+      "tab": "eDamage",
+      "cell": "FE2"
+    },
+    "eDamage!FF2": {
+      "id": "eDamage!FF2",
+      "label": "eDamage!FF2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AND($AY$25, $BL$33=\"Locked\"), NOT($AY$50), $AX$19=\"Attack Disso\", EQ($BG$13, 0), EPG_LEVEL_CHECK(BC41+1, BD41, BE41), AND($AY$26, NOT(IDS_LAB_HAS_UNLOCKED(FF4)) ))",
+      "tab": "eDamage",
+      "cell": "FF2"
+    },
+    "eEcon Discount!CM2": {
+      "id": "eEcon Discount!CM2",
+      "label": "eEcon Discount!CM2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AY14, EPG_LEVEL_CHECK(BD11+1, BE11, BF11), AND(AY11, NOT(IDS_LAB_HAS_UNLOCKED(CM4))))",
+      "tab": "eEcon Discount",
+      "cell": "CM2"
+    },
+    "eEcon Discount!CN2": {
+      "id": "eEcon Discount!CN2",
+      "label": "eEcon Discount!CN2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( EPG_LEVEL_CHECK(BD12+1, BE12, BF12), AND(AY11, NOT(IDS_LAB_HAS_UNLOCKED(CN4))))",
+      "tab": "eEcon Discount",
+      "cell": "CN2"
+    },
+    "eEcon Discount!CO2": {
+      "id": "eEcon Discount!CO2",
+      "label": "eEcon Discount!CO2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AY14, EPG_LEVEL_CHECK(BD13+1, BE13, BF13), AND(AY11, NOT(IDS_LAB_HAS_UNLOCKED(CO4))))",
+      "tab": "eEcon Discount",
+      "cell": "CO2"
+    },
+    "eEcon Discount!CP2": {
+      "id": "eEcon Discount!CP2",
+      "label": "eEcon Discount!CP2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AY14, EPG_LEVEL_CHECK(BD14+1, BE14, BF14), AND(AY11, NOT(IDS_LAB_HAS_UNLOCKED(CP4))))",
+      "tab": "eEcon Discount",
+      "cell": "CP2"
+    },
+    "eEcon Discount!CQ2": {
+      "id": "eEcon Discount!CQ2",
+      "label": "eEcon Discount!CQ2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AY14, EPG_LEVEL_CHECK(BD15+1, BE15, BF15), AND(AY11, NOT(IDS_LAB_HAS_UNLOCKED(CQ4))))",
+      "tab": "eEcon Discount",
+      "cell": "CQ2"
+    },
+    "eEcon Discount!CR2": {
+      "id": "eEcon Discount!CR2",
+      "label": "eEcon Discount!CR2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AY14, EPG_LEVEL_CHECK(BD34+1, BE34, BF34), AND(AY11, NOT(IDS_LAB_HAS_UNLOCKED(CR4))))",
+      "tab": "eEcon Discount",
+      "cell": "CR2"
+    },
+    "eEcon Stones!CJ10": {
+      "id": "eEcon Stones!CJ10",
+      "label": "eEcon Stones!CJ10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM10, , EPC_CPK($BJ$5, $BE$5, CD10, $BE$31, $AO$8, $AP$8, $BK$5, AND($AZ$43, $AZ$45), $BE$27, AND($AZ$43, $AZ$47), $BE$28, $BP$5))",
+      "tab": "eEcon Stones",
+      "cell": "CJ10"
+    },
+    "eEcon Stones!CJ100": {
+      "id": "eEcon Stones!CJ100",
+      "label": "eEcon Stones!CJ100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM100, , EPC_CPK($BJ$5, $BE$5, CD100, $BE$31, $AO$8, $AP$8, $BK$5, AND($AZ$43, $AZ$45), $BE$27, AND($AZ$43, $AZ$47), $BE$28, $BP$5))",
+      "tab": "eEcon Stones",
+      "cell": "CJ100"
+    },
+    "eEcon Stones!CJ11": {
+      "id": "eEcon Stones!CJ11",
+      "label": "eEcon Stones!CJ11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM11, , EPC_CPK($BJ$5, $BE$5, CD11, $BE$31, $AO$8, $AP$8, $BK$5, AND($AZ$43, $AZ$45), $BE$27, AND($AZ$43, $AZ$47), $BE$28, $BP$5))",
+      "tab": "eEcon Stones",
+      "cell": "CJ11"
+    },
+    "eEcon Stones!CJ12": {
+      "id": "eEcon Stones!CJ12",
+      "label": "eEcon Stones!CJ12",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM12, , EPC_CPK($BJ$5, $BE$5, CD12, $BE$31, $AO$8, $AP$8, $BK$5, AND($AZ$43, $AZ$45), $BE$27, AND($AZ$43, $AZ$47), $BE$28, $BP$5))",
+      "tab": "eEcon Stones",
+      "cell": "CJ12"
+    },
+    "eEcon Stones!CJ13": {
+      "id": "eEcon Stones!CJ13",
+      "label": "eEcon Stones!CJ13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM13, , EPC_CPK($BJ$5, $BE$5, CD13, $BE$31, $AO$8, $AP$8, $BK$5, AND($AZ$43, $AZ$45), $BE$27, AND($AZ$43, $AZ$47), $BE$28, $BP$5))",
+      "tab": "eEcon Stones",
+      "cell": "CJ13"
+    },
+    "eEcon Stones!CJ14": {
+      "id": "eEcon Stones!CJ14",
+      "label": "eEcon Stones!CJ14",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM14, , EPC_CPK($BJ$5, $BE$5, CD14, $BE$31, $AO$8, $AP$8, $BK$5, AND($AZ$43, $AZ$45), $BE$27, AND($AZ$43, $AZ$47), $BE$28, $BP$5))",
+      "tab": "eEcon Stones",
+      "cell": "CJ14"
+    },
+    "eEcon Stones!CJ15": {
+      "id": "eEcon Stones!CJ15",
+      "label": "eEcon Stones!CJ15",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM15, , EPC_CPK($BJ$5, $BE$5, CD15, $BE$31, $AO$8, $AP$8, $BK$5, AND($AZ$43, $AZ$45), $BE$27, AND($AZ$43, $AZ$47), $BE$28, $BP$5))",
+      "tab": "eEcon Stones",
+      "cell": "CJ15"
+    },
+    "eEcon Stones!CJ16": {
+      "id": "eEcon Stones!CJ16",
+      "label": "eEcon Stones!CJ16",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM16, , EPC_CPK($BJ$5, $BE$5, CD16, $BE$31, $AO$8, $AP$8, $BK$5, AND($AZ$43, $AZ$45), $BE$27, AND($AZ$43, $AZ$47), $BE$28, $BP$5))",
+      "tab": "eEcon Stones",
+      "cell": "CJ16"
+    },
+    "eEcon Stones!CL10": {
+      "id": "eEcon Stones!CL10",
+      "label": "eEcon Stones!CL10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM10, , EPC_CARD_EOM(OR($AZ$34, MAX($EW$5:EW9)), $BE$23, $AZ$26))",
+      "tab": "eEcon Stones",
+      "cell": "CL10"
+    },
+    "eEcon Stones!CL100": {
+      "id": "eEcon Stones!CL100",
+      "label": "eEcon Stones!CL100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM100, , EPC_CARD_EOM(OR($AZ$34, MAX($EW$5:EW99)), $BE$23, $AZ$26))",
+      "tab": "eEcon Stones",
+      "cell": "CL100"
+    },
+    "eEcon Stones!CL11": {
+      "id": "eEcon Stones!CL11",
+      "label": "eEcon Stones!CL11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM11, , EPC_CARD_EOM(OR($AZ$34, MAX($EW$5:EW10)), $BE$23, $AZ$26))",
+      "tab": "eEcon Stones",
+      "cell": "CL11"
+    },
+    "eEcon Stones!CL12": {
+      "id": "eEcon Stones!CL12",
+      "label": "eEcon Stones!CL12",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM12, , EPC_CARD_EOM(OR($AZ$34, MAX($EW$5:EW11)), $BE$23, $AZ$26))",
+      "tab": "eEcon Stones",
+      "cell": "CL12"
+    },
+    "eEcon Stones!CL13": {
+      "id": "eEcon Stones!CL13",
+      "label": "eEcon Stones!CL13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM13, , EPC_CARD_EOM(OR($AZ$34, MAX($EW$5:EW12)), $BE$23, $AZ$26))",
+      "tab": "eEcon Stones",
+      "cell": "CL13"
+    },
+    "eEcon Stones!CL14": {
+      "id": "eEcon Stones!CL14",
+      "label": "eEcon Stones!CL14",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM14, , EPC_CARD_EOM(OR($AZ$34, MAX($EW$5:EW13)), $BE$23, $AZ$26))",
+      "tab": "eEcon Stones",
+      "cell": "CL14"
+    },
+    "eEcon Stones!CL15": {
+      "id": "eEcon Stones!CL15",
+      "label": "eEcon Stones!CL15",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM15, , EPC_CARD_EOM(OR($AZ$34, MAX($EW$5:EW14)), $BE$23, $AZ$26))",
+      "tab": "eEcon Stones",
+      "cell": "CL15"
+    },
+    "eEcon Stones!CL16": {
+      "id": "eEcon Stones!CL16",
+      "label": "eEcon Stones!CL16",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM16, , EPC_CARD_EOM(OR($AZ$34, MAX($EW$5:EW15)), $BE$23, $AZ$26))",
+      "tab": "eEcon Stones",
+      "cell": "CL16"
+    },
+    "eEcon Stones!CP10": {
+      "id": "eEcon Stones!CP10",
+      "label": "eEcon Stones!CP10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM10, , EPC_GCOMP($BJ$9, $BE$9, $AZ$39, $AW$39, CD10, $BE$31, $AO$12, $AP$12, $BE$10, $AZ$25, $AO$7+$AS$7, $CH$5))",
+      "tab": "eEcon Stones",
+      "cell": "CP10"
+    },
+    "eEcon Stones!CP100": {
+      "id": "eEcon Stones!CP100",
+      "label": "eEcon Stones!CP100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM100, , EPC_GCOMP($BJ$9, $BE$9, $AZ$39, $AW$39, CD100, $BE$31, $AO$12, $AP$12, $BE$10, $AZ$25, $AO$7+$AS$7, $CH$5))",
+      "tab": "eEcon Stones",
+      "cell": "CP100"
+    },
+    "eEcon Stones!CP11": {
+      "id": "eEcon Stones!CP11",
+      "label": "eEcon Stones!CP11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM11, , EPC_GCOMP($BJ$9, $BE$9, $AZ$39, $AW$39, CD11, $BE$31, $AO$12, $AP$12, $BE$10, $AZ$25, $AO$7+$AS$7, $CH$5))",
+      "tab": "eEcon Stones",
+      "cell": "CP11"
+    },
+    "eEcon Stones!CP12": {
+      "id": "eEcon Stones!CP12",
+      "label": "eEcon Stones!CP12",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM12, , EPC_GCOMP($BJ$9, $BE$9, $AZ$39, $AW$39, CD12, $BE$31, $AO$12, $AP$12, $BE$10, $AZ$25, $AO$7+$AS$7, $CH$5))",
+      "tab": "eEcon Stones",
+      "cell": "CP12"
+    },
+    "eEcon Stones!CP13": {
+      "id": "eEcon Stones!CP13",
+      "label": "eEcon Stones!CP13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM13, , EPC_GCOMP($BJ$9, $BE$9, $AZ$39, $AW$39, CD13, $BE$31, $AO$12, $AP$12, $BE$10, $AZ$25, $AO$7+$AS$7, $CH$5))",
+      "tab": "eEcon Stones",
+      "cell": "CP13"
+    },
+    "eEcon Stones!CP14": {
+      "id": "eEcon Stones!CP14",
+      "label": "eEcon Stones!CP14",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM14, , EPC_GCOMP($BJ$9, $BE$9, $AZ$39, $AW$39, CD14, $BE$31, $AO$12, $AP$12, $BE$10, $AZ$25, $AO$7+$AS$7, $CH$5))",
+      "tab": "eEcon Stones",
+      "cell": "CP14"
+    },
+    "eEcon Stones!CP15": {
+      "id": "eEcon Stones!CP15",
+      "label": "eEcon Stones!CP15",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM15, , EPC_GCOMP($BJ$9, $BE$9, $AZ$39, $AW$39, CD15, $BE$31, $AO$12, $AP$12, $BE$10, $AZ$25, $AO$7+$AS$7, $CH$5))",
+      "tab": "eEcon Stones",
+      "cell": "CP15"
+    },
+    "eEcon Stones!CP16": {
+      "id": "eEcon Stones!CP16",
+      "label": "eEcon Stones!CP16",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM16, , EPC_GCOMP($BJ$9, $BE$9, $AZ$39, $AW$39, CD16, $BE$31, $AO$12, $AP$12, $BE$10, $AZ$25, $AO$7+$AS$7, $CH$5))",
+      "tab": "eEcon Stones",
+      "cell": "CP16"
+    },
+    "eEcon Stones!CU10": {
+      "id": "eEcon Stones!CU10",
+      "label": "eEcon Stones!CU10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM10, , EPC_GTGC(BU10>=0, BU10, $AZ$20, CS10))",
+      "tab": "eEcon Stones",
+      "cell": "CU10"
+    },
+    "eEcon Stones!CU100": {
+      "id": "eEcon Stones!CU100",
+      "label": "eEcon Stones!CU100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM100, , EPC_GTGC(BU100>=0, BU100, $AZ$20, CS100))",
+      "tab": "eEcon Stones",
+      "cell": "CU100"
+    },
+    "eEcon Stones!CU11": {
+      "id": "eEcon Stones!CU11",
+      "label": "eEcon Stones!CU11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM11, , EPC_GTGC(BU11>=0, BU11, $AZ$20, CS11))",
+      "tab": "eEcon Stones",
+      "cell": "CU11"
+    },
+    "eEcon Stones!CU12": {
+      "id": "eEcon Stones!CU12",
+      "label": "eEcon Stones!CU12",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM12, , EPC_GTGC(BU12>=0, BU12, $AZ$20, CS12))",
+      "tab": "eEcon Stones",
+      "cell": "CU12"
+    },
+    "eEcon Stones!CU13": {
+      "id": "eEcon Stones!CU13",
+      "label": "eEcon Stones!CU13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM13, , EPC_GTGC(BU13>=0, BU13, $AZ$20, CS13))",
+      "tab": "eEcon Stones",
+      "cell": "CU13"
+    },
+    "eEcon Stones!CU14": {
+      "id": "eEcon Stones!CU14",
+      "label": "eEcon Stones!CU14",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM14, , EPC_GTGC(BU14>=0, BU14, $AZ$20, CS14))",
+      "tab": "eEcon Stones",
+      "cell": "CU14"
+    },
+    "eEcon Stones!CU15": {
+      "id": "eEcon Stones!CU15",
+      "label": "eEcon Stones!CU15",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM15, , EPC_GTGC(BU15>=0, BU15, $AZ$20, CS15))",
+      "tab": "eEcon Stones",
+      "cell": "CU15"
+    },
+    "eEcon Stones!CU16": {
+      "id": "eEcon Stones!CU16",
+      "label": "eEcon Stones!CU16",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DM16, , EPC_GTGC(BU16>=0, BU16, $AZ$20, CS16))",
+      "tab": "eEcon Stones",
+      "cell": "CU16"
+    },
+    "eEcon Stones!DD10": {
+      "id": "eEcon Stones!DD10",
+      "label": "eEcon Stones!DD10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFERROR(IF(DM10, , LET( UWCount, COUNTIF($BK$15:$BK$17, TRUE), GTcd, IF($BK$15, CT10, 0), BHcd, IF($BK$16, CX10, 0), DWcd, IF($BK$17, DA10, 0), IFS($AO$7+$AS$7<>0, $BN$19+$BH$29, MAX(GTcd, BHcd, DWcd)<>SUM(GTcd, BHcd, DWcd)/UWCount, $BN$19",
+      "tab": "eEcon Stones",
+      "cell": "DD10"
+    },
+    "eEcon Stones!DD100": {
+      "id": "eEcon Stones!DD100",
+      "label": "eEcon Stones!DD100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFERROR(IF(DM100, , LET( UWCount, COUNTIF($BK$15:$BK$17, TRUE), GTcd, IF($BK$15, CT100, 0), BHcd, IF($BK$16, CX100, 0), DWcd, IF($BK$17, DA100, 0), IFS($AO$7+$AS$7<>0, $BN$19+$BH$29, MAX(GTcd, BHcd, DWcd)<>SUM(GTcd, BHcd, DWcd)/UWCount, $B",
+      "tab": "eEcon Stones",
+      "cell": "DD100"
+    },
+    "eEcon Stones!DD11": {
+      "id": "eEcon Stones!DD11",
+      "label": "eEcon Stones!DD11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFERROR(IF(DM11, , LET( UWCount, COUNTIF($BK$15:$BK$17, TRUE), GTcd, IF($BK$15, CT11, 0), BHcd, IF($BK$16, CX11, 0), DWcd, IF($BK$17, DA11, 0), IFS($AO$7+$AS$7<>0, $BN$19+$BH$29, MAX(GTcd, BHcd, DWcd)<>SUM(GTcd, BHcd, DWcd)/UWCount, $BN$19",
+      "tab": "eEcon Stones",
+      "cell": "DD11"
+    },
+    "eEcon Stones!DD12": {
+      "id": "eEcon Stones!DD12",
+      "label": "eEcon Stones!DD12",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFERROR(IF(DM12, , LET( UWCount, COUNTIF($BK$15:$BK$17, TRUE), GTcd, IF($BK$15, CT12, 0), BHcd, IF($BK$16, CX12, 0), DWcd, IF($BK$17, DA12, 0), IFS($AO$7+$AS$7<>0, $BN$19+$BH$29, MAX(GTcd, BHcd, DWcd)<>SUM(GTcd, BHcd, DWcd)/UWCount, $BN$19",
+      "tab": "eEcon Stones",
+      "cell": "DD12"
+    },
+    "eEcon Stones!DD13": {
+      "id": "eEcon Stones!DD13",
+      "label": "eEcon Stones!DD13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFERROR(IF(DM13, , LET( UWCount, COUNTIF($BK$15:$BK$17, TRUE), GTcd, IF($BK$15, CT13, 0), BHcd, IF($BK$16, CX13, 0), DWcd, IF($BK$17, DA13, 0), IFS($AO$7+$AS$7<>0, $BN$19+$BH$29, MAX(GTcd, BHcd, DWcd)<>SUM(GTcd, BHcd, DWcd)/UWCount, $BN$19",
+      "tab": "eEcon Stones",
+      "cell": "DD13"
+    },
+    "eEcon Stones!DD14": {
+      "id": "eEcon Stones!DD14",
+      "label": "eEcon Stones!DD14",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFERROR(IF(DM14, , LET( UWCount, COUNTIF($BK$15:$BK$17, TRUE), GTcd, IF($BK$15, CT14, 0), BHcd, IF($BK$16, CX14, 0), DWcd, IF($BK$17, DA14, 0), IFS($AO$7+$AS$7<>0, $BN$19+$BH$29, MAX(GTcd, BHcd, DWcd)<>SUM(GTcd, BHcd, DWcd)/UWCount, $BN$19",
+      "tab": "eEcon Stones",
+      "cell": "DD14"
+    },
+    "eEcon Stones!DD15": {
+      "id": "eEcon Stones!DD15",
+      "label": "eEcon Stones!DD15",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFERROR(IF(DM15, , LET( UWCount, COUNTIF($BK$15:$BK$17, TRUE), GTcd, IF($BK$15, CT15, 0), BHcd, IF($BK$16, CX15, 0), DWcd, IF($BK$17, DA15, 0), IFS($AO$7+$AS$7<>0, $BN$19+$BH$29, MAX(GTcd, BHcd, DWcd)<>SUM(GTcd, BHcd, DWcd)/UWCount, $BN$19",
+      "tab": "eEcon Stones",
+      "cell": "DD15"
+    },
+    "eEcon Stones!DD16": {
+      "id": "eEcon Stones!DD16",
+      "label": "eEcon Stones!DD16",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFERROR(IF(DM16, , LET( UWCount, COUNTIF($BK$15:$BK$17, TRUE), GTcd, IF($BK$15, CT16, 0), BHcd, IF($BK$16, CX16, 0), DWcd, IF($BK$17, DA16, 0), IFS($AO$7+$AS$7<>0, $BN$19+$BH$29, MAX(GTcd, BHcd, DWcd)<>SUM(GTcd, BHcd, DWcd)/UWCount, $BN$19",
+      "tab": "eEcon Stones",
+      "cell": "DD16"
+    },
+    "eEcon Stones!DN10": {
+      "id": "eEcon Stones!DN10",
+      "label": "eEcon Stones!DN10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DN$2, $DM10), , EPG_UW_TARGET_LEVEL(BR10+1, \"Golden Tower\", \"Multiplier\", $AZ$18), , ISBLANK(DVT_UW_COST(\"Golden Tower\", \"Multiplier\", BR10+1)), , TRUE, LET( Old, DE10, New, LET( TMult, $CH$8, HasGT, $BK$15, HasBH, $BK$16, HasDW, $",
+      "tab": "eEcon Stones",
+      "cell": "DN10"
+    },
+    "eEcon Stones!DN100": {
+      "id": "eEcon Stones!DN100",
+      "label": "eEcon Stones!DN100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DN$2, $DM100), , EPG_UW_TARGET_LEVEL(BR100+1, \"Golden Tower\", \"Multiplier\", $AZ$18), , ISBLANK(DVT_UW_COST(\"Golden Tower\", \"Multiplier\", BR100+1)), , TRUE, LET( Old, DE100, New, LET( TMult, $CH$8, HasGT, $BK$15, HasBH, $BK$16, HasD",
+      "tab": "eEcon Stones",
+      "cell": "DN100"
+    },
+    "eEcon Stones!DN11": {
+      "id": "eEcon Stones!DN11",
+      "label": "eEcon Stones!DN11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DN$2, $DM11), , EPG_UW_TARGET_LEVEL(BR11+1, \"Golden Tower\", \"Multiplier\", $AZ$18), , ISBLANK(DVT_UW_COST(\"Golden Tower\", \"Multiplier\", BR11+1)), , TRUE, LET( Old, DE11, New, LET( TMult, $CH$8, HasGT, $BK$15, HasBH, $BK$16, HasDW, $",
+      "tab": "eEcon Stones",
+      "cell": "DN11"
+    },
+    "eEcon Stones!DN12": {
+      "id": "eEcon Stones!DN12",
+      "label": "eEcon Stones!DN12",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DN$2, $DM12), , EPG_UW_TARGET_LEVEL(BR12+1, \"Golden Tower\", \"Multiplier\", $AZ$18), , ISBLANK(DVT_UW_COST(\"Golden Tower\", \"Multiplier\", BR12+1)), , TRUE, LET( Old, DE12, New, LET( TMult, $CH$8, HasGT, $BK$15, HasBH, $BK$16, HasDW, $",
+      "tab": "eEcon Stones",
+      "cell": "DN12"
+    },
+    "eEcon Stones!DN13": {
+      "id": "eEcon Stones!DN13",
+      "label": "eEcon Stones!DN13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DN$2, $DM13), , EPG_UW_TARGET_LEVEL(BR13+1, \"Golden Tower\", \"Multiplier\", $AZ$18), , ISBLANK(DVT_UW_COST(\"Golden Tower\", \"Multiplier\", BR13+1)), , TRUE, LET( Old, DE13, New, LET( TMult, $CH$8, HasGT, $BK$15, HasBH, $BK$16, HasDW, $",
+      "tab": "eEcon Stones",
+      "cell": "DN13"
+    },
+    "eEcon Stones!DN14": {
+      "id": "eEcon Stones!DN14",
+      "label": "eEcon Stones!DN14",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DN$2, $DM14), , EPG_UW_TARGET_LEVEL(BR14+1, \"Golden Tower\", \"Multiplier\", $AZ$18), , ISBLANK(DVT_UW_COST(\"Golden Tower\", \"Multiplier\", BR14+1)), , TRUE, LET( Old, DE14, New, LET( TMult, $CH$8, HasGT, $BK$15, HasBH, $BK$16, HasDW, $",
+      "tab": "eEcon Stones",
+      "cell": "DN14"
+    },
+    "eEcon Stones!DN15": {
+      "id": "eEcon Stones!DN15",
+      "label": "eEcon Stones!DN15",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DN$2, $DM15), , EPG_UW_TARGET_LEVEL(BR15+1, \"Golden Tower\", \"Multiplier\", $AZ$18), , ISBLANK(DVT_UW_COST(\"Golden Tower\", \"Multiplier\", BR15+1)), , TRUE, LET( Old, DE15, New, LET( TMult, $CH$8, HasGT, $BK$15, HasBH, $BK$16, HasDW, $",
+      "tab": "eEcon Stones",
+      "cell": "DN15"
+    },
+    "eEcon Stones!DN16": {
+      "id": "eEcon Stones!DN16",
+      "label": "eEcon Stones!DN16",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DN$2, $DM16), , EPG_UW_TARGET_LEVEL(BR16+1, \"Golden Tower\", \"Multiplier\", $AZ$18), , ISBLANK(DVT_UW_COST(\"Golden Tower\", \"Multiplier\", BR16+1)), , TRUE, LET( Old, DE16, New, LET( TMult, $CH$8, HasGT, $BK$15, HasBH, $BK$16, HasDW, $",
+      "tab": "eEcon Stones",
+      "cell": "DN16"
+    },
+    "eEcon Stones!DP2": {
+      "id": "eEcon Stones!DP2",
+      "label": "eEcon Stones!DP2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT(BK15), AZ17, EPG_UW_TARGET_LEVEL(BN15, \"Golden Tower\", \"Cooldown\", AZ18), ISBLANK(DVT_UW_COST(\"Golden Tower\", \"Cooldown\", BN15+1)))",
+      "tab": "eEcon Stones",
+      "cell": "DP2"
+    },
+    "eEcon Stones!DS2": {
+      "id": "eEcon Stones!DS2",
+      "label": "eEcon Stones!DS2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT(BK16), BE20=0, AZ17, EPG_UW_TARGET_LEVEL(BN16, \"Black Hole\", \"Cooldown\", AZ18), ISBLANK(DVT_UW_COST(\"Black Hole\", \"Cooldown\", BN16+1)))",
+      "tab": "eEcon Stones",
+      "cell": "DS2"
+    },
+    "eEcon Stones!DU2": {
+      "id": "eEcon Stones!DU2",
+      "label": "eEcon Stones!DU2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT(BK17), AZ17, EPG_UW_TARGET_LEVEL(BN17, \"Death Wave\", \"Cooldown\", AZ18), ISBLANK(DVT_UW_COST(\"Death Wave\", \"Cooldown\", BN17+1)))",
+      "tab": "eEcon Stones",
+      "cell": "DU2"
+    },
+    "eEcon Stones!DX2": {
+      "id": "eEcon Stones!DX2",
+      "label": "eEcon Stones!DX2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT(AZ17), CB5<110)",
+      "tab": "eEcon Stones",
+      "cell": "DX2"
+    },
+    "eEcon Stones!EB2": {
+      "id": "eEcon Stones!EB2",
+      "label": "eEcon Stones!EB2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( IDS_CARD_MASTERY(LEFT(EB4, LEN(EB4)-8)), AND($AZ$11, NOT(IDS_LAB_HAS_UNLOCKED(EB4))))",
+      "tab": "eEcon Stones",
+      "cell": "EB2"
+    },
+    "eEcon Stones!EC2": {
+      "id": "eEcon Stones!EC2",
+      "label": "eEcon Stones!EC2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( IDS_CARD_MASTERY(LEFT(EC4, LEN(EC4)-8)), AND($AZ$11, NOT(IDS_LAB_HAS_UNLOCKED(EC4))))",
+      "tab": "eEcon Stones",
+      "cell": "EC2"
+    },
+    "eEcon!AM25": {
+      "id": "eEcon!AM25",
+      "label": "eEcon!AM25",
+      "type": "COMPUTED_NODE",
+      "formula": "=AZ5",
+      "tab": "eEcon",
+      "cell": "AM25"
+    },
+    "eEcon!AN4": {
+      "id": "eEcon!AN4",
+      "label": "eEcon!AN4",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( ModName, IDS_MOD_GENERATOR_NAME($AZ$7), IF(IDS_MOD_GENERATOR_LEVEL(ModName)>159, \"1 level\",))",
+      "tab": "eEcon",
+      "cell": "AN4"
+    },
+    "eEcon!AO10": {
+      "id": "eEcon!AO10",
+      "label": "eEcon!AO10",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( ModName, IDS_MOD_GENERATOR_NAME($AZ$7), IDS_MOD_GENERATOR_SUBSTAT(ModName, AM10))",
+      "tab": "eEcon",
+      "cell": "AO10"
+    },
+    "eEcon!AO11": {
+      "id": "eEcon!AO11",
+      "label": "eEcon!AO11",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( ModName, IDS_MOD_GENERATOR_NAME($AZ$7), IDS_MOD_GENERATOR_SUBSTAT(ModName, AM11))",
+      "tab": "eEcon",
+      "cell": "AO11"
+    },
+    "eEcon!AO12": {
+      "id": "eEcon!AO12",
+      "label": "eEcon!AO12",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( ModName, IDS_MOD_GENERATOR_NAME($AZ$7), IDS_MOD_GENERATOR_SUBSTAT(ModName, AM12))",
+      "tab": "eEcon",
+      "cell": "AO12"
+    },
+    "eEcon!AO14": {
+      "id": "eEcon!AO14",
+      "label": "eEcon!AO14",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( ModName, IDS_MOD_CORE_NAME($AZ$7), cell, IDS_MOD_CORE_RARITY(ModName), IFERROR(LEFT(cell, SEARCH(\" \", cell) - 1), SUBSTITUTE(cell, \"+\", \"\")))",
+      "tab": "eEcon",
+      "cell": "AO14"
+    },
+    "eEcon!AO15": {
+      "id": "eEcon!AO15",
+      "label": "eEcon!AO15",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( ModName, IDS_MOD_CORE_NAME($AZ$7), ModRarity, IDS_MOD_CORE_RARITY(ModName), IF(ISNUMBER(SEARCH(AM15, ModName)), IFS( REGEXMATCH(ModRarity, \"Epic\"), 20, REGEXMATCH(ModRarity, \"Legendary\"), 10, REGEXMATCH(ModRarity, \"Mythic\"), 1, REGEXM",
+      "tab": "eEcon",
+      "cell": "AO15"
+    },
+    "eEcon!AO16": {
+      "id": "eEcon!AO16",
+      "label": "eEcon!AO16",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( ModName, IDS_MOD_CORE_NAME($AZ$7), IDS_MOD_CORE_SUBSTAT(ModName, AM16))",
+      "tab": "eEcon",
+      "cell": "AO16"
+    },
+    "eEcon!AO17": {
+      "id": "eEcon!AO17",
+      "label": "eEcon!AO17",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( ModName, IDS_MOD_CORE_NAME($AZ$7), IDS_MOD_CORE_SUBSTAT(ModName, AM17))",
+      "tab": "eEcon",
+      "cell": "AO17"
+    },
+    "eEcon!AZ11": {
+      "id": "eEcon!AZ11",
+      "label": "Hide Non-unlocked Labs",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eEcon",
+      "cell": "AZ11",
+      "webKey": "hideNonUnlockedLabs",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ12": {
+      "id": "eEcon!AZ12",
+      "label": "Show Labs",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eEcon",
+      "cell": "AZ12",
+      "webKey": "showLabs",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ13": {
+      "id": "eEcon!AZ13",
+      "label": "Show Enhancements",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eEcon",
+      "cell": "AZ13",
+      "webKey": "showEnhancements",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ14": {
+      "id": "eEcon!AZ14",
+      "label": "Hide Retroactive Discount Labs",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eEcon",
+      "cell": "AZ14",
+      "webKey": "showRetroactiveDiscountLabs",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ15": {
+      "id": "eEcon!AZ15",
+      "label": "Ignore Lab Target Levels",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eEcon",
+      "cell": "AZ15",
+      "webKey": "ignoreTargetLevels",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ17": {
+      "id": "eEcon!AZ17",
+      "label": "Keep GT|BH|DW CD Synced",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eEcon",
+      "cell": "AZ17",
+      "webKey": "keepCooldownsSynced",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ18": {
+      "id": "eEcon!AZ18",
+      "label": "Ignore UW Target Levels",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eEcon",
+      "cell": "AZ18",
+      "webKey": "ignoreUwTargetLevels",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ19": {
+      "id": "eEcon!AZ19",
+      "label": "% of Enemies that die in BH while it is active",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": "NUMBER",
+      "tab": "eEcon",
+      "cell": "AZ19",
+      "webKey": "economyEstimates.blackHoleKillShare",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ20": {
+      "id": "eEcon!AZ20",
+      "label": "// // Requires GT+ // //",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eEcon",
+      "cell": "AZ20",
+      "webKey": "economyEstimates.killsPerSecond",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eEcon!AZ22": {
+      "id": "eEcon!AZ22",
+      "label": "% of Enemies that die in GB while active",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": "NUMBER",
+      "tab": "eEcon",
+      "cell": "AZ22",
+      "webKey": "economyEstimates.goldBotKillShare",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ23": {
+      "id": "eEcon!AZ23",
+      "label": "GB Sync Desired Ratio:",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eEcon",
+      "cell": "AZ23",
+      "webKey": "economyEstimates.goldBotSyncRatio",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eEcon!AZ25": {
+      "id": "eEcon!AZ25",
+      "label": "Boss spawns every # of waves",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eEcon",
+      "cell": "AZ25",
+      "webKey": "economyEstimates.bossWaveInterval",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eEcon!AZ26": {
+      "id": "eEcon!AZ26",
+      "label": "Extra Orb % enemies tagged",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eEcon",
+      "cell": "AZ26",
+      "webKey": "economyEstimates.extraOrbTagShare",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eEcon!AZ28": {
+      "id": "eEcon!AZ28",
+      "label": "Cards📝",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eEcon",
+      "cell": "AZ28",
+      "webKey": "useCards",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ31": {
+      "id": "eEcon!AZ31",
+      "label": "eEcon!AZ31",
+      "type": "COMPUTED_NODE",
+      "formula": "=AND(AZ28, IDS_CARDS_IN_PRESET(AZ6, AU31))",
+      "tab": "eEcon",
+      "cell": "AZ31"
+    },
+    "eEcon!AZ33": {
+      "id": "eEcon!AZ33",
+      "label": "eEcon!AZ33",
+      "type": "COMPUTED_NODE",
+      "formula": "=AND(AZ28, IDS_CARDS_IN_PRESET(AZ6, AU33))",
+      "tab": "eEcon",
+      "cell": "AZ33"
+    },
+    "eEcon!AZ34": {
+      "id": "eEcon!AZ34",
+      "label": "eEcon!AZ34",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( CardName, LEFT(AU34, 9), AND(AZ28, IDS_CARDS_IN_PRESET(AZ6, CardName), IDS_CARD_MASTERY(CardName)))",
+      "tab": "eEcon",
+      "cell": "AZ34"
+    },
+    "eEcon!AZ35": {
+      "id": "eEcon!AZ35",
+      "label": "eEcon!AZ35",
+      "type": "COMPUTED_NODE",
+      "formula": "=AND(AZ28, IDS_CARDS_IN_PRESET(AZ6, AU35))",
+      "tab": "eEcon",
+      "cell": "AZ35"
+    },
+    "eEcon!AZ37": {
+      "id": "eEcon!AZ37",
+      "label": "eEcon!AZ37",
+      "type": "COMPUTED_NODE",
+      "formula": "=AND(AZ28, IDS_CARDS_IN_PRESET(AZ6, AU37))",
+      "tab": "eEcon",
+      "cell": "AZ37"
+    },
+    "eEcon!AZ39": {
+      "id": "eEcon!AZ39",
+      "label": "eEcon!AZ39",
+      "type": "COMPUTED_NODE",
+      "formula": "=AND(AZ28, IDS_CARDS_IN_PRESET(AZ6, AU39))",
+      "tab": "eEcon",
+      "cell": "AZ39"
+    },
+    "eEcon!AZ4": {
+      "id": "eEcon!AZ4",
+      "label": "PRESETS 🔗",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eEcon",
+      "cell": "AZ4",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ40": {
+      "id": "eEcon!AZ40",
+      "label": "eEcon!AZ40",
+      "type": "COMPUTED_NODE",
+      "formula": "=AND(AZ28, IDS_CARDS_IN_PRESET(AZ6, AU40))",
+      "tab": "eEcon",
+      "cell": "AZ40"
+    },
+    "eEcon!AZ43": {
+      "id": "eEcon!AZ43",
+      "label": "Perks",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eEcon",
+      "cell": "AZ43",
+      "webKey": "economyPerksEquipped",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ45": {
+      "id": "eEcon!AZ45",
+      "label": "eEcon!AZ45",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AZ$9, \"All Coin Bonus\")",
+      "tab": "eEcon",
+      "cell": "AZ45"
+    },
+    "eEcon!AZ46": {
+      "id": "eEcon!AZ46",
+      "label": "eEcon!AZ46",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AZ$9, \"Free Upgrade Chance for all\")",
+      "tab": "eEcon",
+      "cell": "AZ46"
+    },
+    "eEcon!AZ47": {
+      "id": "eEcon!AZ47",
+      "label": "eEcon!AZ47",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AZ$9, \"Coins / - Health\")",
+      "tab": "eEcon",
+      "cell": "AZ47"
+    },
+    "eEcon!AZ48": {
+      "id": "eEcon!AZ48",
+      "label": "eEcon!AZ48",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AZ$9, \"Golden Tower Bonus\")",
+      "tab": "eEcon",
+      "cell": "AZ48"
+    },
+    "eEcon!AZ49": {
+      "id": "eEcon!AZ49",
+      "label": "eEcon!AZ49",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AZ$9, AU49)",
+      "tab": "eEcon",
+      "cell": "AZ49"
+    },
+    "eEcon!AZ5": {
+      "id": "eEcon!AZ5",
+      "label": "Workshop",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eEcon",
+      "cell": "AZ5",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ50": {
+      "id": "eEcon!AZ50",
+      "label": "eEcon!AZ50",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AZ$9, \"Wave on Death Wave (Effect Wave)\")",
+      "tab": "eEcon",
+      "cell": "AZ50"
+    },
+    "eEcon!AZ6": {
+      "id": "eEcon!AZ6",
+      "label": "Cards",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eEcon",
+      "cell": "AZ6",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ7": {
+      "id": "eEcon!AZ7",
+      "label": "Modules",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eEcon",
+      "cell": "AZ7",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ8": {
+      "id": "eEcon!AZ8",
+      "label": "Bots",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eEcon",
+      "cell": "AZ8",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!AZ9": {
+      "id": "eEcon!AZ9",
+      "label": "Perks",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eEcon",
+      "cell": "AZ9",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eEcon!BF11": {
+      "id": "eEcon!BF11",
+      "label": "eEcon!BF11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AZ$15, ,IDS_LAB_TARGET(BD11))",
+      "tab": "eEcon",
+      "cell": "BF11"
+    },
+    "eEcon!BF12": {
+      "id": "eEcon!BF12",
+      "label": "eEcon!BF12",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AZ$15, ,IDS_LAB_TARGET(BD12))",
+      "tab": "eEcon",
+      "cell": "BF12"
+    },
+    "eEcon!BF13": {
+      "id": "eEcon!BF13",
+      "label": "eEcon!BF13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AZ$15, ,IDS_LAB_TARGET(BD13))",
+      "tab": "eEcon",
+      "cell": "BF13"
+    },
+    "eEcon!BF14": {
+      "id": "eEcon!BF14",
+      "label": "eEcon!BF14",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AZ$15, ,IDS_LAB_TARGET(BD14))",
+      "tab": "eEcon",
+      "cell": "BF14"
+    },
+    "eEcon!BF15": {
+      "id": "eEcon!BF15",
+      "label": "eEcon!BF15",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AZ$15, ,IDS_LAB_TARGET(BD15))",
+      "tab": "eEcon",
+      "cell": "BF15"
+    },
+    "eEcon!BF16": {
+      "id": "eEcon!BF16",
+      "label": "eEcon!BF16",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AZ$15, ,IDS_LAB_TARGET(BD16))",
+      "tab": "eEcon",
+      "cell": "BF16"
+    },
+    "eEcon!BF17": {
+      "id": "eEcon!BF17",
+      "label": "eEcon!BF17",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AZ$15, ,IDS_LAB_TARGET(BD17))",
+      "tab": "eEcon",
+      "cell": "BF17"
+    },
+    "eEcon!BF18": {
+      "id": "eEcon!BF18",
+      "label": "eEcon!BF18",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF($AZ$15, ,IDS_LAB_TARGET(BD18))",
+      "tab": "eEcon",
+      "cell": "BF18"
+    },
+    "eEcon!BI5": {
+      "id": "eEcon!BI5",
+      "label": "eEcon!BI5",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AZ$5, \"Coin / Kill Bonus\")",
+      "tab": "eEcon",
+      "cell": "BI5"
+    },
+    "eEcon!BI6": {
+      "id": "eEcon!BI6",
+      "label": "eEcon!BI6",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AZ$5, BD6)",
+      "tab": "eEcon",
+      "cell": "BI6"
+    },
+    "eEcon!BI7": {
+      "id": "eEcon!BI7",
+      "label": "eEcon!BI7",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AZ$5, BD7)",
+      "tab": "eEcon",
+      "cell": "BI7"
+    },
+    "eEcon!BI8": {
+      "id": "eEcon!BI8",
+      "label": "eEcon!BI8",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AZ$5, BD8)",
+      "tab": "eEcon",
+      "cell": "BI8"
+    },
+    "eEcon!BI9": {
+      "id": "eEcon!BI9",
+      "label": "eEcon!BI9",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AZ$5, RIGHT(BD9, 14))",
+      "tab": "eEcon",
+      "cell": "BI9"
+    },
+    "eEcon!BK19": {
+      "id": "eEcon!BK19",
+      "label": "eEcon!BK19",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_BOT_OWN(AZ8, \"Golden Bot\")",
+      "tab": "eEcon",
+      "cell": "BK19"
+    },
+    "eEcon!BK5": {
+      "id": "eEcon!BK5",
+      "label": "eEcon!BK5",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WSE_PRESET_LEVEL($AZ$5, \"Coin Bonus +\")",
+      "tab": "eEcon",
+      "cell": "BK5"
+    },
+    "eEcon!BK6": {
+      "id": "eEcon!BK6",
+      "label": "eEcon!BK6",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WSE_PRESET_LEVEL($AZ$5, \"Free Upgrades +\")",
+      "tab": "eEcon",
+      "cell": "BK6"
+    },
+    "eEcon!BL19": {
+      "id": "eEcon!BL19",
+      "label": "eEcon!BL19",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( BotName, \"Golden Bot\", BotProperty, \"Bonus\", DVT_BOT_STAT(BotName, BotProperty, LEFT(IDS_BOT_LEVEL(AZ8, BotName, BotProperty), 2)))",
+      "tab": "eEcon",
+      "cell": "BL19"
+    },
+    "eEcon!BM19": {
+      "id": "eEcon!BM19",
+      "label": "eEcon!BM19",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( BotName, \"Golden Bot\", BotProperty, \"Duration\", DVT_BOT_STAT(BotName, BotProperty, LEFT(IDS_BOT_LEVEL(AZ8, BotName, BotProperty), 2)))",
+      "tab": "eEcon",
+      "cell": "BM19"
+    },
+    "eEcon!BN19": {
+      "id": "eEcon!BN19",
+      "label": "eEcon!BN19",
+      "type": "COMPUTED_NODE",
+      "formula": "=LET( BotName, \"Golden Bot\", BotProperty, \"Cooldown\", DVT_BOT_STAT(BotName, BotProperty, LEFT(IDS_BOT_LEVEL(AZ8, BotName, BotProperty), 2)))",
+      "tab": "eEcon",
+      "cell": "BN19"
+    },
+    "eEcon!DE10": {
+      "id": "eEcon!DE10",
+      "label": "eEcon!DE10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DV10, , EPC_BHCB(BX10, $AZ$19))",
+      "tab": "eEcon",
+      "cell": "DE10"
+    },
+    "eEcon!DE100": {
+      "id": "eEcon!DE100",
+      "label": "eEcon!DE100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DV100, , EPC_BHCB(BX100, $AZ$19))",
+      "tab": "eEcon",
+      "cell": "DE100"
+    },
+    "eEcon!DE11": {
+      "id": "eEcon!DE11",
+      "label": "eEcon!DE11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DV11, , EPC_BHCB(BX11, $AZ$19))",
+      "tab": "eEcon",
+      "cell": "DE11"
+    },
+    "eEcon!DE12": {
+      "id": "eEcon!DE12",
+      "label": "eEcon!DE12",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DV12, , EPC_BHCB(BX12, $AZ$19))",
+      "tab": "eEcon",
+      "cell": "DE12"
+    },
+    "eEcon!DE13": {
+      "id": "eEcon!DE13",
+      "label": "eEcon!DE13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DV13, , EPC_BHCB(BX13, $AZ$19))",
+      "tab": "eEcon",
+      "cell": "DE13"
+    },
+    "eEcon!DE14": {
+      "id": "eEcon!DE14",
+      "label": "eEcon!DE14",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DV14, , EPC_BHCB(BX14, $AZ$19))",
+      "tab": "eEcon",
+      "cell": "DE14"
+    },
+    "eEcon!DE15": {
+      "id": "eEcon!DE15",
+      "label": "eEcon!DE15",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DV15, , EPC_BHCB(BX15, $AZ$19))",
+      "tab": "eEcon",
+      "cell": "DE15"
+    },
+    "eEcon!DE16": {
+      "id": "eEcon!DE16",
+      "label": "eEcon!DE16",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(DV16, , EPC_BHCB(BX16, $AZ$19))",
+      "tab": "eEcon",
+      "cell": "DE16"
+    },
+    "eEcon!DK5": {
+      "id": "eEcon!DK5",
+      "label": "eEcon!DK5",
+      "type": "COMPUTED_NODE",
+      "formula": "=($BL$19-1)*$AZ$22+1",
+      "tab": "eEcon",
+      "cell": "DK5"
+    },
+    "eEcon!DW10": {
+      "id": "eEcon!DW10",
+      "label": "eEcon!DW10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DW$2, $DV10), , OR(EPG_LEVEL_CHECK(BR10+1, $BF$5, $BG$5), BR$5+EPG_MODULE_LEVEL_LIMIT($AZ$12)<=BR10), , TRUE, LET( Old, CS10, New, EPC_CPK($BJ$5, BR10+1, $BO$22, CH10, $AO$8, $AP$8, CK10, AND($AZ$43, $AZ$45), CE10, AND($AZ$43, $AZ$",
+      "tab": "eEcon",
+      "cell": "DW10"
+    },
+    "eEcon!DW100": {
+      "id": "eEcon!DW100",
+      "label": "eEcon!DW100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DW$2, $DV100), , OR(EPG_LEVEL_CHECK(BR100+1, $BF$5, $BG$5), BR$5+EPG_MODULE_LEVEL_LIMIT($AZ$12)<=BR100), , TRUE, LET( Old, CS100, New, EPC_CPK($BJ$5, BR100+1, $BO$22, CH100, $AO$8, $AP$8, CK100, AND($AZ$43, $AZ$45), CE100, AND($AZ$",
+      "tab": "eEcon",
+      "cell": "DW100"
+    },
+    "eEcon!DW11": {
+      "id": "eEcon!DW11",
+      "label": "eEcon!DW11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DW$2, $DV11), , OR(EPG_LEVEL_CHECK(BR11+1, $BF$5, $BG$5), BR$5+EPG_MODULE_LEVEL_LIMIT($AZ$12)<=BR11), , TRUE, LET( Old, CS11, New, EPC_CPK($BJ$5, BR11+1, $BO$22, CH11, $AO$8, $AP$8, CK11, AND($AZ$43, $AZ$45), CE11, AND($AZ$43, $AZ$",
+      "tab": "eEcon",
+      "cell": "DW11"
+    },
+    "eEcon!DW12": {
+      "id": "eEcon!DW12",
+      "label": "eEcon!DW12",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DW$2, $DV12), , OR(EPG_LEVEL_CHECK(BR12+1, $BF$5, $BG$5), BR$5+EPG_MODULE_LEVEL_LIMIT($AZ$12)<=BR12), , TRUE, LET( Old, CS12, New, EPC_CPK($BJ$5, BR12+1, $BO$22, CH12, $AO$8, $AP$8, CK12, AND($AZ$43, $AZ$45), CE12, AND($AZ$43, $AZ$",
+      "tab": "eEcon",
+      "cell": "DW12"
+    },
+    "eEcon!DW13": {
+      "id": "eEcon!DW13",
+      "label": "eEcon!DW13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DW$2, $DV13), , OR(EPG_LEVEL_CHECK(BR13+1, $BF$5, $BG$5), BR$5+EPG_MODULE_LEVEL_LIMIT($AZ$12)<=BR13), , TRUE, LET( Old, CS13, New, EPC_CPK($BJ$5, BR13+1, $BO$22, CH13, $AO$8, $AP$8, CK13, AND($AZ$43, $AZ$45), CE13, AND($AZ$43, $AZ$",
+      "tab": "eEcon",
+      "cell": "DW13"
+    },
+    "eEcon!DW14": {
+      "id": "eEcon!DW14",
+      "label": "eEcon!DW14",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DW$2, $DV14), , OR(EPG_LEVEL_CHECK(BR14+1, $BF$5, $BG$5), BR$5+EPG_MODULE_LEVEL_LIMIT($AZ$12)<=BR14), , TRUE, LET( Old, CS14, New, EPC_CPK($BJ$5, BR14+1, $BO$22, CH14, $AO$8, $AP$8, CK14, AND($AZ$43, $AZ$45), CE14, AND($AZ$43, $AZ$",
+      "tab": "eEcon",
+      "cell": "DW14"
+    },
+    "eEcon!DW15": {
+      "id": "eEcon!DW15",
+      "label": "eEcon!DW15",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DW$2, $DV15), , OR(EPG_LEVEL_CHECK(BR15+1, $BF$5, $BG$5), BR$5+EPG_MODULE_LEVEL_LIMIT($AZ$12)<=BR15), , TRUE, LET( Old, CS15, New, EPC_CPK($BJ$5, BR15+1, $BO$22, CH15, $AO$8, $AP$8, CK15, AND($AZ$43, $AZ$45), CE15, AND($AZ$43, $AZ$",
+      "tab": "eEcon",
+      "cell": "DW15"
+    },
+    "eEcon!DW16": {
+      "id": "eEcon!DW16",
+      "label": "eEcon!DW16",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(DW$2, $DV16), , OR(EPG_LEVEL_CHECK(BR16+1, $BF$5, $BG$5), BR$5+EPG_MODULE_LEVEL_LIMIT($AZ$12)<=BR16), , TRUE, LET( Old, CS16, New, EPC_CPK($BJ$5, BR16+1, $BO$22, CH16, $AO$8, $AP$8, CK16, AND($AZ$43, $AZ$45), CE16, AND($AZ$43, $AZ$",
+      "tab": "eEcon",
+      "cell": "DW16"
+    },
+    "eEcon!EP10": {
+      "id": "eEcon!EP10",
+      "label": "eEcon!EP10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(EP$2, $DV10), , OR(CK10+1>$BL$5, CK$5+EPG_MODULE_LEVEL_LIMIT($AZ$13)<=CK10), , TRUE, LET( Old, CS10, New, EPC_CPK($BJ$5, BR10, $BO$22, CH10, $AO$8, $AP$8, CK10+1, AND($AZ$43, $AZ$45), CE10, AND($AZ$43, $AZ$47), CF10, $BP$5), CostD,",
+      "tab": "eEcon",
+      "cell": "EP10"
+    },
+    "eEcon!EP100": {
+      "id": "eEcon!EP100",
+      "label": "eEcon!EP100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(EP$2, $DV100), , OR(CK100+1>$BL$5, CK$5+EPG_MODULE_LEVEL_LIMIT($AZ$13)<=CK100), , TRUE, LET( Old, CS100, New, EPC_CPK($BJ$5, BR100, $BO$22, CH100, $AO$8, $AP$8, CK100+1, AND($AZ$43, $AZ$45), CE100, AND($AZ$43, $AZ$47), CF100, $BP$5",
+      "tab": "eEcon",
+      "cell": "EP100"
+    },
+    "eEcon!EP11": {
+      "id": "eEcon!EP11",
+      "label": "eEcon!EP11",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(EP$2, $DV11), , OR(CK11+1>$BL$5, CK$5+EPG_MODULE_LEVEL_LIMIT($AZ$13)<=CK11), , TRUE, LET( Old, CS11, New, EPC_CPK($BJ$5, BR11, $BO$22, CH11, $AO$8, $AP$8, CK11+1, AND($AZ$43, $AZ$45), CE11, AND($AZ$43, $AZ$47), CF11, $BP$5), CostD,",
+      "tab": "eEcon",
+      "cell": "EP11"
+    },
+    "eEcon!EP12": {
+      "id": "eEcon!EP12",
+      "label": "eEcon!EP12",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(EP$2, $DV12), , OR(CK12+1>$BL$5, CK$5+EPG_MODULE_LEVEL_LIMIT($AZ$13)<=CK12), , TRUE, LET( Old, CS12, New, EPC_CPK($BJ$5, BR12, $BO$22, CH12, $AO$8, $AP$8, CK12+1, AND($AZ$43, $AZ$45), CE12, AND($AZ$43, $AZ$47), CF12, $BP$5), CostD,",
+      "tab": "eEcon",
+      "cell": "EP12"
+    },
+    "eEcon!EP13": {
+      "id": "eEcon!EP13",
+      "label": "eEcon!EP13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(EP$2, $DV13), , OR(CK13+1>$BL$5, CK$5+EPG_MODULE_LEVEL_LIMIT($AZ$13)<=CK13), , TRUE, LET( Old, CS13, New, EPC_CPK($BJ$5, BR13, $BO$22, CH13, $AO$8, $AP$8, CK13+1, AND($AZ$43, $AZ$45), CE13, AND($AZ$43, $AZ$47), CF13, $BP$5), CostD,",
+      "tab": "eEcon",
+      "cell": "EP13"
+    },
+    "eEcon!EP14": {
+      "id": "eEcon!EP14",
+      "label": "eEcon!EP14",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(EP$2, $DV14), , OR(CK14+1>$BL$5, CK$5+EPG_MODULE_LEVEL_LIMIT($AZ$13)<=CK14), , TRUE, LET( Old, CS14, New, EPC_CPK($BJ$5, BR14, $BO$22, CH14, $AO$8, $AP$8, CK14+1, AND($AZ$43, $AZ$45), CE14, AND($AZ$43, $AZ$47), CF14, $BP$5), CostD,",
+      "tab": "eEcon",
+      "cell": "EP14"
+    },
+    "eEcon!EP15": {
+      "id": "eEcon!EP15",
+      "label": "eEcon!EP15",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(EP$2, $DV15), , OR(CK15+1>$BL$5, CK$5+EPG_MODULE_LEVEL_LIMIT($AZ$13)<=CK15), , TRUE, LET( Old, CS15, New, EPC_CPK($BJ$5, BR15, $BO$22, CH15, $AO$8, $AP$8, CK15+1, AND($AZ$43, $AZ$45), CE15, AND($AZ$43, $AZ$47), CF15, $BP$5), CostD,",
+      "tab": "eEcon",
+      "cell": "EP15"
+    },
+    "eEcon!EP16": {
+      "id": "eEcon!EP16",
+      "label": "eEcon!EP16",
+      "type": "COMPUTED_NODE",
+      "formula": "=IFS( OR(EP$2, $DV16), , OR(CK16+1>$BL$5, CK$5+EPG_MODULE_LEVEL_LIMIT($AZ$13)<=CK16), , TRUE, LET( Old, CS16, New, EPC_CPK($BJ$5, BR16, $BO$22, CH16, $AO$8, $AP$8, CK16+1, AND($AZ$43, $AZ$45), CE16, AND($AZ$43, $AZ$47), CF16, $BP$5), CostD,",
+      "tab": "eEcon",
+      "cell": "EP16"
+    },
+    "eHP Coins!CF10": {
+      "id": "eHP Coins!CF10",
+      "label": "eHP Coins!CF10",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_HEALTH($BH$6, $BC$6, AND($AY$16, $AY$19), $AV$19, $AY$20, BT10, BP10, AND($AY$28, $AY$30), $BC$14, AND($AY$28, $AY$36), AND($AY$28, $AY$37), $BL$6, $BN$6, $AM$25, $BC$17, CE10)",
+      "tab": "eHP Coins",
+      "cell": "CF10"
+    },
+    "eHP Coins!CF100": {
+      "id": "eHP Coins!CF100",
+      "label": "eHP Coins!CF100",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_HEALTH($BH$6, $BC$6, AND($AY$16, $AY$19), $AV$19, $AY$20, BT100, BP100, AND($AY$28, $AY$30), $BC$14, AND($AY$28, $AY$36), AND($AY$28, $AY$37), $BL$6, $BN$6, $AM$25, $BC$17, CE100)",
+      "tab": "eHP Coins",
+      "cell": "CF100"
+    },
+    "eHP Coins!CF101": {
+      "id": "eHP Coins!CF101",
+      "label": "eHP Coins!CF101",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_HEALTH($BH$6, $BC$6, AND($AY$16, $AY$19), $AV$19, $AY$20, BT101, BP101, AND($AY$28, $AY$30), $BC$14, AND($AY$28, $AY$36), AND($AY$28, $AY$37), $BL$6, $BN$6, $AM$25, $BC$17, CE101)",
+      "tab": "eHP Coins",
+      "cell": "CF101"
+    },
+    "eHP Coins!CF102": {
+      "id": "eHP Coins!CF102",
+      "label": "eHP Coins!CF102",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_HEALTH($BH$6, $BC$6, AND($AY$16, $AY$19), $AV$19, $AY$20, BT102, BP102, AND($AY$28, $AY$30), $BC$14, AND($AY$28, $AY$36), AND($AY$28, $AY$37), $BL$6, $BN$6, $AM$25, $BC$17, CE102)",
+      "tab": "eHP Coins",
+      "cell": "CF102"
+    },
+    "eHP Coins!CF103": {
+      "id": "eHP Coins!CF103",
+      "label": "eHP Coins!CF103",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_HEALTH($BH$6, $BC$6, AND($AY$16, $AY$19), $AV$19, $AY$20, BT103, BP103, AND($AY$28, $AY$30), $BC$14, AND($AY$28, $AY$36), AND($AY$28, $AY$37), $BL$6, $BN$6, $AM$25, $BC$17, CE103)",
+      "tab": "eHP Coins",
+      "cell": "CF103"
+    },
+    "eHP Coins!CF104": {
+      "id": "eHP Coins!CF104",
+      "label": "eHP Coins!CF104",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_HEALTH($BH$6, $BC$6, AND($AY$16, $AY$19), $AV$19, $AY$20, BT104, BP104, AND($AY$28, $AY$30), $BC$14, AND($AY$28, $AY$36), AND($AY$28, $AY$37), $BL$6, $BN$6, $AM$25, $BC$17, CE104)",
+      "tab": "eHP Coins",
+      "cell": "CF104"
+    },
+    "eHP Coins!CF105": {
+      "id": "eHP Coins!CF105",
+      "label": "eHP Coins!CF105",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_HEALTH($BH$6, $BC$6, AND($AY$16, $AY$19), $AV$19, $AY$20, BT105, BP105, AND($AY$28, $AY$30), $BC$14, AND($AY$28, $AY$36), AND($AY$28, $AY$37), $BL$6, $BN$6, $AM$25, $BC$17, CE105)",
+      "tab": "eHP Coins",
+      "cell": "CF105"
+    },
+    "eHP Coins!CF106": {
+      "id": "eHP Coins!CF106",
+      "label": "eHP Coins!CF106",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_HEALTH($BH$6, $BC$6, AND($AY$16, $AY$19), $AV$19, $AY$20, BT106, BP106, AND($AY$28, $AY$30), $BC$14, AND($AY$28, $AY$36), AND($AY$28, $AY$37), $BL$6, $BN$6, $AM$25, $BC$17, CE106)",
+      "tab": "eHP Coins",
+      "cell": "CF106"
+    },
+    "eHP Coins!CH10": {
+      "id": "eHP Coins!CH10",
+      "label": "eHP Coins!CH10",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_DABS($BH$8, $BC$8, AND($AY$16, $AY$25), $AV$25, $BK$23, BX10, $AN$9, $AO$9, BQ10, AND($AY$28, $AY$33), $BC$14, $BL$8, $BN$8)*$AY$11",
+      "tab": "eHP Coins",
+      "cell": "CH10"
+    },
+    "eHP Coins!CH100": {
+      "id": "eHP Coins!CH100",
+      "label": "eHP Coins!CH100",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_DABS($BH$8, $BC$8, AND($AY$16, $AY$25), $AV$25, $BK$23, BX100, $AN$9, $AO$9, BQ100, AND($AY$28, $AY$33), $BC$14, $BL$8, $BN$8)*$AY$11",
+      "tab": "eHP Coins",
+      "cell": "CH100"
+    },
+    "eHP Coins!CH101": {
+      "id": "eHP Coins!CH101",
+      "label": "eHP Coins!CH101",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_DABS($BH$8, $BC$8, AND($AY$16, $AY$25), $AV$25, $BK$23, BX101, $AN$9, $AO$9, BQ101, AND($AY$28, $AY$33), $BC$14, $BL$8, $BN$8)*$AY$11",
+      "tab": "eHP Coins",
+      "cell": "CH101"
+    },
+    "eHP Coins!CH102": {
+      "id": "eHP Coins!CH102",
+      "label": "eHP Coins!CH102",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_DABS($BH$8, $BC$8, AND($AY$16, $AY$25), $AV$25, $BK$23, BX102, $AN$9, $AO$9, BQ102, AND($AY$28, $AY$33), $BC$14, $BL$8, $BN$8)*$AY$11",
+      "tab": "eHP Coins",
+      "cell": "CH102"
+    },
+    "eHP Coins!CH103": {
+      "id": "eHP Coins!CH103",
+      "label": "eHP Coins!CH103",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_DABS($BH$8, $BC$8, AND($AY$16, $AY$25), $AV$25, $BK$23, BX103, $AN$9, $AO$9, BQ103, AND($AY$28, $AY$33), $BC$14, $BL$8, $BN$8)*$AY$11",
+      "tab": "eHP Coins",
+      "cell": "CH103"
+    },
+    "eHP Coins!CH104": {
+      "id": "eHP Coins!CH104",
+      "label": "eHP Coins!CH104",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_DABS($BH$8, $BC$8, AND($AY$16, $AY$25), $AV$25, $BK$23, BX104, $AN$9, $AO$9, BQ104, AND($AY$28, $AY$33), $BC$14, $BL$8, $BN$8)*$AY$11",
+      "tab": "eHP Coins",
+      "cell": "CH104"
+    },
+    "eHP Coins!CH105": {
+      "id": "eHP Coins!CH105",
+      "label": "eHP Coins!CH105",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_DABS($BH$8, $BC$8, AND($AY$16, $AY$25), $AV$25, $BK$23, BX105, $AN$9, $AO$9, BQ105, AND($AY$28, $AY$33), $BC$14, $BL$8, $BN$8)*$AY$11",
+      "tab": "eHP Coins",
+      "cell": "CH105"
+    },
+    "eHP Coins!CH106": {
+      "id": "eHP Coins!CH106",
+      "label": "eHP Coins!CH106",
+      "type": "COMPUTED_NODE",
+      "formula": "=EPH_DABS($BH$8, $BC$8, AND($AY$16, $AY$25), $AV$25, $BK$23, BX106, $AN$9, $AO$9, BQ106, AND($AY$28, $AY$33), $BC$14, $BL$8, $BN$8)*$AY$11",
+      "tab": "eHP Coins",
+      "cell": "CH106"
+    },
+    "eHP Coins!CU2": {
+      "id": "eHP Coins!CU2",
+      "label": "eHP Coins!CU2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT(IDS_LAB_LEVEL(\"Workshop Enhancements\")=1), NOT(AM23), WSPUTILITY_TOTAL_COINS_INVESTED( CHOOSECOLS('_IDS'!$T$16:$X$21, MATCH(AX4, '_IDS'!$T$2:$X$2, 0)), '_IDS'!$R$16:$R$21)<=50000000000000)",
+      "tab": "eHP Coins",
+      "cell": "CU2"
+    },
+    "eHP Coins!CW2": {
+      "id": "eHP Coins!CW2",
+      "label": "eHP Coins!CW2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT(AO5), AND($AY$13, NOT(IDS_LAB_HAS_UNLOCKED(CW4))) )",
+      "tab": "eHP Coins",
+      "cell": "CW2"
+    },
+    "eHP Coins!CX2": {
+      "id": "eHP Coins!CX2",
+      "label": "eHP Coins!CX2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT(AM23), NOT(AO12), AND($AY$14, NOT(IDS_LAB_HAS_UNLOCKED(CX4))) )",
+      "tab": "eHP Coins",
+      "cell": "CX2"
+    },
+    "eHP Coins!DD2": {
+      "id": "eHP Coins!DD2",
+      "label": "eHP Coins!DD2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT(AY20), AND($AY$14, NOT(IDS_LAB_HAS_UNLOCKED(DD4))) )",
+      "tab": "eHP Coins",
+      "cell": "DD2"
+    },
+    "eHP Coins!DF10": {
+      "id": "eHP Coins!DF10",
+      "label": "eHP Coins!DF10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(OR(CQ10, $DF$2, BV10<160, BV10>=300, BV$5+EPG_MODULE_LEVEL_LIMIT(AM$4)<=BV10), \"\", LET( NOW, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)), BV10), NEXT, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)), BV10",
+      "tab": "eHP Coins",
+      "cell": "DF10"
+    },
+    "eHP Coins!DF100": {
+      "id": "eHP Coins!DF100",
+      "label": "eHP Coins!DF100",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(OR(CQ100, $DF$2, BV100<160, BV100>=300, BV$5+EPG_MODULE_LEVEL_LIMIT(AM$4)<=BV100), \"\", LET( NOW, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)), BV100), NEXT, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)),",
+      "tab": "eHP Coins",
+      "cell": "DF100"
+    },
+    "eHP Coins!DF101": {
+      "id": "eHP Coins!DF101",
+      "label": "eHP Coins!DF101",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(OR(CQ101, $DF$2, BV101<160, BV101>=300, BV$5+EPG_MODULE_LEVEL_LIMIT(AM$4)<=BV101), \"\", LET( NOW, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)), BV101), NEXT, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)),",
+      "tab": "eHP Coins",
+      "cell": "DF101"
+    },
+    "eHP Coins!DF102": {
+      "id": "eHP Coins!DF102",
+      "label": "eHP Coins!DF102",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(OR(CQ102, $DF$2, BV102<160, BV102>=300, BV$5+EPG_MODULE_LEVEL_LIMIT(AM$4)<=BV102), \"\", LET( NOW, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)), BV102), NEXT, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)),",
+      "tab": "eHP Coins",
+      "cell": "DF102"
+    },
+    "eHP Coins!DF103": {
+      "id": "eHP Coins!DF103",
+      "label": "eHP Coins!DF103",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(OR(CQ103, $DF$2, BV103<160, BV103>=300, BV$5+EPG_MODULE_LEVEL_LIMIT(AM$4)<=BV103), \"\", LET( NOW, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)), BV103), NEXT, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)),",
+      "tab": "eHP Coins",
+      "cell": "DF103"
+    },
+    "eHP Coins!DF104": {
+      "id": "eHP Coins!DF104",
+      "label": "eHP Coins!DF104",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(OR(CQ104, $DF$2, BV104<160, BV104>=300, BV$5+EPG_MODULE_LEVEL_LIMIT(AM$4)<=BV104), \"\", LET( NOW, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)), BV104), NEXT, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)),",
+      "tab": "eHP Coins",
+      "cell": "DF104"
+    },
+    "eHP Coins!DF105": {
+      "id": "eHP Coins!DF105",
+      "label": "eHP Coins!DF105",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(OR(CQ105, $DF$2, BV105<160, BV105>=300, BV$5+EPG_MODULE_LEVEL_LIMIT(AM$4)<=BV105), \"\", LET( NOW, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)), BV105), NEXT, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)),",
+      "tab": "eHP Coins",
+      "cell": "DF105"
+    },
+    "eHP Coins!DF106": {
+      "id": "eHP Coins!DF106",
+      "label": "eHP Coins!DF106",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(OR(CQ106, $DF$2, BV106<160, BV106>=300, BV$5+EPG_MODULE_LEVEL_LIMIT(AM$4)<=BV106), \"\", LET( NOW, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)), BV106), NEXT, MODSTAT_ARMOR(IDS_MOD_ARMOR_RARITY(IDS_MOD_ARMOR_NAME($AX$6)),",
+      "tab": "eHP Coins",
+      "cell": "DF106"
+    },
+    "eHP Coins!DJ2": {
+      "id": "eHP Coins!DJ2",
+      "label": "eHP Coins!DJ2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT($AO$5), AND($AY$14, NOT(IDS_LAB_HAS_UNLOCKED(DJ4))) )",
+      "tab": "eHP Coins",
+      "cell": "DJ2"
+    },
+    "eHP Coins!DK2": {
+      "id": "eHP Coins!DK2",
+      "label": "eHP Coins!DK2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( EPG_LEVEL_CHECK(BC5+1, $BD$5, $BE$5), AND($AY$14, NOT(IDS_LAB_HAS_UNLOCKED(DK4))) )",
+      "tab": "eHP Coins",
+      "cell": "DK2"
+    },
+    "eHP Stone!CB5": {
+      "id": "eHP Stone!CB5",
+      "label": "eHP Stone!CB5",
+      "type": "COMPUTED_NODE",
+      "formula": "=1/(1-IF($AM$24, MIN($AY$12/6*10, 3%*$BC$18), 0))",
+      "tab": "eHP Stone",
+      "cell": "CB5"
+    },
+    "eHP Stone!CF2": {
+      "id": "eHP Stone!CF2",
+      "label": "eHP Stone!CF2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT(AO5), SUM(AR8:AR10)=0, AND($AY$14, NOT(IDS_LAB_HAS_UNLOCKED(CF4))) )",
+      "tab": "eHP Stone",
+      "cell": "CF2"
+    },
+    "eHP Stone!CG2": {
+      "id": "eHP Stone!CG2",
+      "label": "eHP Stone!CG2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( OR(NOT(AM23), AR13=0), NOT(AO12), AND($AY$14, NOT(IDS_LAB_HAS_UNLOCKED(CG4))) )",
+      "tab": "eHP Stone",
+      "cell": "CG2"
+    },
+    "eHP Stone!CK2": {
+      "id": "eHP Stone!CK2",
+      "label": "eHP Stone!CK2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( NOT($AO$5), AND($AY$14, NOT(IDS_LAB_HAS_UNLOCKED(CK4))) )",
+      "tab": "eHP Stone",
+      "cell": "CK2"
+    },
+    "eHP!AX3": {
+      "id": "eHP!AX3",
+      "label": "PRESETS 🔗",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eHP",
+      "cell": "AX3",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eHP!AX4": {
+      "id": "eHP!AX4",
+      "label": "Workshop",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eHP",
+      "cell": "AX4",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eHP!AX5": {
+      "id": "eHP!AX5",
+      "label": "Cards",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eHP",
+      "cell": "AX5",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eHP!AX6": {
+      "id": "eHP!AX6",
+      "label": "Modules",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eHP",
+      "cell": "AX6",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eHP!AX7": {
+      "id": "eHP!AX7",
+      "label": "Perks",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eHP",
+      "cell": "AX7",
+      "webKey": "presets",
+      "webStatus": "ids_derived",
+      "classifiedBy": "dataValidation"
+    },
+    "eHP!AY10": {
+      "id": "eHP!AY10",
+      "label": "Simulated Tier",
+      "type": "INPUT_LEAF",
+      "controlType": "DROPDOWN",
+      "dataType": "STRING",
+      "tab": "eHP",
+      "cell": "AY10",
+      "webKey": "simulatedTier",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eHP!AY11": {
+      "id": "eHP!AY11",
+      "label": "Enemies Attacking Together",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eHP",
+      "cell": "AY11",
+      "webKey": "enemiesAttackingTogether",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eHP!AY12": {
+      "id": "eHP!AY12",
+      "label": "CL DMG does % of Total Damage:",
+      "type": "INPUT_LEAF",
+      "controlType": "NUMBER",
+      "dataType": null,
+      "tab": "eHP",
+      "cell": "AY12",
+      "webKey": "chainLightningDamagePct",
+      "webStatus": "bound",
+      "classifiedBy": "valueShape"
+    },
+    "eHP!AY13": {
+      "id": "eHP!AY13",
+      "label": "Ignore Target Levels",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eHP",
+      "cell": "AY13",
+      "webKey": "ignoreTargetLevels",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eHP!AY14": {
+      "id": "eHP!AY14",
+      "label": "Hide Non-unlocked Labs",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eHP",
+      "cell": "AY14",
+      "webKey": "hideNonUnlockedLabs",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eHP!AY16": {
+      "id": "eHP!AY16",
+      "label": "Cards📝",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eHP",
+      "cell": "AY16",
+      "webKey": "useCards",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eHP!AY19": {
+      "id": "eHP!AY19",
+      "label": "eHP!AY19",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$5, AT19)",
+      "tab": "eHP",
+      "cell": "AY19"
+    },
+    "eHP!AY21": {
+      "id": "eHP!AY21",
+      "label": "eHP!AY21",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$5, AT21)",
+      "tab": "eHP",
+      "cell": "AY21"
+    },
+    "eHP!AY23": {
+      "id": "eHP!AY23",
+      "label": "eHP!AY23",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$5, AT23)",
+      "tab": "eHP",
+      "cell": "AY23"
+    },
+    "eHP!AY25": {
+      "id": "eHP!AY25",
+      "label": "eHP!AY25",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_CARDS_IN_PRESET($AX$5, AT25)",
+      "tab": "eHP",
+      "cell": "AY25"
+    },
+    "eHP!AY26": {
+      "id": "eHP!AY26",
+      "label": "eHP!AY26",
+      "type": "COMPUTED_NODE",
+      "formula": "=AND(IDS_CARDS_IN_PRESET($AX$5, \"Second Wind\"), IDS_CARD_MASTERY(\"Second Wind\"), AY16)",
+      "tab": "eHP",
+      "cell": "AY26"
+    },
+    "eHP!AY28": {
+      "id": "eHP!AY28",
+      "label": "Perks",
+      "type": "INPUT_LEAF",
+      "controlType": "TOGGLE",
+      "dataType": "BOOLEAN",
+      "tab": "eHP",
+      "cell": "AY28",
+      "webKey": "perks",
+      "webStatus": "bound",
+      "classifiedBy": "dataValidation"
+    },
+    "eHP!AY30": {
+      "id": "eHP!AY30",
+      "label": "eHP!AY30",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$7, AT30)",
+      "tab": "eHP",
+      "cell": "AY30"
+    },
+    "eHP!AY31": {
+      "id": "eHP!AY31",
+      "label": "eHP!AY31",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$7, AT31)",
+      "tab": "eHP",
+      "cell": "AY31"
+    },
+    "eHP!AY32": {
+      "id": "eHP!AY32",
+      "label": "eHP!AY32",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$7, AT32)",
+      "tab": "eHP",
+      "cell": "AY32"
+    },
+    "eHP!AY33": {
+      "id": "eHP!AY33",
+      "label": "eHP!AY33",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$7, AT33)",
+      "tab": "eHP",
+      "cell": "AY33"
+    },
+    "eHP!AY34": {
+      "id": "eHP!AY34",
+      "label": "eHP!AY34",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$7, \"- Enemies Damage / - Damage\")",
+      "tab": "eHP",
+      "cell": "AY34"
+    },
+    "eHP!AY35": {
+      "id": "eHP!AY35",
+      "label": "eHP!AY35",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$7, \"- Enemies Health / - Regen and Lifesteal\")",
+      "tab": "eHP",
+      "cell": "AY35"
+    },
+    "eHP!AY36": {
+      "id": "eHP!AY36",
+      "label": "eHP!AY36",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$7, \"Coins / - Health\")",
+      "tab": "eHP",
+      "cell": "AY36"
+    },
+    "eHP!AY37": {
+      "id": "eHP!AY37",
+      "label": "eHP!AY37",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_PERK_IN_PRESET($AX$7, \"Health Regen / - Health\")",
+      "tab": "eHP",
+      "cell": "AY37"
+    },
+    "eHP!BG10": {
+      "id": "eHP!BG10",
+      "label": "eHP!BG10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$4, BB10)",
+      "tab": "eHP",
+      "cell": "BG10"
+    },
+    "eHP!BG13": {
+      "id": "eHP!BG13",
+      "label": "eHP!BG13",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$4, \"Max Amount\")",
+      "tab": "eHP",
+      "cell": "BG13"
+    },
+    "eHP!BG6": {
+      "id": "eHP!BG6",
+      "label": "eHP!BG6",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$4, BB6)",
+      "tab": "eHP",
+      "cell": "BG6"
+    },
+    "eHP!BG7": {
+      "id": "eHP!BG7",
+      "label": "eHP!BG7",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$4, BB7)",
+      "tab": "eHP",
+      "cell": "BG7"
+    },
+    "eHP!BG8": {
+      "id": "eHP!BG8",
+      "label": "eHP!BG8",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$4, BB8)",
+      "tab": "eHP",
+      "cell": "BG8"
+    },
+    "eHP!BG9": {
+      "id": "eHP!BG9",
+      "label": "eHP!BG9",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WS_PRESET_LEVEL($AX$4, BB9)",
+      "tab": "eHP",
+      "cell": "BG9"
+    },
+    "eHP!BI10": {
+      "id": "eHP!BI10",
+      "label": "eHP!BI10",
+      "type": "COMPUTED_NODE",
+      "formula": "=IDS_WSE_PRESET_LEVEL($AX$4, BB10&\" +\")",
+      "tab": "eHP",
+      "cell": "BI10"
+    },
+    "eHP!CI6": {
+      "id": "eHP!CI6",
+      "label": "eHP!CI6",
+      "type": "COMPUTED_NODE",
+      "formula": "=IF(AY10=\"Tourney\", 0, IDS_DISSONANT_PB(\"Defense\", SUBSTITUTE(AY10, \"T\", \"Tier \")))",
+      "tab": "eHP",
+      "cell": "CI6"
+    },
+    "eHP!CS10": {
+      "id": "eHP!CS10",
+      "label": "eHP!CS10",
+      "type": "COMPUTED_NODE",
+      "formula": "=1/(1-IF($AM$24, MIN($AY$12/6*10, 3%*BZ10), 0))",
+      "tab": "eHP",
+      "cell": "CS10"
+    },
+    "eHP!CS100": {
+      "id": "eHP!CS100",
+      "label": "eHP!CS100",
+      "type": "COMPUTED_NODE",
+      "formula": "=1/(1-IF($AM$24, MIN($AY$12/6*10, 3%*BZ100), 0))",
+      "tab": "eHP",
+      "cell": "CS100"
+    },
+    "eHP!CS101": {
+      "id": "eHP!CS101",
+      "label": "eHP!CS101",
+      "type": "COMPUTED_NODE",
+      "formula": "=1/(1-IF($AM$24, MIN($AY$12/6*10, 3%*BZ101), 0))",
+      "tab": "eHP",
+      "cell": "CS101"
+    },
+    "eHP!CS102": {
+      "id": "eHP!CS102",
+      "label": "eHP!CS102",
+      "type": "COMPUTED_NODE",
+      "formula": "=1/(1-IF($AM$24, MIN($AY$12/6*10, 3%*BZ102), 0))",
+      "tab": "eHP",
+      "cell": "CS102"
+    },
+    "eHP!CS103": {
+      "id": "eHP!CS103",
+      "label": "eHP!CS103",
+      "type": "COMPUTED_NODE",
+      "formula": "=1/(1-IF($AM$24, MIN($AY$12/6*10, 3%*BZ103), 0))",
+      "tab": "eHP",
+      "cell": "CS103"
+    },
+    "eHP!CS104": {
+      "id": "eHP!CS104",
+      "label": "eHP!CS104",
+      "type": "COMPUTED_NODE",
+      "formula": "=1/(1-IF($AM$24, MIN($AY$12/6*10, 3%*BZ104), 0))",
+      "tab": "eHP",
+      "cell": "CS104"
+    },
+    "eHP!CS105": {
+      "id": "eHP!CS105",
+      "label": "eHP!CS105",
+      "type": "COMPUTED_NODE",
+      "formula": "=1/(1-IF($AM$24, MIN($AY$12/6*10, 3%*BZ105), 0))",
+      "tab": "eHP",
+      "cell": "CS105"
+    },
+    "eHP!CX2": {
+      "id": "eHP!CX2",
+      "label": "eHP!CX2",
+      "type": "COMPUTED_NODE",
+      "formula": "=OR( AND($AY$14, NOT(IDS_LAB_HAS_UNLOCKED(CX4))), EPG_LEVEL_CHECK(BR5+1, BD9, BE9) )",
+      "tab": "eHP",
+      "cell": "CX2"
+    }
+  },
+  "edges": [
+    {
+      "from": "eDamage!AU23",
+      "to": "eDamage!BD11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AU23",
+      "to": "eDamage!BD13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AU23",
+      "to": "eDamage!BD20",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AU23",
+      "to": "eDamage!BD21",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AU23",
+      "to": "eDamage!BD22",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AU23",
+      "to": "eDamage!BD23",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AU23",
+      "to": "eDamage!BD26",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AU23",
+      "to": "eDamage!BD27",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX12",
+      "to": "eDamage!BC12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX12",
+      "to": "eDamage!BD12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX13",
+      "to": "eDamage Coins!BV5",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX13",
+      "to": "eDamage!BG10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX13",
+      "to": "eDamage!BG11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX13",
+      "to": "eDamage!BG12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX13",
+      "to": "eDamage!BG13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX13",
+      "to": "eDamage!BG14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX13",
+      "to": "eDamage!BG15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX13",
+      "to": "eDamage!BG16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX14",
+      "to": "eDamage!AY42",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX14",
+      "to": "eDamage!AY44",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX14",
+      "to": "eDamage!AY45",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX14",
+      "to": "eDamage!AY47",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX14",
+      "to": "eDamage!AY49",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX14",
+      "to": "eDamage!AY51",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX14",
+      "to": "eDamage!AY52",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX14",
+      "to": "eDamage!AY54",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX15",
+      "to": "eDamage Coins!CD5",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX15",
+      "to": "eDamage Coins!CF5",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX15",
+      "to": "eDamage Coins!CQ10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX15",
+      "to": "eDamage Coins!CQ100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX15",
+      "to": "eDamage Coins!CQ101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX15",
+      "to": "eDamage Coins!CQ102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX15",
+      "to": "eDamage Coins!CQ103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX15",
+      "to": "eDamage Coins!CQ104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX16",
+      "to": "eDamage!AY63",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX16",
+      "to": "eDamage!AY64",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX16",
+      "to": "eDamage!AY65",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX16",
+      "to": "eDamage!AY66",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX16",
+      "to": "eDamage!AY67",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX16",
+      "to": "eDamage!AY68",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX16",
+      "to": "eDamage!AY69",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX16",
+      "to": "eDamage!AY70",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX19",
+      "to": "eDamage Coins!CQ10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX19",
+      "to": "eDamage Coins!CQ100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX19",
+      "to": "eDamage Coins!CQ101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX19",
+      "to": "eDamage Coins!CQ102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX19",
+      "to": "eDamage Coins!CQ103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX19",
+      "to": "eDamage Coins!CQ104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX19",
+      "to": "eDamage Coins!CQ105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AX19",
+      "to": "eDamage Coins!CQ106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY21",
+      "to": "eDamage Coins!DT10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY21",
+      "to": "eDamage Coins!DT100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY21",
+      "to": "eDamage Coins!DT101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY21",
+      "to": "eDamage Coins!DT102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY21",
+      "to": "eDamage Coins!DT103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY21",
+      "to": "eDamage Coins!DT104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY21",
+      "to": "eDamage Coins!DT105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY21",
+      "to": "eDamage Coins!DT106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY22",
+      "to": "eDamage Coins!DK10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY22",
+      "to": "eDamage Coins!DK100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY22",
+      "to": "eDamage Coins!DK101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY22",
+      "to": "eDamage Coins!DK102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY22",
+      "to": "eDamage Coins!DK103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY22",
+      "to": "eDamage Coins!DK104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY22",
+      "to": "eDamage Coins!DK105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY22",
+      "to": "eDamage Coins!DK106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY23",
+      "to": "eDamage Stone!EK10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY23",
+      "to": "eDamage Stone!EK100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY23",
+      "to": "eDamage Stone!EK101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY23",
+      "to": "eDamage Stone!EK102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY23",
+      "to": "eDamage Stone!EK103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY23",
+      "to": "eDamage Stone!EK104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY23",
+      "to": "eDamage Stone!EK105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY23",
+      "to": "eDamage Stone!EK106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY24",
+      "to": "eDamage Stone!EM2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY24",
+      "to": "eDamage Stone!ES2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY25",
+      "to": "eDamage Coins!EL2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY25",
+      "to": "eDamage Coins!EN2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY25",
+      "to": "eDamage Coins!EQ2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY25",
+      "to": "eDamage!FB2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY25",
+      "to": "eDamage!FC2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY25",
+      "to": "eDamage!FD2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY25",
+      "to": "eDamage!FE2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY25",
+      "to": "eDamage!FF2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY26",
+      "to": "eDamage Coins!EH2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY26",
+      "to": "eDamage Coins!EM2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY26",
+      "to": "eDamage Coins!EO2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY26",
+      "to": "eDamage Coins!EP2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY26",
+      "to": "eDamage Coins!ER2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY26",
+      "to": "eDamage Coins!EU2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY26",
+      "to": "eDamage Coins!EV2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY26",
+      "to": "eDamage Coins!EW2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY27",
+      "to": "eDamage Coins!EH10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY27",
+      "to": "eDamage Coins!EH100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY27",
+      "to": "eDamage Coins!EH101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY27",
+      "to": "eDamage Coins!EH102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY27",
+      "to": "eDamage Coins!EH103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY27",
+      "to": "eDamage Coins!EH104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY27",
+      "to": "eDamage Coins!EH105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY27",
+      "to": "eDamage Coins!EH106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY28",
+      "to": "eDamage!AL46",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY28",
+      "to": "eDamage!AO71",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY28",
+      "to": "eDamage!AP46",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY28",
+      "to": "eDamage!ED5",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY29",
+      "to": "eDamage!EJ10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY29",
+      "to": "eDamage!EJ100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY29",
+      "to": "eDamage!EJ101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY29",
+      "to": "eDamage!EJ102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY29",
+      "to": "eDamage!EJ103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY29",
+      "to": "eDamage!EJ104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY29",
+      "to": "eDamage!EJ105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY29",
+      "to": "eDamage!EJ106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY30",
+      "to": "eDamage Coins!DU10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY30",
+      "to": "eDamage Coins!DU100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY30",
+      "to": "eDamage Coins!DU101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY30",
+      "to": "eDamage Coins!DU102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY30",
+      "to": "eDamage Coins!DU103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY30",
+      "to": "eDamage Coins!DU104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY30",
+      "to": "eDamage Coins!DU105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY30",
+      "to": "eDamage Coins!DU106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY31",
+      "to": "eDamage Coins!DX10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY31",
+      "to": "eDamage Coins!DX100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY31",
+      "to": "eDamage Coins!DX101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY31",
+      "to": "eDamage Coins!DX102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY31",
+      "to": "eDamage Coins!DX103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY31",
+      "to": "eDamage Coins!DX104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY31",
+      "to": "eDamage Coins!DX105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY31",
+      "to": "eDamage Coins!DX106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY32",
+      "to": "eDamage Stone!DY10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY32",
+      "to": "eDamage Stone!DY100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY32",
+      "to": "eDamage Stone!DY101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY32",
+      "to": "eDamage Stone!DY102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY32",
+      "to": "eDamage Stone!DY103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY32",
+      "to": "eDamage Stone!DY104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY32",
+      "to": "eDamage Stone!DY105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY32",
+      "to": "eDamage Stone!DY106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY33",
+      "to": "eDamage Stone!EC10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY33",
+      "to": "eDamage Stone!EC100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY33",
+      "to": "eDamage Stone!EC101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY33",
+      "to": "eDamage Stone!EC102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY33",
+      "to": "eDamage Stone!EC103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY33",
+      "to": "eDamage Stone!EC104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY33",
+      "to": "eDamage Stone!EC105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY33",
+      "to": "eDamage Stone!EC106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY34",
+      "to": "eDamage Coins!CU10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY34",
+      "to": "eDamage Coins!CU100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY34",
+      "to": "eDamage Coins!CU101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY34",
+      "to": "eDamage Coins!CU102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY34",
+      "to": "eDamage Coins!CU103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY34",
+      "to": "eDamage Coins!CU104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY34",
+      "to": "eDamage Coins!CU105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY34",
+      "to": "eDamage Coins!CU106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY35",
+      "to": "eDamage!AP8",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY35",
+      "to": "eDamage!DI5",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY36",
+      "to": "eDamage Coins!DZ10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY36",
+      "to": "eDamage Coins!DZ100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY36",
+      "to": "eDamage Coins!DZ101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY36",
+      "to": "eDamage Coins!DZ102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY36",
+      "to": "eDamage Coins!DZ103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY36",
+      "to": "eDamage Coins!DZ104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY36",
+      "to": "eDamage Coins!DZ105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY36",
+      "to": "eDamage Coins!DZ106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY37",
+      "to": "eDamage!EN5",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY39",
+      "to": "eDamage Coins!CR10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY39",
+      "to": "eDamage Coins!CR100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY39",
+      "to": "eDamage Coins!CR101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY39",
+      "to": "eDamage Coins!CR102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY39",
+      "to": "eDamage Coins!CR103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY39",
+      "to": "eDamage Coins!CR104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY39",
+      "to": "eDamage Coins!CR105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY39",
+      "to": "eDamage Coins!CR106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY61",
+      "to": "eDamage Coins!CW10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY61",
+      "to": "eDamage Coins!CW100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY61",
+      "to": "eDamage Coins!CW101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY61",
+      "to": "eDamage Coins!CW102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY61",
+      "to": "eDamage Coins!CW103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY61",
+      "to": "eDamage Coins!CW104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY61",
+      "to": "eDamage Coins!CW105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eDamage!AY61",
+      "to": "eDamage Coins!CW106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ11",
+      "to": "eEcon Discount!CM2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ11",
+      "to": "eEcon Discount!CN2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ11",
+      "to": "eEcon Discount!CO2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ11",
+      "to": "eEcon Discount!CP2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ11",
+      "to": "eEcon Discount!CQ2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ11",
+      "to": "eEcon Discount!CR2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ11",
+      "to": "eEcon Stones!EB2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ11",
+      "to": "eEcon Stones!EC2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ12",
+      "to": "eEcon!DW10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ12",
+      "to": "eEcon!DW100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ12",
+      "to": "eEcon!DW11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ12",
+      "to": "eEcon!DW12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ12",
+      "to": "eEcon!DW13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ12",
+      "to": "eEcon!DW14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ12",
+      "to": "eEcon!DW15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ12",
+      "to": "eEcon!DW16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ13",
+      "to": "eEcon!EP10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ13",
+      "to": "eEcon!EP100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ13",
+      "to": "eEcon!EP11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ13",
+      "to": "eEcon!EP12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ13",
+      "to": "eEcon!EP13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ13",
+      "to": "eEcon!EP14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ13",
+      "to": "eEcon!EP15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ13",
+      "to": "eEcon!EP16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ14",
+      "to": "eEcon Discount!CM2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ14",
+      "to": "eEcon Discount!CO2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ14",
+      "to": "eEcon Discount!CP2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ14",
+      "to": "eEcon Discount!CQ2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ14",
+      "to": "eEcon Discount!CR2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ15",
+      "to": "eEcon!BF11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ15",
+      "to": "eEcon!BF12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ15",
+      "to": "eEcon!BF13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ15",
+      "to": "eEcon!BF14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ15",
+      "to": "eEcon!BF15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ15",
+      "to": "eEcon!BF16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ15",
+      "to": "eEcon!BF17",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ15",
+      "to": "eEcon!BF18",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ17",
+      "to": "eEcon Stones!DP2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ17",
+      "to": "eEcon Stones!DS2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ17",
+      "to": "eEcon Stones!DU2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ17",
+      "to": "eEcon Stones!DX2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ18",
+      "to": "eEcon Stones!DN10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ18",
+      "to": "eEcon Stones!DN100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ18",
+      "to": "eEcon Stones!DN11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ18",
+      "to": "eEcon Stones!DN12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ18",
+      "to": "eEcon Stones!DN13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ18",
+      "to": "eEcon Stones!DN14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ18",
+      "to": "eEcon Stones!DN15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ18",
+      "to": "eEcon Stones!DN16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ19",
+      "to": "eEcon!DE10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ19",
+      "to": "eEcon!DE100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ19",
+      "to": "eEcon!DE11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ19",
+      "to": "eEcon!DE12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ19",
+      "to": "eEcon!DE13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ19",
+      "to": "eEcon!DE14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ19",
+      "to": "eEcon!DE15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ19",
+      "to": "eEcon!DE16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ20",
+      "to": "eEcon Stones!CU10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ20",
+      "to": "eEcon Stones!CU100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ20",
+      "to": "eEcon Stones!CU11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ20",
+      "to": "eEcon Stones!CU12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ20",
+      "to": "eEcon Stones!CU13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ20",
+      "to": "eEcon Stones!CU14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ20",
+      "to": "eEcon Stones!CU15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ20",
+      "to": "eEcon Stones!CU16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ22",
+      "to": "eEcon!DK5",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ23",
+      "to": "eEcon Stones!DD10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ23",
+      "to": "eEcon Stones!DD100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ23",
+      "to": "eEcon Stones!DD11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ23",
+      "to": "eEcon Stones!DD12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ23",
+      "to": "eEcon Stones!DD13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ23",
+      "to": "eEcon Stones!DD14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ23",
+      "to": "eEcon Stones!DD15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ23",
+      "to": "eEcon Stones!DD16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ25",
+      "to": "eEcon Stones!CP10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ25",
+      "to": "eEcon Stones!CP100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ25",
+      "to": "eEcon Stones!CP11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ25",
+      "to": "eEcon Stones!CP12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ25",
+      "to": "eEcon Stones!CP13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ25",
+      "to": "eEcon Stones!CP14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ25",
+      "to": "eEcon Stones!CP15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ25",
+      "to": "eEcon Stones!CP16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ26",
+      "to": "eEcon Stones!CL10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ26",
+      "to": "eEcon Stones!CL100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ26",
+      "to": "eEcon Stones!CL11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ26",
+      "to": "eEcon Stones!CL12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ26",
+      "to": "eEcon Stones!CL13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ26",
+      "to": "eEcon Stones!CL14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ26",
+      "to": "eEcon Stones!CL15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ26",
+      "to": "eEcon Stones!CL16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ28",
+      "to": "eEcon!AZ31",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ28",
+      "to": "eEcon!AZ33",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ28",
+      "to": "eEcon!AZ34",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ28",
+      "to": "eEcon!AZ35",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ28",
+      "to": "eEcon!AZ37",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ28",
+      "to": "eEcon!AZ39",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ28",
+      "to": "eEcon!AZ40",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ43",
+      "to": "eEcon Stones!CJ10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ43",
+      "to": "eEcon Stones!CJ100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ43",
+      "to": "eEcon Stones!CJ11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ43",
+      "to": "eEcon Stones!CJ12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ43",
+      "to": "eEcon Stones!CJ13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ43",
+      "to": "eEcon Stones!CJ14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ43",
+      "to": "eEcon Stones!CJ15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ43",
+      "to": "eEcon Stones!CJ16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ5",
+      "to": "eEcon!AM25",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ5",
+      "to": "eEcon!BI5",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ5",
+      "to": "eEcon!BI6",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ5",
+      "to": "eEcon!BI7",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ5",
+      "to": "eEcon!BI8",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ5",
+      "to": "eEcon!BI9",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ5",
+      "to": "eEcon!BK5",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ5",
+      "to": "eEcon!BK6",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ6",
+      "to": "eEcon!AZ31",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ6",
+      "to": "eEcon!AZ33",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ6",
+      "to": "eEcon!AZ34",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ6",
+      "to": "eEcon!AZ35",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ6",
+      "to": "eEcon!AZ37",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ6",
+      "to": "eEcon!AZ39",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ6",
+      "to": "eEcon!AZ40",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ7",
+      "to": "eEcon!AN4",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ7",
+      "to": "eEcon!AO10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ7",
+      "to": "eEcon!AO11",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ7",
+      "to": "eEcon!AO12",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ7",
+      "to": "eEcon!AO14",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ7",
+      "to": "eEcon!AO15",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ7",
+      "to": "eEcon!AO16",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ7",
+      "to": "eEcon!AO17",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ8",
+      "to": "eEcon!BK19",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ8",
+      "to": "eEcon!BL19",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ8",
+      "to": "eEcon!BM19",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ8",
+      "to": "eEcon!BN19",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ9",
+      "to": "eEcon!AZ45",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ9",
+      "to": "eEcon!AZ46",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ9",
+      "to": "eEcon!AZ47",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ9",
+      "to": "eEcon!AZ48",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ9",
+      "to": "eEcon!AZ49",
+      "kind": "feeds"
+    },
+    {
+      "from": "eEcon!AZ9",
+      "to": "eEcon!AZ50",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX4",
+      "to": "eHP Coins!CU2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX4",
+      "to": "eHP!BG10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX4",
+      "to": "eHP!BG13",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX4",
+      "to": "eHP!BG6",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX4",
+      "to": "eHP!BG7",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX4",
+      "to": "eHP!BG8",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX4",
+      "to": "eHP!BG9",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX4",
+      "to": "eHP!BI10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX5",
+      "to": "eHP!AY19",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX5",
+      "to": "eHP!AY21",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX5",
+      "to": "eHP!AY23",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX5",
+      "to": "eHP!AY25",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX5",
+      "to": "eHP!AY26",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX6",
+      "to": "eHP Coins!DF10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX6",
+      "to": "eHP Coins!DF100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX6",
+      "to": "eHP Coins!DF101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX6",
+      "to": "eHP Coins!DF102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX6",
+      "to": "eHP Coins!DF103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX6",
+      "to": "eHP Coins!DF104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX6",
+      "to": "eHP Coins!DF105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX6",
+      "to": "eHP Coins!DF106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX7",
+      "to": "eHP!AY30",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX7",
+      "to": "eHP!AY31",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX7",
+      "to": "eHP!AY32",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX7",
+      "to": "eHP!AY33",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX7",
+      "to": "eHP!AY34",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX7",
+      "to": "eHP!AY35",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX7",
+      "to": "eHP!AY36",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AX7",
+      "to": "eHP!AY37",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY10",
+      "to": "eHP!CI6",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY11",
+      "to": "eHP Coins!CH10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY11",
+      "to": "eHP Coins!CH100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY11",
+      "to": "eHP Coins!CH101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY11",
+      "to": "eHP Coins!CH102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY11",
+      "to": "eHP Coins!CH103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY11",
+      "to": "eHP Coins!CH104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY11",
+      "to": "eHP Coins!CH105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY11",
+      "to": "eHP Coins!CH106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY12",
+      "to": "eHP Stone!CB5",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY12",
+      "to": "eHP!CS10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY12",
+      "to": "eHP!CS100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY12",
+      "to": "eHP!CS101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY12",
+      "to": "eHP!CS102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY12",
+      "to": "eHP!CS103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY12",
+      "to": "eHP!CS104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY12",
+      "to": "eHP!CS105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY13",
+      "to": "eHP Coins!CW2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY14",
+      "to": "eHP Coins!CX2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY14",
+      "to": "eHP Coins!DD2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY14",
+      "to": "eHP Coins!DJ2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY14",
+      "to": "eHP Coins!DK2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY14",
+      "to": "eHP Stone!CF2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY14",
+      "to": "eHP Stone!CG2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY14",
+      "to": "eHP Stone!CK2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY14",
+      "to": "eHP!CX2",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY16",
+      "to": "eHP Coins!CF10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY16",
+      "to": "eHP Coins!CF100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY16",
+      "to": "eHP Coins!CF101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY16",
+      "to": "eHP Coins!CF102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY16",
+      "to": "eHP Coins!CF103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY16",
+      "to": "eHP Coins!CF104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY16",
+      "to": "eHP Coins!CF105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY16",
+      "to": "eHP Coins!CF106",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY28",
+      "to": "eHP Coins!CF10",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY28",
+      "to": "eHP Coins!CF100",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY28",
+      "to": "eHP Coins!CF101",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY28",
+      "to": "eHP Coins!CF102",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY28",
+      "to": "eHP Coins!CF103",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY28",
+      "to": "eHP Coins!CF104",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY28",
+      "to": "eHP Coins!CF105",
+      "kind": "feeds"
+    },
+    {
+      "from": "eHP!AY28",
+      "to": "eHP Coins!CF106",
+      "kind": "feeds"
+    }
+  ],
+  "consumerCountByLeaf": {
+    "eDamage!AU23": 36,
+    "eDamage!AX12": 2,
+    "eDamage!AX13": 25,
+    "eDamage!AX14": 12,
+    "eDamage!AX15": 1309,
+    "eDamage!AX16": 9,
+    "eDamage!AX19": 8835,
+    "eDamage!AY21": 3233,
+    "eDamage!AY22": 1903,
+    "eDamage!AY23": 3504,
+    "eDamage!AY24": 2,
+    "eDamage!AY25": 10,
+    "eDamage!AY26": 45,
+    "eDamage!AY27": 2057,
+    "eDamage!AY28": 4,
+    "eDamage!AY29": 292,
+    "eDamage!AY30": 4541,
+    "eDamage!AY31": 2632,
+    "eDamage!AY32": 438,
+    "eDamage!AY33": 298,
+    "eDamage!AY34": 586,
+    "eDamage!AY35": 2,
+    "eDamage!AY36": 2345,
+    "eDamage!AY37": 1,
+    "eDamage!AY39": 11027,
+    "eDamage!AY61": 12740,
+    "eEcon!AZ11": 30,
+    "eEcon!AZ12": 1843,
+    "eEcon!AZ13": 194,
+    "eEcon!AZ14": 5,
+    "eEcon!AZ15": 26,
+    "eEcon!AZ17": 4,
+    "eEcon!AZ18": 970,
+    "eEcon!AZ19": 192,
+    "eEcon!AZ20": 672,
+    "eEcon!AZ22": 1,
+    "eEcon!AZ23": 768,
+    "eEcon!AZ25": 483,
+    "eEcon!AZ26": 289,
+    "eEcon!AZ28": 7,
+    "eEcon!AZ4": 0,
+    "eEcon!AZ43": 2322,
+    "eEcon!AZ5": 10,
+    "eEcon!AZ6": 7,
+    "eEcon!AZ7": 426,
+    "eEcon!AZ8": 4,
+    "eEcon!AZ9": 6,
+    "eHP!AX3": 0,
+    "eHP!AX4": 12,
+    "eHP!AX5": 5,
+    "eHP!AX6": 310,
+    "eHP!AX7": 8,
+    "eHP!AY10": 1,
+    "eHP!AY11": 1170,
+    "eHP!AY12": 293,
+    "eHP!AY13": 1,
+    "eHP!AY14": 28,
+    "eHP!AY16": 3522,
+    "eHP!AY28": 3665
+  },
+  "validationTargets": {
+    "requiredInputLeaves": [
+      "eDamage!AU23",
+      "eDamage!AX12",
+      "eDamage!AX13",
+      "eDamage!AX14",
+      "eDamage!AX15",
+      "eDamage!AX16",
+      "eDamage!AX19",
+      "eDamage!AY21",
+      "eDamage!AY22",
+      "eDamage!AY23",
+      "eDamage!AY24",
+      "eDamage!AY25",
+      "eDamage!AY26",
+      "eDamage!AY27",
+      "eDamage!AY28",
+      "eDamage!AY29",
+      "eDamage!AY30",
+      "eDamage!AY31",
+      "eDamage!AY32",
+      "eDamage!AY33",
+      "eDamage!AY34",
+      "eDamage!AY35",
+      "eDamage!AY36",
+      "eDamage!AY37",
+      "eDamage!AY39",
+      "eDamage!AY61",
+      "eEcon!AZ11",
+      "eEcon!AZ12",
+      "eEcon!AZ13",
+      "eEcon!AZ14",
+      "eEcon!AZ15",
+      "eEcon!AZ17",
+      "eEcon!AZ18",
+      "eEcon!AZ19",
+      "eEcon!AZ20",
+      "eEcon!AZ22",
+      "eEcon!AZ23",
+      "eEcon!AZ25",
+      "eEcon!AZ26",
+      "eEcon!AZ28",
+      "eEcon!AZ43",
+      "eEcon!AZ5",
+      "eEcon!AZ6",
+      "eEcon!AZ7",
+      "eEcon!AZ8",
+      "eEcon!AZ9",
+      "eHP!AX4",
+      "eHP!AX5",
+      "eHP!AX6",
+      "eHP!AX7",
+      "eHP!AY10",
+      "eHP!AY11",
+      "eHP!AY12",
+      "eHP!AY13",
+      "eHP!AY14",
+      "eHP!AY16",
+      "eHP!AY28"
+    ],
+    "unreferencedInputLeaves": [
+      "eEcon!AZ4",
+      "eHP!AX3"
+    ],
+    "terminalOutputNodes": [
+      "eDamage Coins!BV5",
+      "eDamage Coins!CD5",
+      "eDamage Coins!CF5",
+      "eDamage Coins!CQ10",
+      "eDamage Coins!CQ100",
+      "eDamage Coins!CQ101",
+      "eDamage Coins!CQ102",
+      "eDamage Coins!CQ103",
+      "eDamage Coins!CQ104",
+      "eDamage Coins!CQ105",
+      "eDamage Coins!CQ106",
+      "eDamage Coins!CR10",
+      "eDamage Coins!CR100",
+      "eDamage Coins!CR101",
+      "eDamage Coins!CR102",
+      "eDamage Coins!CR103",
+      "eDamage Coins!CR104",
+      "eDamage Coins!CR105",
+      "eDamage Coins!CR106",
+      "eDamage Coins!CU10",
+      "eDamage Coins!CU100",
+      "eDamage Coins!CU101",
+      "eDamage Coins!CU102",
+      "eDamage Coins!CU103",
+      "eDamage Coins!CU104",
+      "eDamage Coins!CU105",
+      "eDamage Coins!CU106",
+      "eDamage Coins!CW10",
+      "eDamage Coins!CW100",
+      "eDamage Coins!CW101",
+      "eDamage Coins!CW102",
+      "eDamage Coins!CW103",
+      "eDamage Coins!CW104",
+      "eDamage Coins!CW105",
+      "eDamage Coins!CW106",
+      "eDamage Coins!DK10",
+      "eDamage Coins!DK100",
+      "eDamage Coins!DK101",
+      "eDamage Coins!DK102",
+      "eDamage Coins!DK103",
+      "eDamage Coins!DK104",
+      "eDamage Coins!DK105",
+      "eDamage Coins!DK106",
+      "eDamage Coins!DT10",
+      "eDamage Coins!DT100",
+      "eDamage Coins!DT101",
+      "eDamage Coins!DT102",
+      "eDamage Coins!DT103",
+      "eDamage Coins!DT104",
+      "eDamage Coins!DT105",
+      "eDamage Coins!DT106",
+      "eDamage Coins!DU10",
+      "eDamage Coins!DU100",
+      "eDamage Coins!DU101",
+      "eDamage Coins!DU102",
+      "eDamage Coins!DU103",
+      "eDamage Coins!DU104",
+      "eDamage Coins!DU105",
+      "eDamage Coins!DU106",
+      "eDamage Coins!DX10",
+      "eDamage Coins!DX100",
+      "eDamage Coins!DX101",
+      "eDamage Coins!DX102",
+      "eDamage Coins!DX103",
+      "eDamage Coins!DX104",
+      "eDamage Coins!DX105",
+      "eDamage Coins!DX106",
+      "eDamage Coins!DZ10",
+      "eDamage Coins!DZ100",
+      "eDamage Coins!DZ101",
+      "eDamage Coins!DZ102",
+      "eDamage Coins!DZ103",
+      "eDamage Coins!DZ104",
+      "eDamage Coins!DZ105",
+      "eDamage Coins!DZ106",
+      "eDamage Coins!EH10",
+      "eDamage Coins!EH100",
+      "eDamage Coins!EH101",
+      "eDamage Coins!EH102",
+      "eDamage Coins!EH103",
+      "eDamage Coins!EH104",
+      "eDamage Coins!EH105",
+      "eDamage Coins!EH106",
+      "eDamage Coins!EH2",
+      "eDamage Coins!EL2",
+      "eDamage Coins!EM2",
+      "eDamage Coins!EN2",
+      "eDamage Coins!EO2",
+      "eDamage Coins!EP2",
+      "eDamage Coins!EQ2",
+      "eDamage Coins!ER2",
+      "eDamage Coins!EU2",
+      "eDamage Coins!EV2",
+      "eDamage Coins!EW2",
+      "eDamage Stone!DY10",
+      "eDamage Stone!DY100",
+      "eDamage Stone!DY101",
+      "eDamage Stone!DY102",
+      "eDamage Stone!DY103",
+      "eDamage Stone!DY104",
+      "eDamage Stone!DY105",
+      "eDamage Stone!DY106",
+      "eDamage Stone!EC10",
+      "eDamage Stone!EC100",
+      "eDamage Stone!EC101",
+      "eDamage Stone!EC102",
+      "eDamage Stone!EC103",
+      "eDamage Stone!EC104",
+      "eDamage Stone!EC105",
+      "eDamage Stone!EC106",
+      "eDamage Stone!EK10",
+      "eDamage Stone!EK100",
+      "eDamage Stone!EK101",
+      "eDamage Stone!EK102",
+      "eDamage Stone!EK103",
+      "eDamage Stone!EK104",
+      "eDamage Stone!EK105",
+      "eDamage Stone!EK106",
+      "eDamage Stone!EM2",
+      "eDamage Stone!ES2",
+      "eDamage!AL46",
+      "eDamage!AO71",
+      "eDamage!AP46",
+      "eDamage!AP8",
+      "eDamage!AY42",
+      "eDamage!AY44",
+      "eDamage!AY45",
+      "eDamage!AY47",
+      "eDamage!AY49",
+      "eDamage!AY51",
+      "eDamage!AY52",
+      "eDamage!AY54",
+      "eDamage!AY63",
+      "eDamage!AY64",
+      "eDamage!AY65",
+      "eDamage!AY66",
+      "eDamage!AY67",
+      "eDamage!AY68",
+      "eDamage!AY69",
+      "eDamage!AY70",
+      "eDamage!BC12",
+      "eDamage!BD11",
+      "eDamage!BD12",
+      "eDamage!BD13",
+      "eDamage!BD20",
+      "eDamage!BD21",
+      "eDamage!BD22",
+      "eDamage!BD23",
+      "eDamage!BD26",
+      "eDamage!BD27",
+      "eDamage!BG10",
+      "eDamage!BG11",
+      "eDamage!BG12",
+      "eDamage!BG13",
+      "eDamage!BG14",
+      "eDamage!BG15",
+      "eDamage!BG16",
+      "eDamage!DI5",
+      "eDamage!ED5",
+      "eDamage!EJ10",
+      "eDamage!EJ100",
+      "eDamage!EJ101",
+      "eDamage!EJ102",
+      "eDamage!EJ103",
+      "eDamage!EJ104",
+      "eDamage!EJ105",
+      "eDamage!EJ106",
+      "eDamage!EN5",
+      "eDamage!FB2",
+      "eDamage!FC2",
+      "eDamage!FD2",
+      "eDamage!FE2",
+      "eDamage!FF2",
+      "eEcon Discount!CM2",
+      "eEcon Discount!CN2",
+      "eEcon Discount!CO2",
+      "eEcon Discount!CP2",
+      "eEcon Discount!CQ2",
+      "eEcon Discount!CR2",
+      "eEcon Stones!CJ10",
+      "eEcon Stones!CJ100",
+      "eEcon Stones!CJ11",
+      "eEcon Stones!CJ12",
+      "eEcon Stones!CJ13",
+      "eEcon Stones!CJ14",
+      "eEcon Stones!CJ15",
+      "eEcon Stones!CJ16",
+      "eEcon Stones!CL10",
+      "eEcon Stones!CL100",
+      "eEcon Stones!CL11",
+      "eEcon Stones!CL12",
+      "eEcon Stones!CL13",
+      "eEcon Stones!CL14",
+      "eEcon Stones!CL15",
+      "eEcon Stones!CL16",
+      "eEcon Stones!CP10",
+      "eEcon Stones!CP100",
+      "eEcon Stones!CP11",
+      "eEcon Stones!CP12",
+      "eEcon Stones!CP13",
+      "eEcon Stones!CP14",
+      "eEcon Stones!CP15",
+      "eEcon Stones!CP16",
+      "eEcon Stones!CU10",
+      "eEcon Stones!CU100",
+      "eEcon Stones!CU11",
+      "eEcon Stones!CU12",
+      "eEcon Stones!CU13",
+      "eEcon Stones!CU14",
+      "eEcon Stones!CU15",
+      "eEcon Stones!CU16",
+      "eEcon Stones!DD10",
+      "eEcon Stones!DD100",
+      "eEcon Stones!DD11",
+      "eEcon Stones!DD12",
+      "eEcon Stones!DD13",
+      "eEcon Stones!DD14",
+      "eEcon Stones!DD15",
+      "eEcon Stones!DD16",
+      "eEcon Stones!DN10",
+      "eEcon Stones!DN100",
+      "eEcon Stones!DN11",
+      "eEcon Stones!DN12",
+      "eEcon Stones!DN13",
+      "eEcon Stones!DN14",
+      "eEcon Stones!DN15",
+      "eEcon Stones!DN16",
+      "eEcon Stones!DP2",
+      "eEcon Stones!DS2",
+      "eEcon Stones!DU2",
+      "eEcon Stones!DX2",
+      "eEcon Stones!EB2",
+      "eEcon Stones!EC2",
+      "eEcon!AM25",
+      "eEcon!AN4",
+      "eEcon!AO10",
+      "eEcon!AO11",
+      "eEcon!AO12",
+      "eEcon!AO14",
+      "eEcon!AO15",
+      "eEcon!AO16",
+      "eEcon!AO17",
+      "eEcon!AZ31",
+      "eEcon!AZ33",
+      "eEcon!AZ34",
+      "eEcon!AZ35",
+      "eEcon!AZ37",
+      "eEcon!AZ39",
+      "eEcon!AZ40",
+      "eEcon!AZ45",
+      "eEcon!AZ46",
+      "eEcon!AZ47",
+      "eEcon!AZ48",
+      "eEcon!AZ49",
+      "eEcon!AZ50",
+      "eEcon!BF11",
+      "eEcon!BF12",
+      "eEcon!BF13",
+      "eEcon!BF14",
+      "eEcon!BF15",
+      "eEcon!BF16",
+      "eEcon!BF17",
+      "eEcon!BF18",
+      "eEcon!BI5",
+      "eEcon!BI6",
+      "eEcon!BI7",
+      "eEcon!BI8",
+      "eEcon!BI9",
+      "eEcon!BK19",
+      "eEcon!BK5",
+      "eEcon!BK6",
+      "eEcon!BL19",
+      "eEcon!BM19",
+      "eEcon!BN19",
+      "eEcon!DE10",
+      "eEcon!DE100",
+      "eEcon!DE11",
+      "eEcon!DE12",
+      "eEcon!DE13",
+      "eEcon!DE14",
+      "eEcon!DE15",
+      "eEcon!DE16",
+      "eEcon!DK5",
+      "eEcon!DW10",
+      "eEcon!DW100",
+      "eEcon!DW11",
+      "eEcon!DW12",
+      "eEcon!DW13",
+      "eEcon!DW14",
+      "eEcon!DW15",
+      "eEcon!DW16",
+      "eEcon!EP10",
+      "eEcon!EP100",
+      "eEcon!EP11",
+      "eEcon!EP12",
+      "eEcon!EP13",
+      "eEcon!EP14",
+      "eEcon!EP15",
+      "eEcon!EP16",
+      "eHP Coins!CF10",
+      "eHP Coins!CF100",
+      "eHP Coins!CF101",
+      "eHP Coins!CF102",
+      "eHP Coins!CF103",
+      "eHP Coins!CF104",
+      "eHP Coins!CF105",
+      "eHP Coins!CF106",
+      "eHP Coins!CH10",
+      "eHP Coins!CH100",
+      "eHP Coins!CH101",
+      "eHP Coins!CH102",
+      "eHP Coins!CH103",
+      "eHP Coins!CH104",
+      "eHP Coins!CH105",
+      "eHP Coins!CH106",
+      "eHP Coins!CU2",
+      "eHP Coins!CW2",
+      "eHP Coins!CX2",
+      "eHP Coins!DD2",
+      "eHP Coins!DF10",
+      "eHP Coins!DF100",
+      "eHP Coins!DF101",
+      "eHP Coins!DF102",
+      "eHP Coins!DF103",
+      "eHP Coins!DF104",
+      "eHP Coins!DF105",
+      "eHP Coins!DF106",
+      "eHP Coins!DJ2",
+      "eHP Coins!DK2",
+      "eHP Stone!CB5",
+      "eHP Stone!CF2",
+      "eHP Stone!CG2",
+      "eHP Stone!CK2",
+      "eHP!AY19",
+      "eHP!AY21",
+      "eHP!AY23",
+      "eHP!AY25",
+      "eHP!AY26",
+      "eHP!AY30",
+      "eHP!AY31",
+      "eHP!AY32",
+      "eHP!AY33",
+      "eHP!AY34",
+      "eHP!AY35",
+      "eHP!AY36",
+      "eHP!AY37",
+      "eHP!BG10",
+      "eHP!BG13",
+      "eHP!BG6",
+      "eHP!BG7",
+      "eHP!BG8",
+      "eHP!BG9",
+      "eHP!BI10",
+      "eHP!CI6",
+      "eHP!CS10",
+      "eHP!CS100",
+      "eHP!CS101",
+      "eHP!CS102",
+      "eHP!CS103",
+      "eHP!CS104",
+      "eHP!CS105",
+      "eHP!CX2"
+    ]
+  }
+}

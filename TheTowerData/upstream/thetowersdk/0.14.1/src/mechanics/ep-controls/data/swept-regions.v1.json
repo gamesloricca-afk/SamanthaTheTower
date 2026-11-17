@@ -1,0 +1,573 @@
+{
+  "sheetVersion": "v5.09.03.07",
+  "sweptAt": "2026-08-19",
+  "note": "Columns read cell-by-cell to find controls outside the tab control panel. A tab is only 'swept' for the window named here; anything outside it is unenumerated, not absent.",
+  "tabs": [
+    {
+      "tab": "eHP",
+      "window": "AH1:AN13 and AH14:BM40, plus the AT3:AY37 panel",
+      "regions": [
+        {
+          "columns": "AH-AK",
+          "contains": "quick links, and the Rows Calculated control at AJ22",
+          "controls": 1
+        },
+        {
+          "columns": "AL",
+          "contains": "Total Value labels",
+          "controls": 0
+        },
+        {
+          "columns": "AM",
+          "contains": "Total Value toggles, one of which is a derived gate",
+          "controls": 5
+        },
+        {
+          "columns": "AN-AS",
+          "contains": "computed totals, w/o Perks and w/ Perks columns",
+          "controls": 0
+        },
+        {
+          "columns": "AT-AZ",
+          "contains": "the control panel captured in control-surface.v1.json",
+          "controls": 32
+        },
+        {
+          "columns": "BA-BM",
+          "contains": "lab and mastery reference tables, and the preset dropdown source lists",
+          "controls": 0
+        },
+        {
+          "columns": "anything left of AH, and rows past 40",
+          "contains": "NOT SWEPT \u2014 the window stops at AH14:BM40 and the tab does not",
+          "controls": 0
+        },
+        {
+          "columns": "AH-AN rows 1-13",
+          "contains": "lab-time and eHP totals, the armour/generator substat block, and three cells that IMPORT from eRegen",
+          "controls": 0
+        },
+        {
+          "columns": "AM rows 20-22 (VISUAL)",
+          "contains": "one merged checkbox governing Wall Health, Wall Fortification and Wall Regen",
+          "controls": 0
+        }
+      ]
+    },
+    {
+      "tab": "eRegen",
+      "window": "AH1:AN30 plus the AT3:AY37 panel",
+      "regions": [
+        {
+          "columns": "AH-AK",
+          "contains": "quick links, and the Rows Calculated control at AJ22 \u2014 outside the mirror",
+          "controls": 1
+        },
+        {
+          "columns": "AL-BM",
+          "contains": "a spilled mirror of eHP: AL3 is ={eHP!AL3:BM37}, which covers the whole control panel",
+          "controls": 0
+        },
+        {
+          "columns": "anything left of AH, and rows past 30",
+          "contains": "NOT SWEPT \u2014 outside the mirrored window and the band read around it",
+          "controls": 0
+        }
+      ]
+    },
+    {
+      "tab": "eEcon",
+      "window": "AJ3:AK13 and AH14:AT30, plus the AU3:AZ50 panel",
+      "verification": "formula-read; the eight modelled cells hold literals, the six preset rows are spills from AY, and AP14 is derived",
+      "regions": [
+        {
+          "columns": "AH-AK",
+          "contains": "quick links, and a derived block above the sweep line: Calculation Rows at AK4, Themes Bonus, farming tier, tier multiplier, Ad/Starter/Epic and All Coin Bonus at AK7:AK13",
+          "controls": 0
+        },
+        {
+          "columns": "AM-AS",
+          "contains": "UW substat block and the assist gate at AP14, which is derived",
+          "controls": 0
+        },
+        {
+          "columns": "AU-AZ",
+          "contains": "the control panel: eight literal controls, six preset rows that are spills from AY",
+          "controls": 8
+        },
+        {
+          "columns": "O3",
+          "contains": "cost mode, a literal outside the panel",
+          "controls": 1
+        },
+        {
+          "columns": "anything left of AH, right of AZ, or past row 50",
+          "contains": "NOT SWEPT",
+          "controls": 0
+        },
+        {
+          "columns": "AH-AT rows 1-13",
+          "contains": "read after a VISUAL pass showed a block there; the earlier window started at row 14 and missed it",
+          "controls": 0
+        }
+      ]
+    },
+    {
+      "tab": "eDamage",
+      "window": "AH1:AK13, AH14:AN30 plus the AT3:AY71 panel, the AK23:AR45 substat block, and the BC29:BL38 UW block",
+      "verification": "formula-read in every band listed; no mirror anchor and no spill into the AY panel column",
+      "regions": [
+        {
+          "columns": "AH-AJ",
+          "contains": "quick links, PS Beta Testing at AI17 with its label BELOW it, Rows Calculated at AI21 with its label above",
+          "controls": 2
+        },
+        {
+          "columns": "AK-AR",
+          "contains": "the module substat block: AK labels, AM primary, AO assist, AR assist scaled by AO24",
+          "controls": 0
+        },
+        {
+          "columns": "AT-AY",
+          "contains": "the control panel, including five perk toggles and the ten conditional-label rows",
+          "controls": 28
+        },
+        {
+          "columns": "AZ-BB",
+          "contains": "lab and perk name reference columns",
+          "controls": 0
+        },
+        {
+          "columns": "BC-BL",
+          "contains": "UW stat levels and the BH ownership gate block",
+          "controls": 8
+        },
+        {
+          "columns": "AO-AS and BM onward",
+          "contains": "NOT SWEPT \u2014 read only where a formula pointed into them",
+          "controls": 0
+        },
+        {
+          "columns": "AH-AK rows 1-13",
+          "contains": "lab time, current eDmg/sec, QUICK LINKS as conditional HYPERLINKs, and the cannon substat labels \u2014 no controls",
+          "controls": 0
+        },
+        {
+          "columns": "drawing layer and column AP (VISUAL)",
+          "contains": "an author disclaimer drawn over the path table, and a collapsed column between the Primary and Assist substat columns",
+          "controls": 0
+        }
+      ]
+    }
+  ],
+  "satelliteNote": "Each planner tab has satellite tabs that SPILL its control panel into themselves and read the switches there. Five controls sat unwired for the whole port because the tab that shows a control is not the tab that reads it. None of these tabs is swept: the anchors below are the cells actually read, and everything else on them is unenumerated.",
+  "satelliteTabs": [
+    {
+      "tab": "eDamage Stone",
+      "mirrorsFrom": "eDamage",
+      "anchors": [
+        "AI20 = ={eDamage!AI20:AI21}",
+        "AK3 = ={eDamage!AK3:AS52}",
+        "AN149 = ={eDamage!AL149:AM150}",
+        "AT12 = ={eDamage!AT12:AY71}",
+        "BB3 = ={eDamage!BB3:BM50}",
+        "EH4 = ={eDamage!EU4:EU}"
+      ],
+      "offset": "none",
+      "readsControls": [
+        "eDamage!AY23",
+        "eDamage!AY24"
+      ],
+      "cellsRead": "EJ2:FB4, FB2:FL4, EJ5:FE5 (all 20 UW sims), FH5, BO4:CQ5 (all 29 level columns, formulas AND values), GQ4:HT5, GK5:GO5, FM2:GO2, FO5, A6:M6, AT4:AY27, AK3, BC3, AT12",
+      "notSwept": "The tab is now read for every band that carries logic: hide row, all simulations, all level columns, the matrix header and anchor, and the module ROI columns. Unread: rows 6 and below (fill-down of the row-5 shapes), and the CR:GO ROI columns other than FO, GK, GL, GM, GN, GO.",
+      "finding": "Hide UW Cooldown (4) is NOT uniform: it appears on DW Cooldown (EL2) and SM Cooldown (ER2) only. PS Cooldown (EZ2) and ILM Cooldown (FD2) do not mention it. AY33 (CF Slow) has a SECOND consumer here, FF2, which removes the CF columns rather than scaling them. Reading all twenty confirmed every column passes $AY$23, and turned up three things the assumption would have flattened: IDS_UW_COUNT()<=8 gates exactly the four UW+ stats (SM Cover Fire, SL Light Range, PS Death Creep, ILM Charged Mines); SL Angle stops at a VALUE CEILING (base+substat>=90) rather than a missing cost; and the four ILM columns all read FB$2 as their hide flag instead of their own. Level columns: 24 UW stats parse VALUE(LEFT(IDS_UW_LEVEL(...), 2)) - a two-character parse - and five UW+ stats wrap it in IFERROR(..., -1), so -1 is the LOCKED sentinel, not 0. 29 level columns and 29 ROI columns but only 28 simulations: Assist Module Bonus - Cannon has its ROI computed directly at GK5, dividing by CS5 where every other ROI divides by $EE5. The four assist module columns cap at hard levels (69/69/99/69) and never call EPG_UW_TARGET_LEVEL.",
+      "levelSource": "VALUE(LEFT(IDS_UW_LEVEL(...), 2)) - parsed out of a string, two characters"
+    },
+    {
+      "tab": "eDamage Coins",
+      "mirrorsFrom": "eDamage",
+      "anchors": [
+        "AI20 = ={eDamage!AI20:AI21}",
+        "AK3 = ={eDamage!AK3:BN77}",
+        "EE3 = ={eDamage!EU3:EU}"
+      ],
+      "offset": "none",
+      "readsControls": [
+        "eDamage!AY27"
+      ],
+      "cellsRead": "A1:M6, EZ2:FY2, BO4:CN5, EZ5:FX5 (ALL 25 ROI columns), FZ4:GY4",
+      "notSwept": "Rows 6 and below (fill-down), and the EG:EY intermediate columns.",
+      "levelSource": "mixed: mirrored cells (=BI8, =BC45), cross-tab =eDamage!BP5 into the SOURCE tab's calc row (BP is past the AK3:BN77 mirror), and function calls IDS_MOD_CANNON_LEVEL / IDS_WSE_PRESET_LEVEL",
+      "finding": "Its 25 level columns use FOUR sources at once: mirrored cells (=BI8, =BC45), cross-tab references into eDamage's own calc row (=eDamage!BP5 - BP is PAST the AK3:BN77 mirror, so it cannot come through it), and two function calls (IDS_MOD_CANNON_LEVEL, IDS_WSE_PRESET_LEVEL). Its ROI columns end *$EF$3, the same coin-scale normaliser pattern eHP Coins uses with $CQ$3. All 25 ROI columns read. FF5 (Cash Bonus) divides by $CT5 where the other 24 divide by $EC5. The module columns FN/FO pass EPG_MODULE_LEVEL_LIMIT(AL$4) while the lab and mastery columns pass $AY$27 - two different horizons on one tab."
+    },
+    {
+      "tab": "eDamage Keys",
+      "mirrorsFrom": "eDamage",
+      "anchors": [
+        "AK3 = ={eDamage!AK3:BN78}",
+        "DK3 = ={eDamage!EU3:EU}"
+      ],
+      "offset": "none",
+      "readsControls": [
+        "eDamage!AX19"
+      ],
+      "cellsRead": "A1:M6, DK2:DU2, DW2:EG5, AK3:BC3, AT12, BO4:BY5",
+      "notSwept": "Everything else. The eleven upgrade columns EI:ES and their level columns BO:BY were not read past row 5.",
+      "finding": "All ten hide flags are the SAME expression, =$AX$19=\"Attack Disso\". The keys path reads exactly one control and no hide switch. It also reads eDamage!AI21 as a plain cross-tab reference, because column AI is LEFT of the AK3 mirror and outside it. Levels are INFERRED BY DIVISION: =BM8/5%, the vault stat over its per-level step, with a different step per stat (5%, 1%, 5%, 2%, 5%, 5%, 4%, 5%, 4%, 4%, 5%). Nothing stores the vault level; a stat that is not an exact multiple of its step yields a fractional level.",
+      "levelSource": "DIVISION: =BM8/5% - the vault stat over its per-level step, so the level is inferred, not stored"
+    },
+    {
+      "tab": "eEcon Stones",
+      "mirrorsFrom": "eEcon",
+      "anchors": [
+        "AK3 = ={eEcon!AK3:AK4}",
+        "AM3 = ={eEcon!AM3:AZ50}",
+        "BD3 = ={eEcon!BD3:BO34}"
+      ],
+      "offset": "none",
+      "readsControls": [
+        "eEcon!AZ18",
+        "eEcon!AZ17",
+        "eEcon!AZ11"
+      ],
+      "cellsRead": "A6:H6, DM2:EF2, AM3, BA3:BP4, BQ4:CE5, EG4:EZ5, DW5:DX5, EA5:EB5",
+      "notSwept": "Rows 6 and below, the CF:CZ intermediate columns, and the EG:EZ matrix past row 5.",
+      "finding": "Level columns BQ5:CD5 read STRAIGHT FROM CELLS (=BL15, =BM15) off the BD3 anchor - no VALUE(LEFT(...)) string parse, unlike eDamage Stone. CA5 \"UW CD\" is not a level at all: it is MAX(300-10*level, 200-10*level, 300-10*level) in SECONDS. DW5 is a BUNDLE upgrade that buys the GT, BH and DW cooldowns together for the SUM of their next-level costs. Five mastery columns have no level column and read a precomputed ROI off the eEcon panel.",
+      "levelSource": "direct mirrored cell (=BL15)"
+    },
+    {
+      "tab": "eEcon Discount",
+      "mirrorsFrom": "eEcon",
+      "anchors": [
+        "AJ3 = ={eEcon!AK3:AK4}",
+        "AL3 = ={eEcon!AM3:AZ50}",
+        "BC3 = ={eEcon!BD3:BO34}",
+        "J3 = ={eEcon!AI3:AI5}"
+      ],
+      "offset": "ONE COLUMN. Tab column AY is eEcon AZ. Reading letters straight across lands one column early on a different control.",
+      "readsControls": [
+        "eEcon!AZ14",
+        "eEcon!AZ11"
+      ],
+      "cellsRead": "A1:M6, AI3:AK5, AL1:AZ16, BA3:BE4, BP4:BU5, BV4:CJ6, CL2:CR5, CS4:CY5",
+      "notSwept": "Rows 7 and below, and the CK/CY/CZ columns.",
+      "levelSource": "direct mirrored cell (=BD11)",
+      "finding": "ALL THREE anchors are offset by one column, not just the panel one. The ROI direction FLIPS within the band: CL5 is (New/Old-1)/Dur for the Workshop Utility multiplier, CM5:CQ5 are (Old/New-1)/Dur for the five COST columns. One form everywhere is wrong for five of six. The CD6:CH6 \"Coins Saved\" columns are Old-New, an absolute, not a ratio."
+    },
+    {
+      "tab": "eHP Stone",
+      "mirrorsFrom": "eHP",
+      "anchors": [
+        "AJ21 = ={eHP!AJ21:AJ22}",
+        "AL3 = ={eHP!AL3:BM37}"
+      ],
+      "offset": "none",
+      "readsControls": [
+        "eHP!AY14",
+        "eHP!AJ22"
+      ],
+      "cellsRead": "A1:M6, CH2:CN2, CH4:CN5, AH3:AZ4, AJ21:AJ22, BO4:BQ5",
+      "notSwept": "Everything else, including BO:BQ levels and CB the eHP-after column.",
+      "finding": "TWO anchors on one tab - finding one does not account for the panel. The whole stone path is three columns (assist module substats armor and generator, assist bonus armor) and only the third carries a hide flag.",
+      "levelSource": "direct mirrored cell (=$BK$23)"
+    },
+    {
+      "tab": "eHP Coins",
+      "mirrorsFrom": "eHP",
+      "anchors": [
+        "AJ21 = ={eHP!AJ21:AJ22}",
+        "AL3 = ={eHP!AL3:BM37}",
+        "CB5 = ={eHP!CG5:CH27}",
+        "CP2 = ={eHP!CU2:CU150}"
+      ],
+      "offset": "none",
+      "readsControls": [
+        "eHP!AY14",
+        "eHP!AJ22"
+      ],
+      "cellsRead": "A1:M6, CY2:DK2, AL3, AJ21:AJ22, BO4:CA5, CY5:DK5, DL4:DX5",
+      "notSwept": "Rows 6 and below (fill-down), and the CB:CX intermediate columns.",
+      "finding": "Reads two DERIVED eHP cells that look like controls: AO5 (='_IDS'!BL2, assist enabled) and AY20 (=AND(IDS_CARD_MASTERY(AT19), AY16, AY19), Health Mastery active). Also tests REGEXMATCH(TO_TEXT($AM$4), \"^None\") against a cell whose formula can only yield \"All ...\" or \"\" - that clause is unreachable. Module levels come from 'Master Sheet'!I23 and !I29 - a cross-tab read of a tab that is not the planner. I23 is the Primary Module - Armor level, which is also what eHP!AM4 tests with >159, so that threshold is a module level, not a wave or a tier. ROI band read in full: every column ends *$CQ$3, the coin-scale normaliser named in the G4 header. The two module columns gate on BU5<160 and BU5>=300 - the same 160 threshold as eHP!AM4 - so the module path only plans between levels 160 and 299.",
+      "levelSource": "mixed: mirrored cells (=BI6, =BC19) AND cross-tab ='Master Sheet'!I23 for module levels"
+    }
+  ],
+  "mirrorAnchorNote": "DERIVED by scripts/effective-paths/scan-mirror-anchors.mjs, not hand-listed. A hand-kept list cannot tell you what it is missing: eEcon Discount was recorded with one anchor and has three. Re-run the script after a sheet version bump. This is what the MCP mirror_map tool reads and what mirror-anchors.test.ts checks the prose against.",
+  "mirrorAnchors": [
+    {
+      "tab": "Data_Val_Tables",
+      "anchor": "AC3",
+      "source": "All UWs",
+      "window": "Q5:X66"
+    },
+    {
+      "tab": "Data_Val_Tables",
+      "anchor": "AQ3",
+      "source": "All UWs",
+      "window": "AA5:AH66"
+    },
+    {
+      "tab": "Data_Val_Tables",
+      "anchor": "BE3",
+      "source": "All UWs",
+      "window": "AK5:AR66"
+    },
+    {
+      "tab": "Data_Val_Tables",
+      "anchor": "BS3",
+      "source": "All UWs",
+      "window": "AU5:BB66"
+    },
+    {
+      "tab": "Data_Val_Tables",
+      "anchor": "CG3",
+      "source": "All UWs",
+      "window": "BE5:BL66"
+    },
+    {
+      "tab": "Data_Val_Tables",
+      "anchor": "CU3",
+      "source": "All UWs",
+      "window": "BO5:BV66"
+    },
+    {
+      "tab": "Data_Val_Tables",
+      "anchor": "DI3",
+      "source": "All UWs",
+      "window": "BY5:CF66"
+    },
+    {
+      "tab": "Data_Val_Tables",
+      "anchor": "DW3",
+      "source": "All UWs",
+      "window": "CI5:CP66"
+    },
+    {
+      "tab": "Data_Val_Tables",
+      "anchor": "O3",
+      "source": "All UWs",
+      "window": "G5:N66"
+    },
+    {
+      "tab": "eDamage",
+      "anchor": "AB3",
+      "source": "eDamage Keys",
+      "window": "D3:I238"
+    },
+    {
+      "tab": "eDamage",
+      "anchor": "N3",
+      "source": "eDamage Stone",
+      "window": "C3:H"
+    },
+    {
+      "tab": "eDamage Coins",
+      "anchor": "AI20",
+      "source": "eDamage",
+      "window": "AI20:AI21"
+    },
+    {
+      "tab": "eDamage Coins",
+      "anchor": "AK3",
+      "source": "eDamage",
+      "window": "AK3:BN77"
+    },
+    {
+      "tab": "eDamage Coins",
+      "anchor": "EE3",
+      "source": "eDamage",
+      "window": "EU3:EU"
+    },
+    {
+      "tab": "eDamage Keys",
+      "anchor": "AK3",
+      "source": "eDamage",
+      "window": "AK3:BN78"
+    },
+    {
+      "tab": "eDamage Keys",
+      "anchor": "DK3",
+      "source": "eDamage",
+      "window": "EU3:EU"
+    },
+    {
+      "tab": "eDamage Stone",
+      "anchor": "AI20",
+      "source": "eDamage",
+      "window": "AI20:AI21"
+    },
+    {
+      "tab": "eDamage Stone",
+      "anchor": "AK3",
+      "source": "eDamage",
+      "window": "AK3:AS52"
+    },
+    {
+      "tab": "eDamage Stone",
+      "anchor": "AN149",
+      "source": "eDamage",
+      "window": "AL149:AM150"
+    },
+    {
+      "tab": "eDamage Stone",
+      "anchor": "AT12",
+      "source": "eDamage",
+      "window": "AT12:AY71"
+    },
+    {
+      "tab": "eDamage Stone",
+      "anchor": "BB3",
+      "source": "eDamage",
+      "window": "BB3:BM50"
+    },
+    {
+      "tab": "eDamage Stone",
+      "anchor": "EH4",
+      "source": "eDamage",
+      "window": "EU4:EU"
+    },
+    {
+      "tab": "eEcon",
+      "anchor": "AC3",
+      "source": "eEcon Discount",
+      "window": "D3:I"
+    },
+    {
+      "tab": "eEcon",
+      "anchor": "AI6",
+      "source": "eEcon Discount",
+      "window": "J6:J"
+    },
+    {
+      "tab": "eEcon",
+      "anchor": "T3",
+      "source": "eEcon Stones",
+      "window": "C3:G"
+    },
+    {
+      "tab": "eEcon",
+      "anchor": "Y6",
+      "source": "eEcon Stones",
+      "window": "H6:H"
+    },
+    {
+      "tab": "eEcon Discount",
+      "anchor": "AJ3",
+      "source": "eEcon",
+      "window": "AK3:AK4"
+    },
+    {
+      "tab": "eEcon Discount",
+      "anchor": "AL3",
+      "source": "eEcon",
+      "window": "AM3:AZ50"
+    },
+    {
+      "tab": "eEcon Discount",
+      "anchor": "BC3",
+      "source": "eEcon",
+      "window": "BD3:BO34"
+    },
+    {
+      "tab": "eEcon Discount",
+      "anchor": "J3",
+      "source": "eEcon",
+      "window": "AI3:AI5"
+    },
+    {
+      "tab": "eEcon Stones",
+      "anchor": "AK3",
+      "source": "eEcon",
+      "window": "AK3:AK4"
+    },
+    {
+      "tab": "eEcon Stones",
+      "anchor": "AM3",
+      "source": "eEcon",
+      "window": "AM3:AZ50"
+    },
+    {
+      "tab": "eEcon Stones",
+      "anchor": "BD3",
+      "source": "eEcon",
+      "window": "BD3:BO34"
+    },
+    {
+      "tab": "eHP",
+      "anchor": "AB3",
+      "source": "eRegen",
+      "window": "D3:I"
+    },
+    {
+      "tab": "eHP",
+      "anchor": "AH6",
+      "source": "eRegen",
+      "window": "J6:J"
+    },
+    {
+      "tab": "eHP",
+      "anchor": "N3",
+      "source": "eHP Stone",
+      "window": "F3:K"
+    },
+    {
+      "tab": "eHP",
+      "anchor": "U3",
+      "source": "eHP Coins",
+      "window": "D3:I"
+    },
+    {
+      "tab": "eHP Coins",
+      "anchor": "AJ21",
+      "source": "eHP",
+      "window": "AJ21:AJ22"
+    },
+    {
+      "tab": "eHP Coins",
+      "anchor": "AL3",
+      "source": "eHP",
+      "window": "AL3:BM37"
+    },
+    {
+      "tab": "eHP Coins",
+      "anchor": "CB5",
+      "source": "eHP",
+      "window": "CG5:CH27"
+    },
+    {
+      "tab": "eHP Coins",
+      "anchor": "CP2",
+      "source": "eHP",
+      "window": "CU2:CU150"
+    },
+    {
+      "tab": "eHP Stone",
+      "anchor": "AJ21",
+      "source": "eHP",
+      "window": "AJ21:AJ22"
+    },
+    {
+      "tab": "eHP Stone",
+      "anchor": "AL3",
+      "source": "eHP",
+      "window": "AL3:BM37"
+    },
+    {
+      "tab": "eRegen",
+      "anchor": "AJ21",
+      "source": "eHP",
+      "window": "AJ21:AJ22"
+    },
+    {
+      "tab": "eRegen",
+      "anchor": "AL3",
+      "source": "eHP",
+      "window": "AL3:BM37"
+    },
+    {
+      "tab": "eRegen",
+      "anchor": "CA2",
+      "source": "eHP",
+      "window": "CU2:CU150"
+    }
+  ]
+}
