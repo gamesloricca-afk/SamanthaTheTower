@@ -72,4 +72,96 @@ export function findContradictions(graph: KnowledgeGraph): readonly Contradictio
   const buckets = new Map<string, Assertion[]>()
 
   for (const assertion of collectAssertions(graph)) {
-    const key = `${assertion.subject}
+    const key = `${assertion.subject}�${assertion.predicate}`
+    const bucket = buckets.get(key)
+    if (bucket) bucket.push(assertion)
+    else buckets.set(key, [assertion])
+  }
+
+  const contradictions: Contradiction[] = []
+
+  for (const [key, assertions] of buckets) {
+    const distinct = new Set(assertions.map(a => normaliseValue(a.value)))
+    if (distinct.size < 2) continue
+
+    const [subject, predicate] = key.split('�')
+    const claims = assertions
+      .map(a => ({
+        value: a.value,
+        origin: a.provenance.origin,
+        ref: a.provenance.ref,
+        sourceVersion: a.provenance.sourceVersion,
+        verifiedAt: a.provenance.verifiedAt,
+        authorityRank: authorityRank(a.provenance.origin),
+      }))
+      .sort((left, right) => left.authorityRank - right.authorityRank)
+
+    contradictions.push({
+      subject,
+      predicate,
+      claims,
+      likelyValue: claims[0].value,
+      crossSource: new Set(claims.map(c => c.origin)).size > 1,
+    })
+  }
+
+  return contradictions.sort((left, right) => left.subject.localeCompare(right.subject))
+}
+
+/**
+ * Check one external assertion against what is already known.
+ *
+ * This is the import gate. A shared knowledge pack runs every incoming
+ * assertion through here before anything is written, so a claim that conflicts
+ * with locally-verified knowledge is flagged at the door rather than sitting in
+ * the graph being plausible.
+ */
+export function checkIncoming(
+  graph: KnowledgeGraph,
+  incoming: Assertion,
+): { conflicts: boolean, existing: readonly Assertion[], advice: string } {
+  const existing = collectAssertions(graph).filter(a =>
+    a.subject === incoming.subject && a.predicate === incoming.predicate)
+
+  if (existing.length === 0) {
+    return {
+      conflicts: false,
+      existing,
+      advice: 'No local claim for this subject/predicate. Import as unverified and check it here '
+        + 'before relying on it.',
+    }
+  }
+
+  const incomingValue = normaliseValue(incoming.value)
+  const disagreeing = existing.filter(a => normaliseValue(a.value) !== incomingValue)
+
+  if (disagreeing.length === 0) {
+    return { conflicts: false, existing, advice: 'Agrees with local knowledge.' }
+  }
+
+  const bestLocal = [...disagreeing]
+    .sort((l, r) => authorityRank(l.provenance.origin) - authorityRank(r.provenance.origin))[0]
+  const incomingRank = authorityRank(incoming.provenance.origin)
+  const localRank = authorityRank(bestLocal.provenance.origin)
+
+  return {
+    conflicts: true,
+    existing,
+    advice: incomingRank < localRank
+      ? `Incoming claim has HIGHER authority (${incoming.provenance.origin} beats `
+        + `${bestLocal.provenance.origin}). Re-verify the local value before overwriting — but do `
+        + 'not overwrite automatically.'
+      : `Local claim has equal or higher authority (${bestLocal.provenance.origin}). Import as `
+        + 'unverified and flag the disagreement; do not replace local knowledge.',
+  }
+}
+
+/** Contradictions confined to a single compartment. */
+export function contradictionsIn(
+  graph: KnowledgeGraph,
+  compartment: Compartment,
+): readonly Contradiction[] {
+  const subjects = new Set(compartment.nodes.flatMap(node =>
+    (node.assertions ?? []).map(a => a.subject)))
+  return findContradictions(graph).filter(c => subjects.has(c.subject))
+}
