@@ -1,3 +1,4 @@
+
 name: Samantha XLSX Reader Test
 
 on:
@@ -25,8 +26,6 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: 24
-          cache: npm
-          cache-dependency-path: xlsx-reader/package-lock.json
 
       - name: Install dependencies
         working-directory: xlsx-reader
