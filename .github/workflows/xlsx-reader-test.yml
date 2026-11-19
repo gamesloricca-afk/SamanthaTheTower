@@ -1,16 +1,21 @@
-
 name: Samantha XLSX Reader Test
 
 on:
   workflow_dispatch:
+
   push:
     paths:
       - "xlsx-reader/**"
+      - "Master Sheet with JSON.xlsx"
       - ".github/workflows/xlsx-reader-test.yml"
 
+permissions:
+  contents: read
+
 jobs:
-  test:
+  xlsx-reader:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -20,15 +25,35 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: 24
+          cache: npm
+          cache-dependency-path: xlsx-reader/package-lock.json
 
-      - name: Install SheetJS CE
+      - name: Install dependencies
         working-directory: xlsx-reader
         run: npm install
 
-      - name: Verify SheetJS CE
+      - name: Verify SheetJS
         working-directory: xlsx-reader
-        run: node -e "const XLSX=require('xlsx'); console.log('SheetJS version:',XLSX.version); console.log('Reader ready:',typeof XLSX.read==='function'); if(typeof XLSX.read!=='function') process.exit(1)"
+        run: |
+          node -e "
+            const XLSX = require('xlsx');
 
-      - name: Read Master Workbook
+            console.log('SheetJS:', XLSX.version);
+
+            if (typeof XLSX.readFile !== 'function') {
+              throw new Error('SheetJS readFile is unavailable');
+            }
+          "
+
+      - name: Read workbook
         working-directory: xlsx-reader
         run: node read-workbook.js
+
+      - name: Upload extracted JSON
+        uses: actions/upload-artifact@v4
+        with:
+          name: samantha-xlsx-extraction
+          path: xlsx-reader/output/workbook-data.json
+          if-no-files-found: error
+          retention-days: 14
+          
