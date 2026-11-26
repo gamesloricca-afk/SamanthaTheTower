@@ -8,19 +8,19 @@
     "branch": "TestAccount",
     "fixtures": [
       {
-        "file": "loricca.json",
+        "file": "fixtures/player-saves/loricca.json",
         "sha": "8d338c6ac2fe546d86d19199467837bef35ac83f"
       },
       {
-        "file": "tom.json",
+        "file": "fixtures/player-saves/tom.json",
         "sha": "ac8ae3a1773531d9f0e6c2a51234166f02226d13"
       },
       {
-        "file": "tr3.json",
+        "file": "fixtures/player-saves/tr3.json",
         "sha": "d1a0914e26e16bbb6d1b505910cd80d5afa57490"
       },
       {
-        "file": "vxibes.json",
+        "file": "fixtures/player-saves/vxibes.json",
         "sha": "6b856de007dca2a08c6cbfcc8dca982f47ebd100"
       }
     ],

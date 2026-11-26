@@ -44,7 +44,7 @@ The current `TestAccount` branch contains:
 | `xlsx-reader/` | Spreadsheet reader utility |
 | Root JSON files | Account data and test fixtures |
 | `Master Sheet with JSON.xlsx` | Spreadsheet source |
-| `SENTRY_PROTOCOL_REPORT (1) (1).md` | Project report |
+| `reports/SENTRY_PROTOCOL_REPORT.md` | Project report |
 
 This describes the existing repository, not the complete planned architecture.
 
