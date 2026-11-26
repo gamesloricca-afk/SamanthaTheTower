@@ -26,28 +26,52 @@ A popular strategy is not automatically the best strategy for every player.
 
 ---
 
-2. Core Architecture
+## 2. Repository Architecture
 
-Samantha is organized into the following databases and systems:
+Samantha is designed as a collection of independent but coordinated systems.
 
-Module| Full Name| Purpose
-GKB| Game Knowledge Base| Universal game knowledge and mechanics
-SSD| System Synergy Database| Interactions between game systems
-PAI| Player Account Intelligence| Individual player account information
-PPI| Player Preset Intelligence| Individual and global preset configurations
-ESER| External Sources & Evidence Registry| Sources, references, and evidence tracking
-SDE| Strategic Decision Engine| Strategic analysis and decision-making
-SBD| Strategy & Build Database| Strategies and build configurations
-PER| Player Experiment Registry| Player-specific experimental results
-SJI| Samantha JSON Intelligence| JSON extraction, interpretation, and validation
-SOP| Standard Operating Procedures| Governance and operating procedures
+### 2.1 Current Repository Structure
 
-Additional directories:
+The current `TestAccount` branch contains:
 
-- "schemas/" — Data schemas and validation definitions.
-- "tests/" — Validation tests and test fixtures.
+| Path | Purpose |
+|---|---|
+| `.github/workflows/` | GitHub Actions workflows |
+| `SJI/` | Samantha JSON Intelligence validator |
+| `TheTowerData/scripts/` | SDK-related scripts and tests |
+| `TheTowerData/upstream/thetowersdk/` | Upstream TheTowerSDK source snapshot |
+| `schemas/` | Data schemas and validation manifests |
+| `xlsx-reader/` | Spreadsheet reader utility |
+| Root JSON files | Account data and test fixtures |
+| `Master Sheet with JSON.xlsx` | Spreadsheet source |
+| `SENTRY_PROTOCOL_REPORT (1) (1).md` | Project report |
 
----
+This describes the existing repository, not the complete planned architecture.
+
+### 2.2 Planned Logical Modules
+
+The following modules represent the intended Samantha architecture. A module is not considered implemented merely because it is listed here.
+
+| Module | Full Name | Responsibility |
+|---|---|---|
+| GKB | Game Knowledge Base | Universal game knowledge and mechanics |
+| SSD | System Synergy Database | Interactions between game systems |
+| PAI | Player Account Intelligence | Individual account information |
+| PPI | Player Preset Intelligence | Player configurations and presets |
+| ESER | External Sources & Evidence Registry | Sources and evidence tracking |
+| SDE | Strategic Decision Engine | Strategic analysis |
+| SBD | Strategy & Build Database | Strategies and builds |
+| PER | Player Experiment Registry | Player-specific experiments |
+| SJI | Samantha JSON Intelligence | JSON extraction and validation |
+| SOP | Standard Operating Procedures | Governance and operating procedures |
+
+### 2.3 System Separation
+
+Universal game knowledge, player account information, player experiments, and source evidence must remain separate.
+
+Each system must preserve its own responsibilities and data provenance.
+
+Integration between systems must use controlled interfaces rather than silently mixing their data.
 
 3. Operating Principles
 
@@ -245,31 +269,22 @@ A repository update is not considered verified until its contents have been insp
 
 ---
 
-12. Repository Structure
+## 12. Repository Structure
 
-SamanthaTheTower/
-│
-├── README.md
-│
-├── GKB/
-├── SSD/
-├── PAI/
-├── PPI/
-├── ESER/
-├── SDE/
-├── SBD/
-├── PER/
-├── SJI/
-│
-├── SOP/
-│
-├── schemas/
-│
-└── tests/
+The actual repository structure is documented in Section 2.1.
 
-Each module is maintained independently while following shared governance and data standards.
+The logical modules listed in Section 2.2 describe the intended architecture.
 
----
+Rules:
+
+1. Do not assume a planned module directory already exists.
+2. Do not create empty directories solely to match the architecture diagram.
+3. Inspect the repository before adding or moving files.
+4. Keep independent systems separated.
+5. Preserve existing files, data, and provenance during restructuring.
+6. Introduce new modules incrementally when their foundations are ready.
+
+Repository restructuring must not compromise existing SJI, XLSX Reader, or SDK integration work.
 
 13. Change Management
 
