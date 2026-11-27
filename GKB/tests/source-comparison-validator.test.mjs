@@ -31,7 +31,7 @@ assert.ok(missingReferenceReport.errors.some(error => error.includes('related cl
 console.log(JSON.stringify({
   test: 'Samantha GKB Minimal Source Comparison Validator',
   status: 'PASSED',
-  cases: 12,
+  cases: 14,
   claimsValidatedAgainstCanonicalSchema: report.claimCount,
   conflictGroupsPreserved: report.conflictGroupCount,
   noWinnerSelected: report.winnerSelected,
