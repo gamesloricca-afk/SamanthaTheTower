@@ -3,13 +3,14 @@
  * Produces a review candidate; it never updates the approved baseline.
  */
 import { createHash } from 'node:crypto';
+import { createRequire } from 'node:module';
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const RUNTIME = path.join(ROOT, 'runtime');
-const SDK_ROOT = path.join(RUNTIME, 'node_modules/thetowersdk');
+const RUNTIME_MANIFEST = path.join(RUNTIME, 'package.json');
 const BASELINE_PATH = path.join(ROOT, 'sources/sdk-import-baseline.json');
 const CANDIDATE_PATH = path.join(ROOT, 'staging/sdk-import-manifest.json');
 const REPORT_PATH = path.join(ROOT, 'reports/sdk-import-drift-report.json');
@@ -89,9 +90,13 @@ export function compareSdkImportManifests(baseline, candidate) {
 }
 
 async function main() {
-  const packageBytes = await readFile(path.join(SDK_ROOT, 'package.json'));
-  const graphBytes = await readFile(path.join(SDK_ROOT, 'knowledge-graph.json'));
-  const schemaBytes = await readFile(path.join(SDK_ROOT, 'knowledge.schema.json'));
+  const runtimeRequire = createRequire(RUNTIME_MANIFEST);
+  const graphPath = runtimeRequire.resolve('thetowersdk/knowledge-graph.json');
+  const schemaPath = runtimeRequire.resolve('thetowersdk/knowledge.schema.json');
+  const packageRoot = path.dirname(path.dirname(graphPath));
+  const packageBytes = await readFile(path.join(packageRoot, 'package.json'));
+  const graphBytes = await readFile(graphPath);
+  const schemaBytes = await readFile(schemaPath);
   const packageJson = JSON.parse(packageBytes.toString('utf8'));
   const graph = JSON.parse(graphBytes.toString('utf8'));
   const schema = JSON.parse(schemaBytes.toString('utf8'));
