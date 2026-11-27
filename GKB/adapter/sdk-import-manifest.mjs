@@ -37,7 +37,7 @@ export function buildSdkImportManifest({ packageJson, graph, graphBytes, schema,
   if (!graph || !Array.isArray(graph.nodes) || !Array.isArray(graph.edges)) throw new TypeError('Unsupported SDK graph shape');
   if (!schema || typeof schema !== 'object' || Array.isArray(schema)) throw new TypeError('SDK schema object is required');
   if (!Buffer.isBuffer(graphBytes) || !Buffer.isBuffer(schemaBytes)) throw new TypeError('Raw SDK file bytes are required for checksum calculation');
-  if (typeof retrievedAt !== 'string' || !/^\\d{4}-\\d{2}-\\d{2}$/.test(retrievedAt) || Number.isNaN(new Date(retrievedAt + 'T00:00:00.000Z').getTime()) || new Date(retrievedAt + 'T00:00:00.000Z').toISOString().slice(0, 10) !== retrievedAt) throw new TypeError('retrievedAt must be a valid YYYY-MM-DD calendar date');
+  if (typeof retrievedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(retrievedAt) || Number.isNaN(new Date(retrievedAt + 'T00:00:00.000Z').getTime()) || new Date(retrievedAt + 'T00:00:00.000Z').toISOString().slice(0, 10) !== retrievedAt) throw new TypeError('retrievedAt must be a valid YYYY-MM-DD calendar date');
   const assertions = graph.nodes.reduce((n, node) => n + (Array.isArray(node.assertions) ? node.assertions.length : 0), 0);
   return {
     manifestVersion: '1.0.0',
@@ -103,7 +103,7 @@ async function main() {
   const drift = compareSdkImportManifests(baseline, candidate);
   await mkdir(path.dirname(CANDIDATE_PATH), { recursive: true });
   await mkdir(path.dirname(REPORT_PATH), { recursive: true });
-  await writeFile(CANDIDATE_PATH, JSON.stringify(candidate, null, 2) + '\\n', 'utf8');
+  await writeFile(CANDIDATE_PATH, JSON.stringify(candidate, null, 2) + '\n', 'utf8');
   await writeFile(REPORT_PATH, JSON.stringify({
     test: 'Samantha GKB SDK Import Manifest Drift',
     status: drift.status,
@@ -113,7 +113,7 @@ async function main() {
     changes: drift.changes,
     policy: { baselineUpdated: false, sourceDataModified: false, canonicalImportPerformed: false },
     limitations: ['Drift is a change signal, not a correctness verdict.', 'A baseline must be reviewed and committed explicitly.']
-  }, null, 2) + '\\n', 'utf8');
+  }, null, 2) + '\n', 'utf8');
   console.log(JSON.stringify({ status: drift.status, sdkVersion: candidate.sdk.version, graph: candidate.graph, artifacts: candidate.artifacts, changes: drift.changes }, null, 2));
 }
 
