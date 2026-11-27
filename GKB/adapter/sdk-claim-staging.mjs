@@ -42,17 +42,23 @@ function collectRawOrigins(root) {
       walk(child, childPath);
     }
   }
-  walk(root, '
+  walk(root, '$');
+  return found;
+}
+
+/**
+ * Intentionally conservative: only obvious string fields are exposed as
+ * display hints. The complete source node remains unchanged in sourceRecord.
+ */
+function getDisplayHints(node) {
   const subject = optionalString(node.subject) ??
     optionalString(node.title) ??
     optionalString(node.name) ??
     optionalString(node.id);
-
   const claim = optionalString(node.claim) ??
     optionalString(node.description) ??
     optionalString(node.text) ??
     optionalString(node.content);
-
   return { subject, claim };
 }
 
