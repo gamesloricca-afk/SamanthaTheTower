@@ -119,7 +119,7 @@ function collectSchemaOriginEnums(root, result = []) {
  */
 function parseStringUnionDeclaration(source, typeName) {
   const pattern = new RegExp(
-    String.raw\`export\\s+type\\s+\${typeName}\\s*=([\\s\\S]*?);\`,
+    'export\\s+type\\s+' + typeName + '\\s*=([\\s\\S]*?);',
     'g'
   );
   const matches = [...source.matchAll(pattern)];
@@ -135,13 +135,13 @@ function parseStringUnionDeclaration(source, typeName) {
 
   const match = matches[0];
   const body = match[1]
-    .replace(/\\/\\*[\\s\\S]*?\\*\\//g, '')
-    .replace(/\\/\\/[^\\r\\n]*/g, '');
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/\/\/[^\r\n]*/g, '');
   const members = body.split('|').map(value => value.trim()).filter(Boolean);
   const values = [];
 
   for (const member of members) {
-    const literal = member.match(/^(['"])([^'"]+)\\1$/);
+    const literal = member.match(/^(['"])([^'"]+)\1$/);
     if (!literal) {
       return {
         status: 'NOT_INSPECTED',
@@ -162,7 +162,7 @@ function parseStringUnionDeclaration(source, typeName) {
     };
   }
 
-  const line = source.slice(0, match.index).split('\\n').length;
+  const line = source.slice(0, match.index).split('\n').length;
   return {
     status: 'INSPECTED',
     method: 'AUTOMATIC_DTS_PARSE',
@@ -171,7 +171,7 @@ function parseStringUnionDeclaration(source, typeName) {
       path: null,
       typeName,
       startLine: line,
-      endLine: line + match[0].split('\\n').length - 1
+      endLine: line + match[0].split('\n').length - 1
     }]
   };
 }
