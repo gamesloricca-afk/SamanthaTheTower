@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createRequire} from 'node:module';
-import {buildGreStaging} from '../adapter/gre-staging.mjs';
+import {buildGreStaging,findUnknownMetadataKeys} from '../adapter/gre-staging.mjs';
 const require=createRequire(new URL('../runtime/package.json',import.meta.url));
 const Ajv2020=require('ajv/dist/2020.js').default;
 const here=path.dirname(fileURLToPath(import.meta.url));
@@ -60,8 +61,28 @@ assert.deepEqual(new Set(conflict.relatedSourceClaimIds),new Set([
 assert.ok(a.reviewQueue.records.every(x=>x.decision==='PENDING'&&x.canonical===null));
 assert.ok(a.reviewQueue.records.every(x=>x.sourceContext.sourceRecord.rawMarkdown));
 
-const unknown=buildGreStaging({snapshotDir:snapshot,retrievedAt:'2026-11-27'});
-unknown.records[0].sourceRecord.rawMarkdown+='\n- Unrecognized future field: preserve me\n';
-assert.match(unknown.records[0].sourceRecord.rawMarkdown,/Unrecognized future field/);
+const unknownHeader=[
+  '# Claim — future metadata fixture',
+  '',
+  '- Claim ID: `CLM-TEST-001`',
+  '- Future metadata field: preserve me',
+  '',
+  '## Evidence',
+  '- Example'
+].join('\n');
+assert.deepEqual(findUnknownMetadataKeys(unknownHeader,['Claim ID']),['Future metadata field']);
+assert.match(unknownHeader,/Future metadata field: preserve me/);
+
+const tamperDir=fs.mkdtempSync(path.join(os.tmpdir(),'samantha-gre-snapshot-'));
+const tamperedSnapshot=path.join(tamperDir,'tampered');
+fs.cpSync(snapshot,tamperedSnapshot,{recursive:true});
+const firstClaim=fs.readdirSync(path.join(tamperedSnapshot,'claims')).filter(name=>name.endsWith('.md')).sort()[0];
+fs.appendFileSync(path.join(tamperedSnapshot,'claims',firstClaim),'\n- Tampered after snapshot pin\n');
+assert.throws(()=>buildGreStaging({snapshotDir:tamperedSnapshot,retrievedAt:'2026-11-27'}),/snapshot file integrity mismatch/);
+const missingManifest=path.join(tamperDir,'missing-manifest');
+fs.cpSync(snapshot,missingManifest,{recursive:true});
+fs.unlinkSync(path.join(missingManifest,'snapshot-manifest.json'));
+assert.throws(()=>buildGreStaging({snapshotDir:missingManifest,retrievedAt:'2026-11-27'}),/manifest is missing/);
+fs.rmSync(tamperDir,{recursive:true,force:true});
 
 console.log(JSON.stringify({test:'GRE staging adapter',status:'PASSED',claims:a.report.counts.claimsParsed,sources:a.report.counts.sourcesParsed,conflicts:a.report.counts.conflictsParsed,staged:a.report.counts.recordsStaged,pending:a.report.counts.pending,canonicalWrites:0,automaticApprovals:0},null,2));
