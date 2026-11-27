@@ -16,6 +16,7 @@ import { createRequire } from 'node:module';
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { analyzeOriginCompatibility } from './origin-compatibility.mjs';
+import { parseStringUnionDeclaration } from './typescript-origin-parser.mjs';
 
 const EXPECTED_SDK_VERSION = '0.14.1';
 const EXPECTED_AJV_VERSION = '8.17.1';
@@ -113,69 +114,6 @@ function collectSchemaOriginEnums(root, result = []) {
   return result;
 }
 
-/**
- * Parse a named string-literal union from a TypeScript declaration.
- * Unsupported syntax is reported as NOT_INSPECTED; values are never guessed.
- */
-function parseStringUnionDeclaration(source, typeName) {
-  const pattern = new RegExp(
-    'export\\s+type\\s+' + typeName + '\\s*=([\\s\\S]*?);',
-    'g'
-  );
-  const matches = [...source.matchAll(pattern)];
-
-  if (matches.length !== 1) {
-    return {
-      status: 'NOT_INSPECTED',
-      reason: matches.length === 0 ? 'DECLARATION_NOT_FOUND' : 'MULTIPLE_DECLARATIONS_FOUND',
-      values: [],
-      declarationLocations: []
-    };
-  }
-
-  const match = matches[0];
-  const body = match[1]
-    .replace(/\/\*[\s\S]*?\*\//g, '')
-    .replace(/\/\/[^\r\n]*/g, '');
-  const members = body.split('|').map(value => value.trim()).filter(Boolean);
-  const values = [];
-
-  for (const member of members) {
-    const literal = member.match(/^(['"])([^'"]+)\1$/);
-    if (!literal) {
-      return {
-        status: 'NOT_INSPECTED',
-        reason: 'UNSUPPORTED_UNION_MEMBER_SYNTAX',
-        values: [],
-        declarationLocations: []
-      };
-    }
-    values.push(literal[2]);
-  }
-
-  if (values.length === 0 || new Set(values).size !== values.length) {
-    return {
-      status: 'NOT_INSPECTED',
-      reason: 'EMPTY_OR_DUPLICATE_UNION_VALUES',
-      values: [],
-      declarationLocations: []
-    };
-  }
-
-  const line = source.slice(0, match.index).split('\n').length;
-  return {
-    status: 'INSPECTED',
-    method: 'AUTOMATIC_DTS_PARSE',
-    values,
-    declarationLocations: [{
-      path: null,
-      typeName,
-      startLine: line,
-      endLine: line + match[0].split('\n').length - 1
-    }]
-  };
-}
-
 function normalizeErrors(errors) {
   return (errors ?? []).map(error => ({
     instancePath: error.instancePath,
@@ -244,7 +182,7 @@ async function main() {
     typescriptInspection.declarationLocations =
       typescriptInspection.declarationLocations.map(location => ({
         ...location,
-        path: typescriptDeclarationPath
+        path: typescriptDeclarationReference
       }));
   } catch (error) {
     typescriptInspection = {
@@ -310,9 +248,31 @@ async function main() {
     sourceReference: `${GRAPH_EXPORT} + ${SCHEMA_EXPORT}`
   });
 
+  const graphSchemaConflict = originCompatibility.compatibility.conflicts.find(
+    conflict => conflict.id === 'ORIGIN_GRAPH_SCHEMA_MISMATCH'
+  );
+  const originEvidenceIntegrity = {
+    observedNotInSchema: [...originCompatibility.compatibility.observedNotInSchema],
+    typescriptNotInSchema: [...originCompatibility.compatibility.typescriptNotInSchema],
+    schemaNotInTypescript: [...originCompatibility.compatibility.schemaNotInTypescript],
+    graphSchemaConflictOccurrenceCount: graphSchemaConflict?.occurrenceCount ?? 0,
+    graphSchemaConflictLocationCount: graphSchemaConflict?.locations?.length ?? 0,
+    expectedGraphSchemaConflictOccurrenceCount: 70,
+    expectedGraphSchemaConflictLocationCount: 70,
+    status:
+      graphSchemaConflict?.occurrenceCount === 70 &&
+      graphSchemaConflict?.locations?.length === 70 &&
+      originCompatibility.compatibility.observedNotInSchema.includes('game') &&
+      originCompatibility.compatibility.typescriptNotInSchema.includes('game') &&
+      originCompatibility.compatibility.schemaNotInTypescript.includes('game-files') &&
+      originCompatibility.compatibility.schemaNotInTypescript.includes('in-game')
+        ? 'PASSED'
+        : 'REVIEW_REQUIRED'
+  };
+
   const report = {
     test: 'Samantha GKB SDK Knowledge Graph Validation',
-    testVersion: '1.2.0',
+    testVersion: '1.3.0',
     status: valid ? 'PASSED' : 'FAILED',
 
     sdk: {
@@ -355,6 +315,8 @@ async function main() {
       values: typescriptInspection.values,
       declarationLocations: typescriptInspection.declarationLocations
     },
+
+    originEvidenceIntegrity,
 
     compatibility: {
       ...originCompatibility.compatibility,
