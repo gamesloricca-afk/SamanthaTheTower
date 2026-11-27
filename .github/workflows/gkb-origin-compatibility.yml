@@ -133,6 +133,10 @@ jobs:
         working-directory: GKB/runtime
         run: npm run test:claim-schema
 
+      - name: Validate fan-made source comparisons and provenance gaps
+        working-directory: GKB/runtime
+        run: npm run test:source-comparison
+
       - name: Validate unique module catalog against its domain schema
         working-directory: GKB/runtime
         run: npm run test:unique-modules
