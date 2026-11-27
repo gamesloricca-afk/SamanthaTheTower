@@ -166,7 +166,7 @@ async function main() {
   const headingRecords = (document, prefix, domain) => {
     const records = [];
     for (const line of document.split(/\r?\n/)) {
-      const match = line.match(/^\d+(?:\.\d+)*\s+(.+?)\\s*$/);
+      const match = line.match(/^\d+(?:\.\d+)*\s+(.+?)\s*$/);
       if (!match) continue;
       const name = match[1].replace(/\s+\([A-Z0-9+ -]+\)$/, '').trim();
       const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
