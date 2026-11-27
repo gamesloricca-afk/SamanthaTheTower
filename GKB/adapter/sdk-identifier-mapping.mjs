@@ -46,55 +46,66 @@ export function buildIdentifierMappingReport({ graph, catalogs, sdkVersion, retr
         id: record.id,
         name: record.name,
         domain: catalog.domain,
-        sourcePath: catalog.sourcePath
+        sourcePath: catalog.sourcePath,
+        targetType: catalog.targetType ?? 'CANONICAL'
       };
     });
   });
 
-  const canonicalIds = canonical.map(item => item.id);
+  const canonicalIds = canonical.filter(item => item.targetType === 'CANONICAL').map(item => item.id);
   if (new Set(canonicalIds).size !== canonicalIds.length) {
     throw new Error('Duplicate canonical IDs across supplied catalogs; mapping would be ambiguous');
+  }
+  const targetKeys = canonical.map(item => `${item.targetType}:${item.id}`);
+  if (new Set(targetKeys).size !== targetKeys.length) {
+    throw new Error('Duplicate target IDs within the same target type');
   }
 
   const records = graph.nodes.map((node, index) => {
     if (!isObject(node)) throw new TypeError(`graph.nodes[${index}] must be an object`);
     const sdkNodeId = typeof node.id === 'string' ? node.id : null;
     const sdkLabel = typeof node.label === 'string' ? node.label : null;
-    const idMatches = sdkNodeId ? canonical.filter(item => item.id === sdkNodeId) : [];
+    const idMatches = sdkNodeId ? canonical.filter(item => item.targetType === 'CANONICAL' && item.id === sdkNodeId) : [];
     const nameMatches = sdkLabel ? canonical.filter(item => item.name === sdkLabel) : [];
-    const candidateIds = [...new Set([...idMatches, ...nameMatches].map(item => item.id))];
+    const candidates = [...new Map([...idMatches, ...nameMatches].map(item => [`${item.targetType}:${item.id}`, item])).values()];
+    const candidateIds = candidates.map(item => item.id);
     let status = 'UNMATCHED';
     let matchMethod = 'NONE';
-    if (candidateIds.length > 1) {
+    if (candidates.length > 1) {
       status = 'AMBIGUOUS';
       matchMethod = idMatches.length && nameMatches.length ? 'ID_AND_NAME_DISAGREE' : 'MULTIPLE_EXACT_NAME_MATCHES';
     } else if (idMatches.length === 1) {
       status = 'EXACT_ID_MATCH';
       matchMethod = 'EXACT_ID';
+    } else if (nameMatches.length === 1 && nameMatches[0].targetType === 'DOCUMENT_REFERENCE') {
+      status = 'DOCUMENT_REFERENCE_CANDIDATE';
+      matchMethod = 'EXACT_DOCUMENT_HEADING_ONLY';
     } else if (nameMatches.length === 1) {
       status = 'NAME_CANDIDATE';
       matchMethod = 'EXACT_NAME_ONLY';
     }
-    const candidate = candidateIds.length === 1
-      ? canonical.find(item => item.id === candidateIds[0])
-      : null;
+    const candidate = candidates.length === 1 ? candidates[0] : null;
     return {
       sdkNodeId,
       sdkLabel,
       sdkKind: typeof node.kind === 'string' ? node.kind : null,
       status,
       matchMethod,
-      candidateCanonicalId: candidate?.id ?? null,
+      candidateTargetType: candidate?.targetType ?? null,
+      candidateTargetId: candidate?.id ?? null,
+      candidateCanonicalId: candidate?.targetType === 'CANONICAL' ? candidate.id : null,
+      candidateReferenceId: candidate?.targetType === 'DOCUMENT_REFERENCE' ? candidate.id : null,
       candidateCanonicalName: candidate?.name ?? null,
       candidateDomain: candidate?.domain ?? null,
       candidateSourcePath: candidate?.sourcePath ?? null,
-      candidateCanonicalIds: candidateIds,
+      candidateCanonicalIds: candidates.filter(item => item.targetType === 'CANONICAL').map(item => item.id),
+      candidateReferenceIds: candidates.filter(item => item.targetType === 'DOCUMENT_REFERENCE').map(item => item.id),
       mappingApproved: false
     };
   });
 
   const statusCounts = Object.fromEntries(
-    ['EXACT_ID_MATCH', 'NAME_CANDIDATE', 'AMBIGUOUS', 'UNMATCHED']
+    ['EXACT_ID_MATCH', 'NAME_CANDIDATE', 'DOCUMENT_REFERENCE_CANDIDATE', 'AMBIGUOUS', 'UNMATCHED']
       .map(status => [status, records.filter(item => item.status === status).length])
   );
   return {
@@ -109,12 +120,14 @@ export function buildIdentifierMappingReport({ graph, catalogs, sdkVersion, retr
       canonicalCatalogs: catalogs.map(item => ({
         domain: item.domain,
         sourcePath: item.sourcePath,
+        targetType: item.targetType ?? 'CANONICAL',
         recordCount: item.records.length
       })),
       canonicalRecordCount: canonical.length,
       matchingPolicy: [
         'Only exact ID equality is reported as EXACT_ID_MATCH.',
-        'Exact name equality without ID equality is a NAME_CANDIDATE, not an identity decision.',
+        'Exact name equality without ID equality is a candidate, not an identity decision.',
+        'Matches to prose headings are DOCUMENT_REFERENCE_CANDIDATE, never canonical identity matches.',
         'Multiple or disagreeing candidates remain AMBIGUOUS.',
         'No fuzzy, substring, normalized, or inferred matching is performed.'
       ]
@@ -134,8 +147,9 @@ export function buildIdentifierMappingReport({ graph, catalogs, sdkVersion, retr
       canonicalImportPerformed: false
     },
     limitations: [
-      'Coverage is limited to the canonical catalogs listed in scope; unmatched does not mean the game entity is unknown to Samantha.',
+      'Coverage is limited to the canonical catalogs and document references listed in scope; unmatched does not mean the game entity is unknown to Samantha.',
       'An exact ID or name match is an identifier candidate only, not proof that two records have equivalent meaning.',
+      'Document heading references are navigation anchors, not canonical GKB entity records or stable semantic identifiers.',
       'SDK graph content remains EXTERNAL-UNVERIFIED.',
       'No claim, relationship, source origin, or verification status is promoted.'
     ]
@@ -147,16 +161,56 @@ async function main() {
   if (manifest.version !== '0.14.1') throw new Error(`Expected thetowersdk@0.14.1, got ${manifest.version}`);
   const graph = require('thetowersdk/knowledge-graph.json');
   const modules = JSON.parse(await readFile(path.join(ROOT, 'domains/modules-unique.json'), 'utf8'));
+  const uwDoc = await readFile(path.join(ROOT, 'ULTIMATE_WEAPONS_MECHANICS.md'), 'utf8');
+  const enemyDoc = await readFile(path.join(ROOT, 'ENEMY_MECHANICS.md'), 'utf8');
+  const headingRecords = (document, prefix, domain) => {
+    const records = [];
+    for (const line of document.split(/\\r?\\n/)) {
+      const match = line.match(/^\\d+(?:\\.\\d+)*\\s+(.+?)\\s*$/);
+      if (!match) continue;
+      const name = match[1].replace(/\\s+\\([A-Z0-9+ -]+\\)$/, '').trim();
+      const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+      if (!slug) continue;
+      records.push({ id: `${prefix}#${slug}`, name });
+    }
+    return records;
+  };
+  const uwReferences = headingRecords(uwDoc, 'GKB-UW-001', 'Ultimate Weapons');
+  const enemyReferences = headingRecords(enemyDoc, 'GKB-ENEMY-001', 'Enemies');
   const report = buildIdentifierMappingReport({
     graph,
-    catalogs: [{
-      domain: 'Modules — Unique',
-      sourcePath: 'GKB/domains/modules-unique.json',
-      records: modules.modules
-    }],
+    catalogs: [
+      {
+        domain: 'Modules — Unique',
+        sourcePath: 'GKB/domains/modules-unique.json',
+        targetType: 'CANONICAL',
+        records: modules.modules
+      },
+      {
+        domain: 'Ultimate Weapons — document headings',
+        sourcePath: 'GKB/ULTIMATE_WEAPONS_MECHANICS.md',
+        targetType: 'DOCUMENT_REFERENCE',
+        records: uwReferences
+      },
+      {
+        domain: 'Enemies — document headings',
+        sourcePath: 'GKB/ENEMY_MECHANICS.md',
+        targetType: 'DOCUMENT_REFERENCE',
+        records: enemyReferences
+      }
+    ],
     sdkVersion: manifest.version,
     retrievedAt: new Date().toISOString().slice(0, 10)
   });
+  report.scope.domainCoverage = [
+    { domain: 'Modules — Unique', status: 'CANONICAL_CATALOG', recordCount: modules.modules.length },
+    { domain: 'Ultimate Weapons', status: 'DOCUMENT_REFERENCE_ONLY', recordCount: uwReferences.length },
+    { domain: 'Enemies', status: 'DOCUMENT_REFERENCE_ONLY', recordCount: enemyReferences.length },
+    { domain: 'Research', status: 'NO_CANONICAL_CATALOG', recordCount: 0 },
+    { domain: 'Workshop', status: 'NO_CANONICAL_CATALOG', recordCount: 0 },
+    { domain: 'Cards and Masteries', status: 'NO_CANONICAL_CATALOG', recordCount: 0 },
+    { domain: 'Perks', status: 'NO_CANONICAL_CATALOG', recordCount: 0 }
+  ];
   await mkdir(path.dirname(OUTPUT), { recursive: true });
   await writeFile(OUTPUT, JSON.stringify(report, null, 2) + '\n', 'utf8');
   console.log(JSON.stringify({ ...report, records: undefined }, null, 2));
