@@ -68,6 +68,9 @@ These structures serve different purposes and should not be forced into one sche
 
 ## Changes made in this audit pass
 
+- Marked the legacy status annotations in Enemy Mechanics and Ultimate Weapons Mechanics explicitly as unmapped legacy labels. Their original values and mechanics prose were retained; no claim was promoted or reclassified.
+- Strengthened the unique-module catalog test so it actually compiles and applies its JSON Schema with Ajv, rather than checking only catalog counts and schema constants.
+
 - Extended canonical claim provenance with distinct SDK package/version fields.
 - Removed the duplicate top-level source publication date; publication date remains attached to each provenance source.
 - Added date-shape constraints for publication, retrieval, and review dates.
@@ -78,7 +81,7 @@ These structures serve different purposes and should not be forced into one sche
 
 ## Remaining work before Phase 1 can be completed
 
-1. Run the updated GitHub Actions workflow and inspect the actual job logs.
+1. Confirm the latest GitHub Actions run after the documentation commits completes successfully.
 2. Add/confirm dedicated tests for every structured schema, including source-origin schema coverage.
 3. Audit remaining adapters and reports for accidental mixing of game version, SDK version, source version, and dates.
 4. Decide a minimal claim-record migration format for the two mechanics documents, preserving source attribution and legacy labels. Do not bulk-convert prose without source-level records.
