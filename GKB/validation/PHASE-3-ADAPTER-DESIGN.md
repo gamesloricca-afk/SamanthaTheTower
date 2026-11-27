@@ -2,7 +2,7 @@
 
 Date: 2026-11-27
 Branch: `GKB`
-Status: DESIGN BASELINE — no bulk import or canonical promotion
+Status: IMPLEMENTATION IN PROGRESS — assertion staging slice implemented; no bulk import or canonical promotion
 
 ## Objective
 
@@ -114,6 +114,41 @@ The SDK JSON Schema rejects `game`, although it occurs in the actual graph. Sama
 7. All eight edge kinds map reversibly to the Samantha relationship enum, with raw kind retained.
 8. SDK contradiction `likelyValue` never changes claim or conflict resolution.
 9. No canonical claim is created, no status is promoted, and no GKB bulk import is performed.
+
+## Implemented first slice
+
+Added:
+- `GKB/schema/sdk-assertion-staging.schema.json`
+- `GKB/adapter/sdk-assertion-staging.mjs`
+- `GKB/tests/sdk-assertion-staging.test.mjs`
+- Runtime commands `test:sdk-assertion-staging` and `stage:sdk-assertions`
+- CI steps for the assertion-level test and actual pinned graph staging.
+- Workflow artifact upload for both node-level and assertion-level staging files, retained for 14 days.
+
+The synthetic adapter test passed 25 assertions/cases. It verifies:
+- One envelope per source assertion.
+- Source node linkage and source assertion index.
+- Exact preservation of the original assertion object.
+- Missing assertion verification remains missing even when the parent node has `verified_here`.
+- SDK verification labels remain source metadata; Samantha status remains `EXTERNAL-UNVERIFIED`.
+- `readAgainstVersion`, `verifiedAt`, and actual `retrievedAt` remain separate.
+- `game` origin remains unresolved; other origins remain unmapped for review.
+- No canonical claim, promotion, or GKB import occurs.
+
+The actual pinned graph staging report passed in GitHub Actions run:
+- https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45938447688
+
+Actual staging counts:
+- 320 source nodes.
+- 1,618 assertion envelopes generated and schema-validated.
+- Assertion verification: 554 `verified_here`, 266 `unverified`, 1 `contradicted`, and 797 missing.
+- Classification candidates: 1,602 OBJECTIVE and 16 SENTIMENT. These are candidates only, not approved canonical classifications.
+- Assertion-level origins: code 1,084; wiki 438; user 31; game 50; save 6; sheet 9.
+- All 50 assertion-level `game` origins remain unresolved. The other origins remain unmapped pending review.
+- The node-level staging adapter preserves the full node objects and their nested source records. The 20 additional `game` origin occurrences outside assertion provenance remain in those parent node records; the combined graph-level origin count remains 70.
+- Workflow artifact upload succeeded for `sdk-claims.json` and `sdk-assertions.json`, with 14-day retention.
+
+The assertion `claimPreview` is a deterministic display hint (`predicate = JSON.stringify(value)`), not a canonical natural-language claim. No source assertion was rewritten or promoted.
 
 ## Safety boundary
 
