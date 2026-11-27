@@ -1,5 +1,10 @@
 import assert from 'node:assert/strict';
+import { createRequire } from 'node:module';
 import { buildResearchWorkshopComparison } from '../adapter/sdk-research-workshop-comparison.mjs';
+
+const require = createRequire(new URL('../runtime/package.json', import.meta.url));
+const Ajv2020 = require('ajv/dist/2020').default;
+const reportSchema = require('../schema/sdk-research-workshop-comparison.schema.json');
 
 const staging = {
   source: { sdkVersion: '0.14.1', sdkGameVersion: 'v28.3.0', verificationStatus: 'EXTERNAL-UNVERIFIED' },
@@ -35,6 +40,8 @@ assert.equal(report.exactLabelCandidates.every(item => item.categoryExactEqual =
 assert.equal(report.policy.rawRecordsModified, false);
 assert.equal(report.policy.canonicalRelationshipsCreated, false);
 assert.equal(report.source.sdkVersion, '0.14.1');
+const ajv = new Ajv2020({ allErrors: true });
+assert.equal(ajv.validate(reportSchema, report), true, JSON.stringify(ajv.errors));
 
 const duplicate = structuredClone(staging);
 duplicate.catalogs[1].records.push({
