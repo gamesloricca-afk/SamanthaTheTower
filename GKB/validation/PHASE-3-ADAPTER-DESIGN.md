@@ -373,3 +373,32 @@ Latest CI verification:
 - Artifact: `gkb-sdk-staging-215`, 14-day retention.
 
 Next priority: create a small, explicit crosswalk report from SDK graph nodes to these SDK data-catalog source keys only where exact identifier or exact label equality is present. Keep it labelled SDK-to-SDK candidate linkage, not Samantha canonical mapping; preserve ambiguity and unmatched records, and do not create canonical IDs or claims.
+
+
+
+## SDK-to-SDK data catalog crosswalk — first execution
+
+Activated the existing crosswalk in CI after the four raw domain catalogs are staged:
+- `GKB/adapter/sdk-data-catalog-crosswalk.mjs`
+- `GKB/tests/sdk-data-catalog-crosswalk.test.mjs`
+- Runtime commands: `test:sdk-data-catalog-crosswalk` and `report:sdk-data-catalog-crosswalk`
+- CI artifact: `GKB/reports/sdk-data-catalog-crosswalk.json`
+
+The adapter compares the 320 SDK knowledge-graph nodes with the 347 staged data-catalog records using exact source-ID equality or exact label equality only. The explicit SDK source fields are `slug/name` (Research), `key/label` (Workshop), `id/name` (Cards and Masteries), and `perk` (Perks; no separate ID field observed). The date validation and report newline handling were corrected; the invalid-staging fixture was also corrected after the first CI test exposed that the fixture still supplied an array.
+
+Verified result from CI run #224:
+- Research: 3 exact source-ID matches and 3 exact-label candidates; 6 graph nodes with candidates.
+- Workshop: 2 exact-label candidates; 2 graph nodes with candidates.
+- Cards and Masteries: 6 exact-label candidates; 6 graph nodes with candidates.
+- Perks: 0 exact-label candidates; 0 graph nodes with candidates.
+- 14 distinct graph nodes have at least one candidate across the four catalogs.
+- 0 ambiguous nodes within these domain comparisons; 0 approved mappings.
+
+These are SDK-to-SDK candidates only. A candidate is not proof of semantic identity. The 306 remaining graph nodes are unmatched against these four selected catalogs, not necessarily unknown to the SDK or Samantha. Perks' zero result is limited to exact comparison between graph-node labels and the `perk` field; no semantic or normalized matching was attempted.
+
+CI:
+- Run: https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45946003553
+- Result: SUCCESS.
+- Artifact: `gkb-sdk-staging-224` (14-day retention), including the crosswalk report.
+
+Safety boundary: no Samantha canonical IDs, claims, or relationships were created; no candidate was approved; no source data was modified; no canonical import or verification promotion occurred. This report does not replace the pending crosswalk from SDK records to Samantha-owned source documents and canonical catalogs.
