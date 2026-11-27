@@ -13,12 +13,16 @@ const mechanics = await import(pathToFileURL(require.resolve('thetowersdk/mechan
 const manifest = JSON.parse(require('node:fs').readFileSync(path.join(ROOT, 'runtime/node_modules/thetowersdk/package.json'), 'utf8'));
 assert.equal(manifest.version, '0.14.1');
 
-const required = ['computeWaveBaseHealth','applyWorkshopOvercapMultiplier','sentryProtocolWorkshopOrbFireInterval'];
+const required = ['computeWaveBaseHealth','computeWaveBaseDamage','applyWorkshopOvercapMultiplier','sentryProtocolWorkshopOrbFireInterval'];
 const missing = required.filter(key => typeof mechanics[key] !== 'function');
 assert.deepEqual(missing, [], `Missing documented mechanics functions: ${missing.join(', ')}`);
 
+const waveHealth = mechanics.computeWaveBaseHealth({ tier: 10, wave: 4500 });
+const waveDamage = mechanics.computeWaveBaseDamage({ tier: 10, wave: 4500 });
 const overcapResult = mechanics.applyWorkshopOvercapMultiplier(100, 7000);
 const orbIntervalResult = mechanics.sentryProtocolWorkshopOrbFireInterval(2);
+assert.equal(typeof waveHealth, 'number');
+assert.equal(typeof waveDamage, 'number');
 assert.equal(typeof overcapResult, 'number');
 assert.equal(typeof orbIntervalResult, 'number');
 
@@ -30,6 +34,8 @@ console.log(JSON.stringify({
   functionExportCount: functions.length,
   requiredFunctions: required,
   documentedExamples: {
+    computeWaveBaseHealth: { input: [{ tier: 10, wave: 4500 }], output: waveHealth },
+    computeWaveBaseDamage: { input: [{ tier: 10, wave: 4500 }], output: waveDamage },
     applyWorkshopOvercapMultiplier: { input: [100,7000], output: overcapResult },
     sentryProtocolWorkshopOrbFireInterval: { input: [2], output: orbIntervalResult }
   },
