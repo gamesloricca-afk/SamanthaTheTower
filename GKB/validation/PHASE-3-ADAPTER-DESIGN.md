@@ -424,3 +424,24 @@ The audit preserves raw records and source order. It does not deduplicate, norma
 
 The report's `PASSED` status means the audit completed successfully; it does not mean that every catalog is free of findings. Finding severity is reported separately as `ERROR`, `WARNING`, and `INFO`. Structural findings are not automatically gameplay conflicts.
 
+
+
+## Nested SDK catalog structure and numeric observation audit
+
+Extended the read-only domain catalog audit to recursively inspect nested JSON structures within each raw SDK record.
+
+Additional report fields include:
+- Nested field paths, using `[]` for array elements (for example, `levels[].value`).
+- Observed JSON types and the number of records in which each path appears.
+- Null and empty-string counts.
+- Array-length observations.
+- Nested object key-set variants with source record indices.
+- Descriptive numeric count, minimum, maximum, and distinct-value count.
+
+Additional informational findings:
+- `NESTED_OBJECT_SHAPE_VARIATION`
+- `NESTED_ARRAY_LENGTH_VARIATION`
+
+These observations do not assume every record must have the same nested structure or array length. Numeric minimum/maximum are descriptive only; the audit does not infer expected bounds, units, level progression, costs, or gameplay formulas. A numeric/string type variation is reported, not coerced.
+
+A dedicated nested-audit fixture test covers nested arrays, differing object key sets, mixed numeric/string values, nulls, and array-length differences. The full catalog report remains read-only; no source record is modified, normalized, repaired, deduplicated, or promoted. The CI artifact remains `GKB/reports/sdk-domain-catalog-audit.json`.
