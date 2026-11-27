@@ -53,7 +53,11 @@ console.log(JSON.stringify({
   firstEffectExample: comparisons.length ? {
     id: comparisons[0].id,
     gkbEffectTemplate: gkbById.get(comparisons[0].id)?.effectTemplate ?? null,
-    sdkDescription: sdkById.get(comparisons[0].id)?.description ?? null
+    sdkRecordKeys: Object.keys(sdkById.get(comparisons[0].id) ?? {}).sort(),
+    sdkDescriptionPresent: Object.hasOwn(sdkById.get(comparisons[0].id) ?? {}, 'description'),
+    sdkDescriptionValue: String(sdkById.get(comparisons[0].id)?.description),
+    sdkEffectPresent: Object.hasOwn(sdkById.get(comparisons[0].id) ?? {}, 'effect'),
+    sdkEffectValue: String(sdkById.get(comparisons[0].id)?.effect)
   } : null,
   policy: 'Differences are reported, not automatically overwritten or resolved.'
 }, null, 2));
