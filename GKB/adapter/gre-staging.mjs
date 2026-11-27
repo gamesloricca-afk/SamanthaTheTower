@@ -218,7 +218,7 @@ function deterministicId(kind, sourceId, relativePath) {
 }
 
 export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Date().toISOString().slice(0,10)}={}) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(retrievedAt)) throw new TypeError('retrievedAt must be YYYY-MM-DD');
+  if (typeof retrievedAt!=='string'||! /^\d{4}-\d{2}-\d{2}$/.test(retrievedAt)||Number.isNaN(Date.parse(retrievedAt+'T00:00:00.000Z'))||new Date(retrievedAt+'T00:00:00.000Z').toISOString().slice(0,10)!==retrievedAt) throw new TypeError('retrievedAt must be a real YYYY-MM-DD date');
   const claimsDir=path.join(snapshotDir,'claims'), sourcesDir=path.join(snapshotDir,'sources'), conflictsDir=path.join(snapshotDir,'conflicts');
   const claimFiles=listMarkdown(claimsDir), sourceFiles=listMarkdown(sourcesDir), conflictFiles=listMarkdown(conflictsDir);
   const snapshotManifest=validatePinnedSnapshot(snapshotDir,claimFiles,sourceFiles,conflictFiles);
