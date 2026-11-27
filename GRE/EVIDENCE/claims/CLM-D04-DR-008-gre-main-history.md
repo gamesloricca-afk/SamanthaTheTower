@@ -39,3 +39,9 @@ The GRE export exposes a broader bookkeeping surface than the initial Domain 04-
 - Conflict ID(s): `CNF-D04-DR-001`
 - Relationship(s): UNKNOWN
 - GKB staging decision: hold
+
+
+## Review completion — 2026-11-27
+
+- **Cross-domain GRE declarations verified; call relationship not established.** Rechecked Main type index 618, its defense fields and ApplyTowerDamage declaration, and BattleHistoryEntry type index 619 with the named blocked counters.
+- The GRE manifest and mechanism map exclude native method bodies and a call graph. Metadata does not prove ApplyTowerDamage calls either Enemy reduction method or explain counter accumulation. Status remains VERIFIED (GRE metadata declaration only). Runtime call path/counter semantics: NOT ESTABLISHED. GKB: HOLD.
