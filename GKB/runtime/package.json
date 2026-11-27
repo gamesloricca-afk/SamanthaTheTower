@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Isolated runtime for verifying TheTowerSDK JSON knowledge exports before GKB ingestion.",
   "scripts": {
+    "test:origin-schema": "node ../adapter/origin-schema-validation.mjs",
     "test:sdk-json-exports": "node ../adapter/sdk-json-export-smoke.mjs"
   },
   "dependencies": {
