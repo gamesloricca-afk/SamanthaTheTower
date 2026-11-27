@@ -31,6 +31,8 @@ Rekomendasi strategi, pemilihan UW, dan sinergi build secara mendalam berada di 
 
 3. General Overview
 
+Legacy-label notice: This draft retains historical labels such as Supported. They are not canonical Verification Status values and are not automatically mapped. Preserve them as legacy annotations until each claim has source-specific provenance and applicable version context.
+
 Ultimate Weapons adalah kemampuan khusus yang dapat diperoleh menggunakan Power Stones.
 
 Setiap UW mempunyai fungsi, statistik, dan jalur peningkatan masing-masing. Sebagian UW memberikan damage langsung, sementara yang lain berfungsi sebagai pengendali musuh, pengganda damage, atau pendukung ekonomi.
@@ -42,7 +44,7 @@ Secara umum, peningkatan UW dapat melibatkan:
 3. Module effects: efek tambahan dari Core Modules dan sub-module effects.
 4. Ultimate Weapon Plus: pengembangan lanjutan bagi UW.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 Sumber utama: Tower Hub – Ultimate Weapons. Informasi ini merupakan referensi komunitas, bukan dokumentasi resmi developer.
 
@@ -59,7 +61,7 @@ Fungsi dasar:
 - Damage berkaitan dengan statistik damage Tower dan peningkatan khusus Chain Lightning.
 - Memiliki jalur peningkatan dan efek tambahan yang berkaitan dengan Shock.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 4.2 Smart Missiles (SM)
 
@@ -70,7 +72,7 @@ Fungsi dasar:
 - Damage dipengaruhi statistik damage Tower dan peningkatan khusus Smart Missiles.
 - Memiliki penelitian tambahan yang memengaruhi perilaku misil.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 4.3 Death Wave (DW)
 
@@ -80,7 +82,7 @@ Fungsi dasar:
 - Memiliki interaksi dengan kill, coin, elite cells, dan peningkatan Max Health berdasarkan mekanik yang dilaporkan komunitas.
 - Damage serangan utama bukan satu-satunya sumber manfaat UW ini.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 Rincian bonus, persyaratan, dan batas peningkatan harus diperiksa berdasarkan versi game.
 
@@ -93,7 +95,7 @@ Fungsi dasar:
 - Dapat ditingkatkan hingga memiliki uptime yang sangat tinggi.
 - Memiliki penelitian tambahan yang memengaruhi durasi dan efeknya.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 4.5 Inner Land Mines (ILM)
 
@@ -105,7 +107,7 @@ Fungsi dasar:
 - Memiliki peningkatan yang berkaitan dengan Damage, Quantity, dan Cooldown.
 - Research tertentu dapat menambahkan efek tambahan seperti stun.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 4.6 Golden Tower (GT)
 
@@ -116,7 +118,7 @@ Fungsi dasar:
 - Memiliki statistik Bonus, Duration, dan Cooldown.
 - Memiliki penelitian tambahan yang dapat memperkuat efek ekonominya.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 4.7 Poison Swamp (PS)
 
@@ -127,7 +129,7 @@ Fungsi dasar:
 - Memiliki peningkatan yang berkaitan dengan Damage, Duration, dan Cooldown.
 - Research dapat menambahkan efek tambahan terhadap musuh yang terkena Poison Swamp.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 4.8 Black Hole (BH)
 
@@ -137,7 +139,7 @@ Fungsi dasar:
 - Memiliki statistik Size, Duration, dan Cooldown.
 - Research dapat menambahkan Black Hole kedua serta efek tambahan.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 Detail interaksi dengan tipe musuh tertentu harus diperiksa secara terpisah sebelum digunakan sebagai fakta umum.
 
@@ -150,7 +152,7 @@ Fungsi dasar:
 - Memiliki statistik Bonus, Angle, dan Quantity.
 - Dapat berfungsi sebagai pengganda damage bagi sumber serangan tertentu.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 5. Upgrade Categories
 
@@ -170,7 +172,7 @@ Speed Reduction| Mengubah kemampuan memperlambat musuh
 
 Tidak semua kategori berlaku untuk setiap UW.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 Nilai, biaya, jumlah level, dan batas maksimum tidak ditetapkan secara permanen dalam dokumen ini. Gunakan data yang sesuai dengan versi game ketika melakukan perhitungan.
 
@@ -193,7 +195,7 @@ Nama, persyaratan, jumlah level, biaya, dan hasil penelitian dapat berubah.
 
 Samantha tidak boleh menganggap seluruh penelitian tersedia bagi semua pemain. Persyaratan milestone dan progres akun perlu diperhatikan.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 Rincian penelitian dalam sumber komunitas perlu diperlakukan sebagai informasi yang dapat berubah.
 
@@ -214,7 +216,7 @@ Jangan menganggap semua bonus dijumlahkan atau dikalikan dengan cara yang sama.
 
 Rumus perhitungan harus diperiksa berdasarkan efek yang bersangkutan. Jika rumus belum didukung bukti yang memadai, Samantha harus menyatakan asumsi atau keterbatasannya.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 Sumber komunitas dapat digunakan untuk rincian efek, tetapi tidak otomatis menjadi konfirmasi resmi developer.
 
@@ -255,7 +257,7 @@ Deskripsi tersebut merupakan ringkasan mekanik berdasarkan referensi komunitas, 
 
 Biaya, level, nilai peningkatan, dan persyaratan dapat berubah berdasarkan versi game.
 
-Evidence Status: Supported
+Legacy Evidence Status (unmapped): Supported
 
 9. Version Awareness and Changes
 
@@ -289,7 +291,7 @@ Catatan resmi tanggal 2 November 2026 mencantumkan:
 - Perbaikan visual Chrono Field setelah pengaturan CF+ dan Chrono Field diubah.
 - Perbaikan Chain Lightning yang tidak muncul ketika musuh hancur dalam satu serangan.
 
-Evidence Status: Verified
+Legacy Evidence Status (unmapped): Verified
 
 Pernyataan di atas merujuk pada isi catatan resmi developer untuk versi yang disebutkan. Hal tersebut tidak berarti seluruh mekanik UW telah diverifikasi secara independen.
 
