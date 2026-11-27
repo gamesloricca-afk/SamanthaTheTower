@@ -1,0 +1,119 @@
+{
+  "format": "SAMANTHA_GKB_STAGING_SNAPSHOT",
+  "formatVersion": 1,
+  "runId": "45964132479",
+  "retrievedAt": "2026-11-27",
+  "sdk": {
+    "package": "thetowersdk",
+    "version": "0.14.1"
+  },
+  "files": [
+    {
+      "name": "sdk-claims.json",
+      "sourcePath": "staging/sdk-claims.json",
+      "sha256": "b1f25766ad02b69365956e3c4caf1636fb4b58369dad71c2b0aaefd0b44bf5be",
+      "bytes": 1925860,
+      "rawSha256": "b1f25766ad02b69365956e3c4caf1636fb4b58369dad71c2b0aaefd0b44bf5be",
+      "rawBytes": 1925860,
+      "contentSha256": "5208cb1ceb6051279a9da721d4b26ee5c67950eaa4c71eedba71d07233fe86d9",
+      "objectPath": "objects/5208cb1ceb6051279a9da721d4b26ee5c67950eaa4c71eedba71d07233fe86d9.json",
+      "objectBytes": 1913942
+    },
+    {
+      "name": "sdk-assertions.json",
+      "sourcePath": "staging/sdk-assertions.json",
+      "sha256": "af7d3357f17eeb7d4af8c4b2e831760b4185190861d847f7bf98295ec5fba308",
+      "bytes": 4493037,
+      "rawSha256": "af7d3357f17eeb7d4af8c4b2e831760b4185190861d847f7bf98295ec5fba308",
+      "rawBytes": 4493037,
+      "contentSha256": "6453c7eceb1b07d423370beec54557c27456985bb6e1f0ba3197014e37fb2439",
+      "objectPath": "objects/6453c7eceb1b07d423370beec54557c27456985bb6e1f0ba3197014e37fb2439.json",
+      "objectBytes": 4433093
+    },
+    {
+      "name": "sdk-edges.json",
+      "sourcePath": "staging/sdk-edges.json",
+      "sha256": "419b0712181c8125a2cca7dce3c3f81d945825830a801292a122272f5bf92fab",
+      "bytes": 957482,
+      "rawSha256": "419b0712181c8125a2cca7dce3c3f81d945825830a801292a122272f5bf92fab",
+      "rawBytes": 957482,
+      "contentSha256": "58e425a4ebf4641a3c025ff1952c027c3342331d74449fe9d8f97fc88cbbacc9",
+      "objectPath": "objects/58e425a4ebf4641a3c025ff1952c027c3342331d74449fe9d8f97fc88cbbacc9.json",
+      "objectBytes": 942752
+    },
+    {
+      "name": "sdk-contradictions.json",
+      "sourcePath": "staging/sdk-contradictions.json",
+      "sha256": "23f81bb4058991727235b5b6d940d5c5d56ee80232ae040684dc967b674031c0",
+      "bytes": 11320,
+      "rawSha256": "23f81bb4058991727235b5b6d940d5c5d56ee80232ae040684dc967b674031c0",
+      "rawBytes": 11320,
+      "contentSha256": "1e24576ee8b7295313dd6666d9e95264cb05ab4a1dbadaa0fd85d6d935f2556d",
+      "objectPath": "objects/1e24576ee8b7295313dd6666d9e95264cb05ab4a1dbadaa0fd85d6d935f2556d.json",
+      "objectBytes": 11131
+    },
+    {
+      "name": "sdk-domain-catalogs.json",
+      "sourcePath": "staging/sdk-domain-catalogs.json",
+      "sha256": "7ee7da434d332d632e515812932569912f54be6c5c88789e456868c4c05eb810",
+      "bytes": 6539228,
+      "rawSha256": "7ee7da434d332d632e515812932569912f54be6c5c88789e456868c4c05eb810",
+      "rawBytes": 6539228,
+      "contentSha256": "04cf6a9c79f955d7e7915347b3202016ddfab92c6e0783bcd44848bb8435ecc4",
+      "objectPath": "objects/04cf6a9c79f955d7e7915347b3202016ddfab92c6e0783bcd44848bb8435ecc4.json",
+      "objectBytes": 6539150
+    },
+    {
+      "name": "review-queue.json",
+      "sourcePath": "staging/review-queue.json",
+      "sha256": "b666190f47ba1e195e9f3f4beb506bee15197f7e1333fce5b4841c486e62702c",
+      "bytes": 549332,
+      "rawSha256": "b666190f47ba1e195e9f3f4beb506bee15197f7e1333fce5b4841c486e62702c",
+      "rawBytes": 549332,
+      "contentSha256": "3b9002990ef48c2c3f2854632754fafe36f705faabdc879deada2215ce9be9e7",
+      "objectPath": "objects/3b9002990ef48c2c3f2854632754fafe36f705faabdc879deada2215ce9be9e7.json",
+      "objectBytes": 549332
+    }
+  ],
+  "comparison": [
+    {
+      "name": "sdk-claims.json",
+      "change": "BASELINE",
+      "previousSha256": null,
+      "currentSha256": "b1f25766ad02b69365956e3c4caf1636fb4b58369dad71c2b0aaefd0b44bf5be"
+    },
+    {
+      "name": "sdk-assertions.json",
+      "change": "BASELINE",
+      "previousSha256": null,
+      "currentSha256": "af7d3357f17eeb7d4af8c4b2e831760b4185190861d847f7bf98295ec5fba308"
+    },
+    {
+      "name": "sdk-edges.json",
+      "change": "BASELINE",
+      "previousSha256": null,
+      "currentSha256": "419b0712181c8125a2cca7dce3c3f81d945825830a801292a122272f5bf92fab"
+    },
+    {
+      "name": "sdk-contradictions.json",
+      "change": "BASELINE",
+      "previousSha256": null,
+      "currentSha256": "23f81bb4058991727235b5b6d940d5c5d56ee80232ae040684dc967b674031c0"
+    },
+    {
+      "name": "sdk-domain-catalogs.json",
+      "change": "BASELINE",
+      "previousSha256": null,
+      "currentSha256": "7ee7da434d332d632e515812932569912f54be6c5c88789e456868c4c05eb810"
+    },
+    {
+      "name": "review-queue.json",
+      "change": "BASELINE",
+      "previousSha256": null,
+      "currentSha256": "b666190f47ba1e195e9f3f4beb506bee15197f7e1333fce5b4841c486e62702c"
+    }
+  ],
+  "storageFormat": "CONTENT_ADDRESSED",
+  "storageMigratedAt": "2026-11-27",
+  "comparisonAlgorithm": "LEGACY_RAW_SHA256_V0"
+}

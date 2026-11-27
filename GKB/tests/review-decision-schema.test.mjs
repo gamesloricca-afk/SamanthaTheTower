@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs'; import path from 'node:path'; import {createRequire} from 'node:module'; import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const require=createRequire(path.join(root,'runtime/package.json'));
+const Ajv2020=require('ajv/dist/2020.js').default;
+const schema=JSON.parse(fs.readFileSync(path.join(root,'schema/review-decision.schema.json'),'utf8'));
+const validate=new Ajv2020({allErrors:true,strict:false,validateFormats:false}).compile(schema);
+const base={stagingRecordId:'stage-1',reviewer:'reviewer-1',reviewedAt:'2026-11-27'};
+const canonical={claimId:'GKB-1',domain:'game-fundamentals',subject:'tower',claim:'Example',classification:'OBJECTIVE'};
+for(const decision of ['REJECT','DEFER'])assert.equal(validate({...base,decision}),true,JSON.stringify(validate.errors));
+assert.equal(validate({...base,decision:'APPROVE',canonical}),true,JSON.stringify(validate.errors));
+assert.equal(validate({...base,decision:'APPROVE'}),false,'APPROVE must include canonical mapping');
+assert.equal(validate({...base,decision:'UNKNOWN'}),false,'unknown decisions must be rejected');
+console.log(JSON.stringify({test:'Review Decision Schema',status:'PASSED',cases:5,canonicalRequiredOnlyForApproval:true},null,2));

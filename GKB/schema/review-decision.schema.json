@@ -1,0 +1,37 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://samantha.invalid/gkb/schema/review-decision.schema.json",
+  "title":"Samantha GKB explicit review decision",
+  "type":"object",
+  "required":["stagingRecordId","decision","reviewer","reviewedAt"],
+  "properties":{
+    "stagingRecordId":{"type":"string","minLength":1},
+    "decision":{"enum":["APPROVE","REJECT","DEFER"]},
+    "reviewer":{"type":"string","minLength":1},
+    "reviewedAt":{"type":"string","format":"date"},
+    "note":{"type":["string","null"]},
+    "canonical":{
+      "type":"object",
+      "required":["claimId","domain","subject","claim","classification"],
+      "properties":{
+        "claimId":{"type":"string","minLength":1},
+        "domain":{"type":"string","minLength":1},
+        "subject":{"type":"string","minLength":1},
+        "claim":{"type":"string","minLength":1},
+        "classification":{"enum":["OBJECTIVE","SENTIMENT"]},
+        "verificationStatus":{"enum":["VERIFIED","USER-PROVIDED","EXTERNAL-UNVERIFIED","HYPOTHESIS","CONFLICTING","SUPERSEDED"]},
+        "applicableGameVersion":{"type":["string","null"]},
+        "evidence":{"type":["string","null"]},
+        "sourceName":{"type":["string","null"]},
+        "sourceType":{"enum":["OFFICIAL","COMMUNITY","PLAYER_TESTING","OTHER","UNKNOWN"]},
+        "conflict":{"type":"object"}
+      },
+      "additionalProperties":true
+    }
+  },
+  "allOf":[{
+    "if":{"properties":{"decision":{"const":"APPROVE"}},"required":["decision"]},
+    "then":{"required":["canonical"]}
+  }],
+  "additionalProperties":true
+}

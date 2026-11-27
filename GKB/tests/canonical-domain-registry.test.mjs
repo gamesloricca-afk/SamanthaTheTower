@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const require=createRequire(path.join(root,'runtime/package.json'));
+const Ajv2020=require('ajv/dist/2020.js').default;
+const registry=JSON.parse(fs.readFileSync(path.join(root,'domains/canonical-domain-registry.json'),'utf8'));
+const schema=JSON.parse(fs.readFileSync(path.join(root,'schema/canonical-domain-registry.schema.json'),'utf8'));
+const validate=new Ajv2020({allErrors:true,strict:true}).compile(schema);
+assert.equal(validate(registry),true,JSON.stringify(validate.errors));
+const ids=registry.domains.map(item=>item.domainId),labels=registry.domains.map(item=>item.label);
+assert.equal(new Set(ids).size,ids.length,'domain IDs must be unique');
+assert.equal(new Set(labels).size,labels.length,'domain labels must be unique');
+assert.equal(ids.length,20);
+assert.ok(registry.policy.includes('source identifiers'));
+console.log(JSON.stringify({test:'Canonical Domain Registry',status:'PASSED',domainCount:ids.length,uniqueIds:true,automaticSdkMapping:false},null,2));

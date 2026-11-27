@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "policy": "Samantha-owned domain keys. SDK names and IDs remain source identifiers until explicitly mapped.",
+  "domains": [
+    {"domainId":"game-fundamentals","label":"Game Fundamentals"},
+    {"domainId":"enemies","label":"Enemies"},
+    {"domainId":"battle-conditions","label":"Battle Conditions"},
+    {"domainId":"combat-mechanics","label":"Combat Mechanics"},
+    {"domainId":"ultimate-weapons","label":"Ultimate Weapons"},
+    {"domainId":"workshop","label":"Workshop"},
+    {"domainId":"workshop-enhancements","label":"Workshop Enhancements"},
+    {"domainId":"research","label":"Research"},
+    {"domainId":"modules","label":"Modules"},
+    {"domainId":"cards-and-masteries","label":"Cards and Masteries"},
+    {"domainId":"bots","label":"Bots"},
+    {"domainId":"guardians","label":"Guardians"},
+    {"domainId":"perks","label":"Perks"},
+    {"domainId":"relics","label":"Relics"},
+    {"domainId":"vault","label":"Vault"},
+    {"domainId":"economy-and-progression","label":"Economy and Progression"},
+    {"domainId":"formulas-and-calculations","label":"Formulas and Calculations"},
+    {"domainId":"strategies-and-build-interactions","label":"Strategies and Build Interactions"},
+    {"domainId":"game-version-history","label":"Game Version History"},
+    {"domainId":"experimental-and-community-knowledge","label":"Experimental and Community Knowledge"}
+  ]
+}

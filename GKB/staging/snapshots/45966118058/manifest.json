@@ -1,0 +1,107 @@
+{
+  "format": "SAMANTHA_GKB_STAGING_SNAPSHOT",
+  "formatVersion": 1,
+  "storageFormat": "CONTENT_ADDRESSED",
+  "comparisonAlgorithm": "JSON_CONTENT_SHA256_EXCLUDING_GENERATION_AND_RETRIEVAL_TIMESTAMPS_V1",
+  "runId": "45966118058",
+  "retrievedAt": "2026-11-27",
+  "sdk": {
+    "package": "thetowersdk",
+    "version": "0.14.1"
+  },
+  "previousRunId": "45965567126",
+  "files": [
+    {
+      "name": "sdk-claims.json",
+      "sourcePath": "staging/sdk-claims.json",
+      "rawSha256": "81fa6195456e8df88e8130c1d0b7b80998b58176283d2ac95f90b964d07ca463",
+      "rawBytes": 1925860,
+      "contentSha256": "5208cb1ceb6051279a9da721d4b26ee5c67950eaa4c71eedba71d07233fe86d9",
+      "objectPath": "objects/5208cb1ceb6051279a9da721d4b26ee5c67950eaa4c71eedba71d07233fe86d9.json",
+      "objectBytes": 1913942
+    },
+    {
+      "name": "sdk-assertions.json",
+      "sourcePath": "staging/sdk-assertions.json",
+      "rawSha256": "fe56a0d0dd11a9ea586ac03265021e0dba3121d325f21a6c9abc91214d314eba",
+      "rawBytes": 4493037,
+      "contentSha256": "6453c7eceb1b07d423370beec54557c27456985bb6e1f0ba3197014e37fb2439",
+      "objectPath": "objects/6453c7eceb1b07d423370beec54557c27456985bb6e1f0ba3197014e37fb2439.json",
+      "objectBytes": 4433093
+    },
+    {
+      "name": "sdk-edges.json",
+      "sourcePath": "staging/sdk-edges.json",
+      "rawSha256": "122e5673813292899af14f72d2a575efb0bd892149322bb8fba6b5f41a24468e",
+      "rawBytes": 957482,
+      "contentSha256": "58e425a4ebf4641a3c025ff1952c027c3342331d74449fe9d8f97fc88cbbacc9",
+      "objectPath": "objects/58e425a4ebf4641a3c025ff1952c027c3342331d74449fe9d8f97fc88cbbacc9.json",
+      "objectBytes": 942752
+    },
+    {
+      "name": "sdk-contradictions.json",
+      "sourcePath": "staging/sdk-contradictions.json",
+      "rawSha256": "ca36072f47896fc04eaac92027baf4038df6b3ae4affe4947f3b017bdd0d3e4d",
+      "rawBytes": 11320,
+      "contentSha256": "1e24576ee8b7295313dd6666d9e95264cb05ab4a1dbadaa0fd85d6d935f2556d",
+      "objectPath": "objects/1e24576ee8b7295313dd6666d9e95264cb05ab4a1dbadaa0fd85d6d935f2556d.json",
+      "objectBytes": 11131
+    },
+    {
+      "name": "sdk-domain-catalogs.json",
+      "sourcePath": "staging/sdk-domain-catalogs.json",
+      "rawSha256": "7ee7da434d332d632e515812932569912f54be6c5c88789e456868c4c05eb810",
+      "rawBytes": 6539228,
+      "contentSha256": "04cf6a9c79f955d7e7915347b3202016ddfab92c6e0783bcd44848bb8435ecc4",
+      "objectPath": "objects/04cf6a9c79f955d7e7915347b3202016ddfab92c6e0783bcd44848bb8435ecc4.json",
+      "objectBytes": 6539150
+    },
+    {
+      "name": "review-queue.json",
+      "sourcePath": "staging/review-queue.json",
+      "rawSha256": "b666190f47ba1e195e9f3f4beb506bee15197f7e1333fce5b4841c486e62702c",
+      "rawBytes": 549332,
+      "contentSha256": "3b9002990ef48c2c3f2854632754fafe36f705faabdc879deada2215ce9be9e7",
+      "objectPath": "objects/3b9002990ef48c2c3f2854632754fafe36f705faabdc879deada2215ce9be9e7.json",
+      "objectBytes": 549332
+    }
+  ],
+  "comparison": [
+    {
+      "name": "sdk-claims.json",
+      "change": "UNCHANGED",
+      "previousContentSha256": "5208cb1ceb6051279a9da721d4b26ee5c67950eaa4c71eedba71d07233fe86d9",
+      "currentContentSha256": "5208cb1ceb6051279a9da721d4b26ee5c67950eaa4c71eedba71d07233fe86d9"
+    },
+    {
+      "name": "sdk-assertions.json",
+      "change": "UNCHANGED",
+      "previousContentSha256": "6453c7eceb1b07d423370beec54557c27456985bb6e1f0ba3197014e37fb2439",
+      "currentContentSha256": "6453c7eceb1b07d423370beec54557c27456985bb6e1f0ba3197014e37fb2439"
+    },
+    {
+      "name": "sdk-edges.json",
+      "change": "UNCHANGED",
+      "previousContentSha256": "58e425a4ebf4641a3c025ff1952c027c3342331d74449fe9d8f97fc88cbbacc9",
+      "currentContentSha256": "58e425a4ebf4641a3c025ff1952c027c3342331d74449fe9d8f97fc88cbbacc9"
+    },
+    {
+      "name": "sdk-contradictions.json",
+      "change": "UNCHANGED",
+      "previousContentSha256": "1e24576ee8b7295313dd6666d9e95264cb05ab4a1dbadaa0fd85d6d935f2556d",
+      "currentContentSha256": "1e24576ee8b7295313dd6666d9e95264cb05ab4a1dbadaa0fd85d6d935f2556d"
+    },
+    {
+      "name": "sdk-domain-catalogs.json",
+      "change": "UNCHANGED",
+      "previousContentSha256": "04cf6a9c79f955d7e7915347b3202016ddfab92c6e0783bcd44848bb8435ecc4",
+      "currentContentSha256": "04cf6a9c79f955d7e7915347b3202016ddfab92c6e0783bcd44848bb8435ecc4"
+    },
+    {
+      "name": "review-queue.json",
+      "change": "UNCHANGED",
+      "previousContentSha256": "3b9002990ef48c2c3f2854632754fafe36f705faabdc879deada2215ce9be9e7",
+      "currentContentSha256": "3b9002990ef48c2c3f2854632754fafe36f705faabdc879deada2215ce9be9e7"
+    }
+  ]
+}
