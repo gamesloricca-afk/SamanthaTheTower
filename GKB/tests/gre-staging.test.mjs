@@ -2,7 +2,12 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {createRequire} from 'node:module';
 import {buildGreStaging} from '../adapter/gre-staging.mjs';
+const require=createRequire(new URL('../runtime/package.json',import.meta.url));
+const Ajv2020=require('ajv/dist/2020.js').default;
+const schema=JSON.parse(fs.readFileSync(path.resolve(here,'../schema/gre-staging.schema.json'),'utf8'));
+const validateEnvelope=new Ajv2020({allErrors:true,strict:true,validateFormats:false}).compile(schema);
 
 const here=path.dirname(fileURLToPath(import.meta.url));
 const snapshot=path.resolve(here,'../staging/gre-source-snapshot/TestAccount-62ae508f');
@@ -10,6 +15,8 @@ const a=buildGreStaging({snapshotDir:snapshot,retrievedAt:'2026-11-27'});
 const b=buildGreStaging({snapshotDir:snapshot,retrievedAt:'2026-11-27'});
 
 assert.equal(a.report.status,'STAGED');
+const envelope={format:a.format,formatVersion:a.formatVersion,sourceSnapshot:a.sourceSnapshot,sources:a.sources,records:a.records};
+assert.equal(validateEnvelope(envelope),true,JSON.stringify(validateEnvelope.errors));
 assert.equal(a.report.counts.claimsParsed,12);
 assert.equal(a.report.counts.sourcesParsed,7);
 assert.equal(a.report.counts.conflictsParsed,1);
