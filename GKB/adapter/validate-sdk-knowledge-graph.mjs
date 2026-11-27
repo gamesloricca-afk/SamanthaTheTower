@@ -15,6 +15,7 @@
 import { createRequire } from 'node:module';
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
+import { analyzeOriginCompatibility } from './origin-compatibility.mjs';
 
 const EXPECTED_SDK_VERSION = '0.14.1';
 const EXPECTED_AJV_VERSION = '8.17.1';
@@ -202,15 +203,16 @@ async function main() {
 
   const originCounts = countValues(origins);
 
-  const originConflicts = Object.entries(originCounts)
-    .filter(([origin]) => !allowedOrigins.includes(origin))
-    .map(([origin, occurrenceCount]) => ({
-      code: 'ORIGIN_GRAPH_SCHEMA_MISMATCH',
-      graphOrigin: origin,
-      schemaAllows: false,
-      resolution: 'UNRESOLVED',
-      occurrenceCount
-    }));
+  const originCompatibility = analyzeOriginCompatibility({
+    sdkPackage: 'thetowersdk',
+    sdkVersion: sdkManifest.version,
+    graph,
+    schema,
+    // TypeScript declarations are deliberately not inferred.
+    // The report marks this comparison as NOT_INSPECTED.
+    typescriptOrigins: null,
+    sourceReference: `${GRAPH_EXPORT} + ${SCHEMA_EXPORT}`
+  });
 
   const report = {
     test: 'Samantha GKB SDK Knowledge Graph Validation',
@@ -250,9 +252,9 @@ async function main() {
     },
 
     compatibility: {
-      status: originConflicts.length ? 'CONFLICTING' : 'NO_CONFLICT_DETECTED',
-      conflictCount: originConflicts.length,
-      conflicts: originConflicts
+      ...originCompatibility.compatibility,
+      inspection: originCompatibility.inspection,
+      limitations: originCompatibility.limitations
     },
 
     safeguards: [
