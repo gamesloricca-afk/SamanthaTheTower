@@ -25,7 +25,9 @@
     "test:sdk-contradiction-staging": "node ../tests/sdk-contradiction-staging.test.mjs",
     "stage:sdk-contradictions": "node ../adapter/sdk-contradiction-staging.mjs",
     "report:sdk-staging-integrity": "node ../adapter/sdk-staging-integrity-report.mjs",
-    "test:reviewed-assertion-normalizer": "node ../tests/reviewed-assertion-normalizer.test.mjs"
+    "test:reviewed-assertion-normalizer": "node ../tests/reviewed-assertion-normalizer.test.mjs",
+    "test:sdk-import-manifest": "node ../tests/sdk-import-manifest.test.mjs",
+    "report:sdk-import-manifest": "node ../adapter/sdk-import-manifest.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
