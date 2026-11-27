@@ -1,0 +1,1334 @@
+[
+  {
+    "index": 73,
+    "offset": 84163,
+    "length": 29,
+    "text": "\nmodule.renderOrderPriority: "
+  },
+  {
+    "index": 74,
+    "offset": 84192,
+    "length": 27,
+    "text": "\nmodule.sortOrderPriority: "
+  },
+  {
+    "index": 75,
+    "offset": 84219,
+    "length": 9,
+    "text": "\nmodule: "
+  },
+  {
+    "index": 373,
+    "offset": 91016,
+    "length": 75,
+    "text": " of assist module main effect moduleManager.GetAssistModuleMainEffectCost: "
+  },
+  {
+    "index": 374,
+    "offset": 91091,
+    "length": 68,
+    "text": " of assist module substat moduleManager.GetAssistModuleSubstatCost: "
+  },
+  {
+    "index": 375,
+    "offset": 91159,
+    "length": 79,
+    "text": " of assist module unique effect moduleManager.GetAssistModuleUniqueEffectCost: "
+  },
+  {
+    "index": 377,
+    "offset": 91256,
+    "length": 52,
+    "text": " of synchronicity Bots.SYNCHRONICITY_UPGRADE_COSTS: "
+  },
+  {
+    "index": 1264,
+    "offset": 116278,
+    "length": 31,
+    "text": ". Tournament register attempt. "
+  },
+  {
+    "index": 1813,
+    "offset": 123315,
+    "length": 13,
+    "text": ":guardianchip"
+  },
+  {
+    "index": 1814,
+    "offset": 123328,
+    "length": 13,
+    "text": ":guardianskin"
+  },
+  {
+    "index": 1816,
+    "offset": 123350,
+    "length": 7,
+    "text": ":module"
+  },
+  {
+    "index": 1818,
+    "offset": 123375,
+    "length": 6,
+    "text": ":relic"
+  },
+  {
+    "index": 1959,
+    "offset": 125044,
+    "length": 37,
+    "text": "<b>Pointer Input Module of type: </b>"
+  },
+  {
+    "index": 2330,
+    "offset": 137703,
+    "length": 14,
+    "text": "ASSIST MODULES"
+  },
+  {
+    "index": 2662,
+    "offset": 151647,
+    "length": 67,
+    "text": "Are you sure you want to respec the Vault? This cannot be reverted."
+  },
+  {
+    "index": 2737,
+    "offset": 153822,
+    "length": 17,
+    "text": "AssistModulesBeta"
+  },
+  {
+    "index": 2762,
+    "offset": 154994,
+    "length": 58,
+    "text": "Attempt from old tournament, not applying it and deleting."
+  },
+  {
+    "index": 2946,
+    "offset": 160116,
+    "length": 65,
+    "text": "Ban from tournament error. Code: {0} Message: {1} StackTrace: {2}"
+  },
+  {
+    "index": 2949,
+    "offset": 160200,
+    "length": 29,
+    "text": "Banned player from tournament"
+  },
+  {
+    "index": 2993,
+    "offset": 161138,
+    "length": 52,
+    "text": "Beta is over, please remove the beta modules to play"
+  },
+  {
+    "index": 3184,
+    "offset": 166547,
+    "length": 22,
+    "text": "CARDS MASTERY UNLOCKED"
+  },
+  {
+    "index": 3787,
+    "offset": 194979,
+    "length": 13,
+    "text": "CardMasteryBG"
+  },
+  {
+    "index": 3858,
+    "offset": 196557,
+    "length": 55,
+    "text": "CheckForResumeRound: Found Round: {0} Tournament: [{1}]"
+  },
+  {
+    "index": 3861,
+    "offset": 196805,
+    "length": 61,
+    "text": "CheckForResumeRoundOnLoad: Found Round: {0} Tournament: [{1}]"
+  },
+  {
+    "index": 3957,
+    "offset": 199082,
+    "length": 36,
+    "text": "Code {0} {1} wave {2} tournament {3}"
+  },
+  {
+    "index": 4003,
+    "offset": 200846,
+    "length": 17,
+    "text": "CommanderBuffArea"
+  },
+  {
+    "index": 4190,
+    "offset": 207861,
+    "length": 61,
+    "text": "Could not find CardMasteryBG in activeCardSpecificObject[{0}]"
+  },
+  {
+    "index": 4262,
+    "offset": 211548,
+    "length": 28,
+    "text": "Couldn't load Modules system"
+  },
+  {
+    "index": 4375,
+    "offset": 214845,
+    "length": 30,
+    "text": "DG.Tweening.DOTweenModuleUtils"
+  },
+  {
+    "index": 4407,
+    "offset": 215959,
+    "length": 15,
+    "text": "DOTween.Modules"
+  },
+  {
+    "index": 4625,
+    "offset": 222212,
+    "length": 65,
+    "text": "Deterministic reroll failed to find a valid candidate for module "
+  },
+  {
+    "index": 4626,
+    "offset": 222277,
+    "length": 79,
+    "text": "Deterministic reroll failed to find a valid candidate for module {0}, slot {1}."
+  },
+  {
+    "index": 4627,
+    "offset": 222356,
+    "length": 70,
+    "text": "Deterministic reroll pool is empty for module type {0}. InfoIndex: {1}"
+  },
+  {
+    "index": 4892,
+    "offset": 229323,
+    "length": 19,
+    "text": "End Fake Tournament"
+  },
+  {
+    "index": 4916,
+    "offset": 229972,
+    "length": 5,
+    "text": "Enemy"
+  },
+  {
+    "index": 4917,
+    "offset": 229977,
+    "length": 50,
+    "text": "Enemy type: {0} isn't registered on any enemy pool"
+  },
+  {
+    "index": 5031,
+    "offset": 233180,
+    "length": 36,
+    "text": "Error from JoinTournament function. "
+  },
+  {
+    "index": 5047,
+    "offset": 234520,
+    "length": 100,
+    "text": "Error in RerollNotLockedEffects. Module infoIndex: {0}, effects length: {1}, effects array: {2}. {3}"
+  },
+  {
+    "index": 5078,
+    "offset": 235568,
+    "length": 37,
+    "text": "Error parsing new joined tournament. "
+  },
+  {
+    "index": 5143,
+    "offset": 238207,
+    "length": 53,
+    "text": "Error when trying to register tournament attempt. {0}"
+  },
+  {
+    "index": 5182,
+    "offset": 239530,
+    "length": 74,
+    "text": "Event rollover: showing relics [{0}] from {1} tagged event {2}, medals {3}"
+  },
+  {
+    "index": 5426,
+    "offset": 248801,
+    "length": 37,
+    "text": "Failed to get featured module banners"
+  },
+  {
+    "index": 5432,
+    "offset": 249047,
+    "length": 37,
+    "text": "Failed to get rotating module banners"
+  },
+  {
+    "index": 5454,
+    "offset": 249886,
+    "length": 34,
+    "text": "Failed to log vault respec event: "
+  },
+  {
+    "index": 5967,
+    "offset": 265201,
+    "length": 34,
+    "text": "Guardian chip index out of range: "
+  },
+  {
+    "index": 5968,
+    "offset": 265235,
+    "length": 34,
+    "text": "Guardian skin index out of range: "
+  },
+  {
+    "index": 5969,
+    "offset": 265269,
+    "length": 12,
+    "text": "GuardianChip"
+  },
+  {
+    "index": 5970,
+    "offset": 265281,
+    "length": 14,
+    "text": "GuardianRespec"
+  },
+  {
+    "index": 5971,
+    "offset": 265295,
+    "length": 12,
+    "text": "GuardianSkin"
+  },
+  {
+    "index": 5972,
+    "offset": 265307,
+    "length": 18,
+    "text": "Guardians_{0}to{1}"
+  },
+  {
+    "index": 6097,
+    "offset": 267722,
+    "length": 80,
+    "text": "Here is your prize for the most recent {0} tournament. You finished at rank {1}."
+  },
+  {
+    "index": 6343,
+    "offset": 272698,
+    "length": 161,
+    "text": "Ignoring event relics [{0}] from {1}: they arrived tagged event {2}, the same event as the [{3}] we are already showing, so eventNumber has not moved off {4} yet"
+  },
+  {
+    "index": 6776,
+    "offset": 290282,
+    "length": 24,
+    "text": "Invalid relic index: {0}"
+  },
+  {
+    "index": 7091,
+    "offset": 300375,
+    "length": 61,
+    "text": "Join Tournament error. Code: {0} Message: {1} StackTrace: {2}"
+  },
+  {
+    "index": 7335,
+    "offset": 306308,
+    "length": 29,
+    "text": "Legendary Module Tickets Pack"
+  },
+  {
+    "index": 7492,
+    "offset": 310085,
+    "length": 81,
+    "text": "Logged {0}, keys_refunded={1}, previous_vault_cost_sum={2}, forced={3}, nodes={4}"
+  },
+  {
+    "index": 7587,
+    "offset": 311187,
+    "length": 35,
+    "text": "MODULE LEVEL MUST BE GREATER THAN 1"
+  },
+  {
+    "index": 7588,
+    "offset": 311222,
+    "length": 7,
+    "text": "MODULES"
+  },
+  {
+    "index": 7809,
+    "offset": 317702,
+    "length": 39,
+    "text": "Microsoft.FSharp.Collections.ListModule"
+  },
+  {
+    "index": 7880,
+    "offset": 320021,
+    "length": 6,
+    "text": "Module"
+  },
+  {
+    "index": 7881,
+    "offset": 320027,
+    "length": 11,
+    "text": "Module Odds"
+  },
+  {
+    "index": 7882,
+    "offset": 320038,
+    "length": 19,
+    "text": "Module Tickets Pack"
+  },
+  {
+    "index": 7883,
+    "offset": 320057,
+    "length": 17,
+    "text": "ModuleShard_Armor"
+  },
+  {
+    "index": 7884,
+    "offset": 320074,
+    "length": 18,
+    "text": "ModuleShard_Cannon"
+  },
+  {
+    "index": 7885,
+    "offset": 320092,
+    "length": 16,
+    "text": "ModuleShard_Core"
+  },
+  {
+    "index": 7886,
+    "offset": 320108,
+    "length": 21,
+    "text": "ModuleShard_Generator"
+  },
+  {
+    "index": 7887,
+    "offset": 320129,
+    "length": 26,
+    "text": "ModuleTicketsPackSaleCheck"
+  },
+  {
+    "index": 7888,
+    "offset": 320155,
+    "length": 69,
+    "text": "ModuleUI.ConfirmShatterClick: Error checking module at index {0}: {1}"
+  },
+  {
+    "index": 7889,
+    "offset": 320224,
+    "length": 67,
+    "text": "ModuleUI.ConfirmShatterClick: moduleManager or shatterItems is null"
+  },
+  {
+    "index": 7890,
+    "offset": 320291,
+    "length": 55,
+    "text": "ModuleUI.ConfirmShatterClick: shatterItems[{0}] is null"
+  },
+  {
+    "index": 7891,
+    "offset": 320346,
+    "length": 19,
+    "text": "Modules Launch Sale"
+  },
+  {
+    "index": 7892,
+    "offset": 320365,
+    "length": 17,
+    "text": "ModulesLaunchSale"
+  },
+  {
+    "index": 7893,
+    "offset": 320382,
+    "length": 22,
+    "text": "ModulesLaunchSaleCheck"
+  },
+  {
+    "index": 8150,
+    "offset": 328051,
+    "length": 81,
+    "text": "No available effects for module slot {0}. Info: {1} Type: {2} Desired Rarity: {3}"
+  },
+  {
+    "index": 8183,
+    "offset": 329867,
+    "length": 9,
+    "text": "No module"
+  },
+  {
+    "index": 8200,
+    "offset": 330318,
+    "length": 50,
+    "text": "No relic localization id found for relic index {0}"
+  },
+  {
+    "index": 8285,
+    "offset": 332818,
+    "length": 35,
+    "text": "Not able to parse tournament Info. "
+  },
+  {
+    "index": 8286,
+    "offset": 332853,
+    "length": 35,
+    "text": "Not able to parse tournament data. "
+  },
+  {
+    "index": 8287,
+    "offset": 332888,
+    "length": 42,
+    "text": "Not able to parse tournament player data. "
+  },
+  {
+    "index": 8566,
+    "offset": 341478,
+    "length": 79,
+    "text": "Only modules of Common, Rare or Epic rarity can be created. {0} is not allowed."
+  },
+  {
+    "index": 8821,
+    "offset": 347448,
+    "length": 4,
+    "text": "Perk"
+  },
+  {
+    "index": 8822,
+    "offset": 347452,
+    "length": 16,
+    "text": "Perk/Description"
+  },
+  {
+    "index": 8823,
+    "offset": 347468,
+    "length": 10,
+    "text": "Perk/Image"
+  },
+  {
+    "index": 8952,
+    "offset": 351362,
+    "length": 27,
+    "text": "Premium Module Tickets Pack"
+  },
+  {
+    "index": 9259,
+    "offset": 359854,
+    "length": 73,
+    "text": "Register tournament attempt error. Code: {0} Message: {1} StackTrace: {2}"
+  },
+  {
+    "index": 9284,
+    "offset": 360817,
+    "length": 5,
+    "text": "Relic"
+  },
+  {
+    "index": 9285,
+    "offset": 360822,
+    "length": 26,
+    "text": "Relic index out of range: "
+  },
+  {
+    "index": 9286,
+    "offset": 360848,
+    "length": 6,
+    "text": "Relic_"
+  },
+  {
+    "index": 9413,
+    "offset": 365235,
+    "length": 12,
+    "text": "Respec Vault"
+  },
+  {
+    "index": 9414,
+    "offset": 365247,
+    "length": 24,
+    "text": "Respec cooldown cleared."
+  },
+  {
+    "index": 9840,
+    "offset": 376542,
+    "length": 72,
+    "text": "SetupCardUI index {0} out of bounds for cardMasteryHasSeenNotification[]"
+  },
+  {
+    "index": 9841,
+    "offset": 376614,
+    "length": 61,
+    "text": "SetupCardUI index {0} out of bounds for cardMasteryUnlocked[]"
+  },
+  {
+    "index": 9938,
+    "offset": 379943,
+    "length": 13,
+    "text": "Skin_Guardian"
+  },
+  {
+    "index": 10127,
+    "offset": 385504,
+    "length": 21,
+    "text": "Start Fake Tournament"
+  },
+  {
+    "index": 10511,
+    "offset": 397092,
+    "length": 15,
+    "text": "TOWERS_WORKSHOP"
+  },
+  {
+    "index": 10939,
+    "offset": 421923,
+    "length": 61,
+    "text": "The given module {0} cannot be found within the assembly {1}."
+  },
+  {
+    "index": 11181,
+    "offset": 439223,
+    "length": 51,
+    "text": "The time to participate in the tournament has ended"
+  },
+  {
+    "index": 11386,
+    "offset": 452501,
+    "length": 61,
+    "text": "This save had the bugged assist module slots as cannon, fixed"
+  },
+  {
+    "index": 11532,
+    "offset": 457786,
+    "length": 10,
+    "text": "Tournament"
+  },
+  {
+    "index": 11533,
+    "offset": 457796,
+    "length": 27,
+    "text": "Tournament Attempt failed: "
+  },
+  {
+    "index": 11534,
+    "offset": 457823,
+    "length": 46,
+    "text": "Tournament FTUE Battle Has Been Played Already"
+  },
+  {
+    "index": 11535,
+    "offset": 457869,
+    "length": 15,
+    "text": "Tournament ID: "
+  },
+  {
+    "index": 11536,
+    "offset": 457884,
+    "length": 16,
+    "text": "Tournament Prize"
+  },
+  {
+    "index": 11537,
+    "offset": 457900,
+    "length": 28,
+    "text": "Tournament not Open to Claim"
+  },
+  {
+    "index": 11538,
+    "offset": 457928,
+    "length": 30,
+    "text": "Tournament player data changed"
+  },
+  {
+    "index": 11539,
+    "offset": 457958,
+    "length": 19,
+    "text": "Tournaments/Buckets"
+  },
+  {
+    "index": 11540,
+    "offset": 457977,
+    "length": 16,
+    "text": "Tournaments/Info"
+  },
+  {
+    "index": 11541,
+    "offset": 457993,
+    "length": 20,
+    "text": "Tournaments/Players/"
+  },
+  {
+    "index": 11849,
+    "offset": 467831,
+    "length": 69,
+    "text": "UltimateWeaponDescriptionPanel: ran out of lab enhancement entries, '"
+  },
+  {
+    "index": 12040,
+    "offset": 476934,
+    "length": 30,
+    "text": "Unhandled AssistModuleSlotType"
+  },
+  {
+    "index": 12041,
+    "offset": 476964,
+    "length": 20,
+    "text": "Unhandled ModuleType"
+  },
+  {
+    "index": 12086,
+    "offset": 478618,
+    "length": 28,
+    "text": "UnityEngine.UIElementsModule"
+  },
+  {
+    "index": 12129,
+    "offset": 479926,
+    "length": 21,
+    "text": "Unknown module type: "
+  },
+  {
+    "index": 12263,
+    "offset": 484067,
+    "length": 59,
+    "text": "Using a dev save, skipping mails for unclaimed tournaments."
+  },
+  {
+    "index": 12304,
+    "offset": 484845,
+    "length": 45,
+    "text": "ValidateResumeBtn(): tournament playing true "
+  },
+  {
+    "index": 12363,
+    "offset": 486974,
+    "length": 5,
+    "text": "Vault"
+  },
+  {
+    "index": 12364,
+    "offset": 486979,
+    "length": 12,
+    "text": "Vault Config"
+  },
+  {
+    "index": 12365,
+    "offset": 486991,
+    "length": 47,
+    "text": "Vault Upgrade Level {0} is out of range for {1}"
+  },
+  {
+    "index": 12366,
+    "offset": 487038,
+    "length": 48,
+    "text": "VaultHarmonyTile: Set called with VaultStat.None"
+  },
+  {
+    "index": 12367,
+    "offset": 487086,
+    "length": 74,
+    "text": "VaultManager: could not find a VaultConfig asset at Resources/Vault Config"
+  },
+  {
+    "index": 12368,
+    "offset": 487160,
+    "length": 23,
+    "text": "VaultResetDataVersion16"
+  },
+  {
+    "index": 12369,
+    "offset": 487183,
+    "length": 11,
+    "text": "VaultRespec"
+  },
+  {
+    "index": 12370,
+    "offset": 487194,
+    "length": 47,
+    "text": "VaultSimpleTile: Set called with VaultStat.None"
+  },
+  {
+    "index": 12647,
+    "offset": 498134,
+    "length": 94,
+    "text": "You aren't allowed to use beta modules in tournaments, please change to normal modules to play"
+  },
+  {
+    "index": 12659,
+    "offset": 498926,
+    "length": 40,
+    "text": "You have been banned from the tournament"
+  },
+  {
+    "index": 12724,
+    "offset": 501915,
+    "length": 158,
+    "text": "[BOT+ CORRECTION DRY RUN] End: Bot+ off and level 0 on every preset, Synchronicity locked, one mail. Medals {0} -> {1}, Stones {2} -> {3}. Nothing was changed"
+  },
+  {
+    "index": 12725,
+    "offset": 502073,
+    "length": 92,
+    "text": "[BOT+ CORRECTION DRY RUN] Refund: {0} = {1} medals from preset {2}; Synchronicity {3} stones"
+  },
+  {
+    "index": 12726,
+    "offset": 502165,
+    "length": 79,
+    "text": "[BOT+ CORRECTION DRY RUN] Start: {0}. Synchronicity {1}. Medals {2}, Stones {3}"
+  },
+  {
+    "index": 12729,
+    "offset": 502311,
+    "length": 125,
+    "text": "[BOT+ CORRECTION] applied. Bot+ locked on every preset. Returned {0} medals from preset {1} and {2} stones from Synchronicity"
+  },
+  {
+    "index": 13298,
+    "offset": 517847,
+    "length": 75,
+    "text": "_anotherProfileData or its relicSlots is null or slotIndex is out of bounds"
+  },
+  {
+    "index": 13804,
+    "offset": 525840,
+    "length": 27,
+    "text": "banFromTournamentInternalV2"
+  },
+  {
+    "index": 13856,
+    "offset": 526306,
+    "length": 10,
+    "text": "betaModule"
+  },
+  {
+    "index": 13860,
+    "offset": 526352,
+    "length": 22,
+    "text": "betaRespecGuardianFree"
+  },
+  {
+    "index": 14144,
+    "offset": 529661,
+    "length": 75,
+    "text": "cardMasteryHasSeenNotification[] does not exist or has not been initialized"
+  },
+  {
+    "index": 14145,
+    "offset": 529736,
+    "length": 64,
+    "text": "cardMasteryUnlocked[] does not exist or has not been initialized"
+  },
+  {
+    "index": 14511,
+    "offset": 541451,
+    "length": 20,
+    "text": "commanderAttackRange"
+  },
+  {
+    "index": 14512,
+    "offset": 541471,
+    "length": 18,
+    "text": "commanderBuffPulse"
+  },
+  {
+    "index": 14611,
+    "offset": 542689,
+    "length": 83,
+    "text": "cost for unlocked assist module slot ModuleManager.ASSIST_MODULE_SLOT_UNLOCK_COST: "
+  },
+  {
+    "index": 14614,
+    "offset": 542908,
+    "length": 68,
+    "text": "cost for unlocked bot plus count + Flame Bots.BOT_PLUS_UNLOCK_COST: "
+  },
+  {
+    "index": 14615,
+    "offset": 542976,
+    "length": 69,
+    "text": "cost for unlocked bot plus count + Golden Bots.BOT_PLUS_UNLOCK_COST: "
+  },
+  {
+    "index": 14617,
+    "offset": 543115,
+    "length": 39,
+    "text": "cost for unlocked card mastery count + "
+  },
+  {
+    "index": 14619,
+    "offset": 543192,
+    "length": 86,
+    "text": "cost for unlocked synchronicity count + Synchronicity Bots.SYNCHRONICITY_UNLOCK_COST: "
+  },
+  {
+    "index": 14952,
+    "offset": 546778,
+    "length": 27,
+    "text": "dev-in-game-modules-launch-"
+  },
+  {
+    "index": 14955,
+    "offset": 546847,
+    "length": 28,
+    "text": "dev-webstore-modules-launch-"
+  },
+  {
+    "index": 15249,
+    "offset": 550651,
+    "length": 25,
+    "text": "encyclopediaHiddenModules"
+  },
+  {
+    "index": 15262,
+    "offset": 550928,
+    "length": 31,
+    "text": "enemiesDestroyedByOrbsThisRound"
+  },
+  {
+    "index": 15263,
+    "offset": 550959,
+    "length": 5,
+    "text": "enemy"
+  },
+  {
+    "index": 15614,
+    "offset": 555164,
+    "length": 24,
+    "text": "ftue_modules_intro_shown"
+  },
+  {
+    "index": 15615,
+    "offset": 555188,
+    "length": 29,
+    "text": "ftue_modules_tutorial_started"
+  },
+  {
+    "index": 15617,
+    "offset": 555245,
+    "length": 27,
+    "text": "ftue_tournament_intro_shown"
+  },
+  {
+    "index": 15618,
+    "offset": 555272,
+    "length": 37,
+    "text": "ftue_tournament_start_battle_prompted"
+  },
+  {
+    "index": 15619,
+    "offset": 555309,
+    "length": 34,
+    "text": "ftue_tournament_tutorial_completed"
+  },
+  {
+    "index": 15620,
+    "offset": 555343,
+    "length": 32,
+    "text": "ftue_tournament_tutorial_started"
+  },
+  {
+    "index": 15623,
+    "offset": 555433,
+    "length": 37,
+    "text": "ftue_utility_workshop_button_prompted"
+  },
+  {
+    "index": 15627,
+    "offset": 555543,
+    "length": 36,
+    "text": "ftue_workshop_battle_button_prompted"
+  },
+  {
+    "index": 15628,
+    "offset": 555579,
+    "length": 33,
+    "text": "ftue_workshop_battle_tab_prompted"
+  },
+  {
+    "index": 15629,
+    "offset": 555612,
+    "length": 37,
+    "text": "ftue_workshop_damage_upgrade_prompted"
+  },
+  {
+    "index": 15630,
+    "offset": 555649,
+    "length": 34,
+    "text": "ftue_workshop_defense_tab_prompted"
+  },
+  {
+    "index": 15631,
+    "offset": 555683,
+    "length": 35,
+    "text": "ftue_workshop_defense_tier_prompted"
+  },
+  {
+    "index": 15632,
+    "offset": 555718,
+    "length": 20,
+    "text": "ftue_workshop_opened"
+  },
+  {
+    "index": 15633,
+    "offset": 555738,
+    "length": 32,
+    "text": "ftue_workshop_tutorial_completed"
+  },
+  {
+    "index": 15634,
+    "offset": 555770,
+    "length": 30,
+    "text": "ftue_workshop_tutorial_started"
+  },
+  {
+    "index": 15635,
+    "offset": 555800,
+    "length": 34,
+    "text": "ftue_workshop_upgrades_intro_shown"
+  },
+  {
+    "index": 16326,
+    "offset": 568152,
+    "length": 91,
+    "text": "info {0} playerData {1} playerDataReady {2} firebase {3} online {4} wave {5} tournament {6}"
+  },
+  {
+    "index": 16592,
+    "offset": 571701,
+    "length": 17,
+    "text": "joinTournamentDev"
+  },
+  {
+    "index": 16593,
+    "offset": 571718,
+    "length": 16,
+    "text": "joinTournamentV6"
+  },
+  {
+    "index": 16789,
+    "offset": 573390,
+    "length": 29,
+    "text": "legendary-module-tickets-pack"
+  },
+  {
+    "index": 16915,
+    "offset": 575253,
+    "length": 17,
+    "text": "log_module_reroll"
+  },
+  {
+    "index": 17228,
+    "offset": 579209,
+    "length": 21,
+    "text": "module-tickets-pack-1"
+  },
+  {
+    "index": 17229,
+    "offset": 579230,
+    "length": 10,
+    "text": "module-{0}"
+  },
+  {
+    "index": 17230,
+    "offset": 579240,
+    "length": 13,
+    "text": "module_reroll"
+  },
+  {
+    "index": 17231,
+    "offset": 579253,
+    "length": 13,
+    "text": "module_ticket"
+  },
+  {
+    "index": 17232,
+    "offset": 579266,
+    "length": 14,
+    "text": "module_tickets"
+  },
+  {
+    "index": 17233,
+    "offset": 579280,
+    "length": 14,
+    "text": "modules-launch"
+  },
+  {
+    "index": 17234,
+    "offset": 579294,
+    "length": 13,
+    "text": "moduletickets"
+  },
+  {
+    "index": 17307,
+    "offset": 580062,
+    "length": 16,
+    "text": "mythicTournament"
+  },
+  {
+    "index": 17349,
+    "offset": 580506,
+    "length": 21,
+    "text": "nearRangedEnemyRadius"
+  },
+  {
+    "index": 17350,
+    "offset": 580527,
+    "length": 36,
+    "text": "needs Rare and Epic modules for pity"
+  },
+  {
+    "index": 17431,
+    "offset": 581347,
+    "length": 10,
+    "text": "no modules"
+  },
+  {
+    "index": 17751,
+    "offset": 585904,
+    "length": 21,
+    "text": "overchargeAttackRange"
+  },
+  {
+    "index": 17829,
+    "offset": 587035,
+    "length": 10,
+    "text": "passRelics"
+  },
+  {
+    "index": 17986,
+    "offset": 588545,
+    "length": 27,
+    "text": "premium-module-tickets-pack"
+  },
+  {
+    "index": 17989,
+    "offset": 588609,
+    "length": 91,
+    "text": "preset {0} Flame+ {1}, Thunder+ {2}, Golden+ {3}, Amplify+ {4}, Bot+ {5}, Synchronicity {6}"
+  },
+  {
+    "index": 18000,
+    "offset": 588851,
+    "length": 23,
+    "text": "previous_vault_cost_sum"
+  },
+  {
+    "index": 18001,
+    "offset": 588874,
+    "length": 20,
+    "text": "previous_vault_nodes"
+  },
+  {
+    "index": 18052,
+    "offset": 589509,
+    "length": 15,
+    "text": "protectorRadius"
+  },
+  {
+    "index": 18151,
+    "offset": 590269,
+    "length": 17,
+    "text": "rangedEnemyRadius"
+  },
+  {
+    "index": 18157,
+    "offset": 590331,
+    "length": 25,
+    "text": "rarity {0} has no modules"
+  },
+  {
+    "index": 18214,
+    "offset": 591008,
+    "length": 5,
+    "text": "relic"
+  },
+  {
+    "index": 18215,
+    "offset": 591013,
+    "length": 6,
+    "text": "relic="
+  },
+  {
+    "index": 18216,
+    "offset": 591019,
+    "length": 10,
+    "text": "relicSlots"
+  },
+  {
+    "index": 18217,
+    "offset": 591029,
+    "length": 48,
+    "text": "relicSlots is null or slotIndex is out of bounds"
+  },
+  {
+    "index": 18218,
+    "offset": 591077,
+    "length": 15,
+    "text": "relicsCollected"
+  },
+  {
+    "index": 18736,
+    "offset": 597751,
+    "length": 13,
+    "text": "shopGemRelics"
+  },
+  {
+    "index": 18737,
+    "offset": 597764,
+    "length": 10,
+    "text": "shopRelics"
+  },
+  {
+    "index": 18916,
+    "offset": 600103,
+    "length": 16,
+    "text": "spotlightReflect"
+  },
+  {
+    "index": 19364,
+    "offset": 606824,
+    "length": 27,
+    "text": "totalEnemiesDestroyedByOrbs"
+  },
+  {
+    "index": 19391,
+    "offset": 607114,
+    "length": 10,
+    "text": "tournament"
+  },
+  {
+    "index": 19392,
+    "offset": 607124,
+    "length": 34,
+    "text": "tournamentFleetHPTiebreakerEnabled"
+  },
+  {
+    "index": 19393,
+    "offset": 607158,
+    "length": 32,
+    "text": "tournamentFleetWaveTimingEnabled"
+  },
+  {
+    "index": 19394,
+    "offset": 607190,
+    "length": 16,
+    "text": "tournamentLeague"
+  },
+  {
+    "index": 19395,
+    "offset": 607206,
+    "length": 17,
+    "text": "tournamentLeague="
+  },
+  {
+    "index": 19396,
+    "offset": 607223,
+    "length": 23,
+    "text": "tournamentMythicEnabled"
+  },
+  {
+    "index": 19397,
+    "offset": 607246,
+    "length": 14,
+    "text": "tournamentRank"
+  },
+  {
+    "index": 19398,
+    "offset": 607260,
+    "length": 18,
+    "text": "tournamentRank={0}"
+  },
+  {
+    "index": 19399,
+    "offset": 607278,
+    "length": 32,
+    "text": "tournamentRegisterLoggingEnabled"
+  },
+  {
+    "index": 19400,
+    "offset": 607310,
+    "length": 15,
+    "text": "tournamentStart"
+  },
+  {
+    "index": 19401,
+    "offset": 607325,
+    "length": 16,
+    "text": "tournamentStart="
+  },
+  {
+    "index": 19402,
+    "offset": 607341,
+    "length": 18,
+    "text": "tournaments_events"
+  },
+  {
+    "index": 19403,
+    "offset": 607359,
+    "length": 17,
+    "text": "tournamenttickets"
+  },
+  {
+    "index": 19720,
+    "offset": 612895,
+    "length": 30,
+    "text": "unknown highlighted module {0}"
+  },
+  {
+    "index": 19721,
+    "offset": 612925,
+    "length": 18,
+    "text": "unknown module {0}"
+  },
+  {
+    "index": 19754,
+    "offset": 613384,
+    "length": 18,
+    "text": "updateTournamentV2"
+  },
+  {
+    "index": 19854,
+    "offset": 614779,
+    "length": 12,
+    "text": "vault_respec"
+  },
+  {
+    "index": 19855,
+    "offset": 614791,
+    "length": 21,
+    "text": "vault_respec_cooldown"
+  },
+  {
+    "index": 19856,
+    "offset": 614812,
+    "length": 17,
+    "text": "vault_respec_cost"
+  },
+  {
+    "index": 19943,
+    "offset": 615907,
+    "length": 20,
+    "text": "wallMeleeEnemyRadius"
+  },
+  {
+    "index": 20332,
+    "offset": 664178,
+    "length": 10,
+    "text": "{0} Module"
+  },
+  {
+    "index": 20350,
+    "offset": 665088,
+    "length": 26,
+    "text": "{0} module '{1}' for '{2}'"
+  },
+  {
+    "index": 20351,
+    "offset": 665114,
+    "length": 22,
+    "text": "{0} modules sum to {1}"
+  },
+  {
+    "index": 20374,
+    "offset": 665737,
+    "length": 31,
+    "text": "{0} {1} wave {2} tournament {3}"
+  },
+  {
+    "index": 20385,
+    "offset": 666088,
+    "length": 24,
+    "text": "{0}#avatar={1},relic={2}"
+  }
+]

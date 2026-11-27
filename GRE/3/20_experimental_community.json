@@ -1,0 +1,2648 @@
+{
+  "domain": "20_experimental_community",
+  "evidence_status": "DIRECT_METADATA_DECLARATIONS; behavioral meaning unverified",
+  "type_indices": [
+    275,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    874,
+    875
+  ],
+  "types": [
+    {
+      "index": 275,
+      "name": "DevPanelUWEffectsState",
+      "namespace": "",
+      "byval_type_index": 18067,
+      "declaring_type_ref": 65535,
+      "parent_type_ref": 21732,
+      "token": "0x02000114",
+      "offset": 8838320,
+      "fields": [
+        {
+          "index": 2351,
+          "name": "value__",
+          "type_ref": {
+            "index": 21754,
+            "resolved_type": null
+          },
+          "token": "0x04000930",
+          "offset": 7402338
+        },
+        {
+          "index": 2352,
+          "name": "All",
+          "type_ref": {
+            "index": 18069,
+            "resolved_type": null
+          },
+          "token": "0x04000931",
+          "offset": 7402348,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 1967,
+            "record_offset": 6049236,
+            "data_offset": 6204303,
+            "raw_hex": "00",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 0,
+            "status": "DECODED_CANDIDATE"
+          }
+        },
+        {
+          "index": 2353,
+          "name": "UW",
+          "type_ref": {
+            "index": 18069,
+            "resolved_type": null
+          },
+          "token": "0x04000932",
+          "offset": 7402358,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 1968,
+            "record_offset": 6049246,
+            "data_offset": 6204304,
+            "raw_hex": "02",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 1,
+            "status": "DECODED_CANDIDATE"
+          }
+        },
+        {
+          "index": 2354,
+          "name": "UWPlus",
+          "type_ref": {
+            "index": 18069,
+            "resolved_type": null
+          },
+          "token": "0x04000933",
+          "offset": 7402368,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 1969,
+            "record_offset": 6049256,
+            "data_offset": 6204305,
+            "raw_hex": "04",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 2,
+            "status": "DECODED_CANDIDATE"
+          }
+        },
+        {
+          "index": 2355,
+          "name": "None",
+          "type_ref": {
+            "index": 18069,
+            "resolved_type": null
+          },
+          "token": "0x04000934",
+          "offset": 7402378,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 1970,
+            "record_offset": 6049266,
+            "data_offset": 6204306,
+            "raw_hex": "06",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 3,
+            "status": "DECODED_CANDIDATE"
+          }
+        }
+      ],
+      "methods": [],
+      "properties": [],
+      "event_count": 0,
+      "raw_type_record_hex": "b4110100100000009346ffffe454ffff010100002f090000ffffffffffffffffffffffffffffffffffffffff3b070000bc00000000000000050000000000170000000300130c000014010002",
+      "parent": {
+        "index": 21732,
+        "resolved_type": "System.Int32"
+      },
+      "declaring_type": {
+        "index": 65535,
+        "resolved_type": null
+      }
+    },
+    {
+      "index": 283,
+      "name": "DissonanceBonusUI",
+      "namespace": "",
+      "byval_type_index": 18151,
+      "declaring_type_ref": 65535,
+      "parent_type_ref": 24229,
+      "token": "0x0200011c",
+      "offset": 8838928,
+      "fields": [
+        {
+          "index": 2408,
+          "name": "entryPrefab",
+          "type_ref": {
+            "index": 18164,
+            "resolved_type": null
+          },
+          "token": "0x04000969",
+          "offset": 7402908
+        },
+        {
+          "index": 2409,
+          "name": "entriesParent",
+          "type_ref": {
+            "index": 28162,
+            "resolved_type": null
+          },
+          "token": "0x0400096a",
+          "offset": 7402918
+        },
+        {
+          "index": 2410,
+          "name": "attackEchoText",
+          "type_ref": {
+            "index": 27592,
+            "resolved_type": null
+          },
+          "token": "0x0400096b",
+          "offset": 7402928
+        },
+        {
+          "index": 2411,
+          "name": "defenseEchoText",
+          "type_ref": {
+            "index": 27592,
+            "resolved_type": null
+          },
+          "token": "0x0400096c",
+          "offset": 7402938
+        },
+        {
+          "index": 2412,
+          "name": "utilityEchoText",
+          "type_ref": {
+            "index": 27592,
+            "resolved_type": null
+          },
+          "token": "0x0400096d",
+          "offset": 7402948
+        },
+        {
+          "index": 2413,
+          "name": "ultEchoText",
+          "type_ref": {
+            "index": 27592,
+            "resolved_type": null
+          },
+          "token": "0x0400096e",
+          "offset": 7402958
+        },
+        {
+          "index": 2414,
+          "name": "cycleDisplayText",
+          "type_ref": {
+            "index": 27592,
+            "resolved_type": null
+          },
+          "token": "0x0400096f",
+          "offset": 7402968
+        },
+        {
+          "index": 2415,
+          "name": "_entries",
+          "type_ref": {
+            "index": 8957,
+            "resolved_type": null
+          },
+          "token": "0x04000970",
+          "offset": 7402978
+        }
+      ],
+      "methods": [
+        {
+          "index": 2105,
+          "name": "CycleDisplay",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x0600083a",
+          "offset": 3145234,
+          "raw_record_hex": "a51501001b016e7200000008ffffffffffff3a08000686000000ffff0000"
+        },
+        {
+          "index": 2106,
+          "name": "OpenInfo",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x0600083b",
+          "offset": 3145264,
+          "raw_record_hex": "b21501001b016e7200000008ffffffffffff3b08000686000000ffff0000"
+        },
+        {
+          "index": 2107,
+          "name": "Open",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1082,
+              "name": "animate",
+              "type_ref": {
+                "index": 16131,
+                "resolved_type": null
+              },
+              "offset": 6433688
+            }
+          ],
+          "token": "0x0600083c",
+          "offset": 3145294,
+          "raw_record_hex": "271400001b016e72000000083a040000ffff3c080006c600000006000100"
+        },
+        {
+          "index": 2108,
+          "name": "UpdateUI",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x0600083d",
+          "offset": 3145324,
+          "raw_record_hex": "b13000001b016e7200000008ffffffffffff3d08000686000000ffff0000"
+        },
+        {
+          "index": 2109,
+          "name": "CreateEntries",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x0600083e",
+          "offset": 3145354,
+          "raw_record_hex": "bb1501001b016e7200000008ffffffffffff3e08000681000000ffff0000"
+        },
+        {
+          "index": 2110,
+          "name": "UpdateEntries",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x0600083f",
+          "offset": 3145384,
+          "raw_record_hex": "c91501001b016e7200000008ffffffffffff3f08000681000000ffff0000"
+        },
+        {
+          "index": 2111,
+          "name": "UpdateEchoTexts",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000840",
+          "offset": 3145414,
+          "raw_record_hex": "d71501001b016e7200000008ffffffffffff4008000681000000ffff0000"
+        },
+        {
+          "index": 2112,
+          "name": ".ctor",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000841",
+          "offset": 3145444,
+          "raw_record_hex": "610000001b016e7200000008ffffffffffff4108000686180000ffff0000"
+        }
+      ],
+      "properties": [],
+      "event_count": 0,
+      "raw_type_record_hex": "9315010010000000e746ffffa55effff010010006809000039080000ffffffffffffffffffffffffffffffffcd070000ce00000008000000080000000000090000000200000c00001c010002",
+      "parent": {
+        "index": 24229,
+        "resolved_type": "PanelWindow"
+      },
+      "declaring_type": {
+        "index": 65535,
+        "resolved_type": null
+      }
+    },
+    {
+      "index": 284,
+      "name": "DissonanceBoost",
+      "namespace": "",
+      "byval_type_index": 18152,
+      "declaring_type_ref": 65535,
+      "parent_type_ref": 23938,
+      "token": "0x0200011d",
+      "offset": 8839004,
+      "fields": [
+        {
+          "index": 2416,
+          "name": "waveReached",
+          "type_ref": {
+            "index": 14126,
+            "resolved_type": null
+          },
+          "token": "0x04000971",
+          "offset": 7402988
+        },
+        {
+          "index": 2417,
+          "name": "_researchIndex",
+          "type_ref": {
+            "index": 21742,
+            "resolved_type": null
+          },
+          "token": "0x04000972",
+          "offset": 7402998
+        },
+        {
+          "index": 2418,
+          "name": "_bonus",
+          "type_ref": {
+            "index": 26341,
+            "resolved_type": null
+          },
+          "token": "0x04000973",
+          "offset": 7403008
+        },
+        {
+          "index": 2419,
+          "name": "_maxWave",
+          "type_ref": {
+            "index": 21733,
+            "resolved_type": null
+          },
+          "token": "0x04000974",
+          "offset": 7403018
+        },
+        {
+          "index": 2420,
+          "name": "_globalBonusCache",
+          "type_ref": {
+            "index": 26341,
+            "resolved_type": null
+          },
+          "token": "0x04000975",
+          "offset": 7403028
+        },
+        {
+          "index": 2421,
+          "name": "_cachedForTier",
+          "type_ref": {
+            "index": 21733,
+            "resolved_type": null
+          },
+          "token": "0x04000976",
+          "offset": 7403038
+        },
+        {
+          "index": 2422,
+          "name": "ValueChanged",
+          "type_ref": {
+            "index": 14775,
+            "resolved_type": null
+          },
+          "token": "0x04000977",
+          "offset": 7403048
+        }
+      ],
+      "methods": [
+        {
+          "index": 2113,
+          "name": "get_WaveReached",
+          "return_type_ref": {
+            "index": 14120,
+            "resolved_type": null
+          },
+          "parameters": [],
+          "token": "0x06000842",
+          "offset": 3145474,
+          "raw_record_hex": "661601001c01283700000008ffffffffffff4208000686080000ffff0000"
+        },
+        {
+          "index": 2114,
+          "name": "get_ResearchIndex",
+          "return_type_ref": {
+            "index": 21732,
+            "resolved_type": "System.Int32"
+          },
+          "parameters": [],
+          "token": "0x06000843",
+          "offset": 3145504,
+          "raw_record_hex": "761601001c01e45400000008ffffffffffff4308000686080000ffff0000"
+        },
+        {
+          "index": 2115,
+          "name": "add_ValueChanged",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1083,
+              "name": "value",
+              "type_ref": {
+                "index": 14774,
+                "resolved_type": "System.Action"
+              },
+              "offset": 6433698
+            }
+          ],
+          "token": "0x06000844",
+          "offset": 3145534,
+          "raw_record_hex": "881601001c016e72000000083b040000ffff4408000686080000ffff0100"
+        },
+        {
+          "index": 2116,
+          "name": "remove_ValueChanged",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1084,
+              "name": "value",
+              "type_ref": {
+                "index": 14774,
+                "resolved_type": "System.Action"
+              },
+              "offset": 6433708
+            }
+          ],
+          "token": "0x06000845",
+          "offset": 3145564,
+          "raw_record_hex": "991601001c016e72000000083c040000ffff4508000686080000ffff0100"
+        },
+        {
+          "index": 2117,
+          "name": ".ctor",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1085,
+              "name": "researchIndex",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433718
+            },
+            {
+              "index": 1086,
+              "name": "bonus",
+              "type_ref": {
+                "index": 26340,
+                "resolved_type": "System.Single"
+              },
+              "offset": 6433728
+            },
+            {
+              "index": 1087,
+              "name": "maxWave",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433738
+            }
+          ],
+          "token": "0x06000846",
+          "offset": 3145594,
+          "raw_record_hex": "610000001c016e72000000083d040000ffff4608000686180000ffff0300"
+        },
+        {
+          "index": 2118,
+          "name": "GetValue",
+          "return_type_ref": {
+            "index": 26340,
+            "resolved_type": "System.Single"
+          },
+          "parameters": [
+            {
+              "index": 1088,
+              "name": "tier",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433748
+            }
+          ],
+          "token": "0x06000847",
+          "offset": 3145624,
+          "raw_record_hex": "b31601001c01e4660000000840040000ffff4708000686000000ffff0100"
+        },
+        {
+          "index": 2119,
+          "name": "GetValueWithoutLab",
+          "return_type_ref": {
+            "index": 26340,
+            "resolved_type": "System.Single"
+          },
+          "parameters": [
+            {
+              "index": 1089,
+              "name": "tier",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433758
+            }
+          ],
+          "token": "0x06000848",
+          "offset": 3145654,
+          "raw_record_hex": "bc1601001c01e4660000000841040000ffff4808000686000000ffff0100"
+        },
+        {
+          "index": 2120,
+          "name": "GetResearchBonus",
+          "return_type_ref": {
+            "index": 26340,
+            "resolved_type": "System.Single"
+          },
+          "parameters": [
+            {
+              "index": 1090,
+              "name": "tier",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433768
+            }
+          ],
+          "token": "0x06000849",
+          "offset": 3145684,
+          "raw_record_hex": "cf1601001c01e4660000000842040000ffff4908000686000000ffff0100"
+        },
+        {
+          "index": 2121,
+          "name": "GetWaveReached",
+          "return_type_ref": {
+            "index": 26340,
+            "resolved_type": "System.Single"
+          },
+          "parameters": [
+            {
+              "index": 1091,
+              "name": "tier",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433778
+            }
+          ],
+          "token": "0x0600084a",
+          "offset": 3145714,
+          "raw_record_hex": "e01601001c01e4660000000843040000ffff4a08000686000000ffff0100"
+        },
+        {
+          "index": 2122,
+          "name": "IsMaxed",
+          "return_type_ref": {
+            "index": 16110,
+            "resolved_type": "System.Boolean"
+          },
+          "parameters": [
+            {
+              "index": 1092,
+              "name": "tier",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433788
+            }
+          ],
+          "token": "0x0600084b",
+          "offset": 3145744,
+          "raw_record_hex": "ef1601001c01ee3e0000000844040000ffff4b08000686000000ffff0100"
+        },
+        {
+          "index": 2123,
+          "name": "SetRecord",
+          "return_type_ref": {
+            "index": 16110,
+            "resolved_type": "System.Boolean"
+          },
+          "parameters": [
+            {
+              "index": 1093,
+              "name": "tier",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433798
+            },
+            {
+              "index": 1094,
+              "name": "value",
+              "type_ref": {
+                "index": 26340,
+                "resolved_type": "System.Single"
+              },
+              "offset": 6433808
+            }
+          ],
+          "token": "0x0600084c",
+          "offset": 3145774,
+          "raw_record_hex": "f71601001c01ee3e0000000845040000ffff4c08000686000000ffff0200"
+        },
+        {
+          "index": 2124,
+          "name": "SetBonus",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1095,
+              "name": "value",
+              "type_ref": {
+                "index": 26340,
+                "resolved_type": "System.Single"
+              },
+              "offset": 6433818
+            }
+          ],
+          "token": "0x0600084d",
+          "offset": 3145804,
+          "raw_record_hex": "011701001c016e720000000847040000ffff4d08000686000000ffff0100"
+        },
+        {
+          "index": 2125,
+          "name": "SetMaxWave",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1096,
+              "name": "maxWave",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433828
+            }
+          ],
+          "token": "0x0600084e",
+          "offset": 3145834,
+          "raw_record_hex": "0a1701001c016e720000000848040000ffff4e08000686000000ffff0100"
+        },
+        {
+          "index": 2126,
+          "name": "CalculateGlobalBonus",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1097,
+              "name": "tier",
+              "type_ref": {
+                "index": 21755,
+                "resolved_type": null
+              },
+              "offset": 6433838
+            }
+          ],
+          "token": "0x0600084f",
+          "offset": 3145864,
+          "raw_record_hex": "151701001c016e720000000849040000ffff4f08000681000000ffff0100"
+        },
+        {
+          "index": 2127,
+          "name": "ResearchBonus",
+          "return_type_ref": {
+            "index": 26340,
+            "resolved_type": "System.Single"
+          },
+          "parameters": [
+            {
+              "index": 1098,
+              "name": "tier",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433848
+            }
+          ],
+          "token": "0x06000850",
+          "offset": 3145894,
+          "raw_record_hex": "2a1701001c01e466000000084a040000ffff5008000681000000ffff0100"
+        }
+      ],
+      "properties": [
+        {
+          "index": 274,
+          "name": "WaveReached",
+          "getter_method_index": 2113,
+          "setter_method_index": null,
+          "offset": 2704264,
+          "token": "0x17000113"
+        },
+        {
+          "index": 275,
+          "name": "ResearchIndex",
+          "getter_method_index": 2114,
+          "setter_method_index": null,
+          "offset": 2704284,
+          "token": "0x17000114"
+        }
+      ],
+      "event_count": 1,
+      "raw_type_record_hex": "5616010010000000e846ffff825dffff0100100070090000410800001200000012010000ffffffffffffffffd6070000ffffffff0f000200070001000000040000000000000c00001d010002",
+      "parent": {
+        "index": 23938,
+        "resolved_type": "System.Object"
+      },
+      "declaring_type": {
+        "index": 65535,
+        "resolved_type": null
+      }
+    },
+    {
+      "index": 285,
+      "name": "DissonanceInfoUI",
+      "namespace": "",
+      "byval_type_index": 18155,
+      "declaring_type_ref": 65535,
+      "parent_type_ref": 24229,
+      "token": "0x0200011e",
+      "offset": 8839080,
+      "fields": [
+        {
+          "index": 2423,
+          "name": "dissonantEchoText",
+          "type_ref": {
+            "index": 27592,
+            "resolved_type": null
+          },
+          "token": "0x04000978",
+          "offset": 7403058
+        },
+        {
+          "index": 2424,
+          "name": "dissonantEchoText2",
+          "type_ref": {
+            "index": 27592,
+            "resolved_type": null
+          },
+          "token": "0x04000979",
+          "offset": 7403068
+        }
+      ],
+      "methods": [
+        {
+          "index": 2128,
+          "name": "Open",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1099,
+              "name": "animate",
+              "type_ref": {
+                "index": 16131,
+                "resolved_type": null
+              },
+              "offset": 6433858
+            }
+          ],
+          "token": "0x06000851",
+          "offset": 3145924,
+          "raw_record_hex": "271400001d016e72000000084b040000ffff51080006c600000006000100"
+        },
+        {
+          "index": 2129,
+          "name": "UpdateUI",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000852",
+          "offset": 3145954,
+          "raw_record_hex": "b13000001d016e7200000008ffffffffffff5208000686000000ffff0000"
+        },
+        {
+          "index": 2130,
+          "name": ".ctor",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000853",
+          "offset": 3145984,
+          "raw_record_hex": "610000001d016e7200000008ffffffffffff5308000686180000ffff0000"
+        }
+      ],
+      "properties": [],
+      "event_count": 0,
+      "raw_type_record_hex": "ab17010010000000eb46ffffa55effff010010007709000050080000ffffffffffffffffffffffffffffffffda070000d000000003000000020000000000090000000200000c00001e010002",
+      "parent": {
+        "index": 24229,
+        "resolved_type": "PanelWindow"
+      },
+      "declaring_type": {
+        "index": 65535,
+        "resolved_type": null
+      }
+    },
+    {
+      "index": 286,
+      "name": "DissonanceType",
+      "namespace": "",
+      "byval_type_index": 31714,
+      "declaring_type_ref": 18156,
+      "parent_type_ref": 21732,
+      "token": "0x02000120",
+      "offset": 8839156,
+      "fields": [
+        {
+          "index": 2437,
+          "name": "value__",
+          "type_ref": {
+            "index": 21754,
+            "resolved_type": null
+          },
+          "token": "0x04000986",
+          "offset": 7403198
+        },
+        {
+          "index": 2438,
+          "name": "None",
+          "type_ref": {
+            "index": 31717,
+            "resolved_type": null
+          },
+          "token": "0x04000987",
+          "offset": 7403208,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 2003,
+            "record_offset": 6049566,
+            "data_offset": 6204339,
+            "raw_hex": "00",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 0,
+            "status": "DECODED_CANDIDATE"
+          }
+        },
+        {
+          "index": 2439,
+          "name": "Attack",
+          "type_ref": {
+            "index": 31717,
+            "resolved_type": null
+          },
+          "token": "0x04000988",
+          "offset": 7403218,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 2004,
+            "record_offset": 6049576,
+            "data_offset": 6204340,
+            "raw_hex": "02",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 1,
+            "status": "DECODED_CANDIDATE"
+          }
+        },
+        {
+          "index": 2440,
+          "name": "Defense",
+          "type_ref": {
+            "index": 31717,
+            "resolved_type": null
+          },
+          "token": "0x04000989",
+          "offset": 7403228,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 2005,
+            "record_offset": 6049586,
+            "data_offset": 6204341,
+            "raw_hex": "04",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 2,
+            "status": "DECODED_CANDIDATE"
+          }
+        },
+        {
+          "index": 2441,
+          "name": "Utility",
+          "type_ref": {
+            "index": 31717,
+            "resolved_type": null
+          },
+          "token": "0x0400098a",
+          "offset": 7403238,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 2006,
+            "record_offset": 6049596,
+            "data_offset": 6204342,
+            "raw_hex": "06",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 3,
+            "status": "DECODED_CANDIDATE"
+          }
+        },
+        {
+          "index": 2442,
+          "name": "UltimateWeapon",
+          "type_ref": {
+            "index": 31717,
+            "resolved_type": null
+          },
+          "token": "0x0400098b",
+          "offset": 7403248,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 2007,
+            "record_offset": 6049606,
+            "data_offset": 6204343,
+            "raw_hex": "08",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 4,
+            "status": "DECODED_CANDIDATE"
+          }
+        }
+      ],
+      "methods": [],
+      "properties": [],
+      "event_count": 0,
+      "raw_type_record_hex": "361b010010000000e27bec46e454ffff0201000085090000ffffffffffffffffffffffffffffffffffffffffe7070000d200000000000000060000000000170000000300130c000020010002",
+      "parent": {
+        "index": 21732,
+        "resolved_type": "System.Int32"
+      },
+      "declaring_type": {
+        "index": 18156,
+        "resolved_type": "DissonanceManager"
+      }
+    },
+    {
+      "index": 287,
+      "name": "DissonantBoostDisplay",
+      "namespace": "",
+      "byval_type_index": 31718,
+      "declaring_type_ref": 18156,
+      "parent_type_ref": 21732,
+      "token": "0x02000121",
+      "offset": 8839232,
+      "fields": [
+        {
+          "index": 2443,
+          "name": "value__",
+          "type_ref": {
+            "index": 21754,
+            "resolved_type": null
+          },
+          "token": "0x0400098c",
+          "offset": 7403258
+        },
+        {
+          "index": 2444,
+          "name": "BoostPlusEcho",
+          "type_ref": {
+            "index": 31721,
+            "resolved_type": null
+          },
+          "token": "0x0400098d",
+          "offset": 7403268,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 2008,
+            "record_offset": 6049616,
+            "data_offset": 6204344,
+            "raw_hex": "00",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 0,
+            "status": "DECODED_CANDIDATE"
+          }
+        },
+        {
+          "index": 2445,
+          "name": "BoostOnly",
+          "type_ref": {
+            "index": 31721,
+            "resolved_type": null
+          },
+          "token": "0x0400098e",
+          "offset": 7403278,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 2009,
+            "record_offset": 6049626,
+            "data_offset": 6204345,
+            "raw_hex": "02",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 1,
+            "status": "DECODED_CANDIDATE"
+          }
+        },
+        {
+          "index": 2446,
+          "name": "EchoOnly",
+          "type_ref": {
+            "index": 31721,
+            "resolved_type": null
+          },
+          "token": "0x0400098f",
+          "offset": 7403288,
+          "default": {
+            "type_ref": {
+              "index": 21732,
+              "resolved_type": "System.Int32"
+            },
+            "data_index": 2010,
+            "record_offset": 6049636,
+            "data_offset": 6204346,
+            "raw_hex": "04",
+            "byte_count": 1,
+            "encoding": "candidate compressed signed int32",
+            "decoded_value": 2,
+            "status": "DECODED_CANDIDATE"
+          }
+        }
+      ],
+      "methods": [],
+      "properties": [],
+      "event_count": 0,
+      "raw_type_record_hex": "451b010010000000e67bec46e454ffff020100008b090000fffffffffffffffffffffffffffffffffffffffffe070000d500000000000000040000000000170000000300130c000021010002",
+      "parent": {
+        "index": 21732,
+        "resolved_type": "System.Int32"
+      },
+      "declaring_type": {
+        "index": 18156,
+        "resolved_type": "DissonanceManager"
+      }
+    },
+    {
+      "index": 288,
+      "name": "DissonanceRemoteData",
+      "namespace": "",
+      "byval_type_index": 31713,
+      "declaring_type_ref": 18156,
+      "parent_type_ref": 29007,
+      "token": "0x02000122",
+      "offset": 8839308,
+      "fields": [
+        {
+          "index": 2447,
+          "name": "maxWave",
+          "type_ref": {
+            "index": 21737,
+            "resolved_type": null
+          },
+          "token": "0x04000990",
+          "offset": 7403298
+        },
+        {
+          "index": 2448,
+          "name": "attackBonus",
+          "type_ref": {
+            "index": 26345,
+            "resolved_type": null
+          },
+          "token": "0x04000991",
+          "offset": 7403308
+        },
+        {
+          "index": 2449,
+          "name": "defenseBonus",
+          "type_ref": {
+            "index": 26345,
+            "resolved_type": null
+          },
+          "token": "0x04000992",
+          "offset": 7403318
+        },
+        {
+          "index": 2450,
+          "name": "utilityBonus",
+          "type_ref": {
+            "index": 26345,
+            "resolved_type": null
+          },
+          "token": "0x04000993",
+          "offset": 7403328
+        },
+        {
+          "index": 2451,
+          "name": "ultimateBonus",
+          "type_ref": {
+            "index": 26345,
+            "resolved_type": null
+          },
+          "token": "0x04000994",
+          "offset": 7403338
+        }
+      ],
+      "methods": [],
+      "properties": [],
+      "event_count": 0,
+      "raw_type_record_hex": "7c1b010010000000e17bec464f71ffff0b2110008f090000ffffffffffffffffffffffffffffffffffffffff15080000ffffffff00000000050000000000040000000000110c000022010002",
+      "parent": {
+        "index": 29007,
+        "resolved_type": "System.ValueType"
+      },
+      "declaring_type": {
+        "index": 18156,
+        "resolved_type": "DissonanceManager"
+      }
+    },
+    {
+      "index": 289,
+      "name": "DissonanceManager",
+      "namespace": "",
+      "byval_type_index": 18156,
+      "declaring_type_ref": 65535,
+      "parent_type_ref": 23370,
+      "token": "0x0200011f",
+      "offset": 8839384,
+      "fields": [
+        {
+          "index": 2425,
+          "name": "<Instance>k__BackingField",
+          "type_ref": {
+            "index": 18158,
+            "resolved_type": null
+          },
+          "token": "0x0400097a",
+          "offset": 7403078
+        },
+        {
+          "index": 2426,
+          "name": "dissonanceInfoWindowPrefab",
+          "type_ref": {
+            "index": 29440,
+            "resolved_type": null
+          },
+          "token": "0x0400097b",
+          "offset": 7403088
+        },
+        {
+          "index": 2427,
+          "name": "damageBoost",
+          "type_ref": {
+            "index": 18154,
+            "resolved_type": null
+          },
+          "token": "0x0400097c",
+          "offset": 7403098
+        },
+        {
+          "index": 2428,
+          "name": "healthBoost",
+          "type_ref": {
+            "index": 18154,
+            "resolved_type": null
+          },
+          "token": "0x0400097d",
+          "offset": 7403108
+        },
+        {
+          "index": 2429,
+          "name": "coinBoost",
+          "type_ref": {
+            "index": 18154,
+            "resolved_type": null
+          },
+          "token": "0x0400097e",
+          "offset": 7403118
+        },
+        {
+          "index": 2430,
+          "name": "ultDamageBoost",
+          "type_ref": {
+            "index": 18154,
+            "resolved_type": null
+          },
+          "token": "0x0400097f",
+          "offset": 7403128
+        },
+        {
+          "index": 2431,
+          "name": "dissonantBoostDisplay",
+          "type_ref": {
+            "index": 31720,
+            "resolved_type": null
+          },
+          "token": "0x04000980",
+          "offset": 7403138
+        },
+        {
+          "index": 2432,
+          "name": "infoShownOnce",
+          "type_ref": {
+            "index": 16128,
+            "resolved_type": null
+          },
+          "token": "0x04000981",
+          "offset": 7403148
+        },
+        {
+          "index": 2433,
+          "name": "dissonantRunActive",
+          "type_ref": {
+            "index": 16111,
+            "resolved_type": null
+          },
+          "token": "0x04000982",
+          "offset": 7403158
+        },
+        {
+          "index": 2434,
+          "name": "selectedDissonance",
+          "type_ref": {
+            "index": 31715,
+            "resolved_type": null
+          },
+          "token": "0x04000983",
+          "offset": 7403168
+        },
+        {
+          "index": 2435,
+          "name": "_newRecord",
+          "type_ref": {
+            "index": 16111,
+            "resolved_type": null
+          },
+          "token": "0x04000984",
+          "offset": 7403178
+        },
+        {
+          "index": 2436,
+          "name": "OnSelectedDissonanceChanged",
+          "type_ref": {
+            "index": 14775,
+            "resolved_type": null
+          },
+          "token": "0x04000985",
+          "offset": 7403188
+        }
+      ],
+      "methods": [
+        {
+          "index": 2131,
+          "name": "get_Instance",
+          "return_type_ref": {
+            "index": 18156,
+            "resolved_type": "DissonanceManager"
+          },
+          "parameters": [],
+          "token": "0x06000854",
+          "offset": 3146014,
+          "raw_record_hex": "031400002101ec4600000008ffffffffffff5408000696080000ffff0000"
+        },
+        {
+          "index": 2132,
+          "name": "set_Instance",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1100,
+              "name": "value",
+              "type_ref": {
+                "index": 18156,
+                "resolved_type": "DissonanceManager"
+              },
+              "offset": 6433868
+            }
+          ],
+          "token": "0x06000855",
+          "offset": 3146044,
+          "raw_record_hex": "1014000021016e72000000084c040000ffff5508000691080000ffff0100"
+        },
+        {
+          "index": 2133,
+          "name": "get_Active",
+          "return_type_ref": {
+            "index": 16110,
+            "resolved_type": "System.Boolean"
+          },
+          "parameters": [],
+          "token": "0x06000856",
+          "offset": 3146074,
+          "raw_record_hex": "9c6a00002101ee3e00000008ffffffffffff5608000686080000ffff0000"
+        },
+        {
+          "index": 2134,
+          "name": "set_Active",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1101,
+              "name": "value",
+              "type_ref": {
+                "index": 16110,
+                "resolved_type": "System.Boolean"
+              },
+              "offset": 6433878
+            }
+          ],
+          "token": "0x06000857",
+          "offset": 3146104,
+          "raw_record_hex": "a76a000021016e72000000084d040000ffff5708000686080000ffff0100"
+        },
+        {
+          "index": 2135,
+          "name": "get_IsUnlocked",
+          "return_type_ref": {
+            "index": 16110,
+            "resolved_type": "System.Boolean"
+          },
+          "parameters": [],
+          "token": "0x06000858",
+          "offset": 3146134,
+          "raw_record_hex": "f31701002101ee3e00000008ffffffffffff5808000686080000ffff0000"
+        },
+        {
+          "index": 2136,
+          "name": "get_NewRecord",
+          "return_type_ref": {
+            "index": 16110,
+            "resolved_type": "System.Boolean"
+          },
+          "parameters": [],
+          "token": "0x06000859",
+          "offset": 3146164,
+          "raw_record_hex": "021801002101ee3e00000008ffffffffffff5908000686080000ffff0000"
+        },
+        {
+          "index": 2137,
+          "name": "get_DamageBoost",
+          "return_type_ref": {
+            "index": 26340,
+            "resolved_type": "System.Single"
+          },
+          "parameters": [],
+          "token": "0x0600085a",
+          "offset": 3146194,
+          "raw_record_hex": "101801002101e46600000008ffffffffffff5a08000686080000ffff0000"
+        },
+        {
+          "index": 2138,
+          "name": "get_HealthBoost",
+          "return_type_ref": {
+            "index": 26340,
+            "resolved_type": "System.Single"
+          },
+          "parameters": [],
+          "token": "0x0600085b",
+          "offset": 3146224,
+          "raw_record_hex": "201801002101e46600000008ffffffffffff5b08000686080000ffff0000"
+        },
+        {
+          "index": 2139,
+          "name": "get_CoinBoost",
+          "return_type_ref": {
+            "index": 26340,
+            "resolved_type": "System.Single"
+          },
+          "parameters": [],
+          "token": "0x0600085c",
+          "offset": 3146254,
+          "raw_record_hex": "301801002101e46600000008ffffffffffff5c08000686080000ffff0000"
+        },
+        {
+          "index": 2140,
+          "name": "get_UltDamageBoost",
+          "return_type_ref": {
+            "index": 26340,
+            "resolved_type": "System.Single"
+          },
+          "parameters": [],
+          "token": "0x0600085d",
+          "offset": 3146284,
+          "raw_record_hex": "3e1801002101e46600000008ffffffffffff5d08000686080000ffff0000"
+        },
+        {
+          "index": 2141,
+          "name": "get_IsAttackDisabled",
+          "return_type_ref": {
+            "index": 16110,
+            "resolved_type": "System.Boolean"
+          },
+          "parameters": [],
+          "token": "0x0600085e",
+          "offset": 3146314,
+          "raw_record_hex": "511801002101ee3e00000008ffffffffffff5e08000686080000ffff0000"
+        },
+        {
+          "index": 2142,
+          "name": "get_IsDefenseDisabled",
+          "return_type_ref": {
+            "index": 16110,
+            "resolved_type": "System.Boolean"
+          },
+          "parameters": [],
+          "token": "0x0600085f",
+          "offset": 3146344,
+          "raw_record_hex": "661801002101ee3e00000008ffffffffffff5f08000686080000ffff0000"
+        },
+        {
+          "index": 2143,
+          "name": "get_IsUtilityDisabled",
+          "return_type_ref": {
+            "index": 16110,
+            "resolved_type": "System.Boolean"
+          },
+          "parameters": [],
+          "token": "0x06000860",
+          "offset": 3146374,
+          "raw_record_hex": "7c1801002101ee3e00000008ffffffffffff6008000686080000ffff0000"
+        },
+        {
+          "index": 2144,
+          "name": "get_IsUltimateWeaponDisabled",
+          "return_type_ref": {
+            "index": 16110,
+            "resolved_type": "System.Boolean"
+          },
+          "parameters": [],
+          "token": "0x06000861",
+          "offset": 3146404,
+          "raw_record_hex": "921801002101ee3e00000008ffffffffffff6108000686080000ffff0000"
+        },
+        {
+          "index": 2145,
+          "name": "get_SelectedDissonance",
+          "return_type_ref": {
+            "index": 31714,
+            "resolved_type": "DissonanceType"
+          },
+          "parameters": [],
+          "token": "0x06000862",
+          "offset": 3146434,
+          "raw_record_hex": "af1801002101e27b00000008ffffffffffff6208000686080000ffff0000"
+        },
+        {
+          "index": 2146,
+          "name": "set_SelectedDissonance",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1102,
+              "name": "value",
+              "type_ref": {
+                "index": 31714,
+                "resolved_type": "DissonanceType"
+              },
+              "offset": 6433888
+            }
+          ],
+          "token": "0x06000863",
+          "offset": 3146464,
+          "raw_record_hex": "c618010021016e72000000084e040000ffff6308000686080000ffff0100"
+        },
+        {
+          "index": 2147,
+          "name": "add_OnSelectedDissonanceChanged",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1103,
+              "name": "value",
+              "type_ref": {
+                "index": 14774,
+                "resolved_type": "System.Action"
+              },
+              "offset": 6433898
+            }
+          ],
+          "token": "0x06000864",
+          "offset": 3146494,
+          "raw_record_hex": "dd18010021016e72000000084f040000ffff6408000686080000ffff0100"
+        },
+        {
+          "index": 2148,
+          "name": "remove_OnSelectedDissonanceChanged",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1104,
+              "name": "value",
+              "type_ref": {
+                "index": 14774,
+                "resolved_type": "System.Action"
+              },
+              "offset": 6433908
+            }
+          ],
+          "token": "0x06000865",
+          "offset": 3146524,
+          "raw_record_hex": "fd18010021016e720000000850040000ffff6508000686080000ffff0100"
+        },
+        {
+          "index": 2149,
+          "name": "Awake",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000866",
+          "offset": 3146554,
+          "raw_record_hex": "9804000021016e7200000008ffffffffffff6608000681000000ffff0000"
+        },
+        {
+          "index": 2150,
+          "name": "UpdateFromRemoteData",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000867",
+          "offset": 3146584,
+          "raw_record_hex": "2019010021016e7200000008ffffffffffff6708000686000000ffff0000"
+        },
+        {
+          "index": 2151,
+          "name": "StartDissonantRun",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000868",
+          "offset": 3146614,
+          "raw_record_hex": "3519010021016e7200000008ffffffffffff6808000686000000ffff0000"
+        },
+        {
+          "index": 2152,
+          "name": "SetRecord",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1105,
+              "name": "tier",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433918
+            },
+            {
+              "index": 1106,
+              "name": "wave",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6433928
+            }
+          ],
+          "token": "0x06000869",
+          "offset": 3146644,
+          "raw_record_hex": "f716010021016e720000000851040000ffff6908000686000000ffff0200"
+        },
+        {
+          "index": 2153,
+          "name": "ConsumeNewRecord",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x0600086a",
+          "offset": 3146674,
+          "raw_record_hex": "4719010021016e7200000008ffffffffffff6a08000686000000ffff0000"
+        },
+        {
+          "index": 2154,
+          "name": "GetBoost",
+          "return_type_ref": {
+            "index": 18152,
+            "resolved_type": "DissonanceBoost"
+          },
+          "parameters": [
+            {
+              "index": 1107,
+              "name": "type",
+              "type_ref": {
+                "index": 31714,
+                "resolved_type": "DissonanceType"
+              },
+              "offset": 6433938
+            }
+          ],
+          "token": "0x0600086b",
+          "offset": 3146704,
+          "raw_record_hex": "581901002101e8460000000853040000ffff6b08000686000000ffff0100"
+        },
+        {
+          "index": 2155,
+          "name": "GetBoostValue",
+          "return_type_ref": {
+            "index": 26340,
+            "resolved_type": "System.Single"
+          },
+          "parameters": [
+            {
+              "index": 1108,
+              "name": "type",
+              "type_ref": {
+                "index": 31714,
+                "resolved_type": "DissonanceType"
+              },
+              "offset": 6433948
+            }
+          ],
+          "token": "0x0600086c",
+          "offset": 3146734,
+          "raw_record_hex": "611901002101e4660000000854040000ffff6c08000686000000ffff0100"
+        },
+        {
+          "index": 2156,
+          "name": "GetBoostLocalizationNumber",
+          "return_type_ref": {
+            "index": 21732,
+            "resolved_type": "System.Int32"
+          },
+          "parameters": [
+            {
+              "index": 1109,
+              "name": "type",
+              "type_ref": {
+                "index": 31714,
+                "resolved_type": "DissonanceType"
+              },
+              "offset": 6433958
+            }
+          ],
+          "token": "0x0600086d",
+          "offset": 3146764,
+          "raw_record_hex": "6f1901002101e4540000000855040000ffff6d08000686000000ffff0100"
+        },
+        {
+          "index": 2157,
+          "name": "GetTabLocalizationNumber",
+          "return_type_ref": {
+            "index": 21732,
+            "resolved_type": "System.Int32"
+          },
+          "parameters": [
+            {
+              "index": 1110,
+              "name": "type",
+              "type_ref": {
+                "index": 31714,
+                "resolved_type": "DissonanceType"
+              },
+              "offset": 6433968
+            }
+          ],
+          "token": "0x0600086e",
+          "offset": 3146794,
+          "raw_record_hex": "8a1901002101e4540000000856040000ffff6e08000686000000ffff0100"
+        },
+        {
+          "index": 2158,
+          "name": "GetSelectedBoostValue",
+          "return_type_ref": {
+            "index": 26340,
+            "resolved_type": "System.Single"
+          },
+          "parameters": [],
+          "token": "0x0600086f",
+          "offset": 3146824,
+          "raw_record_hex": "a31901002101e46600000008ffffffffffff6f08000686000000ffff0000"
+        },
+        {
+          "index": 2159,
+          "name": "OpenDissonanceInfoWindow",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000870",
+          "offset": 3146854,
+          "raw_record_hex": "b919010021016e7200000008ffffffffffff7008000686000000ffff0000"
+        },
+        {
+          "index": 2160,
+          "name": ".ctor",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000871",
+          "offset": 3146884,
+          "raw_record_hex": "6100000021016e7200000008ffffffffffff7108000686180000ffff0000"
+        }
+      ],
+      "properties": [
+        {
+          "index": 276,
+          "name": "Instance",
+          "getter_method_index": 2131,
+          "setter_method_index": 2132,
+          "offset": 2704304,
+          "token": "0x17000115"
+        },
+        {
+          "index": 277,
+          "name": "Active",
+          "getter_method_index": 2133,
+          "setter_method_index": 2134,
+          "offset": 2704324,
+          "token": "0x17000116"
+        },
+        {
+          "index": 278,
+          "name": "IsUnlocked",
+          "getter_method_index": 2135,
+          "setter_method_index": null,
+          "offset": 2704344,
+          "token": "0x17000117"
+        },
+        {
+          "index": 279,
+          "name": "NewRecord",
+          "getter_method_index": 2136,
+          "setter_method_index": null,
+          "offset": 2704364,
+          "token": "0x17000118"
+        },
+        {
+          "index": 280,
+          "name": "DamageBoost",
+          "getter_method_index": 2137,
+          "setter_method_index": null,
+          "offset": 2704384,
+          "token": "0x17000119"
+        },
+        {
+          "index": 281,
+          "name": "HealthBoost",
+          "getter_method_index": 2138,
+          "setter_method_index": null,
+          "offset": 2704404,
+          "token": "0x1700011a"
+        },
+        {
+          "index": 282,
+          "name": "CoinBoost",
+          "getter_method_index": 2139,
+          "setter_method_index": null,
+          "offset": 2704424,
+          "token": "0x1700011b"
+        },
+        {
+          "index": 283,
+          "name": "UltDamageBoost",
+          "getter_method_index": 2140,
+          "setter_method_index": null,
+          "offset": 2704444,
+          "token": "0x1700011c"
+        },
+        {
+          "index": 284,
+          "name": "IsAttackDisabled",
+          "getter_method_index": 2141,
+          "setter_method_index": null,
+          "offset": 2704464,
+          "token": "0x1700011d"
+        },
+        {
+          "index": 285,
+          "name": "IsDefenseDisabled",
+          "getter_method_index": 2142,
+          "setter_method_index": null,
+          "offset": 2704484,
+          "token": "0x1700011e"
+        },
+        {
+          "index": 286,
+          "name": "IsUtilityDisabled",
+          "getter_method_index": 2143,
+          "setter_method_index": null,
+          "offset": 2704504,
+          "token": "0x1700011f"
+        },
+        {
+          "index": 287,
+          "name": "IsUltimateWeaponDisabled",
+          "getter_method_index": 2144,
+          "setter_method_index": null,
+          "offset": 2704524,
+          "token": "0x17000120"
+        },
+        {
+          "index": 288,
+          "name": "SelectedDissonance",
+          "getter_method_index": 2145,
+          "setter_method_index": 2146,
+          "offset": 2704544,
+          "token": "0x17000121"
+        }
+      ],
+      "event_count": 1,
+      "raw_type_record_hex": "e117010010000000ec46ffff4a5bffff01001000790900005308000013000000140100007e000000ffffffffe3070000ffffffff1e000d000c0001000300040000000000000c00001f010002",
+      "parent": {
+        "index": 23370,
+        "resolved_type": "UnityEngine.MonoBehaviour"
+      },
+      "declaring_type": {
+        "index": 65535,
+        "resolved_type": null
+      }
+    },
+    {
+      "index": 290,
+      "name": "DissonanceTabButton",
+      "namespace": "",
+      "byval_type_index": 18159,
+      "declaring_type_ref": 65535,
+      "parent_type_ref": 23370,
+      "token": "0x02000123",
+      "offset": 8839460,
+      "fields": [
+        {
+          "index": 2452,
+          "name": "type",
+          "type_ref": {
+            "index": 31716,
+            "resolved_type": null
+          },
+          "token": "0x04000995",
+          "offset": 7403348
+        },
+        {
+          "index": 2453,
+          "name": "disabledImage",
+          "type_ref": {
+            "index": 21398,
+            "resolved_type": null
+          },
+          "token": "0x04000996",
+          "offset": 7403358
+        }
+      ],
+      "methods": [
+        {
+          "index": 2161,
+          "name": "Start",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000872",
+          "offset": 3146914,
+          "raw_record_hex": "2509000022016e7200000008ffffffffffff7208000681000000ffff0000"
+        },
+        {
+          "index": 2162,
+          "name": "OnDestroy",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000873",
+          "offset": 3146944,
+          "raw_record_hex": "1d14000022016e7200000008ffffffffffff7308000681000000ffff0000"
+        },
+        {
+          "index": 2163,
+          "name": "UpdateValue",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000874",
+          "offset": 3146974,
+          "raw_record_hex": "d91b010022016e7200000008ffffffffffff7408000686000000ffff0000"
+        },
+        {
+          "index": 2164,
+          "name": "Click",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000875",
+          "offset": 3147004,
+          "raw_record_hex": "73b5000022016e7200000008ffffffffffff7508000686000000ffff0000"
+        },
+        {
+          "index": 2165,
+          "name": ".ctor",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000876",
+          "offset": 3147034,
+          "raw_record_hex": "6100000022016e7200000008ffffffffffff7608000686180000ffff0000"
+        }
+      ],
+      "properties": [],
+      "event_count": 0,
+      "raw_type_record_hex": "c51b010010000000ef46ffff4a5bffff010010009409000071080000ffffffffffffffffffffffffffffffff19080000ffffffff05000000020000000000040000000000000c000023010002",
+      "parent": {
+        "index": 23370,
+        "resolved_type": "UnityEngine.MonoBehaviour"
+      },
+      "declaring_type": {
+        "index": 65535,
+        "resolved_type": null
+      }
+    },
+    {
+      "index": 291,
+      "name": "DissonanceTypeIcon",
+      "namespace": "",
+      "byval_type_index": 18160,
+      "declaring_type_ref": 65535,
+      "parent_type_ref": 23370,
+      "token": "0x02000124",
+      "offset": 8839536,
+      "fields": [
+        {
+          "index": 2454,
+          "name": "image",
+          "type_ref": {
+            "index": 21398,
+            "resolved_type": null
+          },
+          "token": "0x04000997",
+          "offset": 7403368
+        },
+        {
+          "index": 2455,
+          "name": "attackIcon",
+          "type_ref": {
+            "index": 26611,
+            "resolved_type": null
+          },
+          "token": "0x04000998",
+          "offset": 7403378
+        },
+        {
+          "index": 2456,
+          "name": "defenseIcon",
+          "type_ref": {
+            "index": 26611,
+            "resolved_type": null
+          },
+          "token": "0x04000999",
+          "offset": 7403388
+        },
+        {
+          "index": 2457,
+          "name": "utilityIcon",
+          "type_ref": {
+            "index": 26611,
+            "resolved_type": null
+          },
+          "token": "0x0400099a",
+          "offset": 7403398
+        },
+        {
+          "index": 2458,
+          "name": "ultimateWeaponIcon",
+          "type_ref": {
+            "index": 26611,
+            "resolved_type": null
+          },
+          "token": "0x0400099b",
+          "offset": 7403408
+        }
+      ],
+      "methods": [
+        {
+          "index": 2166,
+          "name": "SetIcon",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 1111,
+              "name": "type",
+              "type_ref": {
+                "index": 31714,
+                "resolved_type": "DissonanceType"
+              },
+              "offset": 6433978
+            }
+          ],
+          "token": "0x06000877",
+          "offset": 3147064,
+          "raw_record_hex": "061c010023016e720000000857040000ffff7708000686000000ffff0100"
+        },
+        {
+          "index": 2167,
+          "name": ".ctor",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x06000878",
+          "offset": 3147094,
+          "raw_record_hex": "6100000023016e7200000008ffffffffffff7808000686180000ffff0000"
+        }
+      ],
+      "properties": [],
+      "event_count": 0,
+      "raw_type_record_hex": "f31b010010000000f046ffff4a5bffff010010009609000076080000ffffffffffffffffffffffffffffffff1d080000ffffffff02000000050000000000040000000000000c000024010002",
+      "parent": {
+        "index": 23370,
+        "resolved_type": "UnityEngine.MonoBehaviour"
+      },
+      "declaring_type": {
+        "index": 65535,
+        "resolved_type": null
+      }
+    },
+    {
+      "index": 874,
+      "name": "BetaModuleConfig",
+      "namespace": "",
+      "byval_type_index": 34888,
+      "declaring_type_ref": 25896,
+      "parent_type_ref": 23938,
+      "token": "0x0200036c",
+      "offset": 8883844,
+      "fields": [
+        {
+          "index": 10079,
+          "name": "<enableModules>k__BackingField",
+          "type_ref": {
+            "index": 16111,
+            "resolved_type": null
+          },
+          "token": "0x04002760",
+          "offset": 7479618
+        },
+        {
+          "index": 10080,
+          "name": "<versionLock>k__BackingField",
+          "type_ref": {
+            "index": 21733,
+            "resolved_type": null
+          },
+          "token": "0x04002761",
+          "offset": 7479628
+        },
+        {
+          "index": 10081,
+          "name": "<modules>k__BackingField",
+          "type_ref": {
+            "index": 9601,
+            "resolved_type": null
+          },
+          "token": "0x04002762",
+          "offset": 7479638
+        }
+      ],
+      "methods": [
+        {
+          "index": 9165,
+          "name": "get_enableModules",
+          "return_type_ref": {
+            "index": 16110,
+            "resolved_type": "System.Boolean"
+          },
+          "parameters": [],
+          "token": "0x060023ce",
+          "offset": 3357034,
+          "raw_record_hex": "f3ee04006a03ee3e00000008ffffffffffffce23000686080000ffff0000"
+        },
+        {
+          "index": 9166,
+          "name": "set_enableModules",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 5008,
+              "name": "value",
+              "type_ref": {
+                "index": 16110,
+                "resolved_type": "System.Boolean"
+              },
+              "offset": 6472948
+            }
+          ],
+          "token": "0x060023cf",
+          "offset": 3357064,
+          "raw_record_hex": "05ef04006a036e720000000890130000ffffcf23000686080000ffff0100"
+        },
+        {
+          "index": 9167,
+          "name": "get_versionLock",
+          "return_type_ref": {
+            "index": 21732,
+            "resolved_type": "System.Int32"
+          },
+          "parameters": [],
+          "token": "0x060023d0",
+          "offset": 3357094,
+          "raw_record_hex": "17ef04006a03e45400000008ffffffffffffd023000686080000ffff0000"
+        },
+        {
+          "index": 9168,
+          "name": "set_versionLock",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 5009,
+              "name": "value",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6472958
+            }
+          ],
+          "token": "0x060023d1",
+          "offset": 3357124,
+          "raw_record_hex": "27ef04006a036e720000000891130000ffffd123000686080000ffff0100"
+        },
+        {
+          "index": 9169,
+          "name": "get_modules",
+          "return_type_ref": {
+            "index": 9600,
+            "resolved_type": null
+          },
+          "parameters": [],
+          "token": "0x060023d2",
+          "offset": 3357154,
+          "raw_record_hex": "e61e03006a03802500000008ffffffffffffd223000686080000ffff0000"
+        },
+        {
+          "index": 9170,
+          "name": "set_modules",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 5010,
+              "name": "value",
+              "type_ref": {
+                "index": 9600,
+                "resolved_type": null
+              },
+              "offset": 6472968
+            }
+          ],
+          "token": "0x060023d3",
+          "offset": 3357184,
+          "raw_record_hex": "f21e03006a036e720000000892130000ffffd323000686080000ffff0100"
+        },
+        {
+          "index": 9171,
+          "name": ".ctor",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x060023d4",
+          "offset": 3357214,
+          "raw_record_hex": "610000006a036e7200000008ffffffffffffd423000686180000ffff0000"
+        }
+      ],
+      "properties": [
+        {
+          "index": 2060,
+          "name": "enableModules",
+          "getter_method_index": 9165,
+          "setter_method_index": 9166,
+          "offset": 2739984,
+          "token": "0x1700080d"
+        },
+        {
+          "index": 2061,
+          "name": "versionLock",
+          "getter_method_index": 9167,
+          "setter_method_index": 9168,
+          "offset": 2740004,
+          "token": "0x1700080e"
+        },
+        {
+          "index": 2062,
+          "name": "modules",
+          "getter_method_index": 9169,
+          "setter_method_index": 9170,
+          "offset": 2740024,
+          "token": "0x1700080f"
+        }
+      ],
+      "event_count": 0,
+      "raw_type_record_hex": "e2ee04001000000048882865825dffff022010005f270000cd230000ffffffff0c080000ffffffffffffffffbe180000ffffffff07000300030000000000040000000000000c00006c030002",
+      "parent": {
+        "index": 23938,
+        "resolved_type": "System.Object"
+      },
+      "declaring_type": {
+        "index": 25896,
+        "resolved_type": "SaveLoad"
+      }
+    },
+    {
+      "index": 875,
+      "name": "BetaModule",
+      "namespace": "",
+      "byval_type_index": 34886,
+      "declaring_type_ref": 25896,
+      "parent_type_ref": 23938,
+      "token": "0x0200036d",
+      "offset": 8883920,
+      "fields": [
+        {
+          "index": 10082,
+          "name": "<type>k__BackingField",
+          "type_ref": {
+            "index": 26946,
+            "resolved_type": null
+          },
+          "token": "0x04002763",
+          "offset": 7479648
+        },
+        {
+          "index": 10083,
+          "name": "<id>k__BackingField",
+          "type_ref": {
+            "index": 21733,
+            "resolved_type": null
+          },
+          "token": "0x04002764",
+          "offset": 7479658
+        },
+        {
+          "index": 10084,
+          "name": "<effects>k__BackingField",
+          "type_ref": {
+            "index": 9080,
+            "resolved_type": null
+          },
+          "token": "0x04002765",
+          "offset": 7479668
+        },
+        {
+          "index": 10085,
+          "name": "<rarity>k__BackingField",
+          "type_ref": {
+            "index": 21733,
+            "resolved_type": null
+          },
+          "token": "0x04002766",
+          "offset": 7479678
+        }
+      ],
+      "methods": [
+        {
+          "index": 9172,
+          "name": "get_type",
+          "return_type_ref": {
+            "index": 26945,
+            "resolved_type": "System.String"
+          },
+          "parameters": [],
+          "token": "0x060023d5",
+          "offset": 3357244,
+          "raw_record_hex": "e04701006b03416900000008ffffffffffffd523000686080000ffff0000"
+        },
+        {
+          "index": 9173,
+          "name": "set_type",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 5011,
+              "name": "value",
+              "type_ref": {
+                "index": 26945,
+                "resolved_type": "System.String"
+              },
+              "offset": 6472978
+            }
+          ],
+          "token": "0x060023d6",
+          "offset": 3357274,
+          "raw_record_hex": "e94701006b036e720000000893130000ffffd623000686080000ffff0100"
+        },
+        {
+          "index": 9174,
+          "name": "get_id",
+          "return_type_ref": {
+            "index": 21732,
+            "resolved_type": "System.Int32"
+          },
+          "parameters": [],
+          "token": "0x060023d7",
+          "offset": 3357304,
+          "raw_record_hex": "470000006b03e45400000008ffffffffffffd723000686080000ffff0000"
+        },
+        {
+          "index": 9175,
+          "name": "set_id",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 5012,
+              "name": "value",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6472988
+            }
+          ],
+          "token": "0x060023d8",
+          "offset": 3357334,
+          "raw_record_hex": "98ef04006b036e720000000894130000ffffd823000686080000ffff0100"
+        },
+        {
+          "index": 9176,
+          "name": "get_effects",
+          "return_type_ref": {
+            "index": 9079,
+            "resolved_type": null
+          },
+          "parameters": [],
+          "token": "0x060023d9",
+          "offset": 3357364,
+          "raw_record_hex": "9fef04006b03772300000008ffffffffffffd923000686080000ffff0000"
+        },
+        {
+          "index": 9177,
+          "name": "set_effects",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 5013,
+              "name": "value",
+              "type_ref": {
+                "index": 9079,
+                "resolved_type": null
+              },
+              "offset": 6472998
+            }
+          ],
+          "token": "0x060023da",
+          "offset": 3357394,
+          "raw_record_hex": "abef04006b036e720000000895130000ffffda23000686080000ffff0100"
+        },
+        {
+          "index": 9178,
+          "name": "get_rarity",
+          "return_type_ref": {
+            "index": 21732,
+            "resolved_type": "System.Int32"
+          },
+          "parameters": [],
+          "token": "0x060023db",
+          "offset": 3357424,
+          "raw_record_hex": "462003006b03e45400000008ffffffffffffdb23000686080000ffff0000"
+        },
+        {
+          "index": 9179,
+          "name": "set_rarity",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [
+            {
+              "index": 5014,
+              "name": "value",
+              "type_ref": {
+                "index": 21732,
+                "resolved_type": "System.Int32"
+              },
+              "offset": 6473008
+            }
+          ],
+          "token": "0x060023dc",
+          "offset": 3357454,
+          "raw_record_hex": "512003006b036e720000000896130000ffffdc23000686080000ffff0100"
+        },
+        {
+          "index": 9180,
+          "name": "get_ModuleTypeEnum",
+          "return_type_ref": {
+            "index": 23354,
+            "resolved_type": "ModuleType"
+          },
+          "parameters": [],
+          "token": "0x060023dd",
+          "offset": 3357484,
+          "raw_record_hex": "b7ef04006b033a5b00000008ffffffffffffdd23000686080000ffff0000"
+        },
+        {
+          "index": 9181,
+          "name": "get_RarityEnum",
+          "return_type_ref": {
+            "index": 23347,
+            "resolved_type": "ModuleRarity"
+          },
+          "parameters": [],
+          "token": "0x060023de",
+          "offset": 3357514,
+          "raw_record_hex": "caef04006b03335b00000008ffffffffffffde23000686080000ffff0000"
+        },
+        {
+          "index": 9182,
+          "name": ".ctor",
+          "return_type_ref": {
+            "index": 29294,
+            "resolved_type": "System.Void"
+          },
+          "parameters": [],
+          "token": "0x060023df",
+          "offset": 3357544,
+          "raw_record_hex": "610000006b036e7200000008ffffffffffffdf23000686180000ffff0000"
+        }
+      ],
+      "properties": [
+        {
+          "index": 2063,
+          "name": "type",
+          "getter_method_index": 9172,
+          "setter_method_index": 9173,
+          "offset": 2740044,
+          "token": "0x17000810"
+        },
+        {
+          "index": 2064,
+          "name": "id",
+          "getter_method_index": 9174,
+          "setter_method_index": 9175,
+          "offset": 2740064,
+          "token": "0x17000811"
+        },
+        {
+          "index": 2065,
+          "name": "effects",
+          "getter_method_index": 9176,
+          "setter_method_index": 9177,
+          "offset": 2740084,
+          "token": "0x17000812"
+        },
+        {
+          "index": 2066,
+          "name": "rarity",
+          "getter_method_index": 9178,
+          "setter_method_index": 9179,
+          "offset": 2740104,
+          "token": "0x17000813"
+        },
+        {
+          "index": 2067,
+          "name": "ModuleTypeEnum",
+          "getter_method_index": 9180,
+          "setter_method_index": null,
+          "offset": 2740124,
+          "token": "0x17000814"
+        },
+        {
+          "index": 2068,
+          "name": "RarityEnum",
+          "getter_method_index": 9181,
+          "setter_method_index": null,
+          "offset": 2740144,
+          "token": "0x17000815"
+        }
+      ],
+      "event_count": 0,
+      "raw_type_record_hex": "8def04001000000046882865825dffff0220100062270000d4230000ffffffff0f080000ffffffffffffffffc2180000ffffffff0b000600040000000000040000000000000c00006d030002",
+      "parent": {
+        "index": 23938,
+        "resolved_type": "System.Object"
+      },
+      "declaring_type": {
+        "index": 25896,
+        "resolved_type": "SaveLoad"
+      }
+    }
+  ]
+}

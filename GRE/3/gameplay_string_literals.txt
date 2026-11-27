@@ -1,0 +1,225 @@
+[73 @ 0x148c3] 
+module.renderOrderPriority: 
+[74 @ 0x148e0] 
+module.sortOrderPriority: 
+[75 @ 0x148fb] 
+module: 
+[373 @ 0x16388]  of assist module main effect moduleManager.GetAssistModuleMainEffectCost: 
+[374 @ 0x163d3]  of assist module substat moduleManager.GetAssistModuleSubstatCost: 
+[375 @ 0x16417]  of assist module unique effect moduleManager.GetAssistModuleUniqueEffectCost: 
+[377 @ 0x16478]  of synchronicity Bots.SYNCHRONICITY_UPGRADE_COSTS: 
+[1264 @ 0x1c636] . Tournament register attempt. 
+[1813 @ 0x1e1b3] :guardianchip
+[1814 @ 0x1e1c0] :guardianskin
+[1816 @ 0x1e1d6] :module
+[1818 @ 0x1e1ef] :relic
+[1959 @ 0x1e874] <b>Pointer Input Module of type: </b>
+[2330 @ 0x219e7] ASSIST MODULES
+[2662 @ 0x2505f] Are you sure you want to respec the Vault? This cannot be reverted.
+[2737 @ 0x258de] AssistModulesBeta
+[2762 @ 0x25d72] Attempt from old tournament, not applying it and deleting.
+[2946 @ 0x27174] Ban from tournament error. Code: {0} Message: {1} StackTrace: {2}
+[2949 @ 0x271c8] Banned player from tournament
+[2993 @ 0x27572] Beta is over, please remove the beta modules to play
+[3184 @ 0x28a93] CARDS MASTERY UNLOCKED
+[3787 @ 0x2f9a3] CardMasteryBG
+[3858 @ 0x2ffcd] CheckForResumeRound: Found Round: {0} Tournament: [{1}]
+[3861 @ 0x300c5] CheckForResumeRoundOnLoad: Found Round: {0} Tournament: [{1}]
+[3957 @ 0x309aa] Code {0} {1} wave {2} tournament {3}
+[4003 @ 0x3108e] CommanderBuffArea
+[4190 @ 0x32bf5] Could not find CardMasteryBG in activeCardSpecificObject[{0}]
+[4262 @ 0x33a5c] Couldn't load Modules system
+[4375 @ 0x3473d] DG.Tweening.DOTweenModuleUtils
+[4407 @ 0x34b97] DOTween.Modules
+[4625 @ 0x36404] Deterministic reroll failed to find a valid candidate for module 
+[4626 @ 0x36445] Deterministic reroll failed to find a valid candidate for module {0}, slot {1}.
+[4627 @ 0x36494] Deterministic reroll pool is empty for module type {0}. InfoIndex: {1}
+[4892 @ 0x37fcb] End Fake Tournament
+[4916 @ 0x38254] Enemy
+[4917 @ 0x38259] Enemy type: {0} isn't registered on any enemy pool
+[5031 @ 0x38edc] Error from JoinTournament function. 
+[5047 @ 0x39418] Error in RerollNotLockedEffects. Module infoIndex: {0}, effects length: {1}, effects array: {2}. {3}
+[5078 @ 0x39830] Error parsing new joined tournament. 
+[5143 @ 0x3a27f] Error when trying to register tournament attempt. {0}
+[5182 @ 0x3a7aa] Event rollover: showing relics [{0}] from {1} tagged event {2}, medals {3}
+[5426 @ 0x3cbe1] Failed to get featured module banners
+[5432 @ 0x3ccd7] Failed to get rotating module banners
+[5454 @ 0x3d01e] Failed to log vault respec event: 
+[5967 @ 0x40bf1] Guardian chip index out of range: 
+[5968 @ 0x40c13] Guardian skin index out of range: 
+[5969 @ 0x40c35] GuardianChip
+[5970 @ 0x40c41] GuardianRespec
+[5971 @ 0x40c4f] GuardianSkin
+[5972 @ 0x40c5b] Guardians_{0}to{1}
+[6097 @ 0x415ca] Here is your prize for the most recent {0} tournament. You finished at rank {1}.
+[6343 @ 0x4293a] Ignoring event relics [{0}] from {1}: they arrived tagged event {2}, the same event as the [{3}] we are already showing, so eventNumber has not moved off {4} yet
+[6776 @ 0x46dea] Invalid relic index: {0}
+[7091 @ 0x49557] Join Tournament error. Code: {0} Message: {1} StackTrace: {2}
+[7335 @ 0x4ac84] Legendary Module Tickets Pack
+[7492 @ 0x4bb45] Logged {0}, keys_refunded={1}, previous_vault_cost_sum={2}, forced={3}, nodes={4}
+[7587 @ 0x4bf93] MODULE LEVEL MUST BE GREATER THAN 1
+[7588 @ 0x4bfb6] MODULES
+[7809 @ 0x4d906] Microsoft.FSharp.Collections.ListModule
+[7880 @ 0x4e215] Module
+[7881 @ 0x4e21b] Module Odds
+[7882 @ 0x4e226] Module Tickets Pack
+[7883 @ 0x4e239] ModuleShard_Armor
+[7884 @ 0x4e24a] ModuleShard_Cannon
+[7885 @ 0x4e25c] ModuleShard_Core
+[7886 @ 0x4e26c] ModuleShard_Generator
+[7887 @ 0x4e281] ModuleTicketsPackSaleCheck
+[7888 @ 0x4e29b] ModuleUI.ConfirmShatterClick: Error checking module at index {0}: {1}
+[7889 @ 0x4e2e0] ModuleUI.ConfirmShatterClick: moduleManager or shatterItems is null
+[7890 @ 0x4e323] ModuleUI.ConfirmShatterClick: shatterItems[{0}] is null
+[7891 @ 0x4e35a] Modules Launch Sale
+[7892 @ 0x4e36d] ModulesLaunchSale
+[7893 @ 0x4e37e] ModulesLaunchSaleCheck
+[8150 @ 0x50173] No available effects for module slot {0}. Info: {1} Type: {2} Desired Rarity: {3}
+[8183 @ 0x5088b] No module
+[8200 @ 0x50a4e] No relic localization id found for relic index {0}
+[8285 @ 0x51412] Not able to parse tournament Info. 
+[8286 @ 0x51435] Not able to parse tournament data. 
+[8287 @ 0x51458] Not able to parse tournament player data. 
+[8566 @ 0x535e6] Only modules of Common, Rare or Epic rarity can be created. {0} is not allowed.
+[8821 @ 0x54d38] Perk
+[8822 @ 0x54d3c] Perk/Description
+[8823 @ 0x54d4c] Perk/Image
+[8952 @ 0x55c82] Premium Module Tickets Pack
+[9259 @ 0x57dae] Register tournament attempt error. Code: {0} Message: {1} StackTrace: {2}
+[9284 @ 0x58171] Relic
+[9285 @ 0x58176] Relic index out of range: 
+[9286 @ 0x58190] Relic_
+[9413 @ 0x592b3] Respec Vault
+[9414 @ 0x592bf] Respec cooldown cleared.
+[9840 @ 0x5bede] SetupCardUI index {0} out of bounds for cardMasteryHasSeenNotification[]
+[9841 @ 0x5bf26] SetupCardUI index {0} out of bounds for cardMasteryUnlocked[]
+[9938 @ 0x5cc27] Skin_Guardian
+[10127 @ 0x5e1e0] Start Fake Tournament
+[10511 @ 0x60f24] TOWERS_WORKSHOP
+[10939 @ 0x67023] The given module {0} cannot be found within the assembly {1}.
+[11181 @ 0x6b3b7] The time to participate in the tournament has ended
+[11386 @ 0x6e795] This save had the bugged assist module slots as cannon, fixed
+[11532 @ 0x6fc3a] Tournament
+[11533 @ 0x6fc44] Tournament Attempt failed: 
+[11534 @ 0x6fc5f] Tournament FTUE Battle Has Been Played Already
+[11535 @ 0x6fc8d] Tournament ID: 
+[11536 @ 0x6fc9c] Tournament Prize
+[11537 @ 0x6fcac] Tournament not Open to Claim
+[11538 @ 0x6fcc8] Tournament player data changed
+[11539 @ 0x6fce6] Tournaments/Buckets
+[11540 @ 0x6fcf9] Tournaments/Info
+[11541 @ 0x6fd09] Tournaments/Players/
+[11849 @ 0x72377] UltimateWeaponDescriptionPanel: ran out of lab enhancement entries, '
+[12040 @ 0x74706] Unhandled AssistModuleSlotType
+[12041 @ 0x74724] Unhandled ModuleType
+[12086 @ 0x74d9a] UnityEngine.UIElementsModule
+[12129 @ 0x752b6] Unknown module type: 
+[12263 @ 0x762e3] Using a dev save, skipping mails for unclaimed tournaments.
+[12304 @ 0x765ed] ValidateResumeBtn(): tournament playing true 
+[12363 @ 0x76e3e] Vault
+[12364 @ 0x76e43] Vault Config
+[12365 @ 0x76e4f] Vault Upgrade Level {0} is out of range for {1}
+[12366 @ 0x76e7e] VaultHarmonyTile: Set called with VaultStat.None
+[12367 @ 0x76eae] VaultManager: could not find a VaultConfig asset at Resources/Vault Config
+[12368 @ 0x76ef8] VaultResetDataVersion16
+[12369 @ 0x76f0f] VaultRespec
+[12370 @ 0x76f1a] VaultSimpleTile: Set called with VaultStat.None
+[12647 @ 0x799d6] You aren't allowed to use beta modules in tournaments, please change to normal modules to play
+[12659 @ 0x79cee] You have been banned from the tournament
+[12724 @ 0x7a89b] [BOT+ CORRECTION DRY RUN] End: Bot+ off and level 0 on every preset, Synchronicity locked, one mail. Medals {0} -> {1}, Stones {2} -> {3}. Nothing was changed
+[12725 @ 0x7a939] [BOT+ CORRECTION DRY RUN] Refund: {0} = {1} medals from preset {2}; Synchronicity {3} stones
+[12726 @ 0x7a995] [BOT+ CORRECTION DRY RUN] Start: {0}. Synchronicity {1}. Medals {2}, Stones {3}
+[12729 @ 0x7aa27] [BOT+ CORRECTION] applied. Bot+ locked on every preset. Returned {0} medals from preset {1} and {2} stones from Synchronicity
+[13298 @ 0x7e6d7] _anotherProfileData or its relicSlots is null or slotIndex is out of bounds
+[13804 @ 0x80610] banFromTournamentInternalV2
+[13856 @ 0x807e2] betaModule
+[13860 @ 0x80810] betaRespecGuardianFree
+[14144 @ 0x814fd] cardMasteryHasSeenNotification[] does not exist or has not been initialized
+[14145 @ 0x81548] cardMasteryUnlocked[] does not exist or has not been initialized
+[14511 @ 0x8430b] commanderAttackRange
+[14512 @ 0x8431f] commanderBuffPulse
+[14611 @ 0x847e1] cost for unlocked assist module slot ModuleManager.ASSIST_MODULE_SLOT_UNLOCK_COST: 
+[14614 @ 0x848bc] cost for unlocked bot plus count + Flame Bots.BOT_PLUS_UNLOCK_COST: 
+[14615 @ 0x84900] cost for unlocked bot plus count + Golden Bots.BOT_PLUS_UNLOCK_COST: 
+[14617 @ 0x8498b] cost for unlocked card mastery count + 
+[14619 @ 0x849d8] cost for unlocked synchronicity count + Synchronicity Bots.SYNCHRONICITY_UNLOCK_COST: 
+[14952 @ 0x857da] dev-in-game-modules-launch-
+[14955 @ 0x8581f] dev-webstore-modules-launch-
+[15249 @ 0x866fb] encyclopediaHiddenModules
+[15262 @ 0x86810] enemiesDestroyedByOrbsThisRound
+[15263 @ 0x8682f] enemy
+[15614 @ 0x8789c] ftue_modules_intro_shown
+[15615 @ 0x878b4] ftue_modules_tutorial_started
+[15617 @ 0x878ed] ftue_tournament_intro_shown
+[15618 @ 0x87908] ftue_tournament_start_battle_prompted
+[15619 @ 0x8792d] ftue_tournament_tutorial_completed
+[15620 @ 0x8794f] ftue_tournament_tutorial_started
+[15623 @ 0x879a9] ftue_utility_workshop_button_prompted
+[15627 @ 0x87a17] ftue_workshop_battle_button_prompted
+[15628 @ 0x87a3b] ftue_workshop_battle_tab_prompted
+[15629 @ 0x87a5c] ftue_workshop_damage_upgrade_prompted
+[15630 @ 0x87a81] ftue_workshop_defense_tab_prompted
+[15631 @ 0x87aa3] ftue_workshop_defense_tier_prompted
+[15632 @ 0x87ac6] ftue_workshop_opened
+[15633 @ 0x87ada] ftue_workshop_tutorial_completed
+[15634 @ 0x87afa] ftue_workshop_tutorial_started
+[15635 @ 0x87b18] ftue_workshop_upgrades_intro_shown
+[16326 @ 0x8ab58] info {0} playerData {1} playerDataReady {2} firebase {3} online {4} wave {5} tournament {6}
+[16592 @ 0x8b935] joinTournamentDev
+[16593 @ 0x8b946] joinTournamentV6
+[16789 @ 0x8bfce] legendary-module-tickets-pack
+[16915 @ 0x8c715] log_module_reroll
+[17228 @ 0x8d689] module-tickets-pack-1
+[17229 @ 0x8d69e] module-{0}
+[17230 @ 0x8d6a8] module_reroll
+[17231 @ 0x8d6b5] module_ticket
+[17232 @ 0x8d6c2] module_tickets
+[17233 @ 0x8d6d0] modules-launch
+[17234 @ 0x8d6de] moduletickets
+[17307 @ 0x8d9de] mythicTournament
+[17349 @ 0x8db9a] nearRangedEnemyRadius
+[17350 @ 0x8dbaf] needs Rare and Epic modules for pity
+[17431 @ 0x8dee3] no modules
+[17751 @ 0x8f0b0] overchargeAttackRange
+[17829 @ 0x8f51b] passRelics
+[17986 @ 0x8fb01] premium-module-tickets-pack
+[17989 @ 0x8fb41] preset {0} Flame+ {1}, Thunder+ {2}, Golden+ {3}, Amplify+ {4}, Bot+ {5}, Synchronicity {6}
+[18000 @ 0x8fc33] previous_vault_cost_sum
+[18001 @ 0x8fc4a] previous_vault_nodes
+[18052 @ 0x8fec5] protectorRadius
+[18151 @ 0x901bd] rangedEnemyRadius
+[18157 @ 0x901fb] rarity {0} has no modules
+[18214 @ 0x904a0] relic
+[18215 @ 0x904a5] relic=
+[18216 @ 0x904ab] relicSlots
+[18217 @ 0x904b5] relicSlots is null or slotIndex is out of bounds
+[18218 @ 0x904e5] relicsCollected
+[18736 @ 0x91ef7] shopGemRelics
+[18737 @ 0x91f04] shopRelics
+[18916 @ 0x92827] spotlightReflect
+[19364 @ 0x94268] totalEnemiesDestroyedByOrbs
+[19391 @ 0x9438a] tournament
+[19392 @ 0x94394] tournamentFleetHPTiebreakerEnabled
+[19393 @ 0x943b6] tournamentFleetWaveTimingEnabled
+[19394 @ 0x943d6] tournamentLeague
+[19395 @ 0x943e6] tournamentLeague=
+[19396 @ 0x943f7] tournamentMythicEnabled
+[19397 @ 0x9440e] tournamentRank
+[19398 @ 0x9441c] tournamentRank={0}
+[19399 @ 0x9442e] tournamentRegisterLoggingEnabled
+[19400 @ 0x9444e] tournamentStart
+[19401 @ 0x9445d] tournamentStart=
+[19402 @ 0x9446d] tournaments_events
+[19403 @ 0x9447f] tournamenttickets
+[19720 @ 0x95a1f] unknown highlighted module {0}
+[19721 @ 0x95a3d] unknown module {0}
+[19754 @ 0x95c08] updateTournamentV2
+[19854 @ 0x9617b] vault_respec
+[19855 @ 0x96187] vault_respec_cooldown
+[19856 @ 0x9619c] vault_respec_cost
+[19943 @ 0x965e3] wallMeleeEnemyRadius
+[20332 @ 0xa2272] {0} Module
+[20350 @ 0xa2600] {0} module '{1}' for '{2}'
+[20351 @ 0xa261a] {0} modules sum to {1}
+[20374 @ 0xa2889] {0} {1} wave {2} tournament {3}
+[20385 @ 0xa29e8] {0}#avatar={1},relic={2}

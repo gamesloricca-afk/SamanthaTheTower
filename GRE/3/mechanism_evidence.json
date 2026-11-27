@@ -1,0 +1,617 @@
+[
+  {
+    "subject": "Enemy behavior",
+    "status": "DIRECT_METADATA_SYMBOLS; INTERPRETATION_LIMITED",
+    "interpretation": "Separate movement, attacks, state tracking and reduction routines exist; precise execution order and stacking are not recoverable here.",
+    "evidence": [
+      {
+        "owner": "Enemy",
+        "member": "EnemyMovement",
+        "offset": 3150574,
+        "index": 2283
+      },
+      {
+        "owner": "Enemy",
+        "member": "EnemyUpdate",
+        "offset": 3150664,
+        "index": 2286
+      },
+      {
+        "owner": "Enemy",
+        "member": "Attack",
+        "offset": 3150904,
+        "index": 2294
+      },
+      {
+        "owner": "Enemy",
+        "member": "RangedAttack",
+        "offset": 3150994,
+        "index": 2297
+      },
+      {
+        "owner": "Enemy",
+        "member": "VampireAttack",
+        "offset": 3151024,
+        "index": 2298
+      },
+      {
+        "owner": "Enemy",
+        "member": "SaboteurAttack",
+        "offset": 3151084,
+        "index": 2300
+      },
+      {
+        "owner": "Enemy",
+        "member": "CommanderBuffArea",
+        "offset": 3151114,
+        "index": 2301
+      },
+      {
+        "owner": "Enemy",
+        "member": "OverchargeAttack",
+        "offset": 3151144,
+        "index": 2302
+      },
+      {
+        "owner": "Enemy",
+        "member": "GetCurrentOverchargeAttackInterval",
+        "offset": 3150724,
+        "index": 2288
+      },
+      {
+        "owner": "Enemy",
+        "member": "GetCurrentCommanderBuffInterval",
+        "offset": 3150754,
+        "index": 2289
+      },
+      {
+        "owner": "Enemy",
+        "member": "GetCurrentSaboteurAttackInterval",
+        "offset": 3150784,
+        "index": 2290
+      },
+      {
+        "owner": "Enemy",
+        "member": "UpdateUltimateFastLinkedEnemies",
+        "offset": 3150604,
+        "index": 2284
+      },
+      {
+        "owner": "Enemy",
+        "member": "inProtector",
+        "offset": 7406388,
+        "index": 2756
+      },
+      {
+        "owner": "Enemy",
+        "member": "inBlackHole",
+        "offset": 7406218,
+        "index": 2739
+      },
+      {
+        "owner": "Enemy",
+        "member": "blackHoleTime",
+        "offset": 7406248,
+        "index": 2742
+      },
+      {
+        "owner": "Enemy",
+        "member": "shockStack",
+        "offset": 7405898,
+        "index": 2707
+      },
+      {
+        "owner": "Enemy",
+        "member": "burnStack",
+        "offset": 7405948,
+        "index": 2712
+      },
+      {
+        "owner": "Enemy",
+        "member": "poisonCount",
+        "offset": 7406188,
+        "index": 2736
+      },
+      {
+        "owner": "Enemy",
+        "member": "stunTime",
+        "offset": 7406208,
+        "index": 2738
+      },
+      {
+        "owner": "Enemy",
+        "member": "flameBotDamageReduction",
+        "offset": 7406358,
+        "index": 2753
+      },
+      {
+        "owner": "Enemy",
+        "member": "boostedFlameBotDamageReduction",
+        "offset": 7406368,
+        "index": 2754
+      },
+      {
+        "owner": "Enemy",
+        "member": "thunderDamageReduction",
+        "offset": 7406518,
+        "index": 2769
+      },
+      {
+        "owner": "Enemy",
+        "member": "CalculateDamageReductionResult",
+        "offset": 3150934,
+        "index": 2295
+      },
+      {
+        "owner": "Enemy",
+        "member": "ApplyDamageReductionStats",
+        "offset": 3150964,
+        "index": 2296
+      }
+    ]
+  },
+  {
+    "subject": "UW interactions",
+    "status": "DIRECT_METADATA_SYMBOLS; INTERPRETATION_LIMITED",
+    "interpretation": "Enemy-level handlers expose multiple economy and combat effects; this is evidence for separate named mechanisms, not proof they multiply or trigger together.",
+    "evidence": [
+      {
+        "owner": "Enemy",
+        "member": "GoldenTowerBonus",
+        "offset": 3151984,
+        "index": 2330
+      },
+      {
+        "owner": "Enemy",
+        "member": "BlackHoleCoinBonus",
+        "offset": 3152074,
+        "index": 2333
+      },
+      {
+        "owner": "Enemy",
+        "member": "DeathWaveCoinBonus",
+        "offset": 3152194,
+        "index": 2337
+      },
+      {
+        "owner": "Enemy",
+        "member": "DeathWaveCellBonus",
+        "offset": 3152224,
+        "index": 2338
+      },
+      {
+        "owner": "Enemy",
+        "member": "SpotlightCoinBonus",
+        "offset": 3152164,
+        "index": 2336
+      },
+      {
+        "owner": "Enemy",
+        "member": "OrbCoinBonus",
+        "offset": 3152104,
+        "index": 2334
+      },
+      {
+        "owner": "Enemy",
+        "member": "BountyCoinBonus",
+        "offset": 3152134,
+        "index": 2335
+      },
+      {
+        "owner": "Enemy",
+        "member": "BlackHoleDamage",
+        "offset": 3151624,
+        "index": 2318
+      },
+      {
+        "owner": "Enemy",
+        "member": "BlackHolePlusDamage",
+        "offset": 3151654,
+        "index": 2319
+      },
+      {
+        "owner": "Enemy",
+        "member": "DeathwaveFinalDamage",
+        "offset": 3151594,
+        "index": 2317
+      },
+      {
+        "owner": "Enemy",
+        "member": "markedByDeathwave",
+        "offset": 7406438,
+        "index": 2761
+      },
+      {
+        "owner": "Enemy",
+        "member": "deathwaveEnemyAmplifier",
+        "offset": 7406448,
+        "index": 2762
+      },
+      {
+        "owner": "Enemy",
+        "member": "spawnedDuringGoldenTower",
+        "offset": 7406478,
+        "index": 2765
+      },
+      {
+        "owner": "Enemy",
+        "member": "inBlackHolePlus",
+        "offset": 7406298,
+        "index": 2747
+      }
+    ]
+  },
+  {
+    "subject": "UW cooldown and sync",
+    "status": "DIRECT_METADATA_SYMBOLS; INTERPRETATION_LIMITED",
+    "interpretation": "Dedicated MVN and cooldown functions exist. Arithmetic, package RNG, banked activations and exact pBH thresholds require method bodies.",
+    "evidence": [
+      {
+        "owner": "Main",
+        "member": "GetAverageUltimateCooldownMultiverseNexus",
+        "offset": 3216394,
+        "index": 4477
+      },
+      {
+        "owner": "Main",
+        "member": "GetBlackHoleDuration",
+        "offset": 3220594,
+        "index": 4617
+      },
+      {
+        "owner": "Main",
+        "member": "GetBlackHoleCooldown",
+        "offset": 3220624,
+        "index": 4618
+      },
+      {
+        "owner": "Main",
+        "member": "GetGoldenTowerCooldown",
+        "offset": 3220414,
+        "index": 4611
+      },
+      {
+        "owner": "Main",
+        "member": "GetDeathwaveCooldown",
+        "offset": 3220144,
+        "index": 4602
+      },
+      {
+        "owner": "Main",
+        "member": "GetGoldenTowerDuration",
+        "offset": 3220384,
+        "index": 4610
+      },
+      {
+        "owner": "Main",
+        "member": "ApplyRecoveryPackage",
+        "offset": 3225124,
+        "index": 4768
+      },
+      {
+        "owner": "Main",
+        "member": "SpawnRecoveryPackage",
+        "offset": 3217864,
+        "index": 4526
+      }
+    ]
+  },
+  {
+    "subject": "Black Hole lifecycle",
+    "status": "DIRECT_METADATA_SYMBOLS; INTERPRETATION_LIMITED",
+    "interpretation": "Two group identifiers and timer state are visible. No conclusion about banked activations or simultaneous group behavior follows solely from names.",
+    "evidence": [
+      {
+        "owner": "BlackHoleController",
+        "member": "get_Active",
+        "offset": 3107734,
+        "index": 855
+      },
+      {
+        "owner": "BlackHoleController",
+        "member": "get_Duration",
+        "offset": 3107794,
+        "index": 857
+      },
+      {
+        "owner": "BlackHoleController",
+        "member": "timer",
+        "offset": 7387428,
+        "index": 860
+      },
+      {
+        "owner": "BlackHoleController",
+        "member": "activeTimer",
+        "offset": 7387438,
+        "index": 861
+      },
+      {
+        "owner": "BlackHoleController",
+        "member": "blackHoleAlreadyActive",
+        "offset": 7387448,
+        "index": 862
+      },
+      {
+        "owner": "BlackHoleController",
+        "member": "usingSecondGroup",
+        "offset": 7387458,
+        "index": 863
+      },
+      {
+        "owner": "BlackHoleController",
+        "member": "blackHoles2",
+        "offset": 7387398,
+        "index": 857
+      },
+      {
+        "owner": "BlackHoleController",
+        "member": "Play",
+        "offset": 3107944,
+        "index": 862
+      },
+      {
+        "owner": "BlackHoleController",
+        "member": "DoPlay",
+        "offset": 3107974,
+        "index": 863
+      },
+      {
+        "owner": "BlackHoleController",
+        "member": "CheckTimer",
+        "offset": 3108004,
+        "index": 864
+      },
+      {
+        "owner": "BlackHoleController",
+        "member": "ForceStop",
+        "offset": 3108094,
+        "index": 867
+      },
+      {
+        "owner": "BlackHoleController",
+        "member": "BlackHolePlusDamage",
+        "offset": 3108064,
+        "index": 866
+      }
+    ]
+  },
+  {
+    "subject": "Bots and synchronization",
+    "status": "DIRECT_METADATA_SYMBOLS; INTERPRETATION_LIMITED",
+    "interpretation": "Bot benefit tables and synchronization interfaces exist; runtime values and formula order remain unknown.",
+    "evidence": [
+      {
+        "owner": "Bots",
+        "member": "GetCooldownTimers",
+        "offset": 3111214,
+        "index": 971
+      },
+      {
+        "owner": "Bots",
+        "member": "SetCooldownTimers",
+        "offset": 3111244,
+        "index": 972
+      },
+      {
+        "owner": "Bots",
+        "member": "GetBotBenefit",
+        "offset": 3111304,
+        "index": 974
+      },
+      {
+        "owner": "Bots",
+        "member": "GetWildfireDuration",
+        "offset": 3111964,
+        "index": 996
+      },
+      {
+        "owner": "Bots",
+        "member": "IsBotSynchronized",
+        "offset": 3112114,
+        "index": 1001
+      },
+      {
+        "owner": "Bots",
+        "member": "SynchronicityUpgrade",
+        "offset": 3111994,
+        "index": 997
+      },
+      {
+        "owner": "Bots",
+        "member": "FindSynchronicityLeadBot",
+        "offset": 3112054,
+        "index": 999
+      },
+      {
+        "owner": "Bots",
+        "member": "baseBenefit",
+        "offset": 7388468,
+        "index": 964
+      },
+      {
+        "owner": "Bots",
+        "member": "benefitPerLevel",
+        "offset": 7388478,
+        "index": 965
+      }
+    ]
+  },
+  {
+    "subject": "Module migration and effects",
+    "status": "DIRECT_METADATA_SYMBOLS; INTERPRETATION_LIMITED",
+    "interpretation": "Primary and assist slot levels, efficiency and migration are separate interfaces; the metadata alone cannot recover GComp rarity reductions or assist caps.",
+    "evidence": [
+      {
+        "owner": "ModuleManager",
+        "member": "GetSlotLevel",
+        "offset": 3261244,
+        "index": 5972
+      },
+      {
+        "owner": "ModuleManager",
+        "member": "GetPrimarySlotLevel",
+        "offset": 3261184,
+        "index": 5970
+      },
+      {
+        "owner": "ModuleManager",
+        "member": "GetAssistSlotLevel",
+        "offset": 3261214,
+        "index": 5971
+      },
+      {
+        "owner": "ModuleManager",
+        "member": "MigrateModuleLevelsToSlots",
+        "offset": 3261634,
+        "index": 5985
+      },
+      {
+        "owner": "ModuleManager",
+        "member": "TryCarePackageDrop",
+        "offset": 3265294,
+        "index": 6107
+      },
+      {
+        "owner": "ModuleManager",
+        "member": "GetAssistModuleUniqueEffectEfficiency",
+        "offset": 3268714,
+        "index": 6221
+      },
+      {
+        "owner": "ModuleManager",
+        "member": "GetAssistModuleMainEffectEfficiency",
+        "offset": 3268834,
+        "index": 6225
+      },
+      {
+        "owner": "ModuleManager",
+        "member": "GetAssistModuleSubstatEfficiency",
+        "offset": 3268954,
+        "index": 6229
+      },
+      {
+        "owner": "ModuleManager",
+        "member": "IsCappedAssistSubstatEffect",
+        "offset": 3269464,
+        "index": 6246
+      }
+    ]
+  },
+  {
+    "subject": "Death Wave progression",
+    "status": "DIRECT_METADATA_SYMBOLS; INTERPRETATION_LIMITED",
+    "interpretation": "Health-from-kill and multiplier gain have named routines; the constant is separately extracted, but exact conditions and cap remain unknown.",
+    "evidence": [
+      {
+        "owner": "Main",
+        "member": "ApplyDeathWaveHealthFromKill",
+        "offset": 3217564,
+        "index": 4516
+      },
+      {
+        "owner": "Main",
+        "member": "ApplyDeathWaveHealthMultiplierGain",
+        "offset": 3217594,
+        "index": 4517
+      },
+      {
+        "owner": "Main",
+        "member": "DEATH_WAVE_HEALTH_MULTIPLIER_PER_KILL",
+        "offset": 7430608,
+        "index": 5178
+      }
+    ]
+  },
+  {
+    "subject": "Economy and recovery",
+    "status": "DIRECT_METADATA_SYMBOLS; INTERPRETATION_LIMITED",
+    "interpretation": "Separate economy, recovery and protector calculations are exposed; no package chance or boss frequency formula inferred.",
+    "evidence": [
+      {
+        "owner": "Main",
+        "member": "CalculateCoinBonuses",
+        "offset": 3225064,
+        "index": 4766
+      },
+      {
+        "owner": "Main",
+        "member": "GetThemesCoinBonus",
+        "offset": 3225094,
+        "index": 4767
+      },
+      {
+        "owner": "Main",
+        "member": "SpawnRecoveryPackage",
+        "offset": 3217864,
+        "index": 4526
+      },
+      {
+        "owner": "Main",
+        "member": "ApplyRecoveryPackage",
+        "offset": 3225124,
+        "index": 4768
+      },
+      {
+        "owner": "Main",
+        "member": "ApplyAllyRecoveryPackage",
+        "offset": 3225214,
+        "index": 4771
+      },
+      {
+        "owner": "Main",
+        "member": "GetProtectorRadiusGrowthFactor",
+        "offset": 3218374,
+        "index": 4543
+      }
+    ]
+  },
+  {
+    "subject": "Save version and schema",
+    "status": "DIRECT_METADATA_SYMBOLS; INTERPRETATION_LIMITED",
+    "interpretation": "Both legacy and v2 members and version accessors are present. This supports coexistence, not equivalence or a conversion factor.",
+    "evidence": [
+      {
+        "owner": "PlayerData",
+        "member": "get_VersionNumber",
+        "offset": 3306874,
+        "index": 7493
+      },
+      {
+        "owner": "PlayerData",
+        "member": "get_DataVersion",
+        "offset": 3306934,
+        "index": 7495
+      },
+      {
+        "owner": "PlayerData",
+        "member": "slotLevels",
+        "offset": 7478828,
+        "index": 10000
+      },
+      {
+        "owner": "PlayerData",
+        "member": "moduleCannonShardsLifetime",
+        "offset": 7478888,
+        "index": 10006
+      },
+      {
+        "owner": "PlayerData",
+        "member": "moduleCannonShardsLifetime_v2",
+        "offset": 7478898,
+        "index": 10007
+      },
+      {
+        "owner": "PlayerData",
+        "member": "moduleRerollCurrencyLifetime",
+        "offset": 7478968,
+        "index": 10014
+      },
+      {
+        "owner": "PlayerData",
+        "member": "moduleRerollCurrencyLifetime_v2",
+        "offset": 7478978,
+        "index": 10015
+      }
+    ]
+  }
+]

@@ -1,0 +1,306 @@
+{
+  "source": "DOC-20261127-WA0002.bin",
+  "sha256": "8266355fab717d91b51482122b66551afc62502b0f62fd8527930962cbefe81c",
+  "size": 11069036,
+  "metadata_version": 39,
+  "sections": [
+    {
+      "index": 0,
+      "offset": 380,
+      "size": 82940,
+      "count": 20735,
+      "label": "literal_offsets",
+      "record_size": 4
+    },
+    {
+      "index": 1,
+      "offset": 83320,
+      "size": 587714,
+      "count": 20734,
+      "label": "literal_data",
+      "record_size": null
+    },
+    {
+      "index": 2,
+      "offset": 671036,
+      "size": 2015007,
+      "count": 107827,
+      "label": "identifier_strings",
+      "record_size": null
+    },
+    {
+      "index": 3,
+      "offset": 2686044,
+      "size": 12738,
+      "count": 579,
+      "label": "events_candidate",
+      "record_size": 22
+    },
+    {
+      "index": 4,
+      "offset": 2698784,
+      "size": 383300,
+      "count": 19165,
+      "label": "properties",
+      "record_size": 20
+    },
+    {
+      "index": 5,
+      "offset": 3082084,
+      "size": 2938740,
+      "count": 97958,
+      "label": "methods",
+      "record_size": 30
+    },
+    {
+      "index": 6,
+      "offset": 6020824,
+      "size": 23870,
+      "count": 2387,
+      "label": "parameter_defaults_candidate",
+      "record_size": 10
+    },
+    {
+      "index": 7,
+      "offset": 6044696,
+      "size": 157640,
+      "count": 15764,
+      "label": "field_defaults",
+      "record_size": 10
+    },
+    {
+      "index": 8,
+      "offset": 6202336,
+      "size": 173459,
+      "count": 173459,
+      "label": "default_data",
+      "record_size": 1
+    },
+    {
+      "index": 9,
+      "offset": 6375796,
+      "size": 47070,
+      "count": 4707,
+      "label": "field_marshaled_sizes_candidate",
+      "record_size": 10
+    },
+    {
+      "index": 10,
+      "offset": 6422868,
+      "size": 955960,
+      "count": 95596,
+      "label": "parameters",
+      "record_size": 10
+    },
+    {
+      "index": 11,
+      "offset": 7378828,
+      "size": 638880,
+      "count": 63888,
+      "label": "fields",
+      "record_size": 10
+    },
+    {
+      "index": 12,
+      "offset": 8017708,
+      "size": 46676,
+      "count": 3334,
+      "label": "generic_parameters_candidate",
+      "record_size": 14
+    },
+    {
+      "index": 13,
+      "offset": 8064384,
+      "size": 1552,
+      "count": 776,
+      "label": "generic_constraints_candidate",
+      "record_size": 2
+    },
+    {
+      "index": 14,
+      "offset": 8065936,
+      "size": 34048,
+      "count": 2128,
+      "label": "generic_containers_candidate",
+      "record_size": 16
+    },
+    {
+      "index": 15,
+      "offset": 8099984,
+      "size": 19376,
+      "count": 4844,
+      "label": "nested_types_candidate",
+      "record_size": 4
+    },
+    {
+      "index": 16,
+      "offset": 8119360,
+      "size": 8964,
+      "count": 4482,
+      "label": "interfaces_candidate",
+      "record_size": 2
+    },
+    {
+      "index": 17,
+      "offset": 8128324,
+      "size": 606456,
+      "count": 151614,
+      "label": "vtable_methods_candidate",
+      "record_size": 4
+    },
+    {
+      "index": 18,
+      "offset": 8734780,
+      "size": 82638,
+      "count": 13773,
+      "label": "interface_offsets_candidate",
+      "record_size": 6
+    },
+    {
+      "index": 19,
+      "offset": 8817420,
+      "size": 1075628,
+      "count": 14153,
+      "label": "types",
+      "record_size": 76
+    },
+    {
+      "index": 20,
+      "offset": 9893048,
+      "size": 4500,
+      "count": 125,
+      "label": "images",
+      "record_size": 36
+    },
+    {
+      "index": 21,
+      "offset": 9897548,
+      "size": 8500,
+      "count": 125,
+      "label": "assemblies_candidate",
+      "record_size": 68
+    },
+    {
+      "index": 22,
+      "offset": 9906048,
+      "size": 5256,
+      "count": 876,
+      "label": "field_refs_candidate",
+      "record_size": 6
+    },
+    {
+      "index": 23,
+      "offset": 9911304,
+      "size": 2800,
+      "count": 700,
+      "label": "referenced_assemblies_candidate",
+      "record_size": 4
+    },
+    {
+      "index": 24,
+      "offset": 9914104,
+      "size": 841984,
+      "count": 841981,
+      "label": "attribute_data_candidate",
+      "record_size": null
+    },
+    {
+      "index": 25,
+      "offset": 10756088,
+      "size": 247624,
+      "count": 30953,
+      "label": "attribute_ranges_candidate",
+      "record_size": 8
+    },
+    {
+      "index": 26,
+      "offset": 11003712,
+      "size": 22988,
+      "count": 11494,
+      "label": "unresolved_call_types_candidate",
+      "record_size": 2
+    },
+    {
+      "index": 27,
+      "offset": 11026700,
+      "size": 30848,
+      "count": 3856,
+      "label": "unresolved_call_ranges_candidate",
+      "record_size": 8
+    },
+    {
+      "index": 28,
+      "offset": 11057548,
+      "size": 0,
+      "count": 0,
+      "label": "empty_unknown",
+      "record_size": null
+    },
+    {
+      "index": 29,
+      "offset": 11057548,
+      "size": 0,
+      "count": 0,
+      "label": "empty_unknown",
+      "record_size": null
+    },
+    {
+      "index": 30,
+      "offset": 11057548,
+      "size": 11488,
+      "count": 2872,
+      "label": "exported_types_candidate",
+      "record_size": 4
+    }
+  ],
+  "assemblies": 125,
+  "total_types": 14153,
+  "game_types": 1617,
+  "game_methods": 14641,
+  "game_fields": 15513,
+  "game_properties": 2678,
+  "game_parameters": 8374,
+  "game_field_defaults": 2682,
+  "candidate_decoded_defaults": 2238,
+  "gameplay_literal_matches": 222,
+  "domain_counts": {
+    "01_game_fundamentals": 53,
+    "02_enemies": 31,
+    "03_battle_conditions": 48,
+    "04_combat_mechanics": 79,
+    "05_ultimate_weapons": 70,
+    "06_workshop": 35,
+    "07_workshop_enhancements": 34,
+    "08_research": 15,
+    "09_modules": 108,
+    "10_cards_masteries": 49,
+    "11_bots": 42,
+    "12_guardians": 65,
+    "13_perks": 39,
+    "14_relics": 45,
+    "15_vault": 59,
+    "16_economy_progression": 137,
+    "17_formulas_calculations": 57,
+    "18_strategy_interactions": 58,
+    "19_version_history": 23,
+    "20_experimental_community": 12
+  },
+  "domain_unique_types": 475,
+  "checks": [
+    "All section bounds checked",
+    "Image type ranges contiguous and sum to total type count",
+    "Every extracted method declaring type matches owning type",
+    "Method, field, property and parameter token tags checked",
+    "Property accessor indices checked",
+    "Literal offsets monotonic and bounded"
+  ],
+  "limitations": [
+    "No native executable method bodies, runtime type registration, serialized asset tables or remote configuration provided",
+    "Primitive default encodings inferred; do not treat as verified gameplay values",
+    "No game release version established by metadata version 39",
+    "Domain classification heuristic; overlapping records not independent evidence",
+    "Runtime type indices unresolved when no direct type definition matches",
+    "String literals are keyword-filtered across all assemblies; owner not established",
+    "No call graph or formula reconstruction from names alone"
+  ]
+}
