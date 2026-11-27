@@ -1,0 +1,782 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Unique Module Effects",
+  "description": "Compact catalog of Epic-minimum modules with unique effects. Non-unique module templates are intentionally excluded.",
+  "source": {
+    "name": "TheTowerSDK",
+    "package": "thetowersdk",
+    "targetVersion": "0.14.1",
+    "sourceRef": "https://github.com/TmRxJD/TheTowerSDK/blob/main/src/data/modules/templates.ts",
+    "sourceFile": "src/data/modules/templates.ts",
+    "retrievedRef": "main",
+    "versionCaveat": "The SDK repository main source was inspected; equivalence to the pinned npm package 0.14.1 was not independently established."
+  },
+  "classification": "OBJECTIVE",
+  "verificationStatus": "EXTERNAL-UNVERIFIED",
+  "minRarity": "Epic",
+  "maxRarity": "Ancestral 5",
+  "rarityOrder": [
+    "Epic",
+    "Legendary",
+    "Mythic",
+    "Ancestral"
+  ],
+  "modules": [
+    {
+      "id": "astral-deliverance",
+      "name": "Astral Deliverance",
+      "initials": "AD",
+      "category": "Cannon",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Bounce Shot's range is increased by 3% of the Tower's total range. Each bounce increases projectile damage by +{value}%.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 20
+        },
+        {
+          "rarity": "Legendary",
+          "value": 40
+        },
+        {
+          "rarity": "Mythic",
+          "value": 60
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 80
+        }
+      ]
+    },
+    {
+      "id": "being-annihilator",
+      "name": "Being Annihilator",
+      "initials": "BA",
+      "category": "Cannon",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Gain {value}% Super Crit chance. When you Super Crit, your next 5 shots are guaranteed Super Crits.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 5
+        },
+        {
+          "rarity": "Legendary",
+          "value": 7
+        },
+        {
+          "rarity": "Mythic",
+          "value": 10
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 14
+        }
+      ]
+    },
+    {
+      "id": "death-penalty",
+      "name": "Death Penalty",
+      "initials": "DP",
+      "category": "Cannon",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "{value}% chance to mark an enemy for death when it spawns; the first hit destroys it.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 5
+        },
+        {
+          "rarity": "Legendary",
+          "value": 8
+        },
+        {
+          "rarity": "Mythic",
+          "value": 11
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "id": "havoc-bringer",
+      "name": "Havoc Bringer",
+      "initials": "HB",
+      "category": "Cannon",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "{value}% chance for Rend Armor to instantly reach maximum.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 10
+        },
+        {
+          "rarity": "Legendary",
+          "value": 13
+        },
+        {
+          "rarity": "Mythic",
+          "value": 15
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "id": "shrink-ray",
+      "name": "Shrink Ray",
+      "initials": "SR",
+      "category": "Cannon",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Attacks have a 1% chance to apply a non-stacking effect that decreases enemy mass by {value}%.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 10
+        },
+        {
+          "rarity": "Legendary",
+          "value": 20
+        },
+        {
+          "rarity": "Mythic",
+          "value": 30
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 40
+        }
+      ]
+    },
+    {
+      "id": "amplifying-strike",
+      "name": "Amplifying Strike",
+      "initials": "AS",
+      "category": "Cannon",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Killing a Boss, Elite, or Fleet enemy increases Tower damage by 5x for {value} seconds.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 5
+        },
+        {
+          "rarity": "Legendary",
+          "value": 11
+        },
+        {
+          "rarity": "Mythic",
+          "value": 18
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 26
+        }
+      ]
+    },
+    {
+      "id": "anti-cube-portal",
+      "name": "Anti-Cube Portal",
+      "initials": "ACP",
+      "category": "Armor",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Enemies take x{value} damage for 7s after being hit by a Shockwave.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 10
+        },
+        {
+          "rarity": "Legendary",
+          "value": 15
+        },
+        {
+          "rarity": "Mythic",
+          "value": 20
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "id": "negative-mass-projector",
+      "name": "Negative Mass Projector",
+      "initials": "NMP",
+      "category": "Armor",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "If an Orb does not kill an enemy, it applies a stacking debuff reducing enemy damage and speed by {value}% per hit, up to 50%.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 1
+        },
+        {
+          "rarity": "Legendary",
+          "value": 1.5
+        },
+        {
+          "rarity": "Mythic",
+          "value": 2
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 2.5
+        }
+      ]
+    },
+    {
+      "id": "wormhole-redirector",
+      "name": "Wormhole Redirector",
+      "initials": "WR",
+      "category": "Armor",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Health Regen can heal up to {value}% of Package Max Recovery.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 25
+        },
+        {
+          "rarity": "Legendary",
+          "value": 50
+        },
+        {
+          "rarity": "Mythic",
+          "value": 75
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "space-displacer",
+      "name": "Space Displacer",
+      "initials": "SD",
+      "category": "Armor",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Landmines have a {value}% chance to spawn as Inner Land Mines (20 max) instead of a normal mine; they move and organize around the Tower.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 15
+        },
+        {
+          "rarity": "Legendary",
+          "value": 20
+        },
+        {
+          "rarity": "Mythic",
+          "value": 25
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "id": "sharp-fortitude",
+      "name": "Sharp Fortitude",
+      "initials": "SF",
+      "category": "Armor",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Increases Wall health and regen by x{value}. Wall Thorns deal +1% increased damage per subsequent hit.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 1.25
+        },
+        {
+          "rarity": "Legendary",
+          "value": 1.5
+        },
+        {
+          "rarity": "Mythic",
+          "value": 2
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 2.5
+        }
+      ]
+    },
+    {
+      "id": "orbital-augment",
+      "name": "Orbital Augment",
+      "initials": "OA",
+      "category": "Armor",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Adds {value} orbiting Electrons. Each deals damage equal to 10% of wave health to enemies hit.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 2
+        },
+        {
+          "rarity": "Legendary",
+          "value": 4
+        },
+        {
+          "rarity": "Mythic",
+          "value": 6
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 8
+        }
+      ]
+    },
+    {
+      "id": "singularity-harness",
+      "name": "Singularity Harness",
+      "initials": "SH",
+      "category": "Generator",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Increases each Bot's range by +{value}m. Enemies hit by Flame Bot receive double damage.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 5
+        },
+        {
+          "rarity": "Legendary",
+          "value": 8
+        },
+        {
+          "rarity": "Mythic",
+          "value": 11
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "id": "galaxy-compressor",
+      "name": "Galaxy Compressor",
+      "initials": "GC",
+      "category": "Generator",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Collecting a Recovery Package reduces the cooldown of all Ultimate Weapons by {value}s.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 10
+        },
+        {
+          "rarity": "Legendary",
+          "value": 13
+        },
+        {
+          "rarity": "Mythic",
+          "value": 17
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "id": "pulsar-harvester",
+      "name": "Pulsar Harvester",
+      "initials": "PH",
+      "category": "Generator",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Each projectile hit has a {value}% chance to reduce the enemy's Health and Attack level by 1.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 1
+        },
+        {
+          "rarity": "Legendary",
+          "value": 1.5
+        },
+        {
+          "rarity": "Mythic",
+          "value": 2
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 2.5
+        }
+      ]
+    },
+    {
+      "id": "black-hole-digestor",
+      "name": "Black Hole Digestor",
+      "initials": "BHD",
+      "category": "Generator",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Temporarily gain +{value}% Coins/Kill bonus for each free upgrade obtained on the current wave. Free upgrades cannot increase Tower Range.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 3
+        },
+        {
+          "rarity": "Legendary",
+          "value": 5
+        },
+        {
+          "rarity": "Mythic",
+          "value": 7
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "project-funding",
+      "name": "Project Funding",
+      "initials": "PF",
+      "category": "Generator",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Tower damage is multiplied by {value}% of the number of digits in current Cash.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 12.5
+        },
+        {
+          "rarity": "Legendary",
+          "value": 25
+        },
+        {
+          "rarity": "Mythic",
+          "value": 50
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "restorative-bonus",
+      "name": "Restorative Bonus",
+      "initials": "RB",
+      "category": "Generator",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Packages grant a 50% Attack Speed boost for {value}s, decaying over 60 seconds.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 15
+        },
+        {
+          "rarity": "Legendary",
+          "value": 20
+        },
+        {
+          "rarity": "Mythic",
+          "value": 25
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "id": "om-chip",
+      "name": "Om Chip",
+      "initials": "OC",
+      "category": "Core",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Spotlight rotates to focus a Boss. The Boss reflects the light to nearby enemies, increasing damage they receive by x{value}.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 2
+        },
+        {
+          "rarity": "Legendary",
+          "value": 4
+        },
+        {
+          "rarity": "Mythic",
+          "value": 7
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "id": "harmony-conductor",
+      "name": "Harmony Conductor",
+      "initials": "HC",
+      "category": "Core",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Poisoned enemies have a {value}% chance to miss an attack; Boss chance is halved.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 15
+        },
+        {
+          "rarity": "Legendary",
+          "value": 20
+        },
+        {
+          "rarity": "Mythic",
+          "value": 25
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "id": "dimension-core",
+      "name": "Dimension Core",
+      "initials": "DC",
+      "category": "Core",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Chain Lightning has 60% chance to hit the initial target. Shock chance and multiplier are doubled; repeated Shock on one enemy stacks up to {value}.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 5
+        },
+        {
+          "rarity": "Legendary",
+          "value": 10
+        },
+        {
+          "rarity": "Mythic",
+          "value": 15
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "id": "multiverse-nexus",
+      "name": "Multiverse Nexus",
+      "initials": "MVN",
+      "category": "Core",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Death Wave, Golden Tower, and Black Hole activate together. Cooldown is their average, adjusted by {value}s.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 20
+        },
+        {
+          "rarity": "Legendary",
+          "value": 10
+        },
+        {
+          "rarity": "Mythic",
+          "value": 1
+        },
+        {
+          "rarity": "Ancestral",
+          "value": -10
+        }
+      ]
+    },
+    {
+      "id": "magnetic-hook",
+      "name": "Magnetic Hook",
+      "initials": "MH",
+      "category": "Core",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Fires {value} Inner Land Mines when Fleets and Bosses enter Tower range; 25% of Elites also trigger mines.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 1
+        },
+        {
+          "rarity": "Legendary",
+          "value": 2
+        },
+        {
+          "rarity": "Mythic",
+          "value": 3
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "primordial-collapse",
+      "name": "Primordial Collapse",
+      "initials": "PC",
+      "category": "Core",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Spawns one additional Black Hole. Enemy damage within a Black Hole is reduced by {value}%.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 60
+        },
+        {
+          "rarity": "Legendary",
+          "value": 65
+        },
+        {
+          "rarity": "Mythic",
+          "value": 75
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 90
+        }
+      ]
+    },
+    {
+      "id": "sentry-protocol",
+      "name": "Sentry Protocol",
+      "initials": "SP",
+      "category": "Armor",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Reduces Orb speed to zero; Orbs fire {value} Mini Orbs at enemies instead.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 1
+        },
+        {
+          "rarity": "Legendary",
+          "value": 2
+        },
+        {
+          "rarity": "Mythic",
+          "value": 3
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "gilded-sniper",
+      "name": "Gilded Sniper",
+      "initials": "GS",
+      "category": "Cannon",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "On enemy death, has a {value}% chance to apply all active Coin bonuses, even outside their range.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 10
+        },
+        {
+          "rarity": "Legendary",
+          "value": 20
+        },
+        {
+          "rarity": "Mythic",
+          "value": 30
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 40
+        }
+      ]
+    },
+    {
+      "id": "tactical-barrage",
+      "name": "Tactical Barrage",
+      "initials": "TB",
+      "category": "Core",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Doubles Smart Missile Radius and Amplifier lab bonuses. Fires a Homing Missile every {value}s, targeting the enemy with the highest Missile stack and redirecting active Smart Missiles.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 14
+        },
+        {
+          "rarity": "Legendary",
+          "value": 10
+        },
+        {
+          "rarity": "Mythic",
+          "value": 6
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "infinity-threshold",
+      "name": "Infinity Threshold",
+      "initials": "IT",
+      "category": "Generator",
+      "minRarity": "Epic",
+      "maxRarity": "Ancestral 5",
+      "effectTemplate": "Free upgrades can grant {value} extra levels to Damage, Health, and Health Regen.",
+      "rarityBonuses": [
+        {
+          "rarity": "Epic",
+          "value": 1000
+        },
+        {
+          "rarity": "Legendary",
+          "value": 2000
+        },
+        {
+          "rarity": "Mythic",
+          "value": 3000
+        },
+        {
+          "rarity": "Ancestral",
+          "value": 4000
+        }
+      ]
+    }
+  ]
+}
