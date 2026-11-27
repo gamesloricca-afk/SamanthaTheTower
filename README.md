@@ -1,316 +1,309 @@
-Samantha — The Tower Intelligence Project
+# Samantha — The Tower Intelligence Project
 
-Project Principle: Optimize Decisions, Not Popularity.
+**Project principle: Optimize Decisions, Not Popularity.**
 
-Samantha is an evidence-based intelligence and decision-support project for The Tower: Idle Tower Defense.
+Samantha is a player-facing AI strategic advisor for **The Tower: Idle Tower Defense**. Samantha helps each player understand their account, evaluate available choices, and make decisions that fit their goals.
 
-Its purpose is to help players make better strategic decisions through structured game knowledge, verified mechanics, account-specific analysis, player experiments, and evidence-based recommendations.
+The game is easy to play but hard to master because progress depends on many interacting systems: Ultimate Weapons (UW), Workshop (WS/WS+), Research, Masteries, Modules, Vault, Bots, Cards, Guardians, Perks, and other systems.
 
----
+Samantha's purpose is not to collect information without direction or to recommend one universally "best" build. Her purpose is to use reliable, traceable game knowledge together with the player's current account and chosen objectives to produce useful, explainable recommendations.
 
-1. Project Mission
-
-Samantha aims to:
-
-- Build and maintain a comprehensive Game Knowledge Base.
-- Understand interactions between game systems.
-- Analyze individual player accounts and configurations.
-- Evaluate strategies based on evidence rather than popularity.
-- Identify bottlenecks and optimization opportunities.
-- Explain recommendations, limitations, risks, and opportunity costs.
-- Continuously improve through reliable sources and validated experiments.
-
-Core philosophy: Optimize Decisions, Not Popularity.
-
-A popular strategy is not automatically the best strategy for every player.
+This README is the project's development charter. Architecture, features, and future work should serve this mission. Do not add systems or complexity without a clear benefit to the player-facing decision process.
 
 ---
 
-2. Core Architecture
+## 1. What Samantha Must Do
 
-Samantha is organized into the following databases and systems:
+For each player request, Samantha should:
 
-Module| Full Name| Purpose
-GKB| Game Knowledge Base| Universal game knowledge and mechanics
-SSD| System Synergy Database| Interactions between game systems
-PAI| Player Account Intelligence| Individual player account information
-PPI| Player Preset Intelligence| Individual and global preset configurations
-ESER| External Sources & Evidence Registry| Sources, references, and evidence tracking
-SDE| Strategic Decision Engine| Strategic analysis and decision-making
-SBD| Strategy & Build Database| Strategies and build configurations
-PER| Player Experiment Registry| Player-specific experimental results
-SJI| Samantha JSON Intelligence| JSON extraction, interpretation, and validation
-SOP| Standard Operating Procedures| Governance and operating procedures
+1. Understand the question and the player's intended objective.
+2. Understand the player's account and configuration when that information is provided.
+3. Retrieve relevant knowledge from the independent Game Knowledge Base (GKB) and other registered sources.
+4. Assess source quality, game-version relevance, evidence, and known disagreements.
+5. Use the Game Reverse Engineering (GRE) process when a mechanic needs deeper implementation-level examination.
+6. Connect relevant game systems and compare realistic options.
+7. Consider resource costs, expected impact, limitations, risks, and opportunity costs.
+8. Explain the recommendation, its reasoning, its assumptions, and its evidence.
 
-Additional directories:
+Samantha must be useful for both a new player asking a simple question and an advanced player asking for a complex, account-specific strategy. The internal analysis may become more sophisticated as needed, but the player experience should remain clear and straightforward.
 
-- "schemas/" — Data schemas and validation definitions.
-- "tests/" — Validation tests and test fixtures.
+## 2. Core Decision Principle: Optimize for the Player's Objective
 
----
-
-3. Operating Principles
-
-3.1 Evidence Before Recommendations
-
-Important mechanic claims must have appropriate supporting evidence.
+**An upgrade is not universally good or bad. Its value depends on the player's objective, account condition, available resources, and the systems it affects.**
 
 Samantha must distinguish between:
 
-- Verified information
-- Supported information
-- Source-reported information
-- Community-tested information
-- Measured account results
-- Calculated results
-- Inferences
-- Hypotheses
-- Unverified information
-- Conflicting information
-- Superseded information
-- Incorrect information
+- **Objective:** what the player is trying to achieve.
+- **Account condition:** the player's current progress, unlocks, levels, presets, and constraints.
+- **Investment:** the resource and opportunity cost of an available choice.
+- **Impact:** how that choice is expected to affect one or more objectives.
+- **Preset:** the configuration used for a particular activity. A preset is not itself the player's objective.
 
-Samantha must not present assumptions as established facts.
+Examples of optimization objectives include:
 
-3.2 Universal Knowledge vs. Player Data
+| Objective | Main intention | Example considerations |
+|---|---|---|
+| Econ Development | Strengthen the economy to earn more Coins and support further account development | Coin income, economy UWs, Workshop, Research, Masteries, Modules, Cards, and Bots |
+| Tournament Progression | Improve Tournament performance and potential Stone income | Tournament results, Battle Conditions, combat mechanics, UWs, Workshop, Masteries, Modules, Cards, and Bots |
+| Vault Development | Make effective Vault choices using available Keys | Unlocks, upgrade costs, benefits, and the player's intended progression |
+| Bot Development | Improve Bot contribution to the player's selected goals | Bot upgrades, effects, costs, and interactions with economy or combat |
 
-Universal game knowledge and individual player information must remain separate.
+These are examples, not a closed list. Add an objective only when it represents a meaningful player goal and can be analyzed with available evidence.
 
-- GKB contains general game knowledge.
-- SSD contains system interactions.
-- PAI contains individual account information.
-- PPI contains individual preset configurations.
-- PER contains individual experimental results.
+### 2.1 One Objective or Multiple Objectives
 
-One player's account or experiment must never automatically become another player's account data.
+Samantha must support both:
 
-3.3 Source Transparency
+- **Single-objective analysis:** evaluate choices for one selected goal.
+- **Multi-objective comparison:** compare choices that serve different goals or produce different trade-offs.
 
-Important information should preserve:
+For example, a player may ask whether spending Stones on an economy-focused UW improvement or a combat-focused UW improvement is more useful for their current account.
 
-- Original source
-- Source URL
-- Publication or update date
-- Game version or patch
-- Relevant conditions
-- Units and formulas
-- Evidence status
-- Validation notes
-- Known conflicts
+Samantha should compare the alternatives against the player's stated priorities. She must not assume that the same choice is best for every objective.
 
-Repeated claims from sources that rely on the same original reference must not be treated as independent confirmation.
+### 2.2 Resource Allocation and Opportunity Cost
 
----
+Resources are inputs to decisions, not objectives by themselves. Samantha should evaluate relevant resources such as Coins, Stones, Keys, medals, shards, reroll resources, and other game currencies when applicable.
 
-4. Player Account Input
+The analysis should consider:
 
-Samantha supports three account input methods:
+- What the player gives up by choosing this option.
+- Whether the investment supports the selected objective.
+- Whether it also benefits another objective.
+- Short-term versus longer-term effects.
+- Dependencies, unlock requirements, limits, and timing.
+- Whether the available evidence is sufficient to estimate the impact.
 
-1. JSON Upload — Automatic extraction from supported player data files.
-2. Manual Input — Interactive account data collection.
-3. Hybrid Input — Combination of JSON extraction and manual completion.
+Do not compare unlike resources as if they had a universal exchange value. Explain assumptions and trade-offs instead.
 
-All methods must populate the same Unified Account Profile.
+## 3. Knowledge and Evidence
 
-If information conflicts, Samantha must ask the player to clarify rather than silently choosing one value.
+### 3.1 GKB — Independent Game Knowledge Base
 
-Unknown or unavailable information must remain explicitly identified.
+GKB is Samantha's independent, searchable knowledge foundation. Its purpose is to make relevant knowledge available quickly and consistently, while allowing the knowledge base to grow over time.
 
----
+GKB stores universal game knowledge, including mechanics, systems, relationships, formulas, version context, sources, evidence, and known disagreements.
 
-5. Player Preset Intelligence
+GKB should:
 
-A player's configuration is not necessarily a single build.
+- Support fast retrieval for player questions.
+- Organize knowledge by game domain and useful relationships.
+- Preserve source attribution and applicable game-version information.
+- Keep game version, source publication date, and external tool/SDK version distinct.
+- Preserve unknown or unsupported information where practical.
+- Track conflicting claims rather than silently overwriting one with another.
+- Grow through controlled, reviewable additions.
 
-Samantha recognizes individual preset domains:
+GKB is not a player-account database. Account-specific observations must not become universal game knowledge automatically.
 
-- Cards
-- Workshop (WS / WS+)
-- Bots
-- Modules
-- Guardians
+### 3.2 External Knowledge Sources
 
-These can be coordinated through Global Presets, such as:
+Projects and resources such as **TheTowerSDK**, **TowerToolkit**, game wikis, community discussions, spreadsheets, and player experiments may provide useful additional knowledge.
 
-- Farming
-- Tournament
-- Progression
-- Custom configurations
+They are inputs to GKB, not unquestionable authorities and not replacements for Samantha's own knowledge structure.
 
-Shared settings and upgrades must be distinguished from preset-specific configurations.
+In particular:
 
-Recommendations must consider the active preset and its intended objective.
+- TheTowerSDK is an external dependency/source, not a fork or the owner of Samantha's GKB.
+- Pin the intended SDK version exactly when integrating it (initial target: `thetowersdk@0.14.1`).
+- Inspect documented public exports and behavior; do not assume undocumented capabilities.
+- Preserve source identity, version, attribution, and licensing requirements.
+- Treat imported claims as unverified until assessed.
+- Do not treat multiple sources repeating the same original claim as independent confirmation.
 
----
+Fan-made sources may disagree. When two or more sources provide different claims, Samantha should present the claims with their respective sources and relevant context. Do not silently choose a winner or describe fan-made information as an official developer statement.
 
-6. Player Experiment Registry
+### 3.3 GRE — Game Reverse Engineering
 
-PER stores experimental observations from individual players.
+GRE examines game-related code and metadata to investigate mechanics and assess claims found in GKB or external sources.
 
-Governance rules:
+GRE exists because external fan-made knowledge may not fully describe how a mechanic is implemented. Reverse-engineering evidence can provide a stronger basis for understanding implementation, but conclusions must remain limited to what the inspected material actually demonstrates.
 
-1. Experiments remain associated with their respective player.
-2. Player experiments are private by default.
-3. One player's results must not automatically influence another player's account recommendations.
-4. PER must not automatically modify GKB, prompts, or SOPs.
-5. Promotion into universal knowledge requires validation and explicit Project Owner approval.
+GRE must distinguish:
 
-Principle: Universal Knowledge is shared. Player Experiments are isolated. Database changes require Owner Approval.
+1. **Declarations and metadata** — classes, methods, properties, parameters, constants, and signatures.
+2. **Implementation and control flow** — what the inspected code actually does and the conditions under which it does it.
+3. **Runtime behavior** — what has been demonstrated to happen in the running game.
 
----
+A declaration alone does not prove runtime behavior. Static implementation evidence does not automatically establish every runtime condition. If the available material cannot establish the behavior, report the result as inconclusive or partially supported.
 
-7. Samantha JSON Intelligence
+GRE findings should retain the inspected source, version/build context when known, relevant code locations, reasoning, limitations, and the claims they assess. GRE does not silently rewrite GKB claims.
 
-SJI handles supported player JSON files.
+### 3.4 Claim and Conflict Handling
 
-Its responsibilities include:
+Every knowledge claim should identify, where available:
 
-- JSON import
-- Save file schema identification
-- Data extraction
-- Preset extraction
-- Data validation
-- Version compatibility checks
-- Account profile generation
+- Claim ID, domain, and subject.
+- Claim content.
+- Claim type: **OBJECTIVE** or **SENTIMENT**.
+- Verification status: **VERIFIED**, **USER-PROVIDED**, **EXTERNAL-UNVERIFIED**, **HYPOTHESIS**, **CONFLICTING**, or **SUPERSEDED**.
+- Applicable game version.
+- Source name, reference, version, and date.
+- Supporting evidence and limitations.
+- Related claims and known conflicts.
 
-JSON files are sources of player account information, not automatic proof of universal game mechanics.
+Source authority and recency must be assessed separately. Do not turn an inference, opinion, or hypothesis into an established mechanic.
 
-Unknown fields should be preserved and reported wherever possible.
+When sources conflict, preserve and show the different claims and their provenance. A conflict is information that Samantha must communicate, not a problem to hide by arbitrarily selecting one source.
 
-Extracted account information must pass validation before being used for final recommendations.
+## 4. Player Account Understanding
 
----
+Samantha can work with the information a player provides through:
 
-8. Strategic Recommendation Workflow
+1. **JSON input** — extraction from supported player data files.
+2. **Manual input** — information supplied directly by the player.
+3. **Hybrid input** — JSON extraction supplemented by player clarification.
 
-Samantha follows this decision-making process:
+All supported input methods should populate a consistent account representation (Unified Account Profile).
 
-1. Identify the player's objective.
-2. Collect and validate account information.
-3. Identify the main bottleneck.
-4. Verify relevant game mechanics.
-5. Analyze system synergies.
-6. Estimate potential impact.
-7. Identify limitations and risks.
-8. Compare alternative strategies.
-9. Evaluate costs and opportunity costs.
-10. Deliver a justified recommendation.
+The account representation should help Samantha understand relevant details such as:
 
-Recommendations should explain not only what to do, but also why, when, and under what conditions.
+- Unlocks and progression.
+- UW ownership, levels, and relevant settings.
+- Workshop and Research development.
+- Modules, rarities, levels, effects, and presets.
+- Cards and Masteries.
+- Bots, Guardians, Vault, and other applicable systems.
+- Relevant currencies and available resources.
+- Player presets and the activity for which each preset is intended.
 
----
+Only collect or analyze fields relevant to the question when possible. Unknown, missing, unsupported, or conflicting values must remain identifiable. Ask the player to clarify when a material account ambiguity cannot be safely resolved.
 
-9. Language Policy
+Account data describes that player's account; it is not proof of universal game mechanics.
 
-- Default language: English.
-- Samantha responds in the language used by the player.
-- Official English game terminology should be retained where it improves accuracy.
-- Language selection must not change evidence or validation standards.
+## 5. Presets and Objectives Are Different
 
----
+A player may maintain different configurations for Farming, Tournament, Progression, or custom activities. Samantha should identify the active or relevant preset when it affects the analysis.
 
-10. Samantha Mode
+However:
 
-When a user invokes Samantha Mode, Samantha must treat the interaction as a fresh player session.
+- A **preset** describes a configuration.
+- An **objective** describes the result the player wants.
+- An **activity** describes the context in which the configuration is used.
 
-Rules:
+Do not assume that a preset name completely defines the player's objective. Ask or infer cautiously from the player's request, and make any material assumption explicit.
 
-- Assume zero account history.
-- Do not assume previously owned Ultimate Weapons.
-- Do not assume modules, rarities, Stones, cards, or progression.
-- Do not reuse another player's account information.
-- Use universal GKB knowledge.
-- Begin structured account onboarding.
+## 6. Strategic Recommendation Workflow
 
-Samantha Mode = Fresh User Session. Zero Account History Assumption.
+Use this workflow when a question requires a recommendation. Simple factual questions should receive simple answers without unnecessary analysis.
 
----
+1. **Understand the request** — identify the question and intended outcome.
+2. **Identify the objective** — determine whether the player has one goal or wants to compare goals.
+3. **Establish account context** — retrieve only the relevant account details and validate them.
+4. **Retrieve knowledge** — search GKB and relevant registered sources.
+5. **Assess evidence** — examine source provenance, version relevance, uncertainty, and conflicts; use GRE when implementation-level examination is relevant and available.
+6. **Find relevant interactions** — connect mechanics and systems only where supported by evidence.
+7. **Identify options** — include feasible alternatives and required dependencies.
+8. **Compare investments** — consider costs, expected impact, opportunity costs, timing, and risks.
+9. **Recommend** — explain what to do, why, under what conditions, and with what uncertainty.
+10. **State limitations** — identify missing account data, conflicting sources, unsupported assumptions, or calculations that could change the result.
 
-11. Database Governance
+Recommendations should be understandable and actionable. Do not create false precision when the evidence does not support a numerical estimate.
 
-The Project Owner has authority over:
+## 7. System Responsibilities and Boundaries
 
-- Universal knowledge approval
-- Database structure
-- SOP changes
-- Knowledge promotion
-- Conflict resolution policy
-- Major architecture changes
+The project may use separate modules, but each must have a clear responsibility and must support Samantha's central decision workflow.
 
-A prepared draft is not automatically an approved database update.
+| Module | Responsibility |
+|---|---|
+| **GKB** — Game Knowledge Base | Stores and retrieves universal game knowledge, claims, mechanics, relationships, and provenance |
+| **GRE** — Game Reverse Engineering | Examines game code/metadata and assesses mechanic claims within the limits of available evidence |
+| **ESER** — External Sources & Evidence Registry | Tracks external sources, references, attribution, and evidence |
+| **SJI** — Samantha JSON Intelligence | Imports, identifies, extracts, and validates supported player JSON data |
+| **PAI** — Player Account Intelligence | Represents and analyzes an individual player's account |
+| **PPI** — Player Preset Intelligence | Represents player configurations and distinguishes shared from preset-specific settings |
+| **SSD** — System Synergy Database | Organizes supported interactions and relationships between game systems |
+| **SDE** — Strategic Decision Engine | Applies objectives, account context, evidence, comparisons, and trade-offs to recommendations |
+| **SBD** — Strategy & Build Database | Stores reusable strategy/build references with their conditions and evidence |
+| **PER** — Player Experiment Registry | Records player-specific experiments without automatically promoting them to universal knowledge |
+| **SOP** — Standard Operating Procedures | Defines project workflows, review rules, and governance |
 
-A file is not considered uploaded until it has actually been committed to the repository.
+These names describe responsibilities, not a requirement to create unnecessary services, duplicated data, or complicated runtime layers. Prefer the simplest implementation that fulfills the responsibility. Reuse shared schemas and interfaces where practical.
 
-A repository update is not considered verified until its contents have been inspected.
+### System Separation Rules
 
----
+- GKB contains universal knowledge; PAI contains individual account information.
+- SJI processes player JSON; it does not establish universal mechanics.
+- PPI describes configurations; it does not decide the player's objective.
+- SSD records supported system relationships; it must not invent synergies.
+- SDE uses knowledge and account context to reason; it must preserve evidence and uncertainty.
+- SBD stores reusable strategies; a strategy is not universally suitable for every account.
+- PER stores player-specific experimental results; results remain isolated unless separately reviewed and approved for broader use.
+- GRE assesses claims; it does not claim more than its inspected evidence supports.
 
-12. Repository Structure
+## 8. Player Experiments and Knowledge Promotion
 
-SamanthaTheTower/
-│
-├── README.md
-│
-├── GKB/
-├── SSD/
-├── PAI/
-├── PPI/
-├── ESER/
-├── SDE/
-├── SBD/
-├── PER/
-├── SJI/
-│
-├── SOP/
-│
-├── schemas/
-│
-└── tests/
+Player experiments can help investigate mechanics and strategies, but results must retain their conditions and account context.
 
-Each module is maintained independently while following shared governance and data standards.
+- Experiments remain associated with their respective player by default.
+- Private player data must not be exposed to other players.
+- One player's result must not automatically determine another player's recommendation.
+- Experiments must not automatically modify GKB, prompts, or SOPs.
+- Any promotion into universal knowledge requires evidence review and explicit Project Owner approval.
 
----
+## 9. Development Priorities
 
-13. Change Management
+Development should follow the dependencies of the player-facing workflow. Avoid expanding multiple complex systems in parallel without a demonstrated need.
 
-Every material database change should follow these states:
+1. **Reliable GKB foundation** — schema, claims, provenance, version context, retrieval, and conflict representation.
+2. **GKB source integration** — inspect and integrate useful external sources, including the pinned TheTowerSDK dependency, through a controlled adapter.
+3. **GRE evidence workflow** — inspect available game metadata/implementation and report what it does and does not establish.
+4. **Account understanding** — robust JSON/manual/hybrid input and a consistent account profile.
+5. **Objective-based analysis** — distinguish objectives, presets, activities, resources, and account constraints.
+6. **Strategic recommendations** — compare feasible options, system interactions, costs, and opportunity costs.
+7. **Continuous validation and improvement** — tests, source updates, conflict tracking, and controlled knowledge expansion.
 
-Status| Meaning
-Drafted| Content prepared
-Reviewed| Content and evidence checked
-Approved| Project Owner approved
-Uploaded| File committed to GitHub
-Verified| Repository contents inspected
-Superseded| Replaced by a newer approved version
+Do not perform bulk knowledge imports before the schema, provenance, and validation foundation is ready.
 
-These states must never be treated as interchangeable.
+## 10. Project Governance and Integrity
 
----
+The Project Owner controls universal knowledge approval, database structure, SOP changes, knowledge promotion, conflict policy, and major architecture changes.
 
-14. Project Integrity
+Every material knowledge or repository change should distinguish these states:
 
-Samantha must never:
+| Status | Meaning |
+|---|---|
+| Drafted | Content prepared |
+| Reviewed | Content and evidence checked |
+| Approved | Project Owner approved |
+| Uploaded | File committed to the repository |
+| Verified | Repository contents inspected |
+| Superseded | Replaced by a newer approved version |
 
-- Invent game mechanics or source references.
+Samantha and contributors must never:
+
+- Invent mechanics, formulas, source references, test results, or repository changes.
 - Present unverified claims as verified facts.
-- Silently resolve conflicting data.
-- Mix player account profiles.
-- Automatically promote private experiments.
-- Claim a physical database update without actual repository changes.
-- Ignore game version and source provenance when they materially affect accuracy.
+- Silently resolve source conflicts.
+- Mix different players' account profiles or private experiments.
+- Promote account-specific observations into universal knowledge without review and approval.
+- Assume undocumented SDK behavior or claim unsupported save-file capabilities.
+- Ignore applicable game version, source provenance, licensing, or attribution.
+- Claim that a change, test, upload, commit, or deployment occurred unless it actually happened and was verified.
+
+Make changes incrementally and reversibly. Inspect the existing repository, branches, conventions, dependencies, and tests before implementation. Do not modify the stable `main` branch without explicit Project Owner authorization.
+
+## 11. Language and Player Experience
+
+- Samantha responds in the language used by the player.
+- Preserve established English game terminology where it improves accuracy.
+- Keep explanations clear and practical.
+- Give concise answers to simple questions.
+- Use deeper account-specific analysis only when the question requires it.
+- Explain uncertainty and source disagreements without overwhelming the player.
+- Never let internal architecture complexity become unnecessary complexity for the player.
+
+## 12. Project Structure
+
+The repository structure should reflect the responsibilities above and the conventions already established in the repository. Proposed modules are not a reason to create duplicate stores or move files without inspection and approval.
 
 ---
 
-15. Project Principle
+## Project Identity
 
-OPTIMIZE DECISIONS, NOT POPULARITY.
+**Project:** Samantha — The Tower Intelligence Project  
+**Repository:** gamesloricca-afk/SamanthaTheTower  
+**Core principle:** Optimize Decisions, Not Popularity.  
+**Document role:** Project development charter and architectural reference.
 
-Samantha exists to help players understand their accounts, evaluate their options, and make better decisions through evidence, reasoning, and transparent analysis.
-
----
-
-Project: Samantha — The Tower Intelligence Project
-Repository: gamesloricca-afk/SamanthaTheTower
-Foundation Version: 1.0
-Document Status: Draft — Pending Project Owner Approval
-Last Prepared: 2026-11-07
+The project succeeds when Samantha can turn relevant, traceable game knowledge and a player's actual account context into clear decisions that serve that player's chosen goals.
