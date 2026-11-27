@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://samantha.invalid/gkb/origin-registry.schema.json",
+  "title": "Samantha GKB Origin Registry",
+  "description": "Source-preserving registry of upstream origin vocabularies. Membership does not imply semantic equivalence.",
+  "type": "object",
+  "required": [
+    "registryVersion",
+    "classification",
+    "verification",
+    "recordedAt",
+    "gameVersion",
+    "sdk",
+    "sources",
+    "comparisonPolicy"
+  ],
+  "properties": {
+    "registryVersion": {
+      "type": "string"
+    },
+    "classification": {
+      "const": "OBJECTIVE"
+    },
+    "verification": {
+      "const": "VERIFIED"
+    },
+    "recordedAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "gameVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sdk": {
+      "type": "object",
+      "required": [
+        "package",
+        "version"
+      ],
+      "properties": {
+        "package": {
+          "const": "thetowersdk"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "reference",
+          "inspectionStatus",
+          "values"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "KNOWLEDGE_GRAPH",
+              "JSON_SCHEMA",
+              "TYPESCRIPT_DECLARATION"
+            ]
+          },
+          "reference": {
+            "type": "string"
+          },
+          "inspectionStatus": {
+            "type": "string"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "details": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "comparisonPolicy": {
+      "type": "object",
+      "required": [
+        "automaticMapping",
+        "semanticEquivalence",
+        "conflictHandling"
+      ],
+      "properties": {
+        "automaticMapping": {
+          "const": false
+        },
+        "semanticEquivalence": {
+          "const": "NOT_ASSESSED"
+        },
+        "conflictHandling": {
+          "const": "PRESERVE_EACH_SOURCE_AND_REPORT_DIFFERENCES"
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}
