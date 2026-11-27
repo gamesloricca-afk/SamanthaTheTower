@@ -36,7 +36,7 @@ Keep source statements separate. Community/fanmade sources are not official deve
 - Continue domain by domain only after the evidence workflow is usable.
 - Investigate declarations individually; do not treat a class or method name as proof of behavior.
 
-**Status: D04-01 source comparison completed; D04-02 initial evidence recorded; both live-game details remain partially unresolved.**
+**Status: D04-01 GRE cross-domain metadata review and source comparison completed; D04-02 initial evidence recorded; live-game details remain partially unresolved.**
 
 ### Phase E3 — Claim extraction and evidence linking
 - Create small, atomic claims.
@@ -45,7 +45,7 @@ Keep source statements separate. Community/fanmade sources are not official deve
 - Link every claim to one or more source records and exact evidence locations.
 - Preserve quotes/observations and limitations without silently rewriting the source.
 
-**Status: D04-01 and D04-02 have ten source-linked claims; no bulk extraction.**
+**Status: D04-01 and D04-02 have twelve source-linked claims; no bulk extraction.**
 
 ### Phase E4 — Values, formulas, and relationships
 - Validate numeric values, units, ranges, caps, conditions, and formula inputs.
