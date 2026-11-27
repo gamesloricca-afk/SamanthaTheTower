@@ -89,6 +89,14 @@ jobs:
         working-directory: GKB/runtime
         run: npm run stage:sdk-assertions
 
+      - name: Test SDK edge staging adapter
+        working-directory: GKB/runtime
+        run: npm run test:sdk-edge-staging
+
+      - name: Generate SDK edge staging report
+        working-directory: GKB/runtime
+        run: npm run stage:sdk-edges
+
       - name: Upload SDK staging review artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -96,6 +104,7 @@ jobs:
           path: |
             GKB/staging/sdk-claims.json
             GKB/staging/sdk-assertions.json
+            GKB/staging/sdk-edges.json
           if-no-files-found: error
           retention-days: 14
 
