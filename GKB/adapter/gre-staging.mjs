@@ -15,6 +15,7 @@ const DEFAULT_OUTPUT = path.join(GKB_ROOT, 'staging/gre-import');
 const SOURCE_REPOSITORY = 'gamesloricca-afk/SamanthaTheTower';
 const SOURCE_BRANCH = 'TestAccount';
 const SOURCE_COMMIT = '62ae508f3473231b81d27903bdf63e899bb739be';
+const SNAPSHOT_MANIFEST_BLOB_SHA = '58170c9a7f7674e6d6af4cc3da9c7f8ed44e557b';
 
 const DOMAIN_MAP = new Map([
   ['01 Game Fundamentals','game-fundamentals'],['02 Enemies','enemies'],
@@ -36,6 +37,41 @@ function listMarkdown(dir) {
   return fs.readdirSync(dir).filter(name => name.endsWith('.md')).sort().map(name => path.join(dir,name));
 }
 function readText(file) { return fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n'); }
+function gitBlobSha(file) {
+  const raw=fs.readFileSync(file,'utf8');
+  return createHash('sha1').update('blob '+Buffer.byteLength(raw)+'\0').update(raw).digest('hex');
+}
+function validatePinnedSnapshot(snapshotDir,claimFiles,sourceFiles,conflictFiles) {
+  const manifestPath=path.join(snapshotDir,'snapshot-manifest.json');
+  if(!fs.existsSync(manifestPath)) throw new Error('Pinned GRE snapshot manifest is missing');
+  const manifestRaw=fs.readFileSync(manifestPath,'utf8');
+  const manifestSha=createHash('sha1').update('blob '+Buffer.byteLength(manifestRaw)+'\0').update(manifestRaw).digest('hex');
+  if(manifestSha!==SNAPSHOT_MANIFEST_BLOB_SHA) throw new Error('Pinned GRE snapshot manifest identity mismatch');
+  let manifest;
+  try { manifest=JSON.parse(manifestRaw); } catch(error) { throw new Error('Pinned GRE snapshot manifest is invalid JSON: '+error.message); }
+  if(manifest.format!=='SAMANTHA_GKB_GRE_SOURCE_SNAPSHOT'||manifest.formatVersion!==1||
+     manifest.repository!==SOURCE_REPOSITORY||manifest.branch!==SOURCE_BRANCH||manifest.commit!==SOURCE_COMMIT) {
+    throw new Error('Pinned GRE snapshot identity does not match the configured source commit');
+  }
+  if(!Array.isArray(manifest.files)) throw new Error('Pinned GRE snapshot manifest files must be an array');
+  const actual=[...claimFiles,...sourceFiles,...conflictFiles]
+    .map(file=>path.relative(snapshotDir,file).split(path.sep).join('/')).sort();
+  const entries=[...manifest.files].sort((a,b)=>String(a.path).localeCompare(String(b.path)));
+  if(entries.length!==actual.length||entries.some((entry,index)=>entry.path!==actual[index])) {
+    throw new Error('Pinned GRE snapshot file inventory mismatch');
+  }
+  const seen=new Set();
+  for(const entry of entries) {
+    if(seen.has(entry.path)||!/^[a-f0-9]{40}$/.test(entry.gitBlobSha??'')) throw new Error('Pinned GRE snapshot manifest contains a duplicate or invalid file entry: '+entry.path);
+    seen.add(entry.path);
+    const file=path.join(snapshotDir,...entry.path.split('/'));
+    if(gitBlobSha(file)!==entry.gitBlobSha) throw new Error('Pinned GRE snapshot file integrity mismatch: '+entry.path);
+  }
+  return manifest;
+}
+export function findUnknownMetadataKeys(markdown,knownKeys) {
+  return unknownMetadataKeys(markdown,new Set(knownKeys));
+}
 function section(markdown, heading) {
   const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
   const match = markdown.match(new RegExp('^##\\s+'+escaped+'\\s*\\n([\\s\\S]*?)(?=^##\\s+|(?![\\s\\S]))','m'));
@@ -185,6 +221,7 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
   if (!/^\d{4}-\d{2}-\d{2}$/.test(retrievedAt)) throw new TypeError('retrievedAt must be YYYY-MM-DD');
   const claimsDir=path.join(snapshotDir,'claims'), sourcesDir=path.join(snapshotDir,'sources'), conflictsDir=path.join(snapshotDir,'conflicts');
   const claimFiles=listMarkdown(claimsDir), sourceFiles=listMarkdown(sourcesDir), conflictFiles=listMarkdown(conflictsDir);
+  const snapshotManifest=validatePinnedSnapshot(snapshotDir,claimFiles,sourceFiles,conflictFiles);
   const sources=sourceFiles.map(file=>parseSource(file,snapshotDir));
   const sourceById=new Map();
   const duplicateSourceIds=[];
@@ -205,6 +242,21 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
     claim.stagingStatus='PENDING_REVIEW';
     claim.sourceSnapshot.retrievedAt=retrievedAt;
     if(claim.unknownMetadataFields.length) unknownFieldRecords.push({recordId:claim.sourceClaimId,fields:claim.unknownMetadataFields,rawPreserved:true});
+  }
+  const conflictById=new Map(conflictRecords.map(conflict=>[conflict.sourceConflictId,conflict]));
+  const unresolvedClaimConflictReferences=[];
+  for(const claim of claimRecords) {
+    claim.resolvedConflicts=[];
+    for(const id of claim.sourceConflictIds) {
+      const conflict=conflictById.get(id);
+      if(!conflict) unresolvedClaimConflictReferences.push({claimId:claim.sourceClaimId,conflictId:id});
+      else claim.resolvedConflicts.push({
+        sourceConflictId:conflict.sourceConflictId,
+        relatedSourceClaimIds:[...conflict.relatedSourceClaimIds],
+        conflictState:conflict.conflictState,
+        sourceRecord:conflict.sourceRecord
+      });
+    }
   }
   const unresolvedConflictReferences=[];
   for(const conflict of conflictRecords){
@@ -239,10 +291,10 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
       claimsParsed:claimRecords.length,sourcesParsed:sources.length,conflictsParsed:conflictRecords.length,
       recordsStaged:records.length,invalid:duplicateIds.length+unmappedDomainRecords.length,
       unmappedDomain:unmappedDomainRecords.length,missingSource:unresolvedSourceReferences.length,
-      unresolvedConflictReference:unresolvedConflictReferences.length,unknownFields:unknownFieldRecords.reduce((sum,item)=>sum+item.fields.length,0),rawSourceRecordsPreserved:sources.length+records.length,
+      unresolvedConflictReference:unresolvedConflictReferences.length,unresolvedClaimConflictReference:unresolvedClaimConflictReferences.length,unknownFields:unknownFieldRecords.reduce((sum,item)=>sum+item.fields.length,0),rawSourceRecordsPreserved:sources.length+records.length,
       pending:records.length,automaticApprovals:0,canonicalWrites:0
     },
-    duplicateIds,unmappedDomainRecords,unresolvedSourceReferences,unresolvedConflictReferences,
+    duplicateIds,unmappedDomainRecords,unresolvedSourceReferences,unresolvedConflictReferences,unresolvedClaimConflictReferences,
     unknownFieldRecords,unknownFieldDetection:'TOP_LEVEL_METADATA_KEYS_ONLY; complete raw Markdown retained for all source records',limitations:[
       'GRE source verification labels are retained verbatim and are not promoted to Samantha verification status.',
       'All source types remain UNKNOWN until attribution is explicitly reviewed.',
@@ -254,7 +306,7 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
   };
   return {
     format:'SAMANTHA_GKB_GRE_STAGING',formatVersion:1,
-    sourceSnapshot:report.sourceSnapshot,
+    sourceSnapshot:{...report.sourceSnapshot,manifestFormat:snapshotManifest.format,manifestVersion:snapshotManifest.formatVersion},
     sources,
     records,
     reviewQueue,
