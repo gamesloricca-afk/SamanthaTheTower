@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://samantha.invalid/gkb/schema/claim.schema.json",
+  "title": "Samantha GKB Canonical Claim",
+  "description": "A source-attributed universal game-knowledge claim. Competing reports should be stored as separate claims.",
+  "type": "object",
+  "required": [
+    "claimId",
+    "domain",
+    "subject",
+    "claim",
+    "classification",
+    "verificationStatus",
+    "provenance"
+  ],
+  "properties": {
+    "claimId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "enum": [
+        "OBJECTIVE",
+        "SENTIMENT"
+      ]
+    },
+    "verificationStatus": {
+      "enum": [
+        "VERIFIED",
+        "USER-PROVIDED",
+        "EXTERNAL-UNVERIFIED",
+        "HYPOTHESIS",
+        "CONFLICTING",
+        "SUPERSEDED"
+      ]
+    },
+    "applicableGameVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourcePublicationDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "lastReviewedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "provenance": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "sourceType",
+          "sourceName"
+        ],
+        "properties": {
+          "sourceType": {
+            "enum": [
+              "OFFICIAL",
+              "COMMUNITY",
+              "PLAYER_TESTING",
+              "OTHER",
+              "UNKNOWN"
+            ]
+          },
+          "sourceName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceReference": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceVersion": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "publicationDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "retrievedAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "evidence": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "relatedClaims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "targetClaimId"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "GATES",
+              "SCALES",
+              "CAPS",
+              "INDEPENDENT_OF",
+              "SEPARATE_PURCHASE_FROM",
+              "DERIVED_FROM",
+              "MEMBER_OF",
+              "APPLIED_BEFORE"
+            ]
+          },
+          "targetClaimId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "verificationStatus": {
+            "enum": [
+              "VERIFIED",
+              "USER-PROVIDED",
+              "EXTERNAL-UNVERIFIED",
+              "HYPOTHESIS",
+              "CONFLICTING",
+              "SUPERSEDED"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supersedesClaimIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sourceRecord": {
+      "description": "Optional unmodified source payload for preserving unsupported or unknown upstream fields."
+    }
+  },
+  "additionalProperties": true
+}
