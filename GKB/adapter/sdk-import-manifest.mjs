@@ -89,11 +89,27 @@ export function compareSdkImportManifests(baseline, candidate) {
   return { status: changes.length ? 'DRIFT_DETECTED' : 'NO_DRIFT', baselinePresent: true, changes };
 }
 
+async function findSdkPackageRoot(entryPath) {
+  let current = path.dirname(entryPath);
+  while (true) {
+    try {
+      const manifest = JSON.parse(await readFile(path.join(current, 'package.json'), 'utf8'));
+      if (manifest.name === 'thetowersdk') return current;
+    } catch (error) {
+      if (error.code !== 'ENOENT' && !(error instanceof SyntaxError)) throw error;
+    }
+    const parent = path.dirname(current);
+    if (parent === current) break;
+    current = parent;
+  }
+  throw new Error('Could not locate thetowersdk package root from its public JSON export');
+}
+
 async function main() {
   const runtimeRequire = createRequire(RUNTIME_MANIFEST);
   const graphPath = runtimeRequire.resolve('thetowersdk/knowledge-graph.json');
   const schemaPath = runtimeRequire.resolve('thetowersdk/knowledge.schema.json');
-  const packageRoot = path.dirname(path.dirname(graphPath));
+  const packageRoot = await findSdkPackageRoot(graphPath);
   const packageBytes = await readFile(path.join(packageRoot, 'package.json'));
   const graphBytes = await readFile(graphPath);
   const schemaBytes = await readFile(schemaPath);
