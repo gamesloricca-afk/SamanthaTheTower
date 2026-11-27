@@ -6,13 +6,12 @@
  * This is an API-surface test, not a mechanics correctness test.
  */
 import assert from 'node:assert/strict';
-import { createRequire } from 'node:module';
+import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const require = createRequire(path.join(ROOT, 'runtime/package.json'));
-const manifest = require('thetowersdk/package.json');
+const manifest = JSON.parse(await readFile(path.join(ROOT, 'runtime/node_modules/thetowersdk/package.json'), 'utf8'));
 const EXPECTED_VERSION = '0.14.1';
 const nodeMajor = Number(process.versions.node.split('.')[0]);
 
