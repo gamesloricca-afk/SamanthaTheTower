@@ -37,6 +37,9 @@ jobs:
       - name: Run SDK origin compatibility self-test
         run: node GKB/adapter/origin-compatibility.mjs
 
+      - name: Run TypeScript origin declaration parser tests
+        run: node GKB/adapter/typescript-origin-parser.mjs
+
       - name: Run source origin mapping self-test
         run: node GKB/adapter/origin-mapping.mjs
 
