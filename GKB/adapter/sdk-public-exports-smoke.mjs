@@ -7,11 +7,13 @@
  */
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { createRequire } from 'node:module';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const manifest = JSON.parse(await readFile(path.join(ROOT, 'runtime/node_modules/thetowersdk/package.json'), 'utf8'));
+const require = createRequire(path.join(ROOT, 'runtime/package.json'));
 const EXPECTED_VERSION = '0.14.1';
 const nodeMajor = Number(process.versions.node.split('.')[0]);
 
@@ -31,7 +33,8 @@ const modules = [
 
 const results = [];
 for (const item of modules) {
-  const namespace = await import(item.path);
+  const resolvedPath = require.resolve(item.path);
+  const namespace = await import(pathToFileURL(resolvedPath).href);
   const exports = Object.keys(namespace).sort();
   const missing = item.required.filter(name => !(name in namespace));
   assert.equal(missing.length, 0, `${item.name} missing documented exports: ${missing.join(', ')}`);
