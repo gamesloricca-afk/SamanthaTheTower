@@ -35,7 +35,9 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Run GRE staging adapter tests
         working-directory: GKB/runtime
-        run: npm run test:gre-staging
+        run: |
+          npm run test:gre-staging
+          npm run test:gre-reviewed-claim
       - name: Generate GRE staging preview
         working-directory: GKB/runtime
         run: npm run stage:gre-evidence -- ../staging/gre-source-snapshot/TestAccount-62ae508f ../staging/gre-import 2026-11-27
