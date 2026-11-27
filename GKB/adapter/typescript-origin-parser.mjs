@@ -28,7 +28,7 @@ export function parseStringUnionDeclaration(source, typeName) {
 
   const match = matches[0];
   const body = match[1]
-    .replace(/\/\\*[\\s\\S]*?\\*\//g, '')
+    .replace(/\/\*[\s\S]*?\*\//g, '')
     .replace(/\/\/[^\r\n]*/g, '');
   const members = body.split('|').map(value => value.trim()).filter(Boolean);
   const values = [];
@@ -64,14 +64,14 @@ export function parseStringUnionDeclaration(source, typeName) {
       path: null,
       typeName,
       startLine,
-      endLine: startLine + match[0].split('\\n').length - 1
+      endLine: startLine + match[0].split('\n').length - 1
     }]
   };
 }
 
 export function runSelfTest() {
   const valid = parseStringUnionDeclaration(
-    "export type ClaimOrigin =\\n  'game'\\n  | 'code'\\n  | 'wiki';",
+    "export type ClaimOrigin =\n  'game'\n  | 'code'\n  | 'wiki';",
     'ClaimOrigin'
   );
   if (valid.status !== 'INSPECTED' ||
@@ -99,7 +99,7 @@ export function runSelfTest() {
   }
 
   const duplicate = parseStringUnionDeclaration(
-    "export type ClaimOrigin = 'game';\\nexport type ClaimOrigin = 'wiki';",
+    "export type ClaimOrigin = 'game';\nexport type ClaimOrigin = 'wiki';",
     'ClaimOrigin'
   );
   if (duplicate.status !== 'NOT_INSPECTED' ||
@@ -131,6 +131,9 @@ export function runSelfTest() {
   return output;
 }
 
-if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).href) {
+import { pathToFileURL } from 'node:url';
+import { resolve } from 'node:path';
+
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   runSelfTest();
 }
