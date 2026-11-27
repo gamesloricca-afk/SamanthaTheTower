@@ -56,7 +56,7 @@ export function buildCanonicalClaimFromReviewedGreRecord(stagingRecord,review){
       sdkVersion:stagingRecord.sourceSdkVersion??null,
       publicationDate:dateOnly(source.publicationDate)??dateOnly(stagingRecord.sourcePublicationDate),
       retrievedAt:dateOnly(stagingRecord.sourceSnapshot?.retrievedAt),
-      evidence:canonical.evidence??(Array.isArray(stagingRecord.evidence)?stagingRecord.evidence.join('\\n'):null),
+      evidence:canonical.evidence??(Array.isArray(stagingRecord.evidence)?stagingRecord.evidence.join('\n'):null),
       limitations:[...(Array.isArray(source.limitations)?source.limitations:[]),...(Array.isArray(stagingRecord.limitations)?stagingRecord.limitations:[])]
     };
   });
