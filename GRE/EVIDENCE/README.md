@@ -45,7 +45,7 @@ Keep source statements separate. Community/fanmade sources are not official deve
 - Link every claim to one or more source records and exact evidence locations.
 - Preserve quotes/observations and limitations without silently rewriting the source.
 
-**Status: D04-01 has four source-linked claims; no bulk extraction.**
+**Status: D04-01 has five source-linked claims; no bulk extraction.**
 
 ### Phase E4 — Values, formulas, and relationships
 - Validate numeric values, units, ranges, caps, conditions, and formula inputs.
