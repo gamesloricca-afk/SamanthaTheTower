@@ -98,7 +98,7 @@ Important interpretation limits:
 The SDK knowledge documentation describes source ranking and a `likelyValue` chosen using `authorityRank` when contradictions exist:
 - https://tmrxjd.github.io/TheTowerSDK/docs/knowledge/
 
-That ranking is an SDK analysis feature, not Samantha's conflict-resolution policy. Samantha must retain source-specific competing claims and show their differences without adopting `likelyValue` as the factual winner. The SDK graph's three contradiction records are therefore preserved for review, not automatically resolved.
+That ranking is an SDK analysis feature, not Samantha's conflict-resolution policy. CI confirms `findContradictions()` returns three records with `likelyValue` and `authorityRank`. Samantha must retain source-specific competing claims and show their differences without adopting `likelyValue` as the factual winner. The SDK graph's three contradiction records are therefore preserved for review, not automatically resolved.
 
 ## Module notes and constraints
 
@@ -145,6 +145,12 @@ No live wiki request was made in CI. Any later ingestion must preserve page URL,
 
 The contributions export contains 6 areas, 32 people, and 4 attribution lines in the installed package. The areas cover Effective Paths, save-file mapping, TowerToolkit, community guides, community wikis, and charts. The SDK's contribution documentation explains which community spreadsheets, save mappings, guides, wiki content, and chart datasets it uses:
 - https://tmrxjd.github.io/TheTowerSDK/contributions/
+
+The installed package's four attribution lines were inspected and retained verbatim:
+1. Effective Paths formulas by Mattew, QuietFanta, Bisse and the Effective Paths maintainers; ported from community spreadsheet v5.11.08.10.
+2. Wiki content maintained by contributors to Fandom — The Tower: Idle Tower Defense Wiki and Game Vault — The Tower Wiki and Guides; page URLs link to authors and edit history.
+3. Save enum indexes mapped by Bisse; some early game data originates in Skye's TowerToolkit.
+4. Contextual knowledge draws on community guides by minionek, McBlue, Evan, DrAudacious, ColbyJack, Kitchen Salt, 1410c, and NanaSeiYuri.
 
 Attribution is a required integration concern, not optional decoration. The package's MIT license does not remove the need to retain source-specific credit or assess any source-specific redistribution constraints.
 
@@ -196,26 +202,27 @@ Chart datasets may be derived views of SDK catalogs. They should not automatical
 
 ## Testing
 
-Latest public-entry-point smoke test:
-- GitHub Actions run: https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45936656905
+Latest full SDK inspection workflow:
+- GitHub Actions run: https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45937824207
 - Result: SUCCESS.
-- All eight roadmap modules imported.
-- Required representative named exports were present.
-- Installed package version and Node runtime matched expectations.
-
-The complete GKB workflow also passed its existing schema, adapter, SDK JSON export, and knowledge graph inspection steps. The known 70-origin schema mismatch remains separately reported.
+- All eight roadmap modules imported in order; representative exports and selected behavior checks passed.
+- Knowledge graph shape and query behavior, data catalog shapes, selected mechanics examples, unique module comparison, wiki/contributions/save/node/chart structures all inspected.
+- Existing GKB schema, adapter, SDK JSON export, and knowledge graph checks passed. The known 70-origin schema mismatch remains separately reported.
 
 ## Remaining Phase 2 work
 
-1. Inspect the knowledge module's public types, claim shape, provenance fields, verification vocabulary, relationships, and graph query behavior against the installed package files.
-2. Inspect data catalogs and representative structures, including module, UW, research, and enemy data; document unknown or version-sensitive fields.
-3. Inspect mechanics exports and selected formulas with their declared inputs, units, limits, and accuracy notes. Do not port formulas without evidence.
-4. Inspect wiki fetch/cache/source behavior and licensing/attribution.
-5. Inspect contributions data structure and required credit text.
-6. Inspect save and node entry-point types without reading a personal save; maintain the GKB/SJI boundary.
-7. Inspect charts registry and resolver argument/result shapes.
-8. Record SDK/package-version compatibility, unsupported exports, and conflicts in a final report before implementing a broader adapter.
+The first-pass public API and structure inspection is complete. The following deeper compatibility work remains before Phase 2 can be closed:
 
+1. **knowledge:** review the full assertion/provenance schema, node-vs-assertion semantics, missing verification fields, contradiction representation, and source-ranking behavior. Define an explicit adapter mapping without adopting SDK `likelyValue`.
+2. **data:** inspect source/version metadata for each major catalog; resolve documented-vs-installed game-version differences by retaining both references; formalize unit conventions such as Gilded Sniper's fraction-to-percent representation. Keep catalog fields that are not understood.
+3. **mechanics:** review formulas individually where GKB needs them, including input types, units, caps, edge cases, and version conditions. The four smoke-test examples are not a formula validation suite.
+4. **wiki:** inspect cache, source fallback, revision lookup, and error behavior. No live fetch or page revision was requested in the current CI inspection.
+5. **contributions:** retain the four attribution lines and review any source-specific credit/licensing conditions before redistribution.
+6. **save/node:** inspect type declarations and supported official-export root shape only. Do not open player data in GKB or infer private/binary save support.
+7. **charts:** inspect registry-wide renderer argument schemas and lookup-table behavior. Keep chart outputs as derived datasets, not independent sources.
+8. **compatibility report:** record the unresolved origin mismatch (70 graph occurrences of `game`), documentation/package version discrepancies, and unsupported/unknown fields. Do not patch the external SDK or bulk-import claims.
+
+No broader adapter implementation or bulk catalog import should begin until these compatibility findings are sufficiently documented.
 ## Safety
 
 - TheTowerSDK remains an external dependency pinned to exact version `0.14.1`.
