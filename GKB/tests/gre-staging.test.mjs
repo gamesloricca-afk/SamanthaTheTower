@@ -46,7 +46,8 @@ assert.deepEqual(multiDomain.domainCandidates,['combat-mechanics','enemies']);
 assert.equal(multiDomain.sourceMetadataVersion,'v39');
 assert.equal(multiDomain.sourceGameVersion,'UNKNOWN');
 const metadataSource=a.sources.find(x=>x.sourceId==='SRC-GRE-METADATA-V39');
-assert.equal(metadataSource.metadataFormatVersion,'`v39`');
+assert.equal(metadataSource.metadataFormatVersion,'v39');
+assert.match(metadataSource.sourceRecord.rawMarkdown,/not a game release version/);
 assert.equal(multiDomain.domainCandidate,null);
 
 const conflict=a.records.find(x=>x.recordKind==='GRE_CONFLICT');
