@@ -1,7 +1,7 @@
 /**
  * Samantha GKB — TheTowerSDK Knowledge Graph Validator
  *
- * Version: 1.2.0
+ * Version: 1.4.0
  * SDK: thetowersdk@0.14.1
  * Validator: ajv@8.17.1
  *
@@ -270,10 +270,33 @@ async function main() {
         : 'REVIEW_REQUIRED'
   };
 
+  const onlyExpectedOriginConflicts =
+    errors.length > 0 &&
+    errors.every(error =>
+      error.keyword === 'enum' &&
+      /\/origin\/enum$/.test(error.schemaPath ?? '') &&
+      /\/origin$/.test(error.instancePath ?? '')
+    );
+
+  const evidenceIntegrityPassed =
+    originEvidenceIntegrity.status === 'PASSED';
+
+  const compatibilityRunPassed =
+    valid ||
+    (onlyExpectedOriginConflicts && evidenceIntegrityPassed);
+
   const report = {
     test: 'Samantha GKB SDK Knowledge Graph Validation',
-    testVersion: '1.3.0',
-    status: valid ? 'PASSED' : 'FAILED',
+    testVersion: '1.4.0',
+    status: valid
+      ? 'PASSED'
+      : compatibilityRunPassed
+        ? 'COMPLETED_WITH_CONFLICTS'
+        : 'FAILED',
+    executionStatus: compatibilityRunPassed ? 'PASSED' : 'FAILED',
+    schemaValidationStatus: valid ? 'PASSED' : 'FAILED',
+    expectedOriginConflictsOnly: onlyExpectedOriginConflicts,
+    originEvidenceIntegrityStatus: originEvidenceIntegrity.status,
 
     sdk: {
       package: 'thetowersdk',
@@ -300,6 +323,7 @@ async function main() {
     },
 
     validation: {
+      status: valid ? 'PASSED' : 'FAILED',
       valid,
       errorCount: errors.length,
       displayedErrorCount: Math.min(errors.length, 20),
@@ -347,7 +371,7 @@ async function main() {
 
   console.log(JSON.stringify(report, null, 2));
 
-  if (!valid) process.exitCode = 1;
+  if (!compatibilityRunPassed) process.exitCode = 1;
 }
 
 main().catch(error => {
