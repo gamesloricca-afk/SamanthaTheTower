@@ -402,3 +402,25 @@ CI:
 - Artifact: `gkb-sdk-staging-224` (14-day retention), including the crosswalk report.
 
 Safety boundary: no Samantha canonical IDs, claims, or relationships were created; no candidate was approved; no source data was modified; no canonical import or verification promotion occurred. This report does not replace the pending crosswalk from SDK records to Samantha-owned source documents and canonical catalogs.
+
+
+## SDK domain catalog structural audit — CI integration
+
+The existing read-only audit was connected to the runtime and CI pipeline:
+- `GKB/adapter/sdk-domain-catalog-audit.mjs`
+- `GKB/tests/sdk-domain-catalog-audit.test.mjs`
+- Runtime commands: `test:sdk-domain-catalog-audit` and `report:sdk-domain-catalog-audit`
+- CI report: `GKB/reports/sdk-domain-catalog-audit.json`
+
+The audit covers the four staged SDK catalogs only: Research, Workshop, Cards and Masteries, and Perks. It reports:
+- Missing/empty source identifiers and labels using the explicitly observed SDK field mapping.
+- Duplicate source identifiers within a catalog, repeated labels, and structurally identical raw records.
+- Missing fields, null/empty values, observed JSON type variations, source-index/order anomalies, record-count mismatches, and declared-versus-observed key mismatches.
+- Exact labels shared across multiple selected catalogs as `CROSS_DOMAIN_LABEL_COLLISION` informational observations.
+
+A cross-domain label collision is not treated as entity identity. Repeated labels are not automatically duplicates. Nulls, empty strings, and absent fields are reported without deciding whether the field is optional. The audit does not validate game mechanics, numerical ranges, units, formulas, or factual correctness.
+
+The audit preserves raw records and source order. It does not deduplicate, normalize, repair, generate IDs, approve crosswalks, create canonical claims, or promote verification statuses. All SDK records remain `EXTERNAL-UNVERIFIED`.
+
+The report's `PASSED` status means the audit completed successfully; it does not mean that every catalog is free of findings. Finding severity is reported separately as `ERROR`, `WARNING`, and `INFO`. Structural findings are not automatically gameplay conflicts.
+
