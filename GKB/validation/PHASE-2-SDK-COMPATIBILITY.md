@@ -76,6 +76,30 @@ The SDK graph's 70 occurrences of origin `game` fail the SDK's own exported JSON
 
 Knowledge graph claims, verification labels, and relationships must be inspected before any adapter maps them into Samantha's canonical schema. SDK labels are not automatically equivalent to Samantha's classification or verification statuses.
 
+## Knowledge module — installed graph shape
+
+The read-only shape inspector reports the following for the installed `0.14.1` knowledge graph:
+- 320 nodes, 396 edges, 1,618 assertions, 558 node-level source records, and 3 contradiction records.
+- Node classification vocabulary: `objective` (310 nodes) and `sentiment` (10 nodes).
+- Node verification vocabulary/counts: `verified_here` (275), `unverified` (44), `contradicted` (1).
+- Assertion verification counts: `verified_here` (554), `unverified` (266), `contradicted` (1); 797 assertions have no verification field.
+- Assertion provenance observed keys: `origin`, `ref`, `readAgainstVersion`, `verifiedAt`.
+- All 1,618 assertions have `ref` and `verifiedAt`; 1,504 have `readAgainstVersion`, all observed as `v28.3.0`.
+- The SDK schema also permits provenance `sourceVersion` and `section`, but those keys were not present in the inspected assertion provenance records.
+- Edge kinds match the eight relationship concepts in the GKB taxonomy, but are lower camelCase in the SDK.
+
+Important interpretation limits:
+- SDK node-level `claimType` and verification labels are source vocabulary, not automatically Samantha's final classification/status.
+- `verifiedAt` is the SDK record's date field; it is not automatically a publication date or Samantha review date.
+- `readAgainstVersion` is preserved as the SDK field. It is not silently renamed to Samantha's `applicableGameVersion`.
+- The 797 assertions without a verification field must remain explicitly missing; no default status is inferred from their parent node.
+- The staging adapter currently emits one review envelope per node and retains the complete node in `sourceRecord`; it is not a one-record-per-assertion canonical importer.
+
+The SDK knowledge documentation describes source ranking and a `likelyValue` chosen using `authorityRank` when contradictions exist:
+- https://tmrxjd.github.io/TheTowerSDK/docs/knowledge/
+
+That ranking is an SDK analysis feature, not Samantha's conflict-resolution policy. Samantha must retain source-specific competing claims and show their differences without adopting `likelyValue` as the factual winner. The SDK graph's three contradiction records are therefore preserved for review, not automatically resolved.
+
 ## Module notes and constraints
 
 ### data
