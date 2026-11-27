@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://samantha.invalid/gkb/schema/sdk-claim-staging.schema.json",
+  "title": "Samantha GKB SDK Claim Staging Record",
+  "description": "Unreviewed, source-preserving staging envelope. Not a canonical GKB claim.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "stagingVersion", "stagingId", "recordKind", "classification",
+    "verificationStatus", "reviewStatus", "subject", "claim",
+    "provenance", "sourceRecord", "limitations"
+  ],
+  "properties": {
+    "stagingVersion": { "const": "1.0.0" },
+    "stagingId": { "type": "string", "minLength": 1 },
+    "recordKind": { "const": "SDK_GRAPH_NODE_ENVELOPE" },
+    "classification": { "enum": ["OBJECTIVE", "SENTIMENT", null] },
+    "verificationStatus": { "const": "EXTERNAL-UNVERIFIED" },
+    "reviewStatus": { "const": "PENDING_REVIEW" },
+    "subject": { "type": ["string", "null"] },
+    "claim": { "type": ["string", "null"] },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceId", "sourceReference", "sourceName", "sdkPackage", "sdkVersion", "registryVersion", "gameVersion", "rawOrigin", "originMappingStatus"],
+      "properties": {
+        "sourceId": { "const": "sdk-knowledge-graph" },
+        "sourceReference": { "type": "string" },
+        "sourceName": { "const": "TheTowerSDK Knowledge Graph" },
+        "sdkPackage": { "const": "thetowersdk" },
+        "sdkVersion": { "type": "string" },
+        "registryVersion": { "type": "string" },
+        "gameVersion": { "type": ["string", "null"] },
+        "rawOrigin": {},
+        "originMappingStatus": { "enum": ["UNMAPPED_REQUIRES_REVIEW", "INVALID_OR_MISSING"] }
+      }
+    },
+    "sourceRecord": { "type": "object" },
+    "limitations": { "type": "array", "items": { "type": "string" } }
+  }
+}
