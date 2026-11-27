@@ -37,3 +37,9 @@ The paired calculate/apply method signatures and contributor-like fields identif
 - Conflict ID(s): `CNF-D04-DR-001`
 - Relationship(s): UNKNOWN
 - GKB staging decision: hold
+
+
+## Review completion — 2026-11-27
+
+- **GRE method/field declarations verified; data flow not established.** Rechecked Enemy type index 314, CalculateDamageReductionResult (method index 2295, token 0x060008f8) and ApplyDamageReductionStats (method index 2296, token 0x060008f9), plus the listed state fields and getter declarations.
+- The mechanism evidence map says precise execution order and stacking are not recoverable. No native method bodies or call graph are present. It is not established that each state field feeds the calculation. thunderDamageReduction and chainThunderBlocked remain distinct identifiers. Status remains VERIFIED (GRE metadata declaration only). Runtime data flow: NOT ESTABLISHED. GKB: HOLD.
