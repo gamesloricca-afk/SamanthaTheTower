@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://samantha.invalid/gkb/schema/sdk-edge-staging.schema.json",
+  "title": "Samantha GKB SDK Edge Staging Record",
+  "description": "Source-preserving review envelope for an SDK graph edge; not a canonical GKB relationship.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "stagingVersion",
+    "stagingId",
+    "recordKind",
+    "sourceEdgeIndex",
+    "from",
+    "to",
+    "sourceNodeFromStagingId",
+    "sourceNodeToStagingId",
+    "endpointMappingStatus",
+    "sourceKind",
+    "relationshipCandidate",
+    "relationshipMappingStatus",
+    "sourceClaimType",
+    "sourceCompartment",
+    "sourceNote",
+    "verificationStatus",
+    "reviewStatus",
+    "provenance",
+    "sourceRecord",
+    "limitations"
+  ],
+  "properties": {
+    "stagingVersion": {
+      "const": "1.0.0"
+    },
+    "stagingId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recordKind": {
+      "const": "SDK_GRAPH_EDGE_ENVELOPE"
+    },
+    "sourceEdgeIndex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "from": {
+      "type": "string",
+      "minLength": 1
+    },
+    "to": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceNodeFromStagingId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourceNodeToStagingId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "endpointMappingStatus": {
+      "enum": [
+        "LINKED",
+        "UNRESOLVED_ENDPOINT"
+      ]
+    },
+    "sourceKind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relationshipCandidate": {
+      "enum": [
+        "GATES",
+        "SCALES",
+        "CAPS",
+        "INDEPENDENT_OF",
+        "SEPARATE_PURCHASE_FROM",
+        "DERIVED_FROM",
+        "MEMBER_OF",
+        "APPLIED_BEFORE",
+        null
+      ]
+    },
+    "relationshipMappingStatus": {
+      "enum": [
+        "MAPPED_SYNTAX_ONLY",
+        "UNMAPPED_UNKNOWN_KIND"
+      ]
+    },
+    "sourceClaimType": {},
+    "sourceCompartment": {},
+    "sourceNote": {},
+    "verificationStatus": {
+      "const": "EXTERNAL-UNVERIFIED"
+    },
+    "reviewStatus": {
+      "const": "PENDING_REVIEW"
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "sourceName",
+        "sourceReference",
+        "sdkPackage",
+        "sdkVersion",
+        "registryVersion",
+        "sdkGraphVersion",
+        "sdkSchemaVersion",
+        "sdkGraphGeneratedFor",
+        "retrievedAt",
+        "rawOrigins",
+        "originMappingStatus"
+      ],
+      "properties": {
+        "sourceId": {
+          "const": "sdk-knowledge-graph"
+        },
+        "sourceName": {
+          "const": "TheTowerSDK Knowledge Graph"
+        },
+        "sourceReference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sdkPackage": {
+          "const": "thetowersdk"
+        },
+        "sdkVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "registryVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sdkGraphVersion": {
+          "type": "integer"
+        },
+        "sdkSchemaVersion": {
+          "type": "integer"
+        },
+        "sdkGraphGeneratedFor": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "retrievedAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "rawOrigins": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "value"
+            ],
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "value": {}
+            }
+          }
+        },
+        "originMappingStatus": {
+          "enum": [
+            "UNMAPPED_REQUIRES_REVIEW",
+            "UNRESOLVED",
+            "INVALID_OR_MISSING"
+          ]
+        }
+      }
+    },
+    "sourceRecord": {
+      "type": "object"
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
