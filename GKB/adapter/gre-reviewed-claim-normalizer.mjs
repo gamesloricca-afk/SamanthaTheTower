@@ -40,12 +40,30 @@ export function buildCanonicalClaimFromReviewedGreRecord(stagingRecord,review){
   const verificationStatus=canonical.verificationStatus??'EXTERNAL-UNVERIFIED';
   if(!statuses.includes(verificationStatus))throw new TypeError('Unsupported canonical verificationStatus');
   if(verificationStatus==='VERIFIED'&&!(typeof canonical.evidence==='string'&&canonical.evidence.trim()))throw new Error('VERIFIED requires reviewer-supplied evidence');
-  if((verificationStatus==='CONFLICTING'||stagingRecord.sourceConflictIds?.length)&&!canonical.conflict)throw new Error('A linked GRE conflict requires explicit reviewer-authored canonical conflict metadata');
+  const linkedConflictIds=[...new Set(stagingRecord.sourceConflictIds??[])];
+  if(linkedConflictIds.length>1)throw new Error('Canonical preview currently supports one linked GRE conflict per claim; review the source conflicts separately');
+  if(linkedConflictIds.length) {
+    if(!canonical.conflict)throw new Error('A linked GRE conflict requires explicit reviewer-authored canonical conflict metadata');
+    const linked=(stagingRecord.resolvedConflicts??[]).find(item=>item.sourceConflictId===linkedConflictIds[0]);
+    if(!linked)throw new Error('Linked GRE conflict is missing or unresolved: '+linkedConflictIds[0]);
+    if(canonical.conflict.conflictId!==linked.sourceConflictId)throw new Error('Canonical conflict ID must match the linked GRE source conflict');
+    const expected=[...new Set(linked.relatedSourceClaimIds??[])].sort();
+    const provided=[...new Set(canonical.conflict.relatedClaimIds??[])].sort();
+    if(expected.length!==provided.length||expected.some((id,index)=>id!==provided[index]))throw new Error('Canonical conflict relatedClaimIds must exactly match the linked GRE conflict claims');
+    if(/^OPEN\\b/i.test(linked.conflictState??'')&&canonical.conflict.status!=='OPEN')throw new Error('An open GRE source conflict must remain OPEN in the canonical preview');
+  }
   if(verificationStatus==='CONFLICTING'&&!canonical.conflict)throw new Error('CONFLICTING requires conflict metadata');
   const sources=Array.isArray(stagingRecord.resolvedSources)?stagingRecord.resolvedSources:[];
+  const sourceTypeOverrides=canonical.sourceTypeOverrides??{};
+  if(!sourceTypeOverrides||typeof sourceTypeOverrides!=='object'||Array.isArray(sourceTypeOverrides))throw new TypeError('canonical.sourceTypeOverrides must be an object keyed by sourceId');
+  const sourceIds=new Set(sources.map(source=>source.sourceId));
+  for(const [sourceId,sourceType] of Object.entries(sourceTypeOverrides)) {
+    if(!sourceIds.has(sourceId))throw new TypeError('sourceTypeOverrides references an unknown sourceId: '+sourceId);
+    if(!sourceTypes.includes(sourceType))throw new TypeError('Invalid source type override for '+sourceId);
+  }
   if(!sources.length)throw new Error('At least one resolved GRE source is required before canonical preview');
   const provenance=sources.map(source=>{
-    const sourceType=review.sourceTypeOverrides?.[source.sourceId]??'UNKNOWN';
+    const sourceType=sourceTypeOverrides[source.sourceId]??'UNKNOWN';
     if(!sourceTypes.includes(sourceType))throw new TypeError('Invalid source type override for '+source.sourceId);
     return {
       sourceType,
