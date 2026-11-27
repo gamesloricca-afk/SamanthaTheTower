@@ -51,3 +51,7 @@ jobs:
       - name: Run SDK JSON export smoke test
         working-directory: GKB/runtime
         run: npm run test:sdk-json-exports
+
+      - name: Validate actual SDK knowledge graph and record origin evidence
+        working-directory: GKB/runtime
+        run: node ../adapter/validate-sdk-knowledge-graph.mjs
