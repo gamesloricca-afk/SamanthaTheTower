@@ -229,6 +229,8 @@ async function main() {
     dirname(schemaPath),
     'substrate/types.d.ts'
   );
+  const typescriptDeclarationReference =
+    'thetowersdk/dist/knowledge/substrate/types.d.ts';
   let typescriptInspection = {
     status: 'NOT_INSPECTED',
     reason: 'DECLARATION_FILE_NOT_FOUND',
@@ -347,7 +349,7 @@ async function main() {
 
     typescriptDeclaration: {
       typeName: 'ClaimOrigin',
-      file: typescriptDeclarationPath,
+      file: typescriptDeclarationReference,
       status: typescriptInspection.status,
       reason: typescriptInspection.reason ?? null,
       values: typescriptInspection.values,
