@@ -2,7 +2,7 @@
 
 **Branch:** `GKB`  
 **Date:** 2026-11-27  
-**Status:** IMPLEMENTED; CI execution NOT YET VERIFIED
+**Status:** IMPLEMENTED; CI VERIFIED PASSING (workflow run #285)
 
 ## Objective
 
@@ -51,9 +51,12 @@ Missing provenance is a warning rather than an automatic rejection when the cano
 
 ## Testing
 
-- Test cases were added for schema validation, preservation of separate source claims, the three conflict groups, provenance warnings, malformed claims, and dangling conflict references.
-- The new test command is included in the GKB workflow.
-- **NOT TESTED:** No successful GitHub Actions run or local dependency-backed test execution was available to verify the new test in this session. The latest commit returned no commit status entries. Do not interpret the presence of the workflow step as a passing test.
+- GitHub Actions workflow run [#285](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45962322030) completed successfully on branch `GKB`, commit `040a64f40cd4c1f5a11f0e4ae8386061c24f0af2`.
+- `npm run test:source-comparison`: **PASSED**, 14 cases.
+- Eight claims validated against the canonical schema; three conflict groups preserved.
+- Test output confirms `noWinnerSelected: true`, missing provenance reporting, and rejection of dangling conflict references.
+- The preceding Ajv module-resolution failure was corrected by resolving Ajv from the isolated `GKB/runtime` package context.
+- The complete workflow job, not only the source-comparison step, completed successfully.
 
 ## Remaining gaps
 
@@ -64,4 +67,4 @@ Missing provenance is a warning rather than an automatic rejection when the cano
 
 ## Next priority
 
-Run the GKB workflow and inspect its result. If the validator passes, extend the same minimal fixture pattern to the next small set of disputed mechanics. Do not bulk-import the source catalog.
+Keep this validator as the minimal pattern for future disputed mechanics. Select the next small comparison batch only after choosing a clearly scoped mechanic and preserving each source as a separate claim. Do not bulk-import the source catalog.
