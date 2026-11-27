@@ -38,7 +38,7 @@ function listMarkdown(dir) {
 function readText(file) { return fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n'); }
 function section(markdown, heading) {
   const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-  const match = markdown.match(new RegExp('^##\\s+'+escaped+'\\s*\\n([\\s\\S]*?)(?=^##\\s+|$)','m'));
+  const match = markdown.match(new RegExp('^##\\s+'+escaped+'\\s*\\n([\\s\\S]*?)(?=^##\\s+|(?![\\s\\S]))','m'));
   return match ? match[1].trim() : '';
 }
 function field(markdown, label) {
