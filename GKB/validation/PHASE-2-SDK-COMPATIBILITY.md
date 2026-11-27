@@ -130,7 +130,33 @@ The current SDK data documentation labels its catalog as Game 29.1:
 
 This conflicts with the installed package's `CURRENT_GAME_VERSION: v28.3.0` marker. Do not assume the documentation's Game 29.1 data describes the exact installed `0.14.1` tarball. Preserve both signals until a version-specific comparison establishes the reason.
 
-The GKB unique-module catalog has 28 IDs, and all 28 IDs exist in `MODULE_TEMPLATES` from the pinned package. Names, initials, category, rarity bounds, and rarity bonuses match in the comparison. The effect-text field does not match the SDK's `description` field; the exact field mapping remains under inspection. No catalog text or source metadata has been overwritten.
+The GKB unique-module catalog has 28 IDs, and all 28 IDs exist in `MODULE_TEMPLATES` from the pinned package. Comparison results: 27/28 records match name, initials, category, rarity bounds, and rarity bonuses; the sole metadata difference is Gilded Sniper's rarityBonus scale (GKB: 10/20/30/40; SDK: 0.1/0.2/0.3/0.4). The SDK description is a function that renders the fractional value as a percentage (for example, 0.1 renders as 10%). This indicates a representation/unit convention difference, not enough evidence to overwrite either representation. The SDK description functions also differ in text formatting from the GKB `{value}` templates for 24/28 entries when a sentinel value is inserted; 4 entries match exactly. No catalog values or effect templates have been overwritten.
+
+### Wiki, contributions, save/node, and charts — first-pass inspection
+
+The pinned SDK exposes two wiki sources:
+- `fandom` (default).
+- `gamevault`.
+
+The source metadata includes API URL, page URL base, search mode, transport, and notes. The wiki API returns source ID, resolved title, source URL, and Markdown; separate APIs expose last-edited metadata and raw wikitext:
+- https://tmrxjd.github.io/TheTowerSDK/docs/wiki/
+
+No live wiki request was made in CI. Any later ingestion must preserve page URL, source ID, resolved title, and revision/edit metadata where available. Wiki text remains community-authored and unverified until Samantha assesses it.
+
+The contributions export contains 6 areas, 32 people, and 4 attribution lines in the installed package. The areas cover Effective Paths, save-file mapping, TowerToolkit, community guides, community wikis, and charts. The SDK's contribution documentation explains which community spreadsheets, save mappings, guides, wiki content, and chart datasets it uses:
+- https://tmrxjd.github.io/TheTowerSDK/contributions/
+
+Attribution is a required integration concern, not optional decoration. The package's MIT license does not remove the need to retain source-specific credit or assess any source-specific redistribution constraints.
+
+The save and node public entry points import successfully. The SDK documentation explicitly supports only the game's official `tool_export.json` from External Tools Export; private saves, encrypted files, and legacy binary saves are unsupported, and the SDK does not decrypt them:
+- https://tmrxjd.github.io/TheTowerSDK/docs/save/
+
+No personal save was opened. GKB will not own account-specific save processing; this remains SJI's responsibility. The presence of `decodePlayerInfoSaveBytesAsync` in the Node entry point must not be interpreted as support for private or encrypted save formats.
+
+The chart registry contains 48 entries in the installed package. A sample call to `resolveCanonicalToolDataset('bot-upgrades', ['Golden Bot'])` returned a 9-column, 31-row dataset. The chart documentation states 46 datasets in its opening count but later refers to 48 charts:
+- https://tmrxjd.github.io/TheTowerSDK/docs/charts/
+
+The installed registry count is 48; the documentation's two counts are retained as a documentation inconsistency, not silently reconciled. A chart dataset is a formatted view of SDK data, not independent confirmation of the underlying game values.
 
 ### mechanics
 The SDK exposes calculation functions for enemy scaling, damage, ultimate weapons, economy, workshop, bots, guardians, and battle conditions:
