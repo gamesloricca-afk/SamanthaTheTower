@@ -3,7 +3,7 @@ GAME KNOWLEDGE BASE (GKB)
 Project: Samantha – The Tower
 Module ID: GKB
 Document: GKB README
-Version: 1.2.0
+Version: 1.3.0
 Date: 2026-11-27
 Status: Draft – Pending Owner Approval
 Owner: Samantha Project Owner
@@ -53,22 +53,16 @@ The scope may expand as the game develops.
 
 GKB is the universal game-knowledge layer of Samantha.
 
-It works alongside other knowledge databases:
+It works alongside Samantha's supporting systems:
 
-Database| Responsibility
-GKB| Universal game knowledge
-SSD| System Synergy Database
-PAI| Player Account Intelligence
-PPI| Player Preset Intelligence
-ESER| External Sources & Evidence Registry
-SDE| Strategic Decision Engine
-SBD| Strategy & Build Database
-PER| Player Experiment Registry
-SJI| Samantha JSON Intelligence
+| System | Responsibility |
+|---|---|
+| GKB | Universal game knowledge, claims, source attribution, version context, and conflicts |
+| SJI | Account JSON processing and the Unified Account Profile; account-specific information stays separate from universal GKB knowledge |
+| SCII | Conversation indexing and knowledge extraction; extracted statements remain source material until reviewed |
+| XLSX Reader | Spreadsheet ingestion and analysis; spreadsheet records are not automatically canonical GKB claims |
 
-GKB contains general game knowledge, not private player-account information or unapproved player experiments.
-
-Each database should maintain its own purpose without unnecessary duplication.
+Keep these responsibilities separate. GKB stores reusable game knowledge; the other systems process account, conversation, or spreadsheet inputs. Their outputs may provide evidence for GKB review, but must not be promoted automatically.
 
 4. Source Identification
 
@@ -89,7 +83,7 @@ Important rules:
 - Different reported values should be preserved and presented separately when necessary.
 - Missing source information must not be invented.
 
-Samantha is not required to determine a single winning source whenever information differs.
+For fanmade and community information, preserve each source's reported value and attribution. Do not rank sources or choose a winner merely because one source is more popular, more frequently repeated, or assigned a higher source-authority label. When two or three sources disagree, showing their reports side by side is sufficient unless the player explicitly asks for deeper investigation.
 
 5. Claim Classification and Verification Status
 
@@ -191,20 +185,19 @@ Contradictory information must not be silently discarded or altered.
 
 9. Player Data and Experiment Separation
 
-GKB contains universal game knowledge.
+GKB contains universal game knowledge. Supporting systems have separate responsibilities:
 
-Other databases have separate responsibilities:
-
-- PAI and PPI contain player-specific information.
-- PER contains player experiments and observations.
-- GKB contains general game knowledge.
+- SJI processes account JSON and maintains the Unified Account Profile.
+- SCII indexes conversations and extracts knowledge candidates.
+- XLSX Reader ingests and analyzes spreadsheets.
+- Player experiments and account-specific observations remain identifiable as such.
 
 Important rules:
 
-- Player data must not automatically become universal knowledge.
+- Account data, conversation excerpts, and spreadsheet records must not automatically become universal knowledge.
 - Player experiments must not automatically modify GKB.
 - Experiments should retain their conditions, configuration, game version, and known limitations whenever available.
-- Promotion of experimental findings into universal GKB knowledge requires Project Owner approval.
+- Promotion into universal GKB knowledge requires evidence review and explicit Project Owner approval.
 
 10. Research and Information Workflow
 
@@ -229,20 +222,16 @@ Samantha is not required to independently verify every community source, reprodu
 
 GKB provides general game knowledge, not automatic recommendations.
 
-SDE may combine relevant GKB information with:
+Downstream strategy and decision workflows may combine relevant GKB information with:
 
-- Player objectives
-- Account progression
-- Available resources
-- Active preset
-- Module configuration
-- System synergies
-- Opportunity costs
-- Evidence limitations
+- Player objectives and account progression supplied through SJI
+- Relevant configuration or preset information
+- System synergies and opportunity costs
+- Evidence limitations and competing source reports
 
-A popular strategy is not automatically the optimal strategy for every player.
+Conversation context indexed by SCII and spreadsheet analysis from XLSX Reader may support a task, but they do not replace source attribution or evidence review.
 
-Recommendations should consider the player's actual objectives and circumstances.
+A popular strategy is not automatically the optimal strategy for every player. Recommendations should consider the player's actual objectives and circumstances.
 
 12. Quality Standards
 
