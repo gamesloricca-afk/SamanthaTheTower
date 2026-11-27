@@ -37,6 +37,14 @@ jobs:
         run: |
           npm ls thetowersdk ajv --depth=0
 
+      - name: Test SDK import manifest and drift detector
+        working-directory: GKB/runtime
+        run: npm run test:sdk-import-manifest
+
+      - name: Generate SDK import manifest candidate
+        working-directory: GKB/runtime
+        run: npm run report:sdk-import-manifest
+
       - name: Inspect pinned SDK public entry points
         working-directory: GKB/runtime
         run: npm run test:sdk-public-exports
@@ -118,6 +126,8 @@ jobs:
         with:
           name: gkb-sdk-staging-${{ github.run_number }}
           path: |
+            GKB/staging/sdk-import-manifest.json
+            GKB/reports/sdk-import-drift-report.json
             GKB/staging/sdk-claims.json
             GKB/staging/sdk-assertions.json
             GKB/staging/sdk-edges.json
