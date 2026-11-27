@@ -81,12 +81,13 @@ Conflict record: `GRE/EVIDENCE/conflicts/CNF-D04-DR-001-defense-absolute-order.m
 | `CLM-D04-DR-002` | OBJECTIVE | VERIFIED (SDK code only) | Separate SDK helper sequence and narrower input |
 | `CLM-D04-DR-003` | OBJECTIVE | EXTERNAL-UNVERIFIED | Fandom ordering statement |
 | `CLM-D04-DR-004` | OBJECTIVE | EXTERNAL-UNVERIFIED | Reddit v28.3 ordering statement |
+| `CLM-D04-DR-005` | OBJECTIVE | VERIFIED (SDK prose only) | SDK knowledge-compartment ordering statement |
 
 ## 5. What is and is not established
 
 **VERIFIED**
 - GRE declares the relevant result type and two Enemy methods.
-- The inspected SDK commit contains the two separate helper implementations and a test for the layer-stack helper order.
+- The inspected SDK commit contains two separate helper implementations, a test for the layer-stack helper order, and knowledge prose that conflicts with that helper.
 - The inspected Fandom and Reddit pages make different source-specific statements.
 
 **EXTERNAL-UNVERIFIED**
