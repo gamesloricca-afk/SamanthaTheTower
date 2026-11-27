@@ -1,0 +1,61 @@
+{
+  "manifestVersion": "1.0.0",
+  "sdk": {
+    "package": "thetowersdk",
+    "version": "0.14.1",
+    "license": "MIT",
+    "engines": {
+      "node": ">=20"
+    }
+  },
+  "retrieval": {
+    "retrievedAt": "2026-11-27",
+    "sourceReference": "thetowersdk/knowledge-graph.json"
+  },
+  "graph": {
+    "schemaVersion": 1,
+    "graphVersion": 3,
+    "generatedFor": "2026-10-15",
+    "nodeCount": 320,
+    "edgeCount": 396,
+    "assertionCount": 1618,
+    "originCounts": {
+      "code": 1522,
+      "wiki": 884,
+      "user": 82,
+      "game": 70,
+      "save": 10,
+      "sheet": 11
+    }
+  },
+  "artifacts": {
+    "knowledgeGraph": {
+      "path": "thetowersdk/knowledge-graph.json",
+      "sha256": "a3ba66bbe07b10132640e4ec348a2d8ed5cd879d9c6a4e000cefb4752939a798",
+      "byteLength": 1344263
+    },
+    "knowledgeSchema": {
+      "path": "thetowersdk/knowledge.schema.json",
+      "sha256": "5ced68826823caae104ae9c6b7ad73414d783dd6831f023663f809e43a676806",
+      "byteLength": 9369
+    }
+  },
+  "baseline": {
+    "status": "APPROVED",
+    "approvedAt": "2026-11-27",
+    "approvalBasis": "Explicit user approval in Samantha-2 project conversation.",
+    "candidateRetrievedAt": "2026-11-27",
+    "reviewScope": [
+      "SDK package identity and pinned version",
+      "SDK graph and schema artifact checksums",
+      "Graph version metadata and record counts",
+      "Raw origin counts"
+    ],
+    "limitations": [
+      "Approval establishes a technical import baseline only; it does not verify the factual correctness of SDK claims.",
+      "Checksums identify exact package artifact bytes and do not establish factual correctness.",
+      "SDK graph and schema incompatibilities remain preserved as source conditions.",
+      "A future drift signal requires review; it does not automatically replace this baseline."
+    ]
+  }
+}
