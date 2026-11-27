@@ -2,7 +2,7 @@
 
 Date: 2026-11-27
 Branch: `GKB`
-Status: IN PROGRESS — public entry-point smoke test completed; deeper compatibility review remains
+Status: COMPLETE — pinned runtime/API compatibility verified; external data conflicts are documented and remain unresolved
 
 ## Objective
 
@@ -209,20 +209,41 @@ Latest full SDK inspection workflow:
 - Knowledge graph shape and query behavior, data catalog shapes, selected mechanics examples, unique module comparison, wiki/contributions/save/node/chart structures all inspected.
 - Existing GKB schema, adapter, SDK JSON export, and knowledge graph checks passed. The known 70-origin schema mismatch remains separately reported.
 
-## Remaining Phase 2 work
+## Phase 2 conclusion
 
-The first-pass public API and structure inspection is complete. The following deeper compatibility work remains before Phase 2 can be closed:
+The SDK compatibility baseline is complete:
+- Exact package pin `thetowersdk@0.14.1` verified from the installed package.
+- SDK license, Node engine, and runtime dependency inspected.
+- Node `20.20.2` satisfies SDK engine `>=20`.
+- All eight roadmap modules import through their public package subpaths.
+- Representative exports and selected read-only function behavior tests pass.
+- The installed knowledge graph, data catalogs, wiki sources, attribution, save/node API surfaces, and chart resolver were structurally inspected.
+- No SDK source was modified, no bulk import occurred, and no private save was opened.
 
-1. **knowledge:** review the full assertion/provenance schema, node-vs-assertion semantics, missing verification fields, contradiction representation, and source-ranking behavior. Define an explicit adapter mapping without adopting SDK `likelyValue`.
-2. **data:** inspect source/version metadata for each major catalog; resolve documented-vs-installed game-version differences by retaining both references; formalize unit conventions such as Gilded Sniper's fraction-to-percent representation. Keep catalog fields that are not understood.
-3. **mechanics:** review formulas individually where GKB needs them, including input types, units, caps, edge cases, and version conditions. The four smoke-test examples are not a formula validation suite.
-4. **wiki:** inspect cache, source fallback, revision lookup, and error behavior. No live fetch or page revision was requested in the current CI inspection.
-5. **contributions:** retain the four attribution lines and review any source-specific credit/licensing conditions before redistribution.
-6. **save/node:** inspect type declarations and supported official-export root shape only. Do not open player data in GKB or infer private/binary save support.
-7. **charts:** inspect registry-wide renderer argument schemas and lookup-table behavior. Keep chart outputs as derived datasets, not independent sources.
-8. **compatibility report:** record the unresolved origin mismatch (70 graph occurrences of `game`), documentation/package version discrepancies, and unsupported/unknown fields. Do not patch the external SDK or bulk-import claims.
+**Compatibility is not conflict-free.** The following remain explicitly unresolved and must travel with the adapter:
+1. 70 knowledge graph origin values are `game`, which is allowed by the SDK TypeScript origin union but rejected by the SDK JSON Schema enum. The original graph therefore has `schemaValidationStatus: FAILED`; the workflow completes only because the expected conflict is separately classified and preserved.
+2. The installed package exports `CURRENT_GAME_VERSION: v28.3.0`, while the current SDK data/mechanics documentation labels its examples/catalog Game 29.1.
+3. The installed graph has 396 edges while the knowledge documentation says 398 typed relationships.
+4. The installed chart registry has 48 entries; the charts documentation states 46 in one place and 48 elsewhere.
+5. Gilded Sniper rarity bonuses use fractional values in the SDK (0.1/0.2/0.3/0.4), while GKB stores percentage points (10/20/30/40). The SDK's description function renders those fractional values as 10%/20%/30%/40%. This is a unit representation difference; retain both source encodings and convert only in an explicit, tested adapter.
+6. 24 of 28 unique module effect templates differ textually from the SDK description-function output; this is a presentation/content difference, not automatically a mechanical contradiction.
+7. SDK contradiction helpers return `likelyValue` based on `authorityRank`. Samantha will not use that as the factual winner; source-specific conflicting claims remain visible.
 
-No broader adapter implementation or bulk catalog import should begin until these compatibility findings are sufficiently documented.
+The successful GitHub Actions run means the compatibility workflow and its expected-conflict reporting executed successfully. It does **not** mean the original SDK knowledge graph passed its own JSON Schema.
+
+## Deferred work for later phases
+
+These are adapter/content-integration tasks, not reasons to patch or fork the SDK during compatibility verification:
+1. Design an assertion-level staging adapter that preserves every SDK assertion and its source provenance, including missing verification fields.
+2. Keep SDK source verification labels and `likelyValue` ranking separate from Samantha's canonical status/conflict policy.
+3. Inspect catalog units and version metadata when a particular catalog is selected for GKB ingestion.
+4. Review formula inputs, units, caps, edge cases, version conditions, and accuracy notes before any formula is promoted.
+5. Inspect live wiki fetch/cache/revision behavior only when building the wiki ingestion path; preserve URLs and attribution.
+6. Preserve all four SDK attribution lines and assess source-specific redistribution constraints before redistributing source-derived data.
+7. Keep save and node parsing in SJI; GKB must not ingest account-specific records.
+8. Inspect chart renderer argument schemas if a chart adapter is later needed.
+
+Phase 3 — GKB Adapter can now begin with a read-only design and assertion-level staging. No bulk import or canonical claim promotion is authorized by this Phase 2 completion.
 ## Safety
 
 - TheTowerSDK remains an external dependency pinned to exact version `0.14.1`.
