@@ -31,7 +31,9 @@
     "test:sdk-identifier-mapping": "node ../tests/sdk-identifier-mapping.test.mjs",
     "report:sdk-identifier-mapping": "node ../adapter/sdk-identifier-mapping.mjs",
     "test:sdk-domain-catalog-staging": "node ../tests/sdk-domain-catalog-staging.test.mjs",
-    "stage:sdk-domain-catalogs": "node ../adapter/sdk-domain-catalog-staging.mjs"
+    "stage:sdk-domain-catalogs": "node ../adapter/sdk-domain-catalog-staging.mjs",
+    "test:sdk-data-catalog-crosswalk": "node ../tests/sdk-data-catalog-crosswalk.test.mjs",
+    "report:sdk-data-catalog-crosswalk": "node ../adapter/sdk-data-catalog-crosswalk.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
