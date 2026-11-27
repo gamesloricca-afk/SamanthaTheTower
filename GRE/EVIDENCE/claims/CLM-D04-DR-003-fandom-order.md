@@ -35,3 +35,9 @@ Retain this as the Fandom page's claim. Do not silently treat it as the final me
 
 - Conflict: `CNF-D04-DR-001`
 - GKB staging decision: hold
+
+
+## Review completion — 2026-11-27
+
+- **Fandom source statement confirmed; gameplay claim remains EXTERNAL-UNVERIFIED.** The page says Defense % applies before Defense Absolute, while Chrono Field Damage Reduction, Primordial Collapse, and Flame Bot apply after Defense Absolute. It also states a 98% Defense % cap.
+- The captured page does not establish a game version or reliable page-update date. This records the page's statement, not a verified runtime mechanic. Conflict CNF-D04-DR-001 remains OPEN. GKB: HOLD.
