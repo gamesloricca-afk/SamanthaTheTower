@@ -14,6 +14,7 @@ assert.equal(manifest.version, '0.14.1');
 
 const graph = require('thetowersdk/knowledge-graph.json');
 const schema = require('thetowersdk/knowledge.schema.json');
+const knowledge = await import(pathToFileURL(require.resolve('thetowersdk/knowledge')).href);
 assert.ok(graph && Array.isArray(graph.nodes) && Array.isArray(graph.edges));
 
 const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -27,6 +28,7 @@ const countBy = (items, getter) => {
   return Object.fromEntries(Object.entries(counts).sort(([a],[b]) => a.localeCompare(b)));
 };
 const assertions = graph.nodes.flatMap(node => Array.isArray(node.assertions) ? node.assertions : []);
+const contradictions = knowledge.findContradictions();
 const sources = graph.nodes.flatMap(node => Array.isArray(node.sources) ? node.sources : []);
 const originCounts = {};
 const walk = value => {
@@ -60,6 +62,10 @@ const report = {
     totalAssertions: assertions.length,
     totalNodeSources: sources.length,
     contradictionRecordCount: Array.isArray(graph.contradictions) ? graph.contradictions.length : null,
+    findContradictionsResultCount: contradictions.length,
+    contradictionResultKeys: keys(contradictions[0]),
+    contradictionResultHasLikelyValue: contradictions.some(item => Object.hasOwn(item, 'likelyValue')),
+    contradictionClaimsHaveAuthorityRank: contradictions.some(item => Array.isArray(item.claims) && item.claims.some(claim => Object.hasOwn(claim, 'authorityRank'))),
     nodeClaimTypeCounts: countBy(graph.nodes, item => item.claimType),
     nodeVerificationCounts: countBy(graph.nodes, item => item.verification)
   },
