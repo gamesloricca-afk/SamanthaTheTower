@@ -26,13 +26,17 @@ const comparisons = [];
 for (const item of gkb.modules) {
   const source = sdkById.get(item.id);
   if (!source) continue;
+  const sentinel = '123.456';
+  const gkbEffectText = item.effectTemplate.replaceAll('{value}', sentinel);
+  const sdkEffectText = typeof source.description === 'function' ? source.description(sentinel) : source.description;
   const fields = {
     name: item.name === source.name,
     initials: item.initials === source.initials,
     category: item.category === source.type,
     minRarity: item.minRarity === source.minRarity,
     maxRarity: item.maxRarity === source.maxRarity,
-    effectTemplate: item.effectTemplate === source.description,
+    effectTemplate: gkbEffectText === sdkEffectText,
+    descriptionCallable: typeof source.description === 'function',
     rarityBonuses: JSON.stringify(item.rarityBonuses) === JSON.stringify(source.rarityBonuses)
   };
   comparisons.push({ id: item.id, fields, matched: Object.values(fields).every(Boolean) });
@@ -54,10 +58,9 @@ console.log(JSON.stringify({
     id: comparisons[0].id,
     gkbEffectTemplate: gkbById.get(comparisons[0].id)?.effectTemplate ?? null,
     sdkRecordKeys: Object.keys(sdkById.get(comparisons[0].id) ?? {}).sort(),
-    sdkDescriptionPresent: Object.hasOwn(sdkById.get(comparisons[0].id) ?? {}, 'description'),
-    sdkDescriptionValue: String(sdkById.get(comparisons[0].id)?.description),
-    sdkEffectPresent: Object.hasOwn(sdkById.get(comparisons[0].id) ?? {}, 'effect'),
-    sdkEffectValue: String(sdkById.get(comparisons[0].id)?.effect)
+    sdkDescriptionType: typeof sdkById.get(comparisons[0].id)?.description,
+    sdkEffectTextAtSentinel: typeof sdkById.get(comparisons[0].id)?.description === 'function' ? sdkById.get(comparisons[0].id).description('123.456') : sdkById.get(comparisons[0].id)?.description,
+    gkbEffectTextAtSentinel: gkbById.get(comparisons[0].id)?.effectTemplate?.replaceAll('{value}', '123.456')
   } : null,
   policy: 'Differences are reported, not automatically overwritten or resolved.'
 }, null, 2));
