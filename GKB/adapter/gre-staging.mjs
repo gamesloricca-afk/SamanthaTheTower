@@ -89,7 +89,7 @@ function parseSource(file, root) {
     retrievedAt: field(raw,'Access date'),
     gameVersion: field(raw,'Game version/build') ?? field(raw,'Game version'),
     license: field(raw,'Package license') ?? field(raw,'License'),
-    limitations: section(raw,'Limitations').split('\n').filter(x=>x.trim()).map(x=>x.replace(/^[-*]\\s*/,'')),
+    limitations: section(raw,'Limitations').split('\n').filter(x=>x.trim()).map(x=>x.replace(/^[-*]\s*/,'')),
     sourceRecord: { relativePath:path.relative(root,file).split(path.sep).join('/'), rawMarkdown:raw }
   };
 }
@@ -107,8 +107,8 @@ function parseClaim(file, root) {
   const sdkVersion = field(raw,'SDK version');
   const related = [...new Set((raw.match(/`CLM-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)).filter(x=>x!==claimId))];
   const conflicts = [...new Set((raw.match(/`CNF-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)))];
-  const evidence = section(raw,'Evidence').split('\n').filter(x=>x.trim()).map(x=>x.replace(/^[-*]\\s*/,'')); 
-  const limitations = section(raw,'Limitations').split('\n').filter(x=>x.trim()).map(x=>x.replace(/^[-*]\\s*/,'')); 
+  const evidence = section(raw,'Evidence').split('\n').filter(x=>x.trim()).map(x=>x.replace(/^[-*]\s*/,'')); 
+  const limitations = section(raw,'Limitations').split('\n').filter(x=>x.trim()).map(x=>x.replace(/^[-*]\s*/,'')); 
   return {
     recordKind:'GRE_CLAIM',
     sourceClaimId:claimId,
