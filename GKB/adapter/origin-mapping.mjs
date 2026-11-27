@@ -37,6 +37,11 @@ const SOURCE_TYPES = new Set([
   'OTHER'
 ]);
 
+export const ADAPTER_POLICY = Object.freeze({
+  automaticNormalization: false,
+  bulkImportAllowed: false
+});
+
 const MAPPING_STATUSES = new Set([
   'MAPPED',
   'UNMAPPED_REQUIRES_REVIEW',
@@ -405,6 +410,28 @@ export function validateSourceOriginRecord(record) {
     errors.push(
       'upstream must be an object or null'
     );
+  } else if (isObject(record.upstream)) {
+    if (
+      Object.hasOwn(record.upstream, 'package') &&
+      typeof record.upstream.package !== 'string'
+    ) {
+      errors.push('upstream.package must be a string');
+    }
+
+    if (
+      Object.hasOwn(record.upstream, 'version') &&
+      typeof record.upstream.version !== 'string'
+    ) {
+      errors.push('upstream.version must be a string');
+    }
+
+    if (
+      Object.hasOwn(record.upstream, 'sourceReference') &&
+      record.upstream.sourceReference !== null &&
+      typeof record.upstream.sourceReference !== 'string'
+    ) {
+      errors.push('upstream.sourceReference must be a string or null');
+    }
   }
 
   return {
@@ -573,6 +600,12 @@ export function runSelfTest() {
     validation.valid
   );
 
+  check(
+    'adapter policy keeps bulk import disabled',
+    ADAPTER_POLICY.bulkImportAllowed === false &&
+    ADAPTER_POLICY.automaticNormalization === false
+  );
+
   // 10. Source provenance is not mutated.
   const original = {
     origin: 'game',
@@ -596,9 +629,9 @@ export function runSelfTest() {
     checkCount: checks.length,
     checks,
     defaultMappings: 0,
-    automaticNormalization: false,
+    automaticNormalization: ADAPTER_POLICY.automaticNormalization,
     originalValuesPreserved: true,
-    bulkImportAllowed: false
+    bulkImportAllowed: ADAPTER_POLICY.bulkImportAllowed
   };
 
   console.log(JSON.stringify(output, null, 2));
