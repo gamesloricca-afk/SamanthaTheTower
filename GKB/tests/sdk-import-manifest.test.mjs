@@ -28,5 +28,5 @@ const drift = compareSdkImportManifests(manifest, changed);
 assert.equal(drift.status, 'DRIFT_DETECTED');
 assert.deepEqual(drift.changes.map(item => item.field), ['graph.assertionCount', 'graph.originCounts.game']);
 
-assert.throws(() => buildSdkImportManifest({ packageJson, graph: {}, graphBytes, schema, schemaBytes, retrievedAt: '2026-11-27' }), /Unsupported SDK graph shape/);
-console.log(JSON.stringify({ test: 'SDK import manifest and drift detector', status: 'PASSED', cases: 10, baselineMutation: false }, null, 2));
+assert.throws(() => buildSdkImportManifest({ packageJson, graph: {}, graphBytes, schema, schemaBytes, retrievedAt: '2026-11-27' }), /Unsupported SDK graph shape/);\nassert.throws(() => buildSdkImportManifest({ packageJson, graph, graphBytes, schema, schemaBytes, retrievedAt: '2026-02-30' }), /valid YYYY-MM-DD calendar date/);\nconst checksumChanged = structuredClone(manifest);\nchecksumChanged.artifacts.knowledgeGraph.sha256 = 'f'.repeat(64);\nassert.equal(compareSdkImportManifests(manifest, checksumChanged).changes[0].field, 'artifacts.knowledgeGraph.sha256');
+console.log(JSON.stringify({ test: 'SDK import manifest and drift detector', status: 'PASSED', cases: 13, baselineMutation: false }, null, 2));
