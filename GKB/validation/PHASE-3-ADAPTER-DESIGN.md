@@ -125,6 +125,12 @@ Added:
 - CI steps for the assertion-level test and actual pinned graph staging.
 - Workflow artifact upload for both node-level and assertion-level staging files, retained for 14 days.
 
+The existing node envelope was also aligned with the public package export:
+- Source reference now uses `thetowersdk/knowledge-graph.json`.
+- Node provenance now records SDK graph version, SDK schema version, graph `generatedFor`, and actual `retrievedAt` separately.
+- Node records containing origin `game` now report `UNRESOLVED`, rather than generic unmapped status.
+- Missing/invalid retrieval dates are rejected.
+
 The synthetic adapter test passed 25 assertions/cases. It verifies:
 - One envelope per source assertion.
 - Source node linkage and source assertion index.
