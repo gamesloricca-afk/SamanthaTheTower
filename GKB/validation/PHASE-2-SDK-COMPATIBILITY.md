@@ -108,6 +108,30 @@ The SDK documentation describes local typed catalogs for labs, workshop, modules
 
 Catalogs may be useful external inputs, but imported claims remain `EXTERNAL-UNVERIFIED` until assessed. Keep SDK package version separate from the game version represented by a catalog.
 
+### data — installed catalog observations
+
+A read-only CI inspection of the pinned package returned these catalog sizes:
+- Labs: 234.
+- Module templates: 52 (28 marked unique, 24 non-unique).
+- Cards: 32.
+- Perks: 34.
+- Relics: 321.
+- Bot upgrade definitions: 5.
+- Ultimate Weapon stone chart entries: 9.
+- Tiers: 24.
+- Milestone reward rows: 1,148.
+- Glossary rows: 475.
+- Workshop stat definitions: 47.
+
+The package exports `CURRENT_GAME_VERSION` as `v28.3.0`. The knowledge graph's `generatedFor` date is `2026-10-15`, and 1,504 assertion provenance records carry `readAgainstVersion: v28.3.0`.
+
+The current SDK data documentation labels its catalog as Game 29.1:
+- https://tmrxjd.github.io/TheTowerSDK/docs/data/
+
+This conflicts with the installed package's `CURRENT_GAME_VERSION: v28.3.0` marker. Do not assume the documentation's Game 29.1 data describes the exact installed `0.14.1` tarball. Preserve both signals until a version-specific comparison establishes the reason.
+
+The GKB unique-module catalog has 28 IDs, and all 28 IDs exist in `MODULE_TEMPLATES` from the pinned package. Names, initials, category, rarity bounds, and rarity bonuses match in the comparison. The effect-text field does not match the SDK's `description` field; the exact field mapping remains under inspection. No catalog text or source metadata has been overwritten.
+
 ### mechanics
 The SDK exposes calculation functions for enemy scaling, damage, ultimate weapons, economy, workshop, bots, guardians, and battle conditions:
 - https://tmrxjd.github.io/TheTowerSDK/docs/mechanics/
