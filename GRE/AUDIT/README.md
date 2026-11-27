@@ -21,7 +21,7 @@ Audit the full GRE package slowly and domain by domain before promoting any vali
 
 - Phase 0 — repository and branch safety: complete.
 - Phase 1 — package structure and metadata inventory: initial structural pass complete.
-- Phase 2 — domain-by-domain content audit: in progress; Domains 01–07 and 09 have structural audit notes. Domain 08 remains pending.
+- Phase 2 — domain-by-domain content audit: in progress; Domains 01–07 have structural audit notes; Domain 09 is paused/skipped because its full JSON is unreadable; Domain 10 has an initial companion-index audit. Domains 08 and 11–20 remain pending.
 - Phase 3 — cross-domain relationship and contradiction audit: pending.
 - Phase 4 — GKB-ready claim extraction and validation: pending.
 
@@ -51,3 +51,8 @@ All Domain 09 findings 31–700 are structural observations from direct metadata
 - Domain 09 findings 901–1000: limited index-level audit of 100 previously unlisted UI method-name entries from the readable `GRE/1/09_modules.md` companion summary (`ModuleDetailsUI` and `ModuleUI`). This does not establish signatures or runtime behavior; the full JSON remains unreadable through the connector. Findings 701–900 remain a separate documented gap. See [19_domain_09_modules_ui_method_index_901-1000.md](19_domain_09_modules_ui_method_index_901-1000.md).
 
 - Domain 09 findings 1001–1200: 200 method-name entries listed under the shared `Main` type in the readable `GRE/1/09_modules.md` index. `Main` is a cross-domain controller, not a Modules-only class; these are index observations, not 200 verified Module mechanics or runtime behaviors. The full JSON remains unreadable through the connector. See [20_domain_09_modules_shared_main_method_index_1001-1200.md](20_domain_09_modules_shared_main_method_index_1001-1200.md).
+
+
+- Domain 09 (Modules): paused/skipped. The full JSON was not readable through the repository connector, so no further index-only batches will be generated. Existing notes remain as historical observations and the source-access gap is preserved.
+
+- Domain 10 (Cards and Masteries): initial audit created from the readable companion Markdown. The domain inventory lists 49 type records, while the Markdown exposes 18 named sections. The 2.1 MB JSON was not readable through the connector; no missing records or runtime behavior were inferred. Candidate enum values and constants remain unverified. See [21_domain_10_cards_masteries_initial_audit.md](21_domain_10_cards_masteries_initial_audit.md).
