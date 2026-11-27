@@ -120,6 +120,10 @@ The earlier labels Reported, Supported, and Unverified are legacy document termi
 
 6. Knowledge Records and Source References
 
+Machine-readable canonical claim records must validate against `GKB/schema/claim.schema.json`. Other structured records (such as SDK staging envelopes, source-origin mappings, registries, and domain catalogs) use their own dedicated schemas and validators; they are not canonical claims.
+
+Mechanics documents written as prose are reference drafts, not schema-validated claim records. Their legacy evidence labels must remain explicitly marked as unmapped until individual claims can be migrated with source-specific provenance. Do not infer missing source details or automatically promote prose labels into canonical Verification Status values.
+
 Knowledge records should contain relevant information whenever available:
 
 - Claim ID
