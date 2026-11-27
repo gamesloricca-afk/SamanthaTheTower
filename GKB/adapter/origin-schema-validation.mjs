@@ -1,7 +1,7 @@
 /**
  * Samantha GKB — Origin Mapping / JSON Schema Integration Test
  *
- * Version: 1.0.1
+ * Version: 1.0.3
  * Target SDK: thetowersdk@0.14.1
  * Validator: ajv@8.17.1
  *
@@ -30,7 +30,7 @@ import {
   validateSourceOriginRecord
 } from './origin-mapping.mjs';
 
-const VERSION = '1.0.2';
+const VERSION = '1.0.3';
 const EXPECTED_AJV_VERSION = '8.17.1';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -405,7 +405,38 @@ async function main() {
     invalidUpstreamResult
   );
 
-  // 13. Original adapter output remains unchanged.
+  // 13. Adapter rejects invalid metadata before creating a record.
+  const invalidMetadataCases = [
+    {
+      name: 'numeric SDK package is rejected',
+      options: { sdkPackage: 14 }
+    },
+    {
+      name: 'numeric SDK version is rejected',
+      options: { sdkVersion: 14 }
+    },
+    {
+      name: 'numeric source reference is rejected',
+      options: { sourceReference: 14 }
+    }
+  ];
+
+  for (const testCase of invalidMetadataCases) {
+    let rejected = false;
+
+    try {
+      mapOrigin({
+        origin: 'wiki',
+        ...testCase.options
+      });
+    } catch {
+      rejected = true;
+    }
+
+    check(testCase.name, rejected);
+  }
+
+  // 14. Original adapter output remains unchanged.
   const original = JSON.stringify(unresolved);
 
   validateBoth(unresolved);
@@ -415,7 +446,7 @@ async function main() {
     JSON.stringify(unresolved) === original
   );
 
-  // 14. Adapter policy explicitly disables unsafe operations.
+  // 15. Adapter policy explicitly disables unsafe operations.
   check(
     'adapter policy disables bulk import and automatic normalization',
     ADAPTER_POLICY.bulkImportAllowed === false &&
