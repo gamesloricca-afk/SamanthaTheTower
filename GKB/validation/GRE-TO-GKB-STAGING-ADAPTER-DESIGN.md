@@ -266,4 +266,4 @@ Added on `gre-gkb-integration-design`:
 
 ### Verification status
 
-The new code and workflow changes are committed to the integration branch. **NOT TESTED in this environment yet**: no successful CI run for the second increment has been observed. Do not treat the new reviewer CLI as verified until its GitHub Actions test passes.
+The new code and workflow changes are committed to the integration branch. **VERIFIED — CI PASSED** in GitHub Actions run `46037858407` on PR merge commit `72825b7b54ffea80b57b268b586b5d6d1a17df45`. The GRE staging test, synthetic approval-preview test, and new GRE review workflow test all passed. Staging generated 13 pending records from 12 claims, 7 sources, and 1 conflict; review packet generation succeeded; all 4 expected artifact files uploaded. The test fixture confirmed two append-only decisions, latest-decision projection, source-separated conflicts, and zero canonical writes. This verifies the implemented fixture and workflow, not human review or real approvals.
