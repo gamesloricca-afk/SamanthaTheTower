@@ -44,3 +44,8 @@ This is a distinct helper/model scope, not proof that every listed effect exists
 ## GKB decision
 
 Do not promote a single universal order. If later approved for GKB, preserve the source-specific claims and conflict as linked records.
+
+
+## GRE cross-domain re-inspection (2026-11-27)
+
+The follow-up GRE review added direct metadata evidence for the `DamageReductionResult` fields, Enemy calculation/application method signatures, Main defense state, and BattleHistory blocked counters (claims `CLM-D04-DR-006` through `CLM-D04-DR-008`). These declarations do not encode execution order or prove that each counter is mutually exclusive. The order conflict remains OPEN; GRE metadata does not resolve it.
