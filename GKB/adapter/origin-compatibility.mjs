@@ -1,7 +1,7 @@
 /**
  * Samantha GKB — SDK Origin Compatibility Adapter
  *
- * Version: 0.3.0
+ * Version: 0.4.0
  * Target SDK: thetowersdk@0.14.1
  *
  * Responsibilities:
@@ -25,7 +25,7 @@ import { pathToFileURL } from 'node:url';
 const ADAPTER_NAME =
   'Samantha GKB Origin Compatibility Adapter';
 
-const ADAPTER_VERSION = '0.3.0';
+const ADAPTER_VERSION = '0.4.0';
 
 const EXPECTED_SDK_PACKAGE = 'thetowersdk';
 
@@ -378,6 +378,54 @@ export function analyzeOriginCompatibility({
     ? observedOrigins.filter(value => !declaredTypes.includes(value))
     : [];
 
+  // A source-by-source vocabulary matrix. Membership is descriptive only:
+  // it does not assert that similarly named values are semantically equal.
+  const vocabularyValues = uniqueSorted([
+    ...observedOrigins,
+    ...schemaOrigins,
+    ...declaredTypes,
+  ]);
+
+  const originVocabulary = vocabularyValues.map(value => ({
+    value,
+    presentIn: {
+      graph: observedOrigins.includes(value),
+      jsonSchema: schemaOrigins.includes(value),
+      typescript: typescriptInspected
+        ? declaredTypes.includes(value)
+        : null,
+    },
+    mappingStatus: 'UNMAPPED_REQUIRES_REVIEW',
+    semanticEquivalence: 'NOT_ASSESSED',
+  }));
+
+  const vocabularySources = {
+    graph: {
+      sourceReference,
+      inspectionStatus: 'INSPECTED',
+      values: observedOrigins,
+    },
+    jsonSchema: {
+      sourceReference,
+      inspectionStatus: 'STRUCTURAL_DISCOVERY_ONLY',
+      values: schemaOrigins,
+      definitions: schemaDefinitions,
+      limitations: [
+        'External $ref references are not resolved.',
+        'Schema discovery does not establish complete coverage.',
+      ],
+    },
+    typescript: {
+      sourceReference,
+      inspectionStatus: typescriptInspected
+        ? 'INSPECTED_DECLARATION'
+        : 'NOT_INSPECTED',
+      inspectionMethod: typescriptInspectionMethod,
+      values: declaredTypes,
+      declarationLocations: typescriptDeclarationLocations,
+    },
+  };
+
   const conflicts = [];
 
   const groupedOccurrences =
@@ -554,6 +602,9 @@ export function analyzeOriginCompatibility({
 
       schemaDefinitions,
 
+      vocabularySources,
+      originVocabulary,
+
       conflicts,
     },
 
@@ -583,6 +634,9 @@ export function analyzeOriginCompatibility({
       automaticMappingAllowed: false,
 
       semanticEquivalenceEstablished: false,
+
+      policy: 'PRESERVE_SOURCE_VALUES_AND_REPORT_MEMBERSHIP_ONLY',
+      unresolvedValues: vocabularyValues,
     },
 
     importReadiness: {
@@ -835,6 +889,39 @@ export function runSelfTest() {
   ) {
     throw new Error(
       'Self-test failed: original values not preserved'
+    );
+  }
+
+  const vocabularyByValue = new Map(
+    report.compatibility.originVocabulary.map(item => [
+      item.value,
+      item,
+    ])
+  );
+
+  const gameVocabulary = vocabularyByValue.get('game');
+  const inGameVocabulary = vocabularyByValue.get('in-game');
+  const wikiVocabulary = vocabularyByValue.get('wiki');
+
+  if (
+    !gameVocabulary ||
+    gameVocabulary.presentIn.graph !== true ||
+    gameVocabulary.presentIn.jsonSchema !== false ||
+    gameVocabulary.presentIn.typescript !== false ||
+    gameVocabulary.mappingStatus !== 'UNMAPPED_REQUIRES_REVIEW' ||
+    !inGameVocabulary ||
+    inGameVocabulary.presentIn.graph !== false ||
+    inGameVocabulary.presentIn.jsonSchema !== true ||
+    inGameVocabulary.presentIn.typescript !== false ||
+    !wikiVocabulary ||
+    wikiVocabulary.presentIn.graph !== true ||
+    wikiVocabulary.presentIn.jsonSchema !== true ||
+    wikiVocabulary.presentIn.typescript !== true ||
+    report.compatibility.vocabularySources.typescript.inspectionStatus !==
+      'INSPECTED_DECLARATION'
+  ) {
+    throw new Error(
+      'Self-test failed: source-by-source origin vocabulary was not preserved'
     );
   }
 
