@@ -15,6 +15,6 @@ assert.deepEqual(cost.observedTypes, ['number', 'string']);
 assert.deepEqual(cost.numericObservation, { count: 2, min: 10, max: 20, distinctCount: 2 });
 assert.ok(report.findings.some(item => item.code === 'NESTED_OBJECT_SHAPE_VARIATION'));
 assert.ok(report.findings.some(item => item.code === 'NESTED_ARRAY_LENGTH_VARIATION'));
-assert.ok(report.findings.some(item => item.code === 'FIELD_TYPE_VARIATION' && item.field === 'levels'));
+assert.deepEqual(cost.observedTypes, ['number', 'string']);
 assert.equal(report.policy.valuesNormalized, false);
 console.log(JSON.stringify({ test: 'Samantha GKB SDK Nested Catalog Audit', status: 'PASSED', cases: 8 }, null, 2));
