@@ -4,12 +4,14 @@
   "description": "Compact catalog of Epic-minimum modules with unique effects. Non-unique module templates are intentionally excluded.",
   "source": {
     "name": "TheTowerSDK",
-    "package": "thetowersdk",
-    "targetVersion": "0.14.1",
+    "sdkPackage": "thetowersdk",
+    "sdkVersion": "0.14.1",
     "sourceRef": "https://github.com/TmRxJD/TheTowerSDK/blob/main/src/data/modules/templates.ts",
     "sourceFile": "src/data/modules/templates.ts",
-    "retrievedRef": "main",
-    "versionCaveat": "The SDK repository main source was inspected; equivalence to the pinned npm package 0.14.1 was not independently established."
+    "sourceVersion": null,
+    "sourceRevision": "main",
+    "retrievedAt": null,
+    "versionCaveat": "The SDK repository main source was inspected; the exact source commit and retrieval date were not captured. Equivalence to the pinned npm package 0.14.1 was not independently established."
   },
   "classification": "OBJECTIVE",
   "verificationStatus": "EXTERNAL-UNVERIFIED",
