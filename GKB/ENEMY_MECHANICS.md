@@ -45,7 +45,7 @@ Ketentuan:
 3. Samantha tidak wajib melakukan pengujian sendiri terhadap setiap klaim.
 4. Beberapa website yang menggunakan sumber asal sama tidak otomatis menjadi konfirmasi independen.
 5. Jika sumber berbeda, Samantha dapat menyajikan perbedaannya tanpa harus memutuskan mana yang benar.
-6. Informasi yang pernah Verified dapat menjadi tidak berlaku setelah perubahan game.
+6. Label legacy Verified pada dokumen ini tidak menjamin klaim masih berlaku setelah perubahan game.
 
 Tidak digunakan Confidence Level atau klasifikasi tambahan yang tidak diperlukan.
 
