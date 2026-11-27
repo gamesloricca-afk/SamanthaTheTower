@@ -36,7 +36,7 @@ The six content-addressed payloads are:
 5. `sdk-domain-catalogs.json` — 347 raw records across four SDK catalogs.
 6. `review-queue.json` — 1,618 pending assertion reviews.
 
-Verified consecutive stable manifests include runs `45964708978`, `45964899352`, and `45965433662`; the current pointer is `GKB/staging/latest-snapshot.json`. The payload objects are deduplicated under `GKB/staging/objects/`.
+Verified consecutive stable manifests include runs `45964708978`, `45964899352`, `45965433662`, `45965567126`, and `45966118058`; the current pointer is `GKB/staging/latest-snapshot.json`. The payload objects are deduplicated under `GKB/staging/objects/`.
 
 ## Phase 3B — Canonical Mapping
 
@@ -55,6 +55,7 @@ Verified consecutive stable manifests include runs `45964708978`, `45964899352`,
 - Assertion staging produces a separate review queue with `PENDING` decisions.
 - Review decisions use `APPROVE`, `REJECT`, or `DEFER`.
 - Reviewer identity and valid review date are required; duplicate decisions for one staging record are rejected.
+- Decision schema requires canonical mapping only for `APPROVE`; `REJECT` and `DEFER` remain valid without canonical claim data.
 - Reviewer identity and review note are preserved in the canonical source record.
 - `VERIFIED` requires explicit evidence; `CONFLICTING` requires explicit conflict metadata.
 - SDK verification labels are never automatically mapped to Samantha verification statuses.
@@ -68,7 +69,7 @@ Live SDK review queue: 1,618 pending; 0 approved in CI. No real SDK claim was ap
 
 - Only explicit `APPROVE` decisions can enter the import preview.
 - Batch size is limited to 25 claims.
-- Duplicate claim IDs, duplicate decisions, unknown staging references, invalid reviewer metadata, and unregistered domains are rejected.
+- Duplicate claim IDs, duplicate staging IDs, duplicate decisions, unknown staging references for every decision type, invalid reviewer metadata, and unregistered domains are rejected.
 - Importer uses the existing review-gated canonical normalizer.
 - Synthetic test verifies a one-claim approved batch and that its status remains `EXTERNAL-UNVERIFIED` by default.
 - Current command emits `controlled-import-preview.json`; it does not write to canonical domain files.
@@ -85,8 +86,10 @@ Successful live runs:
 - [Run 45964708978](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964708978) — all tests passed and real cross-run comparison returned `UNCHANGED` for all six payload files.
 - [Run 45964899352](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964899352) — repeated the full pipeline successfully; all six payloads again returned `UNCHANGED`.
 - [Run 45965433662](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45965433662) — content-addressed storage migration passed; all six payloads returned `UNCHANGED` and were stored once.
+- [Run 45965567126](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45965567126) — final pre-review pipeline and six-payload comparison passed.
+- [Run 45966118058](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45966118058) — review-decision schema and stricter staging-reference validation passed; latest snapshot persisted successfully.
 
-Latest integrated synthetic test: 15 cases passed. It covers assertion staging, pending review, defer/approve decisions, canonical domain enforcement, reviewer metadata, duplicate rejection, batch-size enforcement, canonical normalization, and persistent snapshot comparison.
+Latest integrated synthetic pipeline test: 20 cases passed. A separate Review Decision Schema test passed 5 cases. Coverage includes APPROVE/REJECT/DEFER schema behavior, explicit review, canonical domain enforcement, reviewer metadata, unknown and duplicate staging references, duplicate claim IDs, the 25-claim batch limit, canonical normalization, and persistent snapshot comparison.
 
 Live source staging against `thetowersdk@0.14.1`:
 - 320 node envelopes.
@@ -112,4 +115,4 @@ All tests ran under the repository's Node.js 20 runtime with pinned dependencies
 
 ## Final status and next step
 
-Phase 3A–3E implementation and CI validation are complete. The feature branch is available in Draft PR #1 targeting `GKB`. The remaining human-controlled actions are PR review/merge authorization and, later, approval of real claims for small controlled canonical imports.
+Phase 3A–3E implementation and CI validation are complete. The review schema mismatch and staging-reference validation gaps found during PR review were corrected and covered by CI. The feature branch is available in PR #1 targeting `GKB`. Real claim approvals and canonical catalog writes remain separately human-controlled.
