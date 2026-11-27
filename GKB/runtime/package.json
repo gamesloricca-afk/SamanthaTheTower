@@ -17,7 +17,9 @@
     "inspect:sdk-data-catalogs": "node ../adapter/sdk-data-catalog-shape-inspector.mjs",
     "test:sdk-mechanics-api": "node ../adapter/sdk-mechanics-api-smoke.mjs",
     "compare:sdk-unique-modules": "node ../adapter/compare-unique-modules-with-sdk.mjs",
-    "inspect:sdk-wiki-contributions-charts": "node ../adapter/sdk-wiki-contributions-charts-inspector.mjs"
+    "inspect:sdk-wiki-contributions-charts": "node ../adapter/sdk-wiki-contributions-charts-inspector.mjs",
+    "test:sdk-assertion-staging": "node ../tests/sdk-assertion-staging.test.mjs",
+    "stage:sdk-assertions": "node ../adapter/sdk-assertion-staging.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
