@@ -59,6 +59,7 @@ const report = {
     edgeCount: graph.edges.length,
     totalAssertions: assertions.length,
     totalNodeSources: sources.length,
+    contradictionRecordCount: Array.isArray(graph.contradictions) ? graph.contradictions.length : null,
     nodeClaimTypeCounts: countBy(graph.nodes, item => item.claimType),
     nodeVerificationCounts: countBy(graph.nodes, item => item.verification)
   },
@@ -72,7 +73,10 @@ const report = {
     verificationCounts: countBy(assertions, item => item.verification),
     missingVerificationCount: assertions.filter(item => typeof item.verification !== 'string').length,
     schemaVerificationEnum: enumValues(assertionSchema.properties?.verification),
-    provenanceKeys: keys(assertions.find(item => isObject(item.provenance))?.provenance)
+    provenanceKeys: keys(assertions.find(item => isObject(item.provenance))?.provenance),
+    provenanceReadAgainstVersionCounts: countBy(assertions, item => item.provenance?.readAgainstVersion),
+    provenanceVerifiedAtCount: assertions.filter(item => typeof item.provenance?.verifiedAt === 'string').length,
+    provenanceRefCount: assertions.filter(item => typeof item.provenance?.ref === 'string').length
   },
   source: {
     observedKeys: keys(sources[0]),
