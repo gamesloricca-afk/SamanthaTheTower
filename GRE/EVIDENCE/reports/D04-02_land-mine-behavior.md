@@ -109,3 +109,16 @@ A June 2025 Reddit post describes using both the ordinary Land Mine Stun card an
 **HOLD — NO GKB PROMOTION.**
 
 Keep Workshop Land Mines, Space Displacer-converted ILMs, and native ILM UW as distinct subjects until a version-matched source supports their relationships.
+
+## Review closure — 2026-11-27
+
+All four registered D04-02 claims have been rechecked against their exact SDK, test, and community source artifacts. This closes the source-audit pass, not the live-game mine-mechanics investigation.
+
+- LM-001: SDK module template and the TowerLoop v29.1.3 guide agree that Space Displacer converts some Workshop mine spawns into moving ILMs, with the listed rarity chances and a 20-mine cap. This is catalog/guide evidence, not native event logic.
+- LM-002: the 2024-03-21 and 2026-11-13 Reddit discussions agree that Workshop Land Mine Stun does not stun ILMs and that ILM stun requires the ILM lab. Both remain community observations without a reproducible test protocol or stated game build. The June 2025 discussion about using both effects does not clearly claim that the ordinary card stuns ILMs.
+- LM-003: the SDK charge helper, builder, constants, and builder tests were rechecked. Tests cover the no-hit Chrono Jump case, ILM+ disabled, and mine-age capping. The 25-second lifetime and 37-second cooldown floor remain SDK model values, not independently verified native values.
+- LM-004: the SDK dropped-mine damage formula and its cap test were rechecked. The cap test covers getDropLandmineDamage; the separate absorb-pool/module-multiplier helper is present in code, but the inspected test does not independently validate all of its behavior.
+
+**Outcome:** 4/4 claims reviewed. Existing verification statuses are retained. No native LandMine/Controller method body, Land Mine Stun eligibility implementation, or version-matched gameplay test was found in the inspected evidence set. No GKB promotion is made.
+
+**Remaining blocker:** native method bodies or reproducible, version-scoped gameplay tests for conversion, stun eligibility, timer/lifetime, and damage.
