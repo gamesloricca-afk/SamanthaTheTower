@@ -21,13 +21,13 @@ Audit the full GRE package slowly and domain by domain before promoting any vali
 
 - Phase 0 — repository and branch safety: complete.
 - Phase 1 — package structure and metadata inventory: initial structural pass complete.
-- Phase 2 — domain-by-domain content audit: in progress; Domains 01–07 have structural audit notes; Domain 09 is paused/skipped because its full JSON is unreadable; Domain 10 has an initial companion-index audit and a full JSON metadata pass. Domains 08 and 11–20 remain pending.
+- Phase 2 — domain-by-domain content audit: in progress; Domains 01–07 have structural audit notes; Domain 09 is paused/skipped because its full JSON is unreadable; Domain 10 has an initial companion-index audit and a full JSON metadata pass. Domain 08 and Domains 12–20 remain pending; Domain 11 has an initial structural audit, with detailed review still in progress.
 - Phase 3 — cross-domain relationship and contradiction audit: pending.
 - Phase 4 — GKB-ready claim extraction and validation: pending.
 
 ## Domain audit notes
 
-See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_domain_inventory.md](01_domain_inventory.md), [02_domain_01_game_fundamentals.md](02_domain_01_game_fundamentals.md), [03_domain_02_enemies.md](03_domain_02_enemies.md), [04_domain_03_battle_conditions.md](04_domain_03_battle_conditions.md), [05_domain_04_combat_mechanics.md](05_domain_04_combat_mechanics.md), [06_domain_05_ultimate_weapons.md](06_domain_05_ultimate_weapons.md), [07_domain_06_workshop.md](07_domain_06_workshop.md), [08_domain_07_workshop_enhancements.md](08_domain_07_workshop_enhancements.md), [09_domain_09_modules_assist.md](09_domain_09_modules_assist.md), [10_domain_09_modules_leveling_benefits.md](10_domain_09_modules_leveling_benefits.md), [11_domain_09_modules_banner_data.md](11_domain_09_modules_banner_data.md), and [12_domain_09_modules_inventory_drops.md](12_domain_09_modules_inventory_drops.md).
+See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_domain_inventory.md](01_domain_inventory.md), [02_domain_01_game_fundamentals.md](02_domain_01_game_fundamentals.md), [03_domain_02_enemies.md](03_domain_02_enemies.md), [04_domain_03_battle_conditions.md](04_domain_03_battle_conditions.md), [05_domain_04_combat_mechanics.md](05_domain_04_combat_mechanics.md), [06_domain_05_ultimate_weapons.md](06_domain_05_ultimate_weapons.md), [07_domain_06_workshop.md](07_domain_06_workshop.md), [08_domain_07_workshop_enhancements.md](08_domain_07_workshop_enhancements.md), [09_domain_09_modules_assist.md](09_domain_09_modules_assist.md), [10_domain_09_modules_leveling_benefits.md](10_domain_09_modules_leveling_benefits.md), [11_domain_09_modules_banner_data.md](11_domain_09_modules_banner_data.md), [12_domain_09_modules_inventory_drops.md](12_domain_09_modules_inventory_drops.md), and [23_domain_11_bots_initial_audit.md](23_domain_11_bots_initial_audit.md).
 
 - Domain 09 findings 31–60: Assist Module slots, progression interfaces, efficiency APIs, and presets.
 - Domain 09 findings 61–90: Module benefit APIs, effect-slot interfaces, shard/reroll-cost lookups, empty-effect handling, and slot level-up interfaces.
@@ -56,3 +56,6 @@ All Domain 09 findings 31–700 are structural observations from direct metadata
 - Domain 09 (Modules): paused/skipped. The full JSON was not readable through the repository connector, so no further index-only batches will be generated. Existing notes remain as historical observations and the source-access gap is preserved.
 
 - Domain 10 (Cards and Masteries): initial companion-index audit in [21_domain_10_cards_masteries_initial_audit.md](21_domain_10_cards_masteries_initial_audit.md). A subsequent full JSON pass retrieved and parsed the 2.1 MB blob through the Git database blob endpoint, confirming all 49 type records and documenting Cards, PlayerData, Main, card ID catalogs, mastery declarations, and drop-rate structures. This remains structural metadata; method behavior and candidate decoded constants are not treated as verified game mechanics. See [22_domain_10_cards_masteries_full_json_metadata.md](22_domain_10_cards_masteries_full_json_metadata.md).
+
+
+- Domain 11 (Bots): initial structural audit recorded in [23_domain_11_bots_initial_audit.md](23_domain_11_bots_initial_audit.md). The source declares 42 type records. The review records selected Bot/BotType/AiState/Bots/UI declarations and decoded candidates, while explicitly leaving full 42-record review and runtime behavior unresolved. No GKB claims were promoted.
