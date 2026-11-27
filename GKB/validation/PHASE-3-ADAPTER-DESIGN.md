@@ -477,3 +477,33 @@ Initial observed result from CI:
 No explicit cross-catalog reference field was established from the selected field mappings. This does not prove that relationships are absent elsewhere in the SDK. No values, units, costs, progression, formulas, or gameplay mechanics were reconciled. All SDK data remains `EXTERNAL-UNVERIFIED`.
 
 Safety: source records are not changed, merged, deduplicated, or promoted. No Samantha canonical IDs, mappings, claims, or relationships are created.
+
+
+## Research–Cards and Masteries SDK catalog comparison audit
+
+Added a read-only comparison report for staged Research and Cards/Masteries exports:
+- `GKB/adapter/sdk-research-cards-masteries-comparison.mjs`
+- `GKB/tests/sdk-research-cards-masteries-comparison.test.mjs`
+- `GKB/schema/sdk-research-cards-masteries-comparison.schema.json`
+- Runtime commands: `test:sdk-research-cards-masteries-comparison` and `report:sdk-research-cards-masteries-comparison`
+- CI artifact: `GKB/reports/sdk-research-cards-masteries-comparison.json`
+
+Comparison rules:
+- Research identifier/label: `slug` / `name`.
+- Cards/Masteries identifier/label: `id` / `name`; mastery label: `masteryName`.
+- Only exact string equality is used for Research.slug ↔ Cards.id, Research.name ↔ Cards.name, and Research.name ↔ Cards.masteryName.
+- Shared top-level fields and separate nested array profiles are reported.
+- Candidate matches are observations only; no entity identity, card/mastery mechanic relationship, or canonical mapping is inferred.
+
+Initial observation from staged SDK 0.14.1 data:
+- Research: 234 records; Cards/Masteries: 32 records.
+- Shared top-level fields: `description` and `name`.
+- Exact Research.slug ↔ Cards.id matches: 1 (`range`).
+- Exact Research.name ↔ Cards.name candidates: 6.
+- Exact Research.name ↔ Cards.masteryName candidates: 1.
+- Research `levels` contains structured objects with `level/cost/duration` fields in the sampled catalog; Cards `levelValues` and `masteryValues` are separate scalar-number arrays. In this SDK snapshot, all 32 card records have 7 `levelValues` entries and 10 `masteryValues` entries.
+- These are source-structure observations only. No values, units, progression, formulas, or gameplay equivalence are validated.
+
+No dedicated cross-catalog reference field was established from these selected fields. The exact match `Research.name = Damage / Meter` and a card's `masteryName = Damage / Meter` is retained as an exact mastery-name candidate only; it is not promoted to a relationship. All SDK records remain `EXTERNAL-UNVERIFIED`.
+
+Safety: no source record is modified, merged, deduplicated, or promoted. No Samantha canonical IDs, mappings, claims, or relationships are created.
