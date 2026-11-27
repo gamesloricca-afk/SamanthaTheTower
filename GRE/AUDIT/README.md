@@ -47,3 +47,5 @@ See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_
 All Domain 09 findings 31–700 are structural observations from direct metadata declarations, not verified runtime mechanics. Decoded constant values remain candidates only.
 
 - Domain 09 findings 701–900: deliberately skipped because the complete `GRE/1/09_modules.json` content could not be read through the repository connector. This is an access limitation, not evidence that the source is empty or that no declarations exist. No findings or GKB claims were fabricated for this range. See [18_domain_09_modules_findings_701-900_source_gap.md](18_domain_09_modules_findings_701-900_source_gap.md).
+
+- Domain 09 findings 901–1000: limited index-level audit of 100 previously unlisted UI method-name entries from the readable `GRE/1/09_modules.md` companion summary (`ModuleDetailsUI` and `ModuleUI`). This does not establish signatures or runtime behavior; the full JSON remains unreadable through the connector. Findings 701–900 remain a separate documented gap. See [19_domain_09_modules_ui_method_index_901-1000.md](19_domain_09_modules_ui_method_index_901-1000.md).
