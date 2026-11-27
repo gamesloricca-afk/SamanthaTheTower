@@ -25,12 +25,12 @@ ajv.addFormat('date', {
 });
 const validate = ajv.compile(schema);
 const valid = validate(registry);
-const invalidCalendarDateRejected = !validate({ ...registry, recordedAt: '2026-02-30' });
 const errors = (validate.errors ?? []).map(error => ({
   instancePath: error.instancePath,
   keyword: error.keyword,
   message: error.message
 }));
+const invalidCalendarDateRejected = !validate({ ...registry, recordedAt: '2026-02-30' });
 
 const ids = registry.sources.map(source => source.id);
 const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
