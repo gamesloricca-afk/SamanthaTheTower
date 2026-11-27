@@ -51,7 +51,15 @@ for (const item of modules) {
 console.log(JSON.stringify({
   test: 'Samantha GKB TheTowerSDK Public Entry-Point Smoke Test',
   status: 'PASSED',
-  sdk: { package: manifest.name, expectedVersion: EXPECTED_VERSION, actualVersion: manifest.version },
+  sdk: {
+    package: manifest.name,
+    expectedVersion: EXPECTED_VERSION,
+    actualVersion: manifest.version,
+    license: manifest.license ?? null,
+    engines: manifest.engines ?? null,
+    dependencies: manifest.dependencies ?? {},
+    publicSubpaths: Object.keys(manifest.exports ?? {}).sort()
+  },
   runtime: { node: process.versions.node, minimumMajor: 20, status: 'COMPATIBLE' },
   moduleCount: results.length,
   modules: results,
