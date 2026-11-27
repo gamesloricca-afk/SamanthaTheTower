@@ -1,90 +1,109 @@
-# Samantha GKB — Phase 3 Completion Report
+# Samantha GKB — Phase 3A–3E Completion Report
 
-**Implementation:** COMPLETED on `phase3-completion`  
-**CI verification:** PASS — workflow runs [45964132479](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964132479) and [45964559484](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964559484)  
-**Integration:** Draft PR [#1](https://github.com/gamesloricca-afk/SamanthaTheTower/pull/1) targeting `GKB`; not merged.
+**Overall status: COMPLETED AND CI-VERIFIED** on branch `phase3-completion`.  
+**Integration status: NOT MERGED.** Draft PR [#1](https://github.com/gamesloricca-afk/SamanthaTheTower/pull/1) targets `GKB`. No changes were made to `GKB` itself, `main`, or `TestAccount`.
 
 ## Objective
 
-Complete Phase 3A–3E without modifying `main` or `TestAccount`, without bulk import, and without automatically promoting SDK claims or choosing between conflicting fan-made sources.
+Build a reliable staging-to-canonical pipeline without bulk import, automatic verification promotion, or automatic selection between conflicting fan-made sources.
 
 ## Phase 3A — Persistent Staging
 
+**VERIFIED**
+
 - Immutable snapshot directory keyed by GitHub Actions run ID.
-- Stores raw generated staging JSON and a manifest with raw-file SHA-256, content SHA-256, byte size, retrieval date, SDK package/version, and previous-run comparison.
-- Content comparison excludes generation/retrieval timestamps to avoid reporting routine run-time changes as content changes; raw-file hashes remain available for integrity.
-- Comparison states: `BASELINE`, `ALGORITHM_CHANGED`, `NEW`, `UNCHANGED`, or `CHANGED`.
-- Refuses to overwrite an existing run snapshot.
-- Workflow commits snapshots to the development branch; CI artifacts are supplementary.
+- Each snapshot stores raw staging JSON plus a manifest with raw-file SHA-256, stable content SHA-256, byte size, retrieval date, SDK package/version, previous-run comparison, and comparison algorithm.
+- Stable content comparison ignores generation/retrieval timestamps while preserving raw-file hashes for integrity.
+- Comparison states: `BASELINE`, `ALGORITHM_CHANGED`, `NEW`, `UNCHANGED`, and `CHANGED`.
+- Existing run snapshots cannot be overwritten.
+- Snapshots are committed to the feature branch; CI artifacts are supplementary.
 
-First verified snapshot:
-- Run ID: `45964132479`
-- SDK: `thetowersdk@0.14.1`
-- Retrieval date: `2026-11-27`
-- Files persisted: 6 JSON staging/review files plus manifest and latest pointer.
-- Review queue: 1,618 assertions, all `PENDING`; 0 approved.
-- Snapshot commit: `7a0b7550061c9a7f0fa72bcec61b36bb3ce40831`.
-- Artifact: `gkb-phase3-45964132479`, 30-day retention.
+Live verification:
+- Run `45964132479`: first persistent baseline snapshot.
+- Run `45964559484`: algorithm migration snapshot; all six files reported `ALGORITHM_CHANGED` because the first baseline predated stable content hashes.
+- Run `45964708978`: compared against the second snapshot; all six staged payloads reported `UNCHANGED`.
+- The synthetic pipeline test also verifies that timestamp-only changes are `UNCHANGED`, payload changes are `CHANGED`, and duplicate run IDs cannot overwrite an existing snapshot.
 
-Second snapshot:
-- Run ID: `45964559484`; previous run: `45964132479`.
-- Six staged payload files were compared. Result: `ALGORITHM_CHANGED` for all six because the first baseline predates the stable content-hash algorithm. This is an explicit migration state, not a source-data conflict.
-- The synthetic pipeline test now verifies that generation/retrieval timestamps alone produce `UNCHANGED`, while payload changes produce `CHANGED`.
-- A third live run is queued by the next branch update to verify stable real-source comparison.
+The six persisted payload files are:
+1. `sdk-claims.json` — 320 node-level staging envelopes.
+2. `sdk-assertions.json` — 1,618 assertion envelopes.
+3. `sdk-edges.json` — 396 relationship candidates.
+4. `sdk-contradictions.json` — 3 contradiction envelopes containing 6 source claims.
+5. `sdk-domain-catalogs.json` — 347 raw records across four SDK catalogs.
+6. `review-queue.json` — 1,618 pending assertion reviews.
+
+The latest verified snapshot is `GKB/staging/snapshots/45964708978/`; the current pointer is `GKB/staging/latest-snapshot.json`.
 
 ## Phase 3B — Canonical Mapping
 
-- Added Samantha-owned domain registry with 20 stable domain IDs and labels.
-- Registry has a JSON Schema and test for unique IDs and labels.
-- Controlled importer accepts only domain IDs or labels in this registry.
-- SDK identifiers remain source identifiers. No IDs are generated from labels, array positions, or fuzzy matches.
-- Existing exact-match crosswalks remain candidates only; no mapping is approved automatically.
-- The registry does not claim that every domain has a populated canonical catalog.
+**VERIFIED**
+
+- Added a Samantha-owned canonical domain registry with 20 stable domain IDs and labels.
+- Added JSON Schema and tests for the registry; all 20 IDs and labels are unique.
+- Controlled import accepts only a registered domain ID or label.
+- SDK IDs and exact-name matches remain source identifiers/candidates; no Samantha claim IDs or entity mappings are generated automatically.
+- Domain registry availability does not imply that every domain already has a populated canonical catalog.
 
 ## Phase 3C — Review Workflow
 
-- Review queue is generated from assertion staging with `PENDING` state.
-- Decisions are separate records: `APPROVE`, `REJECT`, or `DEFER`.
-- Each decision requires reviewer and review date; duplicate decisions for one staging record are rejected.
-- Approval defaults to `EXTERNAL-UNVERIFIED`; `VERIFIED` requires explicit evidence; `CONFLICTING` requires conflict metadata.
+**VERIFIED**
+
+- Assertion staging produces a separate review queue with `PENDING` decisions.
+- Review decisions use `APPROVE`, `REJECT`, or `DEFER`.
+- Reviewer identity and valid review date are required; duplicate decisions for one staging record are rejected.
 - Reviewer identity and review note are preserved in the canonical source record.
-- No source ranking or automatic conflict resolution.
+- `VERIFIED` requires explicit evidence; `CONFLICTING` requires explicit conflict metadata.
+- SDK verification labels are never automatically mapped to Samantha verification statuses.
+- No source authority ranking or conflict winner selection occurs.
+
+Live SDK review queue: 1,618 pending; 0 approved in CI. No real SDK claim was approved automatically.
 
 ## Phase 3D — Controlled Import
 
-- Importer accepts only explicit approvals and enforces a maximum of 25 claims per batch.
-- Duplicate canonical IDs, duplicate decision references, unregistered domains, invalid reviewer metadata, and missing staging references are rejected.
-- The command writes an import preview only; it does not write to canonical domain files.
-- Production import of real claims requires reviewed decision records and a separate explicit integration step.
+**VERIFIED — importer and synthetic batch test**
+
+- Only explicit `APPROVE` decisions can enter the import preview.
+- Batch size is limited to 25 claims.
+- Duplicate claim IDs, duplicate decisions, unknown staging references, invalid reviewer metadata, and unregistered domains are rejected.
+- Importer uses the existing review-gated canonical normalizer.
+- Synthetic test verifies a one-claim approved batch and that its status remains `EXTERNAL-UNVERIFIED` by default.
+- Current command emits `controlled-import-preview.json`; it does not write to canonical domain files.
+
+**Not performed:** importing real SDK claims into canonical domain files. There are no user-approved real review decisions yet, so no real claims were imported. This is intentional and preserves the review gate.
 
 ## Phase 3E — End-to-End Validation
 
-Workflow run `45964132479` completed successfully:
-- Node.js 20 runtime and pinned dependency verification passed.
-- SDK claim staging test: 15 cases passed.
-- SDK assertion staging test: 25 cases passed.
-- SDK edge staging test: 24 cases passed.
-- SDK contradiction staging test: 22 cases passed.
-- SDK domain catalog staging test: 22 cases passed.
-- Review-gated normalizer test: 22 cases passed.
-- Source comparison validator test: 14 cases passed.
-- Canonical domain registry test passed (20 unique domains).
-- Phase 3 integrated synthetic pipeline test: 15 cases passed, including stable content-hash comparison, canonical domain registry enforcement, reviewer metadata, duplicate detection, and the 25-claim batch limit.
-- Real SDK staging outputs generated: 320 node claims, 1,618 assertion envelopes, 396 edges, 3 contradiction records (6 source claims), and 347 catalog records across Research, Workshop, Cards/Masteries, and Perks.
-- No canonical import or verification promotion was performed.
+**VERIFIED**
 
-A passing test proves pipeline behavior and schema compatibility, not gameplay truth.
+Successful live runs:
+- [Run 45964132479](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964132479) — initial pipeline and first persistent snapshot.
+- [Run 45964559484](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964559484) — updated pipeline tests and second snapshot. The first attempt at this code revision exposed an incorrect test expectation; the test was corrected, and this run passed.
+- [Run 45964708978](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964708978) — all tests passed and real cross-run comparison returned `UNCHANGED` for all six payload files.
 
-## Safety and interpretation
+Latest integrated synthetic test: 15 cases passed. It covers assertion staging, pending review, defer/approve decisions, canonical domain enforcement, reviewer metadata, duplicate rejection, batch-size enforcement, canonical normalization, and persistent snapshot comparison.
 
-- SDK package version, SDK graph game-version marker, publication date, and retrieval date remain distinct.
-- Unknown source fields remain in original staging records and canonical `sourceRecord`.
-- Contradictory source claims remain separate; no winner is selected.
-- Account-specific save data is not imported into universal GKB.
-- No bulk import, `main` update, `TestAccount` update, or merge was performed.
+Live source staging against `thetowersdk@0.14.1`:
+- 320 node envelopes.
+- 1,618 assertion envelopes.
+- 396 edge envelopes.
+- 3 contradiction envelopes / 6 source claims.
+- 347 domain catalog records.
+- 1,618 pending review queue entries.
+- 0 canonical claims imported; 0 verification statuses promoted.
 
-## Remaining verification
+All tests ran under the repository's Node.js 20 runtime with pinned dependencies.
 
-- Inspect the next live snapshot to confirm stable content hashes report `UNCHANGED` when SDK content is unchanged.
-- Keep PR #1 in draft until that comparison is inspected.
-- Real human review and any canonical catalog write are intentionally outside the synthetic CI test.
+## Safety and boundaries
+
+- SDK package remains pinned to `thetowersdk@0.14.1`.
+- SDK package version, SDK game-version marker, publication date, and retrieval date remain separate.
+- Unknown source fields and original SDK records are preserved.
+- Conflicting source claims remain separate; no winner is selected.
+- No bulk import.
+- No account-specific save data was promoted into universal GKB.
+- No `main` or `TestAccount` modification.
+- No merge has been performed.
+
+## Final status and next step
+
+Phase 3A–3E implementation and CI validation are complete. The feature branch is available in Draft PR #1 targeting `GKB`. The remaining human-controlled actions are PR review/merge authorization and, later, approval of real claims for small controlled canonical imports.
