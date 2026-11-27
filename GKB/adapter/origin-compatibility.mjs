@@ -1,7 +1,7 @@
 /**
  * Samantha GKB — SDK Origin Compatibility Adapter
  *
- * Version: 0.2.2
+ * Version: 0.3.0
  * Target SDK: thetowersdk@0.14.1
  *
  * Responsibilities:
@@ -25,7 +25,7 @@ import { pathToFileURL } from 'node:url';
 const ADAPTER_NAME =
   'Samantha GKB Origin Compatibility Adapter';
 
-const ADAPTER_VERSION = '0.2.2';
+const ADAPTER_VERSION = '0.3.0';
 
 const EXPECTED_SDK_PACKAGE = 'thetowersdk';
 
@@ -282,6 +282,8 @@ export function analyzeOriginCompatibility({
   graph,
   schema,
   typescriptOrigins,
+  typescriptInspectionMethod = 'EXPLICITLY_SUPPLIED_VALUES',
+  typescriptDeclarationLocations = null,
   sourceReference = null,
   inspectionDate = new Date().toISOString(),
 }) {
@@ -317,6 +319,14 @@ export function analyzeOriginCompatibility({
     throw new TypeError(
       'typescriptOrigins must be null or an array of strings'
     );
+  }
+
+  if (typeof typescriptInspectionMethod !== 'string' || typescriptInspectionMethod.trim() === '') {
+    throw new TypeError('typescriptInspectionMethod must be a non-empty string');
+  }
+
+  if (typescriptDeclarationLocations !== null && !Array.isArray(typescriptDeclarationLocations)) {
+    throw new TypeError('typescriptDeclarationLocations must be an array or null');
   }
 
   if (typeof inspectionDate !== 'string') {
@@ -433,9 +443,9 @@ export function analyzeOriginCompatibility({
       evidence: {
         typescript: {
           sourceReference,
-          inspectionMethod: 'EXPLICITLY_SUPPLIED_VALUES',
+          inspectionMethod: typescriptInspectionMethod,
           values: declaredTypes,
-          declarationLocations: null,
+          declarationLocations: typescriptDeclarationLocations,
         },
         schema: {
           sourceReference,
@@ -463,9 +473,9 @@ export function analyzeOriginCompatibility({
         },
         typescript: {
           sourceReference,
-          inspectionMethod: 'EXPLICITLY_SUPPLIED_VALUES',
+          inspectionMethod: typescriptInspectionMethod,
           declaredOrigins: declaredTypes,
-          declarationLocations: null,
+          declarationLocations: typescriptDeclarationLocations,
         },
       },
       resolution: 'UNRESOLVED',
@@ -534,7 +544,7 @@ export function analyzeOriginCompatibility({
       schemaOrigins,
       typescriptOrigins: declaredTypes,
       typescriptInspectionStatus: typescriptInspected
-        ? 'INSPECTED_EXPLICIT_VALUES'
+        ? (typescriptInspectionMethod === 'AUTOMATIC_DTS_PARSE' ? 'INSPECTED_DECLARATION' : 'INSPECTED_EXPLICIT_VALUES')
         : 'NOT_INSPECTED',
 
       observedNotInSchema,
@@ -589,7 +599,7 @@ export function analyzeOriginCompatibility({
     limitations: [
       'JSON Schema $ref references are not resolved.',
       'Schema discovery does not establish complete schema coverage.',
-      'TypeScript declarations are supplied manually.',
+      'TypeScript declaration parsing is limited to explicitly supported declaration syntax.',
       'No semantic equivalence between origin values is assumed.',
       'No factual game-mechanics verification is performed.',
       'No SDK redistribution rights are assessed.',
