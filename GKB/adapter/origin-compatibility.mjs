@@ -1,7 +1,7 @@
 /**
  * Samantha GKB — SDK Origin Compatibility Adapter
  *
- * Version: 0.2.1
+ * Version: 0.2.2
  * Target SDK: thetowersdk@0.14.1
  *
  * Responsibilities:
@@ -25,7 +25,7 @@ import { pathToFileURL } from 'node:url';
 const ADAPTER_NAME =
   'Samantha GKB Origin Compatibility Adapter';
 
-const ADAPTER_VERSION = '0.2.1';
+const ADAPTER_VERSION = '0.2.2';
 
 const EXPECTED_SDK_PACKAGE = 'thetowersdk';
 
@@ -371,6 +371,24 @@ export function analyzeOriginCompatibility({
   const groupedOccurrences =
     groupOriginOccurrences(occurrences);
 
+  function graphLocationsFor(origin) {
+    return occurrences
+      .filter(item => item.validString && item.origin === origin)
+      .map(item => ({
+        path: item.path,
+        valueType: item.valueType,
+      }));
+  }
+
+  function schemaDefinitionsFor(origin) {
+    return schemaDefinitions
+      .filter(definition => definition.values.includes(origin))
+      .map(definition => ({
+        path: definition.path,
+        values: definition.values,
+      }));
+  }
+
   for (const origin of observedNotInSchema) {
     const group = groupedOccurrences.find(
       item => item.origin === origin
@@ -385,6 +403,17 @@ export function analyzeOriginCompatibility({
       resolution: 'UNRESOLVED',
       occurrenceCount: group?.occurrenceCount ?? 0,
       locations: group?.locations ?? [],
+      evidence: {
+        graph: {
+          sourceReference,
+          locations: graphLocationsFor(origin),
+        },
+        schema: {
+          sourceReference,
+          definitions: schemaDefinitionsFor(origin),
+          allowsOrigin: false,
+        },
+      },
     });
   }
 
@@ -398,6 +427,18 @@ export function analyzeOriginCompatibility({
       status: 'CONFLICTING',
       typescriptNotInSchema,
       schemaNotInTypescript,
+      evidence: {
+        typescript: {
+          sourceReference,
+          inspectionMethod: 'EXPLICITLY_SUPPLIED_VALUES',
+          values: declaredTypes,
+          declarationLocations: null,
+        },
+        schema: {
+          sourceReference,
+          definitions: schemaDefinitions,
+        },
+      },
       resolution: 'UNRESOLVED',
     });
   }
@@ -409,7 +450,22 @@ export function analyzeOriginCompatibility({
       status: 'CONFLICTING',
       graphOriginsNotInTypescript:
         observedNotInTypescript,
-      resolution: 'REVIEW_REQUIRED',
+      evidence: {
+        graph: {
+          sourceReference,
+          origins: observedNotInTypescript.map(origin => ({
+            value: origin,
+            locations: graphLocationsFor(origin),
+          })),
+        },
+        typescript: {
+          sourceReference,
+          inspectionMethod: 'EXPLICITLY_SUPPLIED_VALUES',
+          declaredOrigins: declaredTypes,
+          declarationLocations: null,
+        },
+      },
+      resolution: 'UNRESOLVED',
     });
   }
 
@@ -423,6 +479,7 @@ export function analyzeOriginCompatibility({
         originalValue: preserveReportValue(item.origin),
         valueType: item.valueType,
         path: item.path,
+        sourceReference,
       })),
       resolution: 'UNRESOLVED',
     });
@@ -679,6 +736,51 @@ export function runSelfTest() {
   if (!graphSchemaConflict) {
     throw new Error(
       'Self-test failed: expected graph/schema conflict'
+    );
+  }
+
+  if (
+    graphSchemaConflict.evidence?.graph?.locations?.length !== 2 ||
+    graphSchemaConflict.evidence?.schema?.definitions?.length !== 0 ||
+    graphSchemaConflict.evidence?.graph?.sourceReference !==
+      'synthetic-self-test'
+  ) {
+    throw new Error(
+      'Self-test failed: graph/schema conflict evidence is incomplete'
+    );
+  }
+
+  const graphTypescriptConflict =
+    report.compatibility.conflicts.find(
+      conflict =>
+        conflict.id === 'ORIGIN_GRAPH_TYPESCRIPT_MISMATCH'
+    );
+
+  if (
+    !graphTypescriptConflict ||
+    graphTypescriptConflict.evidence?.graph?.origins?.[0]?.locations?.length !== 2 ||
+    graphTypescriptConflict.evidence?.typescript?.inspectionMethod !==
+      'EXPLICITLY_SUPPLIED_VALUES'
+  ) {
+    throw new Error(
+      'Self-test failed: graph/TypeScript conflict evidence is incomplete'
+    );
+  }
+
+  const typescriptSchemaConflict =
+    report.compatibility.conflicts.find(
+      conflict =>
+        conflict.id === 'ORIGIN_TYPESCRIPT_SCHEMA_MISMATCH'
+    );
+
+  if (
+    !typescriptSchemaConflict ||
+    typescriptSchemaConflict.evidence?.typescript?.sourceReference !==
+      'synthetic-self-test' ||
+    !Array.isArray(typescriptSchemaConflict.evidence?.schema?.definitions)
+  ) {
+    throw new Error(
+      'Self-test failed: TypeScript/schema conflict evidence is incomplete'
     );
   }
 
