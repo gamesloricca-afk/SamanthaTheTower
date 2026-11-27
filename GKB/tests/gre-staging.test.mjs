@@ -41,10 +41,14 @@ assert.equal(sdkClaim.sourceGameVersion,'UNKNOWN');
 assert.equal(sdkClaim.sourceSdkVersion,'`thetowersdk@0.14.1`');
 assert.equal(sdkClaim.domainCandidate,'combat-mechanics');
 assert.equal(sdkClaim.sourceReferences[0],'SRC-SDK-THETOWERSDK-0141');
+const multiDomain=a.records.find(x=>x.sourceClaimId==='CLM-D04-DR-006');
+assert.deepEqual(multiDomain.domainCandidates,['combat-mechanics','enemies']);
+assert.equal(multiDomain.domainCandidate,null);
 
 const conflict=a.records.find(x=>x.recordKind==='GRE_CONFLICT');
 assert.equal(conflict.sourceConflictId,'CNF-D04-DR-001');
 assert.equal(conflict.conflictState,'OPEN — source disagreement preserved');
+assert.ok(!conflict.sourceConflictId.includes('`'));
 assert.deepEqual(new Set(conflict.relatedSourceClaimIds),new Set([
   'CLM-D04-DR-001','CLM-D04-DR-003','CLM-D04-DR-004','CLM-D04-DR-005'
 ]));
