@@ -100,7 +100,7 @@ function parseSource(file, root) {
     metadataFormatVersion: field(raw,'GRE metadata format'),
     branchRef: field(raw,'Branch/ref inspected'),
     inspectedCommit: field(raw,'Inspected commit'),
-    publicationDate: raw.match(/^\\s*-\\s*(?:Page )?Publication(?:\\/update)? date(?: shown)?:\\s*(.*)$/mi)?.[1]?.trim() ?? field(raw,'Commit date') ?? field(raw,'Source date'),
+    publicationDate: raw.match(/^\s*-\s*(?:Page )?Publication(?:\/update)? date(?: shown)?:\s*(.*)$/mi)?.[1]?.trim() ?? field(raw,'Commit date') ?? field(raw,'Source date'),
     retrievedAt: field(raw,'Access date'),
     gameVersion: field(raw,'Game version/build') ?? field(raw,'Game version/build scope') ?? field(raw,'Game version context') ?? field(raw,'Game version stated') ?? field(raw,'Game version/build represented by the inspected damage-reduction routines') ?? field(raw,'Game version'),
     license: field(raw,'Package license') ?? field(raw,'License'),
