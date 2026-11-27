@@ -479,7 +479,8 @@ async function main() {
       'Schema validation does not establish factual correctness.',
       'Schema validation does not verify game mechanics.',
       'Redistribution rights are not assessed.',
-      'TypeScript parsing supports named string-literal union declarations only.',\n      'Origin Registry provenance is attached without changing raw SDK origin values.'
+      'TypeScript parsing supports named string-literal union declarations only.',
+      'Origin Registry provenance is attached without changing raw SDK origin values.'
     ],
 
     reportFile: 'GKB/reports/sdk-knowledge-graph-validation-report.json'
