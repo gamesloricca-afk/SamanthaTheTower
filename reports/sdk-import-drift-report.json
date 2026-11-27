@@ -1,0 +1,17 @@
+{
+  "test": "Samantha GKB SDK Import Manifest Drift",
+  "status": "NO_DRIFT",
+  "sdkVersion": "0.14.1",
+  "retrievedAt": "2026-11-27",
+  "baselineReference": "GKB/sources/sdk-import-baseline.json",
+  "changes": [],
+  "policy": {
+    "baselineUpdated": false,
+    "sourceDataModified": false,
+    "canonicalImportPerformed": false
+  },
+  "limitations": [
+    "Drift is a change signal, not a correctness verdict.",
+    "A baseline must be reviewed and committed explicitly."
+  ]
+}

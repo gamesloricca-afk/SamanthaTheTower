@@ -1,0 +1,74 @@
+{
+  "test": "Samantha GKB SDK Staging Integrity Report",
+  "status": "PASSED",
+  "sdkVersion": "0.14.1",
+  "registryVersion": "1.0.0",
+  "retrievedAt": "2026-11-27",
+  "sourceCounts": {
+    "nodes": 320,
+    "assertions": 1618,
+    "edges": 396,
+    "contradictions": 3
+  },
+  "stagingCounts": {
+    "nodeEnvelopes": 320,
+    "assertionEnvelopes": 1618,
+    "edgeEnvelopes": 396,
+    "contradictionEnvelopes": 3,
+    "total": 2337
+  },
+  "assertionVerification": {
+    "counts": {
+      "unverified": 266,
+      "verified_here": 554,
+      "contradicted": 1
+    },
+    "missing": 797
+  },
+  "relationshipCandidates": {
+    "GATES": 57,
+    "DERIVED_FROM": 14,
+    "MEMBER_OF": 172,
+    "SCALES": 87,
+    "CAPS": 36,
+    "INDEPENDENT_OF": 19,
+    "SEPARATE_PURCHASE_FROM": 6,
+    "APPLIED_BEFORE": 5
+  },
+  "contradictionSourceClaims": 6,
+  "originCounts": {
+    "code": 1522,
+    "wiki": 884,
+    "user": 82,
+    "game": 70,
+    "save": 10,
+    "sheet": 11
+  },
+  "sourceRecordPreservation": {
+    "nodes": true,
+    "assertions": true,
+    "edges": true,
+    "graphContradictions": true,
+    "sdkContradictionAnalysis": true,
+    "allRawOriginsPreserved": true
+  },
+  "links": {
+    "assertionToNode": true,
+    "edgeEndpointsToNodes": true
+  },
+  "policy": {
+    "canonicalClaimsCreated": false,
+    "canonicalRelationshipsCreated": false,
+    "canonicalConflictsCreated": false,
+    "verificationPromoted": false,
+    "sdkLikelyValueUsedAsWinner": false,
+    "originSemanticsAutomaticallyMapped": false,
+    "bulkImportPerformed": false
+  },
+  "limitations": [
+    "This report validates staging structure and source preservation only.",
+    "It does not assess whether any game mechanic or community statement is true.",
+    "SDK source labels remain unverified until Samantha review.",
+    "The known SDK JSON Schema origin mismatch remains unresolved."
+  ]
+}

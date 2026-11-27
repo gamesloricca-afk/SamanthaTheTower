@@ -1,0 +1,1061 @@
+{
+  "reportVersion": "1.0.0",
+  "test": "Samantha GKB SDK Research–Workshop Catalog Comparison",
+  "status": "PASSED",
+  "source": {
+    "name": "TheTowerSDK",
+    "sdkPackage": "thetowersdk",
+    "sdkVersion": "0.14.1",
+    "sdkGameVersion": "v28.3.0",
+    "retrievedAt": "2026-11-27",
+    "classification": "OBJECTIVE",
+    "verificationStatus": "EXTERNAL-UNVERIFIED",
+    "note": "Raw SDK catalog staging only. SDK package version and game-version marker are separate. No values are independently verified or promoted."
+  },
+  "scope": {
+    "research": {
+      "domain": "Research",
+      "sourceRef": "thetowersdk/data#LAB_CATALOG",
+      "exportName": "LAB_CATALOG",
+      "recordCount": 234,
+      "identifierField": "slug",
+      "labelField": "name"
+    },
+    "workshop": {
+      "domain": "Workshop",
+      "sourceRef": "thetowersdk/data#getWorkshopStatDefinitions",
+      "exportName": "getWorkshopStatDefinitions()",
+      "recordCount": 47,
+      "identifierField": "key",
+      "labelField": "label"
+    }
+  },
+  "summary": {
+    "sharedTopLevelFieldCount": 2,
+    "sharedTopLevelFields": [
+      "category",
+      "levels"
+    ],
+    "researchOnlyTopLevelFields": [
+      "base",
+      "description",
+      "name",
+      "slug",
+      "unit",
+      "value"
+    ],
+    "workshopOnlyTopLevelFields": [
+      "key",
+      "label",
+      "maxLevel",
+      "minLevel"
+    ],
+    "exactResearchSlugWorkshopKeyMatches": 0,
+    "exactResearchNameWorkshopLabelCandidates": 21,
+    "ambiguousResearchNameWorkshopLabelCandidates": 0,
+    "exactResearchNameWorkshopKeyTextMatches": 20,
+    "explicitCrossCatalogReferenceStatus": "NOT_ESTABLISHED_FROM_SELECTED_FIELDS"
+  },
+  "fieldComparison": {
+    "sharedFields": [
+      {
+        "field": "category",
+        "researchObservedTypes": [
+          "string"
+        ],
+        "workshopObservedTypes": [
+          "string"
+        ]
+      },
+      {
+        "field": "levels",
+        "researchObservedTypes": [
+          "array"
+        ],
+        "workshopObservedTypes": [
+          "array"
+        ]
+      }
+    ],
+    "nestedLevelsForExactLabelCandidates": {
+      "pairedRecordCount": 21,
+      "researchObjectKeyShapes": [
+        {
+          "keys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "occurrenceCount": 1463
+        }
+      ],
+      "workshopObjectKeyShapes": [
+        {
+          "keys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ],
+          "occurrenceCount": 28197
+        }
+      ],
+      "researchLevelCountStats": {
+        "count": 21,
+        "min": 20,
+        "max": 100,
+        "distinctCount": 6
+      },
+      "workshopLevelCountStats": {
+        "count": 21,
+        "min": 36,
+        "max": 6001,
+        "distinctCount": 13
+      },
+      "pairedRecordLevelCounts": [
+        {
+          "researchSlug": "attack_speed",
+          "researchName": "Attack Speed",
+          "workshopKey": "Attack Speed",
+          "workshopLabel": "Attack Speed",
+          "researchCategory": "Attack",
+          "workshopCategory": "attack",
+          "categoryExactEqual": false,
+          "researchLevelCount": 99,
+          "workshopLevelCount": 100,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "cash_bonus",
+          "researchName": "Cash Bonus",
+          "workshopKey": "Cash Bonus",
+          "workshopLabel": "Cash Bonus",
+          "researchCategory": "Utility",
+          "workshopCategory": "utility",
+          "categoryExactEqual": false,
+          "researchLevelCount": 99,
+          "workshopLevelCount": 150,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "cash_wave",
+          "researchName": "Cash / Wave",
+          "workshopKey": "Cash / Wave",
+          "workshopLabel": "Cash / Wave",
+          "researchCategory": "Utility",
+          "workshopCategory": "utility",
+          "categoryExactEqual": false,
+          "researchLevelCount": 99,
+          "workshopLevelCount": 150,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "coins_kill_bonus",
+          "researchName": "Coins / Kill Bonus",
+          "workshopKey": "Coins / Kill Bonus",
+          "workshopLabel": "Coins / Kill Bonus",
+          "researchCategory": "Utility",
+          "workshopCategory": "utility",
+          "categoryExactEqual": false,
+          "researchLevelCount": 99,
+          "workshopLevelCount": 150,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "coins_per_wave",
+          "researchName": "Coins / Wave",
+          "workshopKey": "Coins / Wave",
+          "workshopLabel": "Coins / Wave",
+          "researchCategory": "Utility",
+          "workshopCategory": "utility",
+          "categoryExactEqual": false,
+          "researchLevelCount": 99,
+          "workshopLevelCount": 150,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "critical_factor",
+          "researchName": "Critical Factor",
+          "workshopKey": "Critical Factor",
+          "workshopLabel": "Critical Factor",
+          "researchCategory": "Attack",
+          "workshopCategory": "attack",
+          "categoryExactEqual": false,
+          "researchLevelCount": 99,
+          "workshopLevelCount": 151,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "damage",
+          "researchName": "Damage",
+          "workshopKey": "Damage",
+          "workshopLabel": "Damage",
+          "researchCategory": "Attack",
+          "workshopCategory": "attack",
+          "categoryExactEqual": false,
+          "researchLevelCount": 100,
+          "workshopLevelCount": 6001,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "damage_meter",
+          "researchName": "Damage / Meter",
+          "workshopKey": "Damage / Meter",
+          "workshopLabel": "Damage / Meter",
+          "researchCategory": "Attack",
+          "workshopCategory": "attack",
+          "categoryExactEqual": false,
+          "researchLevelCount": 99,
+          "workshopLevelCount": 201,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "defense",
+          "researchName": "Defense %",
+          "workshopKey": "Defense Percent",
+          "workshopLabel": "Defense %",
+          "researchCategory": "Defense",
+          "workshopCategory": "defense",
+          "categoryExactEqual": false,
+          "researchLevelCount": 50,
+          "workshopLevelCount": 100,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "defense_absolute",
+          "researchName": "Defense Absolute",
+          "workshopKey": "Defense Absolute",
+          "workshopLabel": "Defense Absolute",
+          "researchCategory": "Defense",
+          "workshopCategory": "defense",
+          "categoryExactEqual": false,
+          "researchLevelCount": 100,
+          "workshopLevelCount": 5001,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "enemy_attack_level_skip",
+          "researchName": "Enemy Attack Level Skip",
+          "workshopKey": "Enemy Attack Level Skip",
+          "workshopLabel": "Enemy Attack Level Skip",
+          "researchCategory": "Utility",
+          "workshopCategory": "utility",
+          "categoryExactEqual": false,
+          "researchLevelCount": 20,
+          "workshopLevelCount": 700,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "enemy_health_level_skip",
+          "researchName": "Enemy Health Level Skip",
+          "workshopKey": "Enemy Health Level Skip",
+          "workshopLabel": "Enemy Health Level Skip",
+          "researchCategory": "Utility",
+          "workshopCategory": "utility",
+          "categoryExactEqual": false,
+          "researchLevelCount": 20,
+          "workshopLevelCount": 700,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "health",
+          "researchName": "Health",
+          "workshopKey": "Health",
+          "workshopLabel": "Health",
+          "researchCategory": "Defense",
+          "workshopCategory": "defense",
+          "categoryExactEqual": false,
+          "researchLevelCount": 100,
+          "workshopLevelCount": 6001,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "health_regen",
+          "researchName": "Health Regen",
+          "workshopKey": "Health Regen",
+          "workshopLabel": "Health Regen",
+          "researchCategory": "Defense",
+          "workshopCategory": "defense",
+          "categoryExactEqual": false,
+          "researchLevelCount": 100,
+          "workshopLevelCount": 6001,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "land_mine_damage",
+          "researchName": "Land Mine Damage",
+          "workshopKey": "Land Mine Damage",
+          "workshopLabel": "Land Mine Damage",
+          "researchCategory": "Defense",
+          "workshopCategory": "defense",
+          "categoryExactEqual": false,
+          "researchLevelCount": 20,
+          "workshopLevelCount": 201,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "range",
+          "researchName": "Range",
+          "workshopKey": "Range",
+          "workshopLabel": "Range",
+          "researchCategory": "Attack",
+          "workshopCategory": "attack",
+          "categoryExactEqual": false,
+          "researchLevelCount": 80,
+          "workshopLevelCount": 80,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "shockwave_size",
+          "researchName": "Shockwave Size",
+          "workshopKey": "Shockwave Size",
+          "workshopLabel": "Shockwave Size",
+          "researchCategory": "Defense",
+          "workshopCategory": "defense",
+          "categoryExactEqual": false,
+          "researchLevelCount": 20,
+          "workshopLevelCount": 36,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "super_crit_chance",
+          "researchName": "Super Crit Chance",
+          "workshopKey": "Super Crit Chance",
+          "workshopLabel": "Super Crit Chance",
+          "researchCategory": "Attack",
+          "workshopCategory": "attack",
+          "categoryExactEqual": false,
+          "researchLevelCount": 50,
+          "workshopLevelCount": 101,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "super_crit_multi",
+          "researchName": "Super Crit Mult",
+          "workshopKey": "Super Crit Mult",
+          "workshopLabel": "Super Crit Mult",
+          "researchCategory": "Attack",
+          "workshopCategory": "attack",
+          "categoryExactEqual": false,
+          "researchLevelCount": 40,
+          "workshopLevelCount": 121,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "wall_health",
+          "researchName": "Wall Health",
+          "workshopKey": "Wall Health",
+          "workshopLabel": "Wall Health",
+          "researchCategory": "Defense",
+          "workshopCategory": "defense",
+          "categoryExactEqual": false,
+          "researchLevelCount": 50,
+          "workshopLevelCount": 1801,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        },
+        {
+          "researchSlug": "wall_rebuild",
+          "researchName": "Wall Rebuild",
+          "workshopKey": "Wall Rebuild",
+          "workshopLabel": "Wall Rebuild",
+          "researchCategory": "Defense",
+          "workshopCategory": "defense",
+          "categoryExactEqual": false,
+          "researchLevelCount": 20,
+          "workshopLevelCount": 301,
+          "researchLevelObjectKeys": [
+            "cost",
+            "duration",
+            "level"
+          ],
+          "workshopLevelObjectKeys": [
+            "cash",
+            "coins",
+            "level",
+            "value"
+          ]
+        }
+      ]
+    }
+  },
+  "exactLabelCandidates": [
+    {
+      "researchSourceIndex": 18,
+      "researchSlug": "attack_speed",
+      "researchName": "Attack Speed",
+      "researchCategory": "Attack",
+      "workshopSourceIndex": 1,
+      "workshopKey": "Attack Speed",
+      "workshopLabel": "Attack Speed",
+      "workshopCategory": "attack",
+      "categoryExactEqual": false,
+      "researchLevelCount": 99,
+      "workshopLevelCount": 100,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 39,
+      "researchSlug": "cash_bonus",
+      "researchName": "Cash Bonus",
+      "researchCategory": "Utility",
+      "workshopSourceIndex": 34,
+      "workshopKey": "Cash Bonus",
+      "workshopLabel": "Cash Bonus",
+      "workshopCategory": "utility",
+      "categoryExactEqual": false,
+      "researchLevelCount": 99,
+      "workshopLevelCount": 150,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 40,
+      "researchSlug": "cash_wave",
+      "researchName": "Cash / Wave",
+      "researchCategory": "Utility",
+      "workshopSourceIndex": 35,
+      "workshopKey": "Cash / Wave",
+      "workshopLabel": "Cash / Wave",
+      "workshopCategory": "utility",
+      "categoryExactEqual": false,
+      "researchLevelCount": 99,
+      "workshopLevelCount": 150,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 50,
+      "researchSlug": "coins_kill_bonus",
+      "researchName": "Coins / Kill Bonus",
+      "researchCategory": "Utility",
+      "workshopSourceIndex": 36,
+      "workshopKey": "Coins / Kill Bonus",
+      "workshopLabel": "Coins / Kill Bonus",
+      "workshopCategory": "utility",
+      "categoryExactEqual": false,
+      "researchLevelCount": 99,
+      "workshopLevelCount": 150,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 51,
+      "researchSlug": "coins_per_wave",
+      "researchName": "Coins / Wave",
+      "researchCategory": "Utility",
+      "workshopSourceIndex": 37,
+      "workshopKey": "Coins / Wave",
+      "workshopLabel": "Coins / Wave",
+      "workshopCategory": "utility",
+      "categoryExactEqual": false,
+      "researchLevelCount": 99,
+      "workshopLevelCount": 150,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 59,
+      "researchSlug": "critical_factor",
+      "researchName": "Critical Factor",
+      "researchCategory": "Attack",
+      "workshopSourceIndex": 3,
+      "workshopKey": "Critical Factor",
+      "workshopLabel": "Critical Factor",
+      "workshopCategory": "attack",
+      "categoryExactEqual": false,
+      "researchLevelCount": 99,
+      "workshopLevelCount": 151,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 61,
+      "researchSlug": "damage",
+      "researchName": "Damage",
+      "researchCategory": "Attack",
+      "workshopSourceIndex": 0,
+      "workshopKey": "Damage",
+      "workshopLabel": "Damage",
+      "workshopCategory": "attack",
+      "categoryExactEqual": false,
+      "researchLevelCount": 100,
+      "workshopLevelCount": 6001,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 63,
+      "researchSlug": "damage_meter",
+      "researchName": "Damage / Meter",
+      "researchCategory": "Attack",
+      "workshopSourceIndex": 5,
+      "workshopKey": "Damage / Meter",
+      "workshopLabel": "Damage / Meter",
+      "workshopCategory": "attack",
+      "categoryExactEqual": false,
+      "researchLevelCount": 99,
+      "workshopLevelCount": 201,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 72,
+      "researchSlug": "defense",
+      "researchName": "Defense %",
+      "researchCategory": "Defense",
+      "workshopSourceIndex": 19,
+      "workshopKey": "Defense Percent",
+      "workshopLabel": "Defense %",
+      "workshopCategory": "defense",
+      "categoryExactEqual": false,
+      "researchLevelCount": 50,
+      "workshopLevelCount": 100,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 73,
+      "researchSlug": "defense_absolute",
+      "researchName": "Defense Absolute",
+      "researchCategory": "Defense",
+      "workshopSourceIndex": 20,
+      "workshopKey": "Defense Absolute",
+      "workshopLabel": "Defense Absolute",
+      "workshopCategory": "defense",
+      "categoryExactEqual": false,
+      "researchLevelCount": 100,
+      "workshopLevelCount": 5001,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 84,
+      "researchSlug": "enemy_attack_level_skip",
+      "researchName": "Enemy Attack Level Skip",
+      "researchCategory": "Utility",
+      "workshopSourceIndex": 45,
+      "workshopKey": "Enemy Attack Level Skip",
+      "workshopLabel": "Enemy Attack Level Skip",
+      "workshopCategory": "utility",
+      "categoryExactEqual": false,
+      "researchLevelCount": 20,
+      "workshopLevelCount": 700,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 85,
+      "researchSlug": "enemy_health_level_skip",
+      "researchName": "Enemy Health Level Skip",
+      "researchCategory": "Utility",
+      "workshopSourceIndex": 46,
+      "workshopKey": "Enemy Health Level Skip",
+      "workshopLabel": "Enemy Health Level Skip",
+      "workshopCategory": "utility",
+      "categoryExactEqual": false,
+      "researchLevelCount": 20,
+      "workshopLevelCount": 700,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 114,
+      "researchSlug": "health",
+      "researchName": "Health",
+      "researchCategory": "Defense",
+      "workshopSourceIndex": 17,
+      "workshopKey": "Health",
+      "workshopLabel": "Health",
+      "workshopCategory": "defense",
+      "categoryExactEqual": false,
+      "researchLevelCount": 100,
+      "workshopLevelCount": 6001,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 117,
+      "researchSlug": "health_regen",
+      "researchName": "Health Regen",
+      "researchCategory": "Defense",
+      "workshopSourceIndex": 18,
+      "workshopKey": "Health Regen",
+      "workshopLabel": "Health Regen",
+      "workshopCategory": "defense",
+      "categoryExactEqual": false,
+      "researchLevelCount": 100,
+      "workshopLevelCount": 6001,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 129,
+      "researchSlug": "land_mine_damage",
+      "researchName": "Land Mine Damage",
+      "researchCategory": "Defense",
+      "workshopSourceIndex": 30,
+      "workshopKey": "Land Mine Damage",
+      "workshopLabel": "Land Mine Damage",
+      "workshopCategory": "defense",
+      "categoryExactEqual": false,
+      "researchLevelCount": 20,
+      "workshopLevelCount": 201,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 162,
+      "researchSlug": "range",
+      "researchName": "Range",
+      "researchCategory": "Attack",
+      "workshopSourceIndex": 4,
+      "workshopKey": "Range",
+      "workshopLabel": "Range",
+      "workshopCategory": "attack",
+      "categoryExactEqual": false,
+      "researchLevelCount": 80,
+      "workshopLevelCount": 80,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 190,
+      "researchSlug": "shockwave_size",
+      "researchName": "Shockwave Size",
+      "researchCategory": "Defense",
+      "workshopSourceIndex": 27,
+      "workshopKey": "Shockwave Size",
+      "workshopLabel": "Shockwave Size",
+      "workshopCategory": "defense",
+      "categoryExactEqual": false,
+      "researchLevelCount": 20,
+      "workshopLevelCount": 36,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 197,
+      "researchSlug": "super_crit_chance",
+      "researchName": "Super Crit Chance",
+      "researchCategory": "Attack",
+      "workshopSourceIndex": 13,
+      "workshopKey": "Super Crit Chance",
+      "workshopLabel": "Super Crit Chance",
+      "workshopCategory": "attack",
+      "categoryExactEqual": false,
+      "researchLevelCount": 50,
+      "workshopLevelCount": 101,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 198,
+      "researchSlug": "super_crit_multi",
+      "researchName": "Super Crit Mult",
+      "researchCategory": "Attack",
+      "workshopSourceIndex": 14,
+      "workshopKey": "Super Crit Mult",
+      "workshopLabel": "Super Crit Mult",
+      "workshopCategory": "attack",
+      "categoryExactEqual": false,
+      "researchLevelCount": 40,
+      "workshopLevelCount": 121,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 221,
+      "researchSlug": "wall_health",
+      "researchName": "Wall Health",
+      "researchCategory": "Defense",
+      "workshopSourceIndex": 32,
+      "workshopKey": "Wall Health",
+      "workshopLabel": "Wall Health",
+      "workshopCategory": "defense",
+      "categoryExactEqual": false,
+      "researchLevelCount": 50,
+      "workshopLevelCount": 1801,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 223,
+      "researchSlug": "wall_rebuild",
+      "researchName": "Wall Rebuild",
+      "researchCategory": "Defense",
+      "workshopSourceIndex": 33,
+      "workshopKey": "Wall Rebuild",
+      "workshopLabel": "Wall Rebuild",
+      "workshopCategory": "defense",
+      "categoryExactEqual": false,
+      "researchLevelCount": 20,
+      "workshopLevelCount": 301,
+      "candidateStatus": "EXACT_LABEL_CANDIDATE"
+    }
+  ],
+  "ambiguousLabelCandidates": [],
+  "nameToWorkshopKeyTextMatches": [
+    {
+      "researchSlug": "attack_speed",
+      "researchName": "Attack Speed",
+      "workshopKey": "Attack Speed",
+      "workshopLabel": "Attack Speed",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "cash_bonus",
+      "researchName": "Cash Bonus",
+      "workshopKey": "Cash Bonus",
+      "workshopLabel": "Cash Bonus",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "cash_wave",
+      "researchName": "Cash / Wave",
+      "workshopKey": "Cash / Wave",
+      "workshopLabel": "Cash / Wave",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "coins_kill_bonus",
+      "researchName": "Coins / Kill Bonus",
+      "workshopKey": "Coins / Kill Bonus",
+      "workshopLabel": "Coins / Kill Bonus",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "coins_per_wave",
+      "researchName": "Coins / Wave",
+      "workshopKey": "Coins / Wave",
+      "workshopLabel": "Coins / Wave",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "critical_factor",
+      "researchName": "Critical Factor",
+      "workshopKey": "Critical Factor",
+      "workshopLabel": "Critical Factor",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "damage",
+      "researchName": "Damage",
+      "workshopKey": "Damage",
+      "workshopLabel": "Damage",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "damage_meter",
+      "researchName": "Damage / Meter",
+      "workshopKey": "Damage / Meter",
+      "workshopLabel": "Damage / Meter",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "defense_absolute",
+      "researchName": "Defense Absolute",
+      "workshopKey": "Defense Absolute",
+      "workshopLabel": "Defense Absolute",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "enemy_attack_level_skip",
+      "researchName": "Enemy Attack Level Skip",
+      "workshopKey": "Enemy Attack Level Skip",
+      "workshopLabel": "Enemy Attack Level Skip",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "enemy_health_level_skip",
+      "researchName": "Enemy Health Level Skip",
+      "workshopKey": "Enemy Health Level Skip",
+      "workshopLabel": "Enemy Health Level Skip",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "health",
+      "researchName": "Health",
+      "workshopKey": "Health",
+      "workshopLabel": "Health",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "health_regen",
+      "researchName": "Health Regen",
+      "workshopKey": "Health Regen",
+      "workshopLabel": "Health Regen",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "land_mine_damage",
+      "researchName": "Land Mine Damage",
+      "workshopKey": "Land Mine Damage",
+      "workshopLabel": "Land Mine Damage",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "range",
+      "researchName": "Range",
+      "workshopKey": "Range",
+      "workshopLabel": "Range",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "shockwave_size",
+      "researchName": "Shockwave Size",
+      "workshopKey": "Shockwave Size",
+      "workshopLabel": "Shockwave Size",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "super_crit_chance",
+      "researchName": "Super Crit Chance",
+      "workshopKey": "Super Crit Chance",
+      "workshopLabel": "Super Crit Chance",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "super_crit_multi",
+      "researchName": "Super Crit Mult",
+      "workshopKey": "Super Crit Mult",
+      "workshopLabel": "Super Crit Mult",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "wall_health",
+      "researchName": "Wall Health",
+      "workshopKey": "Wall Health",
+      "workshopLabel": "Wall Health",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    },
+    {
+      "researchSlug": "wall_rebuild",
+      "researchName": "Wall Rebuild",
+      "workshopKey": "Wall Rebuild",
+      "workshopLabel": "Wall Rebuild",
+      "classification": "CROSS_FIELD_TEXT_EQUALITY_NOT_IDENTIFIER_MATCH"
+    }
+  ],
+  "findings": [
+    {
+      "code": "EXACT_LABEL_OVERLAP",
+      "severity": "INFO",
+      "count": 21,
+      "message": "Research.name and Workshop.label have exact text matches. This is a naming candidate only, not proof of identical mechanics or canonical identity."
+    },
+    {
+      "code": "IDENTIFIER_FIELDS_NOT_EQUAL",
+      "severity": "INFO",
+      "count": 0,
+      "message": "Research.slug and Workshop.key were compared by exact string equality; no semantic or normalized matching was attempted."
+    },
+    {
+      "code": "NESTED_LEVEL_SHAPE_DIFFERENCE",
+      "severity": "INFO",
+      "count": 21,
+      "message": "For exact-label candidate pairs, nested levels object keys are reported separately. Similar field names such as level/value do not establish equivalent meaning."
+    }
+  ],
+  "policy": {
+    "readOnly": true,
+    "rawRecordsModified": false,
+    "recordsMerged": false,
+    "recordsDeduplicated": false,
+    "identifiersGenerated": false,
+    "canonicalMappingsApproved": false,
+    "canonicalClaimsCreated": false,
+    "canonicalRelationshipsCreated": false,
+    "verificationStatusesPromoted": false,
+    "numericalValuesComparedForGameplayEquivalence": false
+  },
+  "limitations": [
+    "This report compares only the Research and Workshop exports staged from the pinned SDK package.",
+    "Exact name/label or cross-field text equality is a candidate observation, not proof of entity identity or shared mechanics.",
+    "Research.slug and Workshop.key are compared as source identifier fields by exact equality only.",
+    "No dedicated cross-catalog reference field was established from the selected top-level field mappings; this does not prove that no relationships exist elsewhere in the SDK.",
+    "Shared field names and nested object keys do not establish equivalent units, costs, values, formulas, or gameplay effects.",
+    "Numeric values, costs, level progressions, and game mechanics were not reconciled or validated.",
+    "All SDK records remain EXTERNAL-UNVERIFIED."
+  ]
+}

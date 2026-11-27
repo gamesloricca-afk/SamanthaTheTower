@@ -1,0 +1,353 @@
+{
+  "reportVersion": "1.0.0",
+  "test": "Samantha GKB SDK Research–Cards and Masteries Comparison",
+  "status": "PASSED",
+  "source": {
+    "name": "TheTowerSDK",
+    "sdkPackage": "thetowersdk",
+    "sdkVersion": "0.14.1",
+    "sdkGameVersion": "v28.3.0",
+    "retrievedAt": "2026-11-27",
+    "classification": "OBJECTIVE",
+    "verificationStatus": "EXTERNAL-UNVERIFIED",
+    "note": "Raw SDK catalog staging only. SDK package version and game-version marker are separate. No values are independently verified or promoted."
+  },
+  "scope": {
+    "research": {
+      "domain": "Research",
+      "sourceRef": "thetowersdk/data#LAB_CATALOG",
+      "exportName": "LAB_CATALOG",
+      "recordCount": 234,
+      "identifierField": "slug",
+      "labelField": "name"
+    },
+    "cardsAndMasteries": {
+      "domain": "Cards and Masteries",
+      "sourceRef": "thetowersdk/data#CARD_TEMPLATES",
+      "exportName": "CARD_TEMPLATES",
+      "recordCount": 32,
+      "identifierField": "id",
+      "labelField": "name",
+      "masteryLabelField": "masteryName"
+    }
+  },
+  "summary": {
+    "sharedTopLevelFieldCount": 2,
+    "sharedTopLevelFields": [
+      "description",
+      "name"
+    ],
+    "researchOnlyTopLevelFields": [
+      "base",
+      "category",
+      "levels",
+      "slug",
+      "unit",
+      "value"
+    ],
+    "cardsAndMasteriesOnlyTopLevelFields": [
+      "id",
+      "levelType",
+      "levelValues",
+      "masteryDescription",
+      "masteryName",
+      "masteryType",
+      "masteryValues",
+      "rarity"
+    ],
+    "exactResearchSlugCardIdMatches": 1,
+    "ambiguousResearchSlugCardIdMatches": 0,
+    "exactResearchNameCardNameCandidates": 6,
+    "ambiguousResearchNameCardNameCandidates": 0,
+    "exactResearchNameCardMasteryNameCandidates": 1,
+    "ambiguousResearchNameCardMasteryNameCandidates": 0,
+    "explicitCrossCatalogReferenceStatus": "NOT_ESTABLISHED_FROM_SELECTED_FIELDS"
+  },
+  "fieldComparison": {
+    "sharedFields": [
+      {
+        "field": "description",
+        "research": {
+          "field": "description",
+          "presentCount": 80,
+          "observedTypes": [
+            "string"
+          ]
+        },
+        "cardsAndMasteries": {
+          "field": "description",
+          "presentCount": 32,
+          "observedTypes": [
+            "string"
+          ]
+        }
+      },
+      {
+        "field": "name",
+        "research": {
+          "field": "name",
+          "presentCount": 234,
+          "observedTypes": [
+            "string"
+          ]
+        },
+        "cardsAndMasteries": {
+          "field": "name",
+          "presentCount": 32,
+          "observedTypes": [
+            "string"
+          ]
+        }
+      }
+    ],
+    "cardCatalogDistributions": {
+      "rarityValues": [
+        "common",
+        "epic",
+        "rare"
+      ],
+      "levelTypeValues": [
+        "duration",
+        "flat",
+        "multi",
+        "percent"
+      ],
+      "masteryTypeValues": [
+        "duration",
+        "flat",
+        "multi",
+        "percent"
+      ]
+    },
+    "nestedArrays": {
+      "researchLevels": {
+        "recordsWithArray": 234,
+        "recordsWithoutArray": 0,
+        "observedEntryTypes": [
+          "object"
+        ],
+        "entryCount": 6170,
+        "numericEntryCount": 0,
+        "numericMin": null,
+        "numericMax": null,
+        "arrayLengthMin": 1,
+        "arrayLengthMax": 100,
+        "distinctArrayLengths": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          14,
+          15,
+          18,
+          20,
+          21,
+          25,
+          30,
+          32,
+          35,
+          40,
+          50,
+          60,
+          80,
+          99,
+          100
+        ],
+        "objectKeyShapes": [
+          {
+            "keys": [
+              "cost",
+              "duration",
+              "level"
+            ],
+            "occurrenceCount": 6170
+          }
+        ]
+      },
+      "cardLevelValues": {
+        "recordsWithArray": 32,
+        "recordsWithoutArray": 0,
+        "observedEntryTypes": [
+          "number"
+        ],
+        "entryCount": 224,
+        "numericEntryCount": 224,
+        "numericMin": 0.3,
+        "numericMax": 300,
+        "arrayLengthMin": 7,
+        "arrayLengthMax": 7,
+        "distinctArrayLengths": [
+          7
+        ],
+        "objectKeyShapes": []
+      },
+      "cardMasteryValues": {
+        "recordsWithArray": 32,
+        "recordsWithoutArray": 0,
+        "observedEntryTypes": [
+          "number"
+        ],
+        "entryCount": 320,
+        "numericEntryCount": 320,
+        "numericMin": 0.3,
+        "numericMax": 300,
+        "arrayLengthMin": 10,
+        "arrayLengthMax": 10,
+        "distinctArrayLengths": [
+          10
+        ],
+        "objectKeyShapes": []
+      }
+    }
+  },
+  "exactIdentifierCandidates": [
+    {
+      "researchSourceIndex": 162,
+      "researchSlug": "range",
+      "researchName": "Range",
+      "cardSourceIndex": 4,
+      "cardId": "range",
+      "cardName": "Range",
+      "candidateStatus": "EXACT_SOURCE_IDENTIFIER_CANDIDATE"
+    }
+  ],
+  "exactNameCandidates": [
+    {
+      "researchSourceIndex": 18,
+      "researchSlug": "attack_speed",
+      "researchName": "Attack Speed",
+      "cardSourceIndex": 1,
+      "cardId": "as",
+      "cardName": "Attack Speed",
+      "cardRarity": "common",
+      "cardMasteryName": "Attack Speed+",
+      "candidateStatus": "EXACT_NAME_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 61,
+      "researchSlug": "damage",
+      "researchName": "Damage",
+      "cardSourceIndex": 0,
+      "cardId": "dmg",
+      "cardName": "Damage",
+      "cardRarity": "common",
+      "cardMasteryName": "Damage+",
+      "candidateStatus": "EXACT_NAME_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 114,
+      "researchSlug": "health",
+      "researchName": "Health",
+      "cardSourceIndex": 2,
+      "cardId": "hp",
+      "cardName": "Health",
+      "cardRarity": "common",
+      "cardMasteryName": "Health+",
+      "candidateStatus": "EXACT_NAME_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 117,
+      "researchSlug": "health_regen",
+      "researchName": "Health Regen",
+      "cardSourceIndex": 3,
+      "cardId": "regen",
+      "cardName": "Health Regen",
+      "cardRarity": "common",
+      "cardMasteryName": "Health Regen+",
+      "candidateStatus": "EXACT_NAME_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 162,
+      "researchSlug": "range",
+      "researchName": "Range",
+      "cardSourceIndex": 4,
+      "cardId": "range",
+      "cardName": "Range",
+      "cardRarity": "common",
+      "cardMasteryName": "Damage / Meter",
+      "candidateStatus": "EXACT_NAME_CANDIDATE"
+    },
+    {
+      "researchSourceIndex": 178,
+      "researchSlug": "recovery_package_chance",
+      "researchName": "Recovery Package Chance",
+      "cardSourceIndex": 19,
+      "cardId": "rpc",
+      "cardName": "Recovery Package Chance",
+      "cardRarity": "rare",
+      "cardMasteryName": "Care Package",
+      "candidateStatus": "EXACT_NAME_CANDIDATE"
+    }
+  ],
+  "exactMasteryNameCandidates": [
+    {
+      "researchSourceIndex": 63,
+      "researchSlug": "damage_meter",
+      "researchName": "Damage / Meter",
+      "cardSourceIndex": 4,
+      "cardId": "range",
+      "cardName": "Range",
+      "masteryName": "Damage / Meter",
+      "candidateStatus": "EXACT_MASTERY_NAME_CANDIDATE"
+    }
+  ],
+  "ambiguousCandidates": {
+    "identifiers": [],
+    "names": [],
+    "masteryNames": []
+  },
+  "findings": [
+    {
+      "code": "EXACT_SOURCE_IDENTIFIER_OVERLAP",
+      "severity": "INFO",
+      "count": 1,
+      "message": "Research.slug and Cards/Masteries.id exact string equality is reported as a candidate only; identifier namespace equivalence is not assumed."
+    },
+    {
+      "code": "EXACT_CARD_NAME_OVERLAP",
+      "severity": "INFO",
+      "count": 6,
+      "message": "Research.name and Cards/Masteries.name exact text matches are naming candidates, not proof of shared mechanics or entity identity."
+    },
+    {
+      "code": "EXACT_MASTERY_NAME_OVERLAP",
+      "severity": "INFO",
+      "count": 1,
+      "message": "Research.name and Cards/Masteries.masteryName exact text matches are separate candidates; they do not establish that a Research record describes a card mastery."
+    },
+    {
+      "code": "NESTED_ARRAY_SHAPE_DIFFERENCE",
+      "severity": "INFO",
+      "count": 3,
+      "message": "Research.levels contains structured objects while card levelValues and masteryValues are inspected as separate arrays. Their values, units, progression, and mechanics are not reconciled."
+    }
+  ],
+  "policy": {
+    "readOnly": true,
+    "rawRecordsModified": false,
+    "recordsMerged": false,
+    "recordsDeduplicated": false,
+    "identifiersGenerated": false,
+    "canonicalMappingsApproved": false,
+    "canonicalClaimsCreated": false,
+    "canonicalRelationshipsCreated": false,
+    "verificationStatusesPromoted": false,
+    "numericalValuesComparedForGameplayEquivalence": false
+  },
+  "limitations": [
+    "This report compares only the Research and Cards/Masteries exports staged from the pinned SDK package.",
+    "Exact source-ID or label equality is a candidate observation, not proof of canonical identity or gameplay relationship.",
+    "Research.slug is compared only with Cards/Masteries.id; Research.name is compared separately with name and masteryName.",
+    "Shared top-level fields do not establish equivalent meaning or data semantics.",
+    "Research.levels, card levelValues, and masteryValues have different structural roles in the source records; no progression or numeric equivalence is inferred.",
+    "Card rarity, levelType, masteryType, and descriptions are reported as source fields, not interpreted as mechanics.",
+    "No external fanmade source comparison or independent gameplay validation is included.",
+    "All SDK records remain EXTERNAL-UNVERIFIED."
+  ]
+}
