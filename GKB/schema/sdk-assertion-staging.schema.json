@@ -127,16 +127,10 @@
           "minLength": 1
         },
         "sdkGraphVersion": {
-          "type": [
-            "integer",
-            "string"
-          ]
+          "type": "integer"
         },
         "sdkSchemaVersion": {
-          "type": [
-            "integer",
-            "string"
-          ]
+          "type": "integer"
         },
         "sdkGraphGeneratedFor": {
           "type": [
