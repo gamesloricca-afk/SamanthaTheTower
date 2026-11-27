@@ -212,6 +212,31 @@ GitHub Actions run:
 - https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45938802821
 - Result: SUCCESS, including all staging tests, generation steps, and staging artifact upload.
 
+## Cross-stage integrity report
+
+Added `GKB/adapter/sdk-staging-integrity-report.mjs` and runtime command `report:sdk-staging-integrity`. CI cross-checks the four staging streams against the exact SDK graph and the SDK contradiction helper output.
+
+The combined integrity report passed in GitHub Actions run:
+- https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45939132518
+
+Verified counts:
+- 320 node envelopes.
+- 1,618 assertion envelopes.
+- 396 edge envelopes.
+- 3 contradiction envelopes.
+- 2,337 total staging envelopes.
+- 797 missing assertion verification fields preserved as missing.
+- 396 edge endpoints linked to the corresponding node envelopes.
+- All eight relationship candidates mapped by explicit reversible name conversion.
+- All raw origins across nodes, edges, and graph contradictions match the source graph counts: code 1,522; wiki 884; user 82; game 70; save 10; sheet 11.
+- Full sourceRecord preservation checks passed for nodes, assertions, edges, raw graph contradictions, and SDK contradiction analysis.
+- No canonical claims, relationships, or conflict groups were created; no verification was promoted; no bulk import occurred.
+
+The workflow uploaded five review files as artifact `gkb-sdk-staging-165` (14-day retention):
+- [Download staging review artifact](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45939132518/artifacts/15171673370)
+
+The artifact contains node, assertion, edge, contradiction staging JSON, and the combined integrity report. These are temporary review outputs, not canonical GKB data.
+
 ## Safety boundary
 
 Phase 3 starts with deterministic staging and reports only. The canonical claim schema remains unchanged unless a demonstrated schema gap requires a separate review. Do not overwrite the unique-module catalog, repair SDK graph data, decrypt saves, or import player-specific records.
