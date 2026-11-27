@@ -21,7 +21,7 @@ Audit the full GRE package slowly and domain by domain before promoting any vali
 
 - Phase 0 — repository and branch safety: complete.
 - Phase 1 — package structure and metadata inventory: initial structural pass complete.
-- Phase 2 — domain-by-domain content audit: in progress; Domains 01–07 have structural audit notes; Domain 09 is paused/skipped because its full JSON is unreadable; Domain 10 has an initial companion-index audit. Domains 08 and 11–20 remain pending.
+- Phase 2 — domain-by-domain content audit: in progress; Domains 01–07 have structural audit notes; Domain 09 is paused/skipped because its full JSON is unreadable; Domain 10 has an initial companion-index audit and a full JSON metadata pass. Domains 08 and 11–20 remain pending.
 - Phase 3 — cross-domain relationship and contradiction audit: pending.
 - Phase 4 — GKB-ready claim extraction and validation: pending.
 
@@ -55,4 +55,4 @@ All Domain 09 findings 31–700 are structural observations from direct metadata
 
 - Domain 09 (Modules): paused/skipped. The full JSON was not readable through the repository connector, so no further index-only batches will be generated. Existing notes remain as historical observations and the source-access gap is preserved.
 
-- Domain 10 (Cards and Masteries): initial audit created from the readable companion Markdown. The domain inventory lists 49 type records, while the Markdown exposes 18 named sections. The 2.1 MB JSON was not readable through the connector; no missing records or runtime behavior were inferred. Candidate enum values and constants remain unverified. See [21_domain_10_cards_masteries_initial_audit.md](21_domain_10_cards_masteries_initial_audit.md).
+- Domain 10 (Cards and Masteries): initial companion-index audit in [21_domain_10_cards_masteries_initial_audit.md](21_domain_10_cards_masteries_initial_audit.md). A subsequent full JSON pass retrieved and parsed the 2.1 MB blob through the Git database blob endpoint, confirming all 49 type records and documenting Cards, PlayerData, Main, card ID catalogs, mastery declarations, and drop-rate structures. This remains structural metadata; method behavior and candidate decoded constants are not treated as verified game mechanics. See [22_domain_10_cards_masteries_full_json_metadata.md](22_domain_10_cards_masteries_full_json_metadata.md).
