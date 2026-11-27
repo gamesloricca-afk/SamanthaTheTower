@@ -51,6 +51,6 @@ assert.throws(() => buildIdentifierMappingReport({
 console.log(JSON.stringify({
   test: 'Samantha GKB SDK Identifier Mapping',
   status: 'PASSED',
-  assertions: 16,
+  assertions: 18,
   cases: ['exact ID', 'exact name candidate', 'unmatched', 'ambiguous ID/name disagreement', 'duplicate canonical ID rejection', 'invalid date rejection', 'source preservation', 'no automatic approval']
 }, null, 2));
