@@ -40,7 +40,9 @@
     "test:sdk-research-workshop-comparison": "node ../tests/sdk-research-workshop-comparison.test.mjs",
     "report:sdk-research-workshop-comparison": "node ../adapter/sdk-research-workshop-comparison.mjs",
     "test:sdk-research-cards-masteries-comparison": "node ../tests/sdk-research-cards-masteries-comparison.test.mjs",
-    "report:sdk-research-cards-masteries-comparison": "node ../adapter/sdk-research-cards-masteries-comparison.mjs"
+    "report:sdk-research-cards-masteries-comparison": "node ../adapter/sdk-research-cards-masteries-comparison.mjs",
+    "inventory:sdk-mechanics": "node ../adapter/sdk-mechanics-function-inventory.mjs",
+    "test:sdk-mechanics-inventory": "node ../tests/sdk-mechanics-function-inventory.test.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
