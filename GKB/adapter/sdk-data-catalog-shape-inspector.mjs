@@ -10,6 +10,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const require = createRequire(path.join(ROOT, 'runtime/package.json'));
 const data = await import(pathToFileURL(require.resolve('thetowersdk/data')).href);
+const knowledge = await import(pathToFileURL(require.resolve('thetowersdk/knowledge')).href);
 const required = ['LAB_CATALOG','MODULE_TEMPLATES','CARD_TEMPLATES','ALL_PERKS','RELIC_TEMPLATES','BOT_UPGRADES_DATA','uwStoneChartData','TIER_DATA','MILESTONE_REWARD_ROWS','GLOSSARY_NAME_ROWS','getWorkshopStatDefinitions','findLabResearchByIndex'];
 const missing = required.filter(key => !(key in data));
 assert.deepEqual(missing, [], `Missing documented data exports: ${missing.join(', ')}`);
@@ -50,7 +51,13 @@ const report = {
     describe('GLOSSARY_NAME_ROWS', data.GLOSSARY_NAME_ROWS),
     describe('getWorkshopStatDefinitions()', definitions)
   ],
+  gameVersionMarker: knowledge.CURRENT_GAME_VERSION ?? null,
   moduleCategories: [...new Set(modules.map(item => item.type ?? item.category).filter(Boolean))].sort(),
+  moduleUniqueCounts: {
+    unique: modules.filter(item => item.unique === true).length,
+    nonUnique: modules.filter(item => item.unique === false).length,
+    unspecified: modules.filter(item => typeof item.unique !== 'boolean').length
+  },
   moduleRarityFields: Object.keys(modules[0] ?? {}).filter(key => /rarity/i.test(key)),
   labLookup: {
     index: labByIndex.index ?? null,
