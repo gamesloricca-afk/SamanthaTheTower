@@ -241,7 +241,7 @@ The synthetic test passed 22 cases, including rejection of missing approval, inv
 Added `GKB/adapter/sdk-staging-integrity-report.mjs` and runtime command `report:sdk-staging-integrity`. CI cross-checks the four staging streams against the exact SDK graph and the SDK contradiction helper output.
 
 The combined integrity report passed in GitHub Actions run:
-- https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45939132518
+- https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45939271321
 
 Verified counts:
 - 320 node envelopes.
@@ -257,7 +257,7 @@ Verified counts:
 - No canonical claims, relationships, or conflict groups were created; no verification was promoted; no bulk import occurred.
 
 The workflow uploaded five review files as artifact `gkb-sdk-staging-165` (14-day retention):
-- [Download staging review artifact](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45939132518/artifacts/15171673370)
+- [Download staging review artifact](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45939271321/artifacts/15171523641)
 
 The artifact contains node, assertion, edge, contradiction staging JSON, and the combined integrity report. These are temporary review outputs, not canonical GKB data.
 
