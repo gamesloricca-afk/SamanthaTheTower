@@ -17,7 +17,7 @@ for (const module of data.modules) assert.deepEqual(module.rarityBonuses.map(bon
 assert.equal(data.modules.some(module => module.id.startsWith('rare-') || module.id.startsWith('common-')), false);
 assert.deepEqual(
   Object.fromEntries(['Cannon','Armor','Generator','Core'].map(category => [category, data.modules.filter(module => module.category === category).length])),
-  { Cannon: 7, Armor: 7, Generator: 6, Core: 8 }
+  { Cannon: 7, Armor: 7, Generator: 7, Core: 7 }
 );
 for (const module of data.modules) {
   assert.ok(module.effectTemplate.includes('{value}'), module.id);
@@ -29,7 +29,7 @@ console.log(JSON.stringify({
   test: 'Samantha GKB Unique Module Catalog',
   status: 'PASSED',
   moduleCount: data.modules.length,
-  categories: { Cannon: 7, Armor: 7, Generator: 6, Core: 8 },
+  categories: { Cannon: 7, Armor: 7, Generator: 7, Core: 7 },
   excludedNonUniqueModules: true,
   verificationStatus: data.verificationStatus
 }, null, 2));
