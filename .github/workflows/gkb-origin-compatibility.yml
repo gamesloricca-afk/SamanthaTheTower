@@ -85,6 +85,10 @@ jobs:
         working-directory: GKB/runtime
         run: npm run test:sdk-domain-catalog-audit
 
+      - name: Test nested SDK catalog structure and value observations
+        working-directory: GKB/runtime
+        run: npm run test:sdk-domain-catalog-nested-audit
+
       - name: Generate SDK domain catalog structural audit
         working-directory: GKB/runtime
         run: npm run report:sdk-domain-catalog-audit
