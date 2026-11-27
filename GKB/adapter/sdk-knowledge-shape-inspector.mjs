@@ -110,6 +110,10 @@ const report = {
   schema: {
     title: schema.title ?? null,
     dialect: schema.$schema ?? null,
+    nodeRequired: nodeSchema.required ?? [],
+    assertionRequired: assertionSchema.required ?? [],
+    provenanceRequired: provenanceSchema.required ?? [],
+    edgeRequired: edgeSchema.required ?? [],
     nodeProperties: Object.keys(nodeSchema.properties ?? {}).sort(),
     assertionProperties: Object.keys(assertionSchema.properties ?? {}).sort(),
     provenanceProperties: Object.keys(provenanceSchema.properties ?? {}).sort(),
