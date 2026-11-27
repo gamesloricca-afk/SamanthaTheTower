@@ -9,9 +9,9 @@ const registry = {
 };
 const graph = {
   nodes: [
-    { id: 'node.one', origin: 'game', title: 'Example', description: 'Raw description', extra: { keep: true } },
-    { id: 'node.two', origin: 'wiki', name: 'Another', payload: [1, 2] },
-    { id: 'node.three', origin: 17, unknownField: 'preserve-me' },
+    { id: 'node.one', provenance: { source: { origin: 'game' } }, title: 'Example', description: 'Raw description', extra: { keep: true } },
+    { id: 'node.two', sources: [{ origin: 'wiki' }], name: 'Another', payload: [1, 2] },
+    { id: 'node.three', meta: { origin: 17 }, unknownField: 'preserve-me' },
     { id: 'node.four', noOrigin: true }
   ]
 };
@@ -23,11 +23,12 @@ assert.equal(result.report.stagedRecordCount, 4);
 assert.equal(result.report.pendingReviewCount, 4);
 assert.equal(result.report.classifiedCount, 0);
 assert.equal(result.report.rawOriginPreservedCount, 3);
-assert.equal(result.records[0].provenance.rawOrigin, 'game');
-assert.equal(result.records[1].provenance.rawOrigin, 'wiki');
-assert.equal(result.records[2].provenance.rawOrigin, 17);
+assert.equal(result.report.rawOriginOccurrenceCount, 3);
+assert.equal(result.records[0].provenance.rawOrigins[0].value, 'game');
+assert.equal(result.records[1].provenance.rawOrigins[0].value, 'wiki');
+assert.equal(result.records[2].provenance.rawOrigins[0].value, 17);
 assert.equal(result.records[2].provenance.originMappingStatus, 'INVALID_OR_MISSING');
-assert.equal(result.records[3].provenance.rawOrigin, null);
+assert.equal(result.records[3].provenance.rawOrigins.length, 0);
 assert.deepEqual(result.records[0].sourceRecord, graph.nodes[0]);
 assert.equal(result.records[0].verificationStatus, 'EXTERNAL-UNVERIFIED');
 assert.equal(result.records[0].classification, null);
