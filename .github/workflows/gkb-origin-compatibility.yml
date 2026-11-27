@@ -73,6 +73,14 @@ jobs:
         working-directory: GKB/runtime
         run: npm run report:sdk-identifier-mapping
 
+      - name: Test raw SDK domain catalog staging
+        working-directory: GKB/runtime
+        run: npm run test:sdk-domain-catalog-staging
+
+      - name: Stage Research, Workshop, Cards/Masteries, and Perks catalogs
+        working-directory: GKB/runtime
+        run: npm run stage:sdk-domain-catalogs
+
       - name: Inspect SDK wiki, contributions, and charts
         working-directory: GKB/runtime
         run: npm run inspect:sdk-wiki-contributions-charts
@@ -142,6 +150,7 @@ jobs:
             GKB/staging/sdk-contradictions.json
             GKB/reports/sdk-staging-integrity-report.json
             GKB/reports/sdk-identifier-mapping-report.json
+            GKB/staging/sdk-domain-catalogs.json
           if-no-files-found: error
           retention-days: 14
 
