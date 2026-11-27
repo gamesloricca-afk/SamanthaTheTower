@@ -1,0 +1,16 @@
+
+# Node.js dependencies
+runtime/node_modules/
+
+# Debug logs
+runtime/npm-debug.log*
+runtime/yarn-debug.log*
+runtime/pnpm-debug.log*
+
+# Environment secrets
+runtime/.env
+runtime/.env.*
+
+# Temporary files
+runtime/*.tmp
+runtime/*.log

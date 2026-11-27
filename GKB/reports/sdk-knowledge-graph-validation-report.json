@@ -1,0 +1,1272 @@
+{
+  "test": "Samantha GKB SDK Knowledge Graph Validation",
+  "testVersion": "1.2.0",
+  "status": "FAILED",
+  "sdk": {
+    "package": "thetowersdk",
+    "expectedVersion": "0.14.1",
+    "actualVersion": "0.14.1"
+  },
+  "validator": {
+    "package": "ajv",
+    "expectedVersion": "8.17.1",
+    "actualVersion": "8.17.1",
+    "engine": "Ajv Draft 2020-12",
+    "strict": true,
+    "allowUnionTypes": true,
+    "formatValidation": false
+  },
+  "graph": {
+    "export": "thetowersdk/knowledge-graph.json",
+    "schemaVersion": 1,
+    "graphVersion": 3,
+    "generatedFor": "2026-10-15",
+    "observedOrigins": {
+      "code": 1522,
+      "wiki": 884,
+      "user": 82,
+      "game": 70,
+      "save": 10,
+      "sheet": 11
+    }
+  },
+  "validation": {
+    "valid": false,
+    "errorCount": 70,
+    "displayedErrorCount": 20,
+    "errors": [
+      {
+        "instancePath": "/nodes/87/assertions/0/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/87/sources/1/origin",
+        "schemaPath": "#/properties/nodes/items/properties/sources/items/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/88/assertions/0/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/88/assertions/1/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/88/sources/1/origin",
+        "schemaPath": "#/properties/nodes/items/properties/sources/items/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/100/assertions/0/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/100/assertions/1/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/100/assertions/2/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/100/assertions/3/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/100/sources/1/origin",
+        "schemaPath": "#/properties/nodes/items/properties/sources/items/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/167/assertions/0/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/167/assertions/1/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/167/assertions/2/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/167/assertions/3/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/167/assertions/4/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/167/assertions/5/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/167/assertions/6/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/167/assertions/7/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/167/assertions/11/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      },
+      {
+        "instancePath": "/nodes/167/assertions/12/provenance/origin",
+        "schemaPath": "#/properties/nodes/items/properties/assertions/items/properties/provenance/properties/origin/enum",
+        "keyword": "enum",
+        "message": "must be equal to one of the allowed values",
+        "params": {
+          "allowedValues": [
+            "in-game",
+            "game-files",
+            "code",
+            "wiki",
+            "user",
+            "save",
+            "external-repo",
+            "sheet"
+          ]
+        }
+      }
+    ],
+    "truncated": true
+  },
+  "typescriptDeclaration": {
+    "typeName": "ClaimOrigin",
+    "file": "thetowersdk/dist/knowledge/substrate/types.d.ts",
+    "status": "INSPECTED",
+    "reason": null,
+    "values": [
+      "game",
+      "code",
+      "wiki",
+      "user",
+      "save",
+      "external-repo",
+      "sheet"
+    ],
+    "declarationLocations": [
+      {
+        "path": "C:\\Users\\user\\Downloads\\SamanthaTheTower\\GKB\\runtime\\node_modules\\thetowersdk\\dist\\knowledge\\substrate\\types.d.ts",
+        "typeName": "ClaimOrigin",
+        "startLine": 55,
+        "endLine": 69
+      }
+    ]
+  },
+  "compatibility": {
+    "status": "CONFLICTING",
+    "observedOrigins": [
+      "code",
+      "game",
+      "save",
+      "sheet",
+      "user",
+      "wiki"
+    ],
+    "schemaOrigins": [
+      "code",
+      "external-repo",
+      "game-files",
+      "in-game",
+      "save",
+      "sheet",
+      "user",
+      "wiki"
+    ],
+    "typescriptOrigins": [
+      "code",
+      "external-repo",
+      "game",
+      "save",
+      "sheet",
+      "user",
+      "wiki"
+    ],
+    "typescriptInspectionStatus": "INSPECTED_DECLARATION",
+    "observedNotInSchema": [
+      "game"
+    ],
+    "typescriptNotInSchema": [
+      "game"
+    ],
+    "schemaNotInTypescript": [
+      "game-files",
+      "in-game"
+    ],
+    "observedNotInTypescript": [],
+    "schemaDefinitions": [
+      {
+        "path": "$.properties.nodes.items.properties.assertions.items.properties.provenance.properties.origin",
+        "values": [
+          "code",
+          "external-repo",
+          "game-files",
+          "in-game",
+          "save",
+          "sheet",
+          "user",
+          "wiki"
+        ],
+        "nonStringEnumValues": []
+      },
+      {
+        "path": "$.properties.nodes.items.properties.sources.items.properties.origin",
+        "values": [
+          "code",
+          "external-repo",
+          "game-files",
+          "in-game",
+          "save",
+          "sheet",
+          "user",
+          "wiki"
+        ],
+        "nonStringEnumValues": []
+      },
+      {
+        "path": "$.properties.edges.items.properties.sources.items.properties.origin",
+        "values": [
+          "code",
+          "external-repo",
+          "game-files",
+          "in-game",
+          "save",
+          "sheet",
+          "user",
+          "wiki"
+        ],
+        "nonStringEnumValues": []
+      }
+    ],
+    "conflicts": [
+      {
+        "id": "ORIGIN_GRAPH_SCHEMA_MISMATCH",
+        "type": "OBJECTIVE",
+        "status": "CONFLICTING",
+        "graphOrigin": "game",
+        "schemaAllows": false,
+        "resolution": "UNRESOLVED",
+        "occurrenceCount": 70,
+        "locations": [
+          {
+            "path": "$.nodes[87].assertions[0].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[87].sources[1].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[88].assertions[0].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[88].assertions[1].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[88].sources[1].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[100].assertions[0].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[100].assertions[1].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[100].assertions[2].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[100].assertions[3].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[100].sources[1].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[0].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[1].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[2].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[3].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[4].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[5].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[6].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[7].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[11].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[12].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[13].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[14].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[15].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[16].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[17].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[18].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[19].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[20].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].assertions[21].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[167].sources[1].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[168].assertions[0].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[168].assertions[1].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[168].assertions[2].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[168].assertions[3].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[168].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[172].assertions[6].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[172].sources[2].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[209].assertions[3].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[209].sources[2].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[213].assertions[0].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[213].sources[1].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[214].assertions[7].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[232].assertions[1].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[232].assertions[8].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[232].sources[1].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[237].assertions[0].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[237].assertions[1].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[237].assertions[2].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[237].assertions[3].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[237].assertions[4].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[237].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[238].assertions[0].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[238].assertions[1].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[238].assertions[2].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[238].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[313].assertions[0].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[313].assertions[1].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[313].assertions[2].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[313].assertions[3].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[313].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[314].assertions[0].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[314].assertions[1].provenance.origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.nodes[314].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.edges[201].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.edges[292].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.edges[293].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.edges[294].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.edges[384].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.edges[385].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          },
+          {
+            "path": "$.edges[386].sources[0].origin",
+            "valueType": "string",
+            "validString": true
+          }
+        ],
+        "evidence": {
+          "graph": {
+            "sourceReference": "thetowersdk/knowledge-graph.json + thetowersdk/knowledge.schema.json",
+            "locations": [
+              {
+                "path": "$.nodes[87].assertions[0].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[87].sources[1].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[88].assertions[0].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[88].assertions[1].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[88].sources[1].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[100].assertions[0].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[100].assertions[1].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[100].assertions[2].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[100].assertions[3].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[100].sources[1].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[0].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[1].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[2].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[3].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[4].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[5].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[6].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[7].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[11].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[12].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[13].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[14].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[15].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[16].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[17].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[18].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[19].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[20].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].assertions[21].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[167].sources[1].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[168].assertions[0].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[168].assertions[1].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[168].assertions[2].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[168].assertions[3].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[168].sources[0].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[172].assertions[6].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[172].sources[2].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[209].assertions[3].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[209].sources[2].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[213].assertions[0].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[213].sources[1].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[214].assertions[7].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[232].assertions[1].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[232].assertions[8].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[232].sources[1].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[237].assertions[0].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[237].assertions[1].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[237].assertions[2].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[237].assertions[3].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[237].assertions[4].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[237].sources[0].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[238].assertions[0].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[238].assertions[1].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[238].assertions[2].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[238].sources[0].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[313].assertions[0].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[313].assertions[1].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[313].assertions[2].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[313].assertions[3].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[313].sources[0].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[314].assertions[0].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[314].assertions[1].provenance.origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.nodes[314].sources[0].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.edges[201].sources[0].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.edges[292].sources[0].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.edges[293].sources[0].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.edges[294].sources[0].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.edges[384].sources[0].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.edges[385].sources[0].origin",
+                "valueType": "string"
+              },
+              {
+                "path": "$.edges[386].sources[0].origin",
+                "valueType": "string"
+              }
+            ]
+          },
+          "schema": {
+            "sourceReference": "thetowersdk/knowledge-graph.json + thetowersdk/knowledge.schema.json",
+            "definitions": [],
+            "allowsOrigin": false
+          }
+        }
+      },
+      {
+        "id": "ORIGIN_TYPESCRIPT_SCHEMA_MISMATCH",
+        "type": "OBJECTIVE",
+        "status": "CONFLICTING",
+        "typescriptNotInSchema": [
+          "game"
+        ],
+        "schemaNotInTypescript": [
+          "game-files",
+          "in-game"
+        ],
+        "evidence": {
+          "typescript": {
+            "sourceReference": "thetowersdk/knowledge-graph.json + thetowersdk/knowledge.schema.json",
+            "inspectionMethod": "AUTOMATIC_DTS_PARSE",
+            "values": [
+              "code",
+              "external-repo",
+              "game",
+              "save",
+              "sheet",
+              "user",
+              "wiki"
+            ],
+            "declarationLocations": [
+              {
+                "path": "C:\\Users\\user\\Downloads\\SamanthaTheTower\\GKB\\runtime\\node_modules\\thetowersdk\\dist\\knowledge\\substrate\\types.d.ts",
+                "typeName": "ClaimOrigin",
+                "startLine": 55,
+                "endLine": 69
+              }
+            ]
+          },
+          "schema": {
+            "sourceReference": "thetowersdk/knowledge-graph.json + thetowersdk/knowledge.schema.json",
+            "definitions": [
+              {
+                "path": "$.properties.nodes.items.properties.assertions.items.properties.provenance.properties.origin",
+                "values": [
+                  "code",
+                  "external-repo",
+                  "game-files",
+                  "in-game",
+                  "save",
+                  "sheet",
+                  "user",
+                  "wiki"
+                ],
+                "nonStringEnumValues": []
+              },
+              {
+                "path": "$.properties.nodes.items.properties.sources.items.properties.origin",
+                "values": [
+                  "code",
+                  "external-repo",
+                  "game-files",
+                  "in-game",
+                  "save",
+                  "sheet",
+                  "user",
+                  "wiki"
+                ],
+                "nonStringEnumValues": []
+              },
+              {
+                "path": "$.properties.edges.items.properties.sources.items.properties.origin",
+                "values": [
+                  "code",
+                  "external-repo",
+                  "game-files",
+                  "in-game",
+                  "save",
+                  "sheet",
+                  "user",
+                  "wiki"
+                ],
+                "nonStringEnumValues": []
+              }
+            ]
+          }
+        },
+        "resolution": "UNRESOLVED"
+      }
+    ],
+    "inspection": {
+      "date": "2026-11-27T02:44:13.748Z",
+      "sourceReference": "thetowersdk/knowledge-graph.json + thetowersdk/knowledge.schema.json",
+      "inspectionType": "STRUCTURAL_COMPATIBILITY"
+    },
+    "limitations": [
+      "JSON Schema $ref references are not resolved.",
+      "Schema discovery does not establish complete schema coverage.",
+      "TypeScript declaration parsing is limited to explicitly supported declaration syntax.",
+      "No semantic equivalence between origin values is assumed.",
+      "No factual game-mechanics verification is performed.",
+      "No SDK redistribution rights are assessed.",
+      "No GKB import is performed."
+    ]
+  },
+  "safeguards": [
+    "Original SDK values are preserved.",
+    "No automatic origin normalization is performed.",
+    "No SDK claims are imported into GKB.",
+    "Schema validation does not establish factual correctness.",
+    "Schema validation does not verify game mechanics.",
+    "Redistribution rights are not assessed.",
+    "TypeScript parsing supports named string-literal union declarations only."
+  ],
+  "reportFile": "GKB/reports/sdk-knowledge-graph-validation-report.json"
+}
