@@ -13,7 +13,7 @@ assert.equal(data.verificationStatus, 'EXTERNAL-UNVERIFIED');
 assert.equal(data.source.targetVersion, '0.14.1');
 assert.equal(data.modules.every(module => module.minRarity === 'Epic'), true);
 assert.equal(data.modules.every(module => module.rarityBonuses.length === 4), true);
-assert.deepEqual(data.modules.map(module => module.rarityBonuses.map(bonus => bonus.rarity)), Array(28).fill(['Epic','Legendary','Mythic','Ancestral']).flat());
+for (const module of data.modules) assert.deepEqual(module.rarityBonuses.map(bonus => bonus.rarity), ['Epic','Legendary','Mythic','Ancestral'], module.id);
 assert.equal(data.modules.some(module => module.id.startsWith('rare-') || module.id.startsWith('common-')), false);
 assert.deepEqual(
   Object.fromEntries(['Cannon','Armor','Generator','Core'].map(category => [category, data.modules.filter(module => module.category === category).length])),
