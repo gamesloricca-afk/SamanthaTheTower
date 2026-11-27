@@ -108,13 +108,13 @@ A VERIFIED status must describe what was verified and within which source/versio
 Start here: [Domain 04 — Combat Mechanics](domains/04-combat-mechanics/README.md).
 
 Existing structural/content references:
-- [GRE Domain 04 JSON](../../1/04_combat_mechanics.json)
-- [GRE Domain 04 text export](../../1/04_combat_mechanics.md)
-- [GRE Audit 05 — Domain 04 content review](../../AUDIT/05_domain_04_combat_mechanics.md)
-- [GRE Audit 43 — Domain 04 complete structural inventory](../../AUDIT/43_domain_04_combat_mechanics_complete_structural_inventory.md)
-- [GRE mechanism evidence map](../../3/MECHANISMS.md)
-- [GRE mechanism evidence JSON](../../3/mechanism_evidence.json)
-- [GRE package closure](../../AUDIT/51_gre_package_structural_audit_closure.md)
+- [GRE Domain 04 JSON](../1/04_combat_mechanics.json)
+- [GRE Domain 04 text export](../1/04_combat_mechanics.md)
+- [GRE Audit 05 — Domain 04 content review](../AUDIT/05_domain_04_combat_mechanics.md)
+- [GRE Audit 43 — Domain 04 complete structural inventory](../AUDIT/43_domain_04_combat_mechanics_complete_structural_inventory.md)
+- [GRE mechanism evidence map](../3/MECHANISMS.md)
+- [GRE mechanism evidence JSON](../3/mechanism_evidence.json)
+- [GRE package closure](../AUDIT/51_gre_package_structural_audit_closure.md)
 
 ## Completion criteria
 
