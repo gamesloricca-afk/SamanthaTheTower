@@ -14,15 +14,19 @@ assert.equal(manifest.version, '0.14.1');
 
 const wiki = await import(pathToFileURL(require.resolve('thetowersdk/wiki')).href);
 const contributions = await import(pathToFileURL(require.resolve('thetowersdk/contributions')).href);
+const save = await import(pathToFileURL(require.resolve('thetowersdk/save')).href);
+const node = await import(pathToFileURL(require.resolve('thetowersdk/node')).href);
 const charts = await import(pathToFileURL(require.resolve('thetowersdk/charts')).href);
 
 const required = {
   wiki: ['WIKI_SOURCES','DEFAULT_WIKI_SOURCE_ID','getWikiSource','fetchWikiPageAsMarkdown','searchWiki','fetchWikiPageLastEdited'],
   contributions: ['CONTRIBUTIONS','ATTRIBUTION_LINES'],
+  save: ['listImportableBattleRuns','readLabsFromSaveRoot'],
+  node: ['decodePlayerInfoSaveBytesAsync'],
   charts: ['SHARED_CHART_REGISTRY','resolveCanonicalToolDataset','resolveCanonicalToolLookupTable']
 };
 for (const [group, names] of Object.entries(required)) {
-  const namespace = { wiki, contributions, charts }[group];
+  const namespace = { wiki, contributions, save, node, charts }[group];
   const missing = names.filter(name => !(name in namespace));
   assert.deepEqual(missing, [], `${group} missing exports: ${missing.join(', ')}`);
 }
@@ -60,7 +64,17 @@ console.log(JSON.stringify({
     areaCount: areas.length,
     totalPeople: areas.reduce((sum, area) => sum + (Array.isArray(area.people) ? area.people.length : 0), 0),
     attributionLineCount: contributions.ATTRIBUTION_LINES.length,
+    attributionLines: contributions.ATTRIBUTION_LINES,
     areaNames: areas.map(area => area.area)
+  },
+  save: {
+    exportCount: Object.keys(save).length,
+    selectedFunctions: ['listImportableBattleRuns','readLabsFromSaveRoot']
+  },
+  node: {
+    exportCount: Object.keys(node).length,
+    selectedFunctions: ['decodePlayerInfoSaveBytesAsync'],
+    saveBytesDecoded: false
   },
   charts: {
     registryCount: registry.length,
