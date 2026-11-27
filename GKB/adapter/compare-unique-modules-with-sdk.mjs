@@ -73,6 +73,14 @@ console.log(JSON.stringify({
   comparisons,
   effectTextDifferenceSamples: comparisons.filter(item => !item.effectTextMatches).slice(0, 3),
   metadataDifferenceDetails: comparisons.filter(item => !item.metadataMatched),
+  gildedSniperEffectExample: sdkById.has('gilded-sniper') ? {
+    sdkRarityBonuses: sdkById.get('gilded-sniper').rarityBonuses,
+    gkbRarityBonuses: gkbById.get('gilded-sniper')?.rarityBonuses ?? null,
+    sdkDescriptionAtPointOne: sdkById.get('gilded-sniper').description(0.1),
+    sdkDescriptionAtTen: sdkById.get('gilded-sniper').description(10),
+    gkbTemplateAtPointOne: gkbById.get('gilded-sniper')?.effectTemplate?.replaceAll('{value}', '0.1') ?? null,
+    gkbTemplateAtTen: gkbById.get('gilded-sniper')?.effectTemplate?.replaceAll('{value}', '10') ?? null
+  } : null,
   firstEffectExample: comparisons.length ? {
     id: comparisons[0].id,
     gkbEffectTemplate: gkbById.get(comparisons[0].id)?.effectTemplate ?? null,
