@@ -76,8 +76,7 @@ console.log(JSON.stringify({
   gildedSniperEffectExample: sdkById.has('gilded-sniper') ? {
     sdkRarityBonuses: sdkById.get('gilded-sniper').rarityBonuses,
     gkbRarityBonuses: gkbById.get('gilded-sniper')?.rarityBonuses ?? null,
-    sdkDescriptionAtPointOne: sdkById.get('gilded-sniper').description(0.1),
-    sdkDescriptionAtTen: sdkById.get('gilded-sniper').description(10),
+    sdkDescriptionsForRarityValues: [0.1, 0.2, 0.3, 0.4].map(value => ({ value, description: sdkById.get('gilded-sniper').description(value) })),
     gkbTemplateAtPointOne: gkbById.get('gilded-sniper')?.effectTemplate?.replaceAll('{value}', '0.1') ?? null,
     gkbTemplateAtTen: gkbById.get('gilded-sniper')?.effectTemplate?.replaceAll('{value}', '10') ?? null
   } : null,
