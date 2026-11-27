@@ -1,7 +1,7 @@
 /**
  * Samantha GKB — TheTowerSDK Knowledge Graph Validator
  *
- * Version: 1.1.0
+ * Version: 1.2.0
  * SDK: thetowersdk@0.14.1
  * Validator: ajv@8.17.1
  *
@@ -113,6 +113,69 @@ function collectSchemaOriginEnums(root, result = []) {
   return result;
 }
 
+/**
+ * Parse a named string-literal union from a TypeScript declaration.
+ * Unsupported syntax is reported as NOT_INSPECTED; values are never guessed.
+ */
+function parseStringUnionDeclaration(source, typeName) {
+  const pattern = new RegExp(
+    String.raw\`export\\s+type\\s+\${typeName}\\s*=([\\s\\S]*?);\`,
+    'g'
+  );
+  const matches = [...source.matchAll(pattern)];
+
+  if (matches.length !== 1) {
+    return {
+      status: 'NOT_INSPECTED',
+      reason: matches.length === 0 ? 'DECLARATION_NOT_FOUND' : 'MULTIPLE_DECLARATIONS_FOUND',
+      values: [],
+      declarationLocations: []
+    };
+  }
+
+  const match = matches[0];
+  const body = match[1]
+    .replace(/\\/\\*[\\s\\S]*?\\*\\//g, '')
+    .replace(/\\/\\/[^\\r\\n]*/g, '');
+  const members = body.split('|').map(value => value.trim()).filter(Boolean);
+  const values = [];
+
+  for (const member of members) {
+    const literal = member.match(/^(['"])([^'"]+)\\1$/);
+    if (!literal) {
+      return {
+        status: 'NOT_INSPECTED',
+        reason: 'UNSUPPORTED_UNION_MEMBER_SYNTAX',
+        values: [],
+        declarationLocations: []
+      };
+    }
+    values.push(literal[2]);
+  }
+
+  if (values.length === 0 || new Set(values).size !== values.length) {
+    return {
+      status: 'NOT_INSPECTED',
+      reason: 'EMPTY_OR_DUPLICATE_UNION_VALUES',
+      values: [],
+      declarationLocations: []
+    };
+  }
+
+  const line = source.slice(0, match.index).split('\\n').length;
+  return {
+    status: 'INSPECTED',
+    method: 'AUTOMATIC_DTS_PARSE',
+    values,
+    declarationLocations: [{
+      path: null,
+      typeName,
+      startLine: line,
+      endLine: line + match[0].split('\\n').length - 1
+    }]
+  };
+}
+
 function normalizeErrors(errors) {
   return (errors ?? []).map(error => ({
     instancePath: error.instancePath,
@@ -162,6 +225,35 @@ async function main() {
   const graphPath = require.resolve(GRAPH_EXPORT);
   const ajvPath = require.resolve('ajv/dist/2020.js');
 
+  const typescriptDeclarationPath = resolve(
+    dirname(schemaPath),
+    'substrate/types.d.ts'
+  );
+  let typescriptInspection = {
+    status: 'NOT_INSPECTED',
+    reason: 'DECLARATION_FILE_NOT_FOUND',
+    values: [],
+    declarationLocations: []
+  };
+
+  try {
+    const declarationSource = await readFile(typescriptDeclarationPath, 'utf8');
+    typescriptInspection = parseStringUnionDeclaration(declarationSource, 'ClaimOrigin');
+    typescriptInspection.declarationLocations =
+      typescriptInspection.declarationLocations.map(location => ({
+        ...location,
+        path: typescriptDeclarationPath
+      }));
+  } catch (error) {
+    typescriptInspection = {
+      status: 'NOT_INSPECTED',
+      reason: 'DECLARATION_READ_FAILED',
+      error: error.message,
+      values: [],
+      declarationLocations: []
+    };
+  }
+
   const sdkManifest = await findPackageManifest(
     schemaPath,
     'thetowersdk'
@@ -208,15 +300,17 @@ async function main() {
     sdkVersion: sdkManifest.version,
     graph,
     schema,
-    // TypeScript declarations are deliberately not inferred.
-    // The report marks this comparison as NOT_INSPECTED.
-    typescriptOrigins: null,
+    typescriptOrigins: typescriptInspection.status === 'INSPECTED'
+      ? typescriptInspection.values
+      : null,
+    typescriptInspectionMethod: typescriptInspection.method ?? 'NOT_INSPECTED',
+    typescriptDeclarationLocations: typescriptInspection.declarationLocations,
     sourceReference: `${GRAPH_EXPORT} + ${SCHEMA_EXPORT}`
   });
 
   const report = {
     test: 'Samantha GKB SDK Knowledge Graph Validation',
-    testVersion: '1.1.0',
+    testVersion: '1.2.0',
     status: valid ? 'PASSED' : 'FAILED',
 
     sdk: {
@@ -251,6 +345,15 @@ async function main() {
       truncated: errors.length > 20
     },
 
+    typescriptDeclaration: {
+      typeName: 'ClaimOrigin',
+      file: typescriptDeclarationPath,
+      status: typescriptInspection.status,
+      reason: typescriptInspection.reason ?? null,
+      values: typescriptInspection.values,
+      declarationLocations: typescriptInspection.declarationLocations
+    },
+
     compatibility: {
       ...originCompatibility.compatibility,
       inspection: originCompatibility.inspection,
@@ -263,7 +366,8 @@ async function main() {
       'No SDK claims are imported into GKB.',
       'Schema validation does not establish factual correctness.',
       'Schema validation does not verify game mechanics.',
-      'Redistribution rights are not assessed.'
+      'Redistribution rights are not assessed.',
+      'TypeScript parsing supports named string-literal union declarations only.'
     ],
 
     reportFile: 'GKB/reports/sdk-knowledge-graph-validation-report.json'
