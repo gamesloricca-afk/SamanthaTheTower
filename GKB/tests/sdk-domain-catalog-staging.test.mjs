@@ -1,4 +1,6 @@
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import Ajv2020 from 'ajv/dist/2020.js';
 import { buildSdkDomainCatalogStaging } from '../adapter/sdk-domain-catalog-staging.mjs';
 
 const source = {
@@ -21,6 +23,9 @@ const result = buildSdkDomainCatalogStaging({
   retrievedAt: '2026-11-27'
 });
 
+const schema = JSON.parse(await readFile(new URL('../schema/sdk-domain-catalog-staging.schema.json', import.meta.url), 'utf8'));
+const validate = new Ajv2020({ allErrors: true }).compile(schema);
+assert.equal(validate(result), true, JSON.stringify(validate.errors));
 assert.equal(result.schemaVersion, '1.0.0');
 assert.equal(result.source.sdkVersion, '0.14.1');
 assert.equal(result.source.sdkGameVersion, 'v28.3.0');
@@ -65,7 +70,7 @@ assert.throws(() => buildSdkDomainCatalogStaging({
 console.log(JSON.stringify({
   test: 'Samantha GKB SDK Domain Catalog Staging',
   status: 'PASSED',
-  cases: 21,
+  cases: 22,
   domains: result.catalogs.length,
   records: result.catalogs.reduce((sum, item) => sum + item.recordCount, 0),
   rawFieldsPreserved: true,
