@@ -353,4 +353,23 @@ CI:
 - Result: SUCCESS (42 steps).
 - Artifact: `gkb-sdk-staging-213`, 14-day retention.
 
-Next priority: inspect the four raw catalog structures for identifier quality, duplicate keys, missing names/IDs, and cross-domain collisions. Only then define domain-specific identifier mapping rules; do not infer canonical IDs from display names or array positions.
+## Raw catalog structure review
+
+Reviewed the staged artifact from the latest successful CI run (#215) without changing or normalizing its records:
+
+- All 347 records are JSON objects.
+- Research: 234/234 have non-empty unique `slug` and `name`; 229/234 contain `value`; 80/234 contain `description` and `unit`. Five records without `value`: `recharge_demon_mode`, `recharge_missile_barrage`, `recharge_nuke`, `recharge_second_wind`, and `swamp_rend_additional_enemies`.
+- Workshop: 47/47 have non-empty unique `key` and `label`; each record also has `category`, `levels`, `minLevel`, and `maxLevel`.
+- Cards and Masteries: 32/32 have non-empty unique `id` and `name`; each record has both card and mastery fields.
+- Perks: 34/34 have non-empty unique `perk` text, `pool`, and `quantity`. No separate `id` field was observed. The text value is only an external identifier candidate, not a generated Samantha ID.
+- No duplicate values were found in the four observed candidate-key fields within their respective catalogs. This does not establish cross-domain identity or canonical uniqueness.
+- The 5 missing Research `value` fields remain missing; no defaults or inferred values were added.
+
+Candidate source keys for future mapping are therefore `slug` (Research), `key` (Workshop), `id` (Cards/Masteries), and the literal `perk` field (Perks). Treat all as SDK-local source identifiers only. Do not generate Samantha canonical IDs from names, array positions, or perk display text.
+
+Latest CI verification:
+- Run #215: https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45945018208
+- Result: SUCCESS; raw catalog staging test, schema validation, SDK generation, and artifact upload completed.
+- Artifact: `gkb-sdk-staging-215`, 14-day retention.
+
+Next priority: create a small, explicit crosswalk report from SDK graph nodes to these SDK data-catalog source keys only where exact identifier or exact label equality is present. Keep it labelled SDK-to-SDK candidate linkage, not Samantha canonical mapping; preserve ambiguity and unmatched records, and do not create canonical IDs or claims.
