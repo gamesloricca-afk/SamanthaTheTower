@@ -26,11 +26,11 @@ Dokumen ini merupakan basis pengetahuan yang dikelola berdasarkan bukti. Informa
 
 Core Principle: Optimize Decisions, Not Popularity.
 
-2. EVIDENCE GOVERNANCE
+2. LEGACY EVIDENCE LABELS
 
-Dokumen ini mengikuti "SAMANTHA EVIDENCE GOVERNANCE".
+Dokumen ini adalah dokumen referensi historis yang masih memakai label evidence lama. Label di bawah dipertahankan apa adanya untuk menjaga konteks sumber, bukan sebagai status canonical GKB. Label tersebut tidak otomatis dipetakan ke Verification Status canonical. Setiap klaim harus ditinjau dan dipindahkan ke claim record tersendiri hanya jika sumber dan konteksnya tersedia.
 
-Setiap klaim penting menggunakan salah satu dari empat Evidence Status berikut:
+Legacy label yang ditemukan dalam dokumen ini:
 
 Status| Arti
 Reported| Dilaporkan oleh sumber, belum dinilai lebih lanjut.
@@ -96,7 +96,7 @@ Boss| Batas yang umum dilaporkan adalah 10
 Each Elite type| Batas yang umum dilaporkan adalah 8
 Protector| Referensi yang tersedia melaporkan batas 10, tetapi informasi historis dan versi perlu diperhatikan
 
-Evidence Status: Reported / Supported, depending on the individual claim.
+Legacy Evidence Status (unmapped): Reported / Supported, depending on the individual claim.
 
 Angka tersebut merupakan informasi komunitas, bukan pernyataan bahwa developer telah mengonfirmasi seluruh batas tersebut untuk setiap versi dan kondisi permainan.
 
@@ -109,7 +109,7 @@ Namun, referensi komunitas berbeda pendapat mengenai apakah Fleet utama dihitung
 - Sebagian referensi menyatakan Fleet utama dihitung ke dalam batas Normal.
 - Referensi lain menyatakan Fleet utama tidak dihitung ke dalam batas tersebut.
 
-Evidence Status: Unverified.
+Legacy Evidence Status (unmapped): Unverified.
 
 Samantha harus mempertahankan perbedaan laporan ini dan tidak menetapkan salah satu interpretasi sebagai fakta terkonfirmasi.
 
@@ -127,7 +127,7 @@ Referensi komunitas mencatat peningkatan sebesar 4% per hit.
 
 Ranged, Ray, dan Overcharge shots tidak termasuk dalam mekanisme Heat-Up tersebut.
 
-Evidence Status: Supported.
+Legacy Evidence Status (unmapped): Supported.
 
 Samantha harus membedakan serangan kontak dari serangan proyektil atau beam.
 
@@ -135,7 +135,7 @@ Samantha harus membedakan serangan kontak dari serangan proyektil atau beam.
 
 Musuh yang bertahan hidup lebih dari tiga wave dilaporkan mengalami pengurangan nilai coin sebesar 50%.
 
-Evidence Status: Supported.
+Legacy Evidence Status (unmapped): Supported.
 
 Jangan menganggap pengurangan tersebut sebagai pengurangan langsung terhadap seluruh pendapatan coin dalam satu run. Mekanisme ini berkaitan dengan nilai coin musuh yang bersangkutan.
 
@@ -145,7 +145,7 @@ Mass musuh dilaporkan meningkat sebesar 4% untuk setiap wave yang berhasil dilew
 
 Mass berpengaruh terhadap kemampuan efek knockback dalam mengendalikan musuh.
 
-Evidence Status: Supported.
+Legacy Evidence Status (unmapped): Supported.
 
 Implementasi dan interaksi dengan Battle Conditions tetap dapat bergantung pada versi game.
 
@@ -210,7 +210,7 @@ Referensi komunitas melaporkan bahwa:
 - Interaksi Boss dengan Orb, Death Ray, dan Shockwave memiliki pembatasan atau pengecualian tertentu.
 - Orb Boss Hit memberikan interaksi khusus terhadap Boss.
 
-Evidence Status: Reported / Supported.
+Legacy Evidence Status (unmapped): Reported / Supported.
 
 Implikasi strategis:
 
@@ -226,7 +226,7 @@ Referensi komunitas melaporkan bahwa Elite memiliki pembatasan interaksi terhada
 
 Setiap jenis Elite memiliki batas populasi tersendiri menurut referensi komunitas. Anak hasil pemecahan Scatter dilaporkan tidak dihitung dalam batas populasi jenis Elite tersebut.
 
-Evidence Status: Supported.
+Legacy Evidence Status (unmapped): Supported.
 
 8.1 Vampire
 
@@ -238,7 +238,7 @@ Karakteristik yang dilaporkan:
 
 Referensi komunitas mencatat drain sebesar 2% dari maksimum Tower health per detik.
 
-Evidence Status: Supported.
+Legacy Evidence Status (unmapped): Supported.
 
 Samantha harus membedakan efek terhadap Tower dan Wall. Jangan menyatakan Wall Regen ikut dinonaktifkan.
 
@@ -252,7 +252,7 @@ Karakteristik yang dilaporkan:
 
 Referensi komunitas mencatat charge sekitar 30 detik dan beam damage sekitar dua kali damage Basic.
 
-Evidence Status: Supported.
+Legacy Evidence Status (unmapped): Supported.
 
 Charge duration, beam duration, dan interval serangan merupakan pengukuran berbeda. Jangan menyamakannya.
 
@@ -262,7 +262,7 @@ Scatter dapat membelah diri menjadi beberapa bagian setelah terkena mekanisme te
 
 Referensi komunitas melaporkan bahwa hanya satu hasil pembelahan yang memberikan Elite Cells.
 
-Evidence Status: Supported.
+Legacy Evidence Status (unmapped): Supported.
 
 Jumlah akhir tubuh Scatter tidak dicantumkan sebagai angka tetap dalam dokumen ini karena berpotensi menimbulkan perbedaan interpretasi mengenai proses pembelahan.
 
@@ -276,7 +276,7 @@ Fleet dapat muncul bersama Support Enemies yang sesuai dengan jenis Fleet.
 
 Patch notes resmi v28.3 menyatakan bahwa Support Enemies memiliki spawn cap tersendiri agar kemunculannya tidak terhalang oleh batas populasi musuh lainnya.
 
-Evidence Status: Verified.
+Legacy Evidence Status (unmapped): Verified.
 
 Jumlah Support Enemies dalam satu kemunculan tidak ditetapkan sebagai angka tetap dalam dokumen ini. Jumlah tersebut dapat berbeda menurut kondisi dan versi game.
 
@@ -289,7 +289,7 @@ Menurut patch notes resmi v28.3:
 
 Jenis stat yang terdampak bergantung pada Ultimate Weapon terkait.
 
-Evidence Status: Verified.
+Legacy Evidence Status (unmapped): Verified.
 
 9.3 Commander
 
@@ -301,7 +301,7 @@ Menurut patch notes resmi v28.3:
 
 Patch notes menyebut peningkatan sebesar 15% per pulse. Batas peningkatan Speed dan Mass disebut secara khusus oleh developer.
 
-Evidence Status: Verified.
+Legacy Evidence Status (unmapped): Verified.
 
 Samantha tidak boleh menyatakan bahwa peningkatan Health juga memiliki batas stacking yang sama dengan Speed dan Mass.
 
@@ -316,7 +316,7 @@ Menurut patch notes resmi v28.3:
 
 Patch notes menyebut faktor peningkatan damage sebesar 1.4x per hit.
 
-Evidence Status: Verified.
+Legacy Evidence Status (unmapped): Verified.
 
 9.5 Fleet Tournament Mechanics
 
@@ -330,7 +330,7 @@ Mekanisme yang diumumkan:
 - Wave berikutnya dimulai setelah seluruh Fleet pada wave tersebut dikalahkan.
 - Sisa persentase health Fleet dapat digunakan sebagai tie-break pada Fleet Wave.
 
-Evidence Status: Verified.
+Legacy Evidence Status (unmapped): Verified.
 
 Penerapan mekanisme ini harus mengikuti cakupan liga dan mode yang diumumkan developer. Jangan menganggapnya berlaku untuk semua mode permainan.
 
@@ -352,7 +352,7 @@ Tank| 4
 Elite| 4
 Boss| 5
 
-Evidence Status: Reported.
+Legacy Evidence Status (unmapped): Reported.
 
 Angka tersebut bukan jaminan jumlah coin yang diterima pemain dari setiap kill.
 
