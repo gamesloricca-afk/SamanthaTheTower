@@ -35,3 +35,9 @@ Retain this as the Reddit author's version-scoped claim. Do not silently treat i
 
 - Conflict: `CNF-D04-DR-001`
 - GKB staging decision: hold
+
+
+## Review completion — 2026-11-27
+
+- **Reddit source statement confirmed; gameplay claim remains EXTERNAL-UNVERIFIED.** The post is dated 2025-11-06, says “Updated with v28.3”, and places Defense % plus Chrono Field, Primordial Collapse, Flame Bot, and Chain Thunder before Defense Absolute.
+- A commenter explicitly questions the Defense Absolute placement. The author attributes the information to an unnamed top-three player and provides no reproducible test protocol. Do not extend this v28.3-context statement automatically to other versions. Conflict CNF-D04-DR-001 remains OPEN. GKB: HOLD.
