@@ -267,6 +267,21 @@ export function analyzeOriginCompatibility({
   sourceReference = null,
   inspectionDate = new Date().toISOString(),
 }) {
+  if (typeof sdkPackage !== 'string' || sdkPackage.trim() === '') {
+    throw new TypeError('sdkPackage must be a non-empty string');
+  }
+
+  if (typeof sdkVersion !== 'string' || sdkVersion.trim() === '') {
+    throw new TypeError('sdkVersion must be a non-empty string');
+  }
+
+  if (
+    sourceReference !== null &&
+    typeof sourceReference !== 'string'
+  ) {
+    throw new TypeError('sourceReference must be a string or null');
+  }
+
   if (!isObject(graph)) {
     throw new TypeError('graph must be an object');
   }
@@ -546,6 +561,34 @@ export function runSelfTest() {
     typescriptOrigins: ['game', 'wiki'],
     sourceReference: 'synthetic-self-test',
   });
+
+  // Invalid provenance metadata must not enter a compatibility report.
+  for (const invalidMetadata of [
+    { sdkPackage: 14 },
+    { sdkVersion: 14 },
+    { sourceReference: 14 },
+  ]) {
+    let rejected = false;
+
+    try {
+      analyzeOriginCompatibility({
+        sdkPackage: EXPECTED_SDK_PACKAGE,
+        sdkVersion: EXPECTED_SDK_VERSION,
+        graph,
+        schema,
+        typescriptOrigins: ['game', 'wiki'],
+        ...invalidMetadata,
+      });
+    } catch {
+      rejected = true;
+    }
+
+    if (!rejected) {
+      throw new Error(
+        'Self-test failed: invalid provenance metadata was accepted'
+      );
+    }
+  }
 
   const graphSchemaConflict =
     report.compatibility.conflicts.find(
