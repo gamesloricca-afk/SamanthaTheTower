@@ -22,7 +22,7 @@
     "provenance": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["sourceId", "sourceReference", "sourceName", "sdkPackage", "sdkVersion", "registryVersion", "gameVersion", "rawOrigin", "originMappingStatus"],
+      "required": ["sourceId", "sourceReference", "sourceName", "sdkPackage", "sdkVersion", "registryVersion", "gameVersion", "rawOrigin", "rawOrigins", "originMappingStatus"],
       "properties": {
         "sourceId": { "const": "sdk-knowledge-graph" },
         "sourceReference": { "type": "string" },
@@ -32,6 +32,7 @@
         "registryVersion": { "type": "string" },
         "gameVersion": { "type": ["string", "null"] },
         "rawOrigin": {},
+        "rawOrigins": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["path", "value"], "properties": { "path": { "type": "string" }, "value": {} } } },
         "originMappingStatus": { "enum": ["UNMAPPED_REQUIRES_REVIEW", "INVALID_OR_MISSING"] }
       }
     },
