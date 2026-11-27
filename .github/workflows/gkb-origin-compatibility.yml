@@ -2,6 +2,9 @@ name: Samantha - GKB Origin and SDK Compatibility Tests
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - GKB
 
 permissions:
   contents: read
