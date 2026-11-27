@@ -6,7 +6,7 @@
 - Structural inventory: `GRE/AUDIT/43_domain_04_combat_mechanics_complete_structural_inventory.md`
 - Source binary SHA-256 recorded in manifest: `8266355fab717d91b51482122b66551afc62502b0f62fd8527930962cbefe81c`
 - GRE metadata format: v39 (not a verified game release version)
-- Current status: **INVESTIGATION PLAN CREATED; MECHANISM BEHAVIOR NOT YET VERIFIED**
+- Current status: **D04-01 PARTIAL — SOURCE COMPARISON COMPLETE; LIVE-GAME ORDER UNRESOLVED**
 
 ## 1. Objective
 
@@ -87,7 +87,25 @@ Do not assume an SDK helper is native game implementation. Record its own source
 - If two fanmade sources disagree, preserve both claims and references; do not pick a winner automatically.
 - Mark unavailable method bodies or inaccessible sources explicitly.
 
-## 7. Current findings and status
+## 7. D04-01 evidence results
+
+The first investigation has been completed to the source-comparison stage.
+
+- [D04-01 evidence report](../../reports/D04-01_damage-reduction-pipeline.md)
+- [SDK source record](../../sources/SRC-SDK-THETOWERSDK-0141.md)
+- [Fandom source record](../../sources/SRC-FANDOM-DEFENSE-PERCENT.md)
+- [Reddit source record](../../sources/SRC-REDDIT-DAMAGE-ORDER-2025-11-06.md)
+- [Open conflict: order relative to Defense Absolute](../../conflicts/CNF-D04-DR-001-defense-absolute-order.md)
+
+Registered claims:
+- `CLM-D04-DR-001`: SDK layer-stack helper (verified as SDK code only).
+- `CLM-D04-DR-002`: separate SDK damage helper (verified as SDK code only).
+- `CLM-D04-DR-003`: Fandom order statement (external-unverified).
+- `CLM-D04-DR-004`: Reddit v28.3 order statement (external-unverified).
+
+**Source disagreement:** Fandom places Chrono Field / Primordial Collapse / Flame Bot after Defense Absolute. Reddit places them before Defense Absolute. The SDK's layer-stack helper agrees with Reddit on this placement, but this does not prove live-game behavior. No winner is selected.
+
+## 8. Current findings and status
 
 **VERIFIED as GRE declarations only:**
 - The domain export contains 79 type records.
@@ -101,12 +119,11 @@ Do not assume an SDK helper is native game implementation. Record its own source
 - Wave base damage/health formulas.
 
 **NOT YET DONE:**
-- External source registry entries for these topics.
-- Source-linked behavior claims.
-- Conflict records.
-- Reproducible test evidence.
+- Version-matched native method body / implementation evidence.
+- Reproducible player test evidence.
+- Confirmation whether differences are caused by game version, hit-path scope, or source interpretation.
 
-## 8. Exit criteria
+## 9. Exit criteria
 
 This domain is ready for evidence review when each selected topic has:
 - registered sources with version/date/provenance;
