@@ -22,6 +22,8 @@ Live verification:
 - Run `45964132479`: first persistent baseline snapshot.
 - Run `45964559484`: algorithm migration snapshot; all six files reported `ALGORITHM_CHANGED` because the first baseline predated stable content hashes.
 - Run `45964708978`: compared against the second snapshot; all six staged payloads reported `UNCHANGED`.
+- Run `45964899352`: compared against the third snapshot; all six staged payloads again reported `UNCHANGED`.
+- The latest pointer is maintained at `GKB/staging/latest-snapshot.json`; the snapshot history is retained under `GKB/staging/snapshots/`.
 - The synthetic pipeline test also verifies that timestamp-only changes are `UNCHANGED`, payload changes are `CHANGED`, and duplicate run IDs cannot overwrite an existing snapshot.
 
 The six persisted payload files are:
@@ -32,7 +34,7 @@ The six persisted payload files are:
 5. `sdk-domain-catalogs.json` — 347 raw records across four SDK catalogs.
 6. `review-queue.json` — 1,618 pending assertion reviews.
 
-The latest verified snapshot is `GKB/staging/snapshots/45964708978/`; the current pointer is `GKB/staging/latest-snapshot.json`.
+Verified consecutive stable snapshots include `GKB/staging/snapshots/45964708978/` and `GKB/staging/snapshots/45964899352/`; the current pointer is `GKB/staging/latest-snapshot.json`.
 
 ## Phase 3B — Canonical Mapping
 
@@ -79,6 +81,7 @@ Successful live runs:
 - [Run 45964132479](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964132479) — initial pipeline and first persistent snapshot.
 - [Run 45964559484](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964559484) — updated pipeline tests and second snapshot. The first attempt at this code revision exposed an incorrect test expectation; the test was corrected, and this run passed.
 - [Run 45964708978](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964708978) — all tests passed and real cross-run comparison returned `UNCHANGED` for all six payload files.
+- [Run 45964899352](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964899352) — repeated the full pipeline successfully; all six payloads again returned `UNCHANGED`.
 
 Latest integrated synthetic test: 15 cases passed. It covers assertion staging, pending review, defer/approve decisions, canonical domain enforcement, reviewer metadata, duplicate rejection, batch-size enforcement, canonical normalization, and persistent snapshot comparison.
 
