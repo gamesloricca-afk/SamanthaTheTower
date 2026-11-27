@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import Ajv2020 from 'ajv/dist/2020.js';
+import { createRequire } from 'node:module';
+const require = createRequire(new URL('../runtime/package.json', import.meta.url));
+const Ajv2020 = require('ajv/dist/2020').default;
 import { buildSdkDomainCatalogStaging } from '../adapter/sdk-domain-catalog-staging.mjs';
 
 const source = {
