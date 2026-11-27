@@ -1,7 +1,7 @@
 # Samantha GKB — Phase 3 Completion Report
 
 **Implementation:** COMPLETED on `phase3-completion`  
-**CI verification:** PASS — workflow run [45964132479](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964132479)  
+**CI verification:** PASS — workflow runs [45964132479](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964132479) and [45964559484](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45964559484)  
 **Integration:** Draft PR [#1](https://github.com/gamesloricca-afk/SamanthaTheTower/pull/1) targeting `GKB`; not merged.
 
 ## Objective
@@ -26,7 +26,11 @@ First verified snapshot:
 - Snapshot commit: `7a0b7550061c9a7f0fa72bcec61b36bb3ce40831`.
 - Artifact: `gkb-phase3-45964132479`, 30-day retention.
 
-A subsequent run is required to verify real cross-run comparison behavior using the stable content-hash algorithm.
+Second snapshot:
+- Run ID: `45964559484`; previous run: `45964132479`.
+- Six staged payload files were compared. Result: `ALGORITHM_CHANGED` for all six because the first baseline predates the stable content-hash algorithm. This is an explicit migration state, not a source-data conflict.
+- The synthetic pipeline test now verifies that generation/retrieval timestamps alone produce `UNCHANGED`, while payload changes produce `CHANGED`.
+- A third live run is queued by the next branch update to verify stable real-source comparison.
 
 ## Phase 3B — Canonical Mapping
 
@@ -65,7 +69,7 @@ Workflow run `45964132479` completed successfully:
 - Review-gated normalizer test: 22 cases passed.
 - Source comparison validator test: 14 cases passed.
 - Canonical domain registry test passed (20 unique domains).
-- Phase 3 integrated synthetic pipeline test: 12 cases passed in this run; this test is being strengthened to cover stable content-hash comparisons and registry enforcement.
+- Phase 3 integrated synthetic pipeline test: 15 cases passed, including stable content-hash comparison, canonical domain registry enforcement, reviewer metadata, duplicate detection, and the 25-claim batch limit.
 - Real SDK staging outputs generated: 320 node claims, 1,618 assertion envelopes, 396 edges, 3 contradiction records (6 source claims), and 347 catalog records across Research, Workshop, Cards/Masteries, and Perks.
 - No canonical import or verification promotion was performed.
 
@@ -81,6 +85,6 @@ A passing test proves pipeline behavior and schema compatibility, not gameplay t
 
 ## Remaining verification
 
-- Run the updated Phase 3 pipeline again after the stable content-hash change and verify a real second-run comparison.
+- Inspect the next live snapshot to confirm stable content hashes report `UNCHANGED` when SDK content is unchanged.
 - Keep PR #1 in draft until that comparison is inspected.
 - Real human review and any canonical catalog write are intentionally outside the synthetic CI test.
