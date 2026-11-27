@@ -24,7 +24,7 @@ export function buildSdkDataCatalogCrosswalk({ graph, staging, sdkVersion, retri
   if (!isObject(graph) || !Array.isArray(graph.nodes)) throw new TypeError('graph.nodes must be an array');
   if (!isObject(staging) || !Array.isArray(staging.catalogs)) throw new TypeError('staging.catalogs must be an array');
   if (typeof sdkVersion !== 'string' || !sdkVersion) throw new TypeError('sdkVersion is required');
-  if (typeof retrievedAt !== 'string' || !/^\\d{4}-\\d{2}-\\d{2}$/.test(retrievedAt) ||
+  if (typeof retrievedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(retrievedAt) ||
       Number.isNaN(new Date(retrievedAt + 'T00:00:00.000Z').getTime()) ||
       new Date(retrievedAt + 'T00:00:00.000Z').toISOString().slice(0, 10) !== retrievedAt) {
     throw new TypeError('retrievedAt must be a valid YYYY-MM-DD date');
@@ -151,7 +151,7 @@ async function main() {
     graph, staging, sdkVersion: pkg.version, retrievedAt: new Date().toISOString().slice(0, 10)
   });
   await mkdir(path.dirname(OUTPUT), { recursive: true });
-  await writeFile(OUTPUT, JSON.stringify(report, null, 2) + '\\n', 'utf8');
+  await writeFile(OUTPUT, JSON.stringify(report, null, 2) + '\n', 'utf8');
   console.log(JSON.stringify({ ...report, records: undefined }, null, 2));
 }
 
