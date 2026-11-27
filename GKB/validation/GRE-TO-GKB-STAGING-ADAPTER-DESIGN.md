@@ -3,7 +3,7 @@
 - Prepared: 2026-11-27
 - Working branch: `gre-gkb-integration-design`
 - Base: GKB
-- Status: DESIGN — implementation and runtime tests not yet performed
+- Status: IMPLEMENTED — read-only adapter and synthetic approval-preview tests pass in GitHub Actions (2026-11-27)
 
 ## 1. Goal
 
@@ -200,4 +200,45 @@ Implementation is ready for review only when:
 - A report proves zero canonical writes and zero automatic approvals.
 - A draft PR targets GKB and clearly states all limitations.
 
-**Current status: DESIGN COMPLETE; IMPLEMENTATION NOT STARTED; TESTS NOT RUN.**
+## 13. Implemented first increment — 2026-11-27
+
+Files implemented on `gre-gkb-integration-design`:
+
+- `GKB/adapter/gre-staging.mjs`: pinned-snapshot Markdown parser, deterministic staging IDs, source linking, multi-domain mapping, pending review queue bridge, and import report.
+- `GKB/schema/gre-staging.schema.json`: JSON Schema for GRE staging envelopes.
+- `GKB/adapter/gre-reviewed-claim-normalizer.mjs`: canonical claim preview requiring an explicit APPROVE decision; it never writes canonical files.
+- `GKB/tests/gre-staging.test.mjs` and `GKB/tests/gre-reviewed-claim-normalizer.test.mjs`.
+- `GKB/staging/gre-source-snapshot/TestAccount-62ae508f/`: pinned source Markdown snapshot.
+- `GKB/runtime/package.json`: test and stage scripts.
+- `.github/workflows/gkb-gre-staging.yml`: CI test, staging preview, and artifact upload.
+
+### Verified CI result
+
+GitHub Actions run `46036889708`:
+
+- 12 claims parsed.
+- 7 source records parsed.
+- 1 conflict parsed.
+- 13 staging records produced (12 claims + 1 conflict).
+- 20 raw source Markdown records preserved.
+- 0 duplicate IDs.
+- 0 unmapped domains (including multi-domain claims).
+- 0 missing source references.
+- 0 unresolved conflict references.
+- 0 unknown top-level metadata keys in this pinned fixture.
+- 13 records pending review.
+- 0 automatic approvals.
+- 0 canonical writes.
+
+Both `test:gre-staging` and `test:gre-reviewed-claim` passed. The explicit approval test uses a synthetic review fixture only; it does not approve any real GRE claim.
+
+### Known implementation limits
+
+- Unknown-field detection currently covers top-level metadata keys; complete raw Markdown is retained to preserve unrecognized body content.
+- Source type remains `UNKNOWN` until reviewer classification.
+- Source attribution and dates are copied only when parseable; original wording remains in raw Markdown.
+- The adapter currently ingests the 12 claims, 7 sources, and 1 conflict in the pinned D04 evidence snapshot. It does not ingest all GRE audit/domain JSON exports.
+- The generated staging and review queue are CI artifacts, not canonical GKB data.
+- No real GRE record has been approved or written into canonical domain files.
+
+**Current status: FIRST GRE STAGING ADAPTER IMPLEMENTED; PINNED FIXTURE TESTS PASSED; CANONICAL PROMOTION NOT PERFORMED.**
