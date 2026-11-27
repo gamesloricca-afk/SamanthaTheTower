@@ -8,6 +8,9 @@ const registry = {
   sources: [{ id: 'sdk-knowledge-graph', values: ['game', 'wiki'] }]
 };
 const graph = {
+  schemaVersion: 1,
+  graphVersion: 3,
+  generatedFor: '2026-10-15',
   nodes: [
     { id: 'node.one', provenance: { source: { origin: 'game' } }, title: 'Example', description: 'Raw description', extra: { keep: true } },
     { id: 'node.two', sources: [{ origin: 'wiki' }], name: 'Another', payload: [1, 2] },
@@ -17,7 +20,7 @@ const graph = {
   ]
 };
 
-const result = stageKnowledgeGraph(graph, { sdkVersion: '0.14.1', registry });
+const result = stageKnowledgeGraph(graph, { sdkVersion: '0.14.1', registry, retrievedAt: '2026-11-27' });
 assert.equal(result.report.status, 'PASSED');
 assert.equal(result.report.inputNodeCount, 5);
 assert.equal(result.report.stagedRecordCount, 5);
@@ -26,13 +29,19 @@ assert.equal(result.report.classifiedCount, 0);
 assert.equal(result.report.rawOriginPreservedCount, 3);
 assert.equal(result.report.rawOriginOccurrenceCount, 3);
 assert.equal(result.records[0].provenance.rawOrigins[0].value, 'game');
+assert.equal(result.records[0].provenance.originMappingStatus, 'UNRESOLVED');
 assert.equal(result.records[1].provenance.rawOrigins[0].value, 'wiki');
+assert.equal(result.records[1].provenance.originMappingStatus, 'UNMAPPED_REQUIRES_REVIEW');
 assert.equal(result.records[2].provenance.rawOrigins[0].value, 17);
 assert.equal(result.records[2].provenance.originMappingStatus, 'INVALID_OR_MISSING');
 assert.equal(result.records[3].provenance.rawOrigins.length, 0);
 assert.deepEqual(result.records[0].sourceRecord, graph.nodes[0]);
 assert.deepEqual(result.records[4].sourceRecord, graph.nodes[4]);
 assert.equal(result.records[4].claim, graph.nodes[4].summary);
+assert.equal(result.records[4].provenance.sdkGraphVersion, 3);
+assert.equal(result.records[4].provenance.sdkSchemaVersion, 1);
+assert.equal(result.records[4].provenance.sdkGraphGeneratedFor, '2026-10-15');
+assert.equal(result.records[4].provenance.retrievedAt, '2026-11-27');
 assert.equal(result.records[4].verificationStatus, 'EXTERNAL-UNVERIFIED');
 assert.equal(result.records[4].reviewStatus, 'PENDING_REVIEW');
 assert.equal(result.records[4].classification, null);
@@ -41,8 +50,9 @@ assert.equal(result.report.automaticMapping, false);
 assert.equal(result.report.promotionPerformed, false);
 assert.equal(result.report.gkbImportPerformed, false);
 
-assert.throws(() => stageKnowledgeGraph({ items: [] }, { sdkVersion: '0.14.1', registry }), /graph.nodes/);
-assert.throws(() => stageKnowledgeGraph(graph, { sdkVersion: '0.14.2', registry }), /version mismatch/);
+assert.throws(() => stageKnowledgeGraph({ items: [] }, { sdkVersion: '0.14.1', registry, retrievedAt: '2026-11-27' }), /graph.nodes/);
+assert.throws(() => stageKnowledgeGraph(graph, { sdkVersion: '0.14.2', registry, retrievedAt: '2026-11-27' }), /version mismatch/);
+assert.throws(() => stageKnowledgeGraph(graph, { sdkVersion: '0.14.1', registry, retrievedAt: '2026-02-30' }), /valid YYYY-MM-DD/);
 console.log(JSON.stringify({
   test: 'Samantha GKB SDK Claim Staging Adapter',
   status: 'PASSED',
