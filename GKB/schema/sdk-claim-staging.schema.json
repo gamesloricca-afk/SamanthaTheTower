@@ -6,37 +6,156 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "stagingVersion", "stagingId", "recordKind", "classification",
-    "verificationStatus", "reviewStatus", "subject", "claim",
-    "provenance", "sourceRecord", "limitations"
+    "stagingVersion",
+    "stagingId",
+    "recordKind",
+    "classification",
+    "verificationStatus",
+    "reviewStatus",
+    "subject",
+    "claim",
+    "provenance",
+    "sourceRecord",
+    "limitations"
   ],
   "properties": {
-    "stagingVersion": { "const": "1.0.0" },
-    "stagingId": { "type": "string", "minLength": 1 },
-    "recordKind": { "const": "SDK_GRAPH_NODE_ENVELOPE" },
-    "classification": { "enum": ["OBJECTIVE", "SENTIMENT", null] },
-    "verificationStatus": { "const": "EXTERNAL-UNVERIFIED" },
-    "reviewStatus": { "const": "PENDING_REVIEW" },
-    "subject": { "type": ["string", "null"] },
-    "claim": { "type": ["string", "null"] },
+    "stagingVersion": {
+      "const": "1.0.0"
+    },
+    "stagingId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recordKind": {
+      "const": "SDK_GRAPH_NODE_ENVELOPE"
+    },
+    "classification": {
+      "enum": [
+        "OBJECTIVE",
+        "SENTIMENT",
+        null
+      ]
+    },
+    "verificationStatus": {
+      "const": "EXTERNAL-UNVERIFIED"
+    },
+    "reviewStatus": {
+      "const": "PENDING_REVIEW"
+    },
+    "subject": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "claim": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "provenance": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["sourceId", "sourceReference", "sourceName", "sdkPackage", "sdkVersion", "registryVersion", "gameVersion", "rawOrigin", "rawOrigins", "originMappingStatus"],
+      "required": [
+        "sourceId",
+        "sourceReference",
+        "sourceName",
+        "sdkPackage",
+        "sdkVersion",
+        "registryVersion",
+        "gameVersion",
+        "rawOrigin",
+        "rawOrigins",
+        "originMappingStatus",
+        "sdkGraphVersion",
+        "sdkSchemaVersion",
+        "sdkGraphGeneratedFor",
+        "retrievedAt"
+      ],
       "properties": {
-        "sourceId": { "const": "sdk-knowledge-graph" },
-        "sourceReference": { "type": "string" },
-        "sourceName": { "const": "TheTowerSDK Knowledge Graph" },
-        "sdkPackage": { "const": "thetowersdk" },
-        "sdkVersion": { "type": "string" },
-        "registryVersion": { "type": "string" },
-        "gameVersion": { "type": ["string", "null"] },
+        "sourceId": {
+          "const": "sdk-knowledge-graph"
+        },
+        "sourceReference": {
+          "type": "string"
+        },
+        "sourceName": {
+          "const": "TheTowerSDK Knowledge Graph"
+        },
+        "sdkPackage": {
+          "const": "thetowersdk"
+        },
+        "sdkVersion": {
+          "type": "string"
+        },
+        "registryVersion": {
+          "type": "string"
+        },
+        "gameVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "rawOrigin": {},
-        "rawOrigins": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["path", "value"], "properties": { "path": { "type": "string" }, "value": {} } } },
-        "originMappingStatus": { "enum": ["UNMAPPED_REQUIRES_REVIEW", "INVALID_OR_MISSING"] }
+        "rawOrigins": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "value"
+            ],
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "value": {}
+            }
+          }
+        },
+        "originMappingStatus": {
+          "enum": [
+            "UNMAPPED_REQUIRES_REVIEW",
+            "UNRESOLVED",
+            "INVALID_OR_MISSING"
+          ]
+        },
+        "sdkGraphVersion": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sdkSchemaVersion": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sdkGraphGeneratedFor": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "retrievedAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
       }
     },
-    "sourceRecord": { "type": "object" },
-    "limitations": { "type": "array", "items": { "type": "string" } }
+    "sourceRecord": {
+      "type": "object"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
   }
 }
