@@ -25,7 +25,7 @@ import { pathToFileURL } from 'node:url';
 const ADAPTER_NAME =
   'Samantha GKB Source Origin Mapping Adapter';
 
-const ADAPTER_VERSION = '1.0.0';
+const ADAPTER_VERSION = '1.0.1';
 
 const EXPECTED_SDK_PACKAGE = 'thetowersdk';
 const EXPECTED_SDK_VERSION = '0.14.1';
