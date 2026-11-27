@@ -3,8 +3,8 @@ SAMANTHA EVIDENCE GOVERNANCE
 Information Sources, Attribution and Evidence Handling
 
 Document ID: GOV-EVIDENCE-CONFLICT
-Version: 1.3.0
-Date: 2026-11-07
+Version: 1.4.0
+Date: 2026-11-27
 Applies to: GKB, GMB, PER, and all future Samantha knowledge databases.
 Status: Reviewed – Pending Owner Approval
 Supersedes: Version 1.2.2
@@ -62,39 +62,34 @@ The following rules apply:
 
 Samantha is not required to investigate or resolve every disagreement between community sources.
 
-4. Evidence Status
+4. Claim Classification and Verification Status
 
-Use these four Evidence Status values when recording information in the knowledge databases:
+Every canonical GKB Claim must have one Classification and one Verification Status.
 
-Reported
+Classification:
+- OBJECTIVE: factual or mechanically testable information, including reported values and mechanics.
+- SENTIMENT: opinions, experiences, preferences, and community observations.
 
-A source explicitly reports the information, but Samantha has not completed an assessment of the available evidence.
+Verification Status:
+- VERIFIED: assessed against available evidence for the recorded game version and conditions. This is Samantha's internal assessment, not developer certification.
+- USER-PROVIDED: supplied by a player or project owner and not independently promoted.
+- EXTERNAL-UNVERIFIED: imported or reported by an external source and not yet assessed by Samantha.
+- HYPOTHESIS: a proposed explanation or relationship that remains uncertain.
+- CONFLICTING: involved in an unresolved disagreement between sources or claims.
+- SUPERSEDED: retained for history but replaced by a later claim or version-specific record.
 
-Supported
+Rules:
+- Classification and Verification Status describe different things and must not be conflated.
+- A fanmade/community source is not automatically true or false.
+- Competing reports should be preserved as separate claims with their own provenance. Samantha is not required to select a winning source.
+- Keep game version, SDK version, and source publication date separate.
+- Preserve unknown source fields whenever practical; do not silently discard them.
+- Historical claims should be retained and marked SUPERSEDED when appropriate.
 
-Available credible evidence supports the information, but it has not met the standard for Verified.
-
-Verified
-
-The information has been checked against reliable evidence available to Samantha, with the applicable game version and conditions taken into account.
-
-Verified is an internal evidence assessment by Samantha. It is not official developer certification or a guarantee of permanent accuracy.
-
-Verification applies only to the version and conditions that were checked.
-
-Unverified
-
-Available evidence has been assessed but is insufficient to establish the information reliably.
-
-Important rules:
-
-- Each recorded Claim should have one active Evidence Status.
-- These statuses describe the evidence available to Samantha, not an absolute guarantee of truth.
-- Samantha does not need to independently verify every community report.
-- Reported information may be presented with clear source attribution without being promoted to Supported or Verified.
-- A source being unofficial does not automatically make its information false.
-- Outdated or potentially incorrect information should be identified when known.
-
+Legacy terminology:
+- Reported, Supported, and Unverified are retained only as terminology in older documents or source material.
+- They are not valid canonical Verification Status values.
+- Do not mechanically convert these legacy labels into a new status without reviewing the underlying source context.
 5. Claim Records and Conflict Register
 
 Claim IDs may be used when information needs to be tracked individually, particularly when different sources report competing values.
