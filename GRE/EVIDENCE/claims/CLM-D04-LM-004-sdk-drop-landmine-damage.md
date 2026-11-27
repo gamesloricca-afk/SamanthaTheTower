@@ -37,3 +37,9 @@ A separate helper `dropLandMineDamage` subtracts the lesser of base damage and a
 ## Related claims
 
 - `CLM-D04-LM-001`
+
+
+## Review completion — 2026-11-27
+
+- **SDK damage helper and cap test verified; native parity not verified.** Rechecked getDropLandmineDamage and dropLandMineDamage in src/mechanics/combat/land-mines.ts. The first caps mineDamage at 100 before the 0.01 scale and multiplies its input terms; the second subtracts the lesser of base damage and absorb pool before applying the ultimate-module multiplier.
+- tests/mechanics/mechanics.test.ts tests the cap behavior for getDropLandmineDamage. It does not independently test every input term or the separate dropLandMineDamage helper. Input units and native field mapping remain unknown. GKB: HOLD.
