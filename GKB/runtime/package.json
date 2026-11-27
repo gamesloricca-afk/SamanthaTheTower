@@ -50,7 +50,9 @@
     "test:review-decision-schema": "node ../tests/review-decision-schema.test.mjs",
     "test:gre-staging": "node ../tests/gre-staging.test.mjs",
     "stage:gre-evidence": "node ../adapter/gre-staging.mjs",
-    "test:gre-reviewed-claim": "node ../tests/gre-reviewed-claim-normalizer.test.mjs"
+    "test:gre-reviewed-claim": "node ../tests/gre-reviewed-claim-normalizer.test.mjs",
+    "test:gre-review": "node ../tests/gre-review.test.mjs",
+    "review:gre": "node ../adapter/gre-review.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
