@@ -85,7 +85,8 @@ export function stageKnowledgeGraph(graph, {
   }
   const source = registry.sources.find(item => item.id === 'sdk-knowledge-graph');
   if (!source) throw new Error('Origin Registry is missing sdk-knowledge-graph');
-  if (typeof retrievedAt !== 'string' || !/^\\d{4}-\\d{2}-\\d{2}$/.test(retrievedAt) ||
+  if (typeof retrievedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(retrievedAt) ||
+      Number.isNaN(new Date(`${retrievedAt}T00:00:00.000Z`).getTime()) ||
       new Date(`${retrievedAt}T00:00:00.000Z`).toISOString().slice(0, 10) !== retrievedAt) {
     throw new TypeError('retrievedAt must be a valid YYYY-MM-DD calendar date');
   }
