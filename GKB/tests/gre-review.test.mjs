@@ -32,7 +32,7 @@ assert.equal(summarizeGreReviewQueue(staging,decisions).find(item=>item.stagingR
 const packet=renderGreReviewPacket(staging,decisions);
 assert.match(packet,/Conflict state/);
 assert.match(packet,/Linked source claims \(kept separate\)/);
-assert.match(packet,/No source is ranked or selected/);
+assert.match(packet,/does not rank sources or select a winner/);
 assert.match(packet,/DEFER/);
 assert.match(packet,/SRC-SDK-THETOWERSDK-0141/);
 fs.rmSync(dir,{recursive:true,force:true});
