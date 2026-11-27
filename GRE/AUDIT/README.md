@@ -42,4 +42,6 @@ See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_
 
 - Domain 09 findings 401–500: primary/assist and Ultimate Weapon benefit accessor declarations, module drop/reward and creation overloads, banner data structures, banner loading/validation APIs, and banner UI interfaces. See [16_domain_09_modules_benefit_accessors_drops_banners.md](16_domain_09_modules_benefit_accessors_drops_banners.md).
 
-All Domain 09 findings 31–500 are structural observations from direct metadata declarations, not verified runtime mechanics. Decoded constant values remain candidates only.
+- Domain 09 findings 601–700: AssistModuleSlot data model, declared efficiency limits and conversion/cost APIs, unlock/equip/respec interfaces, Assist UI fields and handlers, and primary/assist slot-level spend and migration interfaces. See [17_domain_09_modules_assist_progression_ui_slot_accounting.md](17_domain_09_modules_assist_progression_ui_slot_accounting.md).
+
+All Domain 09 findings 31–700 are structural observations from direct metadata declarations, not verified runtime mechanics. Decoded constant values remain candidates only.
