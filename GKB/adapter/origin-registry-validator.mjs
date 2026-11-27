@@ -8,11 +8,10 @@ import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
 
-const require = createRequire(path.join(ROOT, 'runtime/package.json'));
-const Ajv2020 = require('ajv/dist/2020.js').default;
-
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
+const require = createRequire(path.join(ROOT, 'runtime/package.json'));
+const Ajv2020 = require('ajv/dist/2020.js').default;
 const schema = JSON.parse(fs.readFileSync(path.join(ROOT, 'schema/origin-registry.schema.json'), 'utf8'));
 const registry = JSON.parse(fs.readFileSync(path.join(ROOT, 'sources/origin-registry.json'), 'utf8'));
 const ajv = new Ajv2020({ allErrors: true, strict: false });
