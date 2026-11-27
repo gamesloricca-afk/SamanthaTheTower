@@ -11,6 +11,7 @@
 | Claim | Source | Source statement |
 |---|---|---|
 | `CLM-D04-DR-001` | TheTowerSDK 0.14.1 layer-stack helper | Chain Thunder, Chrono Field, Flame Bot, NMP, Primordial Collapse, and Defense % are modeled before Defense Absolute |
+| `CLM-D04-DR-005` | TheTowerSDK 0.14.1 combat knowledge prose | Chrono Field, Primordial Collapse, and Flame Bot are described as applying after Defense Absolute |
 | `CLM-D04-DR-003` | Fandom Defense Percent | Defense % is before Defense Absolute; Chrono Field, Primordial Collapse, and Flame Bot are after Defense Absolute |
 | `CLM-D04-DR-004` | Reddit Damage Order of Interaction | Defense % and Chrono Field, Primordial Collapse, Flame Bot, and Chain Thunder are before Defense Absolute |
 
@@ -28,8 +29,9 @@ This is a distinct helper/model scope, not proof that every listed effect exists
 
 ## Current assessment
 
+- The SDK itself contains conflicting statements: its layer-stack helper places CF / Primordial Collapse / Flame Bot before Defense Absolute, while its combat knowledge prose says they apply after Defense Absolute.
 - The Fandom and Reddit statements directly disagree about CF / Primordial Collapse / Flame Bot relative to Defense Absolute.
-- The SDK layer-stack model agrees with the Reddit ordering for those layers, but its helper is a third-party reference model, not native developer code.
+- The SDK layer-stack model agrees with the Reddit ordering for those layers, while the SDK knowledge prose agrees with the Fandom ordering. Both are third-party SDK materials, not native developer code.
 - The SDK's different helper has a narrower input surface and should not be conflated with the layer-stack helper.
 - No winner selected. Authority and recency are recorded separately.
 
