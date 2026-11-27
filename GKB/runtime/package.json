@@ -36,7 +36,9 @@
     "report:sdk-data-catalog-crosswalk": "node ../adapter/sdk-data-catalog-crosswalk.mjs",
     "test:sdk-domain-catalog-audit": "node ../tests/sdk-domain-catalog-audit.test.mjs",
     "report:sdk-domain-catalog-audit": "node ../adapter/sdk-domain-catalog-audit.mjs",
-    "test:sdk-domain-catalog-nested-audit": "node ../tests/sdk-domain-catalog-nested-audit.test.mjs"
+    "test:sdk-domain-catalog-nested-audit": "node ../tests/sdk-domain-catalog-nested-audit.test.mjs",
+    "test:sdk-research-workshop-comparison": "node ../tests/sdk-research-workshop-comparison.test.mjs",
+    "report:sdk-research-workshop-comparison": "node ../adapter/sdk-research-workshop-comparison.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
