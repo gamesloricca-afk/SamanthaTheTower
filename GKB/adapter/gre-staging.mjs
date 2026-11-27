@@ -46,8 +46,8 @@ function field(markdown, label) {
   return markdown.match(re)?.[1]?.trim() ?? null;
 }
 function metadataKeys(markdown) {
-  const header = markdown.split(/^##\\s+/m,1)[0];
-  return [...header.matchAll(/^\\s*-\\s+([^:]+):/gm)].map(match=>match[1].trim());
+  const header = markdown.split(/^##\s+/m,1)[0];
+  return [...header.matchAll(/^\s*-\s+([^:]+):/gm)].map(match=>match[1].trim());
 }
 function unknownMetadataKeys(markdown, known) {
   return metadataKeys(markdown).filter(key=>!known.has(key));
@@ -90,7 +90,8 @@ function parseSource(file, root) {
   const sourceId = inlineId(sourceField) ?? sourceField?.replace(/[`]/g,'') ?? path.basename(file,'.md');
   return {
     sourceId,
-    sourceName: field(raw,'Title/name') ?? field(raw,'Title') ?? sourceId,\n    sourceTypeLabel: field(raw,'Source type'),\n    unknownMetadataFields: unknownMetadataKeys(raw,SOURCE_META_KEYS),
+    sourceName: field(raw,'Title/name') ?? field(raw,'Title') ?? sourceId,
+    sourceTypeLabel: field(raw,'Source type'),\n    unknownMetadataFields: unknownMetadataKeys(raw,SOURCE_META_KEYS),
     sourceType: 'UNKNOWN',
     authorOrMaintainer: field(raw,'Author/maintainer'),
     sourceReference: field(raw,'Repository') ?? field(raw,'URL') ?? field(raw,'Source URL'),
@@ -141,7 +142,8 @@ function parseClaim(file, root) {
     relatedSourceClaimIds:related,
     sourceConflictIds:conflicts,
     limitations,
-    unknownMetadataFields:unknownMetadataKeys(raw,CLAIM_META_KEYS),\n    sourceRecord:{relativePath:path.relative(root,file).split(path.sep).join('/'),rawMarkdown:raw,parsedFields:{claimId,sourceDomain,claimType,sourceVerificationLabel,gameVersion,sdkVersion}}
+    unknownMetadataFields:unknownMetadataKeys(raw,CLAIM_META_KEYS),
+    sourceRecord:{relativePath:path.relative(root,file).split(path.sep).join('/'),rawMarkdown:raw,parsedFields:{claimId,sourceDomain,claimType,sourceVerificationLabel,gameVersion,sdkVersion}}
   };
 }
 function parseConflict(file, root) {
@@ -150,7 +152,8 @@ function parseConflict(file, root) {
   const related = [...new Set((claimsSection.match(/`CLM-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)))];
   return {
     recordKind:'GRE_CONFLICT',
-    sourceConflictId:inlineId(field(raw,'Conflict ID')) ?? field(raw,'Conflict ID')?.replace(/[`]/g,'') ?? path.basename(file,'.md'),\n    unknownMetadataFields:unknownMetadataKeys(raw,CONFLICT_META_KEYS),
+    sourceConflictId:inlineId(field(raw,'Conflict ID')) ?? field(raw,'Conflict ID')?.replace(/[`]/g,'') ?? path.basename(file,'.md'),
+    unknownMetadataFields:unknownMetadataKeys(raw,CONFLICT_META_KEYS),
     domainSourceLabel:field(raw,'Domain'),
     domainCandidate:cleanDomain(field(raw,'Domain'))?.id ?? null,
     domainCandidates:cleanDomain(field(raw,'Domain')) ? [cleanDomain(field(raw,'Domain')).id] : [],
@@ -180,7 +183,8 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
   const claimIds=new Set(), duplicateClaimIds=[];
   for(const claim of claimRecords){if(claimIds.has(claim.sourceClaimId)) duplicateClaimIds.push(claim.sourceClaimId); claimIds.add(claim.sourceClaimId);}
   const unresolvedSourceReferences=[];
-  const unknownFieldRecords=[];\n  for(const source of sources) if(source.unknownMetadataFields.length) unknownFieldRecords.push({recordId:source.sourceId,fields:source.unknownMetadataFields,rawPreserved:true});
+  const unknownFieldRecords=[];
+  for(const source of sources) if(source.unknownMetadataFields.length) unknownFieldRecords.push({recordId:source.sourceId,fields:source.unknownMetadataFields,rawPreserved:true});
   for(const claim of claimRecords){
     claim.unresolvedSourceReferences=claim.sourceReferences.filter(id=>!sourceById.has(id));
     for(const id of claim.unresolvedSourceReferences) unresolvedSourceReferences.push({claimId:claim.sourceClaimId,sourceId:id});
