@@ -24,6 +24,7 @@
         "evidence":{"type":["string","null"]},
         "sourceName":{"type":["string","null"]},
         "sourceType":{"enum":["OFFICIAL","COMMUNITY","PLAYER_TESTING","OTHER","UNKNOWN"]},
+        "sourceTypeOverrides":{"type":"object","description":"Optional reviewer-authored source type classifications keyed by exact sourceId.","additionalProperties":{"enum":["OFFICIAL","COMMUNITY","PLAYER_TESTING","OTHER","UNKNOWN"]}},
         "conflict":{"type":"object"}
       },
       "additionalProperties":true
