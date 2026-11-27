@@ -9,15 +9,17 @@ const node={id:'node.phase3',claimType:'objective',assertions:[{subject:'tower.e
 const graph={schemaVersion:1,graphVersion:1,generatedFor:'2026-11-27',nodes:[node],edges:[]};
 const staged=stageKnowledgeGraphAssertions(graph,{sdkVersion:'0.14.1',registry,retrievedAt:'2026-11-27'}).records;
 const queue=buildReviewQueue(staged); assert.equal(queue.records.length,1); assert.equal(queue.records[0].decision,'PENDING');
-const pending=importReviewedBatch({stagingRecords:staged,decisions:[{stagingRecordId:staged[0].stagingId,decision:'DEFER'}]});
-assert.equal(pending.importedCount,0);
-const decision={stagingRecordId:staged[0].stagingId,decision:'APPROVE',reviewer:'test',reviewedAt:'2026-11-27',
+const deferred={stagingRecordId:staged[0].stagingId,decision:'DEFER',reviewer:'test-reviewer',reviewedAt:'2026-11-27'};
+const pending=importReviewedBatch({stagingRecords:staged,decisions:[deferred]}); assert.equal(pending.importedCount,0);
+const decision={stagingRecordId:staged[0].stagingId,decision:'APPROVE',reviewer:'test-reviewer',reviewedAt:'2026-11-27',
  canonical:{claimId:'GKB-P3-001',domain:'Game Fundamentals',subject:'tower.example',claim:'Example fact.',classification:'OBJECTIVE'}};
 const imported=importReviewedBatch({stagingRecords:staged,decisions:[decision]});
 assert.equal(imported.importedCount,1); assert.equal(imported.claims[0].verificationStatus,'EXTERNAL-UNVERIFIED');
 assert.equal(imported.claims[0].provenance[0].sdkVersion,'0.14.1');
-assert.throws(()=>importReviewedBatch({stagingRecords:staged,decisions:Array.from({length:26},(_,i)=>({...decision,canonical:{...decision.canonical,claimId:`GKB-${i}`}}))}),/exceeds limit/);
-assert.throws(()=>importReviewedBatch({stagingRecords:staged,decisions:[decision,{...decision}]}),/Duplicate canonical claimId/);
+assert.throws(()=>importReviewedBatch({stagingRecords:staged,decisions:Array.from({length:26},(_,i)=>({...decision,stagingRecordId:`stage-${i}`,canonical:{...decision.canonical,claimId:`GKB-${i}`}}))}),/exceeds limit/);
+const twoStaged=[...staged,{...staged[0],stagingId:'stage-2'}];
+assert.throws(()=>importReviewedBatch({stagingRecords:twoStaged,decisions:[decision,{...decision,stagingRecordId:'stage-2'}]}),/Duplicate canonical claimId/);
+assert.throws(()=>importReviewedBatch({stagingRecords:staged,decisions:[{...decision,reviewer:''}]}),/reviewer is required/);
 const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'gkb-p3-'));
 try {
  fs.mkdirSync(path.join(tmp,'staging'),{recursive:true});
@@ -28,4 +30,4 @@ try {
  assert.equal(second.previousRunId,'100'); assert.equal(second.comparison.find(x=>x.name==='sdk-assertions.json').change,'CHANGED');
  assert.throws(()=>persistStagingSnapshot({runId:'101',retrievedAt:'2026-11-28',root:tmp}),/cannot be overwritten/);
 } finally {fs.rmSync(tmp,{recursive:true,force:true});}
-console.log(JSON.stringify({test:'Samantha GKB Phase 3A-3E pipeline',status:'PASSED',cases:10,persistentSnapshots:true,explicitReview:true,controlledBatchLimit:25,canonicalImportOnlyAfterApproval:true,automaticVerificationPromotion:false},null,2));
+console.log(JSON.stringify({test:'Samantha GKB Phase 3A-3E pipeline',status:'PASSED',cases:12,persistentSnapshots:true,explicitReview:true,controlledBatchLimit:25,canonicalImportOnlyAfterApproval:true,automaticVerificationPromotion:false},null,2));
