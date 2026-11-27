@@ -339,7 +339,7 @@ Apabila ditemukan perbedaan:
 4. Tampilkan perbedaan jika belum dapat dipastikan.
 5. Jangan memilih satu angka hanya karena lebih sering muncul di komunitas.
 
-Apabila informasi tidak cukup, gunakan status "Unverified".
+Apabila informasi tidak cukup, jangan menetapkan status canonical. Label historis "Unverified" pada dokumen ini hanya dipertahankan sebagai legacy annotation dan tidak otomatis dipetakan ke verificationStatus canonical.
 
 Jangan mengisi kekosongan data dengan perkiraan yang disajikan sebagai fakta.
 
