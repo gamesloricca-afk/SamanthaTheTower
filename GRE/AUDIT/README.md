@@ -27,10 +27,11 @@ Audit the full GRE package slowly and domain by domain before promoting any vali
 
 ## Domain audit notes
 
-See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_domain_inventory.md](01_domain_inventory.md), [02_domain_01_game_fundamentals.md](02_domain_01_game_fundamentals.md), [03_domain_02_enemies.md](03_domain_02_enemies.md), [04_domain_03_battle_conditions.md](04_domain_03_battle_conditions.md), [05_domain_04_combat_mechanics.md](05_domain_04_combat_mechanics.md), [06_domain_05_ultimate_weapons.md](06_domain_05_ultimate_weapons.md), [07_domain_06_workshop.md](07_domain_06_workshop.md), [08_domain_07_workshop_enhancements.md](08_domain_07_workshop_enhancements.md), [09_domain_09_modules_assist.md](09_domain_09_modules_assist.md), [10_domain_09_modules_leveling_benefits.md](10_domain_09_modules_leveling_benefits.md), and [11_domain_09_modules_banner_data.md](11_domain_09_modules_banner_data.md).
+See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_domain_inventory.md](01_domain_inventory.md), [02_domain_01_game_fundamentals.md](02_domain_01_game_fundamentals.md), [03_domain_02_enemies.md](03_domain_02_enemies.md), [04_domain_03_battle_conditions.md](04_domain_03_battle_conditions.md), [05_domain_04_combat_mechanics.md](05_domain_04_combat_mechanics.md), [06_domain_05_ultimate_weapons.md](06_domain_05_ultimate_weapons.md), [07_domain_06_workshop.md](07_domain_06_workshop.md), [08_domain_07_workshop_enhancements.md](08_domain_07_workshop_enhancements.md), [09_domain_09_modules_assist.md](09_domain_09_modules_assist.md), [10_domain_09_modules_leveling_benefits.md](10_domain_09_modules_leveling_benefits.md), [11_domain_09_modules_banner_data.md](11_domain_09_modules_banner_data.md), and [12_domain_09_modules_inventory_drops.md](12_domain_09_modules_inventory_drops.md).
 
 - Domain 09 findings 31–60: Assist Module slots, progression interfaces, efficiency APIs, and presets.
 - Domain 09 findings 61–90: Module benefit APIs, effect-slot interfaces, shard/reroll-cost lookups, empty-effect handling, and slot level-up interfaces.
 - Domain 09 findings 91–120: banner configuration/runtime data models, per-module banner entries, and banner retrieval/validation/selection interfaces.
+- Domain 09 findings 121–150: Module Tickets, inventory access, acquisition counters, pity/cooldown state, and drop/shard interfaces.
 
-All Domain 09 findings 31–120 are structural observations from direct metadata declarations, not verified runtime mechanics.
+All Domain 09 findings 31–150 are structural observations from direct metadata declarations, not verified runtime mechanics. Decoded constant values remain candidates only.
