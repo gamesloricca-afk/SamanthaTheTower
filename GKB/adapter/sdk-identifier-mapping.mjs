@@ -117,13 +117,15 @@ export function buildIdentifierMappingReport({ graph, catalogs, sdkVersion, retr
     retrievedAt,
     scope: {
       graphNodeCount: graph.nodes.length,
-      canonicalCatalogs: catalogs.map(item => ({
+      targetCatalogs: catalogs.map(item => ({
         domain: item.domain,
         sourcePath: item.sourcePath,
         targetType: item.targetType ?? 'CANONICAL',
         recordCount: item.records.length
       })),
-      canonicalRecordCount: canonical.length,
+      canonicalRecordCount: canonical.filter(item => item.targetType === 'CANONICAL').length,
+      documentReferenceCount: canonical.filter(item => item.targetType === 'DOCUMENT_REFERENCE').length,
+      targetRecordCount: canonical.length,
       matchingPolicy: [
         'Only exact ID equality is reported as EXACT_ID_MATCH.',
         'Exact name equality without ID equality is a candidate, not an identity decision.',
