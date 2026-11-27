@@ -189,7 +189,10 @@ async function main() {
     report: result.report,
     records: result.records
   }, null, 2) + '\n', 'utf8');
-  console.log(JSON.stringify(result.report, null, 2));
+  console.log(JSON.stringify({
+    ...result.report,
+    reviewPreview: result.records.slice(0, 10)
+  }, null, 2));
 }
 
 const isDirect = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
