@@ -26,3 +26,7 @@ Use [CLAIM_TEMPLATE.md](../templates/CLAIM_TEMPLATE.md).
 - Do not merge contradictory values into one averaged value.
 - Keep user save/test observations sample-specific.
 - Do not promote claims to GKB from this directory automatically.
+
+## Current review checkpoint
+
+The twelve currently registered claims in D04-01 and D04-02 have completed a source-audit pass. This does not automatically change their verification statuses: SDK claims remain SDK-scoped, GRE claims remain declaration-scoped, and community claims remain external-unverified. See the two investigation reports for review closure and remaining runtime gaps.
