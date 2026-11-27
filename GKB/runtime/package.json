@@ -12,7 +12,8 @@
     "test:sdk-claim-staging": "node ../tests/sdk-claim-staging.test.mjs",
     "test:unique-modules": "node ../tests/unique-modules-catalog.test.mjs",
     "test:claim-schema": "node ../tests/claim-schema.test.mjs",
-    "test:sdk-public-exports": "node ../adapter/sdk-public-exports-smoke.mjs"
+    "test:sdk-public-exports": "node ../adapter/sdk-public-exports-smoke.mjs",
+    "inspect:sdk-knowledge-shape": "node ../adapter/sdk-knowledge-shape-inspector.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
