@@ -445,3 +445,35 @@ Additional informational findings:
 These observations do not assume every record must have the same nested structure or array length. Numeric minimum/maximum are descriptive only; the audit does not infer expected bounds, units, level progression, costs, or gameplay formulas. A numeric/string type variation is reported, not coerced.
 
 A dedicated nested-audit fixture test covers nested arrays, differing object key sets, mixed numeric/string values, nulls, and array-length differences. The full catalog report remains read-only; no source record is modified, normalized, repaired, deduplicated, or promoted. The CI artifact remains `GKB/reports/sdk-domain-catalog-audit.json`.
+
+
+## Research–Workshop SDK catalog comparison audit
+
+Added a read-only comparison report for the staged Research and Workshop exports:
+- `GKB/adapter/sdk-research-workshop-comparison.mjs`
+- `GKB/tests/sdk-research-workshop-comparison.test.mjs`
+- `GKB/schema/sdk-research-workshop-comparison.schema.json`
+- Runtime commands: `test:sdk-research-workshop-comparison` and `report:sdk-research-workshop-comparison`
+- CI artifact: `GKB/reports/sdk-research-workshop-comparison.json`
+
+Comparison rules:
+- Research identity field: `slug`; display field: `name`.
+- Workshop identity field: `key`; display field: `label`.
+- Only exact string equality is used. No case folding, fuzzy matching, semantic matching, or identifier generation.
+- Exact Research `slug` ↔ Workshop `key` equality is reported separately from Research `name` ↔ Workshop `label` text candidates.
+- Shared top-level fields, domain-only fields, JSON types, and nested `levels` object-key shapes are reported.
+- Candidate pairs remain observations only; no entity identity, mechanic equivalence, or cross-catalog relationship is inferred.
+
+Initial observed result from CI:
+- Research: 234 records; Workshop: 47 records.
+- Shared top-level fields: `category` and `levels`.
+- Research-only fields: `base`, `description`, `name`, `slug`, `unit`, `value`.
+- Workshop-only fields: `key`, `label`, `maxLevel`, `minLevel`.
+- Exact Research `name` ↔ Workshop `label` candidates: 21.
+- Exact Research `slug` ↔ Workshop `key` matches: 0.
+- For the 21 exact-label candidates, observed nested level entries use Research keys `level/cost/duration` and Workshop keys `level/value/cash/coins`; level-array lengths also differ by record.
+- The text candidate `Defense %` does not equal `Defense Percent`; no spelling or label normalization was attempted.
+
+No explicit cross-catalog reference field was established from the selected field mappings. This does not prove that relationships are absent elsewhere in the SDK. No values, units, costs, progression, formulas, or gameplay mechanics were reconciled. All SDK data remains `EXTERNAL-UNVERIFIED`.
+
+Safety: source records are not changed, merged, deduplicated, or promoted. No Samantha canonical IDs, mappings, claims, or relationships are created.
