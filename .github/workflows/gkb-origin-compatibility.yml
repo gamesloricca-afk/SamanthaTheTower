@@ -57,6 +57,10 @@ jobs:
         working-directory: GKB/runtime
         run: npm run compare:sdk-unique-modules
 
+      - name: Inspect SDK wiki, contributions, and charts
+        working-directory: GKB/runtime
+        run: npm run inspect:sdk-wiki-contributions-charts
+
       - name: Validate canonical GKB claim schema
         working-directory: GKB/runtime
         run: npm run test:claim-schema
