@@ -1,7 +1,7 @@
 /**
  * Samantha GKB — TheTowerSDK Knowledge Graph Validator
  *
- * Version: 1.4.0
+ * Version: 1.5.0
  * SDK: thetowersdk@0.14.1
  * Validator: ajv@8.17.1
  *
@@ -248,6 +248,130 @@ async function main() {
     sourceReference: `${GRAPH_EXPORT} + ${SCHEMA_EXPORT}`
   });
 
+  // Samantha-owned registry is provenance metadata, not an authority for
+  // rewriting SDK values. Compare its snapshot with live inspected exports.
+  const originRegistryPath = resolve(
+    process.cwd(),
+    '../sources/origin-registry.json'
+  );
+  const originRegistry = JSON.parse(
+    await readFile(originRegistryPath, 'utf8')
+  );
+  assert(
+    originRegistry.sdk?.package === 'thetowersdk' &&
+    originRegistry.sdk?.version === sdkManifest.version,
+    'Origin Registry SDK identity/version does not match inspected SDK'
+  );
+
+  const registrySource = id => originRegistry.sources.find(
+    source => source.id === id
+  ) ?? null;
+
+  const registryGraph = registrySource('sdk-knowledge-graph');
+  const registrySchema = registrySource('sdk-json-schema');
+  const registryTypescript = registrySource('sdk-typescript-claim-origin');
+
+  function compareRegistryValues(source, liveValues) {
+    if (!source) {
+      return {
+        status: 'REGISTRY_SOURCE_MISSING',
+        registryValues: [],
+        liveValues,
+        addedSinceRegistry: liveValues,
+        missingFromLive: [],
+      };
+    }
+
+    const registryValues = source.values ?? [];
+    return {
+      status:
+        JSON.stringify([...registryValues].sort()) ===
+        JSON.stringify([...liveValues].sort())
+          ? 'CURRENT'
+          : 'CHANGED_SINCE_REGISTRY',
+      registryValues,
+      liveValues,
+      addedSinceRegistry: liveValues.filter(value => !registryValues.includes(value)),
+      missingFromLive: registryValues.filter(value => !liveValues.includes(value)),
+    };
+  }
+
+  const liveOriginSources = {
+    graph: {
+      id: 'sdk-knowledge-graph',
+      reference: GRAPH_EXPORT,
+      values: originCompatibility.compatibility.observedOrigins,
+      comparison: compareRegistryValues(
+        registryGraph,
+        originCompatibility.compatibility.observedOrigins
+      ),
+    },
+    jsonSchema: {
+      id: 'sdk-json-schema',
+      reference: SCHEMA_EXPORT,
+      values: originCompatibility.compatibility.schemaOrigins,
+      comparison: compareRegistryValues(
+        registrySchema,
+        originCompatibility.compatibility.schemaOrigins
+      ),
+    },
+    typescript: {
+      id: 'sdk-typescript-claim-origin',
+      reference: typescriptDeclarationReference,
+      values: typescriptInspection.status === 'INSPECTED'
+        ? typescriptInspection.values
+        : [],
+      inspectionStatus: typescriptInspection.status,
+      comparison: typescriptInspection.status === 'INSPECTED'
+        ? compareRegistryValues(
+            registryTypescript,
+            typescriptInspection.values
+          )
+        : { status: 'LIVE_SOURCE_NOT_INSPECTED' },
+    },
+  };
+
+  const originProvenance = originCompatibility.preservation.groupedOccurrences.map(
+    group => ({
+      sourceValue: group.origin,
+      valueType: group.valueType ?? 'string',
+      mappedValue: null,
+      mappingStatus: group.validString === false
+        ? 'INVALID_OR_MISSING'
+        : 'UNMAPPED_REQUIRES_REVIEW',
+      occurrenceCount: group.occurrenceCount,
+      locations: group.locations,
+      provenance: {
+        sourceId: 'sdk-knowledge-graph',
+        sourceReference: GRAPH_EXPORT,
+        sourceName: 'TheTowerSDK Knowledge Graph',
+        sdkPackage: sdkManifest.name,
+        sdkVersion: sdkManifest.version,
+        registryVersion: originRegistry.registryVersion,
+        registryVerification: originRegistry.verification,
+        gameVersion: originRegistry.gameVersion,
+        inspectedAt: originCompatibility.inspection.date,
+      },
+    })
+  );
+
+  const originRegistryEvidence = {
+    registryVersion: originRegistry.registryVersion,
+    registryReference: 'GKB/sources/origin-registry.json',
+    registryVerification: originRegistry.verification,
+    sdk: originRegistry.sdk,
+    comparisonPolicy: originRegistry.comparisonPolicy,
+    liveSources: liveOriginSources,
+    snapshotStatus: Object.values(liveOriginSources).every(
+      source => source.comparison.status === 'CURRENT'
+    ) ? 'CURRENT' : 'REVIEW_REQUIRED',
+    automaticMapping: false,
+    semanticEquivalence: 'NOT_ASSESSED',
+    originProvenance,
+  };
+
+  originCompatibility.compatibility.originRegistry = originRegistryEvidence;
+
   const graphSchemaConflict = originCompatibility.compatibility.conflicts.find(
     conflict => conflict.id === 'ORIGIN_GRAPH_SCHEMA_MISMATCH'
   );
@@ -287,7 +411,7 @@ async function main() {
 
   const report = {
     test: 'Samantha GKB SDK Knowledge Graph Validation',
-    testVersion: '1.4.0',
+    testVersion: '1.5.0',
     status: valid
       ? 'PASSED'
       : compatibilityRunPassed
@@ -355,7 +479,7 @@ async function main() {
       'Schema validation does not establish factual correctness.',
       'Schema validation does not verify game mechanics.',
       'Redistribution rights are not assessed.',
-      'TypeScript parsing supports named string-literal union declarations only.'
+      'TypeScript parsing supports named string-literal union declarations only.',\n      'Origin Registry provenance is attached without changing raw SDK origin values.'
     ],
 
     reportFile: 'GKB/reports/sdk-knowledge-graph-validation-report.json'
