@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://samantha.invalid/gkb/schema/unique-modules.schema.json",
+  "title": "Samantha GKB Unique Modules",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "title",
+    "description",
+    "source",
+    "classification",
+    "verificationStatus",
+    "minRarity",
+    "maxRarity",
+    "rarityOrder",
+    "modules"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "title": {
+      "const": "Unique Module Effects"
+    },
+    "description": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "package",
+        "targetVersion",
+        "sourceRef",
+        "sourceFile",
+        "retrievedRef",
+        "versionCaveat"
+      ],
+      "properties": {
+        "name": {
+          "const": "TheTowerSDK"
+        },
+        "package": {
+          "const": "thetowersdk"
+        },
+        "targetVersion": {
+          "const": "0.14.1"
+        },
+        "sourceRef": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sourceFile": {
+          "type": "string"
+        },
+        "retrievedRef": {
+          "type": "string"
+        },
+        "versionCaveat": {
+          "type": "string"
+        }
+      }
+    },
+    "classification": {
+      "const": "OBJECTIVE"
+    },
+    "verificationStatus": {
+      "const": "EXTERNAL-UNVERIFIED"
+    },
+    "minRarity": {
+      "const": "Epic"
+    },
+    "maxRarity": {
+      "const": "Ancestral 5"
+    },
+    "rarityOrder": {
+      "const": [
+        "Epic",
+        "Legendary",
+        "Mythic",
+        "Ancestral"
+      ]
+    },
+    "modules": {
+      "type": "array",
+      "minItems": 28,
+      "maxItems": 28,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "initials",
+          "category",
+          "minRarity",
+          "maxRarity",
+          "effectTemplate",
+          "rarityBonuses"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "initials": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "Cannon",
+              "Armor",
+              "Generator",
+              "Core"
+            ]
+          },
+          "minRarity": {
+            "const": "Epic"
+          },
+          "maxRarity": {
+            "const": "Ancestral 5"
+          },
+          "effectTemplate": {
+            "type": "string"
+          },
+          "rarityBonuses": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "rarity",
+                "value"
+              ],
+              "properties": {
+                "rarity": {
+                  "enum": [
+                    "Epic",
+                    "Legendary",
+                    "Mythic",
+                    "Ancestral"
+                  ]
+                },
+                "value": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
