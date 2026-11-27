@@ -1,0 +1,68 @@
+name: Samantha - GKB Phase 3 Pipeline
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  phase3:
+    if: github.ref_name == 'phase3-completion'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout Phase 3 development branch
+        uses: actions/checkout@v5
+        with:
+          ref: phase3-completion
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: GKB/runtime/package-lock.json
+      - name: Install pinned SDK runtime
+        working-directory: GKB/runtime
+        run: npm ci
+      - name: Run Phase 3A-3E tests
+        working-directory: GKB/runtime
+        run: |
+          npm run test:sdk-claim-staging
+          npm run test:sdk-assertion-staging
+          npm run test:sdk-edge-staging
+          npm run test:sdk-contradiction-staging
+          npm run test:sdk-domain-catalog-staging
+          npm run test:reviewed-assertion-normalizer
+          npm run test:source-comparison
+          npm run test:canonical-domain-registry
+          npm run test:phase-3
+      - name: Generate SDK staging outputs
+        working-directory: GKB/runtime
+        run: |
+          npm run stage:sdk-claims
+          npm run stage:sdk-assertions
+          npm run stage:sdk-edges
+          npm run stage:sdk-contradictions
+          npm run stage:sdk-domain-catalogs
+      - name: Generate pending review queue
+        working-directory: GKB/runtime
+        run: node ../adapter/review-queue.mjs
+      - name: Persist immutable run snapshot
+        working-directory: GKB/runtime
+        run: GKB_RETRIEVED_AT="$(date -u +%F)" node ../adapter/persistent-staging-store.mjs ${{ github.run_id }}
+      - name: Commit persistent staging snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add GKB/staging/snapshots GKB/staging/latest-snapshot.json
+          git commit -m "Persist GKB staging snapshot run ${{ github.run_id }}"
+          git push origin HEAD:phase3-completion
+      - name: Upload Phase 3 staging snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: gkb-phase3-${{ github.run_id }}
+          path: GKB/staging/snapshots/${{ github.run_id }}/
+          if-no-files-found: error
+          retention-days: 30

@@ -43,7 +43,10 @@
     "report:sdk-research-cards-masteries-comparison": "node ../adapter/sdk-research-cards-masteries-comparison.mjs",
     "inventory:sdk-mechanics": "node ../adapter/sdk-mechanics-function-inventory.mjs",
     "test:sdk-mechanics-inventory": "node ../tests/sdk-mechanics-function-inventory.test.mjs",
-    "test:source-comparison": "node ../tests/source-comparison-validator.test.mjs"
+    "test:source-comparison": "node ../tests/source-comparison-validator.test.mjs",
+    "stage:sdk-claims": "node ../adapter/sdk-claim-staging.mjs",
+    "test:canonical-domain-registry": "node ../tests/canonical-domain-registry.test.mjs",
+    "test:phase-3": "node ../tests/phase-3-pipeline.test.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
