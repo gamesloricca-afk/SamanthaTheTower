@@ -289,7 +289,7 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
     sourceSnapshot:{repository:SOURCE_REPOSITORY,branch:SOURCE_BRANCH,commit:SOURCE_COMMIT,retrievedAt},
     counts:{
       claimsParsed:claimRecords.length,sourcesParsed:sources.length,conflictsParsed:conflictRecords.length,
-      recordsStaged:records.length,invalid:duplicateIds.length+unmappedDomainRecords.length,
+      recordsStaged:records.length,invalid:duplicateIds.length+unmappedDomainRecords.length+unresolvedSourceReferences.length+unresolvedConflictReferences.length+unresolvedClaimConflictReferences.length,
       unmappedDomain:unmappedDomainRecords.length,missingSource:unresolvedSourceReferences.length,
       unresolvedConflictReference:unresolvedConflictReferences.length,unresolvedClaimConflictReference:unresolvedClaimConflictReferences.length,unknownFields:unknownFieldRecords.reduce((sum,item)=>sum+item.fields.length,0),rawSourceRecordsPreserved:sources.length+records.length,
       pending:records.length,automaticApprovals:0,canonicalWrites:0
@@ -302,7 +302,7 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
       'Conflicting source statements remain separate; no source is ranked or selected.',
       'This report validates staged Markdown records, not live-game mechanics.'
     ],
-    status:duplicateIds.length||unmappedDomainRecords.length?'REVIEW_REQUIRED':'STAGED'
+    status:duplicateIds.length||unmappedDomainRecords.length||unresolvedSourceReferences.length||unresolvedConflictReferences.length||unresolvedClaimConflictReferences.length?'REVIEW_REQUIRED':'STAGED'
   };
   return {
     format:'SAMANTHA_GKB_GRE_STAGING',formatVersion:1,
