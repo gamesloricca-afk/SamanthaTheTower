@@ -21,8 +21,8 @@ Audit the full GRE package slowly and domain by domain before promoting any vali
 
 - Phase 0 — repository and branch safety: complete.
 - Phase 1 — package structure and metadata inventory: initial structural pass complete.
-- Phase 2 — domain-by-domain content audit: not yet complete; proceed in domain order 01–20.
+- Phase 2 — domain-by-domain content audit: in progress; Domain 01 reviewed.
 - Phase 3 — cross-domain relationship and contradiction audit: pending.
 - Phase 4 — GKB-ready claim extraction and validation: pending.
 
-See [00_repository_and_source_audit.md](00_repository_and_source_audit.md) and [01_domain_inventory.md](01_domain_inventory.md).
+See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_domain_inventory.md](01_domain_inventory.md), and [02_domain_01_game_fundamentals.md](02_domain_01_game_fundamentals.md).
