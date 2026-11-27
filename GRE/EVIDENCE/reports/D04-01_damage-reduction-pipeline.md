@@ -61,7 +61,7 @@ The post is dated 2025-11-06 and says “Updated with v28.3”. It places:
 - Defense % and enemy reductions including Chrono Field, Primordial Collapse, Flame Bot, and Chain Thunder;
 - then Defense Absolute.
 
-The captured excerpt does not include a reproducible test protocol.
+The post's comment thread shows another player questioning the Defense Absolute placement. The author says the information came directly from a top-three player, but does not identify that player or provide a reproducible test protocol. Treat this as second-hand community attribution, not independent confirmation.
 
 ## 3. Conflicts
 
