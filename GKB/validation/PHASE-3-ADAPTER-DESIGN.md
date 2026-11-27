@@ -290,3 +290,38 @@ GitHub Actions validation:
 - Staging artifact: `gkb-sdk-staging-193`, 14-day retention.
 
 Remaining gap: expand the comparison catalog domain by domain only after each canonical catalog has stable IDs and its own schema validation. Do not try to resolve the 292 unmatched records by fuzzy matching.
+
+
+## Identifier mapping — UW and Enemy reference pass
+
+Extended the read-only identifier mapper to compare the SDK graph against:
+- The canonical Unique Modules catalog (`GKB/domains/modules-unique.json`).
+- Numbered section headings in `GKB/ULTIMATE_WEAPONS_MECHANICS.md`.
+- Numbered section headings in `GKB/ENEMY_MECHANICS.md`.
+
+Document heading matches are explicitly typed `DOCUMENT_REFERENCE_CANDIDATE`. Their IDs are navigation anchors such as `GKB-UW-001#chain-lightning`; they are not canonical entity IDs or claim IDs.
+
+Pinned SDK 0.14.1 result from CI run #200:
+- SDK graph nodes inspected: 320.
+- Canonical Unique Modules records: 28; exact-name candidates: 28.
+- Ultimate Weapon document anchors: 9; heading candidates: 9.
+- Enemy document anchors: 21; heading candidates: 5.
+- Total candidate matches: 42 (28 canonical-catalog name candidates and 14 document-reference candidates).
+- Exact ID matches: 0.
+- Ambiguous matches: 0.
+- Unmatched nodes: 278.
+- Approved mappings: 0.
+
+The five enemy heading matches are Boss, Protector, Vampire, Scatter, and Saboteur. The remaining enemy document headings were not matched by exact label; no fuzzy or semantic inference was attempted.
+
+Coverage gaps:
+- Research, Workshop, Cards and Masteries, and Perks do not yet have Samantha-owned structured canonical catalogs in this branch. They remain `NO_CANONICAL_CATALOG`; SDK exports are not silently substituted for Samantha catalogs.
+- Ultimate Weapons and Enemies are document-reference coverage only, not canonical catalog coverage.
+- The 278 unmatched nodes are unmatched against the limited references above; this does not mean they are unknown to Samantha.
+
+Safety:
+- No canonical IDs were generated for UW or Enemies.
+- No source document or SDK record was rewritten.
+- No canonical claims or relationships were created.
+- No verification statuses were promoted.
+- No bulk import was performed.
