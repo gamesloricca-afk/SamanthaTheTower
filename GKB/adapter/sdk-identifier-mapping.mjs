@@ -158,7 +158,7 @@ async function main() {
     retrievedAt: new Date().toISOString().slice(0, 10)
   });
   await mkdir(path.dirname(OUTPUT), { recursive: true });
-  await writeFile(OUTPUT, JSON.stringify(report, null, 2) + '\\n', 'utf8');
+  await writeFile(OUTPUT, JSON.stringify(report, null, 2) + '\n', 'utf8');
   console.log(JSON.stringify({ ...report, records: undefined }, null, 2));
 }
 
