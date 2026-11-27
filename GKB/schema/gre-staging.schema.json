@@ -1,0 +1,29 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://samantha.invalid/gkb/schema/gre-staging.schema.json",
+  "title":"Samantha GKB GRE staging envelope",
+  "type":"object",
+  "required":["format","formatVersion","sourceSnapshot","sources","records"],
+  "properties":{
+    "format":{"const":"SAMANTHA_GKB_GRE_STAGING"},
+    "formatVersion":{"const":1},
+    "sourceSnapshot":{"type":"object","required":["repository","branch","commit","retrievedAt"],"properties":{
+      "repository":{"type":"string","minLength":1},"branch":{"type":"string","minLength":1},
+      "commit":{"type":"string","pattern":"^[a-f0-9]{40}$"},"retrievedAt":{"type":"string","format":"date"}
+    },"additionalProperties":true},
+    "sources":{"type":"array","items":{"type":"object","required":["sourceId","sourceName","sourceType","sourceRecord"],"properties":{
+      "sourceId":{"type":"string","minLength":1},"sourceName":{"type":"string","minLength":1},
+      "sourceType":{"enum":["OFFICIAL","COMMUNITY","PLAYER_TESTING","OTHER","UNKNOWN"]},
+      "sourceRecord":{"type":"object","required":["relativePath","rawMarkdown"],"properties":{
+        "relativePath":{"type":"string"},"rawMarkdown":{"type":"string"}
+      },"additionalProperties":true}
+    },"additionalProperties":true}},
+    "records":{"type":"array","items":{"type":"object","required":["recordKind","stagingId","reviewStatus","stagingStatus","provisionalVerificationStatus","sourceSnapshot","sourceRecord"],"properties":{
+      "recordKind":{"enum":["GRE_CLAIM","GRE_CONFLICT"]},"stagingId":{"type":"string","minLength":1},
+      "reviewStatus":{"const":"PENDING_REVIEW"},"stagingStatus":{"const":"PENDING_REVIEW"},
+      "provisionalVerificationStatus":{"const":"EXTERNAL-UNVERIFIED"},
+      "sourceSnapshot":{"type":"object"},"sourceRecord":{"type":"object"}
+    },"additionalProperties":true}}
+  },
+  "additionalProperties":true
+}
