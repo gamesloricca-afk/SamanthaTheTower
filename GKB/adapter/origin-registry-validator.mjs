@@ -6,7 +6,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import Ajv2020 from 'ajv/dist/2020.js';
+import { createRequire } from 'node:module';
+
+const require = createRequire(path.join(ROOT, 'runtime/package.json'));
+const Ajv2020 = require('ajv/dist/2020.js').default;
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
