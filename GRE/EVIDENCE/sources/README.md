@@ -28,3 +28,5 @@ Use [SOURCE_TEMPLATE.md](../templates/SOURCE_TEMPLATE.md) for new records.
 - Preserve fanmade/community provenance.
 - Do not call a source official unless it is an actual developer-controlled source.
 - Do not replace a source record when a newer version appears; add a versioned record and mark the old one superseded only when justified.
+
+- [SRC-GRE-METADATA-V39](SRC-GRE-METADATA-V39.md) — GRE metadata export v39 and its extraction limitations.
