@@ -8,6 +8,8 @@ on:
       - 'GKB/adapter/gre-staging.mjs'
       - 'GKB/schema/gre-staging.schema.json'
       - 'GKB/tests/gre-staging.test.mjs'
+      - 'GKB/tests/gre-review.test.mjs'
+      - 'GKB/adapter/gre-review.mjs'
       - 'GKB/staging/gre-source-snapshot/**'
       - 'GKB/runtime/package.json'
       - 'GKB/runtime/package-lock.json'
@@ -38,9 +40,13 @@ jobs:
         run: |
           npm run test:gre-staging
           npm run test:gre-reviewed-claim
+          npm run test:gre-review
       - name: Generate GRE staging preview
         working-directory: GKB/runtime
         run: npm run stage:gre-evidence -- ../staging/gre-source-snapshot/TestAccount-62ae508f ../staging/gre-import 2026-11-27
+      - name: Generate GRE review packet
+        working-directory: GKB/runtime
+        run: npm run review:gre -- packet ../staging/gre-import/gre-staging.json ../staging/gre-import/gre-review-packet.md
       - name: Upload GRE staging outputs
         uses: actions/upload-artifact@v4
         with:
@@ -49,5 +55,6 @@ jobs:
             GKB/staging/gre-import/gre-staging.json
             GKB/staging/gre-import/gre-review-queue.json
             GKB/staging/gre-import/gre-import-report.json
+            GKB/staging/gre-import/gre-review-packet.md
           if-no-files-found: error
           retention-days: 30
