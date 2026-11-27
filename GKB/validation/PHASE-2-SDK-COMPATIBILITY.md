@@ -203,7 +203,7 @@ Chart datasets may be derived views of SDK catalogs. They should not automatical
 ## Testing
 
 Latest full SDK inspection workflow:
-- GitHub Actions run: https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45937909936
+- GitHub Actions run: https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45939435882
 - Result: SUCCESS.
 - All eight roadmap modules imported in order; representative exports and selected behavior checks passed.
 - Knowledge graph shape and query behavior, data catalog shapes, selected mechanics examples, unique module comparison, wiki/contributions/save/node/chart structures all inspected.
