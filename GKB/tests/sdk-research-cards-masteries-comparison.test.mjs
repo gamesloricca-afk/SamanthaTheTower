@@ -29,8 +29,8 @@ const staging={
 };
 
 const report=buildResearchCardsMasteriesComparison(staging);
-assert.equal(report.summary.sharedTopLevelFieldCount,1);
-assert.deepEqual(report.summary.sharedTopLevelFields,['description']);
+assert.equal(report.summary.sharedTopLevelFieldCount,2);
+assert.deepEqual(report.summary.sharedTopLevelFields,['description','name']);
 assert.equal(report.summary.exactResearchSlugCardIdMatches,0);
 assert.equal(report.summary.exactResearchNameCardNameCandidates,1);
 assert.equal(report.summary.exactResearchNameCardMasteryNameCandidates,1);
