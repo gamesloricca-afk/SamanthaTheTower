@@ -1,12 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-27T00:00:00.000Z",
   "source": {
     "name": "TheTowerSDK",
     "sdkPackage": "thetowersdk",
     "sdkVersion": "0.14.1",
     "sdkGameVersion": "v28.3.0",
-    "retrievedAt": "2026-11-27",
     "classification": "OBJECTIVE",
     "verificationStatus": "EXTERNAL-UNVERIFIED",
     "note": "Raw SDK catalog staging only. SDK package version and game-version marker are separate. No values are independently verified or promoted."

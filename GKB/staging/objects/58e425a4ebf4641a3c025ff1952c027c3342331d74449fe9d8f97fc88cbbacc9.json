@@ -1,12 +1,10 @@
 {
-  "generatedAt": "2026-11-27T08:20:43.425Z",
   "report": {
     "test": "Samantha GKB SDK Edge Staging",
     "adapterVersion": "1.0.0",
     "status": "PASSED",
     "sdkVersion": "0.14.1",
     "registryVersion": "1.0.0",
-    "retrievedAt": "2026-11-27",
     "inputNodeCount": 320,
     "inputEdgeCount": 396,
     "stagedRecordCount": 396,
@@ -65,7 +63,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -126,7 +123,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -187,7 +183,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -248,7 +243,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -309,7 +303,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -370,7 +363,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -431,7 +423,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -492,7 +483,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -553,7 +543,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -615,7 +604,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -677,7 +665,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -739,7 +726,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -801,7 +787,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -863,7 +848,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -925,7 +909,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -987,7 +970,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1049,7 +1031,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1111,7 +1092,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1173,7 +1153,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1235,7 +1214,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1297,7 +1275,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1359,7 +1336,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1421,7 +1397,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1483,7 +1458,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1545,7 +1519,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1607,7 +1580,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1669,7 +1641,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1731,7 +1702,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1793,7 +1763,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1855,7 +1824,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1917,7 +1885,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -1979,7 +1946,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2041,7 +2007,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2103,7 +2068,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2165,7 +2129,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2227,7 +2190,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2289,7 +2251,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2350,7 +2311,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2411,7 +2371,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2472,7 +2431,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2533,7 +2491,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2594,7 +2551,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2655,7 +2611,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2716,7 +2671,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2777,7 +2731,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2838,7 +2791,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2899,7 +2851,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -2960,7 +2911,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3022,7 +2972,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3083,7 +3032,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3145,7 +3093,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3207,7 +3154,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3269,7 +3215,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3331,7 +3276,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3393,7 +3337,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3455,7 +3398,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3516,7 +3458,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3578,7 +3519,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3640,7 +3580,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3702,7 +3641,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3764,7 +3702,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3826,7 +3763,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3888,7 +3824,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -3950,7 +3885,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4012,7 +3946,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4074,7 +4007,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4136,7 +4068,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4198,7 +4129,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4260,7 +4190,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4322,7 +4251,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4383,7 +4311,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4444,7 +4371,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4506,7 +4432,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4568,7 +4493,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4630,7 +4554,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4692,7 +4615,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4754,7 +4676,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4816,7 +4737,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4878,7 +4798,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -4940,7 +4859,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5001,7 +4919,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5062,7 +4979,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5123,7 +5039,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5184,7 +5099,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5245,7 +5159,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5306,7 +5219,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5367,7 +5279,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5428,7 +5339,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5489,7 +5399,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5550,7 +5459,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5611,7 +5519,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5672,7 +5579,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5734,7 +5640,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5796,7 +5701,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5858,7 +5762,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5920,7 +5823,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -5981,7 +5883,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6042,7 +5943,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6104,7 +6004,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6166,7 +6065,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6227,7 +6125,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6288,7 +6185,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6349,7 +6245,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6410,7 +6305,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6472,7 +6366,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6534,7 +6427,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6596,7 +6488,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6657,7 +6548,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6718,7 +6608,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6780,7 +6669,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6841,7 +6729,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6902,7 +6789,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -6964,7 +6850,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7025,7 +6910,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7086,7 +6970,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7147,7 +7030,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7209,7 +7091,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7271,7 +7152,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7332,7 +7212,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7393,7 +7272,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7454,7 +7332,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7515,7 +7392,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7576,7 +7452,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7637,7 +7512,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7698,7 +7572,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7759,7 +7632,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7820,7 +7692,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7881,7 +7752,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -7942,7 +7812,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8003,7 +7872,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8064,7 +7932,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8125,7 +7992,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8186,7 +8052,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8247,7 +8112,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8308,7 +8172,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8369,7 +8232,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8430,7 +8292,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8491,7 +8352,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8553,7 +8413,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8614,7 +8473,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8675,7 +8533,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8736,7 +8593,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8797,7 +8653,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8858,7 +8713,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8920,7 +8774,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -8982,7 +8835,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9044,7 +8896,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9105,7 +8956,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9166,7 +9016,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9228,7 +9077,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9290,7 +9138,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9352,7 +9199,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9414,7 +9260,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9475,7 +9320,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9536,7 +9380,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9597,7 +9440,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9658,7 +9500,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9719,7 +9560,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9780,7 +9620,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9841,7 +9680,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9902,7 +9740,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -9963,7 +9800,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10024,7 +9860,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10085,7 +9920,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10146,7 +9980,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10207,7 +10040,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10268,7 +10100,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10329,7 +10160,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10390,7 +10220,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10451,7 +10280,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10512,7 +10340,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10573,7 +10400,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10634,7 +10460,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10695,7 +10520,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10756,7 +10580,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10817,7 +10640,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10878,7 +10700,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -10939,7 +10760,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11001,7 +10821,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11063,7 +10882,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11125,7 +10943,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11187,7 +11004,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11249,7 +11065,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11311,7 +11126,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11373,7 +11187,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11435,7 +11248,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11497,7 +11309,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11559,7 +11370,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11620,7 +11430,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11681,7 +11490,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11742,7 +11550,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11803,7 +11610,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11864,7 +11670,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11925,7 +11730,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -11986,7 +11790,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12047,7 +11850,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12108,7 +11910,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12170,7 +11971,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12232,7 +12032,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12294,7 +12093,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12356,7 +12154,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12418,7 +12215,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12480,7 +12276,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12542,7 +12337,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12604,7 +12398,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12666,7 +12459,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12728,7 +12520,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12789,7 +12580,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12850,7 +12640,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12911,7 +12700,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -12972,7 +12760,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13033,7 +12820,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13094,7 +12880,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13155,7 +12940,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13216,7 +13000,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13277,7 +13060,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13338,7 +13120,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13399,7 +13180,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13460,7 +13240,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13521,7 +13300,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13582,7 +13360,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13643,7 +13420,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13704,7 +13480,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13765,7 +13540,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13826,7 +13600,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13887,7 +13660,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -13948,7 +13720,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14009,7 +13780,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14071,7 +13841,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14133,7 +13902,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14194,7 +13962,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14255,7 +14022,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14316,7 +14082,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14377,7 +14142,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14438,7 +14202,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14499,7 +14262,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14560,7 +14322,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14621,7 +14382,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14682,7 +14442,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14743,7 +14502,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14805,7 +14563,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14867,7 +14624,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14929,7 +14685,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -14991,7 +14746,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15052,7 +14806,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15113,7 +14866,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15174,7 +14926,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15235,7 +14986,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15296,7 +15046,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15357,7 +15106,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15418,7 +15166,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15479,7 +15226,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15540,7 +15286,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15601,7 +15346,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15663,7 +15407,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15725,7 +15468,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15787,7 +15529,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15848,7 +15589,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15910,7 +15650,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -15971,7 +15710,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16033,7 +15771,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16095,7 +15832,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16156,7 +15892,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16217,7 +15952,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16278,7 +16012,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16339,7 +16072,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16400,7 +16132,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16462,7 +16193,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16524,7 +16254,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16586,7 +16315,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16647,7 +16375,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16709,7 +16436,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16771,7 +16497,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16833,7 +16558,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16894,7 +16618,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -16955,7 +16678,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17016,7 +16738,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17077,7 +16798,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17138,7 +16858,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17199,7 +16918,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17260,7 +16978,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17322,7 +17039,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17384,7 +17100,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17446,7 +17161,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17508,7 +17222,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17570,7 +17283,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17631,7 +17343,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17692,7 +17403,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17753,7 +17463,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17814,7 +17523,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17875,7 +17583,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17936,7 +17643,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -17997,7 +17703,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18059,7 +17764,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18121,7 +17825,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18183,7 +17886,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18244,7 +17946,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18305,7 +18006,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18366,7 +18066,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18427,7 +18126,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18488,7 +18186,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18549,7 +18246,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18610,7 +18306,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18671,7 +18366,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18732,7 +18426,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18794,7 +18487,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18856,7 +18548,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18917,7 +18608,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -18979,7 +18669,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19041,7 +18730,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19103,7 +18791,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19165,7 +18852,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19227,7 +18913,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19289,7 +18974,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19351,7 +19035,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19413,7 +19096,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19475,7 +19157,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19537,7 +19218,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19599,7 +19279,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19670,7 +19349,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19732,7 +19410,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19793,7 +19470,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19854,7 +19530,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19915,7 +19590,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -19976,7 +19650,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20037,7 +19710,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20098,7 +19770,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20159,7 +19830,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20220,7 +19890,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20281,7 +19950,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20342,7 +20010,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20403,7 +20070,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20464,7 +20130,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20525,7 +20190,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20586,7 +20250,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20647,7 +20310,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20708,7 +20370,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20769,7 +20430,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20830,7 +20490,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20891,7 +20550,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -20952,7 +20610,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21013,7 +20670,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21074,7 +20730,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21135,7 +20790,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21196,7 +20850,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21257,7 +20910,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21318,7 +20970,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21379,7 +21030,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21440,7 +21090,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21501,7 +21150,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21562,7 +21210,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21623,7 +21270,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21684,7 +21330,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21745,7 +21390,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21806,7 +21450,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21867,7 +21510,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21928,7 +21570,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -21990,7 +21631,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22052,7 +21692,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22113,7 +21752,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22174,7 +21812,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22236,7 +21873,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22297,7 +21933,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22359,7 +21994,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22421,7 +22055,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22483,7 +22116,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22544,7 +22176,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22605,7 +22236,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22667,7 +22297,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22728,7 +22357,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22789,7 +22417,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22850,7 +22477,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22911,7 +22537,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -22972,7 +22597,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23033,7 +22657,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23094,7 +22717,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23155,7 +22777,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23216,7 +22837,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23277,7 +22897,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23338,7 +22957,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23399,7 +23017,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23460,7 +23077,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23521,7 +23137,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23582,7 +23197,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23643,7 +23257,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23706,7 +23319,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23769,7 +23381,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23832,7 +23443,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23893,7 +23503,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -23954,7 +23563,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -24015,7 +23623,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -24076,7 +23683,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -24137,7 +23743,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -24199,7 +23804,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -24261,7 +23865,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -24323,7 +23926,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",

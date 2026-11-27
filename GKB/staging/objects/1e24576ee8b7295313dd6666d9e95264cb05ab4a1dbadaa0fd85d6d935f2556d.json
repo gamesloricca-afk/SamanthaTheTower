@@ -1,12 +1,10 @@
 {
-  "generatedAt": "2026-11-27T08:19:17.221Z",
   "report": {
     "test": "Samantha GKB SDK Contradiction Staging",
     "adapterVersion": "1.0.0",
     "status": "PASSED",
     "sdkVersion": "0.14.1",
     "registryVersion": "1.0.0",
-    "retrievedAt": "2026-11-27",
     "sdkContradictionCount": 3,
     "graphContradictionRecordCount": 3,
     "stagedRecordCount": 3,
@@ -63,7 +61,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -171,7 +168,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
@@ -279,7 +275,6 @@
         "sdkGraphVersion": 3,
         "sdkSchemaVersion": 1,
         "sdkGraphGeneratedFor": "2026-10-15",
-        "retrievedAt": "2026-11-27",
         "rawOrigins": [
           {
             "path": "$[0].origin",
