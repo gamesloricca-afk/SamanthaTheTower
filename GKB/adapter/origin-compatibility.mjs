@@ -7,7 +7,7 @@
  * Responsibilities:
  * - Discover origin values in SDK knowledge graphs.
  * - Compare graph origins with JSON Schema origins.
- * - Compare explicitly supplied TypeScript origins.
+ * - Compare TypeScript origins when explicitly supplied.
  * - Preserve original origin values and locations.
  * - Classify compatibility conflicts.
  * - Record SDK provenance and inspection metadata.
@@ -309,13 +309,13 @@ export function analyzeOriginCompatibility({
   }
 
   if (
-    !Array.isArray(typescriptOrigins) ||
-    !typescriptOrigins.every(
-      value => typeof value === 'string'
-    )
+    typescriptOrigins !== null &&
+    typescriptOrigins !== undefined &&
+    (!Array.isArray(typescriptOrigins) ||
+      !typescriptOrigins.every(value => typeof value === 'string'))
   ) {
     throw new TypeError(
-      'typescriptOrigins must be an array of strings'
+      'typescriptOrigins must be null or an array of strings'
     );
   }
 
@@ -346,25 +346,27 @@ export function analyzeOriginCompatibility({
     )
   );
 
-  const declaredTypes = uniqueSorted(
-    typescriptOrigins
-  );
+  const typescriptInspected = Array.isArray(typescriptOrigins);
+
+  const declaredTypes = typescriptInspected
+    ? uniqueSorted(typescriptOrigins)
+    : [];
 
   const observedNotInSchema = observedOrigins.filter(
     value => !schemaOrigins.includes(value)
   );
 
-  const typescriptNotInSchema = declaredTypes.filter(
-    value => !schemaOrigins.includes(value)
-  );
+  const typescriptNotInSchema = typescriptInspected
+    ? declaredTypes.filter(value => !schemaOrigins.includes(value))
+    : [];
 
-  const schemaNotInTypescript = schemaOrigins.filter(
-    value => !declaredTypes.includes(value)
-  );
+  const schemaNotInTypescript = typescriptInspected
+    ? schemaOrigins.filter(value => !declaredTypes.includes(value))
+    : [];
 
-  const observedNotInTypescript = observedOrigins.filter(
-    value => !declaredTypes.includes(value)
-  );
+  const observedNotInTypescript = typescriptInspected
+    ? observedOrigins.filter(value => !declaredTypes.includes(value))
+    : [];
 
   const conflicts = [];
 
@@ -418,8 +420,9 @@ export function analyzeOriginCompatibility({
   }
 
   if (
-    typescriptNotInSchema.length > 0 ||
-    schemaNotInTypescript.length > 0
+    typescriptInspected &&
+    (typescriptNotInSchema.length > 0 ||
+      schemaNotInTypescript.length > 0)
   ) {
     conflicts.push({
       id: 'ORIGIN_TYPESCRIPT_SCHEMA_MISMATCH',
@@ -443,7 +446,7 @@ export function analyzeOriginCompatibility({
     });
   }
 
-  if (observedNotInTypescript.length > 0) {
+  if (typescriptInspected && observedNotInTypescript.length > 0) {
     conflicts.push({
       id: 'ORIGIN_GRAPH_TYPESCRIPT_MISMATCH',
       type: 'OBJECTIVE',
@@ -530,6 +533,9 @@ export function analyzeOriginCompatibility({
       observedOrigins,
       schemaOrigins,
       typescriptOrigins: declaredTypes,
+      typescriptInspectionStatus: typescriptInspected
+        ? 'INSPECTED_EXPLICIT_VALUES'
+        : 'NOT_INSPECTED',
 
       observedNotInSchema,
       typescriptNotInSchema,
