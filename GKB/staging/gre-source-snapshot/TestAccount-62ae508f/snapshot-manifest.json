@@ -1,0 +1,89 @@
+{
+  "format": "SAMANTHA_GKB_GRE_SOURCE_SNAPSHOT",
+  "formatVersion": 1,
+  "repository": "gamesloricca-afk/SamanthaTheTower",
+  "branch": "TestAccount",
+  "commit": "62ae508f3473231b81d27903bdf63e899bb739be",
+  "files": [
+    {
+      "path": "claims/CLM-D04-DR-001-sdk-layer-stack.md",
+      "gitBlobSha": "2ccc26fbf2559fb3689d152ed15801ddab30f883"
+    },
+    {
+      "path": "claims/CLM-D04-DR-002-sdk-damage-helper.md",
+      "gitBlobSha": "bece26769f38f8128593d62f04d6d19ed0a1771e"
+    },
+    {
+      "path": "claims/CLM-D04-DR-003-fandom-order.md",
+      "gitBlobSha": "d53a50d136a96cdb6a1e34f0bc541e5d0c058d8d"
+    },
+    {
+      "path": "claims/CLM-D04-DR-004-reddit-order.md",
+      "gitBlobSha": "a99db121f0439abfd74f8b32d3b3410f72c8be6e"
+    },
+    {
+      "path": "claims/CLM-D04-DR-005-sdk-knowledge-order.md",
+      "gitBlobSha": "e705625cc29153145e341a634c680a308889b19a"
+    },
+    {
+      "path": "claims/CLM-D04-DR-006-gre-result-structure.md",
+      "gitBlobSha": "02db75c4ff7fb50f5e222a541fb101ef8976e8fd"
+    },
+    {
+      "path": "claims/CLM-D04-DR-007-gre-enemy-methods.md",
+      "gitBlobSha": "e57c693552ff59a5d8e86d2dc06ddbd80bee115b"
+    },
+    {
+      "path": "claims/CLM-D04-DR-008-gre-main-history.md",
+      "gitBlobSha": "17a2cb966bf31f604a6901b728da39ed49c45781"
+    },
+    {
+      "path": "claims/CLM-D04-LM-001-sdk-space-displacer.md",
+      "gitBlobSha": "ff693aa73d11550dc125aa9cebee99f256e2df64"
+    },
+    {
+      "path": "claims/CLM-D04-LM-002-workshop-lms-vs-ilm-stun.md",
+      "gitBlobSha": "ce6025f6435ff954bda17a23a38b6e8f4973e227"
+    },
+    {
+      "path": "claims/CLM-D04-LM-003-sdk-ilm-charge-chrono-jump.md",
+      "gitBlobSha": "e5652590fa09876d6676ad8e5d74169bda74295b"
+    },
+    {
+      "path": "claims/CLM-D04-LM-004-sdk-drop-landmine-damage.md",
+      "gitBlobSha": "5e2ff704bebb439481d7561a5c37a112ff0f0204"
+    },
+    {
+      "path": "conflicts/CNF-D04-DR-001-defense-absolute-order.md",
+      "gitBlobSha": "5babe595df2a591e7d7f5f256814c97de6fc983e"
+    },
+    {
+      "path": "sources/SRC-FANDOM-DEFENSE-PERCENT.md",
+      "gitBlobSha": "6c5c33d12bc057dc184a9540b1ab32ceac46b5e9"
+    },
+    {
+      "path": "sources/SRC-GRE-METADATA-V39.md",
+      "gitBlobSha": "8fed211a9884922fa077125c529446c5f73dbc06"
+    },
+    {
+      "path": "sources/SRC-REDDIT-DAMAGE-ORDER-2025-11-06.md",
+      "gitBlobSha": "079a56e98af448a810c29312da428ff7b991dd5c"
+    },
+    {
+      "path": "sources/SRC-REDDIT-SD-LMS-2024-03-21.md",
+      "gitBlobSha": "6c0c9f2678bf8fa9c5cba492a1f2a362d470fcaa"
+    },
+    {
+      "path": "sources/SRC-REDDIT-SD-LMS-2026-11-13.md",
+      "gitBlobSha": "b8c4497e82e5660524018bf80f4c0d9d6ed8acf4"
+    },
+    {
+      "path": "sources/SRC-SDK-THETOWERSDK-0141.md",
+      "gitBlobSha": "772121897c0a037c8baa1fa5d73a6bd4dc71755b"
+    },
+    {
+      "path": "sources/SRC-TOWERLOOP-SPACE-DISPLACER-V29-1-3.md",
+      "gitBlobSha": "7b0cc39c63e1e8fa649323fd83652381914931b8"
+    }
+  ]
+}
