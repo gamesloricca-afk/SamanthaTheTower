@@ -3,8 +3,8 @@ GAME KNOWLEDGE BASE (GKB)
 Project: Samantha – The Tower
 Module ID: GKB
 Document: GKB README
-Version: 1.1.0
-Date: 2026-11-07
+Version: 1.2.0
+Date: 2026-11-27
 Status: Draft – Pending Owner Approval
 Owner: Samantha Project Owner
 
@@ -91,26 +91,32 @@ Important rules:
 
 Samantha is not required to determine a single winning source whenever information differs.
 
-5. Evidence Status
+5. Claim Classification and Verification Status
 
-Use the following four Evidence Status values:
+Every canonical GKB claim must have one Classification and one Verification Status.
 
-Evidence Status| Meaning
-Reported| A source explicitly reports the information, but Samantha has not completed an assessment of the available evidence.
-Supported| Available credible evidence supports the information, but it has not met the standard for Verified.
-Verified| The information has been checked against reliable evidence available to Samantha, considering the applicable game version and conditions.
-Unverified| Available evidence has been assessed but is insufficient to establish the information reliably.
+Classification:
+- OBJECTIVE: factual or mechanically testable information, including reported values and mechanics.
+- SENTIMENT: opinions, experiences, preferences, and community observations.
 
-Important rules:
+Verification Status:
+- VERIFIED: assessed against available evidence for the recorded game version and conditions. This is Samantha's internal assessment, not developer certification.
+- USER-PROVIDED: supplied by a player or project owner and not independently promoted.
+- EXTERNAL-UNVERIFIED: imported or reported by an external source and not yet assessed by Samantha.
+- HYPOTHESIS: a proposed explanation or relationship that remains uncertain.
+- CONFLICTING: the claim is involved in an unresolved disagreement between sources or claims.
+- SUPERSEDED: retained for history but replaced by a later claim or version-specific record.
 
-- Each recorded Claim should have one active Evidence Status.
-- Evidence Status describes the evidence available to Samantha, not an absolute guarantee of truth.
-- Reported information may be presented with clear source attribution without independent verification.
-- Unofficial information is not automatically false.
-- Verified is an internal evidence assessment, not official developer certification.
-- Verified information may become outdated after a game update.
+Rules:
+- Every canonical Claim must have exactly one Classification and one Verification Status.
+- Classification describes the nature of the claim; Verification Status describes its current evidence/review state.
+- Source reports from fanmade/community sources are not automatically true or false.
+- Competing source reports should be preserved as separate claims with their own provenance. Samantha does not need to choose a winner.
+- Keep game version, SDK version, and source publication date separate.
+- Preserve unknown source fields whenever practical; do not silently discard them.
+- Historical claims should be retained and marked SUPERSEDED when appropriate.
 
-Terms such as "Calculated", "Inference", and "Hypothesis" may describe the nature of an analysis. They are not additional Evidence Status values.
+The earlier labels Reported, Supported, and Unverified are legacy document terminology. They are not valid canonical Verification Status values. Existing prose using those labels must be migrated carefully; do not infer a new status without source context.
 
 6. Knowledge Records and Source References
 
@@ -119,9 +125,9 @@ Knowledge records should contain relevant information whenever available:
 - Claim ID
 - Topic and category
 - Claim or description
+- Classification and Verification Status
 - Source name and URL
 - Source type
-- Evidence Status
 - Applicable game version
 - Source publication, update, or experiment date
 - Last review date
