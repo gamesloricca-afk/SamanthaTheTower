@@ -165,10 +165,10 @@ async function main() {
   const enemyDoc = await readFile(path.join(ROOT, 'ENEMY_MECHANICS.md'), 'utf8');
   const headingRecords = (document, prefix, domain) => {
     const records = [];
-    for (const line of document.split(/\\r?\\n/)) {
-      const match = line.match(/^\\d+(?:\\.\\d+)*\\s+(.+?)\\s*$/);
+    for (const line of document.split(/\r?\n/)) {
+      const match = line.match(/^\d+(?:\.\d+)*\s+(.+?)\\s*$/);
       if (!match) continue;
-      const name = match[1].replace(/\\s+\\([A-Z0-9+ -]+\\)$/, '').trim();
+      const name = match[1].replace(/\s+\([A-Z0-9+ -]+\)$/, '').trim();
       const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
       if (!slug) continue;
       records.push({ id: `${prefix}#${slug}`, name });
