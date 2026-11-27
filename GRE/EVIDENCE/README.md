@@ -136,3 +136,13 @@ A domain investigation is not complete merely because all declarations have been
 - Do not modify `main` without explicit authorization.
 - Keep original GRE exports unchanged.
 - Make small, reversible changes and verify each committed file.
+
+## Current review checkpoint — 2026-11-27
+
+- Registered claims: **12**.
+- Source-audit review: **12/12 complete** (D04-01: 8; D04-02: 4).
+- Runtime/gameplay verification: **incomplete** where stated in the individual claim records.
+- Open source conflict: **1** (CNF-D04-DR-001, Damage Reduction order).
+- GKB promotion: **none**.
+
+“Review complete” means the existing claim and its cited source/test/metadata were rechecked. It does not mean every gameplay proposition is verified. No new claims were added.
