@@ -45,6 +45,16 @@ function field(markdown, label) {
   const re = new RegExp('^\\s*-\\s*'+label.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+':\\s*(.*)$','mi');
   return markdown.match(re)?.[1]?.trim() ?? null;
 }
+function metadataKeys(markdown) {
+  const header = markdown.split(/^##\\s+/m,1)[0];
+  return [...header.matchAll(/^\\s*-\\s+([^:]+):/gm)].map(match=>match[1].trim());
+}
+function unknownMetadataKeys(markdown, known) {
+  return metadataKeys(markdown).filter(key=>!known.has(key));
+}
+const CLAIM_META_KEYS = new Set(['Claim ID','Domain','Subject','Claim type','Verification status','Game version/build','SDK version','Source ID','Source IDs','Source ID(s)','Source ref','Source date','Access date','Source version/ref','Publication/update date','Publication date','Publication date shown','Related records']);
+const SOURCE_META_KEYS = new Set(['Source ID','Title','Title/name','Publisher/platform','Publisher','Author','Author/maintainer','Platform','Source type','URL','Repository','Version','Inspected commit','Commit date','Package license','Node requirement','Game version/build','Game version/build scope','Game version context','Game version stated','Game version/build represented by the inspected damage-reduction routines','Access date','Page publication/update date','Publication date','Publication date shown','Last checked date stated by page','License/attribution','Authority assessment','Recency assessment','Page section','Claim','Claims','Conflict','Report','Section','Post heading','Original question','Replies','Page publication/update date','Source files','Source binary name in manifest','Original binary availability','SHA-256 recorded in manifest','Binary size recorded','GRE metadata format','Source version/ref','Branch/ref inspected','Publication/update date']);
+const CONFLICT_META_KEYS = new Set(['Conflict ID','Domain','Subject','State','Game version alignment']);
 function inlineId(value) {
   return value?.match(/`([A-Z0-9][A-Z0-9-]+)`/)?.[1] ?? null;
 }
@@ -80,15 +90,15 @@ function parseSource(file, root) {
   const sourceId = inlineId(sourceField) ?? sourceField?.replace(/[`]/g,'') ?? path.basename(file,'.md');
   return {
     sourceId,
-    sourceName: field(raw,'Title/name') ?? field(raw,'Title') ?? sourceId,
+    sourceName: field(raw,'Title/name') ?? field(raw,'Title') ?? sourceId,\n    sourceTypeLabel: field(raw,'Source type'),\n    unknownMetadataFields: unknownMetadataKeys(raw,SOURCE_META_KEYS),
     sourceType: 'UNKNOWN',
     authorOrMaintainer: field(raw,'Author/maintainer'),
     sourceReference: field(raw,'Repository') ?? field(raw,'URL') ?? field(raw,'Source URL'),
     sourceVersion: field(raw,'Version'),
     inspectedCommit: field(raw,'Inspected commit'),
-    publicationDate: field(raw,'Publication date') ?? field(raw,'Commit date') ?? field(raw,'Source date'),
+    publicationDate: raw.match(/^\\s*-\\s*(?:Page )?Publication(?:\\/update)? date(?: shown)?:\\s*(.*)$/mi)?.[1]?.trim() ?? field(raw,'Commit date') ?? field(raw,'Source date'),
     retrievedAt: field(raw,'Access date'),
-    gameVersion: field(raw,'Game version/build') ?? field(raw,'Game version'),
+    gameVersion: field(raw,'Game version/build') ?? field(raw,'Game version/build scope') ?? field(raw,'Game version context') ?? field(raw,'Game version stated') ?? field(raw,'Game version/build represented by the inspected damage-reduction routines') ?? field(raw,'Game version'),
     license: field(raw,'Package license') ?? field(raw,'License'),
     limitations: section(raw,'Limitations').split('\n').filter(x=>x.trim()).map(x=>x.replace(/^[-*]\s*/,'')),
     sourceRecord: { relativePath:path.relative(root,file).split(path.sep).join('/'), rawMarkdown:raw }
@@ -131,7 +141,7 @@ function parseClaim(file, root) {
     relatedSourceClaimIds:related,
     sourceConflictIds:conflicts,
     limitations,
-    sourceRecord:{relativePath:path.relative(root,file).split(path.sep).join('/'),rawMarkdown:raw,parsedFields:{claimId,sourceDomain,claimType,sourceVerificationLabel,gameVersion,sdkVersion}}
+    unknownMetadataFields:unknownMetadataKeys(raw,CLAIM_META_KEYS),\n    sourceRecord:{relativePath:path.relative(root,file).split(path.sep).join('/'),rawMarkdown:raw,parsedFields:{claimId,sourceDomain,claimType,sourceVerificationLabel,gameVersion,sdkVersion}}
   };
 }
 function parseConflict(file, root) {
@@ -140,7 +150,7 @@ function parseConflict(file, root) {
   const related = [...new Set((claimsSection.match(/`CLM-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)))];
   return {
     recordKind:'GRE_CONFLICT',
-    sourceConflictId:inlineId(field(raw,'Conflict ID')) ?? field(raw,'Conflict ID')?.replace(/[`]/g,'') ?? path.basename(file,'.md'),
+    sourceConflictId:inlineId(field(raw,'Conflict ID')) ?? field(raw,'Conflict ID')?.replace(/[`]/g,'') ?? path.basename(file,'.md'),\n    unknownMetadataFields:unknownMetadataKeys(raw,CONFLICT_META_KEYS),
     domainSourceLabel:field(raw,'Domain'),
     domainCandidate:cleanDomain(field(raw,'Domain'))?.id ?? null,
     domainCandidates:cleanDomain(field(raw,'Domain')) ? [cleanDomain(field(raw,'Domain')).id] : [],
@@ -170,7 +180,7 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
   const claimIds=new Set(), duplicateClaimIds=[];
   for(const claim of claimRecords){if(claimIds.has(claim.sourceClaimId)) duplicateClaimIds.push(claim.sourceClaimId); claimIds.add(claim.sourceClaimId);}
   const unresolvedSourceReferences=[];
-  const unknownFieldRecords=[];
+  const unknownFieldRecords=[];\n  for(const source of sources) if(source.unknownMetadataFields.length) unknownFieldRecords.push({recordId:source.sourceId,fields:source.unknownMetadataFields,rawPreserved:true});
   for(const claim of claimRecords){
     claim.unresolvedSourceReferences=claim.sourceReferences.filter(id=>!sourceById.has(id));
     for(const id of claim.unresolvedSourceReferences) unresolvedSourceReferences.push({claimId:claim.sourceClaimId,sourceId:id});
@@ -179,7 +189,7 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
     claim.stagingId=deterministicId('CLAIM',claim.sourceClaimId,claim.sourceRecord.relativePath);
     claim.stagingStatus='PENDING_REVIEW';
     claim.sourceSnapshot.retrievedAt=retrievedAt;
-    unknownFieldRecords.push({recordId:claim.sourceClaimId,rawPreserved:true});
+    if(claim.unknownMetadataFields.length) unknownFieldRecords.push({recordId:claim.sourceClaimId,fields:claim.unknownMetadataFields,rawPreserved:true});
   }
   const unresolvedConflictReferences=[];
   for(const conflict of conflictRecords){
@@ -188,7 +198,7 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
     conflict.stagingId=deterministicId('CONFLICT',conflict.sourceConflictId,conflict.sourceRecord.relativePath);
     conflict.sourceSnapshot={repository:SOURCE_REPOSITORY,branch:SOURCE_BRANCH,commit:SOURCE_COMMIT,relativePath:conflict.sourceRecord.relativePath,retrievedAt};
     conflict.stagingStatus='PENDING_REVIEW';
-    unknownFieldRecords.push({recordId:conflict.sourceConflictId,rawPreserved:true});
+    if(conflict.unknownMetadataFields.length) unknownFieldRecords.push({recordId:conflict.sourceConflictId,fields:conflict.unknownMetadataFields,rawPreserved:true});
   }
   const duplicateIds=[...duplicateClaimIds.map(id=>({kind:'CLAIM',id})),...duplicateSourceIds.map(id=>({kind:'SOURCE',id}))];
   const unmappedDomainRecords=[...claimRecords.filter(x=>!x.domainCandidates?.length).map(x=>x.sourceClaimId),...conflictRecords.filter(x=>!x.domainCandidates?.length).map(x=>x.sourceConflictId)];
@@ -214,11 +224,11 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
       claimsParsed:claimRecords.length,sourcesParsed:sources.length,conflictsParsed:conflictRecords.length,
       recordsStaged:records.length,invalid:duplicateIds.length+unmappedDomainRecords.length,
       unmappedDomain:unmappedDomainRecords.length,missingSource:unresolvedSourceReferences.length,
-      unresolvedConflictReference:unresolvedConflictReferences.length,unknownFields:unknownFieldRecords.length,
+      unresolvedConflictReference:unresolvedConflictReferences.length,unknownFields:unknownFieldRecords.reduce((sum,item)=>sum+item.fields.length,0),rawSourceRecordsPreserved:sources.length+records.length,
       pending:records.length,automaticApprovals:0,canonicalWrites:0
     },
     duplicateIds,unmappedDomainRecords,unresolvedSourceReferences,unresolvedConflictReferences,
-    unknownFieldRecords,limitations:[
+    unknownFieldRecords,unknownFieldDetection:'TOP_LEVEL_METADATA_KEYS_ONLY; complete raw Markdown retained for all source records',limitations:[
       'GRE source verification labels are retained verbatim and are not promoted to Samantha verification status.',
       'All source types remain UNKNOWN until attribution is explicitly reviewed.',
       'Game version, SDK version, metadata version, publication date, and retrieval date remain separate.',
