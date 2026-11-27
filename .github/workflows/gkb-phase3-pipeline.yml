@@ -20,12 +20,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
-          node-version: 22
+          node-version: "20"
           cache: npm
           cache-dependency-path: GKB/runtime/package-lock.json
       - name: Install pinned SDK runtime
         working-directory: GKB/runtime
-        run: npm ci
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Verify pinned dependency versions
+        working-directory: GKB/runtime
+        run: npm ls thetowersdk ajv --depth=0
       - name: Run Phase 3A-3E tests
         working-directory: GKB/runtime
         run: |
