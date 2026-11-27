@@ -47,7 +47,7 @@ function field(markdown, label) {
 }
 function metadataKeys(markdown) {
   const header = markdown.split(/^##\s+/m,1)[0];
-  return [...header.matchAll(/^\s*-\s+([^:\\n]+):/gm)].map(match=>match[1].trim());
+  return [...header.matchAll(/^\s*-\s+([^:\n]+):/gm)].map(match=>match[1].trim());
 }
 function unknownMetadataKeys(markdown, known) {
   return metadataKeys(markdown).filter(key=>!known.has(key));
