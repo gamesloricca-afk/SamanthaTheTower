@@ -43,6 +43,10 @@ assert.equal(sdkClaim.domainCandidate,'combat-mechanics');
 assert.equal(sdkClaim.sourceReferences[0],'SRC-SDK-THETOWERSDK-0141');
 const multiDomain=a.records.find(x=>x.sourceClaimId==='CLM-D04-DR-006');
 assert.deepEqual(multiDomain.domainCandidates,['combat-mechanics','enemies']);
+assert.equal(multiDomain.sourceMetadataVersion,'v39');
+assert.equal(multiDomain.sourceGameVersion,'UNKNOWN');
+const metadataSource=a.sources.find(x=>x.sourceId==='SRC-GRE-METADATA-V39');
+assert.equal(metadataSource.metadataFormatVersion,'`v39`');
 assert.equal(multiDomain.domainCandidate,null);
 
 const conflict=a.records.find(x=>x.recordKind==='GRE_CONFLICT');
