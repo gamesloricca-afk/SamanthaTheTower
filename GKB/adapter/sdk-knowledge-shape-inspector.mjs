@@ -69,6 +69,19 @@ const report = {
     nodeClaimTypeCounts: countBy(graph.nodes, item => item.claimType),
     nodeVerificationCounts: countBy(graph.nodes, item => item.verification)
   },
+  sampleRecords: {
+    node: graph.nodes[0] ? {
+      id: graph.nodes[0].id,
+      label: graph.nodes[0].label,
+      summary: graph.nodes[0].summary,
+      claimType: graph.nodes[0].claimType,
+      verification: graph.nodes[0].verification,
+      firstAssertion: graph.nodes[0].assertions?.[0] ?? null,
+      firstSource: graph.nodes[0].sources?.[0] ?? null
+    } : null,
+    assertionWithMissingVerification: assertions.find(item => typeof item.verification !== 'string') ?? null,
+    edge: graph.edges[0] ?? null
+  },
   node: {
     observedKeys: keys(graph.nodes[0]),
     schemaProperties: Object.keys(nodeSchema.properties ?? {}).sort()
