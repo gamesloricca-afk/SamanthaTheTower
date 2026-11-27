@@ -133,7 +133,8 @@ function parseClaim(file, root) {
 }
 function parseConflict(file, root) {
   const raw = readText(file);
-  const claimsSection = section(raw,'Claims involved');\n  const related = [...new Set((claimsSection.match(/`CLM-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)))];
+  const claimsSection = section(raw,'Claims involved');
+  const related = [...new Set((claimsSection.match(/`CLM-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)))];
   return {
     recordKind:'GRE_CONFLICT',
     sourceConflictId:field(raw,'Conflict ID') ?? path.basename(file,'.md'),
