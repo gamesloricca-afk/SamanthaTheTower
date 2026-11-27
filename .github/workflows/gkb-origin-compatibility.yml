@@ -85,6 +85,10 @@ jobs:
         working-directory: GKB/runtime
         run: npm run test:sdk-assertion-staging
 
+      - name: Test review-gated canonical claim normalizer
+        working-directory: GKB/runtime
+        run: npm run test:reviewed-assertion-normalizer
+
       - name: Generate SDK assertion staging report
         working-directory: GKB/runtime
         run: npm run stage:sdk-assertions
