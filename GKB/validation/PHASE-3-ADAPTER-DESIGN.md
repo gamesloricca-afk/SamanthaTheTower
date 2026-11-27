@@ -264,3 +264,29 @@ The artifact contains node, assertion, edge, contradiction staging JSON, and the
 ## Safety boundary
 
 Phase 3 starts with deterministic staging and reports only. The canonical claim schema remains unchanged unless a demonstrated schema gap requires a separate review. Do not overwrite the unique-module catalog, repair SDK graph data, decrypt saves, or import player-specific records.
+
+
+## Identifier mapping — first catalog pass
+
+Added a conservative identifier comparison report:
+- `GKB/adapter/sdk-identifier-mapping.mjs`
+- `GKB/tests/sdk-identifier-mapping.test.mjs`
+- Runtime commands: `test:sdk-identifier-mapping` and `report:sdk-identifier-mapping`
+- CI artifact: `GKB/reports/sdk-identifier-mapping-report.json`
+
+The first pass compares all 320 SDK graph nodes against the one currently available canonical catalog, `GKB/domains/modules-unique.json` (28 records).
+
+Actual pinned SDK 0.14.1 result:
+- 28 `NAME_CANDIDATE`: exact label/name equality for the 28 unique modules.
+- 0 `EXACT_ID_MATCH`: SDK graph IDs use a different naming form from Samantha's module IDs.
+- 0 `AMBIGUOUS`.
+- 292 `UNMATCHED`: these nodes are outside the current 28-record catalog; this does not mean they are unknown to Samantha.
+
+The report keeps SDK node IDs and Samantha canonical IDs side by side. Exact name matches remain candidates only. It performs no fuzzy matching, automatic approval, canonical rewrite, or import. A name match is not treated as proof of semantic equivalence.
+
+GitHub Actions validation:
+- Run: https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45943217861
+- Result: SUCCESS.
+- Staging artifact: `gkb-sdk-staging-193`, 14-day retention.
+
+Remaining gap: expand the comparison catalog domain by domain only after each canonical catalog has stable IDs and its own schema validation. Do not try to resolve the 292 unmatched records by fuzzy matching.
