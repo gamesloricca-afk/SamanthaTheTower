@@ -56,5 +56,5 @@
 
 ## Related records
 
-- Claims: `CLM-D04-DR-001`, `CLM-D04-DR-002`, `CLM-D04-DR-005`
+- Claims: `CLM-D04-DR-001`, `CLM-D04-DR-002`, `CLM-D04-DR-005`, `CLM-D04-LM-001`, `CLM-D04-LM-003`, `CLM-D04-LM-004`
 - Conflict: `CNF-D04-DR-001`
