@@ -53,6 +53,10 @@ jobs:
         working-directory: GKB/runtime
         run: npm run test:sdk-mechanics-api
 
+      - name: Compare Samantha unique module catalog with pinned SDK
+        working-directory: GKB/runtime
+        run: npm run compare:sdk-unique-modules
+
       - name: Validate canonical GKB claim schema
         working-directory: GKB/runtime
         run: npm run test:claim-schema
