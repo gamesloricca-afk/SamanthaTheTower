@@ -26,7 +26,7 @@ assert.ok(report.findings.some(item => item.code === 'FIELD_TYPE_VARIATION' && i
 assert.ok(report.findings.some(item => item.code === 'NULL_FIELD_VALUE' && item.field === 'value'));
 assert.equal(report.policy.rawRecordsModified, false);
 assert.equal(report.policy.canonicalImportPerformed, false);
-const perks = report.summary.catalogReports[1];
+const perks = report.summary.catalogReports[2];
 assert.equal(perks.idField, null);
 assert.equal(perks.missingId, 0);
 assert.equal(perks.repeatedLabelGroups, 1);
