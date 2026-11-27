@@ -652,7 +652,7 @@ export function runSelfTest() {
     ADAPTER_POLICY.automaticNormalization === false
   );
 
-  // 10. Source provenance is not mutated.
+  // 11. Source provenance is not mutated.
   const original = {
     origin: 'game',
     reference: 'sdk-record'
