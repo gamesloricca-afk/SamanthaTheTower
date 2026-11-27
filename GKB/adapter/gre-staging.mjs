@@ -91,12 +91,14 @@ function parseSource(file, root) {
   return {
     sourceId,
     sourceName: field(raw,'Title/name') ?? field(raw,'Title') ?? sourceId,
-    sourceTypeLabel: field(raw,'Source type'),\n    unknownMetadataFields: unknownMetadataKeys(raw,SOURCE_META_KEYS),
+    sourceTypeLabel: field(raw,'Source type'),
+    unknownMetadataFields: unknownMetadataKeys(raw,SOURCE_META_KEYS),
     sourceType: 'UNKNOWN',
     authorOrMaintainer: field(raw,'Author/maintainer'),
     sourceReference: field(raw,'Repository') ?? field(raw,'URL') ?? field(raw,'Source URL'),
     sourceVersion: field(raw,'Version'),
-    metadataFormatVersion: field(raw,'GRE metadata format'),\n    branchRef: field(raw,'Branch/ref inspected'),
+    metadataFormatVersion: field(raw,'GRE metadata format'),
+    branchRef: field(raw,'Branch/ref inspected'),
     inspectedCommit: field(raw,'Inspected commit'),
     publicationDate: raw.match(/^\\s*-\\s*(?:Page )?Publication(?:\\/update)? date(?: shown)?:\\s*(.*)$/mi)?.[1]?.trim() ?? field(raw,'Commit date') ?? field(raw,'Source date'),
     retrievedAt: field(raw,'Access date'),
@@ -119,7 +121,10 @@ function parseClaim(file, root) {
   const claimType = field(raw,'Claim type');
   const gameVersion = field(raw,'Game version/build');
   const sdkVersion = field(raw,'SDK version');
-  const sourceVersionRef = field(raw,'Source version/ref');\n  const metadataVersion = sourceVersionRef?.match(/GRE metadata format\s+(v[0-9.]+)/i)?.[1] ?? null;\n  const publicationDate = field(raw,'Publication/update date') ?? field(raw,'Publication date') ?? field(raw,'Source date');\n  const accessDate = field(raw,'Access date');
+  const sourceVersionRef = field(raw,'Source version/ref');
+  const metadataVersion = sourceVersionRef?.match(/GRE metadata format\s+(v[0-9.]+)/i)?.[1] ?? null;
+  const publicationDate = field(raw,'Publication/update date') ?? field(raw,'Publication date') ?? field(raw,'Source date');
+  const accessDate = field(raw,'Access date');
   const related = [...new Set((raw.match(/`CLM-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)).filter(x=>x!==claimId))];
   const conflicts = [...new Set((raw.match(/`CNF-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)))];
   const evidence = section(raw,'Evidence').split('\n').filter(x=>x.trim()).map(x=>x.replace(/^[-*]\s*/,'')); 
@@ -139,7 +144,10 @@ function parseClaim(file, root) {
     reviewStatus:'PENDING_REVIEW',
     sourceGameVersion:gameVersion,
     sourceSdkVersion:sdkVersion,
-    sourceMetadataVersion:metadataVersion,\n    sourceVersionRef,\n    sourcePublicationDate:publicationDate,\n    sourceAccessDate:accessDate,
+    sourceMetadataVersion:metadataVersion,
+    sourceVersionRef,
+    sourcePublicationDate:publicationDate,
+    sourceAccessDate:accessDate,
     sourceReferences:[...new Set(sourceRefs)],
     evidence,
     relatedSourceClaimIds:related,
