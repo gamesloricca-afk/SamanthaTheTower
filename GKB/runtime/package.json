@@ -38,7 +38,9 @@
     "report:sdk-domain-catalog-audit": "node ../adapter/sdk-domain-catalog-audit.mjs",
     "test:sdk-domain-catalog-nested-audit": "node ../tests/sdk-domain-catalog-nested-audit.test.mjs",
     "test:sdk-research-workshop-comparison": "node ../tests/sdk-research-workshop-comparison.test.mjs",
-    "report:sdk-research-workshop-comparison": "node ../adapter/sdk-research-workshop-comparison.mjs"
+    "report:sdk-research-workshop-comparison": "node ../adapter/sdk-research-workshop-comparison.mjs",
+    "test:sdk-research-cards-masteries-comparison": "node ../tests/sdk-research-cards-masteries-comparison.test.mjs",
+    "report:sdk-research-cards-masteries-comparison": "node ../adapter/sdk-research-cards-masteries-comparison.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
