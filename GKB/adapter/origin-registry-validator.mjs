@@ -14,9 +14,18 @@ const require = createRequire(path.join(ROOT, 'runtime/package.json'));
 const Ajv2020 = require('ajv/dist/2020.js').default;
 const schema = JSON.parse(fs.readFileSync(path.join(ROOT, 'schema/origin-registry.schema.json'), 'utf8'));
 const registry = JSON.parse(fs.readFileSync(path.join(ROOT, 'sources/origin-registry.json'), 'utf8'));
-const ajv = new Ajv2020({ allErrors: true, strict: false });
+const ajv = new Ajv2020({ allErrors: true, strict: false, validateFormats: true });
+ajv.addFormat('date', {
+  type: 'string',
+  validate(value) {
+    if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(value)) return false;
+    const date = new Date(`${value}T00:00:00.000Z`);
+    return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
+  }
+});
 const validate = ajv.compile(schema);
 const valid = validate(registry);
+const invalidCalendarDateRejected = !validate({ ...registry, recordedAt: '2026-02-30' });
 const errors = (validate.errors ?? []).map(error => ({
   instancePath: error.instancePath,
   keyword: error.keyword,
@@ -42,12 +51,14 @@ if (missingKinds.length) integrityErrors.push({ code: 'MISSING_SOURCE_KIND', val
 if (registry.comparisonPolicy.automaticMapping !== false) integrityErrors.push({ code: 'AUTOMATIC_MAPPING_MUST_REMAIN_DISABLED' });
 if (registry.comparisonPolicy.semanticEquivalence !== 'NOT_ASSESSED') integrityErrors.push({ code: 'SEMANTIC_EQUIVALENCE_MUST_REMAIN_UNASSESSED' });
 
+if (!invalidCalendarDateRejected) integrityErrors.push({ code: 'INVALID_CALENDAR_DATE_NOT_REJECTED' });
 const passed = valid && integrityErrors.length === 0;
 const report = {
   test: 'Samantha GKB Origin Registry Validation',
   validatorVersion: '1.0.0',
   status: passed ? 'PASSED' : 'FAILED',
   schemaValidation: valid ? 'PASSED' : 'FAILED',
+  invalidCalendarDateRejected,
   registryVersion: registry.registryVersion,
   sdk: registry.sdk,
   sourceCount: registry.sources.length,
