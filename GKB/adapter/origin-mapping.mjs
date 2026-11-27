@@ -2,7 +2,7 @@
 /**
  * Samantha GKB — Source Origin Mapping Adapter
  *
- * Version: 1.0.0
+ * Version: 1.0.2
  * Target SDK: thetowersdk@0.14.1
  *
  * Responsibilities:
@@ -25,7 +25,7 @@ import { pathToFileURL } from 'node:url';
 const ADAPTER_NAME =
   'Samantha GKB Source Origin Mapping Adapter';
 
-const ADAPTER_VERSION = '1.0.1';
+const ADAPTER_VERSION = '1.0.2';
 
 const EXPECTED_SDK_PACKAGE = 'thetowersdk';
 const EXPECTED_SDK_VERSION = '0.14.1';
@@ -196,6 +196,21 @@ export function mapOrigin({
   sdkVersion = EXPECTED_SDK_VERSION,
   sourceReference = null
 } = {}) {
+  if (typeof sdkPackage !== 'string') {
+    throw new TypeError('sdkPackage must be a string');
+  }
+
+  if (typeof sdkVersion !== 'string') {
+    throw new TypeError('sdkVersion must be a string');
+  }
+
+  if (
+    sourceReference !== null &&
+    typeof sourceReference !== 'string'
+  ) {
+    throw new TypeError('sourceReference must be a string or null');
+  }
+
   const approvedMappings =
     validateMappingConfig(mappings);
 
@@ -591,7 +606,38 @@ export function runSelfTest() {
     rejectedInvalidDate
   );
 
-  // 9. Output record passes runtime validation.
+  // 9. Invalid upstream metadata types must be rejected.
+  const invalidMetadataCases = [
+    {
+      name: 'numeric SDK package is rejected',
+      options: { sdkPackage: 14 }
+    },
+    {
+      name: 'numeric SDK version is rejected',
+      options: { sdkVersion: 14 }
+    },
+    {
+      name: 'numeric source reference is rejected',
+      options: { sourceReference: 14 }
+    }
+  ];
+
+  for (const testCase of invalidMetadataCases) {
+    let rejected = false;
+
+    try {
+      mapOrigin({
+        origin: 'wiki',
+        ...testCase.options
+      });
+    } catch {
+      rejected = true;
+    }
+
+    check(testCase.name, rejected);
+  }
+
+  // 10. Output record passes runtime validation.
   const validation =
     validateSourceOriginRecord(gameResult);
 
