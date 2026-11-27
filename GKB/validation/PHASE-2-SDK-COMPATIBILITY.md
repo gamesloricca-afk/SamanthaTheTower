@@ -159,10 +159,16 @@ The chart registry contains 48 entries in the installed package. A sample call t
 The installed registry count is 48; the documentation's two counts are retained as a documentation inconsistency, not silently reconciled. A chart dataset is a formatted view of SDK data, not independent confirmation of the underlying game values.
 
 ### mechanics
-The SDK exposes calculation functions for enemy scaling, damage, ultimate weapons, economy, workshop, bots, guardians, and battle conditions:
+The pinned mechanics entry point imports successfully and exposes 939 function exports. CI executed four documented examples:
+- `computeWaveBaseHealth({ tier: 10, wave: 4500 })` → `1.3427574853866112e+24`.
+- `computeWaveBaseDamage({ tier: 10, wave: 4500 })` → `110444952250835`.
+- `applyWorkshopOvercapMultiplier(100, 7000)` → `195.52428084888697`.
+- `sentryProtocolWorkshopOrbFireInterval(2)` → `0.1`.
+
+The SDK documentation describes these formulas and their example inputs:
 - https://tmrxjd.github.io/TheTowerSDK/docs/mechanics/
 
-Export availability is not proof that a formula exactly reproduces the game. The SDK's own accuracy notes and each function's documentation must be inspected before Samantha treats a result as an objective mechanic.
+These results verify that selected exports are callable and their documented examples run in the pinned package. They do not establish that every formula exactly reproduces game code. Each formula still needs per-function review of inputs, units, caps, version conditions, and accuracy notes before Samantha stores it as an objective mechanic.
 
 ### wiki
 The SDK retrieves and reformats community wiki pages. Page results include source identity, resolved title, and source URL; the docs also expose page-edit metadata and attribution helpers:
