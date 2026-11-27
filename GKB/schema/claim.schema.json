@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://samantha.invalid/gkb/schema/claim.schema.json",
   "title": "Samantha GKB Canonical Claim",
-  "description": "A source-attributed universal game-knowledge claim. Competing reports should be stored as separate claims.",
+  "description": "A source-attributed universal game-knowledge claim. Competing reports remain separate claims; no source is automatically selected as the winner.",
   "type": "object",
   "required": [
     "claimId",
@@ -52,19 +52,13 @@
         "null"
       ]
     },
-    "sourcePublicationDate": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "format": "date"
-    },
     "lastReviewedAt": {
       "type": [
         "string",
         "null"
       ],
-      "format": "date"
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
     },
     "provenance": {
       "type": "array",
@@ -101,19 +95,33 @@
               "null"
             ]
           },
+          "sdkPackage": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sdkVersion": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
           "publicationDate": {
             "type": [
               "string",
               "null"
             ],
-            "format": "date"
+            "format": "date",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
           },
           "retrievedAt": {
             "type": [
               "string",
               "null"
             ],
-            "format": "date"
+            "format": "date",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
           },
           "evidence": {
             "type": [
@@ -130,6 +138,44 @@
         },
         "additionalProperties": true
       }
+    },
+    "conflict": {
+      "type": "object",
+      "required": [
+        "conflictId",
+        "relatedClaimIds",
+        "status"
+      ],
+      "properties": {
+        "conflictId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relatedClaimIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "status": {
+          "enum": [
+            "OPEN",
+            "UNDER_REVIEW",
+            "RESOLVED",
+            "NOT_COMPARABLE"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
     },
     "relatedClaims": {
       "type": "array",
@@ -190,6 +236,13 @@
     },
     "sourceRecord": {
       "description": "Optional unmodified source payload for preserving unsupported or unknown upstream fields."
+    },
+    "legacyEvidenceStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Original non-canonical status label retained verbatim during migration; never automatically mapped to verificationStatus."
     }
   },
   "additionalProperties": true
