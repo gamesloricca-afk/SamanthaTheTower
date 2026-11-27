@@ -71,6 +71,8 @@ The tree also contains:
 - `GRE/3/IMPORTANT_CONSTANTS.md` — candidate decoded constants.
 - `GRE/3/readme.txt`, plus the small readme files under `GRE/1` and `GRE/2`.
 
-## Next step
+## Completion update
 
-Domain 01 must be audited in detail before moving to Domain 02. Do not bulk-import any of these files into GKB.
+The per-domain structural inventories for Domains 01–20 are now documented in audit reports 22, 24, 29–46. The cross-domain declaration consistency and relationship map are documented in reports 47–48. The consolidated closure and remaining evidence gaps are in [51_gre_package_structural_audit_closure.md](51_gre_package_structural_audit_closure.md).
+
+**Structural inventory: COMPLETE.** This does not establish runtime mechanics. Method bodies, call graph, assets, and remote configuration are absent from this GRE package. Do not bulk-import these files into GKB.
