@@ -35,3 +35,9 @@ Keep Workshop Land Mines and Inner Land Mines as separate subjects. Do not model
 
 - `CLM-D04-LM-001`
 - `CLM-D04-LM-003`
+
+
+## Review completion — 2026-11-27
+
+- **Two community statements agree; gameplay claim remains EXTERNAL-UNVERIFIED.** Rechecked the 2024-03-21 and 2026-11-13 Reddit discussions. Both state Space Displacer-generated ILMs are not stunned by the ordinary Workshop Land Mine Stun card and that ILM stun comes from the separate ILM stun lab.
+- A June 2025 discussion mentions using both the ordinary card and ILM stun with Space Displacer; it does not clearly say the ordinary card stuns converted ILMs, so it is not treated as a contradiction. Neither supporting thread gives a reproducible test setup or game build. No native stun-eligibility implementation was found. GKB: HOLD.
