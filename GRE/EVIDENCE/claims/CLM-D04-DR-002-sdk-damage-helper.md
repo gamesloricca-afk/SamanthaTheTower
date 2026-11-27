@@ -36,3 +36,10 @@ This is an internal SDK model-scope difference that requires source-owner clarif
 
 - Claim: `CLM-D04-DR-001`
 - GKB staging decision: hold
+
+
+## Review completion — 2026-11-27
+
+- **SDK helper verified; live-game parity not verified.** Rechecked computeDamageReductionResult and DamageReductionInput in the pinned SDK commit.
+- tests/mechanics/damage-redux-calculator.test.ts checks a numerical case involving Defense %, Chrono Field multiplier, and Defense Absolute. The helper also supports Flame Bot, optional module defense, and Rend Armor.
+- Its inputs omit Chain Thunder, NMP, and Primordial Collapse; it is a different model scope from applyDamageReduxLayerStack. Status remains VERIFIED (SDK implementation/test only). GKB: HOLD.
