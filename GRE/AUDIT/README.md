@@ -21,8 +21,12 @@ Audit the full GRE package slowly and domain by domain before promoting any vali
 
 - Phase 0 — repository and branch safety: complete.
 - Phase 1 — package structure and metadata inventory: initial structural pass complete.
-- Phase 2 — domain-by-domain content audit: in progress; Domains 01–07 reviewed.
+- Phase 2 — domain-by-domain content audit: in progress; Domains 01–07 and 09 have structural audit notes. Domain 08 remains pending.
 - Phase 3 — cross-domain relationship and contradiction audit: pending.
 - Phase 4 — GKB-ready claim extraction and validation: pending.
 
-See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_domain_inventory.md](01_domain_inventory.md), and [02_domain_01_game_fundamentals.md](02_domain_01_game_fundamentals.md), and [03_domain_02_enemies.md](03_domain_02_enemies.md), and [04_domain_03_battle_conditions.md](04_domain_03_battle_conditions.md), and [05_domain_04_combat_mechanics.md](05_domain_04_combat_mechanics.md), and [06_domain_05_ultimate_weapons.md](06_domain_05_ultimate_weapons.md), [07_domain_06_workshop.md](07_domain_06_workshop.md), and [08_domain_07_workshop_enhancements.md](08_domain_07_workshop_enhancements.md).
+## Domain audit notes
+
+See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_domain_inventory.md](01_domain_inventory.md), [02_domain_01_game_fundamentals.md](02_domain_01_game_fundamentals.md), [03_domain_02_enemies.md](03_domain_02_enemies.md), [04_domain_03_battle_conditions.md](04_domain_03_battle_conditions.md), [05_domain_04_combat_mechanics.md](05_domain_04_combat_mechanics.md), [06_domain_05_ultimate_weapons.md](06_domain_05_ultimate_weapons.md), [07_domain_06_workshop.md](07_domain_06_workshop.md), [08_domain_07_workshop_enhancements.md](08_domain_07_workshop_enhancements.md), and [09_domain_09_modules_assist.md](09_domain_09_modules_assist.md).
+
+Domain 09 findings 31–60 are structural observations from direct metadata declarations. They are not verified runtime mechanics.
