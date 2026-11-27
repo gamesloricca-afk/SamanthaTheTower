@@ -35,3 +35,9 @@ Treat this as an internal SDK source disagreement between knowledge prose and a 
 - Claims: `CLM-D04-DR-001`, `CLM-D04-DR-002`
 - Conflict: `CNF-D04-DR-001`
 - GKB staging decision: hold
+
+
+## Review completion — 2026-11-27
+
+- **SDK knowledge statement verified; gameplay claim not verified.** Rechecked src/knowledge/compartments/combat.ts: it says Chrono Field, Primordial Collapse, and Flame Bot apply after Defense Absolute and outside the Defense % cap.
+- The compartment records wiki provenance for its combat knowledge (WIKI_DAMAGE, read on 2026-08-16); it is not independent native implementation evidence. This statement conflicts with the SDK layer-stack helper. Preserve both artifacts without choosing one. Status remains VERIFIED (SDK prose only). GKB: HOLD.
