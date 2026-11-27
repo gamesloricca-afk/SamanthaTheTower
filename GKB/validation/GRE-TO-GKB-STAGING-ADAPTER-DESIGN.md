@@ -242,3 +242,28 @@ Both `test:gre-staging` and `test:gre-reviewed-claim` passed. The explicit appro
 - No real GRE record has been approved or written into canonical domain files.
 
 **Current status: FIRST GRE STAGING ADAPTER IMPLEMENTED; PINNED FIXTURE TESTS PASSED; CANONICAL PROMOTION NOT PERFORMED.**
+
+
+## 14. Implemented second increment — reviewer workflow
+
+Added on `gre-gkb-integration-design`:
+
+- `GKB/adapter/gre-review.mjs`: CLI to list pending/reviewed records, inspect a staging record, render a source-separated Markdown review packet, and append review decisions.
+- `GKB/tests/gre-review.test.mjs`: synthetic tests for append-only decision history, latest-decision projection, invalid IDs, conflict approval guard, and conflict/source separation.
+- `GKB/staging/gre-review/README.md`: reviewer instructions and decision-log conventions.
+- Runtime scripts `test:gre-review` and `review:gre`.
+- CI now runs the GRE review test and uploads `gre-review-packet.md` alongside the staging JSON artifacts.
+
+### Review and persistence rules
+
+- Decisions reuse the existing `GKB/schema/review-decision.schema.json`; no second decision schema was introduced.
+- The decision log is JSONL and append-only through the CLI. Each decision stores the staging record ID, decision, reviewer, date, optional note, and canonical mapping only for APPROVE.
+- Revisions append new records; the latest entry is the current queue state while prior decisions remain traceable.
+- APPROVE is validated through the existing canonical claim normalizer before the decision is appended. This creates only a validated preview, not a canonical domain file.
+- GRE conflict envelopes cannot be approved as canonical claims. Claims linked to conflicts require explicit reviewer-authored conflict metadata.
+- Review packets display linked source claims independently and explicitly avoid ranking or choosing between conflicting fanmade sources.
+- The decision log becomes durable when a reviewer commits `GKB/staging/gre-review/decisions.jsonl` to the integration branch. No real review decisions have been made by this implementation.
+
+### Verification status
+
+The new code and workflow changes are committed to the integration branch. **NOT TESTED in this environment yet**: no successful CI run for the second increment has been observed. Do not treat the new reviewer CLI as verified until its GitHub Actions test passes.
