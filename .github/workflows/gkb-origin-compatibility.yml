@@ -89,6 +89,16 @@ jobs:
         working-directory: GKB/runtime
         run: npm run stage:sdk-assertions
 
+      - name: Upload SDK staging review artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: gkb-sdk-staging-${{ github.run_number }}
+          path: |
+            GKB/staging/sdk-claims.json
+            GKB/staging/sdk-assertions.json
+          if-no-files-found: error
+          retention-days: 14
+
       - name: Run SDK origin compatibility self-test
         run: node GKB/adapter/origin-compatibility.mjs
 
