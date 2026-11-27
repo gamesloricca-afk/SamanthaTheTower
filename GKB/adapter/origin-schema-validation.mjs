@@ -25,11 +25,12 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
 import {
+  ADAPTER_POLICY,
   mapOrigin,
   validateSourceOriginRecord
 } from './origin-mapping.mjs';
 
-const VERSION = '1.0.1';
+const VERSION = '1.0.2';
 const EXPECTED_AJV_VERSION = '8.17.1';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -338,7 +339,73 @@ async function main() {
     invalidDateResult
   );
 
-  // 10. Original adapter output remains unchanged.
+  // 10. Whitespace-only mapping reference must be rejected.
+  const whitespaceReference = {
+    ...approved,
+    mappingEvidence: {
+      ...approved.mappingEvidence,
+      reference: '   '
+    }
+  };
+
+  const whitespaceReferenceResult = validateBoth(whitespaceReference);
+
+  check(
+    'whitespace-only evidence reference is rejected',
+    !whitespaceReferenceResult.runtime &&
+    !whitespaceReferenceResult.jsonSchema
+  );
+
+  checkConsistency(
+    'whitespace-only evidence reference',
+    whitespaceReferenceResult
+  );
+
+  // 11. Whitespace-only mapping reason must be rejected.
+  const whitespaceReason = {
+    ...approved,
+    mappingEvidence: {
+      ...approved.mappingEvidence,
+      reason: '   '
+    }
+  };
+
+  const whitespaceReasonResult = validateBoth(whitespaceReason);
+
+  check(
+    'whitespace-only evidence reason is rejected',
+    !whitespaceReasonResult.runtime &&
+    !whitespaceReasonResult.jsonSchema
+  );
+
+  checkConsistency(
+    'whitespace-only evidence reason',
+    whitespaceReasonResult
+  );
+
+  // 12. Optional upstream fields must retain their declared types.
+  const invalidUpstream = {
+    ...unresolved,
+    upstream: {
+      ...unresolved.upstream,
+      version: 14
+    }
+  };
+
+  const invalidUpstreamResult = validateBoth(invalidUpstream);
+
+  check(
+    'invalid upstream field type is rejected',
+    !invalidUpstreamResult.runtime &&
+    !invalidUpstreamResult.jsonSchema
+  );
+
+  checkConsistency(
+    'invalid upstream field type',
+    invalidUpstreamResult
+  );
+
+  // 13. Original adapter output remains unchanged.
   const original = JSON.stringify(unresolved);
 
   validateBoth(unresolved);
@@ -348,12 +415,14 @@ async function main() {
     JSON.stringify(unresolved) === original
   );
 
-  // 11. Bulk import remains disabled.
+  // 14. Adapter policy explicitly disables unsafe operations.
   check(
-    'bulk import remains disabled',
-    true,
+    'adapter policy disables bulk import and automatic normalization',
+    ADAPTER_POLICY.bulkImportAllowed === false &&
+    ADAPTER_POLICY.automaticNormalization === false,
     {
-      bulkImportAllowed: false
+      bulkImportAllowed: ADAPTER_POLICY.bulkImportAllowed,
+      automaticNormalization: ADAPTER_POLICY.automaticNormalization
     }
   );
 
@@ -371,9 +440,9 @@ async function main() {
     adapter: 'origin-mapping.mjs',
     checkCount: checks.length,
     checks,
-    automaticNormalization: false,
+    automaticNormalization: ADAPTER_POLICY.automaticNormalization,
     originalValuesPreserved: true,
-    bulkImportAllowed: false
+    bulkImportAllowed: ADAPTER_POLICY.bulkImportAllowed
   };
 
   console.log(JSON.stringify(report, null, 2));
