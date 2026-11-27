@@ -153,3 +153,16 @@ Conflict record: `GRE/EVIDENCE/conflicts/CNF-D04-DR-001-defense-absolute-order.m
 **HOLD — NO GKB PROMOTION.**
 
 Do not encode one universal damage-reduction order from this evidence set. Keep the source-specific claims and conflict in GRE Evidence staging.
+
+## Review closure — 2026-11-27
+
+All eight registered D04-01 claims have been rechecked against their exact source artifacts. This closes the source-audit pass, not the live-game mechanic investigation.
+
+- DR-001 and DR-002: SDK helper implementations and inspected tests are confirmed as SDK behavior only. The layer-stack helper describes sequential display steps, while native blocked counters may overlap and refer to raw incoming damage.
+- DR-003 and DR-004: the Fandom and v28.3 Reddit statements were rechecked. They disagree about CF / Primordial Collapse / Flame Bot relative to Defense Absolute. The Reddit author cites an unnamed top-three player; a commenter questions the order. Neither source provides a reproducible test.
+- DR-005: the SDK knowledge prose retains the after-Defense-Absolute statement and has wiki provenance; it conflicts with the SDK helper.
+- DR-006 through DR-008: GRE declarations and recorded indices/tokens/offsets were rechecked. They do not supply method bodies, a call graph, formula, execution order, or counter semantics.
+
+**Outcome:** 8/8 claims reviewed. Existing verification statuses are retained. CNF-D04-DR-001 remains OPEN. No universal damage-reduction order is selected and no GKB promotion is made.
+
+**Remaining blocker:** version-matched native method bodies or a reproducible in-game test isolating each reduction source.
