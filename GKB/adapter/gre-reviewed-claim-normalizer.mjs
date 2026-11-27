@@ -50,7 +50,7 @@ export function buildCanonicalClaimFromReviewedGreRecord(stagingRecord,review){
     const expected=[...new Set(linked.relatedSourceClaimIds??[])].sort();
     const provided=[...new Set(canonical.conflict.relatedClaimIds??[])].sort();
     if(expected.length!==provided.length||expected.some((id,index)=>id!==provided[index]))throw new Error('Canonical conflict relatedClaimIds must exactly match the linked GRE conflict claims');
-    if(/^OPEN\\b/i.test(linked.conflictState??'')&&canonical.conflict.status!=='OPEN')throw new Error('An open GRE source conflict must remain OPEN in the canonical preview');
+    if(/^OPEN\b/i.test(linked.conflictState??'')&&canonical.conflict.status!=='OPEN')throw new Error('An open GRE source conflict must remain OPEN in the canonical preview');
   }
   if(verificationStatus==='CONFLICTING'&&!canonical.conflict)throw new Error('CONFLICTING requires conflict metadata');
   const sources=Array.isArray(stagingRecord.resolvedSources)?stagingRecord.resolvedSources:[];
