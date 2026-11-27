@@ -14,7 +14,8 @@
     "test:claim-schema": "node ../tests/claim-schema.test.mjs",
     "test:sdk-public-exports": "node ../adapter/sdk-public-exports-smoke.mjs",
     "inspect:sdk-knowledge-shape": "node ../adapter/sdk-knowledge-shape-inspector.mjs",
-    "inspect:sdk-data-catalogs": "node ../adapter/sdk-data-catalog-shape-inspector.mjs"
+    "inspect:sdk-data-catalogs": "node ../adapter/sdk-data-catalog-shape-inspector.mjs",
+    "test:sdk-mechanics-api": "node ../adapter/sdk-mechanics-api-smoke.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
