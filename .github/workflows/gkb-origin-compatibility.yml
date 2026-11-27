@@ -45,6 +45,10 @@ jobs:
         working-directory: GKB/runtime
         run: npm run inspect:sdk-knowledge-shape
 
+      - name: Inspect pinned SDK data catalogs
+        working-directory: GKB/runtime
+        run: npm run inspect:sdk-data-catalogs
+
       - name: Validate canonical GKB claim schema
         working-directory: GKB/runtime
         run: npm run test:claim-schema
