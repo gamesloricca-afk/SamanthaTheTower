@@ -645,7 +645,7 @@ export function runSelfTest() {
     sdkVersion: EXPECTED_SDK_VERSION,
     graph,
     schema,
-    typescriptOrigins: ['game', 'wiki'],
+    typescriptOrigins: ['wiki'],
     sourceReference: 'synthetic-self-test',
   });
 
