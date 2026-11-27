@@ -40,4 +40,6 @@ See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_
 
 - Domain 09 findings 301–400: module catalog lookup/presentation APIs, ModuleInfo/ModuleEffect benefit declarations, inventory identity interfaces, preset data and operations, and BetaModule configuration models. See [15_domain_09_modules_catalog_presets_beta_config.md](15_domain_09_modules_catalog_presets_beta_config.md).
 
-All Domain 09 findings 31–400 are structural observations from direct metadata declarations, not verified runtime mechanics. Decoded constant values remain candidates only.
+- Domain 09 findings 401–500: primary/assist and Ultimate Weapon benefit accessor declarations, module drop/reward and creation overloads, banner data structures, banner loading/validation APIs, and banner UI interfaces. See [16_domain_09_modules_benefit_accessors_drops_banners.md](16_domain_09_modules_benefit_accessors_drops_banners.md).
+
+All Domain 09 findings 31–500 are structural observations from direct metadata declarations, not verified runtime mechanics. Decoded constant values remain candidates only.
