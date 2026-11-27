@@ -52,7 +52,7 @@ assert.equal(ambiguousResult.records[0].domainCandidates[0].status, 'AMBIGUOUS')
 assert.equal(ambiguousResult.records[0].domainCandidates[0].candidateCount, 2);
 
 assert.throws(() => buildSdkDataCatalogCrosswalk({
-  graph, staging: { catalogs: [] }, sdkVersion: '0.14.1', retrievedAt: '2026-11-27'
+  graph, staging: { catalogs: null }, sdkVersion: '0.14.1', retrievedAt: '2026-11-27'
 }), /catalogs must be an array/);
 assert.throws(() => buildSdkDataCatalogCrosswalk({
   graph, staging, sdkVersion: '', retrievedAt: '2026-11-27'
