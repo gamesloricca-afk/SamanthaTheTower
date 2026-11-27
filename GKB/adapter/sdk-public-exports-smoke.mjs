@@ -21,7 +21,7 @@ assert.equal(manifest.version, EXPECTED_VERSION, 'pinned SDK version');
 assert.ok(nodeMajor >= 20, `Node.js >=20 required; received ${process.versions.node}`);
 
 const modules = [
-  { name: 'knowledge', path: 'thetowersdk/knowledge', required: ['knowledgeFor', 'resolve', 'trapsFor'] },
+  { name: 'knowledge', path: 'thetowersdk/knowledge', required: ['knowledgeFor', 'resolve', 'trapsFor', 'relationsOf', 'neighboursOf', 'resolveWithConfidence', 'search', 'findContradictions', 'collectAssertions', 'allNodes', 'GAME_KNOWLEDGE', 'compartmentMaturity', 'describeMaturity', 'compartmentOf'] },
   { name: 'data', path: 'thetowersdk/data', required: ['LAB_CATALOG', 'MODULE_TEMPLATES', 'uwStoneChartData'] },
   { name: 'mechanics', path: 'thetowersdk/mechanics', required: ['computeWaveBaseHealth'] },
   { name: 'wiki', path: 'thetowersdk/wiki', required: ['fetchWikiPageAsMarkdown', 'searchWiki', 'WIKI_SOURCES'] },
@@ -38,6 +38,18 @@ for (const item of modules) {
   const exports = Object.keys(namespace).sort();
   const missing = item.required.filter(name => !(name in namespace));
   assert.equal(missing.length, 0, `${item.name} missing documented exports: ${missing.join(', ')}`);
+  if (item.name === 'knowledge') {
+    const node = namespace.knowledgeFor('ultimateWeapon.goldenTower');
+    assert.equal(node?.id, 'ultimateWeapon.goldenTower', 'knowledgeFor returns known node');
+    assert.equal(namespace.resolve('gt'), 'ultimateWeapon.goldenTower', 'resolve maps documented acronym');
+    assert.ok(Array.isArray(namespace.trapsFor('ultimateWeapon.goldenTower')), 'trapsFor returns an array');
+    assert.ok(Array.isArray(namespace.relationsOf('ultimateWeapon.goldenTower')), 'relationsOf returns an array');
+    assert.ok(Array.isArray(namespace.neighboursOf('ultimateWeapon.goldenTower')), 'neighboursOf returns an array');
+    assert.ok(Array.isArray(namespace.search('golden tower')), 'search returns an array');
+    assert.ok(Array.isArray(namespace.findContradictions()), 'findContradictions returns an array');
+    assert.ok(Array.isArray(namespace.collectAssertions(namespace.GAME_KNOWLEDGE)), 'collectAssertions returns an array');
+    assert.ok(Array.isArray(namespace.allNodes(namespace.GAME_KNOWLEDGE)), 'allNodes returns an array');
+  }
   results.push({
     module: item.name,
     importPath: item.path,
