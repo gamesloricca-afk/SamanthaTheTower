@@ -28,13 +28,13 @@ export function parseStringUnionDeclaration(source, typeName) {
 
   const match = matches[0];
   const body = match[1]
-    .replace(/\\/\\*[\\s\\S]*?\\*\\//g, '')
-    .replace(/\\/\\/[^\\r\\n]*/g, '');
+    .replace(/\/\\*[\\s\\S]*?\\*\//g, '')
+    .replace(/\/\/[^\r\n]*/g, '');
   const members = body.split('|').map(value => value.trim()).filter(Boolean);
   const values = [];
 
   for (const member of members) {
-    const literal = member.match(/^(['"])([^'"]+)\\1$/);
+    const literal = member.match(/^(['"])([^'"]+)\1$/);
     if (!literal) {
       return {
         status: 'NOT_INSPECTED',
@@ -55,7 +55,7 @@ export function parseStringUnionDeclaration(source, typeName) {
     };
   }
 
-  const startLine = source.slice(0, match.index).split('\\n').length;
+  const startLine = source.slice(0, match.index).split('\n').length;
   return {
     status: 'INSPECTED',
     method: 'AUTOMATIC_DTS_PARSE',
