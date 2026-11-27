@@ -75,20 +75,18 @@ The SDK's `CAMPAIGN_COIN_REWARD_CURVE` is read directly by `empiricalTierCoinMul
 
 | Tier | Multiplier | Tier | Multiplier |
 |---:|---:|---:|---:|
-| T1 | 1 | T13 | 12.2 |
-| T2 | 1.8 | T14 | 14.7 |
-| T3 | 2.6 | T15 | 17.6 |
-| T4 | 3.4 | T16 | 21.3 |
-| T5 | 4.2 | T17 | 25.2 |
-| T6 | 5 | T18 | 29.1 |
-| T7 | 5.8 | T19 | 33 |
-| T8 | 6.6 | T20 | 40 |
-| T9 | 7.5 | T21 | 48 |
-| T10 | 8.7 | T22 | 60 |
-| T11 | 10.3 | T23 | 72 |
-| T12 | 12.2 | T24 | 86 / 103* |
-
-*Correction to the compact table above: exact source order is T1–T24 = 1, 1.8, 2.6, 3.4, 4.2, 5, 5.8, 6.6, 7.5, 8.7, 10.3, 12.2, 14.7, 17.6, 21.3, 25.2, 29.1, 33, 40, 48, 60, 72, 86, 103. Thus T12=12.2, T13=14.7, T14=17.6, T15=21.3, T16=25.2, T17=29.1, T18=33, T19=40, T20=48, T21=60, T22=72, T23=86, T24=103.*
+| T1 | 1 | T13 | 14.7 |
+| T2 | 1.8 | T14 | 17.6 |
+| T3 | 2.6 | T15 | 21.3 |
+| T4 | 3.4 | T16 | 25.2 |
+| T5 | 4.2 | T17 | 29.1 |
+| T6 | 5 | T18 | 33 |
+| T7 | 5.8 | T19 | 40 |
+| T8 | 6.6 | T20 | 48 |
+| T9 | 7.5 | T21 | 60 |
+| T10 | 8.7 | T22 | 72 |
+| T11 | 10.3 | T23 | 86 |
+| T12 | 12.2 | T24 | 103 |
 
 The SDK comments that T22–T24 changed from 75/92/115 to 72/86/103 and says its values were checked against the in-game tier screen on 2026-08-16. That is a provenance statement inside the SDK source, not independently verified by this audit. Preserve it as an SDK-reported source note.
 
