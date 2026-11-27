@@ -27,7 +27,9 @@
     "report:sdk-staging-integrity": "node ../adapter/sdk-staging-integrity-report.mjs",
     "test:reviewed-assertion-normalizer": "node ../tests/reviewed-assertion-normalizer.test.mjs",
     "test:sdk-import-manifest": "node ../tests/sdk-import-manifest.test.mjs",
-    "report:sdk-import-manifest": "node ../adapter/sdk-import-manifest.mjs"
+    "report:sdk-import-manifest": "node ../adapter/sdk-import-manifest.mjs",
+    "test:sdk-identifier-mapping": "node ../tests/sdk-identifier-mapping.test.mjs",
+    "report:sdk-identifier-mapping": "node ../adapter/sdk-identifier-mapping.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
