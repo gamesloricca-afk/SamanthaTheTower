@@ -10,7 +10,8 @@
     "test:typescript-origin-parser": "node ../adapter/typescript-origin-parser.mjs",
     "test:origin-registry": "node ../adapter/origin-registry-validator.mjs",
     "test:sdk-claim-staging": "node ../tests/sdk-claim-staging.test.mjs",
-    "test:unique-modules": "node ../tests/unique-modules-catalog.test.mjs"
+    "test:unique-modules": "node ../tests/unique-modules-catalog.test.mjs",
+    "test:claim-schema": "node ../tests/claim-schema.test.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
