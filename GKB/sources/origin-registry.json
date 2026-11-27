@@ -1,0 +1,79 @@
+{
+  "registryVersion": "1.0.0",
+  "classification": "OBJECTIVE",
+  "verification": "VERIFIED",
+  "recordedAt": "2026-11-27",
+  "gameVersion": null,
+  "sdk": {
+    "package": "thetowersdk",
+    "version": "0.14.1"
+  },
+  "sources": [
+    {
+      "id": "sdk-knowledge-graph",
+      "kind": "KNOWLEDGE_GRAPH",
+      "reference": "thetowersdk/dist/knowledge/knowledge-graph.v1.json",
+      "inspectionStatus": "INSPECTED",
+      "values": [
+        "code",
+        "game",
+        "save",
+        "sheet",
+        "user",
+        "wiki"
+      ],
+      "details": {
+        "graphVersion": 3,
+        "generatedFor": "2026-10-15",
+        "originOccurrenceCount": 2579,
+        "gameOccurrenceCount": 70
+      }
+    },
+    {
+      "id": "sdk-json-schema",
+      "kind": "JSON_SCHEMA",
+      "reference": "thetowersdk/dist/knowledge/knowledge.schema.json",
+      "inspectionStatus": "STRUCTURAL_DISCOVERY_ONLY",
+      "values": [
+        "code",
+        "external-repo",
+        "game-files",
+        "in-game",
+        "save",
+        "sheet",
+        "user",
+        "wiki"
+      ],
+      "details": {
+        "schemaVersion": 1,
+        "dialect": "https://json-schema.org/draft/2020-12/schema",
+        "externalRefsResolved": false
+      }
+    },
+    {
+      "id": "sdk-typescript-claim-origin",
+      "kind": "TYPESCRIPT_DECLARATION",
+      "reference": "thetowersdk/dist/knowledge/substrate/types.d.ts#ClaimOrigin",
+      "inspectionStatus": "INSPECTED_DECLARATION",
+      "values": [
+        "game",
+        "code",
+        "wiki",
+        "user",
+        "save",
+        "external-repo",
+        "sheet"
+      ],
+      "details": {
+        "declarationLineStart": 55,
+        "declarationLineEnd": 69,
+        "parser": "Samantha TypeScript Origin Declaration Parser"
+      }
+    }
+  ],
+  "comparisonPolicy": {
+    "automaticMapping": false,
+    "semanticEquivalence": "NOT_ASSESSED",
+    "conflictHandling": "PRESERVE_EACH_SOURCE_AND_REPORT_DIFFERENCES"
+  }
+}
