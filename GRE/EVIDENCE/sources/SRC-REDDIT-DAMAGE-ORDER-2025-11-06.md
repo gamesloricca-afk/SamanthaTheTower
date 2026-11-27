@@ -2,7 +2,7 @@
 
 - Source ID: `SRC-REDDIT-DAMAGE-ORDER-2025-11-06`
 - Title: Damage Order of Interaction
-- Author: Reddit user (account name not recorded in the inspected search extract)
+- Author: DaveKerk
 - Platform: r/TheTowerGame
 - Source type: Community discussion / player-authored explanation
 - URL: https://www.reddit.com/r/TheTowerGame/comments/1oq9vdx/damage_order_of_interaction/
@@ -27,6 +27,10 @@ For this investigation, only the relative placement of the mitigation effects an
 
 - Post heading: “Updated with v28.3”
 - Section: numbered damage interaction order, item 4 and item 5.
+
+## Discussion context
+
+In the opened comment thread, another participant explicitly questions whether Defense Absolute is placed after all reductions. The post author replies that the ordering came directly from a top-three player, but does not name that player or provide a reproducible test. This is second-hand community attribution, not independent verification.
 
 ## Limitations
 
