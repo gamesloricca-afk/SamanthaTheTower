@@ -29,19 +29,26 @@ for (const item of gkb.modules) {
   const sentinel = '123.456';
   const gkbEffectText = item.effectTemplate.replaceAll('{value}', sentinel);
   const sdkEffectText = typeof source.description === 'function' ? source.description(sentinel) : source.description;
-  const fields = {
+  const metadataFields = {
     name: item.name === source.name,
     initials: item.initials === source.initials,
     category: item.category === source.type,
     minRarity: item.minRarity === source.minRarity,
     maxRarity: item.maxRarity === source.maxRarity,
-    effectTemplate: gkbEffectText === sdkEffectText,
-    descriptionCallable: typeof source.description === 'function',
     rarityBonuses: JSON.stringify(item.rarityBonuses) === JSON.stringify(source.rarityBonuses)
   };
-  comparisons.push({ id: item.id, fields, matched: Object.values(fields).every(Boolean) });
+  const effectTextMatches = gkbEffectText === sdkEffectText;
+  comparisons.push({
+    id: item.id,
+    metadataFields,
+    metadataMatched: Object.values(metadataFields).every(Boolean),
+    effectTextMatches,
+    descriptionType: typeof source.description
+  });
 }
-const mismatchCount = comparisons.filter(item => !item.matched).length;
+const metadataMismatchCount = comparisons.filter(item => !item.metadataMatched).length;
+const effectTextDifferenceCount = comparisons.filter(item => !item.effectTextMatches).length;
+const exactRecordMatchCount = comparisons.filter(item => item.metadataMatched && item.effectTextMatches).length;
 console.log(JSON.stringify({
   test: 'Samantha GKB Unique Module Catalog vs Pinned SDK',
   status: 'PASSED',
@@ -49,8 +56,10 @@ console.log(JSON.stringify({
   sdkUniqueModuleCount: sdkUnique.length,
   gkbCatalogCount: gkb.modules.length,
   matchedByIdCount: comparisons.length,
-  exactRecordMatchCount: comparisons.length - mismatchCount,
-  mismatchCount,
+  metadataMatchCount: comparisons.length - metadataMismatchCount,
+  metadataMismatchCount,
+  effectTextDifferenceCount,
+  exactRecordMatchCount,
   missingInSdk,
   missingInGkb,
   comparisons,
