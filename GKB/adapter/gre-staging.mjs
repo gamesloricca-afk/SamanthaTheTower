@@ -95,7 +95,7 @@ function parseSource(file, root) {
     sourceType: 'UNKNOWN',
     authorOrMaintainer: field(raw,'Author/maintainer'),
     sourceReference: field(raw,'Repository') ?? field(raw,'URL') ?? field(raw,'Source URL'),
-    sourceVersion: field(raw,'Version'),
+    sourceVersion: field(raw,'Version'),\n    metadataFormatVersion: field(raw,'GRE metadata format'),\n    branchRef: field(raw,'Branch/ref inspected'),
     inspectedCommit: field(raw,'Inspected commit'),
     publicationDate: raw.match(/^\\s*-\\s*(?:Page )?Publication(?:\\/update)? date(?: shown)?:\\s*(.*)$/mi)?.[1]?.trim() ?? field(raw,'Commit date') ?? field(raw,'Source date'),
     retrievedAt: field(raw,'Access date'),
@@ -117,7 +117,7 @@ function parseClaim(file, root) {
   const sourceVerificationLabel = field(raw,'Verification status');
   const claimType = field(raw,'Claim type');
   const gameVersion = field(raw,'Game version/build');
-  const sdkVersion = field(raw,'SDK version');
+  const sdkVersion = field(raw,'SDK version');\n  const sourceVersionRef = field(raw,'Source version/ref');\n  const metadataVersion = sourceVersionRef?.match(/GRE metadata format\\s+(v[0-9.]+)/i)?.[1] ?? null;\n  const publicationDate = field(raw,'Publication/update date') ?? field(raw,'Publication date') ?? field(raw,'Source date');\n  const accessDate = field(raw,'Access date');
   const related = [...new Set((raw.match(/`CLM-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)).filter(x=>x!==claimId))];
   const conflicts = [...new Set((raw.match(/`CNF-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)))];
   const evidence = section(raw,'Evidence').split('\n').filter(x=>x.trim()).map(x=>x.replace(/^[-*]\s*/,'')); 
@@ -136,14 +136,14 @@ function parseClaim(file, root) {
     provisionalVerificationStatus:'EXTERNAL-UNVERIFIED',
     reviewStatus:'PENDING_REVIEW',
     sourceGameVersion:gameVersion,
-    sourceSdkVersion:sdkVersion,
+    sourceSdkVersion:sdkVersion,\n    sourceMetadataVersion:metadataVersion,\n    sourceVersionRef,\n    sourcePublicationDate:publicationDate,\n    sourceAccessDate:accessDate,
     sourceReferences:[...new Set(sourceRefs)],
     evidence,
     relatedSourceClaimIds:related,
     sourceConflictIds:conflicts,
     limitations,
     unknownMetadataFields:unknownMetadataKeys(raw,CLAIM_META_KEYS),
-    sourceRecord:{relativePath:path.relative(root,file).split(path.sep).join('/'),rawMarkdown:raw,parsedFields:{claimId,sourceDomain,claimType,sourceVerificationLabel,gameVersion,sdkVersion}}
+    sourceRecord:{relativePath:path.relative(root,file).split(path.sep).join('/'),rawMarkdown:raw,parsedFields:{claimId,sourceDomain,claimType,sourceVerificationLabel,gameVersion,sdkVersion,sourceVersionRef,metadataVersion,publicationDate,accessDate}}
   };
 }
 function parseConflict(file, root) {
