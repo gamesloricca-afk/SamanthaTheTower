@@ -36,7 +36,7 @@ Keep source statements separate. Community/fanmade sources are not official deve
 - Continue domain by domain only after the evidence workflow is usable.
 - Investigate declarations individually; do not treat a class or method name as proof of behavior.
 
-**Status: D04-01 source comparison completed; live-game order unresolved.**
+**Status: D04-01 source comparison completed; D04-02 initial evidence recorded; both live-game details remain partially unresolved.**
 
 ### Phase E3 — Claim extraction and evidence linking
 - Create small, atomic claims.
@@ -45,7 +45,7 @@ Keep source statements separate. Community/fanmade sources are not official deve
 - Link every claim to one or more source records and exact evidence locations.
 - Preserve quotes/observations and limitations without silently rewriting the source.
 
-**Status: D04-01 has five source-linked claims; no bulk extraction.**
+**Status: D04-01 and D04-02 have ten source-linked claims; no bulk extraction.**
 
 ### Phase E4 — Values, formulas, and relationships
 - Validate numeric values, units, ranges, caps, conditions, and formula inputs.
@@ -53,7 +53,7 @@ Keep source statements separate. Community/fanmade sources are not official deve
 - Add relationships only when supported. Uncertain links remain hypotheses.
 - Keep contradictory values as separate source-specific claims.
 
-**Status: D04-01 conflict record created; further numeric validation pending.**
+**Status: D04-01 conflict record and D04-02 source comparison recorded; runtime validation pending.**
 
 ### Phase E5 — Conflict review and reports
 - Group claims that address the same subject without merging their source statements.
@@ -61,7 +61,7 @@ Keep source statements separate. Community/fanmade sources are not official deve
 - Report missing, inaccessible, unsupported, and inconsistent information.
 - Assess source authority separately from recency.
 
-**Status: D04-01 report published; additional domain reports pending.**
+**Status: D04-01 and initial D04-02 reports published; further domain reports pending.**
 
 ### Phase E6 — GKB staging review
 - Map reviewed claims into the Samantha GKB schema.
@@ -107,7 +107,7 @@ A VERIFIED status must describe what was verified and within which source/versio
 
 Start here: [Domain 04 — Combat Mechanics](domains/04-combat-mechanics/README.md).
 
-Latest completed investigation: [D04-01 — Damage Reduction Pipeline](reports/D04-01_damage-reduction-pipeline.md). The source conflict remains open; no universal order has been promoted.
+Latest reports: [D04-01 — Damage Reduction Pipeline](reports/D04-01_damage-reduction-pipeline.md) and [D04-02 — Land Mine Behavior](reports/D04-02_land-mine-behavior.md). Neither investigation has promoted a universal mechanic into GKB.
 
 Existing structural/content references:
 - [GRE Domain 04 JSON](../1/04_combat_mechanics.json)
