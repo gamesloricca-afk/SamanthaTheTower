@@ -6,7 +6,7 @@
 - Structural inventory: `GRE/AUDIT/43_domain_04_combat_mechanics_complete_structural_inventory.md`
 - Source binary SHA-256 recorded in manifest: `8266355fab717d91b51482122b66551afc62502b0f62fd8527930962cbefe81c`
 - GRE metadata format: v39 (not a verified game release version)
-- Current status: **D04-01 PARTIAL — SOURCE COMPARISON COMPLETE; LIVE-GAME ORDER UNRESOLVED**
+- Current status: **D04-01 PARTIAL — GRE CROSS-DOMAIN METADATA REVIEW COMPLETE; LIVE-GAME ORDER UNRESOLVED**
 
 ## 1. Objective
 
@@ -28,7 +28,19 @@ The existing GRE content review records these investigation areas:
 
 These are starting points, not confirmed mechanics. The declaration list and unresolved signatures are detailed in the linked audit reports.
 
-## 3. Investigation order
+## 3. D04-01 expanded GRE findings
+
+The follow-up review now includes Domain 01 — Game Fundamentals, Domain 02 — Enemies, and Domain 03 — Battle Conditions in addition to Domain 04.
+
+- `DamageReductionResult` (Domain 02 type index 309) declares 11 named incoming/final/blocked fields.
+- `Enemy` (Domain 02 type index 314) declares `CalculateDamageReductionResult(incomingDamage)` and `ApplyDamageReductionStats(result)`, plus reduction-related state fields and getters.
+- `Main` (Domain 01 type index 618) declares defense state (`defenseAbs`, `defenseRel`, `MAX_DEFENSE_PERCENT`), Bastion pool fields, and `ApplyTowerDamage`.
+- `BattleHistoryEntry` (Domain 03 type index 619) declares per-category blocked-damage counters.
+- The names `thunderDamageReduction` and `chainThunderBlocked` are distinct and are not merged into one mechanic.
+
+These are metadata declarations only. They do not establish method call relationships, formula, operation order, overlap, or runtime conditions. The GRE manifest records that native method bodies and a call graph are absent. See [D04-01 report](../../reports/D04-01_damage-reduction-pipeline.md) and claims `CLM-D04-DR-006` through `CLM-D04-DR-008`.
+
+## 4. Investigation order
 
 ### D04-01 — Damage reduction pipeline
 - Locate implementation-capable sources for the Enemy damage-reduction methods.
@@ -57,7 +69,7 @@ These are starting points, not confirmed mechanics. The declaration list and unr
 - Record units, rounding, caps, and preconditions explicitly.
 - Keep GRE numeric defaults as decoded candidates until validated.
 
-## 4. Cross-domain references
+## 5. Cross-domain references
 
 - Domain 02 — Enemies: `Enemy`, `DamageSource`, `DamageReductionResult`, enemy status and hit bookkeeping.
 - Domain 05 — Ultimate Weapons: UW damage handlers and UW-specific interactions.
@@ -67,7 +79,7 @@ These are starting points, not confirmed mechanics. The declaration list and unr
 
 These links are navigation leads only. A relationship becomes a claim only when supported by evidence.
 
-## 5. Source search plan
+## 6. Source search plan
 
 Prioritize:
 1. TheTowerSDK `0.14.1` public exports and relevant source/docs, recording SDK version separately from game version.
@@ -77,7 +89,7 @@ Prioritize:
 
 Do not assume an SDK helper is native game implementation. Record its own source, provenance, and parity limitations.
 
-## 6. Claim and conflict handling
+## 7. Claim and conflict handling
 
 - Use the templates in `GRE/EVIDENCE/templates/`.
 - Create atomic claims in `GRE/EVIDENCE/claims/`.
@@ -87,7 +99,7 @@ Do not assume an SDK helper is native game implementation. Record its own source
 - If two fanmade sources disagree, preserve both claims and references; do not pick a winner automatically.
 - Mark unavailable method bodies or inaccessible sources explicitly.
 
-## 7. D04-01 evidence results
+## 8. D04-01 evidence results
 
 The first investigation has been completed to the source-comparison stage.
 
@@ -106,7 +118,7 @@ Registered claims:
 
 **Source disagreement:** Fandom places Chrono Field / Primordial Collapse / Flame Bot after Defense Absolute. Reddit places them before Defense Absolute. The SDK's layer-stack helper agrees with Reddit on this placement, but this does not prove live-game behavior. No winner is selected.
 
-## 8. D04-02 evidence results
+## 9. D04-02 evidence results
 
 Initial source comparison is recorded. The investigation remains partial because native mine behavior is not exposed by the inspected GRE text or SDK helpers.
 
@@ -139,7 +151,7 @@ Initial source comparison is recorded. The investigation remains partial because
 - Reproducible player test evidence.
 - Confirmation whether differences are caused by game version, hit-path scope, or source interpretation.
 
-## 10. Exit criteria
+## 11. Exit criteria
 
 This domain is ready for evidence review when each selected topic has:
 - registered sources with version/date/provenance;
