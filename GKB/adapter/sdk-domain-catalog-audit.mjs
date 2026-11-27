@@ -3,7 +3,6 @@
  * Reports shape anomalies and observations; it does not judge game-value correctness.
  */
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
-import { createRequire } from 'node:module';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -11,7 +10,6 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const RUNTIME = path.join(ROOT, 'runtime');
 const INPUT = path.join(ROOT, 'staging/sdk-domain-catalogs.json');
 const OUTPUT = path.join(ROOT, 'reports/sdk-domain-catalog-audit.json');
-const require = createRequire(path.join(RUNTIME, 'package.json'));
 const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const FIELD_MAP = {
   Research: { idField: 'slug', labelField: 'name' },
@@ -32,6 +30,7 @@ export function buildSdkDomainCatalogAudit(staging) {
   }
   const findings = [];
   const catalogReports = [];
+  const crossDomainLabels = new Map();
   const add = (catalog, code, severity, message, details = {}) => {
     findings.push({ domain: catalog.domain, sourceRef: catalog.sourceRef, code, severity, message, ...details });
   };
@@ -50,7 +49,6 @@ export function buildSdkDomainCatalogAudit(staging) {
     let nonObjectRecords = 0;
     let missingId = 0;
     let missingLabel = 0;
-    let emptyRequired = 0;
     let sourceIndexProblems = 0;
 
     catalog.records.forEach((entry, index) => {
@@ -86,10 +84,12 @@ export function buildSdkDomainCatalogAudit(staging) {
         add(catalog, 'MISSING_OR_EMPTY_SOURCE_LABEL', 'WARNING', 'Expected source label is missing or empty.', { sourceIndex: entry.sourceIndex, field: fields.labelField });
       } else {
         labelCounts.set(label, [...(labelCounts.get(label) ?? []), entry.sourceIndex]);
+        crossDomainLabels.set(label, [...(crossDomainLabels.get(label) ?? []), {
+          domain: catalog.domain, sourceRef: catalog.sourceRef, sourceIndex: entry.sourceIndex
+        }]);
       }
       for (const [field, value] of Object.entries(raw)) {
         if (value === null || value === '') {
-          emptyRequired++;
           add(catalog, value === null ? 'NULL_FIELD_VALUE' : 'EMPTY_STRING_FIELD', 'INFO', 'A top-level field contains a null or empty-string value; optionality is not inferred.', { sourceIndex: entry.sourceIndex, field });
         }
       }
@@ -142,6 +142,16 @@ export function buildSdkDomainCatalogAudit(staging) {
     });
   }
 
+  const crossDomainLabelGroups = [...crossDomainLabels]
+    .map(([label, occurrences]) => ({ label, occurrences, domains: [...new Set(occurrences.map(item => item.domain))] }))
+    .filter(group => group.domains.length > 1);
+  for (const group of crossDomainLabelGroups) {
+    findings.push({
+      domain: 'MULTIPLE', sourceRef: null, code: 'CROSS_DOMAIN_LABEL_COLLISION', severity: 'INFO',
+      message: 'An exact label appears in more than one selected catalog; this is a naming observation, not proof of shared identity.',
+      value: group.label, domains: group.domains, occurrences: group.occurrences
+    });
+  }
   const severityCounts = Object.fromEntries(['ERROR', 'WARNING', 'INFO'].map(level => [level, findings.filter(item => item.severity === level).length]));
   return {
     reportVersion: '1.0.0',
@@ -149,7 +159,7 @@ export function buildSdkDomainCatalogAudit(staging) {
     status: 'PASSED',
     source: staging.source ?? null,
     scope: { catalogCount: staging.catalogs.length, totalRecords: staging.catalogs.reduce((sum, item) => sum + (Array.isArray(item.records) ? item.records.length : 0), 0) },
-    summary: { severityCounts, findingCount: findings.length, catalogReports },
+    summary: { severityCounts, findingCount: findings.length, catalogReports, crossDomainLabelGroups },
     findings,
     policy: {
       readOnly: true, rawRecordsModified: false, recordsDeduplicated: false,
