@@ -76,7 +76,8 @@ function cleanDomain(value) {
 }
 function parseSource(file, root) {
   const raw = readText(file);
-  const sourceId = field(raw,'Source ID') ?? path.basename(file,'.md');
+  const sourceField = field(raw,'Source ID');
+  const sourceId = inlineId(sourceField) ?? sourceField?.replace(/[`]/g,'') ?? path.basename(file,'.md');
   return {
     sourceId,
     sourceName: field(raw,'Title/name') ?? field(raw,'Title') ?? sourceId,
@@ -96,11 +97,12 @@ function parseSource(file, root) {
 function parseClaim(file, root) {
   const raw = readText(file);
   const sourceDomain = field(raw,'Domain');
-  const domain = cleanDomain(sourceDomain);
-  const claimId = field(raw,'Claim ID') ?? path.basename(file,'.md');
-  const sourceRefs = idsFrom(raw,'Source IDs?');
-  const single = field(raw,'Source ID');
-  if (single) sourceRefs.push(inlineId(single) ?? single.replace(/[`]/g,''));
+  const domainLabels = (sourceDomain ?? '').split(';').map(x=>x.trim()).filter(Boolean);
+  const domains = domainLabels.map(cleanDomain).filter(Boolean);
+  const domain = domains.length===1 ? domains[0] : null;
+  const claimField = field(raw,'Claim ID');
+  const claimId = inlineId(claimField) ?? claimField?.replace(/[`]/g,'') ?? path.basename(file,'.md');
+  const sourceRefs = [...new Set((raw.match(/`SRC-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)))];
   const sourceVerificationLabel = field(raw,'Verification status');
   const claimType = field(raw,'Claim type');
   const gameVersion = field(raw,'Game version/build');
@@ -114,6 +116,7 @@ function parseClaim(file, root) {
     sourceClaimId:claimId,
     domainSourceLabel:sourceDomain,
     domainCandidate:domain?.id ?? null,
+    domainCandidates:[...new Set(domains.map(x=>x.id))],
     domainLabel:domain?.label ?? null,
     subject:field(raw,'Subject'),
     claimText:section(raw,'Claim content').replace(/^\s*\n|\n\s*$/g,'') || null,
@@ -137,9 +140,10 @@ function parseConflict(file, root) {
   const related = [...new Set((claimsSection.match(/`CLM-[A-Z0-9-]+`/g) ?? []).map(x=>x.slice(1,-1)))];
   return {
     recordKind:'GRE_CONFLICT',
-    sourceConflictId:field(raw,'Conflict ID') ?? path.basename(file,'.md'),
+    sourceConflictId:inlineId(field(raw,'Conflict ID')) ?? field(raw,'Conflict ID')?.replace(/[`]/g,'') ?? path.basename(file,'.md'),
     domainSourceLabel:field(raw,'Domain'),
     domainCandidate:cleanDomain(field(raw,'Domain'))?.id ?? null,
+    domainCandidates:cleanDomain(field(raw,'Domain')) ? [cleanDomain(field(raw,'Domain')).id] : [],
     subject:field(raw,'Subject'),
     conflictState:field(raw,'State'),
     gameVersionAlignment:field(raw,'Game version alignment'),
@@ -187,7 +191,7 @@ export function buildGreStaging({snapshotDir=DEFAULT_SNAPSHOT,retrievedAt=new Da
     unknownFieldRecords.push({recordId:conflict.sourceConflictId,rawPreserved:true});
   }
   const duplicateIds=[...duplicateClaimIds.map(id=>({kind:'CLAIM',id})),...duplicateSourceIds.map(id=>({kind:'SOURCE',id}))];
-  const unmappedDomainRecords=[...claimRecords.filter(x=>!x.domainCandidate).map(x=>x.sourceClaimId),...conflictRecords.filter(x=>!x.domainCandidate).map(x=>x.sourceConflictId)];
+  const unmappedDomainRecords=[...claimRecords.filter(x=>!x.domainCandidates?.length).map(x=>x.sourceClaimId),...conflictRecords.filter(x=>!x.domainCandidates?.length).map(x=>x.sourceConflictId)];
   const records=[...claimRecords,...conflictRecords];
   const reviewQueue={
     format:'SAMANTHA_GKB_REVIEW_QUEUE',formatVersion:1,
