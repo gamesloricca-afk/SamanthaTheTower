@@ -1,19 +1,19 @@
 /** Phase 3D: bounded import preview from explicit approvals only. */
-import fs from 'node:fs';
-import path from 'node:path';
-import {fileURLToPath} from 'node:url';
+import fs from 'node:fs'; import path from 'node:path'; import {fileURLToPath} from 'node:url';
 import {buildCanonicalClaimFromReviewedAssertion} from './reviewed-assertion-normalizer.mjs';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const domainRegistry=JSON.parse(fs.readFileSync(path.join(ROOT,'domains/canonical-domain-registry.json'),'utf8'));
+const validDomains=new Set(domainRegistry.domains.flatMap(item=>[item.domainId,item.label]));
 function validDate(v){return typeof v==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(v)&&!Number.isNaN(new Date(v+'T00:00:00Z').getTime())&&new Date(v+'T00:00:00Z').toISOString().slice(0,10)===v;}
 export function importReviewedBatch({stagingRecords,decisions,maxBatchSize=25}){
  if(!Array.isArray(stagingRecords)||!Array.isArray(decisions))throw new TypeError('stagingRecords and decisions must be arrays');
  if(!Number.isInteger(maxBatchSize)||maxBatchSize<1||maxBatchSize>25)throw new RangeError('maxBatchSize must be 1..25');
- const ids=new Set(),approved=decisions.filter(x=>x.decision==='APPROVE'),byId=new Map(stagingRecords.map(x=>[x.stagingId??x.stagingRecordId,x]));
+ const decisionIds=new Set(),approved=decisions.filter(x=>x.decision==='APPROVE'),byId=new Map(stagingRecords.map(x=>[x.stagingId??x.stagingRecordId,x]));
  for(const item of decisions){
   if(!['APPROVE','REJECT','DEFER'].includes(item.decision))throw new TypeError('decision must be APPROVE, REJECT, or DEFER');
   if(typeof item.stagingRecordId!=='string'||!item.stagingRecordId)throw new TypeError('stagingRecordId is required');
-  if(ids.has(item.stagingRecordId))throw new Error('Duplicate decision for stagingRecordId: '+item.stagingRecordId);
-  ids.add(item.stagingRecordId);
+  if(decisionIds.has(item.stagingRecordId))throw new Error('Duplicate decision for stagingRecordId: '+item.stagingRecordId);
+  decisionIds.add(item.stagingRecordId);
   if(typeof item.reviewer!=='string'||!item.reviewer.trim())throw new TypeError('reviewer is required');
   if(!validDate(item.reviewedAt))throw new TypeError('reviewedAt must be a valid YYYY-MM-DD date');
  }
@@ -22,14 +22,15 @@ export function importReviewedBatch({stagingRecords,decisions,maxBatchSize=25}){
  for(const item of approved){
   const c=item.canonical??{};
   if(typeof c.claimId!=='string'||!c.claimId.trim())throw new TypeError('canonical.claimId is required for approval');
+  if(!validDomains.has(c.domain))throw new TypeError('canonical.domain must match Samantha canonical domain registry');
   if(claimIds.has(c.claimId))throw new Error('Duplicate canonical claimId: '+c.claimId);
   claimIds.add(c.claimId);
   const staging=byId.get(item.stagingRecordId);
   if(!staging)throw new Error('Staging record not found: '+item.stagingRecordId);
-  const review={decision:'APPROVE',claimId:c.claimId,domain:c.domain,subject:c.subject,claim:c.claim,
-   classification:c.classification,reviewedAt:item.reviewedAt,verificationStatus:c.verificationStatus??'EXTERNAL-UNVERIFIED',
-   applicableGameVersion:c.applicableGameVersion??null,evidence:c.evidence??null,sourceName:c.sourceName??'TheTowerSDK',
-   sourceType:c.sourceType??'UNKNOWN',conflict:c.conflict};
+  const review={decision:'APPROVE',reviewer:item.reviewer,reviewNote:item.note??null,claimId:c.claimId,domain:c.domain,
+   subject:c.subject,claim:c.claim,classification:c.classification,reviewedAt:item.reviewedAt,
+   verificationStatus:c.verificationStatus??'EXTERNAL-UNVERIFIED',applicableGameVersion:c.applicableGameVersion??null,
+   evidence:c.evidence??null,sourceName:c.sourceName??'TheTowerSDK',sourceType:c.sourceType??'UNKNOWN',conflict:c.conflict};
   claims.push(buildCanonicalClaimFromReviewedAssertion(staging,null,review));
  }
  return {format:'SAMANTHA_GKB_CONTROLLED_IMPORT_PREVIEW',formatVersion:1,importedAt:new Date().toISOString(),
