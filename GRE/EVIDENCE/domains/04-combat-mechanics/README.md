@@ -106,7 +106,22 @@ Registered claims:
 
 **Source disagreement:** Fandom places Chrono Field / Primordial Collapse / Flame Bot after Defense Absolute. Reddit places them before Defense Absolute. The SDK's layer-stack helper agrees with Reddit on this placement, but this does not prove live-game behavior. No winner is selected.
 
-## 8. Current findings and status
+## 8. D04-02 evidence results
+
+Initial source comparison is recorded. The investigation remains partial because native mine behavior is not exposed by the inspected GRE text or SDK helpers.
+
+- [D04-02 evidence report](../../reports/D04-02_land-mine-behavior.md)
+- [Space Displacer SDK claim](../../claims/CLM-D04-LM-001-sdk-space-displacer.md)
+- [Workshop LMS vs ILM stun claim](../../claims/CLM-D04-LM-002-workshop-lms-vs-ilm-stun.md)
+- [ILM charge / Chrono Jump SDK claim](../../claims/CLM-D04-LM-003-sdk-ilm-charge-chrono-jump.md)
+- [Dropped Land Mine damage SDK claim](../../claims/CLM-D04-LM-004-sdk-drop-landmine-damage.md)
+- [Reddit Space Displacer discussion (2026)](../../sources/SRC-REDDIT-SD-LMS-2026-11-13.md)
+- [Reddit Space Displacer discussion (2024)](../../sources/SRC-REDDIT-SD-LMS-2024-03-21.md)
+- [TowerLoop v29.1.3 guide](../../sources/SRC-TOWERLOOP-SPACE-DISPLACER-V29-1-3.md)
+
+**Preliminary distinction:** ordinary Workshop Land Mines, Space Displacer-converted ILMs, and the Inner Land Mines UW must remain separate subjects. Community sources say the ordinary Land Mine Stun card does not stun ILMs; this remains EXTERNAL-UNVERIFIED.
+
+## 9. Current findings and status
 
 **VERIFIED as GRE declarations only:**
 - The domain export contains 79 type records.
@@ -124,7 +139,7 @@ Registered claims:
 - Reproducible player test evidence.
 - Confirmation whether differences are caused by game version, hit-path scope, or source interpretation.
 
-## 9. Exit criteria
+## 10. Exit criteria
 
 This domain is ready for evidence review when each selected topic has:
 - registered sources with version/date/provenance;
