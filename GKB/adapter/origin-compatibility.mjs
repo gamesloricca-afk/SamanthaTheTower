@@ -25,7 +25,7 @@ import { pathToFileURL } from 'node:url';
 const ADAPTER_NAME =
   'Samantha GKB Origin Compatibility Adapter';
 
-const ADAPTER_VERSION = '0.2.0';
+const ADAPTER_VERSION = '0.2.1';
 
 const EXPECTED_SDK_PACKAGE = 'thetowersdk';
 
@@ -192,14 +192,24 @@ export function collectSchemaOrigins(schema) {
 /**
  * Preserve source origin without assigning a mapping.
  */
+function preserveReportValue(value) {
+  return value === undefined
+    ? { $type: 'undefined' }
+    : value;
+}
+
+/**
+ * Preserve source origin without assigning a mapping.
+ * Undefined is represented explicitly for JSON-safe reporting.
+ */
 export function preserveOrigin(origin) {
   if (
     typeof origin !== 'string' ||
     origin.length === 0
   ) {
     return {
-      sourceOrigin: origin ?? null,
-      sourceOriginRaw: origin ?? null,
+      sourceOrigin: origin,
+      sourceOriginRaw: preserveReportValue(origin),
       mappedOrigin: null,
       mappingStatus: 'INVALID_OR_MISSING',
     };
@@ -218,36 +228,44 @@ export function preserveOrigin(origin) {
  */
 function groupOriginOccurrences(occurrences) {
   const groups = new Map();
+  const invalidGroups = [];
 
   for (const occurrence of occurrences) {
-    const key =
-      typeof occurrence.origin === 'string'
-        ? occurrence.origin
-        : '__INVALID_OR_MISSING__';
+    if (!occurrence.validString) {
+      invalidGroups.push({
+        origin: preserveReportValue(occurrence.origin),
+        valueType: occurrence.valueType,
+        validString: false,
+        occurrenceCount: 1,
+        locations: [{
+          path: occurrence.path,
+          valueType: occurrence.valueType,
+          validString: false,
+        }],
+      });
+      continue;
+    }
+
+    const key = occurrence.origin;
 
     if (!groups.has(key)) {
       groups.set(key, {
-        origin:
-          key === '__INVALID_OR_MISSING__'
-            ? null
-            : key,
+        origin: key,
         occurrenceCount: 0,
         locations: [],
       });
     }
 
     const group = groups.get(key);
-
     group.occurrenceCount += 1;
-
     group.locations.push({
       path: occurrence.path,
       valueType: occurrence.valueType,
-      validString: occurrence.validString,
+      validString: true,
     });
   }
 
-  return [...groups.values()];
+  return [...groups.values(), ...invalidGroups];
 }
 
 /**
@@ -401,11 +419,12 @@ export function analyzeOriginCompatibility({
       type: 'OBJECTIVE',
       status: 'CONFLICTING',
       occurrenceCount: invalidOccurrences.length,
-      locations: invalidOccurrences.map(item => ({
-        path: item.path,
+      occurrences: invalidOccurrences.map(item => ({
+        originalValue: preserveReportValue(item.origin),
         valueType: item.valueType,
+        path: item.path,
       })),
-      resolution: 'REVIEW_REQUIRED',
+      resolution: 'UNRESOLVED',
     });
   }
 
@@ -540,6 +559,17 @@ export function runSelfTest() {
     ],
   };
 
+  const invalidGraph = {
+    sources: [
+      { origin: null },
+      { origin: 123 },
+      { origin: false },
+      { origin: {} },
+      { origin: undefined },
+      { origin: '' },
+    ],
+  };
+
   const schema = {
     properties: {
       provenance: {
@@ -588,6 +618,56 @@ export function runSelfTest() {
         'Self-test failed: invalid provenance metadata was accepted'
       );
     }
+  }
+
+  const invalidReport = analyzeOriginCompatibility({
+    sdkPackage: EXPECTED_SDK_PACKAGE,
+    sdkVersion: EXPECTED_SDK_VERSION,
+    graph: invalidGraph,
+    schema,
+    typescriptOrigins: [],
+    sourceReference: 'synthetic-invalid-origin-self-test',
+  });
+
+  const invalidConflict =
+    invalidReport.compatibility.conflicts.find(
+      conflict => conflict.id === 'ORIGIN_INVALID_OR_MISSING'
+    );
+
+  const expectedInvalidTypes = [
+    'null', 'number', 'boolean', 'object', 'undefined', 'string',
+  ];
+
+  if (
+    !invalidConflict ||
+    invalidConflict.occurrences.length !== expectedInvalidTypes.length ||
+    invalidConflict.occurrences.some(
+      (item, index) => item.valueType !== expectedInvalidTypes[index]
+    )
+  ) {
+    throw new Error(
+      'Self-test failed: invalid origin values were not preserved separately'
+    );
+  }
+
+  if (
+    invalidReport.preservation.groupedOccurrences.length !==
+    expectedInvalidTypes.length
+  ) {
+    throw new Error(
+      'Self-test failed: invalid origin occurrences were grouped together'
+    );
+  }
+
+  const undefinedPreservation = preserveOrigin(undefined);
+
+  if (
+    undefinedPreservation.sourceOriginRaw?.$type !== 'undefined' ||
+    undefinedPreservation.mappingStatus !== 'INVALID_OR_MISSING'
+  ) {
+    throw new Error(
+      'Self-test failed: undefined origin was not represented explicitly'
+    );
   }
 
   const graphSchemaConflict =
