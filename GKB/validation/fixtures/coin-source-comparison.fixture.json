@@ -1,0 +1,304 @@
+{
+  "fixtureVersion": "1.0.0",
+  "purpose": "Source-comparison fixtures only. Competing fan-made/community reports remain separate; no winner is selected.",
+  "retrievedAt": "2026-11-27",
+  "claims": [
+    {
+      "claimId": "GKB-CBE-GAMEVAULT-001",
+      "domain": "Workshop Enhancements",
+      "subject": "Coin Bonus Enhancement cap",
+      "claim": "Game Vault Coins page reports Coin Bonus Enhancement capped at level 100 and 2x.",
+      "classification": "OBJECTIVE",
+      "verificationStatus": "CONFLICTING",
+      "applicableGameVersion": null,
+      "lastReviewedAt": "2026-11-27",
+      "provenance": [
+        {
+          "sourceType": "COMMUNITY",
+          "sourceName": "Game Vault Wiki — Coins",
+          "sourceReference": "https://the-tower-idle-tower-defense.game-vault.net/wiki/Coins",
+          "sourceVersion": null,
+          "sdkPackage": null,
+          "sdkVersion": null,
+          "publicationDate": null,
+          "retrievedAt": "2026-11-27",
+          "evidence": "The reviewed page reports level 100 / 2x.",
+          "limitations": [
+            "Page age is approximately two years in the retrieved search result; exact publication date and game version are unavailable.",
+            "Fan-made source; not an official developer release."
+          ]
+        }
+      ],
+      "conflict": {
+        "conflictId": "GKB-CONFLICT-CBE-CAP-001",
+        "relatedClaimIds": [
+          "GKB-CBE-SDK-001",
+          "GKB-CBE-FANDOM-001",
+          "GKB-CBE-TOWERHUB-CPK-001",
+          "GKB-CBE-TOWERHUB-CURRENCY-001"
+        ],
+        "status": "OPEN",
+        "note": "Different fan-made/code sources report different caps. Preserve all values without selecting a winner."
+      }
+    },
+    {
+      "claimId": "GKB-CBE-SDK-001",
+      "domain": "Workshop Enhancements",
+      "subject": "Coin Bonus Enhancement cap",
+      "claim": "TheTowerSDK 0.14.1 mechanics/tests model Coin Bonus Enhancement at level 200 / 3x; a test asserts level 250 remains 3x.",
+      "classification": "OBJECTIVE",
+      "verificationStatus": "CONFLICTING",
+      "applicableGameVersion": null,
+      "lastReviewedAt": "2026-11-27",
+      "provenance": [
+        {
+          "sourceType": "OTHER",
+          "sourceName": "TheTowerSDK mechanics and tests",
+          "sourceReference": "thetowersdk@0.14.1 — Coin Bonus Enhancement mechanics/tests; repository source mirror",
+          "sourceVersion": "0.14.1",
+          "sdkPackage": "thetowersdk",
+          "sdkVersion": "0.14.1",
+          "publicationDate": null,
+          "retrievedAt": "2026-11-27",
+          "evidence": "SDK 0.14.1 implementation and test assertions report 200 / 3x and clamp 250 to 3x.",
+          "limitations": [
+            "Describes SDK code behavior, not independent proof of live-game behavior.",
+            "SDK version is not a game version."
+          ]
+        }
+      ],
+      "conflict": {
+        "conflictId": "GKB-CONFLICT-CBE-CAP-001",
+        "relatedClaimIds": [
+          "GKB-CBE-GAMEVAULT-001",
+          "GKB-CBE-FANDOM-001",
+          "GKB-CBE-TOWERHUB-CPK-001",
+          "GKB-CBE-TOWERHUB-CURRENCY-001"
+        ],
+        "status": "OPEN",
+        "note": "Different fan-made/code sources report different caps. Preserve all values without selecting a winner."
+      }
+    },
+    {
+      "claimId": "GKB-CBE-FANDOM-001",
+      "domain": "Workshop Enhancements",
+      "subject": "Coin Bonus Enhancement cap",
+      "claim": "Fandom Coins Per Kill Bonus page reports Coin Bonus Enhancement capped at level 200 and 3x.",
+      "classification": "OBJECTIVE",
+      "verificationStatus": "CONFLICTING",
+      "applicableGameVersion": null,
+      "lastReviewedAt": "2026-11-27",
+      "provenance": [
+        {
+          "sourceType": "COMMUNITY",
+          "sourceName": "The Tower Fandom Wiki — Coins Per Kill Bonus",
+          "sourceReference": "https://the-tower-idle-tower-defense.fandom.com/wiki/Coins_Per_Kill_Bonus",
+          "sourceVersion": null,
+          "sdkPackage": null,
+          "sdkVersion": null,
+          "publicationDate": null,
+          "retrievedAt": "2026-11-27",
+          "evidence": "Reviewed CPK page reports level 200 / 3x.",
+          "limitations": [
+            "Exact page publication date and applicable game version unavailable.",
+            "Fan-made source; not an official developer release."
+          ]
+        }
+      ],
+      "conflict": {
+        "conflictId": "GKB-CONFLICT-CBE-CAP-001",
+        "relatedClaimIds": [
+          "GKB-CBE-GAMEVAULT-001",
+          "GKB-CBE-SDK-001",
+          "GKB-CBE-TOWERHUB-CPK-001",
+          "GKB-CBE-TOWERHUB-CURRENCY-001"
+        ],
+        "status": "OPEN",
+        "note": "Different fan-made/code sources report different caps. Preserve all values without selecting a winner."
+      }
+    },
+    {
+      "claimId": "GKB-CBE-TOWERHUB-CPK-001",
+      "domain": "Workshop Enhancements",
+      "subject": "Coin Bonus Enhancement cap",
+      "claim": "Tower Hub Coins Per Kill Bonus page reports Coin Bonus Enhancement capped at level 200 and 3x; page last verified 2026-07-29.",
+      "classification": "OBJECTIVE",
+      "verificationStatus": "CONFLICTING",
+      "applicableGameVersion": null,
+      "lastReviewedAt": "2026-11-27",
+      "provenance": [
+        {
+          "sourceType": "COMMUNITY",
+          "sourceName": "Tower Hub — Coins Per Kill Bonus",
+          "sourceReference": "https://www.tower-hub.com/wiki/workshop/coins-per-kill-bonus",
+          "sourceVersion": null,
+          "sdkPackage": null,
+          "sdkVersion": null,
+          "publicationDate": null,
+          "retrievedAt": "2026-11-27",
+          "evidence": "Page metadata reports last verified 2026-07-29 and cap 200 / 3x.",
+          "limitations": [
+            "Page last-verified date is not necessarily game-version applicability.",
+            "Fan-made source; not an official developer release."
+          ]
+        }
+      ],
+      "conflict": {
+        "conflictId": "GKB-CONFLICT-CBE-CAP-001",
+        "relatedClaimIds": [
+          "GKB-CBE-GAMEVAULT-001",
+          "GKB-CBE-SDK-001",
+          "GKB-CBE-FANDOM-001",
+          "GKB-CBE-TOWERHUB-CURRENCY-001"
+        ],
+        "status": "OPEN",
+        "note": "Different fan-made/code sources report different caps. Preserve all values without selecting a winner."
+      }
+    },
+    {
+      "claimId": "GKB-CBE-TOWERHUB-CURRENCY-001",
+      "domain": "Workshop Enhancements",
+      "subject": "Coin Bonus Enhancement cap",
+      "claim": "Tower Hub Currency/Utility Enhancement indexed page reports Coin Bonus Enhancement capped at level 300 and 4x; result metadata says last verified 2026-11-01.",
+      "classification": "OBJECTIVE",
+      "verificationStatus": "CONFLICTING",
+      "applicableGameVersion": null,
+      "lastReviewedAt": "2026-11-27",
+      "provenance": [
+        {
+          "sourceType": "COMMUNITY",
+          "sourceName": "Tower Hub — Currency / Utility Enhancement",
+          "sourceReference": "https://www.tower-hub.com/wiki/currency/currency ; https://www.tower-hub.com/wiki/workshop/workshop-enhancement-utility",
+          "sourceVersion": null,
+          "sdkPackage": null,
+          "sdkVersion": null,
+          "publicationDate": null,
+          "retrievedAt": "2026-11-27",
+          "evidence": "Indexed page result reports 300 / 4x and last verified 2026-11-01.",
+          "limitations": [
+            "Tower Hub's CPK page reports a different 200 / 3x value.",
+            "Indexed result and page scope should be rechecked before promotion.",
+            "Fan-made source; not an official developer release."
+          ]
+        }
+      ],
+      "conflict": {
+        "conflictId": "GKB-CONFLICT-CBE-CAP-001",
+        "relatedClaimIds": [
+          "GKB-CBE-GAMEVAULT-001",
+          "GKB-CBE-SDK-001",
+          "GKB-CBE-FANDOM-001",
+          "GKB-CBE-TOWERHUB-CPK-001"
+        ],
+        "status": "OPEN",
+        "note": "Different fan-made/code sources report different caps. Preserve all values without selecting a winner."
+      }
+    },
+    {
+      "claimId": "GKB-FETCH-CPM-SDK-001",
+      "domain": "Guardians",
+      "subject": "Fetch coin CPM reference window",
+      "claim": "TheTowerSDK 0.14.1 estimates Fetch coin income using 0.2% of whole-run average pre-Fetch Coins Per Minute.",
+      "classification": "OBJECTIVE",
+      "verificationStatus": "CONFLICTING",
+      "applicableGameVersion": null,
+      "lastReviewedAt": "2026-11-27",
+      "provenance": [
+        {
+          "sourceType": "OTHER",
+          "sourceName": "TheTowerSDK Fetch coin simulation",
+          "sourceReference": "thetowersdk@0.14.1 — resource-drops coin simulation source",
+          "sourceVersion": "0.14.1",
+          "sdkPackage": "thetowersdk",
+          "sdkVersion": "0.14.1",
+          "publicationDate": null,
+          "retrievedAt": "2026-11-27",
+          "evidence": "Implementation computes pre-Fetch run CPM from run coins divided by run duration, then applies 0.002 to expected coin procs.",
+          "limitations": [
+            "SDK implementation behavior is not proof that the live game uses this exact window.",
+            "SDK comment attributes the 0.2% factor generally to community/wiki without a precise dated page."
+          ]
+        }
+      ],
+      "conflict": {
+        "conflictId": "GKB-CONFLICT-FETCH-CPM-WINDOW-001",
+        "relatedClaimIds": [
+          "GKB-FETCH-CPM-REDDIT-001"
+        ],
+        "status": "OPEN",
+        "note": "Sources describe different CPM averaging windows. Do not select a winner."
+      }
+    },
+    {
+      "claimId": "GKB-FETCH-CPM-REDDIT-001",
+      "domain": "Guardians",
+      "subject": "Fetch coin CPM reference window",
+      "claim": "A Reddit discussion dated 2026-03-10 describes Fetch coin income as 0.2% of Coins Per Minute at the time of the find, with CPM based on a rolling average of the last five minutes.",
+      "classification": "SENTIMENT",
+      "verificationStatus": "CONFLICTING",
+      "applicableGameVersion": null,
+      "lastReviewedAt": "2026-11-27",
+      "provenance": [
+        {
+          "sourceType": "COMMUNITY",
+          "sourceName": "Reddit discussion — Fetch/Bounty/Summon Guardian setup",
+          "sourceReference": "https://www.reddit.com/r/TheTowerGame/comments/1rpvsx6/for_the_guardian_setup_bounty_and_summon_need_to/",
+          "sourceVersion": null,
+          "sdkPackage": null,
+          "sdkVersion": null,
+          "publicationDate": "2026-03-10",
+          "retrievedAt": "2026-11-27",
+          "evidence": "Discussion describes 0.2% using a rolling five-minute CPM at time of find.",
+          "limitations": [
+            "Community discussion; no independent in-game reproduction recorded in this fixture.",
+            "Applicable game version not specified."
+          ]
+        }
+      ],
+      "conflict": {
+        "conflictId": "GKB-CONFLICT-FETCH-CPM-WINDOW-001",
+        "relatedClaimIds": [
+          "GKB-FETCH-CPM-SDK-001"
+        ],
+        "status": "OPEN",
+        "note": "Sources describe different CPM averaging windows. Do not select a winner."
+      }
+    },
+    {
+      "claimId": "GKB-FETCH-OBSERVED-SHARE-TOWERSTATS-001",
+      "domain": "Guardians",
+      "subject": "Observed Fetch coin share in sample runs",
+      "claim": "TowerStats guide updated 2026-11-19 reports Fetch coins at approximately 0.25% of coins earned across six sample pre-v29 runs.",
+      "classification": "OBJECTIVE",
+      "verificationStatus": "EXTERNAL-UNVERIFIED",
+      "applicableGameVersion": "pre-v29 sample runs",
+      "lastReviewedAt": "2026-11-27",
+      "provenance": [
+        {
+          "sourceType": "COMMUNITY",
+          "sourceName": "TowerStats — Fetch Guide",
+          "sourceReference": "https://towerstats.org/guide/guardian/fetch/",
+          "sourceVersion": null,
+          "sdkPackage": null,
+          "sdkVersion": null,
+          "publicationDate": "2026-11-19",
+          "retrievedAt": "2026-11-27",
+          "evidence": "Guide reports six sample pre-v29 runs with fetched coins approximately 0.25% of coins earned.",
+          "limitations": [
+            "Observed run share is not the same measurement as a CPM averaging-window formula.",
+            "Only six sample runs are described; do not generalize as a universal constant."
+          ]
+        }
+      ],
+      "conflict": {
+        "conflictId": "GKB-FETCH-OBSERVED-SHARE-SCOPE-001",
+        "relatedClaimIds": [
+          "GKB-FETCH-CPM-SDK-001",
+          "GKB-FETCH-CPM-REDDIT-001"
+        ],
+        "status": "NOT_COMPARABLE",
+        "note": "This is an observed share of run coins, not a direct statement of the CPM averaging window; retain as related context, not a competing formula."
+      }
+    }
+  ]
+}
