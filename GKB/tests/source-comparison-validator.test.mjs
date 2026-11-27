@@ -34,7 +34,7 @@ console.log(JSON.stringify({
   cases: 14,
   claimsValidatedAgainstCanonicalSchema: report.claimCount,
   conflictGroupsPreserved: report.conflictGroupCount,
-  noWinnerSelected: report.winnerSelected,
+  noWinnerSelected: !report.winnerSelected,
   missingProvenanceReported: true,
   danglingConflictReferencesRejected: true
 }, null, 2));
