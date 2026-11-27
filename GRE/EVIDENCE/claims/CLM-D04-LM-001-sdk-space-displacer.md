@@ -33,3 +33,9 @@ The SDK's Space Displacer module template describes a chance for landmines to sp
 
 - `CLM-D04-LM-002`
 - `CLM-D04-LM-003`
+
+
+## Review completion — 2026-11-27
+
+- **SDK catalog model verified; community guide corroborates; native runtime not verified.** Rechecked the SDK space-displacer template: Epic 15%, Legendary 20%, Mythic 25%, Ancestral 30%, a 20-mine cap, and autonomous movement/organization.
+- TowerLoop's v29.1.3 page describes the same conversion and distinguishes Workshop mine spawn chance from conversion chance. These are SDK/community-guide statements, not native method bodies or an individual-mine simulation. Status remains VERIFIED (SDK catalog/model only). Native parity: NOT ESTABLISHED. GKB: HOLD.
