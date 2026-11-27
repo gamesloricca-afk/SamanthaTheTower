@@ -162,3 +162,7 @@ This domain is ready for evidence review when each selected topic has:
 - a report of what remains unknown.
 
 No automatic GKB import.
+
+## D04-01 / D04-02 review checkpoint — 2026-11-27
+
+The eight Damage Reduction claims and four Land Mine claims have completed a source-audit pass (12/12). This is not full gameplay verification. The Damage Reduction ordering conflict remains open; Land Mine stun, timer, and native event behavior remain unresolved. See the individual reports and claim records. No new claims were added and nothing was promoted to GKB.
