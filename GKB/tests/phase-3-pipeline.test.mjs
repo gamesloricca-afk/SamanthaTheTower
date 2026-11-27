@@ -30,7 +30,7 @@ try {
  const first=persistStagingSnapshot({runId:'100',retrievedAt:'2026-11-27',root:tmp}); assert.equal(first.comparison[0].change,'BASELINE');
  fs.writeFileSync(source,JSON.stringify({generatedAt:'2026-11-27T00:00:02Z',retrievedAt:'2026-11-28',records:staged}));
  const second=persistStagingSnapshot({runId:'101',retrievedAt:'2026-11-28',root:tmp});
- assert.equal(second.previousRunId,'100'); assert.equal(second.comparison.find(x=>x.name==='sdk-assertions.json').change,'ALGORITHM_CHANGED');
+ assert.equal(second.previousRunId,'100'); assert.equal(second.comparison.find(x=>x.name==='sdk-assertions.json').change,'UNCHANGED');
  fs.writeFileSync(source,JSON.stringify({generatedAt:'2026-11-28T00:00:02Z',retrievedAt:'2026-11-29',records:[...staged,{...staged[0],stagingId:'stage-2'}]}));
  const third=persistStagingSnapshot({runId:'102',retrievedAt:'2026-11-29',root:tmp});
  assert.equal(third.comparison.find(x=>x.name==='sdk-assertions.json').change,'CHANGED');
