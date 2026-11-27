@@ -17,7 +17,8 @@ const imported=importReviewedBatch({stagingRecords:staged,decisions:[decision]})
 assert.equal(imported.importedCount,1); assert.equal(imported.claims[0].verificationStatus,'EXTERNAL-UNVERIFIED');
 assert.equal(imported.claims[0].provenance[0].sdkVersion,'0.14.1');
 assert.equal(imported.claims[0].sourceRecord.reviewDecision.reviewer,'test-reviewer');
-assert.throws(()=>importReviewedBatch({stagingRecords:staged,decisions:Array.from({length:26},(_,i)=>({...decision,stagingRecordId:`stage-${i}`,canonical:{...decision.canonical,claimId:`GKB-${i}`}}))}),/exceeds limit/);
+const manyStaged=Array.from({length:26},(_,i)=>({...staged[0],stagingId:`stage-${i}`}));
+assert.throws(()=>importReviewedBatch({stagingRecords:manyStaged,decisions:Array.from({length:26},(_,i)=>({...decision,stagingRecordId:`stage-${i}`,canonical:{...decision.canonical,claimId:`GKB-${i}`}}))}),/exceeds limit/);
 assert.throws(()=>importReviewedBatch({stagingRecords:staged,decisions:[{...deferred,stagingRecordId:'missing-stage'}]}),/Staging record not found/);
 const duplicateStage=[...staged,{...staged[0]}];
 assert.throws(()=>importReviewedBatch({stagingRecords:duplicateStage,decisions:[decision]}),/Duplicate staging record ID/);
