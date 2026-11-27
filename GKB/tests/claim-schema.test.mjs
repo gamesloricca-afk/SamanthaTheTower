@@ -11,7 +11,7 @@ const ajv = new Ajv2020({ allErrors: true, strict: true, validateFormats: true }
 ajv.addFormat('date', {
   type: 'string',
   validate(value) {
-    if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(value)) return false;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
     const date = new Date(`${value}T00:00:00.000Z`);
     return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
   }
@@ -44,7 +44,7 @@ const valid = {
   unknownUpstreamField: { keep: true }
 };
 
-check(validate(valid), 'valid claim');
+check(validate(valid), `valid claim: ${JSON.stringify(validate.errors)}`);
 check(valid.unknownUpstreamField.keep === true, 'unknown source fields retained');
 for (const status of ['VERIFIED', 'USER-PROVIDED', 'EXTERNAL-UNVERIFIED', 'HYPOTHESIS', 'CONFLICTING', 'SUPERSEDED']) {
   check(validate({ ...valid, verificationStatus: status }), `canonical status ${status}`);
