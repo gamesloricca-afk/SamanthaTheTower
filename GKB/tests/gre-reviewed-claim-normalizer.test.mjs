@@ -36,6 +36,10 @@ const conflictPreview=buildCanonicalClaimFromReviewedGreRecord(conflictLinked,{
 assert.equal(conflictPreview.conflict.conflictId,conflictId);
 assert.throws(()=>buildCanonicalClaimFromReviewedGreRecord(conflictLinked,{
   decision:'APPROVE',reviewer:'synthetic-conflict-test',reviewedAt:'2026-11-27',
+  canonical:{claimId:'TEST-GRE-CONFLICT-RELATED-BAD-001',domain:'combat-mechanics',subject:'Bad related claims fixture',claim:'Bad related claims fixture.',classification:'OBJECTIVE',verificationStatus:'CONFLICTING',evidence:'Synthetic evidence',conflict:{conflictId,relatedClaimIds:['CLM-D04-DR-001'],status:'OPEN'}}
+}),/relatedClaimIds must exactly match/);
+assert.throws(()=>buildCanonicalClaimFromReviewedGreRecord(conflictLinked,{
+  decision:'APPROVE',reviewer:'synthetic-conflict-test',reviewedAt:'2026-11-27',
   canonical:{claimId:'TEST-GRE-CONFLICT-BAD-001',domain:'combat-mechanics',subject:'Bad conflict fixture',claim:'Bad conflict fixture.',classification:'OBJECTIVE',verificationStatus:'CONFLICTING',evidence:'Synthetic evidence',conflict:{conflictId:'CNF-WRONG',relatedClaimIds:linkedConflict.relatedSourceClaimIds,status:'OPEN'}}
 }),/must match the linked GRE source conflict/);
 const sourceOverridePreview=buildCanonicalClaimFromReviewedGreRecord(record,{
