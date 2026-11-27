@@ -19,7 +19,9 @@
     "compare:sdk-unique-modules": "node ../adapter/compare-unique-modules-with-sdk.mjs",
     "inspect:sdk-wiki-contributions-charts": "node ../adapter/sdk-wiki-contributions-charts-inspector.mjs",
     "test:sdk-assertion-staging": "node ../tests/sdk-assertion-staging.test.mjs",
-    "stage:sdk-assertions": "node ../adapter/sdk-assertion-staging.mjs"
+    "stage:sdk-assertions": "node ../adapter/sdk-assertion-staging.mjs",
+    "test:sdk-edge-staging": "node ../tests/sdk-edge-staging.test.mjs",
+    "stage:sdk-edges": "node ../adapter/sdk-edge-staging.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
