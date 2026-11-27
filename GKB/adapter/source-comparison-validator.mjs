@@ -1,5 +1,9 @@
-import Ajv2020 from 'ajv/dist/2020.js';
+import { createRequire } from 'node:module';
 import { readFile } from 'node:fs/promises';
+
+// Resolve Ajv from the isolated GKB runtime, not from GKB/adapter's directory.
+const require = createRequire(new URL('../runtime/package.json', import.meta.url));
+const Ajv2020 = require('ajv/dist/2020.js').default;
 
 const dateFormat = {
   type: 'string',
