@@ -43,7 +43,15 @@ for (const item of gkb.modules) {
     metadataFields,
     metadataMatched: Object.values(metadataFields).every(Boolean),
     effectTextMatches,
-    descriptionType: typeof source.description
+    descriptionType: typeof source.description,
+    rarityBonusesDifference: metadataFields.rarityBonuses ? null : {
+      gkb: item.rarityBonuses,
+      sdk: source.rarityBonuses
+    },
+    effectTextDifference: effectTextMatches ? null : {
+      gkb: gkbEffectText,
+      sdk: sdkEffectText
+    }
   });
 }
 const metadataMismatchCount = comparisons.filter(item => !item.metadataMatched).length;
@@ -63,6 +71,8 @@ console.log(JSON.stringify({
   missingInSdk,
   missingInGkb,
   comparisons,
+  effectTextDifferenceSamples: comparisons.filter(item => !item.effectTextMatches).slice(0, 3),
+  metadataDifferenceDetails: comparisons.filter(item => !item.metadataMatched),
   firstEffectExample: comparisons.length ? {
     id: comparisons[0].id,
     gkbEffectTemplate: gkbById.get(comparisons[0].id)?.effectTemplate ?? null,
