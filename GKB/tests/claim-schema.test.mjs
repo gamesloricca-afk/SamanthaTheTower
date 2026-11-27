@@ -1,6 +1,11 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import Ajv2020 from 'ajv/dist/2020.js';
+import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+
+const require = createRequire(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../runtime/package.json'));
+const Ajv2020 = require('ajv/dist/2020.js').default;
 
 const schema = JSON.parse(await readFile(new URL('../schema/claim.schema.json', import.meta.url), 'utf8'));
 const ajv = new Ajv2020({ allErrors: true, strict: true, validateFormats: false });
