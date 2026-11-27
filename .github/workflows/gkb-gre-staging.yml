@@ -6,6 +6,11 @@ on:
       - GKB
     paths:
       - 'GKB/adapter/gre-staging.mjs'
+      - 'GKB/adapter/gre-reviewed-claim-normalizer.mjs'
+      - 'GKB/schema/review-decision.schema.json'
+      - 'GKB/schema/claim.schema.json'
+      - 'GKB/domains/canonical-domain-registry.json'
+      - 'GKB/tests/gre-reviewed-claim-normalizer.test.mjs'
       - 'GKB/schema/gre-staging.schema.json'
       - 'GKB/tests/gre-staging.test.mjs'
       - 'GKB/tests/gre-review.test.mjs'
