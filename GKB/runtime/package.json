@@ -29,7 +29,9 @@
     "test:sdk-import-manifest": "node ../tests/sdk-import-manifest.test.mjs",
     "report:sdk-import-manifest": "node ../adapter/sdk-import-manifest.mjs",
     "test:sdk-identifier-mapping": "node ../tests/sdk-identifier-mapping.test.mjs",
-    "report:sdk-identifier-mapping": "node ../adapter/sdk-identifier-mapping.mjs"
+    "report:sdk-identifier-mapping": "node ../adapter/sdk-identifier-mapping.mjs",
+    "test:sdk-domain-catalog-staging": "node ../tests/sdk-domain-catalog-staging.test.mjs",
+    "stage:sdk-domain-catalogs": "node ../adapter/sdk-domain-catalog-staging.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
