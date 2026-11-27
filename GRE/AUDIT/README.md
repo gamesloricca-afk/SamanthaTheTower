@@ -36,4 +36,6 @@ See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_
 
 - Domain 09 findings 151–200: seeded-reroll method declarations, ModuleItem/ModuleInfo/ModuleEffect/ModuleRegistry structures, merge/auto-merge interfaces, and module creation overloads. See [13_domain_09_modules_seed_records_merge.md](13_domain_09_modules_seed_records_merge.md).
 
-All Domain 09 findings 31–200 are structural observations from direct metadata declarations, not verified runtime mechanics. Decoded constant values remain candidates only.
+- Domain 09 findings 201–300: Auto Reroll UI/coroutine declarations, per-ModuleType substat-ban and Auto Reroll fields, ModuleRandomTest state fields, and SubstatsCluster enum catalog. See [14_domain_09_modules_autoreroll_bans_random_catalog.md](14_domain_09_modules_autoreroll_bans_random_catalog.md).
+
+All Domain 09 findings 31–300 are structural observations from direct metadata declarations, not verified runtime mechanics. Decoded constant values remain candidates only.
