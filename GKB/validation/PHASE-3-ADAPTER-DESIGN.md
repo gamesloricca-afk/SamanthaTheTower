@@ -212,6 +212,30 @@ GitHub Actions run:
 - https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45938802821
 - Result: SUCCESS, including all staging tests, generation steps, and staging artifact upload.
 
+## Review-gated canonical normalizer
+
+Added:
+- `GKB/adapter/reviewed-assertion-normalizer.mjs`
+- `GKB/tests/reviewed-assertion-normalizer.test.mjs`
+- Runtime command `test:reviewed-assertion-normalizer`
+- CI step `Test review-gated canonical claim normalizer`
+
+The normalizer does not run against the full SDK graph. It requires a separate review object with:
+- `decision: APPROVE`
+- Explicit canonical claim ID, domain, subject, claim text, classification, and review date.
+- Optional explicit source type, game version, source version, publication date, evidence, verification status, related claims, relationships, and conflict metadata.
+
+It defaults to:
+- `verificationStatus: EXTERNAL-UNVERIFIED`
+- `sourceType: UNKNOWN`
+- `applicableGameVersion: null`
+- `sourceVersion: null`
+- `publicationDate: null`
+
+It never maps SDK `verified_here` to VERIFIED, never maps origin values to source types, and never maps `readAgainstVersion` to game version automatically. SDK fields remain in provenance and the full source assertion/node/staging records remain in `sourceRecord`.
+
+The synthetic test passed 22 cases, including rejection of missing approval, invalid classification/date, VERIFIED without evidence, and CONFLICTING without explicit conflict metadata. No canonical claim was generated from the real SDK graph.
+
 ## Cross-stage integrity report
 
 Added `GKB/adapter/sdk-staging-integrity-report.mjs` and runtime command `report:sdk-staging-integrity`. CI cross-checks the four staging streams against the exact SDK graph and the SDK contradiction helper output.
