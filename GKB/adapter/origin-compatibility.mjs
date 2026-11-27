@@ -1,7 +1,7 @@
 /**
  * Samantha GKB — SDK Origin Compatibility Adapter
  *
- * Version: 0.2.0
+ * Version: 0.2.1
  * Target SDK: thetowersdk@0.14.1
  *
  * Responsibilities:
@@ -65,7 +65,7 @@ function appendPath(path, key) {
 }
 
 /**
- * Discover every string value under a property named origin.
+ * Discover every value under a property named origin.
  *
  * Paths are retained for traceability.
  * Original source data is never modified.
