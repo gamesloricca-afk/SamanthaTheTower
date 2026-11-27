@@ -33,7 +33,9 @@
     "test:sdk-domain-catalog-staging": "node ../tests/sdk-domain-catalog-staging.test.mjs",
     "stage:sdk-domain-catalogs": "node ../adapter/sdk-domain-catalog-staging.mjs",
     "test:sdk-data-catalog-crosswalk": "node ../tests/sdk-data-catalog-crosswalk.test.mjs",
-    "report:sdk-data-catalog-crosswalk": "node ../adapter/sdk-data-catalog-crosswalk.mjs"
+    "report:sdk-data-catalog-crosswalk": "node ../adapter/sdk-data-catalog-crosswalk.mjs",
+    "test:sdk-domain-catalog-audit": "node ../tests/sdk-domain-catalog-audit.test.mjs",
+    "report:sdk-domain-catalog-audit": "node ../adapter/sdk-domain-catalog-audit.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
