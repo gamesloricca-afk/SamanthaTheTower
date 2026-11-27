@@ -10,7 +10,7 @@ const graph={schemaVersion:1,graphVersion:1,generatedFor:'2026-11-27',nodes:[nod
 const staged=stageKnowledgeGraphAssertions(graph,{sdkVersion:'0.14.1',registry,retrievedAt:'2026-11-27'}).records;
 const queue=buildReviewQueue(staged); assert.equal(queue.records.length,1); assert.equal(queue.records[0].decision,'PENDING');
 const deferred={stagingRecordId:staged[0].stagingId,decision:'DEFER',reviewer:'test-reviewer',reviewedAt:'2026-11-27'};
-const pending=importReviewedBatch({stagingRecords:staged,decisions:[deferred]}); assert.equal(pending.importedCount,0);
+assert.equal(importReviewedBatch({stagingRecords:staged,decisions:[deferred]}).importedCount,0);
 const decision={stagingRecordId:staged[0].stagingId,decision:'APPROVE',reviewer:'test-reviewer',reviewedAt:'2026-11-27',
  canonical:{claimId:'GKB-P3-001',domain:'game-fundamentals',subject:'tower.example',claim:'Example fact.',classification:'OBJECTIVE'}};
 const imported=importReviewedBatch({stagingRecords:staged,decisions:[decision]});
@@ -24,19 +24,29 @@ assert.throws(()=>importReviewedBatch({stagingRecords:staged,decisions:[{...deci
 assert.throws(()=>importReviewedBatch({stagingRecords:staged,decisions:[{...decision,canonical:{...decision.canonical,domain:'unmapped-domain'}}]}),/canonical domain registry/);
 const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'gkb-p3-'));
 try {
- fs.mkdirSync(path.join(tmp,'staging'),{recursive:true});
- const source=path.join(tmp,'staging/sdk-assertions.json');
+ fs.mkdirSync(path.join(tmp,'staging'),{recursive:true}); const source=path.join(tmp,'staging/sdk-assertions.json');
  fs.writeFileSync(source,JSON.stringify({generatedAt:'2026-11-27T00:00:00Z',retrievedAt:'2026-11-27',records:staged}));
- const first=persistStagingSnapshot({runId:'100',retrievedAt:'2026-11-27',root:tmp}); assert.equal(first.comparison[0].change,'BASELINE');
+ const first=persistStagingSnapshot({runId:'100',retrievedAt:'2026-11-27',root:tmp});
+ assert.equal(first.comparison[0].change,'BASELINE');
+ const firstObject=path.join(tmp,'staging',first.files[0].objectPath);
+ assert.ok(fs.existsSync(firstObject)); assert.ok(!fs.existsSync(path.join(tmp,'staging/snapshots/100/sdk-assertions.json')));
  fs.writeFileSync(source,JSON.stringify({generatedAt:'2026-11-27T00:00:02Z',retrievedAt:'2026-11-28',records:staged}));
  const second=persistStagingSnapshot({runId:'101',retrievedAt:'2026-11-28',root:tmp});
- assert.equal(second.previousRunId,'100'); assert.equal(second.comparison.find(x=>x.name==='sdk-assertions.json').change,'UNCHANGED');
+ assert.equal(second.previousRunId,'100'); assert.equal(second.comparison[0].change,'UNCHANGED');
+ assert.equal(second.files[0].objectPath,first.files[0].objectPath);
  fs.writeFileSync(source,JSON.stringify({generatedAt:'2026-11-28T00:00:02Z',retrievedAt:'2026-11-29',records:[...staged,{...staged[0],stagingId:'stage-2'}]}));
  const third=persistStagingSnapshot({runId:'102',retrievedAt:'2026-11-29',root:tmp});
- assert.equal(third.comparison.find(x=>x.name==='sdk-assertions.json').change,'CHANGED');
+ assert.equal(third.comparison[0].change,'CHANGED'); assert.notEqual(third.files[0].objectPath,second.files[0].objectPath);
  fs.writeFileSync(source,JSON.stringify({generatedAt:'2026-11-29T00:00:02Z',retrievedAt:'2026-11-30',records:[...staged,{...staged[0],stagingId:'stage-2'}]}));
  const fourth=persistStagingSnapshot({runId:'103',retrievedAt:'2026-11-30',root:tmp});
- assert.equal(fourth.comparison.find(x=>x.name==='sdk-assertions.json').change,'UNCHANGED');
+ assert.equal(fourth.comparison[0].change,'UNCHANGED');
  assert.throws(()=>persistStagingSnapshot({runId:'103',retrievedAt:'2026-11-30',root:tmp}),/cannot be overwritten/);
+ const legacyDir=path.join(tmp,'staging/snapshots/099'); fs.mkdirSync(legacyDir,{recursive:true});
+ fs.writeFileSync(path.join(legacyDir,'sdk-assertions.json'),JSON.stringify({records:staged}));
+ fs.writeFileSync(path.join(legacyDir,'manifest.json'),JSON.stringify({runId:'099',files:[{name:'sdk-assertions.json',sha256:'legacy',bytes:10}]}));
+ persistStagingSnapshot({runId:'104',retrievedAt:'2026-12-01',root:tmp});
+ const migrated=JSON.parse(fs.readFileSync(path.join(legacyDir,'manifest.json'),'utf8'));
+ assert.equal(migrated.comparisonAlgorithm,'LEGACY_RAW_SHA256_V0');
+ assert.ok(migrated.files[0].objectPath); assert.ok(!fs.existsSync(path.join(legacyDir,'sdk-assertions.json')));
 } finally {fs.rmSync(tmp,{recursive:true,force:true});}
-console.log(JSON.stringify({test:'Samantha GKB Phase 3A-3E pipeline',status:'PASSED',cases:15,persistentSnapshots:true,stableCrossRunComparison:true,explicitReview:true,canonicalDomainEnforced:true,controlledBatchLimit:25,canonicalImportOnlyAfterApproval:true,automaticVerificationPromotion:false},null,2));
+console.log(JSON.stringify({test:'Samantha GKB Phase 3A-3E pipeline',status:'PASSED',cases:18,contentAddressedStorage:true,legacySnapshotMigration:true,stableCrossRunComparison:true,explicitReview:true,canonicalDomainEnforced:true,controlledBatchLimit:25,canonicalImportOnlyAfterApproval:true,automaticVerificationPromotion:false},null,2));

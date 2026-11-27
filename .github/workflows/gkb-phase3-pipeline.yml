@@ -64,13 +64,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add GKB/staging/snapshots GKB/staging/latest-snapshot.json
+          git add GKB/staging/snapshots GKB/staging/objects GKB/staging/latest-snapshot.json
           git commit -m "Persist GKB staging snapshot run ${{ github.run_id }}"
           git push origin HEAD:phase3-completion
       - name: Upload Phase 3 staging snapshot
         uses: actions/upload-artifact@v4
         with:
           name: gkb-phase3-${{ github.run_id }}
-          path: GKB/staging/snapshots/${{ github.run_id }}/
+          path: |
+            GKB/staging/snapshots/${{ github.run_id }}/
+            GKB/staging/objects/
           if-no-files-found: error
           retention-days: 30
