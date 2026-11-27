@@ -1,0 +1,216 @@
+# CONTINUE SAMANTHA GKB — REVIEW 1,618 SDK ASSERTIONS
+
+Kamu melanjutkan pengembangan Samantha's Game Knowledge Base (GKB) untuk game The Tower: Idle Tower Defense.
+
+Saya sudah menghabiskan banyak waktu membangun fondasi GKB. Jangan mengulang pekerjaan yang sudah selesai. Periksa repository dan lanjutkan dari kondisi terakhir.
+
+## 1. Repository dan aturan kerja
+
+Repository:
+`gamesloricca-afk/SamanthaTheTower`
+
+Branch kerja:
+`GKB`
+
+Aturan:
+- Jangan mengubah `main` atau `TestAccount`.
+- Jangan melakukan merge tanpa izin.
+- Periksa kondisi repository sebelum mengubah file.
+- Pertahankan pekerjaan dan struktur yang sudah ada.
+- Jangan mengklaim pekerjaan, pengujian, atau commit berhasil jika belum diverifikasi.
+- Gunakan TheTowerSDK sebagai dependency eksternal, bukan fork.
+- Versi SDK yang digunakan: `thetowersdk@0.14.1`.
+
+## 2. Tujuan utama
+
+Melakukan review terhadap **1.618 SDK assertions** yang sudah masuk ke Samantha Review Queue.
+
+ChatGPT bertindak sebagai reviewer dan memberikan keputusan untuk setiap klaim:
+
+- APPROVE
+- REJECT
+- DEFER
+
+Tujuan akhirnya adalah menghasilkan kumpulan keputusan review yang dapat diproses oleh Samantha melalui controlled importer.
+
+Jangan melakukan bulk import atau mengubah data kanonis secara langsung.
+
+## 3. Periksa kondisi terakhir terlebih dahulu
+
+Baca dan periksa:
+
+- `GKB/validation/AI-REVIEW-1618-CLAIMS.md`
+- `GKB/adapter/review-queue.mjs`
+- `GKB/adapter/controlled-import.mjs`
+- `GKB/adapter/reviewed-assertion-normalizer.mjs`
+- `GKB/schema/review-decision.schema.json`
+- `GKB/staging/latest-snapshot.json`
+- Manifest dan data staging yang dirujuk oleh snapshot terbaru.
+- Workflow dan hasil pengujian terakhir yang relevan.
+
+Pastikan:
+1. Apakah 1.618 assertions masih lengkap?
+2. Apakah snapshot terbaru masih sesuai dengan data staging?
+3. Bagaimana format stagingRecordId yang sebenarnya?
+4. Apakah sudah ada keputusan review sebelumnya?
+5. Apakah sudah ada mekanisme penyimpanan keputusan yang persisten?
+
+Jangan mengasumsikan nama file, ID, atau format data sebelum memeriksanya.
+
+Jika ada ketidaksesuaian, laporkan dahulu dan jangan menimpa data.
+
+## 4. Aturan review sederhana
+
+Gunakan aturan berikut:
+
+**APPROVE**
+- Klaim memiliki makna yang jelas.
+- Informasi berguna untuk pengetahuan game.
+- Sumber dan konteks cukup untuk disimpan.
+- Klaim dapat dipetakan ke domain GKB.
+
+**REJECT**
+- Duplikat yang benar-benar tidak memberikan informasi baru.
+- Data rusak atau tidak memiliki makna sebagai klaim.
+- Bukan informasi yang relevan untuk GKB.
+
+**DEFER**
+- Makna klaim tidak jelas.
+- Informasi atau konteks tidak cukup.
+- Domain atau subjek belum dapat ditentukan.
+- Memerlukan pemeriksaan tambahan.
+
+Jangan terlalu mudah menggunakan REJECT. Jika ragu, gunakan DEFER.
+
+## 5. Perlakuan terhadap konflik
+
+Semua sumber komunitas dan wiki bersifat fan-made, bukan rilis resmi developer.
+
+Karena itu:
+- Jangan menentukan pemenang berdasarkan popularitas atau jumlah sumber.
+- Jangan menganggap satu repository selalu lebih benar daripada repository lain.
+- Jangan menghapus informasi yang bertentangan.
+- Jika dua atau tiga sumber memberikan nilai berbeda, pertahankan semuanya beserta sumbernya.
+- Gunakan status `CONFLICTING` apabila format klaim kanonis dapat menyimpan informasi konflik dengan benar.
+- Konflik bukan alasan otomatis untuk REJECT.
+
+Jangan melakukan penelitian web untuk setiap klaim. Gunakan data staging terlebih dahulu. Lakukan cross-check eksternal hanya jika benar-benar diperlukan, misalnya klaim ambigu, mekanisme penting, angka yang berbeda, atau konflik yang belum jelas.
+
+## 6. Klasifikasi dan verification status
+
+Setiap klaim yang di-APPROVE harus memiliki klasifikasi:
+- OBJECTIVE
+- SENTIMENT
+
+Gunakan verification status Samantha:
+- VERIFIED
+- USER-PROVIDED
+- EXTERNAL-UNVERIFIED
+- HYPOTHESIS
+- CONFLICTING
+- SUPERSEDED
+
+Aturan penting:
+- Jangan otomatis mengubah klaim menjadi VERIFIED.
+- Jangan menganggap SDK `verified_here` sama dengan VERIFIED milik Samantha.
+- Jangan mengarang game version, nilai, sumber, atau evidence.
+- Jika informasi belum cukup, gunakan DEFER.
+- Pertahankan provenance dan informasi asli SDK.
+
+## 7. Sistem batch
+
+Kerjakan dalam batch kecil:
+
+- 25 klaim per batch.
+- Total 65 batch.
+- Batch terakhir berisi 18 klaim.
+
+Urutan:
+1. Ambil 25 klaim PENDING berikutnya.
+2. Periksa setiap klaim.
+3. Tentukan APPROVE, REJECT, atau DEFER.
+4. Berikan alasan singkat.
+5. Simpan hasil review secara persisten.
+6. Validasi format keputusan.
+7. Lanjutkan ke batch berikutnya.
+
+Jangan mengulang klaim yang sudah memiliki keputusan final, kecuali memang diminta untuk meninjau ulang.
+
+Jika belum ada mekanisme penyimpanan keputusan yang persisten, implementasikan cara paling sederhana dan aman setelah memeriksa struktur repository. Gunakan ledger yang dapat dilanjutkan, mempertahankan stagingRecordId, keputusan, reviewer, tanggal, dan alasan singkat. Jangan mengubah data staging asli.
+
+Periksa juga agar keputusan tidak tercatat dua kali.
+
+## 8. Format hasil setiap klaim
+
+Simpan keputusan dalam format yang kompatibel dengan schema review Samantha.
+
+Contoh:
+
+{
+  "stagingRecordId": "exact-staging-id",
+  "decision": "APPROVE",
+  "reviewer": "ChatGPT",
+  "reviewedAt": "YYYY-MM-DD",
+  "note": "Klaim jelas dan relevan.",
+  "canonical": {
+    "claimId": "unique-samantha-claim-id",
+    "domain": "registered-domain-id",
+    "subject": "Claim subject",
+    "claim": "Clear claim text",
+    "classification": "OBJECTIVE",
+    "verificationStatus": "EXTERNAL-UNVERIFIED",
+    "sourceName": "TheTowerSDK",
+    "sourceType": "UNKNOWN"
+  }
+}
+
+Untuk REJECT dan DEFER, jangan membuat objek canonical.
+
+Gunakan ID dan informasi sumber yang benar-benar tersedia. Jangan mengarang data.
+
+## 9. Laporan setiap batch
+
+Jangan membuat laporan panjang.
+
+Cukup tampilkan:
+
+Batch: 1/65
+Reviewed: 25/1,618
+
+- APPROVE: jumlah
+- REJECT: jumlah
+- DEFER: jumlah
+
+Catatan:
+- Konflik penting.
+- Klaim yang membutuhkan pemeriksaan lanjutan.
+
+Tampilkan juga lokasi file penyimpanan hasil review dan status validasinya.
+
+## 10. Batas kewenangan
+
+ChatGPT boleh memberikan keputusan review tanpa meminta persetujuan saya untuk setiap klaim.
+
+Namun:
+- Keputusan review bukan berarti klaim sudah masuk ke GKB kanonis.
+- Controlled importer saat ini menghasilkan preview, bukan penulisan otomatis ke domain kanonis.
+- Jangan melakukan import final tanpa pemeriksaan hasil preview.
+- Jangan menghapus sumber asli.
+- Jangan mengubah branch stabil.
+
+## 11. Cara memulai
+
+Setelah memeriksa repository:
+
+1. Berikan laporan singkat mengenai kondisi Review Queue.
+2. Pastikan jumlah klaim yang masih PENDING.
+3. Pastikan mekanisme penyimpanan keputusan.
+4. Jika semuanya siap, langsung mulai Batch 1.
+5. Jangan meminta saya mengulang instruksi ini.
+6. Setelah Batch 1 selesai dan hasilnya tersimpan serta tervalidasi, lanjutkan secara bertahap.
+
+Prioritas utama adalah menyelesaikan 1.618 review dengan cara sederhana, konsisten, dapat dilanjutkan, dan aman.
+
+Jangan memperumit sistem. Jangan mengulang pembangunan fondasi GKB yang sudah selesai.
+
+**Mulai dari kondisi repository terakhir, bukan dari awal.**
