@@ -48,7 +48,8 @@ function collectRawOrigins(root) {
 
 /**
  * Intentionally conservative: only obvious string fields are exposed as
- * display hints. The complete source node remains unchanged in sourceRecord.
+ * display hints. Summary is a final fallback, not a verified claim.
+ * The complete source node remains unchanged in sourceRecord.
  */
 function getDisplayHints(node) {
   const subject = optionalString(node.subject) ??
@@ -58,7 +59,8 @@ function getDisplayHints(node) {
   const claim = optionalString(node.claim) ??
     optionalString(node.description) ??
     optionalString(node.text) ??
-    optionalString(node.content);
+    optionalString(node.content) ??
+    optionalString(node.summary);
   return { subject, claim };
 }
 
