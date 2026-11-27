@@ -36,3 +36,10 @@ Use this as one versioned third-party reference model. Do not promote it as a un
 - Conflict: `CNF-D04-DR-001`
 - Related claim: `CLM-D04-DR-002`
 - GKB staging decision: hold
+
+
+## Review completion — 2026-11-27
+
+- **SDK implementation verified; live-game mechanic not verified.** Rechecked applyDamageReduxLayerStack and its test in tests/mechanics/damage-redux-calculator.test.ts; the test asserts the emitted step keys and a numeric vector.
+- The SDK documents this as a sequential calculator breakdown. Its code also says multiplicative layers commute mathematically and native blocked-damage counters may overlap because they independently reference raw incoming damage.
+- This claim records the SDK calculator's step sequence, not native execution order or native counter semantics. Status remains VERIFIED (SDK implementation/test only). GKB: HOLD.
