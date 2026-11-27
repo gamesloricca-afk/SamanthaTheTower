@@ -42,3 +42,9 @@ The SDK helper defines a 25-second ILM mine lifetime and a 37-second cooldown fl
 ## Related claims
 
 - `CLM-D04-LM-001`
+
+
+## Review completion — 2026-11-27
+
+- **SDK helper, builder, and test expectation verified; native runtime not verified.** Rechecked the formula and gates in src/mechanics/modules/ilm-charge.ts: ILM+ active, positive Chrono Jump lab level, at least one ILM hit, and positive Charged Mines rate.
+- tests/builders/builders-drops.test.ts tests that Chrono Jump needs hits, ILM+ off contributes nothing, and mine age is capped at the model lifetime. The SDK defines a 25-second mine lifetime and 37-second cooldown floor. These remain SDK model constants without version-matched native confirmation. GKB: HOLD.
