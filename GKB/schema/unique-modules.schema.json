@@ -31,21 +31,23 @@
       "additionalProperties": false,
       "required": [
         "name",
-        "package",
-        "targetVersion",
+        "sdkPackage",
+        "sdkVersion",
         "sourceRef",
         "sourceFile",
-        "retrievedRef",
+        "sourceVersion",
+        "sourceRevision",
+        "retrievedAt",
         "versionCaveat"
       ],
       "properties": {
         "name": {
           "const": "TheTowerSDK"
         },
-        "package": {
+        "sdkPackage": {
           "const": "thetowersdk"
         },
-        "targetVersion": {
+        "sdkVersion": {
           "const": "0.14.1"
         },
         "sourceRef": {
@@ -55,8 +57,24 @@
         "sourceFile": {
           "type": "string"
         },
-        "retrievedRef": {
-          "type": "string"
+        "sourceVersion": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Version label of the inspected source, if one is available; not the SDK package version."
+        },
+        "sourceRevision": {
+          "type": "string",
+          "description": "Branch, tag, or commit reference inspected. A mutable branch is not an immutable source revision."
+        },
+        "retrievedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
         },
         "versionCaveat": {
           "type": "string"
