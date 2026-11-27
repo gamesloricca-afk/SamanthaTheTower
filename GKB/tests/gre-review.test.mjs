@@ -19,7 +19,7 @@ const approveLog=path.join(dir,'approved-preview.jsonl');
 assert.equal(summarizeGreReviewQueue(staging)[0].decision,'PENDING');
 appendGreReviewDecision({staging,logPath:approveLog,decision:{
   stagingRecordId:approvable.stagingId,decision:'APPROVE',reviewer:'synthetic-test-only',reviewedAt:'2026-11-27',
-  canonical:{claimId:'TEST-GRE-REVIEW-APPROVAL-001',domain:'combat-mechanics',subject:'Synthetic approval fixture',claim:'Synthetic claim used only to test the review CLI approval path.',classification:'OBJECTIVE',verificationStatus:'EXTERNAL-UNVERIFIED'}
+  canonical:{claimId:'TEST-GRE-REVIEW-APPROVAL-001',domain:'combat-mechanics',subject:'Synthetic approval fixture',claim:'Synthetic claim used only to test the review CLI approval path.',classification:'OBJECTIVE',verificationStatus:'EXTERNAL-UNVERIFIED',sourceTypeOverrides:{'SRC-SDK-THETOWERSDK-0141':'OTHER'}}
 }});
 assert.equal(JSON.parse(fs.readFileSync(approveLog,'utf8')).decision,'APPROVE','valid approval is appended only after canonical preview validation');
 assert.throws(()=>appendGreReviewDecision({staging,logPath:log,decision:{
