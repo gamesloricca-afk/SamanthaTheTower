@@ -135,7 +135,7 @@ export function buildIdentifierMappingReport({ graph, catalogs, sdkVersion, retr
     summary: {
       ...statusCounts,
       total: records.length,
-      mappedOrCandidateCount: records.filter(item => item.candidateCanonicalId !== null).length,
+      mappedOrCandidateCount: records.filter(item => item.candidateTargetId !== null).length,
       mappingApprovedCount: 0
     },
     records,
