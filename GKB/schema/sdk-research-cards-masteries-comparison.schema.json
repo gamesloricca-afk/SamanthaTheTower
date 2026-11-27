@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://samantha.invalid/gkb/schema/sdk-research-cards-masteries-comparison.schema.json",
+  "title": "Samantha GKB SDK Research Cards and Masteries Comparison Report",
+  "type": "object",
+  "required": [
+    "reportVersion",
+    "test",
+    "status",
+    "source",
+    "scope",
+    "summary",
+    "fieldComparison",
+    "exactIdentifierCandidates",
+    "exactNameCandidates",
+    "exactMasteryNameCandidates",
+    "ambiguousCandidates",
+    "findings",
+    "policy",
+    "limitations"
+  ],
+  "properties": {
+    "reportVersion": {
+      "const": "1.0.0"
+    },
+    "test": {
+      "const": "Samantha GKB SDK Research–Cards and Masteries Comparison"
+    },
+    "status": {
+      "const": "PASSED"
+    },
+    "source": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "scope": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "object"
+    },
+    "fieldComparison": {
+      "type": "object"
+    },
+    "exactIdentifierCandidates": {
+      "type": "array"
+    },
+    "exactNameCandidates": {
+      "type": "array"
+    },
+    "exactMasteryNameCandidates": {
+      "type": "array"
+    },
+    "ambiguousCandidates": {
+      "type": "object"
+    },
+    "findings": {
+      "type": "array"
+    },
+    "policy": {
+      "type": "object"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}
