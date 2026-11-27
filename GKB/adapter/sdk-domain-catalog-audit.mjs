@@ -46,6 +46,7 @@ export function buildSdkDomainCatalogAudit(staging) {
     const rawCounts = new Map();
     const fieldTypes = new Map();
     const fieldPresence = new Map();
+    const nestedPaths = new Map();
     let nonObjectRecords = 0;
     let missingId = 0;
     let missingLabel = 0;
@@ -66,10 +67,39 @@ export function buildSdkDomainCatalogAudit(staging) {
         add(catalog, 'NON_OBJECT_RECORD', 'ERROR', 'Raw catalog record is not an object.', { sourceIndex: entry.sourceIndex, actualType: valueType(raw) });
         return;
       }
+      const recordPaths = new Set();
+      const inspectNested = (value, fieldPath) => {
+        if (!nestedPaths.has(fieldPath)) nestedPaths.set(fieldPath, {
+          types: new Set(), objectShapes: new Map(), arrayLengths: new Set(),
+          numericValues: [], nullCount: 0, emptyStringCount: 0
+        });
+        const stats = nestedPaths.get(fieldPath);
+        stats.types.add(valueType(value));
+        recordPaths.add(fieldPath);
+        if (value === null) stats.nullCount++;
+        if (value === '') stats.emptyStringCount++;
+        if (typeof value === 'number' && Number.isFinite(value)) stats.numericValues.push(value);
+        if (Array.isArray(value)) {
+          stats.arrayLengths.add(value.length);
+          value.forEach(item => inspectNested(item, fieldPath + '[]'));
+        } else if (isObject(value)) {
+          const keys = Object.keys(value).sort();
+          const signature = JSON.stringify(keys);
+          stats.objectShapes.set(signature, [...(stats.objectShapes.get(signature) ?? []), entry.sourceIndex]);
+          for (const [key, child] of Object.entries(value)) {
+            inspectNested(child, fieldPath ? fieldPath + '.' + key : key);
+          }
+        }
+      };
       for (const [key, value] of Object.entries(raw)) {
         fieldPresence.set(key, (fieldPresence.get(key) ?? 0) + 1);
         if (!fieldTypes.has(key)) fieldTypes.set(key, new Set());
         fieldTypes.get(key).add(valueType(value));
+        inspectNested(value, key);
+      }
+      for (const fieldPath of recordPaths) {
+        const stats = nestedPaths.get(fieldPath);
+        stats.presentRecords = (stats.presentRecords ?? 0) + 1;
       }
       const id = fields.idField ? raw[fields.idField] : null;
       const label = raw[fields.labelField];
@@ -121,6 +151,40 @@ export function buildSdkDomainCatalogAudit(staging) {
       add(catalog, 'OBSERVED_KEYS_MISMATCH', 'WARNING', 'observedRecordKeys differs from keys found in raw records.', { declaredKeys: catalog.observedRecordKeys, actualKeys: observedKeys });
     }
 
+    const nestedFieldReports = [...nestedPaths].sort(([a], [b]) => a.localeCompare(b)).map(([fieldPath, stats]) => {
+      const numeric = stats.numericValues;
+      return {
+        path: fieldPath,
+        observedTypes: [...stats.types].sort(),
+        presentRecordCount: stats.presentRecords ?? 0,
+        absentRecordCount: catalog.records.length - (stats.presentRecords ?? 0),
+        nullCount: stats.nullCount,
+        emptyStringCount: stats.emptyStringCount,
+        arrayLengths: [...stats.arrayLengths].sort((a, b) => a - b),
+        objectKeyShapes: [...stats.objectShapes].map(([signature, sourceIndices]) => ({
+          keys: JSON.parse(signature), sourceIndices
+        })),
+        numericObservation: numeric.length ? {
+          count: numeric.length,
+          min: Math.min(...numeric),
+          max: Math.max(...numeric),
+          distinctCount: new Set(numeric).size
+        } : null
+      };
+    });
+    for (const item of nestedFieldReports) {
+      if (item.objectKeyShapes.length > 1) {
+        add(catalog, 'NESTED_OBJECT_SHAPE_VARIATION', 'INFO',
+          'Objects at this nested path expose different key sets; this is an observed structural variation, not an error.',
+          { path: item.path, objectKeyShapes: item.objectKeyShapes });
+      }
+      if (item.arrayLengths.length > 1) {
+        add(catalog, 'NESTED_ARRAY_LENGTH_VARIATION', 'INFO',
+          'Arrays at this nested path have different lengths; no expected length is assumed.',
+          { path: item.path, arrayLengths: item.arrayLengths });
+      }
+    }
+
     catalogReports.push({
       domain: catalog.domain,
       sourceRef: catalog.sourceRef,
@@ -135,6 +199,8 @@ export function buildSdkDomainCatalogAudit(staging) {
       exactDuplicateRecordGroups: exactDuplicates.length,
       sourceIndexProblems,
       fieldCount: fieldTypes.size,
+      nestedFieldCount: nestedFieldReports.length,
+      nestedFields: nestedFieldReports,
       fields: [...fieldTypes].sort(([a], [b]) => a.localeCompare(b)).map(([field, types]) => ({
         field, observedTypes: [...types].sort(), presentCount: fieldPresence.get(field),
         absentCount: catalog.records.length - (fieldPresence.get(field) ?? 0)
@@ -172,7 +238,8 @@ export function buildSdkDomainCatalogAudit(staging) {
       'Required identity fields are limited to the explicit SDK field mapping for each selected export.',
       'Repeated labels are observations, not proof of duplicate entities.',
       'Null and empty values are reported without assuming whether the field is optional.',
-      'No numerical game values, formulas, units, or mechanics are validated.',
+      'Numeric min/max values are descriptive observations only; no valid ranges, units, formulas, or mechanics are inferred.',
+      'Nested object key-set and array-length variations are reported as structural observations, not automatically as defects.',
       'All SDK records remain EXTERNAL-UNVERIFIED.'
     ]
   };
