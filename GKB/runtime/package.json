@@ -21,7 +21,9 @@
     "test:sdk-assertion-staging": "node ../tests/sdk-assertion-staging.test.mjs",
     "stage:sdk-assertions": "node ../adapter/sdk-assertion-staging.mjs",
     "test:sdk-edge-staging": "node ../tests/sdk-edge-staging.test.mjs",
-    "stage:sdk-edges": "node ../adapter/sdk-edge-staging.mjs"
+    "stage:sdk-edges": "node ../adapter/sdk-edge-staging.mjs",
+    "test:sdk-contradiction-staging": "node ../tests/sdk-contradiction-staging.test.mjs",
+    "stage:sdk-contradictions": "node ../adapter/sdk-contradiction-staging.mjs"
   },
   "dependencies": {
     "ajv": "8.17.1",
