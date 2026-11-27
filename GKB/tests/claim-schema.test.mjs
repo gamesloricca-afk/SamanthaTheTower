@@ -47,7 +47,7 @@ assert.equal(validate(relationship), true, JSON.stringify(validate.errors));
 console.log(JSON.stringify({
   test: 'Samantha GKB Canonical Claim Schema',
   status: 'PASSED',
-  cases: 11,
+  cases: 13,
   supportedVerificationStatuses: 6,
   unknownFieldsPreserved: true
 }, null, 2));
