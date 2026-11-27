@@ -15,6 +15,24 @@ This directory is reserved for reviewer-authored GRE decisions. The generated st
    ```
 
 4. For `APPROVE`, supply a complete canonical mapping JSON as the final CLI argument. The CLI validates the canonical preview against the existing GKB claim schema before appending the decision. An approval creates no canonical file.
+   
+   Reviewer-authored source attribution overrides belong inside that canonical JSON as `sourceTypeOverrides`, keyed by the exact source IDs:
+   
+   ```json
+   {
+     "claimId": "YOUR-CANONICAL-ID",
+     "domain": "combat-mechanics",
+     "subject": "Reviewed subject",
+     "claim": "Reviewer-authored claim wording",
+     "classification": "OBJECTIVE",
+     "verificationStatus": "EXTERNAL-UNVERIFIED",
+     "sourceTypeOverrides": {
+       "SRC-SDK-THETOWERSDK-0141": "OTHER"
+     }
+   }
+   ```
+   
+   For a claim linked to a GRE conflict, include `conflict` with the exact source conflict ID, all linked GRE claim IDs in `relatedClaimIds`, and its current status. An open source conflict must remain `OPEN` in the preview.
 5. Commit the append-only `decisions.jsonl` to the integration branch so the reviewer, date, note, and each decision revision remain traceable in Git history.
 
 ## Decision log rules
