@@ -683,6 +683,27 @@ export function runSelfTest() {
     }
   }
 
+  const uninspectedTypescriptReport = analyzeOriginCompatibility({
+    sdkPackage: EXPECTED_SDK_PACKAGE,
+    sdkVersion: EXPECTED_SDK_VERSION,
+    graph,
+    schema,
+    typescriptOrigins: null,
+    sourceReference: 'synthetic-typescript-not-inspected',
+  });
+
+  if (
+    uninspectedTypescriptReport.compatibility.typescriptInspectionStatus !==
+      'NOT_INSPECTED' ||
+    uninspectedTypescriptReport.compatibility.conflicts.some(
+      conflict => conflict.id.includes('TYPESCRIPT')
+    )
+  ) {
+    throw new Error(
+      'Self-test failed: uninspected TypeScript origins were treated as a conflict'
+    );
+  }
+
   const invalidReport = analyzeOriginCompatibility({
     sdkPackage: EXPECTED_SDK_PACKAGE,
     sdkVersion: EXPECTED_SDK_VERSION,
