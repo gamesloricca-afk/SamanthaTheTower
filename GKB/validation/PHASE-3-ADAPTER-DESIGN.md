@@ -150,6 +150,31 @@ Actual staging counts:
 
 The assertion `claimPreview` is a deterministic display hint (`predicate = JSON.stringify(value)`), not a canonical natural-language claim. No source assertion was rewritten or promoted.
 
+## Edge staging implementation
+
+Added:
+- `GKB/schema/sdk-edge-staging.schema.json`
+- `GKB/adapter/sdk-edge-staging.mjs`
+- `GKB/tests/sdk-edge-staging.test.mjs`
+- Runtime commands `test:sdk-edge-staging` and `stage:sdk-edges`
+- CI artifact path for `GKB/staging/sdk-edges.json`
+
+The synthetic edge adapter test passed 24 cases. It checks all eight explicit SDK-to-Samantha relationship-name mappings, endpoint linking, unknown-kind preservation, unresolved endpoints, source preservation, and no canonical relationship promotion.
+
+The actual pinned graph edge staging passed in GitHub Actions run:
+- https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45938592716
+
+Actual edge staging:
+- 396 source edges.
+- 396 edge envelopes generated and schema-validated.
+- All 396 endpoints linked to parent node staging IDs.
+- All eight SDK edge kinds mapped by exact name conversion only.
+- Edge source origins: code 244, wiki 150, user 2.
+- Every edge remains `EXTERNAL-UNVERIFIED`; every mapped relationship is a candidate only.
+- No canonical GKB relationship was created.
+
+The relationship mapping is syntactic and reversible. It does not assert that the underlying mechanic is true or that the SDK edge is correctly modeled.
+
 ## Safety boundary
 
 Phase 3 starts with deterministic staging and reports only. The canonical claim schema remains unchanged unless a demonstrated schema gap requires a separate review. Do not overwrite the unique-module catalog, repair SDK graph data, decrypt saves, or import player-specific records.
