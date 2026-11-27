@@ -13,7 +13,7 @@ const snapshot=path.resolve(here,'../staging/gre-source-snapshot/TestAccount-62a
 const a=buildGreStaging({snapshotDir:snapshot,retrievedAt:'2026-11-27'});
 const b=buildGreStaging({snapshotDir:snapshot,retrievedAt:'2026-11-27'});
 
-assert.equal(a.report.status,'STAGED');
+assert.equal(a.report.status,'STAGED',JSON.stringify(a.report,null,2));
 const envelope={format:a.format,formatVersion:a.formatVersion,sourceSnapshot:a.sourceSnapshot,sources:a.sources,records:a.records};
 assert.equal(validateEnvelope(envelope),true,JSON.stringify(validateEnvelope.errors));
 assert.equal(a.report.counts.claimsParsed,12);
