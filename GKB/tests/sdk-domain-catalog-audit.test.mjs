@@ -7,6 +7,9 @@ const staging = { source: { sdkVersion: '0.14.1' }, catalogs: [
     { sourceIndex: 1, rawRecord: { slug: 'lab.a', name: 'Damage II', value: '2' } },
     { sourceIndex: 2, rawRecord: { slug: 'lab.c', name: 'Damage', value: null, extra: true } }
   ]},
+  { domain: 'Workshop', sourceRef: 'sdk/data#WORKSHOP', recordCount: 1, observedRecordKeys: ['key','label'], records: [
+    { sourceIndex: 0, rawRecord: { key: 'workshop.damage', label: 'Damage' } }
+  ]},
   { domain: 'Perks', sourceRef: 'sdk/data#ALL_PERKS', recordCount: 2, observedRecordKeys: ['perk','pool'], records: [
     { sourceIndex: 0, rawRecord: { perk: 'Health', pool: 'standard' } },
     { sourceIndex: 1, rawRecord: { perk: 'Health', pool: 'tradeoff' } }
@@ -14,7 +17,7 @@ const staging = { source: { sdkVersion: '0.14.1' }, catalogs: [
 ]};
 const report = buildSdkDomainCatalogAudit(staging);
 assert.equal(report.status, 'PASSED');
-assert.equal(report.scope.totalRecords, 5);
+assert.equal(report.scope.totalRecords, 6);
 const research = report.summary.catalogReports[0];
 assert.equal(research.duplicateSourceIdGroups, 1);
 assert.equal(research.repeatedLabelGroups, 1);
@@ -27,10 +30,15 @@ const perks = report.summary.catalogReports[1];
 assert.equal(perks.idField, null);
 assert.equal(perks.missingId, 0);
 assert.equal(perks.repeatedLabelGroups, 1);
+assert.equal(report.summary.crossDomainLabelGroups.length, 1);
+assert.equal(report.summary.crossDomainLabelGroups[0].label, 'Damage');
+assert.ok(report.findings.some(item => item.code === 'CROSS_DOMAIN_LABEL_COLLISION'));
+assert.ok(report.findings.some(item => item.code === 'DUPLICATE_SOURCE_ID'));
+assert.equal(report.policy.valuesNormalized, false);
 assert.throws(() => buildSdkDomainCatalogAudit({ catalogs: null }), /catalogs must be an array/);
 assert.throws(() => buildSdkDomainCatalogAudit({ catalogs: [{ domain: 'Unknown', records: [] }] }), /No explicit field audit mapping/);
 const broken = structuredClone(staging);
 broken.catalogs[0].records[0].rawRecord = null;
 const brokenReport = buildSdkDomainCatalogAudit(broken);
 assert.ok(brokenReport.findings.some(item => item.code === 'NON_OBJECT_RECORD'));
-console.log(JSON.stringify({ test: 'Samantha GKB SDK Domain Catalog Structural Audit', status: 'PASSED', cases: 14 }, null, 2));
+console.log(JSON.stringify({ test: 'Samantha GKB SDK Domain Catalog Structural Audit', status: 'PASSED', cases: 17 }, null, 2));
