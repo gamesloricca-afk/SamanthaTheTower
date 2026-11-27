@@ -36,7 +36,7 @@ for(const record of a.records){
   assert.ok(record.sourceRecord.rawMarkdown.length>0);
 }
 const sdkClaim=a.records.find(x=>x.sourceClaimId==='CLM-D04-DR-001');
-assert.equal(sdkClaim.sourceVerificationLabel,'VERIFIED (source-code statement only; not verified as live-game behavior)');
+assert.equal(sdkClaim.sourceVerificationLabel,'`VERIFIED` (source-code statement only; not verified as live-game behavior)');
 assert.equal(sdkClaim.sourceGameVersion,'UNKNOWN');
 assert.equal(sdkClaim.sourceSdkVersion,'`thetowersdk@0.14.1`');
 assert.equal(sdkClaim.domainCandidate,'combat-mechanics');
