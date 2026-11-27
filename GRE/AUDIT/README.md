@@ -45,3 +45,5 @@ See [00_repository_and_source_audit.md](00_repository_and_source_audit.md), [01_
 - Domain 09 findings 601–700: AssistModuleSlot data model, declared efficiency limits and conversion/cost APIs, unlock/equip/respec interfaces, Assist UI fields and handlers, and primary/assist slot-level spend and migration interfaces. See [17_domain_09_modules_assist_progression_ui_slot_accounting.md](17_domain_09_modules_assist_progression_ui_slot_accounting.md).
 
 All Domain 09 findings 31–700 are structural observations from direct metadata declarations, not verified runtime mechanics. Decoded constant values remain candidates only.
+
+- Domain 09 findings 701–900: deliberately skipped because the complete `GRE/1/09_modules.json` content could not be read through the repository connector. This is an access limitation, not evidence that the source is empty or that no declarations exist. No findings or GKB claims were fabricated for this range. See [18_domain_09_modules_findings_701-900_source_gap.md](18_domain_09_modules_findings_701-900_source_gap.md).
