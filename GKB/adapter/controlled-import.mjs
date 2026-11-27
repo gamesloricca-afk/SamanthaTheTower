@@ -8,12 +8,21 @@ function validDate(v){return typeof v==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(v)&
 export function importReviewedBatch({stagingRecords,decisions,maxBatchSize=25}){
  if(!Array.isArray(stagingRecords)||!Array.isArray(decisions))throw new TypeError('stagingRecords and decisions must be arrays');
  if(!Number.isInteger(maxBatchSize)||maxBatchSize<1||maxBatchSize>25)throw new RangeError('maxBatchSize must be 1..25');
- const decisionIds=new Set(),approved=decisions.filter(x=>x.decision==='APPROVE'),byId=new Map(stagingRecords.map(x=>[x.stagingId??x.stagingRecordId,x]));
+ const byId=new Map();
+ for(const record of stagingRecords){
+  const id=record?.stagingId??record?.stagingRecordId;
+  if(typeof id!=='string'||!id)throw new TypeError('Every staging record must have a non-empty staging ID');
+  if(byId.has(id))throw new Error('Duplicate staging record ID: '+id);
+  byId.set(id,record);
+ }
+ const decisionIds=new Set(),approved=decisions.filter(x=>x?.decision==='APPROVE');
  for(const item of decisions){
+  if(!item||typeof item!=='object'||Array.isArray(item))throw new TypeError('Each review decision must be an object');
   if(!['APPROVE','REJECT','DEFER'].includes(item.decision))throw new TypeError('decision must be APPROVE, REJECT, or DEFER');
   if(typeof item.stagingRecordId!=='string'||!item.stagingRecordId)throw new TypeError('stagingRecordId is required');
   if(decisionIds.has(item.stagingRecordId))throw new Error('Duplicate decision for stagingRecordId: '+item.stagingRecordId);
   decisionIds.add(item.stagingRecordId);
+  if(!byId.has(item.stagingRecordId))throw new Error('Staging record not found: '+item.stagingRecordId);
   if(typeof item.reviewer!=='string'||!item.reviewer.trim())throw new TypeError('reviewer is required');
   if(!validDate(item.reviewedAt))throw new TypeError('reviewedAt must be a valid YYYY-MM-DD date');
  }

@@ -18,6 +18,9 @@ assert.equal(imported.importedCount,1); assert.equal(imported.claims[0].verifica
 assert.equal(imported.claims[0].provenance[0].sdkVersion,'0.14.1');
 assert.equal(imported.claims[0].sourceRecord.reviewDecision.reviewer,'test-reviewer');
 assert.throws(()=>importReviewedBatch({stagingRecords:staged,decisions:Array.from({length:26},(_,i)=>({...decision,stagingRecordId:`stage-${i}`,canonical:{...decision.canonical,claimId:`GKB-${i}`}}))}),/exceeds limit/);
+assert.throws(()=>importReviewedBatch({stagingRecords:staged,decisions:[{...deferred,stagingRecordId:'missing-stage'}]}),/Staging record not found/);
+const duplicateStage=[...staged,{...staged[0]}];
+assert.throws(()=>importReviewedBatch({stagingRecords:duplicateStage,decisions:[decision]}),/Duplicate staging record ID/);
 const twoStaged=[...staged,{...staged[0],stagingId:'stage-2'}];
 assert.throws(()=>importReviewedBatch({stagingRecords:twoStaged,decisions:[decision,{...decision,stagingRecordId:'stage-2'}]}),/Duplicate canonical claimId/);
 assert.throws(()=>importReviewedBatch({stagingRecords:staged,decisions:[{...decision,reviewer:''}]}),/reviewer is required/);
@@ -49,4 +52,4 @@ try {
  assert.equal(migrated.comparisonAlgorithm,'LEGACY_RAW_SHA256_V0');
  assert.ok(migrated.files[0].objectPath); assert.ok(!fs.existsSync(path.join(legacyDir,'sdk-assertions.json')));
 } finally {fs.rmSync(tmp,{recursive:true,force:true});}
-console.log(JSON.stringify({test:'Samantha GKB Phase 3A-3E pipeline',status:'PASSED',cases:18,contentAddressedStorage:true,legacySnapshotMigration:true,stableCrossRunComparison:true,explicitReview:true,canonicalDomainEnforced:true,controlledBatchLimit:25,canonicalImportOnlyAfterApproval:true,automaticVerificationPromotion:false},null,2));
+console.log(JSON.stringify({test:'Samantha GKB Phase 3A-3E pipeline',status:'PASSED',cases:20,contentAddressedStorage:true,legacySnapshotMigration:true,stableCrossRunComparison:true,explicitReview:true,canonicalDomainEnforced:true,controlledBatchLimit:25,canonicalImportOnlyAfterApproval:true,automaticVerificationPromotion:false},null,2));

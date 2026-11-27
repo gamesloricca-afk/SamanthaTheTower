@@ -3,7 +3,7 @@
   "$id":"https://samantha.invalid/gkb/schema/review-decision.schema.json",
   "title":"Samantha GKB explicit review decision",
   "type":"object",
-  "required":["stagingRecordId","decision","reviewer","reviewedAt","canonical"],
+  "required":["stagingRecordId","decision","reviewer","reviewedAt"],
   "properties":{
     "stagingRecordId":{"type":"string","minLength":1},
     "decision":{"enum":["APPROVE","REJECT","DEFER"]},
@@ -29,5 +29,9 @@
       "additionalProperties":true
     }
   },
+  "allOf":[{
+    "if":{"properties":{"decision":{"const":"APPROVE"}},"required":["decision"]},
+    "then":{"required":["canonical"]}
+  }],
   "additionalProperties":true
 }

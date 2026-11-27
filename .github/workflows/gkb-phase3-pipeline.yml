@@ -45,6 +45,7 @@ jobs:
           npm run test:reviewed-assertion-normalizer
           npm run test:source-comparison
           npm run test:canonical-domain-registry
+          npm run test:review-decision-schema
           npm run test:phase-3
       - name: Generate SDK staging outputs
         working-directory: GKB/runtime
