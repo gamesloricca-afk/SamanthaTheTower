@@ -175,6 +175,37 @@ Actual edge staging:
 
 The relationship mapping is syntactic and reversible. It does not assert that the underlying mechanic is true or that the SDK edge is correctly modeled.
 
+## Contradiction staging implementation
+
+Added:
+- `GKB/schema/sdk-contradiction-staging.schema.json`
+- `GKB/adapter/sdk-contradiction-staging.mjs`
+- `GKB/tests/sdk-contradiction-staging.test.mjs`
+- Runtime commands `test:sdk-contradiction-staging` and `stage:sdk-contradictions`
+- CI artifact path for `GKB/staging/sdk-contradictions.json`
+
+The synthetic contradiction adapter test passed 22 cases. It verifies that source claims, `likelyValue`, `authorityRank`, cross-source metadata, and unknown analysis fields are preserved without resolving a conflict.
+
+The actual pinned graph contains 3 SDK contradiction analyses, which produced 3 staging envelopes containing 6 source claims:
+- Source origins: code 3, wiki 3.
+- `likelyValue` is preserved as SDK hint metadata only.
+- `authorityRank` is preserved but never used to choose Samantha's winner.
+- All records remain `UNRESOLVED`, `EXTERNAL-UNVERIFIED`, and `PENDING_REVIEW`.
+- No canonical conflict group or GKB claim was created.
+
+Example of one SDK conflict (preserved as two separate source claims):
+- Subject: `module.subEffect.slot8`
+- Predicate: `opensAtLevel`
+- SDK code-origin claim: value `241`, authorityRank `2`.
+- SDK wiki-origin claim: value `242`, authorityRank `5`.
+- SDK `likelyValue`: `241`.
+
+Samantha does not select 241 over 242. Both source reports remain available for display and later review.
+
+GitHub Actions run:
+- https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45938802821
+- Result: SUCCESS, including all staging tests, generation steps, and staging artifact upload.
+
 ## Safety boundary
 
 Phase 3 starts with deterministic staging and reports only. The canonical claim schema remains unchanged unless a demonstrated schema gap requires a separate review. Do not overwrite the unique-module catalog, repair SDK graph data, decrypt saves, or import player-specific records.
