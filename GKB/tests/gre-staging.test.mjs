@@ -91,7 +91,7 @@ fs.cpSync(snapshot,wrongManifest,{recursive:true});
 const manifestPath=path.join(wrongManifest,'snapshot-manifest.json');
 const manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
 manifest.commit='0000000000000000000000000000000000000000';
-fs.writeFileSync(manifestPath,JSON.stringify(manifest,null,2)+'\\n');
+fs.writeFileSync(manifestPath,JSON.stringify(manifest,null,2)+'\n');
 assert.throws(()=>buildGreStaging({snapshotDir:wrongManifest,retrievedAt:'2026-11-27'}),/manifest identity mismatch/);
 assert.throws(()=>buildGreStaging({snapshotDir:snapshot,retrievedAt:'2026-02-30'}),/real YYYY-MM-DD date/);
 fs.rmSync(tamperDir,{recursive:true,force:true});
