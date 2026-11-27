@@ -123,37 +123,24 @@ Consequently, this package alone cannot establish:
 | GRE-A07 | Experimental/community label does not establish community provenance | OPEN | Record actual evidence origin separately |
 | GRE-A08 | TestAccount and GKB are heavily diverged | OPEN | Keep work on TestAccount; inspect merge base and conflicts before promotion |
 
-## 8. Next audit sequence
+## 8. Corrected completion status
 
-Proceed in this order, preserving one report per domain and then a cross-domain pass:
+The later domain reports 22, 24, 29–46 and cross-domain reports 47–48 supersede the original sequencing plan above. All 20 numbered domains now have complete structural inventory reports.
 
-1. 01 Game Fundamentals
-2. 02 Enemies
-3. 03 Battle Conditions
-4. 04 Combat Mechanics
-5. 05 Ultimate Weapons
-6. 06 Workshop
-7. 07 Workshop Enhancements
-8. 08 Research
-9. 09 Modules
-10. 10 Cards and Masteries
-11. 11 Bots
-12. 12 Guardians
-13. 13 Perks
-14. 14 Relics
-15. 15 Vault
-16. 16 Economy and Progression
-17. 17 Formulas and Calculations
-18. 18 Strategy Interactions
-19. 19 Version History / Save and Migration
-20. 20 Experimental In-client Features
+- **Phase 0 — repository and branch safety: COMPLETE.**
+- **Phase 1 — package and manifest structural inventory: COMPLETE WITH SOURCE LIMITATIONS.**
+- **Phase 2 — Domain 01–20 structural inventories: COMPLETE.**
+- **Phase 3 — cross-domain declaration consistency and selected relationship map: COMPLETE FOR THE CHECKED COMPARISONS.**
+- **Runtime/mechanic verification: INCOMPLETE / SOURCE-LIMITED.** Native method bodies, call graph, serialized assets, and remote configuration are absent.
+- **External fanmade-source comparison: NOT PERFORMED.**
+- **GKB promotion: NOT PERFORMED.**
 
-For each domain: inspect the complete JSON and Markdown, verify the JSON structure and type references, separate declarations from decoded candidates, identify compiler-generated artifacts, cross-check related domains, and record unknowns without filling gaps from assumptions.
+See [51_gre_package_structural_audit_closure.md](51_gre_package_structural_audit_closure.md) for the consolidated domain matrix, corrected status, and residual gaps.
 
-## 9. Completion status
+## 9. Final disposition
 
-**Phase 0: COMPLETE.** Branch safety and source identity recorded.
+The GRE structural audit is closed for the checked-in package: all 20 domain exports and their structural inventories are accounted for, and the cross-domain declaration checks are documented. This does **not** mean all game mechanics have been reverse-engineered or verified.
 
-**Phase 1: PARTIAL.** Package-wide structural pass complete; detailed field/method/type-by-type validation is still pending.
+The original binary is not present for independent re-hashing; metadata version 39 is not a game release version; decoded values remain candidates until their types, units, and use sites are established; and method names do not prove runtime behavior.
 
-**Domain audit 01–20: NOT COMPLETE.** No domain claim is being promoted to Samantha GKB in this phase.
+Original GRE files remain unchanged. No claims or relationships were promoted to GKB. The `GKB` and `main` branches were not modified by this closure update.
