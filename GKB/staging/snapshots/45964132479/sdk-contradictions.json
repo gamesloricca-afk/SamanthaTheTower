@@ -1,0 +1,351 @@
+{
+  "generatedAt": "2026-11-27T08:14:38.410Z",
+  "report": {
+    "test": "Samantha GKB SDK Contradiction Staging",
+    "adapterVersion": "1.0.0",
+    "status": "PASSED",
+    "sdkVersion": "0.14.1",
+    "registryVersion": "1.0.0",
+    "retrievedAt": "2026-11-27",
+    "sdkContradictionCount": 3,
+    "graphContradictionRecordCount": 3,
+    "stagedRecordCount": 3,
+    "sourceClaimCount": 6,
+    "originCounts": {
+      "code": 3,
+      "wiki": 3
+    },
+    "likelyValuePreserved": true,
+    "likelyValueUsedAsWinner": false,
+    "authorityRankPreservedOnly": true,
+    "conflictResolved": false,
+    "canonicalConflictCreated": false,
+    "gkbImportPerformed": false
+  },
+  "records": [
+    {
+      "stagingVersion": "1.0.0",
+      "stagingId": "sdk-graph-contradiction-000001",
+      "recordKind": "SDK_CONTRADICTION_ENVELOPE",
+      "sourceContradictionIndex": 0,
+      "sourceSubject": "module.subEffect.slot8",
+      "sourcePredicate": "opensAtLevel",
+      "sourceLikelyValue": 241,
+      "sourceClaims": [
+        {
+          "value": 241,
+          "origin": "code",
+          "ref": "SDK reference model; independent validation not recorded",
+          "verifiedAt": "2026-10-15",
+          "authorityRank": 2
+        },
+        {
+          "value": 242,
+          "origin": "wiki",
+          "ref": "The Tower: Early Game Tower Guide (community, 2026-08)",
+          "verifiedAt": "2026-08-18",
+          "authorityRank": 5
+        }
+      ],
+      "sourceClaimCount": 2,
+      "sourceCrossSource": true,
+      "likelyValueTreatment": "SDK_HINT_ONLY_NOT_FACTUAL_WINNER",
+      "conflictStatus": "UNRESOLVED",
+      "verificationStatus": "EXTERNAL-UNVERIFIED",
+      "reviewStatus": "PENDING_REVIEW",
+      "provenance": {
+        "sourceId": "sdk-knowledge-graph",
+        "sourceName": "TheTowerSDK Knowledge Graph",
+        "sourceReference": "thetowersdk/knowledge-graph.json",
+        "sdkPackage": "thetowersdk",
+        "sdkVersion": "0.14.1",
+        "registryVersion": "1.0.0",
+        "sdkGraphVersion": 3,
+        "sdkSchemaVersion": 1,
+        "sdkGraphGeneratedFor": "2026-10-15",
+        "retrievedAt": "2026-11-27",
+        "rawOrigins": [
+          {
+            "path": "$[0].origin",
+            "value": "code"
+          },
+          {
+            "path": "$[1].origin",
+            "value": "wiki"
+          }
+        ],
+        "originMappingStatus": "UNMAPPED_REQUIRES_REVIEW"
+      },
+      "sourceRecord": {
+        "graphRecord": {
+          "subject": "module.subEffect.slot8",
+          "predicate": "opensAtLevel",
+          "claims": [
+            {
+              "value": 241,
+              "origin": "code",
+              "ref": "SDK reference model; independent validation not recorded",
+              "verifiedAt": "2026-10-15",
+              "authorityRank": 2
+            },
+            {
+              "value": 242,
+              "origin": "wiki",
+              "ref": "The Tower: Early Game Tower Guide (community, 2026-08)",
+              "verifiedAt": "2026-08-18",
+              "authorityRank": 5
+            }
+          ],
+          "likelyValue": 241,
+          "crossSource": true
+        },
+        "sdkAnalysis": {
+          "subject": "module.subEffect.slot8",
+          "predicate": "opensAtLevel",
+          "claims": [
+            {
+              "value": 241,
+              "origin": "code",
+              "ref": "SDK reference model; independent validation not recorded",
+              "verifiedAt": "2026-10-15",
+              "authorityRank": 2
+            },
+            {
+              "value": 242,
+              "origin": "wiki",
+              "ref": "The Tower: Early Game Tower Guide (community, 2026-08)",
+              "verifiedAt": "2026-08-18",
+              "authorityRank": 5
+            }
+          ],
+          "likelyValue": 241,
+          "crossSource": true
+        }
+      },
+      "limitations": [
+        "SDK contradiction staging only; not a canonical GKB conflict record.",
+        "SDK likelyValue and authorityRank are preserved as SDK analysis metadata only.",
+        "No likelyValue is selected as a factual winner.",
+        "Source-specific claims remain separate and unverified.",
+        "No Samantha conflict status is resolved automatically.",
+        "No canonical claim or conflict group is created."
+      ]
+    },
+    {
+      "stagingVersion": "1.0.0",
+      "stagingId": "sdk-graph-contradiction-000002",
+      "recordKind": "SDK_CONTRADICTION_ENVELOPE",
+      "sourceContradictionIndex": 1,
+      "sourceSubject": "perk.perkWaveRequirement",
+      "sourcePredicate": "appliedAs",
+      "sourceLikelyValue": "multiply",
+      "sourceClaims": [
+        {
+          "value": "multiply",
+          "origin": "code",
+          "ref": "SDK reference model; independent validation not recorded",
+          "verifiedAt": "2026-10-15",
+          "authorityRank": 2
+        },
+        {
+          "value": "add",
+          "origin": "wiki",
+          "ref": "Perks",
+          "verifiedAt": "2026-08-16",
+          "authorityRank": 5
+        }
+      ],
+      "sourceClaimCount": 2,
+      "sourceCrossSource": true,
+      "likelyValueTreatment": "SDK_HINT_ONLY_NOT_FACTUAL_WINNER",
+      "conflictStatus": "UNRESOLVED",
+      "verificationStatus": "EXTERNAL-UNVERIFIED",
+      "reviewStatus": "PENDING_REVIEW",
+      "provenance": {
+        "sourceId": "sdk-knowledge-graph",
+        "sourceName": "TheTowerSDK Knowledge Graph",
+        "sourceReference": "thetowersdk/knowledge-graph.json",
+        "sdkPackage": "thetowersdk",
+        "sdkVersion": "0.14.1",
+        "registryVersion": "1.0.0",
+        "sdkGraphVersion": 3,
+        "sdkSchemaVersion": 1,
+        "sdkGraphGeneratedFor": "2026-10-15",
+        "retrievedAt": "2026-11-27",
+        "rawOrigins": [
+          {
+            "path": "$[0].origin",
+            "value": "code"
+          },
+          {
+            "path": "$[1].origin",
+            "value": "wiki"
+          }
+        ],
+        "originMappingStatus": "UNMAPPED_REQUIRES_REVIEW"
+      },
+      "sourceRecord": {
+        "graphRecord": {
+          "subject": "perk.perkWaveRequirement",
+          "predicate": "appliedAs",
+          "claims": [
+            {
+              "value": "multiply",
+              "origin": "code",
+              "ref": "SDK reference model; independent validation not recorded",
+              "verifiedAt": "2026-10-15",
+              "authorityRank": 2
+            },
+            {
+              "value": "add",
+              "origin": "wiki",
+              "ref": "Perks",
+              "verifiedAt": "2026-08-16",
+              "authorityRank": 5
+            }
+          ],
+          "likelyValue": "multiply",
+          "crossSource": true
+        },
+        "sdkAnalysis": {
+          "subject": "perk.perkWaveRequirement",
+          "predicate": "appliedAs",
+          "claims": [
+            {
+              "value": "multiply",
+              "origin": "code",
+              "ref": "SDK reference model; independent validation not recorded",
+              "verifiedAt": "2026-10-15",
+              "authorityRank": 2
+            },
+            {
+              "value": "add",
+              "origin": "wiki",
+              "ref": "Perks",
+              "verifiedAt": "2026-08-16",
+              "authorityRank": 5
+            }
+          ],
+          "likelyValue": "multiply",
+          "crossSource": true
+        }
+      },
+      "limitations": [
+        "SDK contradiction staging only; not a canonical GKB conflict record.",
+        "SDK likelyValue and authorityRank are preserved as SDK analysis metadata only.",
+        "No likelyValue is selected as a factual winner.",
+        "Source-specific claims remain separate and unverified.",
+        "No Samantha conflict status is resolved automatically.",
+        "No canonical claim or conflict group is created."
+      ]
+    },
+    {
+      "stagingVersion": "1.0.0",
+      "stagingId": "sdk-graph-contradiction-000003",
+      "recordKind": "SDK_CONTRADICTION_ENVELOPE",
+      "sourceContradictionIndex": 2,
+      "sourceSubject": "thorns",
+      "sourcePredicate": "protectorPenaltyPercent",
+      "sourceLikelyValue": 30,
+      "sourceClaims": [
+        {
+          "value": 30,
+          "origin": "code",
+          "ref": "SDK reference model; independent validation not recorded",
+          "verifiedAt": "2026-10-15",
+          "authorityRank": 2
+        },
+        {
+          "value": 60,
+          "origin": "wiki",
+          "ref": "Thorn Damage",
+          "verifiedAt": "2026-08-16",
+          "authorityRank": 5
+        }
+      ],
+      "sourceClaimCount": 2,
+      "sourceCrossSource": true,
+      "likelyValueTreatment": "SDK_HINT_ONLY_NOT_FACTUAL_WINNER",
+      "conflictStatus": "UNRESOLVED",
+      "verificationStatus": "EXTERNAL-UNVERIFIED",
+      "reviewStatus": "PENDING_REVIEW",
+      "provenance": {
+        "sourceId": "sdk-knowledge-graph",
+        "sourceName": "TheTowerSDK Knowledge Graph",
+        "sourceReference": "thetowersdk/knowledge-graph.json",
+        "sdkPackage": "thetowersdk",
+        "sdkVersion": "0.14.1",
+        "registryVersion": "1.0.0",
+        "sdkGraphVersion": 3,
+        "sdkSchemaVersion": 1,
+        "sdkGraphGeneratedFor": "2026-10-15",
+        "retrievedAt": "2026-11-27",
+        "rawOrigins": [
+          {
+            "path": "$[0].origin",
+            "value": "code"
+          },
+          {
+            "path": "$[1].origin",
+            "value": "wiki"
+          }
+        ],
+        "originMappingStatus": "UNMAPPED_REQUIRES_REVIEW"
+      },
+      "sourceRecord": {
+        "graphRecord": {
+          "subject": "thorns",
+          "predicate": "protectorPenaltyPercent",
+          "claims": [
+            {
+              "value": 30,
+              "origin": "code",
+              "ref": "SDK reference model; independent validation not recorded",
+              "verifiedAt": "2026-10-15",
+              "authorityRank": 2
+            },
+            {
+              "value": 60,
+              "origin": "wiki",
+              "ref": "Thorn Damage",
+              "verifiedAt": "2026-08-16",
+              "authorityRank": 5
+            }
+          ],
+          "likelyValue": 30,
+          "crossSource": true
+        },
+        "sdkAnalysis": {
+          "subject": "thorns",
+          "predicate": "protectorPenaltyPercent",
+          "claims": [
+            {
+              "value": 30,
+              "origin": "code",
+              "ref": "SDK reference model; independent validation not recorded",
+              "verifiedAt": "2026-10-15",
+              "authorityRank": 2
+            },
+            {
+              "value": 60,
+              "origin": "wiki",
+              "ref": "Thorn Damage",
+              "verifiedAt": "2026-08-16",
+              "authorityRank": 5
+            }
+          ],
+          "likelyValue": 30,
+          "crossSource": true
+        }
+      },
+      "limitations": [
+        "SDK contradiction staging only; not a canonical GKB conflict record.",
+        "SDK likelyValue and authorityRank are preserved as SDK analysis metadata only.",
+        "No likelyValue is selected as a factual winner.",
+        "Source-specific claims remain separate and unverified.",
+        "No Samantha conflict status is resolved automatically.",
+        "No canonical claim or conflict group is created."
+      ]
+    }
+  ]
+}
