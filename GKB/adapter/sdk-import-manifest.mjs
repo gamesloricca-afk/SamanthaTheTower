@@ -37,7 +37,7 @@ export function buildSdkImportManifest({ packageJson, graph, graphBytes, schema,
   if (!graph || !Array.isArray(graph.nodes) || !Array.isArray(graph.edges)) throw new TypeError('Unsupported SDK graph shape');
   if (!schema || typeof schema !== 'object' || Array.isArray(schema)) throw new TypeError('SDK schema object is required');
   if (!Buffer.isBuffer(graphBytes) || !Buffer.isBuffer(schemaBytes)) throw new TypeError('Raw SDK file bytes are required for checksum calculation');
-  if (typeof retrievedAt !== 'string' || !/^\\d{4}-\\d{2}-\\d{2}$/.test(retrievedAt)) throw new TypeError('retrievedAt must be YYYY-MM-DD');
+  if (typeof retrievedAt !== 'string' || !/^\\d{4}-\\d{2}-\\d{2}$/.test(retrievedAt) || Number.isNaN(new Date(retrievedAt + 'T00:00:00.000Z').getTime()) || new Date(retrievedAt + 'T00:00:00.000Z').toISOString().slice(0, 10) !== retrievedAt) throw new TypeError('retrievedAt must be a valid YYYY-MM-DD calendar date');
   const assertions = graph.nodes.reduce((n, node) => n + (Array.isArray(node.assertions) ? node.assertions.length : 0), 0);
   return {
     manifestVersion: '1.0.0',
