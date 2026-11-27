@@ -36,3 +36,9 @@ The structure provides a direct map of named damage-result categories and is a u
 - Conflict ID(s): `CNF-D04-DR-001`
 - Relationship(s): `DERIVED_FROM` is not asserted; shared metadata package only.
 - GKB staging decision: hold
+
+
+## Review completion — 2026-11-27
+
+- **GRE declaration verified; runtime meaning not verified.** Rechecked the Domain 02 JSON record for type index 309 and field indices 2826–2836, including recorded tokens and offsets. All 11 named fields are present.
+- The duplicate record in Domain 04 is an overlapping domain export, not independent corroboration. Field names/order do not establish formula, units, execution order, exclusivity, or whether blocked values overlap. Status remains VERIFIED (GRE metadata declaration only). Native behavior: NOT ESTABLISHED. GKB: HOLD.
