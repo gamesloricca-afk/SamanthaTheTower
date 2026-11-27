@@ -7,7 +7,15 @@ import path from 'node:path';
 const require = createRequire(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../runtime/package.json'));
 const Ajv2020 = require('ajv/dist/2020.js').default;
 const schema = JSON.parse(await readFile(new URL('../schema/claim.schema.json', import.meta.url), 'utf8'));
-const ajv = new Ajv2020({ allErrors: true, strict: true, validateFormats: false });
+const ajv = new Ajv2020({ allErrors: true, strict: true, validateFormats: true });
+ajv.addFormat('date', {
+  type: 'string',
+  validate(value) {
+    if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(value)) return false;
+    const date = new Date(`${value}T00:00:00.000Z`);
+    return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
+  }
+});
 const validate = ajv.compile(schema);
 let cases = 0;
 const check = (condition, message) => { cases++; assert.equal(condition, true, message); };
@@ -46,8 +54,11 @@ check(!validate({ ...valid, verificationStatus: 'REPORTED' }), 'reject legacy st
 check(!validate({ ...valid, provenance: [] }), 'require provenance');
 check(!validate({ ...valid, claimId: undefined }), 'require claim id');
 check(!validate({ ...valid, lastReviewedAt: '27-11-2026' }), 'reject malformed review date');
+check(!validate({ ...valid, lastReviewedAt: '2026-02-30' }), 'reject impossible calendar review date');
 check(!validate({ ...valid, provenance: [{ ...valid.provenance[0], publicationDate: '2026/10/15' }] }), 'reject malformed publication date');
+check(!validate({ ...valid, provenance: [{ ...valid.provenance[0], publicationDate: '2026-02-30' }] }), 'reject impossible calendar publication date');
 check(!validate({ ...valid, provenance: [{ ...valid.provenance[0], retrievedAt: 'yesterday' }] }), 'reject malformed retrieval date');
+check(!validate({ ...valid, provenance: [{ ...valid.provenance[0], retrievedAt: '2026-02-30' }] }), 'reject impossible calendar retrieval date');
 
 const relationship = {
   ...valid,
@@ -100,6 +111,6 @@ console.log(JSON.stringify({
   conflictClaimsPreservedSeparately: true,
   sourceAttributionPreserved: true,
   gameSdkAndSourceDatesSeparated: true,
-  dateShapeValidated: true,
+  dateShapeAndCalendarValidated: true,
   unknownFieldsPreserved: true
 }, null, 2));
