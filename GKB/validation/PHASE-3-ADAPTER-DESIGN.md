@@ -325,3 +325,32 @@ Safety:
 - No canonical claims or relationships were created.
 - No verification statuses were promoted.
 - No bulk import was performed.
+
+
+## Raw SDK domain catalog staging — Research, Workshop, Cards/Masteries, Perks
+
+Added a read-only staging adapter, structural schema, and fixture tests:
+- `GKB/adapter/sdk-domain-catalog-staging.mjs`
+- `GKB/schema/sdk-domain-catalog-staging.schema.json`
+- `GKB/tests/sdk-domain-catalog-staging.test.mjs`
+- Runtime commands: `test:sdk-domain-catalog-staging`, `stage:sdk-domain-catalogs`
+- CI output: `GKB/staging/sdk-domain-catalogs.json` (artifact only; not committed as canonical data)
+
+Verified against pinned `thetowersdk@0.14.1` by CI run #213, retrieved 2026-11-27:
+- SDK game-version marker: `v28.3.0` (kept separate from SDK package version).
+- Research: `LAB_CATALOG`, 234 records.
+- Workshop: `getWorkshopStatDefinitions()`, 47 records.
+- Cards and Masteries: `CARD_TEMPLATES`, 32 records.
+- Perks: `ALL_PERKS`, 34 records.
+- Total staged records: 347.
+
+Raw records are wrapped with their original source index and retained without normalization, generated identifiers, deduplication, or field filtering. Unknown fields and source order are preserved. Each domain carries its SDK export reference and all records remain `OBJECTIVE / EXTERNAL-UNVERIFIED`.
+
+This is staging data, not canonical Samantha knowledge. No canonical catalog, claim, or relationship was created; no verification status was promoted; no bulk import was performed.
+
+CI:
+- Run: https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/45944793070
+- Result: SUCCESS (42 steps).
+- Artifact: `gkb-sdk-staging-213`, 14-day retention.
+
+Next priority: inspect the four raw catalog structures for identifier quality, duplicate keys, missing names/IDs, and cross-domain collisions. Only then define domain-specific identifier mapping rules; do not infer canonical IDs from display names or array positions.
