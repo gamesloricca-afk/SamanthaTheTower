@@ -6,10 +6,9 @@ import {createRequire} from 'node:module';
 import {buildGreStaging} from '../adapter/gre-staging.mjs';
 const require=createRequire(new URL('../runtime/package.json',import.meta.url));
 const Ajv2020=require('ajv/dist/2020.js').default;
+const here=path.dirname(fileURLToPath(import.meta.url));
 const schema=JSON.parse(fs.readFileSync(path.resolve(here,'../schema/gre-staging.schema.json'),'utf8'));
 const validateEnvelope=new Ajv2020({allErrors:true,strict:true,validateFormats:false}).compile(schema);
-
-const here=path.dirname(fileURLToPath(import.meta.url));
 const snapshot=path.resolve(here,'../staging/gre-source-snapshot/TestAccount-62ae508f');
 const a=buildGreStaging({snapshotDir:snapshot,retrievedAt:'2026-11-27'});
 const b=buildGreStaging({snapshotDir:snapshot,retrievedAt:'2026-11-27'});
