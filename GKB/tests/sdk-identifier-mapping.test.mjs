@@ -30,6 +30,9 @@ const report = buildIdentifierMappingReport({
 });
 assert.deepEqual(graph, original, 'source graph is not modified');
 assert.equal(report.summary.total, 5);
+assert.equal(report.scope.canonicalRecordCount, 2);
+assert.equal(report.scope.documentReferenceCount, 1);
+assert.equal(report.scope.targetRecordCount, 3);
 assert.equal(report.summary.EXACT_ID_MATCH, 1);
 assert.equal(report.summary.NAME_CANDIDATE, 1);
 assert.equal(report.summary.UNMATCHED, 1);
@@ -61,6 +64,6 @@ assert.throws(() => buildIdentifierMappingReport({
 console.log(JSON.stringify({
   test: 'Samantha GKB SDK Identifier Mapping',
   status: 'PASSED',
-  assertions: 22,
+  assertions: 25,
   cases: ['exact ID', 'exact name candidate', 'unmatched', 'ambiguous ID/name disagreement', 'duplicate canonical ID rejection', 'invalid date rejection', 'source preservation', 'document heading reference is not canonical', 'no automatic approval']
 }, null, 2));
