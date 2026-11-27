@@ -3,7 +3,7 @@ import { buildSdkDomainCatalogAudit } from '../adapter/sdk-domain-catalog-audit.
 
 const staging = { source: { sdkVersion: '0.14.1' }, catalogs: [
   { domain: 'Research', sourceRef: 'sdk/data#LAB_CATALOG', recordCount: 3, observedRecordKeys: ['name','slug','value'], records: [
-    { sourceIndex: 0, rawRecord: { slug: 'lab.a', name: 'Damage', value: 1 } },
+    { sourceIndex: 0, rawRecord: { slug: 'lab.a', name: 'Damage', value: 1, levels: [{ level: 1, value: 0.02 }] } },
     { sourceIndex: 1, rawRecord: { slug: 'lab.a', name: 'Damage II', value: '2' } },
     { sourceIndex: 2, rawRecord: { slug: 'lab.c', name: 'Damage', value: null, extra: true, levels: [{ level: 2, value: 0.03, note: 'source-specific' }, { level: 3, value: 0.04, note: 'source-specific' }] } }
   ]},
