@@ -67,7 +67,8 @@ function getDisplayHints(node) {
 export function stageKnowledgeGraph(graph, {
   sdkVersion,
   registry,
-  sourceReference = 'thetowersdk/dist/knowledge/knowledge-graph.v1.json'
+  retrievedAt,
+  sourceReference = 'thetowersdk/knowledge-graph.json'
 } = {}) {
   if (!graph || typeof graph !== 'object' || Array.isArray(graph)) {
     throw new TypeError('graph must be an object');
@@ -84,6 +85,10 @@ export function stageKnowledgeGraph(graph, {
   }
   const source = registry.sources.find(item => item.id === 'sdk-knowledge-graph');
   if (!source) throw new Error('Origin Registry is missing sdk-knowledge-graph');
+  if (typeof retrievedAt !== 'string' || !/^\\d{4}-\\d{2}-\\d{2}$/.test(retrievedAt) ||
+      new Date(`${retrievedAt}T00:00:00.000Z`).toISOString().slice(0, 10) !== retrievedAt) {
+    throw new TypeError('retrievedAt must be a valid YYYY-MM-DD calendar date');
+  }
 
   const records = graph.nodes.map((node, index) => {
     if (!node || typeof node !== 'object' || Array.isArray(node)) {
@@ -92,6 +97,7 @@ export function stageKnowledgeGraph(graph, {
     const rawOrigins = collectRawOrigins(node);
     const rawOrigin = rawOrigins.length === 1 ? rawOrigins[0].value : null;
     const originIsUsable = rawOrigins.length > 0 && rawOrigins.every(item => typeof item.value === 'string' && item.value.length > 0);
+    const hasUnresolvedGameOrigin = rawOrigins.some(item => item.value === 'game');
     const hints = getDisplayHints(node);
 
     return {
@@ -112,11 +118,15 @@ export function stageKnowledgeGraph(graph, {
         sdkVersion,
         registryVersion: registry.registryVersion,
         gameVersion: registry.gameVersion ?? null,
+        sdkGraphVersion: graph.graphVersion ?? null,
+        sdkSchemaVersion: graph.schemaVersion ?? null,
+        sdkGraphGeneratedFor: graph.generatedFor ?? null,
+        retrievedAt,
         rawOrigin,
         rawOrigins,
-        originMappingStatus: originIsUsable
-          ? 'UNMAPPED_REQUIRES_REVIEW'
-          : 'INVALID_OR_MISSING'
+        originMappingStatus: !originIsUsable
+          ? 'INVALID_OR_MISSING'
+          : hasUnresolvedGameOrigin ? 'UNRESOLVED' : 'UNMAPPED_REQUIRES_REVIEW'
       },
       sourceRecord: clone(node),
       limitations: [
@@ -154,6 +164,10 @@ export function stageKnowledgeGraph(graph, {
       sourceReference,
       sdkVersion,
       registryVersion: registry.registryVersion,
+      sdkGraphVersion: graph.graphVersion ?? null,
+      sdkSchemaVersion: graph.schemaVersion ?? null,
+      sdkGraphGeneratedFor: graph.generatedFor ?? null,
+      retrievedAt,
       inputNodeCount: graph.nodes.length,
       stagedRecordCount: records.length,
       pendingReviewCount: records.length,
@@ -182,7 +196,8 @@ async function main() {
   const graph = require('thetowersdk/knowledge-graph.json');
   const result = stageKnowledgeGraph(graph, {
     sdkVersion: sdkManifest.version,
-    registry
+    registry,
+    retrievedAt: new Date().toISOString().slice(0, 10)
   });
 
   await mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
