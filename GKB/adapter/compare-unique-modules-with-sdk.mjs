@@ -50,5 +50,10 @@ console.log(JSON.stringify({
   missingInSdk,
   missingInGkb,
   comparisons,
+  firstEffectExample: comparisons.length ? {
+    id: comparisons[0].id,
+    gkbEffectTemplate: gkbById.get(comparisons[0].id)?.effectTemplate ?? null,
+    sdkDescription: sdkById.get(comparisons[0].id)?.description ?? null
+  } : null,
   policy: 'Differences are reported, not automatically overwritten or resolved.'
 }, null, 2));
