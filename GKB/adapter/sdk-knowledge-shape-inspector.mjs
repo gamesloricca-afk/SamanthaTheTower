@@ -44,6 +44,7 @@ const nodeSchema = schema.properties?.nodes?.items ?? {};
 const edgeSchema = schema.properties?.edges?.items ?? {};
 const assertionSchema = nodeSchema.properties?.assertions?.items ?? {};
 const provenanceSchema = assertionSchema.properties?.provenance ?? {};
+const enumValues = value => Array.isArray(value?.enum) ? value.enum : [];
 const report = {
   test: 'Samantha GKB SDK Knowledge Graph Shape Inspection',
   status: 'PASSED',
@@ -57,7 +58,9 @@ const report = {
     nodeCount: graph.nodes.length,
     edgeCount: graph.edges.length,
     totalAssertions: assertions.length,
-    totalNodeSources: sources.length
+    totalNodeSources: sources.length,
+    nodeClaimTypeCounts: countBy(graph.nodes, item => item.claimType),
+    nodeVerificationCounts: countBy(graph.nodes, item => item.verification)
   },
   node: {
     observedKeys: keys(graph.nodes[0]),
@@ -66,8 +69,9 @@ const report = {
   assertion: {
     observedKeys: keys(assertions[0]),
     schemaProperties: Object.keys(assertionSchema.properties ?? {}).sort(),
-    claimTypeCounts: countBy(assertions, item => item.claimType),
     verificationCounts: countBy(assertions, item => item.verification),
+    missingVerificationCount: assertions.filter(item => typeof item.verification !== 'string').length,
+    schemaVerificationEnum: enumValues(assertionSchema.properties?.verification),
     provenanceKeys: keys(assertions.find(item => isObject(item.provenance))?.provenance)
   },
   source: {
@@ -77,7 +81,8 @@ const report = {
   edge: {
     observedKeys: keys(graph.edges[0]),
     schemaProperties: Object.keys(edgeSchema.properties ?? {}).sort(),
-    typeCounts: countBy(graph.edges, item => item.type ?? item.relationship ?? item.kind)
+    typeCounts: countBy(graph.edges, item => item.type ?? item.relationship ?? item.kind),
+    schemaKindEnum: enumValues(edgeSchema.properties?.kind)
   },
   schema: {
     title: schema.title ?? null,
@@ -85,7 +90,11 @@ const report = {
     nodeProperties: Object.keys(nodeSchema.properties ?? {}).sort(),
     assertionProperties: Object.keys(assertionSchema.properties ?? {}).sort(),
     provenanceProperties: Object.keys(provenanceSchema.properties ?? {}).sort(),
-    edgeProperties: Object.keys(edgeSchema.properties ?? {}).sort()
+    edgeProperties: Object.keys(edgeSchema.properties ?? {}).sort(),
+    nodeKindEnum: enumValues(nodeSchema.properties?.kind),
+    nodeClaimTypeEnum: enumValues(nodeSchema.properties?.claimType),
+    nodeVerificationEnum: enumValues(nodeSchema.properties?.verification),
+    provenanceOriginEnum: enumValues(provenanceSchema.properties?.origin)
   },
   limitations: [
     'Structural inspection only; claim meaning and truth are not assessed.',
