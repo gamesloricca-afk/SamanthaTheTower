@@ -37,6 +37,10 @@ jobs:
         run: |
           npm ls thetowersdk ajv --depth=0
 
+      - name: Validate Samantha origin registry
+        working-directory: GKB/runtime
+        run: npm run test:origin-registry
+
       - name: Run SDK origin compatibility self-test
         run: node GKB/adapter/origin-compatibility.mjs
 
