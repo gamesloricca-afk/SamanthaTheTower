@@ -70,6 +70,18 @@ const report = {
     nodeVerificationCounts: countBy(graph.nodes, item => item.verification)
   },
   sampleRecords: {
+    contradiction: contradictions[0] ? {
+      subject: contradictions[0].subject,
+      predicate: contradictions[0].predicate,
+      crossSource: contradictions[0].crossSource,
+      likelyValue: contradictions[0].likelyValue,
+      claims: Array.isArray(contradictions[0].claims) ? contradictions[0].claims.map(claim => ({
+        keys: keys(claim),
+        authorityRank: claim.authorityRank,
+        verification: claim.verification,
+        provenance: claim.provenance
+      })) : contradictions[0].claims
+    } : null,
     node: graph.nodes[0] ? {
       id: graph.nodes[0].id,
       label: graph.nodes[0].label,
