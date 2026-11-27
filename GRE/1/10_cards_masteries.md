@@ -1,0 +1,82 @@
+# Cards Masteries
+Source: Assembly-CSharp.dll metadata v39. Types may appear in more than one domain. Names are not proof of runtime behavior.
+
+49 type records. Full field, method and property records in `10_cards_masteries.json`.
+
+## CardBulkViewer
+Type #174, offset `0x86beb4`. Fields: 19; methods: 10; properties: 1.
+Methods: `Awake`, `Set`, `RefreshBuyBulk`, `PlayAnimation`, `ClaimClick`, `BuyBulkCardClick`, `CardClick`
+
+## CardRarity
+Type #175, offset `0x86bf00`. Fields: 4; methods: 0; properties: 0.
+Methods: none selected
+Candidate decoded constants: `Common = 0`, `Rare = 1`, `Epic = 2`
+
+## Cards
+Type #181, offset `0x86c0c8`. Fields: 185; methods: 63; properties: 8.
+Methods: `Awake`, `IsCardMasteryEnabled`, `Initialization`, `FocusActiveCard`, `FocusActiveSlot`, `InventoryAvailableUpdate`, `FormatCardDescription`, `FormatCardDescription`, `CardDescriptionLoad`, `CardPanelOpen`, `FocusFirstSlotDelayed`, `ComparePreset`, `SetupCardUI`, `CardPanelUpdate`, `CardPanelClose`, `CardPickInventory`, `DetectEarliestSlot`, `CardPickActive`, `UnequipCardInActiveInSlotForAllPresets`, `UnequipCardsInLockedSlots`, `SlotUnlock`, `DoSlotUnlock`, `CalculateNewSlotCost`, `CalculateBenefits`, `CardDetailPanelOpen`, `UpdateCardDetail`, `Button_UnlockCardMastery`, `UnlockCardMastery`, `ForceUpdateEnhancementLayout`, `CardDetailPanelClose`, `BuyCard`, `GetCardCountRemainingToPurchase`, `GetEpicCardCountRemainingToPurchase`, `GetRareCardCountRemainingToPurchase`, `GetCommonCardCountRemainingToPurchase`, `GetAvailablityForEachCard`, `BuyCard10`, `DoCard10Unlock`, `AddCard`, `AddCards`, `CardClaimIntroBonus`, `CardAvailableInPool`, `CalculateCardsBought`, `SelectPreset`, `UpdateCardActiveFromSlots`, `SaveCardContentsForBattle`, `RestoreCardContentsForRetry`, `RestoreCardContentsAfterBattle`, `GetActiveCards`, `CalculateAllCardDropRates`, `SuperTowerBonusCalc`, `ResetAllCardMasteries`, `AddCardRegistry`
+Candidate decoded constants: `MAX_ACTIVE_CARDS = 28`, `MAX_ACTIVE_PAID_WITH_GEM_CARDS = 22`, `CARDS_MAXED_FOR_MASTERY = 30`, `DEMON_MODE_DAMAGE_MULTIPLIER = 300`, `MAX_REGISTRY_COUNT = 300`, `cardDetailPanelHeight = 672`, `cardDetailPanelHeightMasteryAvailable = 1270`, `cardDetailPanelHeightMasteryUnlocked = 1050`
+
+## CardRegistry
+Type #182, offset `0x86c114`. Fields: 2; methods: 4; properties: 2.
+Methods: none selected
+
+## CardDropRateData
+Type #183, offset `0x86c160`. Fields: 4; methods: 0; properties: 0.
+Methods: none selected
+
+## DevPanelCards
+Type #272, offset `0x86dbcc`. Fields: 33; methods: 0; properties: 0.
+Methods: none selected
+Candidate decoded constants: `Damage = 0`, `AttackSpeed = 1`, `Health = 2`, `HealthRegen = 3`, `Range = 4`, `Cash = 5`, `Coins = 6`, `SlowAura = 7`, `CriticalChance = 8`, `EnemyBalance = 9`, `ExtraDefenses = 10`, `Fortress = 11`, `FreeUpgrades = 12`, `ExtraOrb = 13`, `PlasmaCannon = 14`, `CriticalCoin = 15`, `WaveSkip = 16`, `IntroSprint = 17`, `LandMineStun = 18`, `RecoveryPackageChance = 19`, `DeathRay = 20`, `EnergyNet = 21`, `SuperTower = 22`, `SecondWind = 23`, `DemonMode = 24`, `EnergyShield = 25`, `WaveAccelerator = 26`, `Berserker = 27`, `UltimateCrit = 28`, `Nuke = 29`, `AreaOfEffect = 30`, `Bastion = 31`
+
+## CardID
+Type #513, offset `0x872358`. Fields: 35; methods: 0; properties: 0.
+Methods: none selected
+Candidate decoded constants: `None = -1`, `Damage = 0`, `AttackSpeed = 1`, `Health = 2`, `HealthRegen = 3`, `Range = 4`, `Cash = 5`, `Coins = 6`, `SlowAura = 7`, `CriticalChance = 10`, `EnemyBalance = 11`, `ExtraDefenses = 12`, `Fortress = 13`, `FreeUpgrades = 15`, `InnerOrb = 16`, `PlasmaCannon = 18`, `CriticalCoin = 19`, `WaveSkip = 20`, `IntroSprint = 21`, `LandMineStun = 22`, `RecoveryPackageChance = 23`, `DeathRay = 25`, `EnergyNet = 26`, `SuperTower = 27`, `SecondWind = 28`, `DemonMode = 29`, `EnergyShield = 30`, `WaveAccelerator = 31`, `Berserker = 32`, `UltimateCrit = 33`, `Nuke = 34`, `AreaOfEffect = 35`, `Bastion = 36`, `Cells = 37`
+
+## DamageData
+Type #586, offset `0x873904`. Fields: 3; methods: 1; properties: 0.
+Methods: none selected
+
+## HitData
+Type #587, offset `0x873950`. Fields: 2; methods: 2; properties: 0.
+Methods: `TotalHits`
+
+## LightspeedPathData
+Type #588, offset `0x87399c`. Fields: 3; methods: 1; properties: 0.
+Methods: none selected
+
+## UpgradeType
+Type #589, offset `0x8739e8`. Fields: 10; methods: 0; properties: 0.
+Methods: none selected
+Candidate decoded constants: `Attack = 0`, `Defense = 1`, `Utility = 2`, `WorkshopAttack = 3`, `WorkshopDefense = 4`, `WorkshopUtility = 5`, `EnhancementAttack = 6`, `EnhancementDefense = 7`, `EnhancementUtility = 8`
+
+## UpgradeMultiplier
+Type #590, offset `0x873a34`. Fields: 2; methods: 1; properties: 0.
+Methods: none selected
+
+## ClosestEnemyEntry
+Type #591, offset `0x873a80`. Fields: 2; methods: 1; properties: 0.
+Methods: none selected
+
+## Main
+Type #618, offset `0x874284`. Fields: 946; methods: 487; properties: 62.
+Methods: `ApplyRespecDiscount`, `AddGems`, `SpendGems`, `LoadGems`, `RefreshGemsUI`, `AddMedals`, `SpendMedals`, `LoadMedals`, `AddStones`, `SpendStones`, `LoadStones`, `RefreshStonesUI`, `AddKeys`, `SpendKeys`, `LoadKeys`, `Awake`, `OnDestroy`, `TriggerGameSpeedChangeEvent`, `ShieldAvailable`, `AddUpgradeCostMultiplier`, `GetUpgradeCostMultiplier`, `Initialize`, `ShouldEnergyShieldAbsorb`, `InitializeUpgradeMaxLevels`, `GrantRetroAchievementsDeferred`, `LanguageStringsUpdate`, `CheckUpgradeTiers`, `OnApplicationFocus`, `CheckMaxedWorkshops`, `GetDropLandmineDamage`, `UpdateUltimateWeaponDescriptions`, `GetAverageUltimateCooldownMultiverseNexus`, `PlayUltimateWeaponOnStartIfNeeded`, `UpdateTimers`, `WorkshopUpgradeTier`, `GetEnemyTargetIndex`, `FtueExtraAttackSpeed`, `TowerFireFunction`, `OnDrawGizmosSelected`, `GetSentryProtocolWorkshopOrbsAttackSpeed`, `GetSentryProtocolCardOrbsAttackSpeed`, `SentryProtocolFire`, `SentryProtocolUpdate`, `TacticalBarrageUpdate`, `TryGetTacticalBarrageTarget`, `GetTargetPriorityRank`, `OrbFire`, `CalculateEnemyDistances`, `FixedUpdate`, `GetLightSpeedBounceHitData`, `Update`, `HitAllBounceTargets`, `MultishotBullet`, `RapidFireStart`, `LightspeedMultishot`, `DifficultyTierCalcs`, `TierUp`, `TierDown`, `ResetRoundStats`, `StartNewRoundTestHeat`, `ProjectFundingCoroutine`, `StartNewRound`, `UpdateExtraCornerButtons`, `MainCameraSizeCheck`, `StartNewRoundFunction`, `_applyFTUEEnemySpawnDelay`, `StartNewRoundWallFunction`, `RebuildWallFunction`, `WallInvincibleEffect`, `GetWavesToSkipForIntroSprint`, `ApplyDeathWaveHealthFromKill`, `ApplyDeathWaveHealthMultiplierGain`, `NewWave`, `IntroSprintCoins`, `IsAllUpgradesMaxedOrLocked`, `IsAllDefenseUpgradesMaxedOrLocked`, `IsAllUtilityUpgradesMaxedOrLocked`, `GetWaveBaseDamage`, `GetWaveBaseHealth`, `WaveUpdate`, `SpawnRecoveryPackage`, `SpawnEnemy`, `QueueScatterChild`, `SpawnAllQueuedScatterChildren`, `TurnOnProtectorUltimate`, `SpawnRandomBasicEnemy`, `TurnOffProtectorUltimate`, `SpawnRandomEliteEnemy`, `TurnOnTankUltimate`, `SpawnRandomFleetEnemy`, `GetRandomSpawnPosition`, `Dev_StartNewAccount`, `TurnOffTankUltimate`, `TurnOnCommanderUltimate`, `TurnOffCommanderUltimate`, `EndIntroSprint`, `Button_CancelIntroSprint`, `GetProtectorRadiusGrowthFactor`, `TryGetProjectile`, `BonusDamageFromImpetus`, `IsBossActive`, `IsFleetActive`, `GetParticleExplosionPool`, `TryGetOrbProjectile`, `TowerBossNet`, `TowerBossFire`, `GetFleetWaveDamageProgress`, `TowerFire`, `CountProjectileFired`, `BossNetHit`, `BossProjectileHit`, `LightspeedGetHitTarget`, `GetLightspeedDamageOnTarget`, `GetBounceHitData`, `ComputeBounceTargets`, `FindNextBounceTarget`, `UpdateEnergyShieldSliders`, `ChainLightning`, `GetSpecificWaveHealthDamageBossHit`, `GetSpecificWaveHealthDamageEnemyHit`, `GetRandomAliveEnemyOnScreen`, `UpdateClosestEnemies`, `ParticleExplosionTowerHit`, `FreeUpgradeFloatingText`, `UpdateWaveSkipTextsPos`, `UpdateClosestEnemiesToPoint`, `HeatingUpFloatingText`, `WaveSkipFloatingText`, `GoldenTowerPlusBonusFloatingText`, `EnemyLevelSkipFloatingText`, `LandminePlusTextAnimationMultiplier`, `MultBuyCalc`, `CalculateEnhancementCosts`, `MultBuySpecial`, `UpgradeCostCalc`, `UpgradeDefenseCostCalc`, `UpgradeUtilityCostCalc`, `UpgradeWorkshopCostCalc`, `UpgradeUltimateEnhancementCostCalc`, `UpgradeEnhancementCostCalc`, `AwardPlayTimeRelics`, `EnsureUtc`, `AwardIfEligible`, `GetUltimateWeaponCost`, `UpgradeUltimateWeaponCostCalc`, `GetUltimateWeaponPlusUpgradeCostForLevel`, `GetUltimateWeaponFullBenefit`, `FormatUltimateWeaponBenefit`, `GetChainLightningDamage`, `GetChainLightningQuantity`, `GetChainLightningChance`, `GetSmartMissilesDamage`, `GetSmartMissilesQuantity`, `GetSmartMissilesCooldown`, `GetDeathwaveDamage`, `GetDeathwaveQuantity`, `GetDeathwaveCooldown`, `GetChronoFieldDuration`, `GetChronoFieldSpeedReduction`, `GetChronoFieldCooldown`, `GetInnerLandMineDamage`, `GetInnerLandMineQuantity`, `GetInnerLandMineCooldown`, `GetGoldenTowerBonus`, `GetGoldenTowerDuration`, `GetGoldenTowerCooldown`, `GetPoisonSwampDamage`, `GetPoisonSwampDuration`, `GetPoisonSwampCooldown`, `GetUltimateWeaponAppliedLevel`, `GetBlackHoleSize`, `GetBlackHoleDuration`, `GetBlackHoleCooldown`, `GetSpotlightBonus`, `GetSpotlightAngle`, `GetSpotlightQuantity`, `UpgradeUltimateWeaponBenefit`, `UpdateUltimateWeaponPlusBenefit`, `NewUltimateWeapon`, `IsAttackUpgradeEnabled`, `IsDefenseUpgradeEnabled`, `IsUtilityUpgradeEnabled`, `IsUltimateWeaponUnlocked`, `IsUltimateWeaponActive`, `GetActiveUWs`, `UpdateUltimateWeaponChoices`, `DoUltimateWeaponUpgrade`, `UpgradeUltimateWeaponButton`, `UpgradeUltimateWeaponPlusButton`, `DoNewUltimatePlusUnlock`, `DoUltimatePlusWeaponUpgrade`, `UpgradeButton`, `UpgradeDefenseButton`, `UpgradeUtilityButton`, `UpgradeWorkshopAttackButton`, `UnlockEnhancementButton`, `UnlockEnhancementDefenseButton`, `UnlockEnhancementUtilityButton`, `EnhancementAttackButton`, `EnhancementDefenseButton`, `EnhancementUtilityButton`, `UpgradeWorkshopDefenseButton`, `UpgradeWorkshopUtilityButton`, `NeedToCalculateUpgradeBonuses`, `AdjustDamageUp`, `AdjustDamageDown`, `CalculateDamageUpgradeBonuses`, `CalculateUpgradeBonuses`, `_calculateAttackSpeedUpgradeBonuses`, `GetOutOfRoundDamage`, `AdjustDamageLog`, `GetOutOfRoundAttackSpeed`, `GetOutOfRoundCriticalChance`, `GetOutOfRoundCriticalMultiplier`, `GetOutOfRoundMaxDistance`, `GetOutOfRoundImpetus`, `GetOutOfRoundMultishotChance`, `GetOutOfRoundMultishotTargets`, `GetOutOfRoundRapidFireChance`, `GetOutOfRoundRapidFireDuration`, `GetOutOfRoundBounceChance`, `GetOutOfRoundBounceTargets`, `GetOutOfRoundBounceRange`, `GetOutOfRoundSuperCritChance`, `GetOutOfRoundSuperCritMultiplier`, `GetOutOfRoundRendArmorChance`, `GetOutOfRoundRendArmorMultiplier`, `GetOutOfRoundMaxHealth`, `GetOutOfRoundHealthRegen`, `GetOutOfRoundDefenseRel`, `GetOutOfRoundDefenseAbsolute`, `GetOutOfRoundThornDamage`, `GetOutOfRoundLifesteal`, `GetOutOfRoundKnockbackChance`, `GetOutOfRoundKnockbackForce`, `GetOutOfRoundOrbSpeed`, `GetOutOfRoundOrbCount`, `GetOutOfRoundShockwaveSize`, `GetOutOfRoundShockwaveFrequency`, `GetOutOfRoundMineChance`, `GetOutOfRoundMineDamage`, `GetOutOfRoundMineRadius`, `GetOutOfRoundDeathDefyChance`, `GetOutOfRoundWallPercentOfTowerHealth`, `GetOutOfRoundWallRebuild`, `GetOutOfRoundCashBonusUpgrade`, `GetOutOfRoundCashPerWave`, `GetOutOfRoundCoinsBonusUpgrade`, `GetOutOfRoundCoinsPerWave`, `GetOutOfRoundFreeAttackUpgradeChance`, `GetOutOfRoundFreeDefenseUpgradeChance`, `GetOutOfRoundFreeUtilityUpgradeChance`, `GetOutOfRoundInterestPerWave`, `GetOutOfRoundRecoveryAmount`, `GetOutOfRoundRecoveryMax`, `GetOutOfRoundRecoveryChance`, `GetOutOfRoundAttackLevelSkipChance`, `GetOutOfRoundHealthLevelSkipChance`, `CalculateEnemyLevelSkipChances`, `CalculateMaxRangeAndSetRadius`, `GetRestorativeBonusMultiplier`, `WorkshopEnhancementRespec`, `Button_WorkshopPresetSelect`, `WorkshopRespec`, `PlayDeathDefyEffect`, `SecondWindEffect`, `SecondWindCleanup`, `CanApplyWorkshopPresetForBattle`, `LaunchMissileBarrage`, `ActivateEnergyShield`, `ActivateRepel`, `ActivateNuke`, `ShowDemonModeButton`, `ActivateDemonMode`, `Button_ToggleDemonModeAutomation`, `RefreshBastionButton`, `ActivateBastion`, `Button_ToggleNukeAutomation`, `ArmVikingFuneral`, `DemonModeEffect`, `RefreshAbilityButtonsForIntroSprint`, `Button_CardDetailToggle`, `SecondWindBlast`, `Button_ToggleDeathRayInstantKill`, `Button_ToggleSpawnAccelerator`, `Button_ToggleEnergyShieldRestriction`, `Button_ToggleBastionAutomation`, `Button_ToggleEliteBalance`, `WallDestroyed`, `GameOver`, `AnyDeathSaveStillAvailable`, `EndIntroSprintIfNoSavesRemain`, `NukeImmortalityEffect`, `ApplyTowerDamage`, `GetAliveFleetEarliestSpawnWave`, `ResolveLethalHit`, `TryUseSecondWindSave`, `TryUseDemonModeSave`, `TryUseBastionSave`, `TryUseNukeSave`, `SetLifeSavingOrder`, `GetAliveBossEarliestSpawnWave`, `GoHomePauseBattle`, `Button_GameEndPanelGoHome`, `GameOverFunction`, `Button_ToggleAutoRestartBattle`, `AutoRetryBattle`, `OnApplicationPause`, `ReturnHomeButton`, `OffClickReturnHomePanel`, `ReturnHomeConfirm`, `SpeedChangeMax`, `SpeedChangeUp`, `SpeedChangeDown`, `SpeedChangeDownMax`, `TestDisable`, `IsRewardedAdsBypassed`, `DisableAdsUnlock`, `StarterPackUnlock`, `EpicPackUnlock`, `CalculateCoinBonuses`, `GetThemesCoinBonus`, `ApplyRecoveryPackage`, `GetWallHealthTrueMax`, `ApplyRepairChipHeal`, `ApplyAllyRecoveryPackage`, `AdLoopStart`, `AdLoopStop`, `AdStartFunction`, `AdLoadingCancel`, `SRDebuggerStart`, `TestResetBob`, `GemBlockTap`, `GemBlockFunction`, `GemBlockSpawn`, `CheckBossSpawned`, `OrbCheck`, `InnerOrbDistanceDown`, `InnerOrbsDistanceUp`, `UpdateWorkshopOrbDistance`, `UpdateInnerOrbDistance`, `WorkshopOrbsDistanceDown`, `WorkshopOrbsDistanceUp`, `DeathRayFunction`, `GameSpeedModifier`, `InnerOrbsDistanceSetStep`, `GameSpeedValidationLogFunction`, `RateGame`, `RateGameRequestCheck`, `WorkshopOrbsDistanceSetStep`, `ShockwaveFunction`, `TriggerMagneticHook`, `InterestFloatingText`, `Pause`, `CompleteReturnFromPauseToHome`, `ApplyInactiveGameSpeed`, `CheckForResumeRoundOnLoad`, `Unpause`, `CheckForResumeRound`, `UpdateBattleText`, `ResumeRoundPanelOpen`, `ResetResumeRound`, `ShowFailPanel`, `ResumeRound`, `ResumeRoundCancel`, `SavePlayerOptToSaveResume`, `GetUltimateWeaponIndex`, `UpdateMainConfig`, `Button_ToggleFreeLockout`, `FreeRespecAllPreset`, `GetRecentCoinsPerHour`, `GetRecentCellsPerHour`, `FreeWorkshopRespec`, `FreeWorkshopEnhancementRespec`, `IsTowerImmortal`, `HasDeathDefied`, `IsWaveSkip`, `IsDoubleWaveSkip`, `IsCriticalHit`, `IsSuperCriticalHit`, `IsMultishot`, `IsRapidFire`, `IsFleetWave`, `CreateBattleHistoryEntry`, `InitializeTowerWrapped`, `GetTowerWrappedStatsThisYear`, `AddCurrencyLog`, `GetSaboteurUWUpgradeIndex`, `EstimateTotalEnemySpawnsAtWave`, `GetFleetsDamageDecimal`, `DropPointerPressOnCancelledTouch`, `DropPendingPointerPress`, `PauseAdCoinBonusTimer`, `ResumeAdCoinBonusTimer`
+Candidate decoded constants: `MAX_POSSIBLE_TIER = 24`, `SKIN_COIN_BONUS = 0.00400000019`, `BACKGROUND_COIN_BONUS = 0.00800000038`, `MENU_COIN_BONUS = 0.00600000005`, `PROFILE_BANNER_COIN_BONUS = 0.00600000005`, `SONG_COIN_BONUS = 0.00600000005`, `GUARDIAN_SKIN_COIN_BONUS = 0.00600000005`, `ATTACK_ENHANCEMENT_COUNT = 6`, `DEFENSE_ENHANCEMENT_COUNT = 6`, `UTILITY_ENHANCEMENT_COUNT = 6`, `MINIMUM_WAVE_TO_ALLOW_RESUME_ROUND = 4`, `MAX_BATTLE_HISTORY_ENTRIES = 30`, `AUTO_RETRY_TIMER = 100`, `DEATH_WAVE_HEALTH_MULTIPLIER_PER_KILL = 0.000500000024`, `MAX_DEFENSE_PERCENT = 98`, `DEMON_MODE_CAP_WAVES = 10`, `SECOND_WIND_CAP_WAVES = 2`, `VIKING_FUNERAL_CAP_WAVES = 10`, `ENERGY_SHIELD_MIN_CHARGE_WAVES = 2`, `WALL_MIN_CHARGE_WAVES = 2`, `TIER_1_MIN_WAVE_FOR_RANGED = 21`, `DEFAULT_MAX_TIER = 24`, `WORKSHOP_BASE_PRESETS = 2`, `BLACK_HOLE_SIZE_STAT_INDEX = 21`, `workshopRespecCost = 150`, `DAMAGE_ADJUSTMENT_LOG_MAX = 37`, `ORB_MIN_DISTANCE_WORKSHOP = 6`, `SENTRY_PROTOCOL_RADIUS = 1.5`, `SPAWN_COOLDOWN = 0.125`
+
+## PlayerData
+Type #873, offset `0x878e38`. Fields: 836; methods: 1674; properties: 835.
+Methods: `To2DArrayExpandable`, `To2DArray`, `To1DArray`
+
+## CardDropRateEntry
+Type #1038, offset `0x87bf34`. Fields: 3; methods: 3; properties: 0.
+Methods: `SetEntryInfo`, `HasStringInName`
+
+## CardDropRatesMenu
+Type #1039, offset `0x87bf80`. Fields: 14; methods: 12; properties: 0.
+Methods: `Awake`, `OnDestroy`, `OnEnable`, `InitMenu`, `CloseMenu`, `UpdateMenu`, `OnBannerInfoRarityHeaderClicked`, `OnBannerInfoSearch`, `GetRarityColor`, `GetRarityName`
+
+## CardRarityHeaderEntry
+Type #1040, offset `0x87bfcc`. Fields: 2; methods: 3; properties: 0.
+Methods: `SetRarityText`, `SetOdds`
