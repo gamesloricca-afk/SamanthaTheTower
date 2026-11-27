@@ -19,11 +19,12 @@ const statuses=['VERIFIED','USER-PROVIDED','EXTERNAL-UNVERIFIED','HYPOTHESIS','C
 const sourceTypes=['OFFICIAL','COMMUNITY','PLAYER_TESTING','OTHER','UNKNOWN'];
 
 function validDate(value){
-  if(typeof value!=='string'||!/^\\d{4}-\\d{2}-\\d{2}$/.test(value))return false;
+  if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value))return false;
   const date=new Date(value+'T00:00:00.000Z');
   return !Number.isNaN(date.getTime())&&date.toISOString().slice(0,10)===value;
 }
 function clone(value){return JSON.parse(JSON.stringify(value));}
+function dateOnly(value){return validDate(value)?value:null;}
 
 export function buildCanonicalClaimFromReviewedGreRecord(stagingRecord,review){
   if(!stagingRecord||stagingRecord.recordKind!=='GRE_CLAIM')throw new TypeError('A GRE_CLAIM staging record is required');
@@ -53,8 +54,8 @@ export function buildCanonicalClaimFromReviewedGreRecord(stagingRecord,review){
       sourceVersion:source.sourceVersion??null,
       sdkPackage:null,
       sdkVersion:stagingRecord.sourceSdkVersion??null,
-      publicationDate:source.publicationDate??stagingRecord.sourcePublicationDate??null,
-      retrievedAt:stagingRecord.sourceSnapshot?.retrievedAt??null,
+      publicationDate:dateOnly(source.publicationDate)??dateOnly(stagingRecord.sourcePublicationDate),
+      retrievedAt:dateOnly(stagingRecord.sourceSnapshot?.retrievedAt),
       evidence:canonical.evidence??(Array.isArray(stagingRecord.evidence)?stagingRecord.evidence.join('\\n'):null),
       limitations:[...(Array.isArray(source.limitations)?source.limitations:[]),...(Array.isArray(stagingRecord.limitations)?stagingRecord.limitations:[])]
     };
@@ -66,7 +67,7 @@ export function buildCanonicalClaimFromReviewedGreRecord(stagingRecord,review){
     claim:canonical.claim,
     classification:canonical.classification,
     verificationStatus,
-    applicableGameVersion:canonical.applicableGameVersion??stagingRecord.sourceGameVersion??null,
+    applicableGameVersion:canonical.applicableGameVersion??(['UNKNOWN','NOT STATED','NOT ESTABLISHED'].includes(stagingRecord.sourceGameVersion)?null:(stagingRecord.sourceGameVersion??null)),
     lastReviewedAt:review.reviewedAt,
     provenance,
     relatedClaims:Array.isArray(canonical.relatedClaims)?clone(canonical.relatedClaims):[],
