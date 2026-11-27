@@ -37,6 +37,10 @@ jobs:
         run: |
           npm ls thetowersdk ajv --depth=0
 
+      - name: Inspect pinned SDK public entry points
+        working-directory: GKB/runtime
+        run: npm run test:sdk-public-exports
+
       - name: Validate canonical GKB claim schema
         working-directory: GKB/runtime
         run: npm run test:claim-schema
