@@ -49,3 +49,13 @@ Do not promote a single universal order. If later approved for GKB, preserve the
 ## GRE cross-domain re-inspection (2026-11-27)
 
 The follow-up GRE review added direct metadata evidence for the `DamageReductionResult` fields, Enemy calculation/application method signatures, Main defense state, and BattleHistory blocked counters (claims `CLM-D04-DR-006` through `CLM-D04-DR-008`). These declarations do not encode execution order or prove that each counter is mutually exclusive. The order conflict remains OPEN; GRE metadata does not resolve it.
+
+## Final review status — 2026-11-27
+
+All four source positions represented by DR-001, DR-003, DR-004, and DR-005 were rechecked. The conflict remains OPEN:
+- SDK layer-stack helper and the v28.3 Reddit post place CF / Primordial Collapse / Flame Bot before Defense Absolute.
+- SDK knowledge prose and Fandom place those effects after Defense Absolute.
+- SDK's separate computeDamageReductionResult is a narrower helper and does not contain all the same reduction inputs.
+- The SDK helper's sequential display order is not a reconstruction of native blocked counters.
+
+No source is selected as correct. Resolution requires version-matched implementation evidence or a reproducible test. GKB promotion remains HOLD.
