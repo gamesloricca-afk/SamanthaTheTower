@@ -65,6 +65,14 @@ jobs:
         working-directory: GKB/runtime
         run: npm run compare:sdk-unique-modules
 
+      - name: Test conservative SDK identifier mapping
+        working-directory: GKB/runtime
+        run: npm run test:sdk-identifier-mapping
+
+      - name: Generate SDK identifier mapping report
+        working-directory: GKB/runtime
+        run: npm run report:sdk-identifier-mapping
+
       - name: Inspect SDK wiki, contributions, and charts
         working-directory: GKB/runtime
         run: npm run inspect:sdk-wiki-contributions-charts
@@ -133,6 +141,7 @@ jobs:
             GKB/staging/sdk-edges.json
             GKB/staging/sdk-contradictions.json
             GKB/reports/sdk-staging-integrity-report.json
+            GKB/reports/sdk-identifier-mapping-report.json
           if-no-files-found: error
           retention-days: 14
 
