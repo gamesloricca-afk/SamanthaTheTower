@@ -102,6 +102,7 @@ Registered claims:
 - `CLM-D04-DR-002`: separate SDK damage helper (verified as SDK code only).
 - `CLM-D04-DR-003`: Fandom order statement (external-unverified).
 - `CLM-D04-DR-004`: Reddit v28.3 order statement (external-unverified).
+- `CLM-D04-DR-005`: SDK knowledge prose (verified as source text only).
 
 **Source disagreement:** Fandom places Chrono Field / Primordial Collapse / Flame Bot after Defense Absolute. Reddit places them before Defense Absolute. The SDK's layer-stack helper agrees with Reddit on this placement, but this does not prove live-game behavior. No winner is selected.
 
