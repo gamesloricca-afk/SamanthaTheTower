@@ -97,7 +97,7 @@ function parseSource(file, root) {
     authorOrMaintainer: field(raw,'Author/maintainer'),
     sourceReference: field(raw,'Repository') ?? field(raw,'URL') ?? field(raw,'Source URL'),
     sourceVersion: field(raw,'Version'),
-    metadataFormatVersion: field(raw,'GRE metadata format'),
+    metadataFormatVersion: field(raw,'GRE metadata format')?.match(/v[0-9.]+/i)?.[0] ?? field(raw,'GRE metadata format'),
     branchRef: field(raw,'Branch/ref inspected'),
     inspectedCommit: field(raw,'Inspected commit'),
     publicationDate: raw.match(/^\s*-\s*(?:Page )?Publication(?:\/update)? date(?: shown)?:\s*(.*)$/mi)?.[1]?.trim() ?? field(raw,'Commit date') ?? field(raw,'Source date'),
