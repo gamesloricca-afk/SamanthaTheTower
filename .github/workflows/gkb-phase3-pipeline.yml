@@ -2,6 +2,11 @@ name: Samantha - GKB Phase 3 Pipeline
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - phase3-completion
+    paths-ignore:
+      - 'GKB/staging/**'
 
 permissions:
   contents: write
