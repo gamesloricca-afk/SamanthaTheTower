@@ -89,3 +89,18 @@ SHA-256: `4daab502bba60274cf9ea9936909ae99c594f333f195ef8451f39a4ce3074788`
 The dedicated evidence navigator tests cover multi-source indexing, source-family filtering, GRE conflict comparison, preservation of separate contradictory statements, exact-ID joining of GRE source catalog records, SDK provenance preservation, and rejection of an unsupported GRE staging envelope.
 
 **Limitations:** This index does not prove runtime behavior, verify mechanics, resolve fanmade disagreements, or promote SDK/GRE material into canonical GKB. Wiki/Reddit/player-experiment sources are only represented where actual GRE source records already exist; dedicated adapters for additional external datasets remain future work.
+
+
+## SDK triage visibility extension — CI pending
+
+The navigator now accepts the SDK triage report through `--sdk-triage` and joins each SDK assertion to its triage record using the exact `stagingId`. Searchable fields include:
+- `triageDisposition`
+- `triageIssues`
+- `triageInformational`
+- `manualReviewRequired`
+
+The combined index also carries aggregate triage counts and issue counts. This makes the 68 manual exception records discoverable without treating the other 1,550 structurally triaged assertions as mechanically verified. SDK labels remain source metadata and all SDK assertions remain `EXTERNAL-UNVERIFIED`.
+
+The workflow now passes both SDK assertion staging and triage artifacts to the navigator. The test checks exact-ID joining, issue-code search, manual-review visibility, aggregate exception counts, and invalid triage-format rejection.
+
+**Status:** Implementation committed; this extension is not considered verified until the updated GitHub Actions run passes.
