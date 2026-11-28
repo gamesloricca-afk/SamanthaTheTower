@@ -15,24 +15,9 @@ This directory is reserved for reviewer-authored GRE decisions. The generated st
    ```
 
 4. For `APPROVE`, supply a complete canonical mapping JSON as the final CLI argument. The CLI validates the canonical preview against the existing GKB claim schema before appending the decision. An approval creates no canonical file.
-   
-   Reviewer-authored source attribution overrides belong inside that canonical JSON as `sourceTypeOverrides`, keyed by the exact source IDs:
-   
-   ```json
-   {
-     "claimId": "YOUR-CANONICAL-ID",
-     "domain": "combat-mechanics",
-     "subject": "Reviewed subject",
-     "claim": "Reviewer-authored claim wording",
-     "classification": "OBJECTIVE",
-     "verificationStatus": "EXTERNAL-UNVERIFIED",
-     "sourceTypeOverrides": {
-       "SRC-SDK-THETOWERSDK-0141": "OTHER"
-     }
-   }
-   ```
-   
-   For a claim linked to a GRE conflict, include `conflict` with the exact source conflict ID, all linked GRE claim IDs in `relatedClaimIds`, and its current status. An open source conflict must remain `OPEN` in the preview.
+
+   Reviewer-authored source attribution overrides belong inside that canonical JSON as `sourceTypeOverrides`, keyed by the exact source IDs.
+
 5. Commit the append-only `decisions.jsonl` to the integration branch so the reviewer, date, note, and each decision revision remain traceable in Git history.
 
 ## Decision log rules
@@ -49,59 +34,71 @@ Do not store account-specific data here. This workspace is only for universal ga
 
 ## Automatic checks vs. manual review
 
-The staging adapter automatically verifies the pinned snapshot identity, source commit, exact file inventory, Git blob hashes, parser shape, known metadata fields, source references, and claim-to-conflict references. These checks do not require a person to reconfirm every metadata field.
+Automated integrity/shape checks validate the pinned source snapshot, metadata structure, references, and provenance. They do not establish game-mechanics truth.
 
-- Valid source metadata and structural records are retained with their source provenance after automated integrity/shape checks.
 - Unknown metadata keys are preserved and reported; they are not silently discarded or interpreted.
-- The human review queue is for **game-knowledge claims and interpretations**, not for confirming that every extracted metadata entry exists.
-- A claim can require human review when its meaning, domain mapping, game-version scope, source attribution, or conflict relationship is ambiguous.
-- A successful structural check does not establish that a method executes, that a mechanic behaves as described, or that a claim matches live-game behavior.
-- The current queue contains 12 claims and 1 conflict envelope (13 records). The 7 source metadata records are parsed separately and are not counted as 7 additional manual claim reviews.
-
-This is a two-level process: automated integrity/structure checks first; focused human review only for semantic claims and genuine exceptions.
-
+- The human review queue is for game-knowledge claims and interpretations, not for confirming every extracted metadata entry.
+- A successful structural check does not establish that a method executes or that a mechanic behaves as described.
+- Conflicting fanmade statements remain separate; no source is ranked or selected.
 
 ## GRE structural method search
 
-The structural inventory workflow also builds a searchable index over all 14,641 method declarations and exact references from the pinned GRE claim notes.
-
-From the repository root, after downloading and extracting the workflow artifact:
+The structural inventory workflow builds a searchable index over all method declarations and exact references from the pinned GRE claim notes.
 
 ```sh
 node GKB/adapter/gre-structural-lookup.mjs search <artifact-directory> CalculateDamageReductionResult
 node GKB/adapter/gre-structural-lookup.mjs search <artifact-directory> damage enemies
 ```
 
-The artifact includes:
-- `gre-method-search-index.jsonl`: method name, token, offset, owner type, parameters, and overlapping domain memberships.
-- `gre-claim-method-links.jsonl`: exact claim-to-method references, including the source claim path and method token.
-- `gre-structural-lookup-report.json`: indexed counts and unresolved identifiers.
-
-A claim link is a navigation reference only. It is not a new GKB relationship, proof of runtime execution, or confirmation of a mechanic. Exact tokens are preferred; ambiguous method names are reported rather than guessed. Structural metadata remains `EXTERNAL-UNVERIFIED`, and no canonical claims are created or approved by this workflow.
-
+The index and claim links are navigation aids only. They do not prove execution, data flow, call order, or mechanic behavior.
 
 ## GRE metadata explorer
 
-After downloading and extracting the latest successful GRE structural inventory artifact, use the explorer from the repository root:
-
 ```sh
-# List all domains and their type/method counts
 node GKB/adapter/gre-metadata-explorer.mjs domains <artifact-directory>
-
-# List types in a domain
 node GKB/adapter/gre-metadata-explorer.mjs types <artifact-directory> 04_combat_mechanics
-
-# Inspect a type and its declared methods
 node GKB/adapter/gre-metadata-explorer.mjs type <artifact-directory> 314
-
-# Inspect a method by index, exact token, or unambiguous exact name
 node GKB/adapter/gre-metadata-explorer.mjs method <artifact-directory> 0x060008f8
-
-# Find GRE claim notes that explicitly reference a method
 node GKB/adapter/gre-metadata-explorer.mjs claim <artifact-directory> CLM-D04-DR-007
-
-# Search method/type names, parameters, tokens, and domain memberships
 node GKB/adapter/gre-metadata-explorer.mjs search <artifact-directory> damage 04_combat_mechanics
 ```
 
-The explorer reads the artifact JSONL locally; it does not access the network or write to canonical GKB. Ambiguous exact names are returned as candidates instead of being guessed. Claim references are navigation-only. Structural metadata remains `EXTERNAL-UNVERIFIED` and does not establish runtime execution or mechanic behavior.
+The explorer reads local JSONL artifacts. Ambiguous names return candidates; claim references are navigation-only. Structural metadata remains `EXTERNAL-UNVERIFIED`.
+
+## Cross-source GRE Evidence Navigator
+
+The navigator searches supplied GRE claim staging, TheTowerSDK assertion staging, and GRE structural inventory without merging their conclusions.
+
+```sh
+# Build an index using any available input artifacts
+node GKB/adapter/gre-evidence-navigator.mjs build \
+  --out evidence-index.json \
+  --gre-staging path/to/gre-staging.json \
+  --sdk-assertions path/to/sdk-assertions.json \
+  --gre-dir path/to/gre-structural-inventory
+
+# Search all supplied sources
+node GKB/adapter/gre-evidence-navigator.mjs search \
+  --query "Land Mine Stun" \
+  --gre-staging path/to/gre-staging.json \
+  --sdk-assertions path/to/sdk-assertions.json
+
+# Filter by source family and domain
+node GKB/adapter/gre-evidence-navigator.mjs search \
+  --query damage --source GRE_METHOD_DECLARATION --domain 04_combat_mechanics \
+  --gre-dir path/to/gre-structural-inventory
+
+# Compare statements linked to a GRE conflict ID
+node GKB/adapter/gre-evidence-navigator.mjs compare \
+  --conflict CNF-EXAMPLE --gre-staging path/to/gre-staging.json
+```
+
+Rules:
+- A keyword match is a search result, not proof of semantic equivalence.
+- GRE source claims retain their individual source IDs, source references, version context, dates, and limitations.
+- SDK source labels remain source metadata; Samantha verification status remains `EXTERNAL-UNVERIFIED`.
+- GRE structural declarations remain structural evidence, not mechanics claims.
+- Conflict comparison displays linked statements side by side. It never ranks sources or selects a winner.
+- The optional derived index preserves the complete upstream record in `rawRecord`.
+- No canonical claims, approvals, semantic relationships, conflict resolutions, or canonical writes are produced.
+- Wiki, Reddit, and player experiments can be added only when real indexed records and dedicated adapters exist; this navigator does not invent them.
