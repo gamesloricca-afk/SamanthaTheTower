@@ -275,7 +275,7 @@ export function searchEvidence(index, { query = '', sourceFamily = '', domain = 
       entry.gameVersion, entry.sdkVersion, entry.methodToken,
       textOf(entry.domain), textOf(entry.sourceIds), textOf(entry.conflictIds),
       textOf(entry.relatedClaimIds), textOf(entry.triageDisposition), textOf(entry.triageIssues),
-      textOf(entry.triageInformational), textOf(entry.manualReviewRequired)
+      textOf(entry.triageInformational), textOf(entry.manualReviewRequired), entry.triageLinkStatus
     ].join(' '));
     const familyMatch = !family || norm(entry.sourceFamily).includes(family);
     const domainMatch = !d || (Array.isArray(entry.domain) ? entry.domain : [entry.domain]).some(x => norm(x).includes(d));
