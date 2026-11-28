@@ -8,7 +8,8 @@ const expected = { gameTypes: 1, gameMethods: 1, gameFields: 0, gameProperties: 
 const manifest = {
   metadata_version: 39, source: 'DOC-20261127-WA0002.bin',
   game_types: 1, game_methods: 1, game_fields: 0, game_properties: 0,
-  game_parameters: 0, domain_unique_types: 1
+  game_parameters: 0, domain_unique_types: 1,
+  domain_counts: Object.fromEntries(DOMAIN_FILES.map(([domain], index) => [domain, index === 0 ? 1 : 0]))
 };
 const types = [{
   index: 0, name: 'Enemy', namespace: '', token: '0x02000001', offset: 100,
