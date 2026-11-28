@@ -123,10 +123,8 @@ export function validateGreStructuralData({ manifest, types, domains, expectedSo
       if (!typeByIndex.has(index)) errors.push('DOMAIN_TYPE_INDEX_NOT_IN_GLOBAL_INVENTORY');
       if (domain.types[i]?.index !== index) errors.push('DOMAIN_TYPE_INDEX_ALIGNMENT_MISMATCH');
     }
-    if (domain.domain !== domain.domain.replace(/^\d{2}_/, '')) {
-      // The source's domain field is the canonical numbered filename stem.
-      if (!/^\d{2}_[a-z0-9_]+$/.test(domain.domain)) errors.push('DOMAIN_IDENTIFIER_FORMAT_INVALID');
-    }
+    if (!/^\\d{2}_[a-z0-9_]+$/.test(domain.domain)) errors.push('DOMAIN_IDENTIFIER_FORMAT_INVALID');
+    if (!isObject(manifest.domain_counts) || manifest.domain_counts[domain.domain] !== domain.type_indices.length) errors.push('MANIFEST_DOMAIN_COUNT_MISMATCH');
   }
   if (memberships !== expected.domainMemberships) errors.push('DOMAIN_MEMBERSHIP_COUNT_MISMATCH');
   if (domainTypeIndices.size !== expected.domainUniqueTypes) errors.push('DOMAIN_UNIQUE_TYPE_COUNT_MISMATCH');
@@ -183,13 +181,14 @@ export function buildGreStructuralInventory({ sourceRoot, outputDir, sourceCommi
     const { methods, ...typeWithoutMethods } = type;
     typeLines.push(line({
       recordKind: 'GRE_TYPE_DECLARATION',
-      ...source,
       ...typeWithoutMethods,
+      ...source,
       methodCount: methods.length
     }));
     for (const method of methods) {
       methodLines.push(line({
         recordKind: 'GRE_METHOD_DECLARATION',
+        ...method,
         ...source,
         ownerType: {
           index: type.index,
@@ -198,7 +197,6 @@ export function buildGreStructuralInventory({ sourceRoot, outputDir, sourceCommi
           token: type.token,
           offset: type.offset
         },
-        ...method
       }));
     }
   }
