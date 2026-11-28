@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {
-  buildEvidenceIndex, searchEvidence, compareEvidenceConflict
+  buildEvidenceIndex, searchEvidence, compareEvidenceConflict,
+  formatEvidenceSearch, formatEvidenceConflict
 } from '../adapter/gre-evidence-navigator.mjs';
 
 const gre = {
@@ -75,6 +76,17 @@ assert.equal(comparison.statements[0].sources.length, 1);
 assert.ok(['SRC-A','SRC-B'].includes(comparison.statements[0].sources[0].sourceId));
 assert.ok(comparison.statements.some(statement => statement.sources.some(source => source.sourceId === 'SRC-B' && source.sourceName === 'Community test B metadata')));
 assert.match(comparison.comparisonPolicy, /No source is ranked/);
+const limited = searchEvidence(index, { query: 'land mine stun', limit: 1 });
+assert.equal(limited.resultCount, 1);
+const textSearch = formatEvidenceSearch(sdkResult);
+assert.match(textSearch, /Manual review: required/);
+assert.match(textSearch, /SOURCE_ORIGIN_UNRESOLVED/);
+assert.match(textSearch, /Samantha status: EXTERNAL-UNVERIFIED/);
+const textConflict = formatEvidenceConflict(comparison, 'CNF-1');
+assert.match(textConflict, /Separate source statements: 2/);
+assert.match(textConflict, /No source is ranked and no winner is selected/);
+assert.match(textConflict, /Land Mine Stun affects target X/);
+assert.match(textConflict, /Land Mine Stun does not affect target X/);
 assert.equal(searchEvidence(index, { query: 'land mine', sourceFamily: 'sdk' }).resultCount, 1);
 assert.throws(() => buildEvidenceIndex({ greStaging: { format: 'wrong', records: [] } }), /Unsupported GRE staging format/);
 assert.throws(() => buildEvidenceIndex({ sdkAssertions: sdk, sdkTriage: { format: 'wrong', records: [] } }), /Unsupported SDK triage format/);
