@@ -123,7 +123,7 @@ export function validateGreStructuralData({ manifest, types, domains, expectedSo
       if (!typeByIndex.has(index)) errors.push('DOMAIN_TYPE_INDEX_NOT_IN_GLOBAL_INVENTORY');
       if (domain.types[i]?.index !== index) errors.push('DOMAIN_TYPE_INDEX_ALIGNMENT_MISMATCH');
     }
-    if (!/^\\d{2}_[a-z0-9_]+$/.test(domain.domain)) errors.push('DOMAIN_IDENTIFIER_FORMAT_INVALID');
+    if (!/^[0-9]{2}_[a-z0-9_]+$/.test(domain.domain)) errors.push('DOMAIN_IDENTIFIER_FORMAT_INVALID');
     if (!isObject(manifest.domain_counts) || manifest.domain_counts[domain.domain] !== domain.type_indices.length) errors.push('MANIFEST_DOMAIN_COUNT_MISMATCH');
   }
   if (memberships !== expected.domainMemberships) errors.push('DOMAIN_MEMBERSHIP_COUNT_MISMATCH');
