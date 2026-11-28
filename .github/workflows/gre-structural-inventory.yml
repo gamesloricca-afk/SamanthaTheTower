@@ -9,12 +9,16 @@ on:
     branches:
       - GKB
     paths:
+      - 'GKB/adapter/gre-staging.mjs'
       - 'GKB/adapter/gre-structural-inventory.mjs'
       - 'GKB/adapter/gre-structural-lookup.mjs'
       - 'GKB/adapter/gre-metadata-explorer.mjs'
+      - 'GKB/adapter/gre-evidence-navigator.mjs'
+      - 'GKB/tests/gre-staging.test.mjs'
       - 'GKB/tests/gre-structural-inventory.test.mjs'
       - 'GKB/tests/gre-structural-lookup.test.mjs'
       - 'GKB/tests/gre-metadata-explorer.test.mjs'
+      - 'GKB/tests/gre-evidence-navigator.test.mjs'
       - '.github/workflows/gre-structural-inventory.yml'
 
 permissions:
@@ -42,6 +46,10 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: "20"
+      - name: Run GRE staging tests
+        run: node GKB/tests/gre-staging.test.mjs
+      - name: Generate pinned GRE claim staging
+        run: node GKB/adapter/gre-staging.mjs source-gre/GKB/staging/gre-source-snapshot/TestAccount-62ae508f "$RUNNER_TEMP/gre-staging"
       - name: Run structural inventory tests
         run: node GKB/tests/gre-structural-inventory.test.mjs
       - name: Generate complete GRE structural inventory
@@ -50,9 +58,17 @@ jobs:
         run: node GKB/tests/gre-structural-lookup.test.mjs
       - name: Test GRE metadata explorer
         run: node GKB/tests/gre-metadata-explorer.test.mjs
+      - name: Test cross-source evidence navigator
+        run: node GKB/tests/gre-evidence-navigator.test.mjs
       - name: Build searchable method index and claim references
         run: node GKB/adapter/gre-structural-lookup.mjs build "$RUNNER_TEMP/gre-structural-inventory" GKB/staging/gre-source-snapshot/TestAccount-62ae508f
-      - name: Upload inventory, search index, references, and reports
+      - name: Build GRE evidence index
+        run: |
+          node GKB/adapter/gre-evidence-navigator.mjs build \
+            --out "$RUNNER_TEMP/gre-structural-inventory/gre-evidence-index.json" \
+            --gre-staging "$RUNNER_TEMP/gre-staging/gre-staging.json" \
+            --gre-dir "$RUNNER_TEMP/gre-structural-inventory"
+      - name: Upload inventory, staging, search index, evidence index, and reports
         uses: actions/upload-artifact@v4
         with:
           name: samantha-gre-structural-inventory-${{ github.run_id }}
@@ -64,5 +80,8 @@ jobs:
             ${{ runner.temp }}/gre-structural-inventory/gre-method-search-index.jsonl
             ${{ runner.temp }}/gre-structural-inventory/gre-claim-method-links.jsonl
             ${{ runner.temp }}/gre-structural-inventory/gre-structural-lookup-report.json
+            ${{ runner.temp }}/gre-structural-inventory/gre-evidence-index.json
+            ${{ runner.temp }}/gre-staging/gre-staging.json
+            ${{ runner.temp }}/gre-staging/gre-import-report.json
           if-no-files-found: error
           retention-days: 30
