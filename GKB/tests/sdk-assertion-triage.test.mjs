@@ -51,6 +51,7 @@ const result = triageSdkAssertions([
   }
 ]);
 
+console.log(JSON.stringify({debugReport: result.report, firstRecord: result.records[0]}, null, 2));
 assert.equal(result.report.inputAssertionCount, 4);
 assert.equal(result.report.autoTriagedCount, 1);
 assert.equal(result.report.manualReviewExceptionCount, 3);
