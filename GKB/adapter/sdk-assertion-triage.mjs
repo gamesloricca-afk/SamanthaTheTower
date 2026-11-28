@@ -117,7 +117,7 @@ export function triageSdkAssertions(records) {
   };
 }
 
-async function main() {
+function main() {
   const input = JSON.parse(fs.readFileSync(INPUT, 'utf8'));
   if (!Array.isArray(input.records)) throw new Error('SDK assertion staging input has no records array');
   const result = triageSdkAssertions(input.records);
