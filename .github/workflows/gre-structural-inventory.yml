@@ -10,7 +10,9 @@ on:
       - GKB
     paths:
       - 'GKB/adapter/gre-structural-inventory.mjs'
+      - 'GKB/adapter/gre-structural-lookup.mjs'
       - 'GKB/tests/gre-structural-inventory.test.mjs'
+      - 'GKB/tests/gre-structural-lookup.test.mjs'
       - '.github/workflows/gre-structural-inventory.yml'
 
 permissions:
