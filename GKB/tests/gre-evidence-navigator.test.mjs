@@ -46,11 +46,18 @@ assert.equal(index.totalEvidenceRecords, 4);
 assert.equal(index.counts.GRE_CLAIM, 2);
 assert.equal(index.counts.GRE_CONFLICT, 1);
 assert.equal(index.counts.THETOWERSDK_ASSERTION, 1);
-assert.equal(index.sdkTriageSummary.manualReviewExceptionCount, 1);\nassert.equal(index.sdkTriageSummary.matchedAssertionCount, 1);\nassert.equal(index.sdkTriageSummary.missingTriageRecordCount, 0);\nassert.equal(index.sdkTriageSummary.unmatchedTriageRecordCount, 0);
+assert.equal(index.sdkTriageSummary.manualReviewExceptionCount, 1);
+assert.equal(index.sdkTriageSummary.matchedAssertionCount, 1);
+assert.equal(index.sdkTriageSummary.missingTriageRecordCount, 0);
+assert.equal(index.sdkTriageSummary.unmatchedTriageRecordCount, 0);
 const sdkResult = searchEvidence(index, { query: 'source origin unresolved', sourceFamily: 'sdk' });
 assert.equal(sdkResult.resultCount, 1);
 assert.equal(sdkResult.results[0].manualReviewRequired, true);
-assert.deepEqual(sdkResult.results[0].triageIssues, ['SOURCE_ORIGIN_UNRESOLVED']);\nassert.equal(sdkResult.results[0].triageLinkStatus, 'MATCHED_BY_EXACT_STAGING_ID');\nconst linkageGap = buildEvidenceIndex({ sdkAssertions: { records: [...sdk.records, { ...sdk.records[0], stagingId: 'sdk-unmatched' }] }, sdkTriage });\nassert.equal(linkageGap.sdkTriageSummary.missingTriageRecordCount, 1);\nassert.equal(searchEvidence(linkageGap, { query: 'missing triage record', sourceFamily: 'sdk' }).resultCount, 1);
+assert.deepEqual(sdkResult.results[0].triageIssues, ['SOURCE_ORIGIN_UNRESOLVED']);
+assert.equal(sdkResult.results[0].triageLinkStatus, 'MATCHED_BY_EXACT_STAGING_ID');
+const linkageGap = buildEvidenceIndex({ sdkAssertions: { records: [...sdk.records, { ...sdk.records[0], stagingId: 'sdk-unmatched' }] }, sdkTriage });
+assert.equal(linkageGap.sdkTriageSummary.missingTriageRecordCount, 1);
+assert.equal(searchEvidence(linkageGap, { query: 'missing triage record', sourceFamily: 'sdk' }).resultCount, 1);
 const sdkEvidence = index.entries.find(entry => entry.sourceFamily === 'THETOWERSDK_ASSERTION');
 assert.equal(sdkEvidence.sdkVersion, '0.14.1');
 assert.equal(sdkEvidence.registryVersion, '1.0.0');
@@ -81,7 +88,8 @@ console.log(JSON.stringify({
   test: 'GRE cross-source evidence navigator',
   status: 'PASSED',
   indexed: index.totalEvidenceRecords,
-  conflictStatementsKeptSeparate: comparison.statements.length,\n  sdkManualReviewExceptionsIndexed: index.sdkTriageSummary.manualReviewExceptionCount,
+  conflictStatementsKeptSeparate: comparison.statements.length,
+  sdkManualReviewExceptionsIndexed: index.sdkTriageSummary.manualReviewExceptionCount,
   canonicalClaimsCreated: 0,
   canonicalWrites: 0
 }, null, 2));
