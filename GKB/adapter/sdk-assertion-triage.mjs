@@ -121,13 +121,13 @@ function main() {
   const input = JSON.parse(fs.readFileSync(INPUT, 'utf8'));
   if (!Array.isArray(input.records)) throw new Error('SDK assertion staging input has no records array');
   const result = triageSdkAssertions(input.records);
-  fs.writeFileSync(OUTPUT, JSON.stringify({ generatedAt: new Date().toISOString(), ...result }, null, 2) + '\\n');
+  fs.writeFileSync(OUTPUT, JSON.stringify({ generatedAt: new Date().toISOString(), ...result }, null, 2) + '\n');
   fs.writeFileSync(QUEUE_OUTPUT, JSON.stringify({
     format: 'SAMANTHA_GKB_SDK_ASSERTION_MANUAL_EXCEPTION_QUEUE',
     formatVersion: 1,
     policy: 'Only structural/provenance/classification exceptions are queued. Queue membership is not a judgment that other mechanics are true.',
     records: result.manualReviewQueue
-  }, null, 2) + '\\n');
+  }, null, 2) + '\n');
   console.log(JSON.stringify(result.report, null, 2));
 }
 
