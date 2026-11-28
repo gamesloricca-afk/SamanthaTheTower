@@ -6,6 +6,7 @@ import {
 const gre = {
   format: 'SAMANTHA_GKB_GRE_STAGING', formatVersion: 1,
   sourceSnapshot: { repository: 'example/repo', branch: 'TestAccount', commit: 'abc123', retrievedAt: '2026-11-28' },
+  sources: [{ sourceId: 'SRC-B', sourceName: 'Community test B metadata', sourceTypeLabel: 'Forum', sourceReference: 'https://example.invalid/b', sourceVersion: 'post B', publicationDate: '2026-11-27', retrievedAt: '2026-11-28' }],
   records: [
     { recordKind: 'GRE_CLAIM', sourceClaimId: 'CLM-A', stagingId: 's-a', subject: 'Land Mine Stun',
       claimText: 'Land Mine Stun affects target X', claimType: 'OBJECTIVE', sourceVerificationLabel: 'UNVERIFIED',
@@ -13,7 +14,7 @@ const gre = {
       sourceRecord: { relativePath: 'claims/CLM-A.md' }, sourceSnapshot: { retrievedAt: '2026-11-28' } },
     { recordKind: 'GRE_CLAIM', sourceClaimId: 'CLM-B', stagingId: 's-b', subject: 'Land Mine Stun',
       claimText: 'Land Mine Stun does not affect target X', claimType: 'OBJECTIVE',
-      sourceVerificationLabel: 'UNVERIFIED', sourceReferences: ['SRC-B'], resolvedSources: [{ sourceId: 'SRC-B', sourceName: 'Community test B', sourceType: 'UNKNOWN', sourceReference: 'https://example.invalid/b', sourceVersion: 'post B' }], sourceConflictIds: ['CNF-1'],
+      sourceVerificationLabel: 'UNVERIFIED', sourceReferences: ['SRC-B'], sourceConflictIds: ['CNF-1'],
       domainCandidates: ['combat-mechanics'], sourceRecord: { relativePath: 'claims/CLM-B.md' } },
     { recordKind: 'GRE_CONFLICT', sourceConflictId: 'CNF-1', stagingId: 'c-1',
       subject: 'Land Mine Stun target interaction', conflictState: 'OPEN',
@@ -40,6 +41,7 @@ assert.equal(comparison.statements.length, 2);
 assert.equal(comparison.statements[0].verificationStatus, 'EXTERNAL-UNVERIFIED');
 assert.equal(comparison.statements[0].sources.length, 1);
 assert.ok(['SRC-A','SRC-B'].includes(comparison.statements[0].sources[0].sourceId));
+assert.ok(comparison.statements.some(statement => statement.sources.some(source => source.sourceId === 'SRC-B' && source.sourceName === 'Community test B metadata')));
 assert.match(comparison.comparisonPolicy, /No source is ranked/);
 assert.equal(searchEvidence(index, { query: 'land mine', sourceFamily: 'sdk' }).resultCount, 1);
 assert.throws(() => buildEvidenceIndex({ greStaging: { format: 'wrong', records: [] } }), /Unsupported GRE staging format/);
