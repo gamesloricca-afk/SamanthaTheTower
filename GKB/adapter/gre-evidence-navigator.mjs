@@ -132,6 +132,7 @@ function sdkEntry(record, index, triageById = new Map()) {
     statement: [record.predicate, textOf(record.value)].filter(Boolean).join(': '),
     classification: record.classificationCandidate ?? null,
     sourceVerificationLabel: pick(record.sourceVerification, record.sourceNodeVerification, null),
+    triageLinkStatus: triage ? 'MATCHED_BY_EXACT_STAGING_ID' : 'MISSING_TRIAGE_RECORD',
     triageDisposition: triage?.disposition ?? null,
     triageIssues: triage?.issues ?? [],
     triageInformational: triage?.informational ?? [],
@@ -219,11 +220,20 @@ export function buildEvidenceIndex({ greStaging = null, sdkAssertions = null, sd
       issueCounts: sdkTriage.report.issueCounts ?? {},
       mechanicsVerificationPerformed: sdkTriage.report.mechanicsVerificationPerformed ?? false,
       canonicalClaimsCreated: sdkTriage.report.canonicalClaimsCreated ?? 0,
-      canonicalWrites: sdkTriage.report.canonicalWrites ?? 0
+      canonicalWrites: sdkTriage.report.canonicalWrites ?? 0,
+      matchedAssertionCount: 0,
+      missingTriageRecordCount: 0,
+      unmatchedTriageRecordCount: 0
     };
     if (sdkAssertions) {
       if (!Array.isArray(sdkAssertions.records)) throw new Error('SDK assertion input must contain a records array.');
+      const assertionIds = new Set(sdkAssertions.records.map(record => record.stagingId).filter(Boolean));
+      sdkTriageSummary.matchedAssertionCount = sdkAssertions.records.filter(record => triageById.has(record.stagingId)).length;
+      sdkTriageSummary.missingTriageRecordCount = sdkAssertions.records.length - sdkTriageSummary.matchedAssertionCount;
+      sdkTriageSummary.unmatchedTriageRecordCount = sdkTriage.records.filter(record => !assertionIds.has(record.stagingId)).length;
       entries.push(...sdkAssertions.records.map((record, index) => sdkEntry(record, index, triageById)));
+    } else {
+      sdkTriageSummary.unmatchedTriageRecordCount = sdkTriage.records.length;
     }
   } else if (sdkAssertions) {
     if (!Array.isArray(sdkAssertions.records)) throw new Error('SDK assertion input must contain a records array.');
