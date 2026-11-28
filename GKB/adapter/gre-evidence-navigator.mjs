@@ -29,7 +29,7 @@ const textOf = value => {
 };
 const pick = (...values) => values.find(value => value !== undefined && value !== null && value !== '') ?? null;
 
-function greClaimEntry(record, staging) {
+function greClaimEntry(record, staging, sourceMap = new Map()) {
   return {
     evidenceId: 'GRE:' + (record.sourceClaimId ?? record.stagingId),
     sourceFamily: 'GRE_CLAIM',
@@ -49,10 +49,16 @@ function greClaimEntry(record, staging) {
     sourceVerificationLabel: record.sourceVerificationLabel ?? null,
     verificationStatus: 'EXTERNAL-UNVERIFIED',
     sourceIds: record.sourceReferences ?? [],
-    sources: (record.resolvedSources ?? []).map(source => ({
+    sources: (record.resolvedSources ?? (record.sourceReferences ?? []).map(id => sourceMap.get(id)).filter(Boolean)).map(source => ({
       sourceId: source.sourceId ?? null,
       sourceName: source.sourceName ?? null,
       sourceType: source.sourceType ?? 'UNKNOWN',
+      sourceTypeLabel: source.sourceTypeLabel ?? null,
+      authorOrMaintainer: source.authorOrMaintainer ?? null,
+      branchRef: source.branchRef ?? null,
+      inspectedCommit: source.inspectedCommit ?? null,
+      metadataFormatVersion: source.metadataFormatVersion ?? null,
+      license: source.license ?? null,
       sourceTypeLabel: source.sourceTypeLabel ?? null,
       sourceReference: source.sourceReference ?? null,
       sourceVersion: source.sourceVersion ?? null,
@@ -177,7 +183,8 @@ export function buildEvidenceIndex({ greStaging = null, sdkAssertions = null, gr
       throw new Error('Unsupported GRE staging format; expected SAMANTHA_GKB_GRE_STAGING with records.');
     const claims = greStaging.records.filter(x => x.recordKind === 'GRE_CLAIM');
     const conflicts = greStaging.records.filter(x => x.recordKind === 'GRE_CONFLICT');
-    entries.push(...claims.map(x => greClaimEntry(x, greStaging)));
+    const sourceMap = new Map((greStaging.sources ?? []).map(source => [source.sourceId, source]));
+    entries.push(...claims.map(x => greClaimEntry(x, greStaging, sourceMap)));
     entries.push(...conflicts.map(x => greConflictEntry(x, greStaging)));
   }
   if (sdkAssertions) {
