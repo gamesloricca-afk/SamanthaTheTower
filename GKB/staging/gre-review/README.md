@@ -65,6 +65,16 @@ node GKB/adapter/gre-metadata-explorer.mjs search <artifact-directory> damage 04
 
 The explorer reads local JSONL artifacts. Ambiguous names return candidates; claim references are navigation-only. Structural metadata remains `EXTERNAL-UNVERIFIED`.
 
+
+
+### Pinned SDK evidence source
+
+The CI workflow checks out the SDK staging adapter and registry from GKB commit `70598235b4ac2fc8783d1a051736fdd17e3aaf53`. It installs the exact lockfile dependencies, stages the pinned `thetowersdk@0.14.1` knowledge graph, and runs SDK assertion triage before building the combined index. The SDK source checkout is read-only and isolated from this branch's files.
+
+The resulting evidence index includes SDK assertion records and the original source assertions. SDK labels such as `verified_here`, `unverified`, and `contradicted` remain source labels; every indexed SDK assertion remains `EXTERNAL-UNVERIFIED` from Samantha's perspective. Structural triage is not mechanics verification.
+
+The workflow also preserves the SDK staging report and manual exception queue as separate artifacts. It does not approve the 1,618 assertions or write them into canonical GKB domains.
+
 ## Cross-source GRE Evidence Navigator
 
 The navigator searches supplied GRE claim staging, TheTowerSDK assertion staging, and GRE structural inventory without merging their conclusions.
