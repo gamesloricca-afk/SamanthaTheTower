@@ -64,7 +64,7 @@ jobs:
       - name: Run GRE staging tests
         run: node GKB/tests/gre-staging.test.mjs
       - name: Generate pinned GRE claim staging
-        run: node GKB/adapter/gre-staging.mjs source-gre/GKB/staging/gre-source-snapshot/TestAccount-62ae508f "$RUNNER_TEMP/gre-staging"
+        run: node GKB/adapter/gre-staging.mjs GKB/staging/gre-source-snapshot/TestAccount-62ae508f "$RUNNER_TEMP/gre-staging"
       - name: Generate pinned TheTowerSDK assertion staging
         run: node source-sdk/GKB/adapter/sdk-assertion-staging.mjs
       - name: Triage pinned TheTowerSDK assertions
