@@ -3,7 +3,7 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const DEFAULT_SNAPSHOT = new URL('../staging/gre-source-snapshot/TestAccount-62ae508f/', import.meta.url);
-const norm = value => String(value ?? '').normalize('NFKC').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const norm = value => String(value ?? '').normalize('NFKC').replace(/([a-z0-9])([A-Z])/g, '$1 $2').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 const readLines = file => fs.readFileSync(file, 'utf8').split(/\r?\n/).filter(Boolean).map(JSON.parse);
 const jsonl = values => values.map(value => JSON.stringify(value)).join('\n') + '\n';
 
