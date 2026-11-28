@@ -42,7 +42,11 @@ jobs:
         run: node GKB/tests/gre-structural-inventory.test.mjs
       - name: Generate complete GRE structural inventory
         run: node GKB/adapter/gre-structural-inventory.mjs source-gre "$RUNNER_TEMP/gre-structural-inventory"
-      - name: Upload inventory and report
+      - name: Test structural lookup and claim references
+        run: node GKB/tests/gre-structural-lookup.test.mjs
+      - name: Build searchable method index and claim references
+        run: node GKB/adapter/gre-structural-lookup.mjs build "$RUNNER_TEMP/gre-structural-inventory" GKB/staging/gre-source-snapshot/TestAccount-62ae508f
+      - name: Upload inventory, search index, references, and reports
         uses: actions/upload-artifact@v4
         with:
           name: samantha-gre-structural-inventory-${{ github.run_id }}
@@ -51,5 +55,8 @@ jobs:
             ${{ runner.temp }}/gre-structural-inventory/gre-methods.jsonl
             ${{ runner.temp }}/gre-structural-inventory/gre-domain-memberships.jsonl
             ${{ runner.temp }}/gre-structural-inventory/gre-structural-inventory-report.json
+            ${{ runner.temp }}/gre-structural-inventory/gre-method-search-index.jsonl
+            ${{ runner.temp }}/gre-structural-inventory/gre-claim-method-links.jsonl
+            ${{ runner.temp }}/gre-structural-inventory/gre-structural-lookup-report.json
           if-no-files-found: error
           retention-days: 30
