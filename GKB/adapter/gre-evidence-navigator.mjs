@@ -207,7 +207,7 @@ export function buildEvidenceIndex({ greStaging = null, sdkAssertions = null, sd
   }
   let sdkTriageSummary = null;
   if (sdkTriage) {
-    if (sdkTriage.format !== 'SAMANTHA_GKB_SDK_ASSERTION_TRIAGE' ||
+    if (sdkTriage.report?.format !== 'SAMANTHA_GKB_SDK_ASSERTION_TRIAGE' ||
         !Array.isArray(sdkTriage.records) || !sdkTriage.report) {
       throw new Error('Unsupported SDK triage format; expected SAMANTHA_GKB_SDK_ASSERTION_TRIAGE with report and records.');
     }
