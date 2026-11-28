@@ -60,3 +60,21 @@ The staging adapter automatically verifies the pinned snapshot identity, source 
 
 This is a two-level process: automated integrity/structure checks first; focused human review only for semantic claims and genuine exceptions.
 
+
+## GRE structural method search
+
+The structural inventory workflow also builds a searchable index over all 14,641 method declarations and exact references from the pinned GRE claim notes.
+
+From the repository root, after downloading and extracting the workflow artifact:
+
+```sh
+node GKB/adapter/gre-structural-lookup.mjs search <artifact-directory> CalculateDamageReductionResult
+node GKB/adapter/gre-structural-lookup.mjs search <artifact-directory> damage enemies
+```
+
+The artifact includes:
+- `gre-method-search-index.jsonl`: method name, token, offset, owner type, parameters, and overlapping domain memberships.
+- `gre-claim-method-links.jsonl`: exact claim-to-method references, including the source claim path and method token.
+- `gre-structural-lookup-report.json`: indexed counts and unresolved identifiers.
+
+A claim link is a navigation reference only. It is not a new GKB relationship, proof of runtime execution, or confirmation of a mechanic. Exact tokens are preferred; ambiguous method names are reported rather than guessed. Structural metadata remains `EXTERNAL-UNVERIFIED`, and no canonical claims are created or approved by this workflow.
