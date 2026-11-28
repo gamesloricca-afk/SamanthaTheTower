@@ -113,3 +113,28 @@ Rules:
 - The optional derived index preserves the complete upstream record in `rawRecord`.
 - No canonical claims, approvals, semantic relationships, conflict resolutions, or canonical writes are produced.
 - Wiki, Reddit, and player experiments can be added only when real indexed records and dedicated adapters exist; this navigator does not invent them.
+
+
+### Concise text output
+
+The default `search` and `compare` commands return JSON for scripts and integrations. Add `--format text` for a shorter human-readable review view; JSON remains the default.
+
+```sh
+node GKB/adapter/gre-evidence-navigator.mjs search \
+  --query "Land Mine Stun" --format text \
+  --gre-staging path/to/gre-staging.json \
+  --sdk-assertions path/to/sdk-assertions.json \
+  --sdk-triage path/to/sdk-assertion-triage.json
+
+node GKB/adapter/gre-evidence-navigator.mjs search \
+  --query "SOURCE_ORIGIN_UNRESOLVED" --source THETOWERSDK_ASSERTION \
+  --limit 20 --format text \
+  --sdk-assertions path/to/sdk-assertions.json \
+  --sdk-triage path/to/sdk-assertion-triage.json
+
+node GKB/adapter/gre-evidence-navigator.mjs compare \
+  --conflict CNF-EXAMPLE --format text \
+  --gre-staging path/to/gre-staging.json
+```
+
+The text view shows each statement with its source, version context, Samantha verification status, and triage information where available. Conflict statements remain separate and are never ranked. Use the default JSON output when another program needs structured records. This is a local reviewer-facing CLI, not yet a player-facing application or Samantha runtime integration.
