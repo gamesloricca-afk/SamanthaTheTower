@@ -46,6 +46,8 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: "20"
+      - name: Install pinned GKB runtime dependencies
+        run: npm ci --prefix GKB/runtime --ignore-scripts
       - name: Run GRE staging tests
         run: node GKB/tests/gre-staging.test.mjs
       - name: Generate pinned GRE claim staging
