@@ -30,8 +30,10 @@ const sdk = { records: [{
   provenance: { sdkPackage: 'thetowersdk', sdkVersion: '0.14.1', registryVersion: '1.0.0', sdkGraphVersion: 3, sdkSchemaVersion: 1, sdkGraphGeneratedFor: '2026-10-15', sdkReadAgainstVersion: 'v28.3.0', sdkVerifiedAt: '2026-10-15', rawOrigin: 'wiki', rawOrigins: [{ path: '$.origin', value: 'wiki' }], originMappingStatus: 'UNMAPPED_REQUIRES_REVIEW', retrievedAt: '2026-11-28' }
 }]};
 const sdkTriage = {
-  format: 'SAMANTHA_GKB_SDK_ASSERTION_TRIAGE',
+  generatedAt: '2026-11-28T00:00:00.000Z',
   report: {
+    format: 'SAMANTHA_GKB_SDK_ASSERTION_TRIAGE',
+    formatVersion: 1,
     inputAssertionCount: 1, autoTriagedCount: 0, manualReviewExceptionCount: 1,
     issueCounts: { SOURCE_ORIGIN_UNRESOLVED: 1 },
     mechanicsVerificationPerformed: false, canonicalClaimsCreated: 0, canonicalWrites: 0
