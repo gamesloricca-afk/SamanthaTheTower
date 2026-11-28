@@ -29,11 +29,28 @@ const sdk = { records: [{
   sourceRecord: { sourceId: 'SDK-SRC-1', sourceName: 'SDK source' },
   provenance: { sdkPackage: 'thetowersdk', sdkVersion: '0.14.1', registryVersion: '1.0.0', sdkGraphVersion: 3, sdkSchemaVersion: 1, sdkGraphGeneratedFor: '2026-10-15', sdkReadAgainstVersion: 'v28.3.0', sdkVerifiedAt: '2026-10-15', rawOrigin: 'wiki', rawOrigins: [{ path: '$.origin', value: 'wiki' }], originMappingStatus: 'UNMAPPED_REQUIRES_REVIEW', retrievedAt: '2026-11-28' }
 }]};
-const index = buildEvidenceIndex({ greStaging: gre, sdkAssertions: sdk });
+const sdkTriage = {
+  format: 'SAMANTHA_GKB_SDK_ASSERTION_TRIAGE',
+  report: {
+    inputAssertionCount: 1, autoTriagedCount: 0, manualReviewExceptionCount: 1,
+    issueCounts: { SOURCE_ORIGIN_UNRESOLVED: 1 },
+    mechanicsVerificationPerformed: false, canonicalClaimsCreated: 0, canonicalWrites: 0
+  },
+  records: [{
+    stagingId: 'sdk-1', disposition: 'REVIEW_REQUIRED', manualReviewRequired: true,
+    issues: ['SOURCE_ORIGIN_UNRESOLVED'], informational: []
+  }]
+};
+const index = buildEvidenceIndex({ greStaging: gre, sdkAssertions: sdk, sdkTriage });
 assert.equal(index.totalEvidenceRecords, 4);
 assert.equal(index.counts.GRE_CLAIM, 2);
 assert.equal(index.counts.GRE_CONFLICT, 1);
 assert.equal(index.counts.THETOWERSDK_ASSERTION, 1);
+assert.equal(index.sdkTriageSummary.manualReviewExceptionCount, 1);
+const sdkResult = searchEvidence(index, { query: 'source origin unresolved', sourceFamily: 'sdk' });
+assert.equal(sdkResult.resultCount, 1);
+assert.equal(sdkResult.results[0].manualReviewRequired, true);
+assert.deepEqual(sdkResult.results[0].triageIssues, ['SOURCE_ORIGIN_UNRESOLVED']);
 const sdkEvidence = index.entries.find(entry => entry.sourceFamily === 'THETOWERSDK_ASSERTION');
 assert.equal(sdkEvidence.sdkVersion, '0.14.1');
 assert.equal(sdkEvidence.registryVersion, '1.0.0');
@@ -51,11 +68,12 @@ assert.ok(comparison.statements.some(statement => statement.sources.some(source 
 assert.match(comparison.comparisonPolicy, /No source is ranked/);
 assert.equal(searchEvidence(index, { query: 'land mine', sourceFamily: 'sdk' }).resultCount, 1);
 assert.throws(() => buildEvidenceIndex({ greStaging: { format: 'wrong', records: [] } }), /Unsupported GRE staging format/);
+assert.throws(() => buildEvidenceIndex({ sdkAssertions: sdk, sdkTriage: { format: 'wrong', records: [] } }), /Unsupported SDK triage format/);
 console.log(JSON.stringify({
   test: 'GRE cross-source evidence navigator',
   status: 'PASSED',
   indexed: index.totalEvidenceRecords,
-  conflictStatementsKeptSeparate: comparison.statements.length,
+  conflictStatementsKeptSeparate: comparison.statements.length,\n  sdkManualReviewExceptionsIndexed: index.sdkTriageSummary.manualReviewExceptionCount,
   canonicalClaimsCreated: 0,
   canonicalWrites: 0
 }, null, 2));
