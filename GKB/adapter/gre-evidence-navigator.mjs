@@ -211,8 +211,15 @@ export function buildEvidenceIndex({ greStaging = null, sdkAssertions = null, sd
         !Array.isArray(sdkTriage.records) || !sdkTriage.report) {
       throw new Error('Unsupported SDK triage format; expected SAMANTHA_GKB_SDK_ASSERTION_TRIAGE with report and records.');
     }
+    if (sdkTriage.records.some(item => typeof item?.stagingId !== 'string' || !item.stagingId.trim())) {
+      throw new Error('SDK triage records require non-empty stagingId values.');
+    }
     const triageById = new Map(sdkTriage.records.map(item => [item.stagingId, item]));
     if (triageById.size !== sdkTriage.records.length) throw new Error('Duplicate SDK triage stagingId.');
+    if (Number.isInteger(sdkTriage.report.inputAssertionCount) &&
+        sdkTriage.report.inputAssertionCount !== sdkTriage.records.length) {
+      throw new Error('SDK triage report count does not match its records array.');
+    }
     sdkTriageSummary = {
       inputAssertionCount: sdkTriage.report.inputAssertionCount ?? sdkTriage.records.length,
       autoTriagedCount: sdkTriage.report.autoTriagedCount ?? null,
