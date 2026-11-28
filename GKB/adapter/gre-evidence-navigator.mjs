@@ -49,6 +49,19 @@ function greClaimEntry(record, staging) {
     sourceVerificationLabel: record.sourceVerificationLabel ?? null,
     verificationStatus: 'EXTERNAL-UNVERIFIED',
     sourceIds: record.sourceReferences ?? [],
+    sources: (record.resolvedSources ?? []).map(source => ({
+      sourceId: source.sourceId ?? null,
+      sourceName: source.sourceName ?? null,
+      sourceType: source.sourceType ?? 'UNKNOWN',
+      sourceTypeLabel: source.sourceTypeLabel ?? null,
+      sourceReference: source.sourceReference ?? null,
+      sourceVersion: source.sourceVersion ?? null,
+      gameVersion: source.gameVersion ?? null,
+      publicationDate: source.publicationDate ?? null,
+      retrievedAt: source.retrievedAt ?? null,
+      limitations: source.limitations ?? [],
+      rawSourceRecord: source.sourceRecord ?? null
+    })),
     conflictIds: (record.sourceConflictIds ?? []).concat((record.resolvedConflicts ?? []).map(x => x.sourceConflictId)),
     limitations: record.limitations ?? [],
     rawRecord: record
@@ -102,6 +115,17 @@ function sdkEntry(record, index) {
     sourceVerificationLabel: pick(record.sourceVerification, record.sourceNodeVerification, null),
     verificationStatus: 'EXTERNAL-UNVERIFIED',
     sourceIds: [pick(source.sourceId, source.id, null)].filter(Boolean),
+    sources: [{
+      sourceId: pick(source.sourceId, source.id, null),
+      sourceName: pick(source.sourceName, source.name, provenance.sdkPackage, 'TheTowerSDK assertion'),
+      sourceType: 'UNKNOWN',
+      sourceReference: pick(source.sourceReference, source.reference, source.url, null),
+      sourceVersion: pick(source.version, provenance.sdkVersion, null),
+      gameVersion: pick(record.gameVersion, record.gameVersionBuild, source.gameVersion, provenance.gameVersion, null),
+      publicationDate: pick(provenance.publicationDate, source.publicationDate, null),
+      retrievedAt: pick(provenance.retrievedAt, null),
+      rawSourceRecord: source
+    }],
     conflictIds: [],
     limitations: ['SDK triage and source labels do not establish game-mechanics truth.'],
     rawRecord: record
@@ -207,7 +231,7 @@ export function compareEvidenceConflict(index, conflictId) {
     found: true, conflict: { ...conflict, rawRecord: undefined },
     statements: claims.map(entry => ({
       evidenceId: entry.evidenceId, subject: entry.subject, statement: entry.statement,
-      sourceIds: entry.sourceIds, sourceVerificationLabel: entry.sourceVerificationLabel,
+      sourceIds: entry.sourceIds, sources: entry.sources ?? [], sourceVerificationLabel: entry.sourceVerificationLabel,
       verificationStatus: entry.verificationStatus, sourceReference: entry.sourceReference,
       gameVersion: entry.gameVersion, publicationDate: entry.publicationDate,
       retrievedAt: entry.retrievedAt, limitations: entry.limitations
