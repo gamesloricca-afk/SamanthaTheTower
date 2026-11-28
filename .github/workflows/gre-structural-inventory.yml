@@ -11,8 +11,10 @@ on:
     paths:
       - 'GKB/adapter/gre-structural-inventory.mjs'
       - 'GKB/adapter/gre-structural-lookup.mjs'
+      - 'GKB/adapter/gre-metadata-explorer.mjs'
       - 'GKB/tests/gre-structural-inventory.test.mjs'
       - 'GKB/tests/gre-structural-lookup.test.mjs'
+      - 'GKB/tests/gre-metadata-explorer.test.mjs'
       - '.github/workflows/gre-structural-inventory.yml'
 
 permissions:
@@ -46,6 +48,8 @@ jobs:
         run: node GKB/adapter/gre-structural-inventory.mjs source-gre "$RUNNER_TEMP/gre-structural-inventory"
       - name: Test structural lookup and claim references
         run: node GKB/tests/gre-structural-lookup.test.mjs
+      - name: Test GRE metadata explorer
+        run: node GKB/tests/gre-metadata-explorer.test.mjs
       - name: Build searchable method index and claim references
         run: node GKB/adapter/gre-structural-lookup.mjs build "$RUNNER_TEMP/gre-structural-inventory" GKB/staging/gre-source-snapshot/TestAccount-62ae508f
       - name: Upload inventory, search index, references, and reports
