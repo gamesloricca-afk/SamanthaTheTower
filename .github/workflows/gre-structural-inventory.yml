@@ -2,6 +2,9 @@ name: Samantha - GRE Structural Metadata Inventory
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - gre-gkb-integration-design
   pull_request:
     branches:
       - GKB
