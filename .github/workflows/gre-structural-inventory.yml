@@ -97,6 +97,7 @@ jobs:
             --out "$RUNNER_TEMP/gre-structural-inventory/gre-evidence-index.json" \
             --gre-staging "$RUNNER_TEMP/gre-staging/gre-staging.json" \
             --sdk-assertions "$RUNNER_TEMP/sdk-source/sdk-assertions.json" \
+            --sdk-triage "$RUNNER_TEMP/sdk-source/sdk-assertion-triage.json" \
             --gre-dir "$RUNNER_TEMP/gre-structural-inventory"
       - name: Upload inventory, staging, search index, evidence index, and reports
         uses: actions/upload-artifact@v4
