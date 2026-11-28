@@ -71,9 +71,9 @@ The explorer reads local JSONL artifacts. Ambiguous names return candidates; cla
 
 The CI workflow checks out the SDK staging adapter and registry from GKB commit `70598235b4ac2fc8783d1a051736fdd17e3aaf53`. It installs the exact lockfile dependencies, stages the pinned `thetowersdk@0.14.1` knowledge graph, and runs SDK assertion triage before building the combined index. The SDK source checkout is read-only and isolated from this branch's files.
 
-The resulting evidence index includes SDK assertion records and the original source assertions. SDK labels such as `verified_here`, `unverified`, and `contradicted` remain source labels; every indexed SDK assertion remains `EXTERNAL-UNVERIFIED` from Samantha's perspective. Structural triage is not mechanics verification.
+The resulting evidence index includes SDK assertion records and the original source assertions. Each SDK assertion is joined to its triage record by exact `stagingId`; the index exposes its disposition, issue codes, informational flags, and whether manual review is required. The aggregate triage counts are also included. SDK labels such as `verified_here`, `unverified`, and `contradicted` remain source labels; every indexed SDK assertion remains `EXTERNAL-UNVERIFIED` from Samantha's perspective. Structural triage is not mechanics verification.
 
-The workflow also preserves the SDK staging report and manual exception queue as separate artifacts. It does not approve the 1,618 assertions or write them into canonical GKB domains.
+The workflow also preserves the SDK staging report and manual exception queue as separate artifacts. A missing or duplicate triage record is not guessed or synthesized. It does not approve the 1,618 assertions or write them into canonical GKB domains.
 
 ## Cross-source GRE Evidence Navigator
 
@@ -85,6 +85,7 @@ node GKB/adapter/gre-evidence-navigator.mjs build \
   --out evidence-index.json \
   --gre-staging path/to/gre-staging.json \
   --sdk-assertions path/to/sdk-assertions.json \
+  --sdk-triage path/to/sdk-assertion-triage.json \
   --gre-dir path/to/gre-structural-inventory
 
 # Search all supplied sources
