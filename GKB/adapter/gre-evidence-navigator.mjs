@@ -304,6 +304,58 @@ export function compareEvidenceConflict(index, conflictId) {
   };
 }
 
+function sourceSummary(entry) {
+  const sources = entry.sources ?? [];
+  if (sources.length) return sources.map(source => [
+    source.sourceName ?? source.sourceId ?? 'Unknown source',
+    source.sourceId ? '(' + source.sourceId + ')' : '',
+    source.sourceReference ?? ''
+  ].filter(Boolean).join(' ')).join('; ');
+  return [entry.sourceName, entry.sourceReference].filter(Boolean).join(' — ') || 'Source not recorded';
+}
+
+export function formatEvidenceSearch(result) {
+  if (result.message) return result.message;
+  const lines = ['Found ' + result.resultCount + ' evidence record(s) for "' + result.query + '".'];
+  if (!result.results.length) return lines[0] + '\nNo matching evidence was found.';
+  for (const [index, entry] of result.results.entries()) {
+    lines.push('', '[' + (index + 1) + '] ' + entry.sourceFamily + ' — ' + (entry.subject ?? entry.evidenceId));
+    if (entry.statement) lines.push('Statement: ' + entry.statement);
+    lines.push('Source: ' + sourceSummary(entry));
+    if (entry.gameVersion) lines.push('Game version: ' + entry.gameVersion);
+    if (entry.sdkVersion) lines.push('SDK version: ' + entry.sdkVersion);
+    lines.push('Samantha status: ' + (entry.verificationStatus ?? 'NOT_RECORDED'));
+    if (entry.sourceVerificationLabel) lines.push('Source label: ' + entry.sourceVerificationLabel);
+    if (entry.triageDisposition) lines.push('Triage: ' + entry.triageDisposition);
+    if (entry.manualReviewRequired === true) lines.push('Manual review: required');
+    if (entry.triageIssues?.length) lines.push('Review issues: ' + entry.triageIssues.join(', '));
+    if (entry.triageLinkStatus === 'MISSING_TRIAGE_RECORD') lines.push('Warning: matching SDK triage record is missing.');
+    if (entry.conflictIds?.length) lines.push('Conflict IDs: ' + entry.conflictIds.join(', '));
+    if (entry.limitations?.length) lines.push('Limitations: ' + entry.limitations.join(' | '));
+    lines.push('Evidence ID: ' + entry.evidenceId);
+  }
+  return lines.join('\n');
+}
+
+export function formatEvidenceConflict(comparison, conflictId) {
+  if (!comparison.found) return 'No GRE conflict found for "' + conflictId + '".';
+  const lines = [
+    'Conflict: ' + (comparison.conflict.subject ?? conflictId),
+    'Conflict ID: ' + conflictId,
+    'State: ' + (comparison.conflict.sourceVerificationLabel ?? 'NOT_RECORDED'),
+    'Separate source statements: ' + comparison.statements.length
+  ];
+  for (const [index, statement] of comparison.statements.entries()) {
+    lines.push('', '[' + (index + 1) + '] ' + (statement.subject ?? statement.evidenceId));
+    lines.push('Statement: ' + (statement.statement ?? 'No statement recorded'));
+    lines.push('Source: ' + sourceSummary(statement));
+    lines.push('Samantha status: ' + (statement.verificationStatus ?? 'NOT_RECORDED'));
+    if (statement.gameVersion) lines.push('Game version: ' + statement.gameVersion);
+    if (statement.limitations?.length) lines.push('Limitations: ' + statement.limitations.join(' | '));
+  }
+  lines.push('', 'Comparison: statements are shown independently. No source is ranked and no winner is selected.');
+  return lines.join('\n');
+}
 function parseArgs(args) {
   const options = {};
   for (let i = 0; i < args.length; i++) {
@@ -330,11 +382,17 @@ function main() {
     fs.writeFileSync(options.out, JSON.stringify(index, null, 2) + '\n');
     console.log(JSON.stringify({ status: 'PASSED', output: options.out, counts: index.counts, totalEvidenceRecords: index.totalEvidenceRecords, canonicalWrites: 0 }, null, 2));
   } else if (command === 'search') {
-    const result = searchEvidence(index, { query: options.query ?? '', sourceFamily: options.source ?? '', domain: options.domain ?? '' });
-    console.log(JSON.stringify(result, null, 2));
+    const result = searchEvidence(index, {
+      query: options.query ?? '', sourceFamily: options.source ?? '', domain: options.domain ?? '',
+      limit: Number(options.limit) || 100
+    });
+    console.log(options.format === 'text' ? formatEvidenceSearch(result) : JSON.stringify(result, null, 2));
   } else if (command === 'compare') {
-    console.log(JSON.stringify(compareEvidenceConflict(index, options.conflict ?? ''), null, 2));
-  } else throw new Error('Commands: build --out index.json [--gre-staging file] [--sdk-assertions file] [--sdk-triage file] [--gre-dir artifact-dir] | search --query text [--source family] [--domain domain] [input flags] | compare --conflict ID [input flags]');
+    const result = compareEvidenceConflict(index, options.conflict ?? '');
+    console.log(options.format === 'text'
+      ? formatEvidenceConflict(result, options.conflict ?? '')
+      : JSON.stringify(result, null, 2));
+  } else throw new Error('Commands: build --out index.json [--gre-staging file] [--sdk-assertions file] [--sdk-triage file] [--gre-dir artifact-dir] | search --query text [--source family] [--domain domain] [--limit N] [--format json|text] [input flags] | compare --conflict ID [--format json|text] [input flags]');
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   try { main(); } catch (error) { console.error(JSON.stringify({ status: 'FAILED', error: error.message }, null, 2)); process.exitCode = 1; }
