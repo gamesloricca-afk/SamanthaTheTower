@@ -78,3 +78,30 @@ The artifact includes:
 - `gre-structural-lookup-report.json`: indexed counts and unresolved identifiers.
 
 A claim link is a navigation reference only. It is not a new GKB relationship, proof of runtime execution, or confirmation of a mechanic. Exact tokens are preferred; ambiguous method names are reported rather than guessed. Structural metadata remains `EXTERNAL-UNVERIFIED`, and no canonical claims are created or approved by this workflow.
+
+
+## GRE metadata explorer
+
+After downloading and extracting the latest successful GRE structural inventory artifact, use the explorer from the repository root:
+
+```sh
+# List all domains and their type/method counts
+node GKB/adapter/gre-metadata-explorer.mjs domains <artifact-directory>
+
+# List types in a domain
+node GKB/adapter/gre-metadata-explorer.mjs types <artifact-directory> 04_combat_mechanics
+
+# Inspect a type and its declared methods
+node GKB/adapter/gre-metadata-explorer.mjs type <artifact-directory> 314
+
+# Inspect a method by index, exact token, or unambiguous exact name
+node GKB/adapter/gre-metadata-explorer.mjs method <artifact-directory> 0x060008f8
+
+# Find GRE claim notes that explicitly reference a method
+node GKB/adapter/gre-metadata-explorer.mjs claim <artifact-directory> CLM-D04-DR-007
+
+# Search method/type names, parameters, tokens, and domain memberships
+node GKB/adapter/gre-metadata-explorer.mjs search <artifact-directory> damage 04_combat_mechanics
+```
+
+The explorer reads the artifact JSONL locally; it does not access the network or write to canonical GKB. Ambiguous exact names are returned as candidates instead of being guessed. Claim references are navigation-only. Structural metadata remains `EXTERNAL-UNVERIFIED` and does not establish runtime execution or mechanic behavior.
