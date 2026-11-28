@@ -46,3 +46,17 @@ This directory is reserved for reviewer-authored GRE decisions. The generated st
 - Keep `sourceType` as `UNKNOWN` unless the reviewer has evidence to classify it.
 
 Do not store account-specific data here. This workspace is only for universal game evidence and its review history.
+
+## Automatic checks vs. manual review
+
+The staging adapter automatically verifies the pinned snapshot identity, source commit, exact file inventory, Git blob hashes, parser shape, known metadata fields, source references, and claim-to-conflict references. These checks do not require a person to reconfirm every metadata field.
+
+- Valid source metadata and structural records are retained with their source provenance after automated integrity/shape checks.
+- Unknown metadata keys are preserved and reported; they are not silently discarded or interpreted.
+- The human review queue is for **game-knowledge claims and interpretations**, not for confirming that every extracted metadata entry exists.
+- A claim can require human review when its meaning, domain mapping, game-version scope, source attribution, or conflict relationship is ambiguous.
+- A successful structural check does not establish that a method executes, that a mechanic behaves as described, or that a claim matches live-game behavior.
+- The current queue contains 12 claims and 1 conflict envelope (13 records). The 7 source metadata records are parsed separately and are not counted as 7 additional manual claim reviews.
+
+This is a two-level process: automated integrity/structure checks first; focused human review only for semantic claims and genuine exceptions.
+
