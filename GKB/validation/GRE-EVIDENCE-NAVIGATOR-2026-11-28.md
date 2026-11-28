@@ -101,6 +101,6 @@ The navigator now accepts the SDK triage report through `--sdk-triage` and joins
 
 The combined index also carries aggregate triage counts and issue counts. It reports exact-ID linkage totals (`matchedAssertionCount`, `missingTriageRecordCount`, and `unmatchedTriageRecordCount`); an assertion without a matching triage record is explicitly searchable as `MISSING_TRIAGE_RECORD`, never silently treated as triaged. This makes the 68 manual exception records discoverable without treating the other 1,550 structurally triaged assertions as mechanically verified. SDK labels remain source metadata and all SDK assertions remain `EXTERNAL-UNVERIFIED`.
 
-The workflow now passes both SDK assertion staging and triage artifacts to the navigator. The test checks exact-ID joining, issue-code search, manual-review visibility, aggregate exception counts, missing-link reporting, and invalid triage-format rejection.
+The workflow now passes both SDK assertion staging and triage artifacts to the navigator. The test checks exact-ID joining, issue-code search, manual-review visibility, aggregate exception counts, missing-link reporting, malformed identifier/count rejection, and invalid triage-format rejection.
 
 **Status:** Implementation committed; this extension is not considered verified until the updated GitHub Actions run passes.
