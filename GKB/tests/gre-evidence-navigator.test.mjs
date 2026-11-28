@@ -27,13 +27,19 @@ const sdk = { records: [{
   predicate: 'interacts_with', value: 'Target Y', classificationCandidate: 'OBJECTIVE',
   sourceVerification: 'unverified',
   sourceRecord: { sourceId: 'SDK-SRC-1', sourceName: 'SDK source' },
-  provenance: { sdkPackage: 'thetowersdk', sdkVersion: '0.14.1', retrievedAt: '2026-11-28' }
+  provenance: { sdkPackage: 'thetowersdk', sdkVersion: '0.14.1', registryVersion: '1.0.0', sdkGraphVersion: 3, sdkSchemaVersion: 1, sdkGraphGeneratedFor: '2026-10-15', sdkReadAgainstVersion: 'v28.3.0', sdkVerifiedAt: '2026-10-15', rawOrigin: 'wiki', rawOrigins: [{ path: '$.origin', value: 'wiki' }], originMappingStatus: 'UNMAPPED_REQUIRES_REVIEW', retrievedAt: '2026-11-28' }
 }]};
 const index = buildEvidenceIndex({ greStaging: gre, sdkAssertions: sdk });
 assert.equal(index.totalEvidenceRecords, 4);
 assert.equal(index.counts.GRE_CLAIM, 2);
 assert.equal(index.counts.GRE_CONFLICT, 1);
 assert.equal(index.counts.THETOWERSDK_ASSERTION, 1);
+const sdkEvidence = index.entries.find(entry => entry.sourceFamily === 'THETOWERSDK_ASSERTION');
+assert.equal(sdkEvidence.sdkVersion, '0.14.1');
+assert.equal(sdkEvidence.registryVersion, '1.0.0');
+assert.equal(sdkEvidence.sdkReadAgainstVersion, 'v28.3.0');
+assert.equal(sdkEvidence.originMappingStatus, 'UNMAPPED_REQUIRES_REVIEW');
+assert.deepEqual(sdkEvidence.rawOrigins, [{ path: '$.origin', value: 'wiki' }]);
 assert.equal(searchEvidence(index, { query: 'land mine stun' }).resultCount, 4);
 const comparison = compareEvidenceConflict(index, 'CNF-1');
 assert.equal(comparison.found, true);
