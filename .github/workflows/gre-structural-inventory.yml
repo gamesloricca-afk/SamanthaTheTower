@@ -1,0 +1,52 @@
+name: Samantha - GRE Structural Metadata Inventory
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - GKB
+    paths:
+      - 'GKB/adapter/gre-structural-inventory.mjs'
+      - 'GKB/tests/gre-structural-inventory.test.mjs'
+      - '.github/workflows/gre-structural-inventory.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  gre-structural-inventory:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout integration branch
+        uses: actions/checkout@v5
+      - name: Checkout pinned GRE source snapshot
+        uses: actions/checkout@v5
+        with:
+          repository: gamesloricca-afk/SamanthaTheTower
+          ref: 62ae508f3473231b81d27903bdf63e899bb739be
+          path: source-gre
+          persist-credentials: false
+      - name: Verify source commit
+        working-directory: source-gre
+        run: |
+          test "$(git rev-parse HEAD)" = "62ae508f3473231b81d27903bdf63e899bb739be"
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "20"
+      - name: Run structural inventory tests
+        run: node GKB/tests/gre-structural-inventory.test.mjs
+      - name: Generate complete GRE structural inventory
+        run: node GKB/adapter/gre-structural-inventory.mjs source-gre "$RUNNER_TEMP/gre-structural-inventory"
+      - name: Upload inventory and report
+        uses: actions/upload-artifact@v4
+        with:
+          name: samantha-gre-structural-inventory-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/gre-structural-inventory/gre-types.jsonl
+            ${{ runner.temp }}/gre-structural-inventory/gre-methods.jsonl
+            ${{ runner.temp }}/gre-structural-inventory/gre-domain-memberships.jsonl
+            ${{ runner.temp }}/gre-structural-inventory/gre-structural-inventory-report.json
+          if-no-files-found: error
+          retention-days: 30
