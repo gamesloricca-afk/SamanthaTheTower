@@ -69,6 +69,14 @@ assert.match(comparison.comparisonPolicy, /No source is ranked/);
 assert.equal(searchEvidence(index, { query: 'land mine', sourceFamily: 'sdk' }).resultCount, 1);
 assert.throws(() => buildEvidenceIndex({ greStaging: { format: 'wrong', records: [] } }), /Unsupported GRE staging format/);
 assert.throws(() => buildEvidenceIndex({ sdkAssertions: sdk, sdkTriage: { format: 'wrong', records: [] } }), /Unsupported SDK triage format/);
+assert.throws(() => buildEvidenceIndex({
+  sdkAssertions: sdk,
+  sdkTriage: { ...sdkTriage, records: [{ ...sdkTriage.records[0], stagingId: '' }] }
+}), /require non-empty stagingId/);
+assert.throws(() => buildEvidenceIndex({
+  sdkAssertions: sdk,
+  sdkTriage: { ...sdkTriage, report: { ...sdkTriage.report, inputAssertionCount: 2 } }
+}), /report count does not match/);
 console.log(JSON.stringify({
   test: 'GRE cross-source evidence navigator',
   status: 'PASSED',
