@@ -42,16 +42,39 @@ jobs:
         working-directory: source-gre
         run: |
           test "$(git rev-parse HEAD)" = "62ae508f3473231b81d27903bdf63e899bb739be"
+      - name: Checkout pinned SDK staging source
+        uses: actions/checkout@v5
+        with:
+          repository: gamesloricca-afk/SamanthaTheTower
+          ref: 70598235b4ac2fc8783d1a051736fdd17e3aaf53
+          path: source-sdk
+          persist-credentials: false
+      - name: Verify SDK source commit
+        working-directory: source-sdk
+        run: |
+          test "$(git rev-parse HEAD)" = "70598235b4ac2fc8783d1a051736fdd17e3aaf53"
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
           node-version: "20"
       - name: Install pinned GKB runtime dependencies
         run: npm ci --prefix GKB/runtime --ignore-scripts
+      - name: Install pinned SDK source runtime dependencies
+        run: npm ci --prefix source-sdk/GKB/runtime --ignore-scripts
       - name: Run GRE staging tests
         run: node GKB/tests/gre-staging.test.mjs
       - name: Generate pinned GRE claim staging
         run: node GKB/adapter/gre-staging.mjs source-gre/GKB/staging/gre-source-snapshot/TestAccount-62ae508f "$RUNNER_TEMP/gre-staging"
+      - name: Generate pinned TheTowerSDK assertion staging
+        run: node source-sdk/GKB/adapter/sdk-assertion-staging.mjs
+      - name: Triage pinned TheTowerSDK assertions
+        run: node source-sdk/GKB/adapter/sdk-assertion-triage.mjs
+      - name: Preserve SDK staging artifacts for combined index
+        run: |
+          mkdir -p "$RUNNER_TEMP/sdk-source"
+          cp source-sdk/GKB/staging/sdk-assertions.json "$RUNNER_TEMP/sdk-source/sdk-assertions.json"
+          cp source-sdk/GKB/staging/sdk-assertion-triage.json "$RUNNER_TEMP/sdk-source/sdk-assertion-triage.json"
+          cp source-sdk/GKB/staging/sdk-assertion-manual-review-queue.json "$RUNNER_TEMP/sdk-source/sdk-assertion-manual-review-queue.json"
       - name: Run structural inventory tests
         run: node GKB/tests/gre-structural-inventory.test.mjs
       - name: Generate complete GRE structural inventory
@@ -69,6 +92,7 @@ jobs:
           node GKB/adapter/gre-evidence-navigator.mjs build \
             --out "$RUNNER_TEMP/gre-structural-inventory/gre-evidence-index.json" \
             --gre-staging "$RUNNER_TEMP/gre-staging/gre-staging.json" \
+            --sdk-assertions "$RUNNER_TEMP/sdk-source/sdk-assertions.json" \
             --gre-dir "$RUNNER_TEMP/gre-structural-inventory"
       - name: Upload inventory, staging, search index, evidence index, and reports
         uses: actions/upload-artifact@v4
@@ -85,5 +109,8 @@ jobs:
             ${{ runner.temp }}/gre-structural-inventory/gre-evidence-index.json
             ${{ runner.temp }}/gre-staging/gre-staging.json
             ${{ runner.temp }}/gre-staging/gre-import-report.json
+            ${{ runner.temp }}/sdk-source/sdk-assertions.json
+            ${{ runner.temp }}/sdk-source/sdk-assertion-triage.json
+            ${{ runner.temp }}/sdk-source/sdk-assertion-manual-review-queue.json
           if-no-files-found: error
           retention-days: 30
