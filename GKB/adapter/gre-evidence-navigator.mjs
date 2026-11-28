@@ -59,7 +59,6 @@ function greClaimEntry(record, staging, sourceMap = new Map()) {
       inspectedCommit: source.inspectedCommit ?? null,
       metadataFormatVersion: source.metadataFormatVersion ?? null,
       license: source.license ?? null,
-      sourceTypeLabel: source.sourceTypeLabel ?? null,
       sourceReference: source.sourceReference ?? null,
       sourceVersion: source.sourceVersion ?? null,
       gameVersion: source.gameVersion ?? null,
@@ -99,7 +98,8 @@ function greConflictEntry(record, staging) {
     rawRecord: record
   };
 }
-function sdkEntry(record, index) {
+function sdkEntry(record, index, triageById = new Map()) {
+  const triage = triageById.get(record.stagingId) ?? null;
   const source = record.sourceRecord ?? {};
   const provenance = record.provenance ?? {};
   return {
@@ -132,6 +132,10 @@ function sdkEntry(record, index) {
     statement: [record.predicate, textOf(record.value)].filter(Boolean).join(': '),
     classification: record.classificationCandidate ?? null,
     sourceVerificationLabel: pick(record.sourceVerification, record.sourceNodeVerification, null),
+    triageDisposition: triage?.disposition ?? null,
+    triageIssues: triage?.issues ?? [],
+    triageInformational: triage?.informational ?? [],
+    manualReviewRequired: triage?.manualReviewRequired ?? null,
     verificationStatus: 'EXTERNAL-UNVERIFIED',
     sourceIds: [pick(source.sourceId, source.id, null)].filter(Boolean),
     sources: [{
@@ -189,7 +193,7 @@ function greStructuralEntries(directory) {
   ];
 }
 
-export function buildEvidenceIndex({ greStaging = null, sdkAssertions = null, greDirectory = null } = {}) {
+export function buildEvidenceIndex({ greStaging = null, sdkAssertions = null, sdkTriage = null, greDirectory = null } = {}) {
   const entries = [];
   if (greStaging) {
     if (greStaging.format !== 'SAMANTHA_GKB_GRE_STAGING' || !Array.isArray(greStaging.records))
@@ -200,7 +204,28 @@ export function buildEvidenceIndex({ greStaging = null, sdkAssertions = null, gr
     entries.push(...claims.map(x => greClaimEntry(x, greStaging, sourceMap)));
     entries.push(...conflicts.map(x => greConflictEntry(x, greStaging)));
   }
-  if (sdkAssertions) {
+  let sdkTriageSummary = null;
+  if (sdkTriage) {
+    if (sdkTriage.format !== 'SAMANTHA_GKB_SDK_ASSERTION_TRIAGE' ||
+        !Array.isArray(sdkTriage.records) || !sdkTriage.report) {
+      throw new Error('Unsupported SDK triage format; expected SAMANTHA_GKB_SDK_ASSERTION_TRIAGE with report and records.');
+    }
+    const triageById = new Map(sdkTriage.records.map(item => [item.stagingId, item]));
+    if (triageById.size !== sdkTriage.records.length) throw new Error('Duplicate SDK triage stagingId.');
+    sdkTriageSummary = {
+      inputAssertionCount: sdkTriage.report.inputAssertionCount ?? sdkTriage.records.length,
+      autoTriagedCount: sdkTriage.report.autoTriagedCount ?? null,
+      manualReviewExceptionCount: sdkTriage.report.manualReviewExceptionCount ?? null,
+      issueCounts: sdkTriage.report.issueCounts ?? {},
+      mechanicsVerificationPerformed: sdkTriage.report.mechanicsVerificationPerformed ?? false,
+      canonicalClaimsCreated: sdkTriage.report.canonicalClaimsCreated ?? 0,
+      canonicalWrites: sdkTriage.report.canonicalWrites ?? 0
+    };
+    if (sdkAssertions) {
+      if (!Array.isArray(sdkAssertions.records)) throw new Error('SDK assertion input must contain a records array.');
+      entries.push(...sdkAssertions.records.map((record, index) => sdkEntry(record, index, triageById)));
+    }
+  } else if (sdkAssertions) {
     if (!Array.isArray(sdkAssertions.records)) throw new Error('SDK assertion input must contain a records array.');
     entries.push(...sdkAssertions.records.map(sdkEntry));
   }
@@ -217,6 +242,7 @@ export function buildEvidenceIndex({ greStaging = null, sdkAssertions = null, gr
     counts: Object.fromEntries([...new Set(entries.map(x => x.sourceFamily))].sort().map(family =>
       [family, entries.filter(x => x.sourceFamily === family).length])),
     totalEvidenceRecords: entries.length,
+    sdkTriageSummary,
     evidenceBoundary: 'Search and source navigation only. No semantic equivalence, mechanic verification, source ranking, canonical claim, approval, or canonical write.',
     entries
   };
@@ -231,7 +257,8 @@ export function searchEvidence(index, { query = '', sourceFamily = '', domain = 
       entry.sourceCommit, entry.subject, entry.statement, entry.sourceVerificationLabel,
       entry.gameVersion, entry.sdkVersion, entry.methodToken,
       textOf(entry.domain), textOf(entry.sourceIds), textOf(entry.conflictIds),
-      textOf(entry.relatedClaimIds)
+      textOf(entry.relatedClaimIds), textOf(entry.triageDisposition), textOf(entry.triageIssues),
+      textOf(entry.triageInformational), textOf(entry.manualReviewRequired)
     ].join(' '));
     const familyMatch = !family || norm(entry.sourceFamily).includes(family);
     const domainMatch = !d || (Array.isArray(entry.domain) ? entry.domain : [entry.domain]).some(x => norm(x).includes(d));
@@ -278,6 +305,7 @@ function main() {
   const index = buildEvidenceIndex({
     greStaging: optionalJson(options['gre-staging']),
     sdkAssertions: optionalJson(options['sdk-assertions']),
+    sdkTriage: optionalJson(options['sdk-triage']),
     greDirectory: options['gre-dir'] ?? null
   });
   if (command === 'build') {
@@ -289,7 +317,7 @@ function main() {
     console.log(JSON.stringify(result, null, 2));
   } else if (command === 'compare') {
     console.log(JSON.stringify(compareEvidenceConflict(index, options.conflict ?? ''), null, 2));
-  } else throw new Error('Commands: build --out index.json [--gre-staging file] [--sdk-assertions file] [--gre-dir artifact-dir] | search --query text [--source family] [--domain domain] [input flags] | compare --conflict ID [input flags]');
+  } else throw new Error('Commands: build --out index.json [--gre-staging file] [--sdk-assertions file] [--sdk-triage file] [--gre-dir artifact-dir] | search --query text [--source family] [--domain domain] [input flags] | compare --conflict ID [input flags]');
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   try { main(); } catch (error) { console.error(JSON.stringify({ status: 'FAILED', error: error.message }, null, 2)); process.exitCode = 1; }
