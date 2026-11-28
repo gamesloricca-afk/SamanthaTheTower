@@ -1,6 +1,6 @@
 # GRE Cross-Source Evidence Navigator — 2026-11-28
 
-**Status:** Implemented on `gre-gkb-integration-design`; integrated CI run pending verification.
+**Status:** VERIFIED — integrated CI passed on 2026-11-28.
 
 ## Objective
 
@@ -56,4 +56,36 @@ The navigator creates an optional derived search index only. It does not create 
 
 ## Validation
 
-The dedicated test covers multi-source indexing, source-family filtering, GRE conflict comparison, preservation of separate contradictory statements, exact-ID joining of GRE source catalog records, and rejection of an unsupported GRE staging envelope. CI must pass before this report is considered verified. No canonical claims or writes are permitted.
+**VERIFIED — GitHub Actions run [46092304888](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/46092304888) passed** on integration branch commit `b1734080b5e7a9412ee8aac49103809d356ad775`.
+
+The workflow checked out these immutable source commits:
+- GRE source: `TestAccount@62ae508f3473231b81d27903bdf63e899bb739be`.
+- SDK staging adapter/registry: `GKB@70598235b4ac2fc8783d1a051736fdd17e3aaf53`.
+- SDK package: `thetowersdk@0.14.1`.
+
+Evidence index generated:
+| Source family | Records |
+|---|---:|
+| GRE claims | 12 |
+| GRE conflict envelopes | 1 |
+| GRE method declarations | 14,641 |
+| GRE type declarations | 1,617 |
+| TheTowerSDK assertions | 1,618 |
+| **Total** | **17,889** |
+
+SDK staging and triage in this run:
+- 1,618 assertions staged from 320 graph nodes.
+- 1,550 automatically triaged as structurally valid but still `EXTERNAL-UNVERIFIED`.
+- 68 manual exception records (50 unresolved source-origin records and 19 source-marked contradiction records; one record overlaps).
+- 797 assertions have no assertion-level verification; this remains missing and is not inherited from the parent node.
+- 0 canonical claims, 0 automatic approvals, 0 canonical writes.
+
+The workflow passed the pinned SDK staging adapter test, SDK triage test, GRE staging test, structural inventory test, structural lookup test, metadata explorer test, and evidence navigator test. The combined evidence index was built and uploaded.
+
+Artifact: [samantha-gre-structural-inventory-46092304888](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/46092304888/artifacts/15241532323)  
+Artifact size: 3,690,839 bytes  
+SHA-256: `4daab502bba60274cf9ea9936909ae99c594f333f195ef8451f39a4ce3074788`
+
+The dedicated evidence navigator tests cover multi-source indexing, source-family filtering, GRE conflict comparison, preservation of separate contradictory statements, exact-ID joining of GRE source catalog records, SDK provenance preservation, and rejection of an unsupported GRE staging envelope.
+
+**Limitations:** This index does not prove runtime behavior, verify mechanics, resolve fanmade disagreements, or promote SDK/GRE material into canonical GKB. Wiki/Reddit/player-experiment sources are only represented where actual GRE source records already exist; dedicated adapters for additional external datasets remain future work.
