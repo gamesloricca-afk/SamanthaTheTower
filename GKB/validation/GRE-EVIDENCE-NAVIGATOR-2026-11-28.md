@@ -144,3 +144,19 @@ All 1,618 SDK entries have `MATCHED_BY_EXACT_STAGING_ID` linkage in the generate
 The evidence index is a derived search/navigation artifact. It does not establish game-mechanics truth, rank fanmade sources, resolve conflicts, infer semantic relationships, approve claims, or write canonical GKB domains. All SDK assertions and GRE structural declarations remain `EXTERNAL-UNVERIFIED`.
 
 The 68 manual-review records are preserved separately and searchable through their triage issue codes and `manualReviewRequired` flag. Missing verification remains missing. Future wiki, Reddit, and player-experiment adapters are not implied to exist.
+
+## Concise reviewer-facing output — 2026-11-28
+
+Added `--format text` to the existing navigator CLI while preserving JSON as the default output for scripts and integrations.
+
+- `search --format text` presents each result with its statement, source attribution, game/SDK version where available, Samantha verification status, triage status, and limitations.
+- `compare --format text` displays conflict-linked statements separately with source attribution and an explicit no-ranking/no-winner policy.
+- `--limit N` controls the maximum number of search results returned (bounded by the existing 500-result limit).
+- Tests cover text rendering, manual-review issue visibility, source-separated conflict output, and result limits.
+- Usage documented in `GKB/staging/gre-review/README.md`.
+
+**VERIFIED — CI passed:** [Run 46118177134](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/46118177134) on commit `d871f338d24c4bc4ce74941ef397749571dd71d9`. All workflow steps passed, including the evidence navigator test, full 17,889-record index build, and artifact upload.
+
+Artifact: [samantha-gre-structural-inventory-46118177134](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/46118177134/artifacts/15252319320) (3,696,590 bytes; SHA-256 `6129360da867bf48035849431a8eff7f16d30a0d390d73ee45d2c63464bc0ed4`).
+
+This is a local reviewer-facing CLI improvement, not yet a player-facing application or Samantha runtime integration. It does not change evidence verification, canonical GKB claims, source ranking, conflict resolution, or canonical writes.
