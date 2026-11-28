@@ -9,11 +9,11 @@ const gre = {
   records: [
     { recordKind: 'GRE_CLAIM', sourceClaimId: 'CLM-A', stagingId: 's-a', subject: 'Land Mine Stun',
       claimText: 'Land Mine Stun affects target X', claimType: 'OBJECTIVE', sourceVerificationLabel: 'UNVERIFIED',
-      sourceReferences: ['SRC-A'], sourceConflictIds: ['CNF-1'], domainCandidates: ['combat-mechanics'],
+      sourceReferences: ['SRC-A'], resolvedSources: [{ sourceId: 'SRC-A', sourceName: 'Community test A', sourceType: 'UNKNOWN', sourceReference: 'https://example.invalid/a', sourceVersion: 'post A' }], sourceConflictIds: ['CNF-1'], domainCandidates: ['combat-mechanics'],
       sourceRecord: { relativePath: 'claims/CLM-A.md' }, sourceSnapshot: { retrievedAt: '2026-11-28' } },
     { recordKind: 'GRE_CLAIM', sourceClaimId: 'CLM-B', stagingId: 's-b', subject: 'Land Mine Stun',
       claimText: 'Land Mine Stun does not affect target X', claimType: 'OBJECTIVE',
-      sourceVerificationLabel: 'UNVERIFIED', sourceReferences: ['SRC-B'], sourceConflictIds: ['CNF-1'],
+      sourceVerificationLabel: 'UNVERIFIED', sourceReferences: ['SRC-B'], resolvedSources: [{ sourceId: 'SRC-B', sourceName: 'Community test B', sourceType: 'UNKNOWN', sourceReference: 'https://example.invalid/b', sourceVersion: 'post B' }], sourceConflictIds: ['CNF-1'],
       domainCandidates: ['combat-mechanics'], sourceRecord: { relativePath: 'claims/CLM-B.md' } },
     { recordKind: 'GRE_CONFLICT', sourceConflictId: 'CNF-1', stagingId: 'c-1',
       subject: 'Land Mine Stun target interaction', conflictState: 'OPEN',
@@ -38,6 +38,8 @@ const comparison = compareEvidenceConflict(index, 'CNF-1');
 assert.equal(comparison.found, true);
 assert.equal(comparison.statements.length, 2);
 assert.equal(comparison.statements[0].verificationStatus, 'EXTERNAL-UNVERIFIED');
+assert.equal(comparison.statements[0].sources.length, 1);
+assert.ok(['SRC-A','SRC-B'].includes(comparison.statements[0].sources[0].sourceId));
 assert.match(comparison.comparisonPolicy, /No source is ranked/);
 assert.equal(searchEvidence(index, { query: 'land mine', sourceFamily: 'sdk' }).resultCount, 1);
 assert.throws(() => buildEvidenceIndex({ greStaging: { format: 'wrong', records: [] } }), /Unsupported GRE staging format/);
