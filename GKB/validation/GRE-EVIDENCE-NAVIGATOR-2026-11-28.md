@@ -91,16 +91,56 @@ The dedicated evidence navigator tests cover multi-source indexing, source-famil
 **Limitations:** This index does not prove runtime behavior, verify mechanics, resolve fanmade disagreements, or promote SDK/GRE material into canonical GKB. Wiki/Reddit/player-experiment sources are only represented where actual GRE source records already exist; dedicated adapters for additional external datasets remain future work.
 
 
-## SDK triage visibility extension — CI pending
+## SDK triage visibility and linkage — 2026-11-28
 
-The navigator now accepts the SDK triage report through `--sdk-triage` and joins each SDK assertion to its triage record using the exact `stagingId`. Searchable fields include:
-- `triageDisposition`
-- `triageIssues`
-- `triageInformational`
-- `manualReviewRequired`
+**VERIFIED — updated CI passed:** [Run 46112878262, attempt 2](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/46112878262) on integration branch commit `16733a7023a77c142b2ce3b05960b4cb5babf831`.
 
-The combined index also carries aggregate triage counts and issue counts. It reports exact-ID linkage totals (`matchedAssertionCount`, `missingTriageRecordCount`, and `unmatchedTriageRecordCount`); an assertion without a matching triage record is explicitly searchable as `MISSING_TRIAGE_RECORD`, never silently treated as triaged. This makes the 68 manual exception records discoverable without treating the other 1,550 structurally triaged assertions as mechanically verified. SDK labels remain source metadata and all SDK assertions remain `EXTERNAL-UNVERIFIED`.
+The workflow passed all steps, including the SDK staging and triage tests, GRE staging, structural inventory, structural lookup, metadata explorer, cross-source evidence navigator, evidence-index build, and artifact upload.
 
-The workflow now passes both SDK assertion staging and triage artifacts to the navigator. The test checks exact-ID joining, issue-code search, manual-review visibility, aggregate exception counts, missing-link reporting, malformed identifier/count rejection, and invalid triage-format rejection.
+### Verified evidence index
 
-**Status:** Implementation committed; this extension is not considered verified until the updated GitHub Actions run passes.
+| Source family | Records |
+|---|---:|
+| GRE claims | 12 |
+| GRE conflict envelopes | 1 |
+| GRE method declarations | 14,641 |
+| GRE type declarations | 1,617 |
+| TheTowerSDK assertions | 1,618 |
+| **Total** | **17,889** |
+
+The generated artifact was inspected directly after download:
+
+- Artifact: [samantha-gre-structural-inventory-46112878262](https://github.com/gamesloricca-afk/SamanthaTheTower/actions/runs/46112878262/artifacts/15250647718)
+- Artifact ID: `15250647718`
+- Size: 3,696,589 bytes
+- SHA-256: `5a92f7df5c1d61a807acb12c8d012ec2c7f79543a7572728e001879b99232336`
+- Evidence index JSON size: 53,011,352 bytes
+
+### SDK triage linkage
+
+- 1,618 SDK assertions indexed.
+- 1,618 assertions matched to triage records by exact `stagingId`.
+- 0 missing triage records.
+- 0 unmatched triage records.
+- 1,550 structurally triaged without a manual exception.
+- 68 distinct manual-review records preserved in the separate review queue and visible through the evidence index.
+- Issue occurrences: 50 `SOURCE_ORIGIN_UNRESOLVED` and 19 `SOURCE_MARKS_ASSERTION_OR_NODE_CONTRADICTED`; one record has both issue codes, so there are 68 distinct exception records, not 69.
+- 797 assertions have no assertion-level verification. This remains explicitly missing; it is not inherited from the parent node and does not automatically create a manual exception.
+- 0 mechanics verifications, 0 canonical claims, 0 automatic approvals, and 0 canonical writes.
+
+All 1,618 SDK entries have `MATCHED_BY_EXACT_STAGING_ID` linkage in the generated evidence index. The triage summary records `matchedAssertionCount: 1618`, `missingTriageRecordCount: 0`, and `unmatchedTriageRecordCount: 0`. The 68 manual exceptions remain `EXTERNAL-UNVERIFIED`; queue membership indicates a structural/provenance review need, not a mechanics judgment.
+
+### GRE preservation checks
+
+- All 14,641 method declarations and 1,617 type declarations appear in the generated index.
+- 12 GRE claim records and 1 GRE conflict envelope remain separate.
+- The GRE staging report records 7 sources, 13 pending records, and preservation of 20 raw Markdown source records.
+- The structural lookup indexes 14,641 methods and has 5 exact claim-method navigation references with 0 unresolved identifiers.
+- Metadata format version 39 remains separate from game release version.
+- Structural declarations remain navigation evidence only; no runtime behavior or game mechanics are inferred.
+
+### Safety boundary and limitations
+
+The evidence index is a derived search/navigation artifact. It does not establish game-mechanics truth, rank fanmade sources, resolve conflicts, infer semantic relationships, approve claims, or write canonical GKB domains. All SDK assertions and GRE structural declarations remain `EXTERNAL-UNVERIFIED`.
+
+The 68 manual-review records are preserved separately and searchable through their triage issue codes and `manualReviewRequired` flag. Missing verification remains missing. Future wiki, Reddit, and player-experiment adapters are not implied to exist.
