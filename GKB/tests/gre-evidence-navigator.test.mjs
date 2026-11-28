@@ -33,7 +33,7 @@ assert.equal(index.totalEvidenceRecords, 4);
 assert.equal(index.counts.GRE_CLAIM, 2);
 assert.equal(index.counts.GRE_CONFLICT, 1);
 assert.equal(index.counts.THETOWERSDK_ASSERTION, 1);
-assert.equal(searchEvidence(index, { query: 'land mine stun' }).resultCount, 3);
+assert.equal(searchEvidence(index, { query: 'land mine stun' }).resultCount, 4);
 const comparison = compareEvidenceConflict(index, 'CNF-1');
 assert.equal(comparison.found, true);
 assert.equal(comparison.statements.length, 2);
